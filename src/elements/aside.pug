@@ -1,0 +1,112 @@
+aside
+
+	.logo
+		a(href="index.html")
+			img(src="images/logo.png")
+
+	nav.nav(v-if="step <= 9")
+		ul
+			li
+				a(href="#" , v-bind:class="{ done : step > 1 , current : step == 1 }")
+					svg.default
+						use(xlink:href="images/sprite.svg#right-arrow")
+					svg.done-icon
+						use(xlink:href="images/sprite.svg#icons8-checked")
+					|Tatvorwurf
+
+			li
+				a(href="#" , v-bind:class="{ done : step > 2 , current : step == 2 }")
+					svg.default
+						use(xlink:href="images/sprite.svg#right-arrow")
+					svg.done-icon
+						use(xlink:href="images/sprite.svg#icons8-checked")
+					|Rechtsschutzversicherung
+
+			li
+				a(href="#" , v-bind:class="{ done : step > 3 , current : step == 3 }")
+					svg.default
+						use(xlink:href="images/sprite.svg#right-arrow")
+					svg.done-icon
+						use(xlink:href="images/sprite.svg#icons8-checked")
+					|Post von Behörde
+
+			li
+				a(href="#" , v-bind:class="{ done : step > 5 , current : step == 4 || step == 5 }")
+					svg.default
+						use(xlink:href="images/sprite.svg#right-arrow")
+					svg.done-icon
+						use(xlink:href="images/sprite.svg#icons8-checked")
+					|Details
+
+			li
+				a(href="#" , v-bind:class="{ done : step > 6 , current : step == 6 }")
+					svg.default
+						use(xlink:href="images/sprite.svg#right-arrow")
+					svg.done-icon
+						use(xlink:href="images/sprite.svg#icons8-checked")
+					|Punkte
+
+			li
+				a(href="#" , v-bind:class="{ done : step > 7 , current : step == 7 }")
+					svg.default
+						use(xlink:href="images/sprite.svg#right-arrow")
+					svg.done-icon
+						use(xlink:href="images/sprite.svg#icons8-checked")
+					|Dokumente
+
+			li
+				a(href="#" , v-bind:class="{ done : step > 8 , current : step == 8 }")
+					svg.default
+						use(xlink:href="images/sprite.svg#right-arrow")
+					svg.done-icon
+						use(xlink:href="images/sprite.svg#icons8-checked")
+					|Führerschein
+
+			li
+				a(href="#" , v-bind:class="{ done : step > 9 , current : step == 9 }")
+					svg.default
+						use(xlink:href="images/sprite.svg#right-arrow")
+					svg.done-icon
+						use(xlink:href="images/sprite.svg#icons8-checked")
+					|Daten
+
+			li
+				a(href="#" , v-bind:class="{ done : step > 10 , current : step == 10 }")
+					svg.default
+						use(xlink:href="images/sprite.svg#right-arrow")
+					svg.done-icon
+						use(xlink:href="images/sprite.svg#icons8-checked")
+					|Kostenlose Auswertung
+
+			li
+				a(href="result-option.html" , v-bind:class="{ current : step == 11 }" , @click="step = 11")
+					svg.default
+						use(xlink:href="images/sprite.svg#right-arrow")
+					svg.done-icon
+						use(xlink:href="images/sprite.svg#icons8-checked")
+					|Fallauswertung
+
+	nav.nav(v-if="step >= 10")
+		ul
+			li
+				a(href="#").current
+					svg.default
+						use(xlink:href="images/sprite.svg#right-arrow")
+					|Fallnummer B12625 Maximilian Mustermann Geschwindigkeitsverstoß
+
+	.info
+		p
+			a(href="#")
+				svg
+					use(xlink:href="images/sprite.svg#icons8-ringer-volume")
+				|Kostenlose Hotline
+
+		p.bottom-link
+			span
+				a(href="#")
+					svg
+						use(xlink:href="images/sprite.svg#new-window")
+					|Impressum
+
+			span
+				a(href="#") Datenschutz

@@ -1,0 +1,41 @@
+header
+
+  button.menu
+    span
+    span
+    span
+
+  ul.header-title
+    li(v-show="step == 1") BUSSGELDKANZLEI.DE
+    li(v-show="step == 2") Rechtsschutzversicherung
+    li(v-show="step == 3") Post von Behörde
+    li(v-show="step == 4 || step == 5") Details
+    li(v-show="step == 6") PUNKTE IN FLENSBURG
+    li(v-show="step == 7") Dokumente
+    li(v-show="step == 8") Führerschein
+    li(v-show="step == 9") Daten
+    li(v-show="step >= 10") B127361 - Maximilian Mustermann
+
+  a(href="#mobile-phone").whatsapp-header
+    svg
+      use(xlink:href="images/sprite.svg#icons8-ringer-volume")
+
+  // Mobile menu
+  ul.mobile-nav
+    li
+      a(href="index.html")
+        svg
+          use(xlink:href="images/sprite.svg#icons8-external-link")
+        |STARTSEITE
+
+    li
+      a(href="#")
+        svg
+          use(xlink:href="images/sprite.svg#icons8-external-link")
+        |IMPRESSUM
+
+    li
+      a(href="#")
+        svg
+          use(xlink:href="images/sprite.svg#icons8-external-link")
+        |DATENSCHUTZ

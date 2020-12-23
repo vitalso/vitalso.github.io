@@ -1,0 +1,96 @@
+
+<aside>
+  <div class="logo"><a href="index.html"><img src="images/logo.png"/></a></div>
+  <nav class="nav" v-if="step &lt;= 9">
+    <ul>
+      <li><a href="#" v-bind:class="{ done : step &gt; 1 , current : step == 1 }">
+          <svg class="default">
+            <use xlink:href="images/sprite.svg#right-arrow"></use>
+          </svg>
+          <svg class="done-icon">
+            <use xlink:href="images/sprite.svg#icons8-checked"></use>
+          </svg>Tatvorwurf</a></li>
+      <li><a href="#" v-bind:class="{ done : step &gt; 2 , current : step == 2 }">
+          <svg class="default">
+            <use xlink:href="images/sprite.svg#right-arrow"></use>
+          </svg>
+          <svg class="done-icon">
+            <use xlink:href="images/sprite.svg#icons8-checked"></use>
+          </svg>Rechtsschutzversicherung</a></li>
+      <li><a href="#" v-bind:class="{ done : step &gt; 3 , current : step == 3 }">
+          <svg class="default">
+            <use xlink:href="images/sprite.svg#right-arrow"></use>
+          </svg>
+          <svg class="done-icon">
+            <use xlink:href="images/sprite.svg#icons8-checked"></use>
+          </svg>Post von Behörde</a></li>
+      <li><a href="#" v-bind:class="{ done : step &gt; 5 , current : step == 4 || step == 5 }">
+          <svg class="default">
+            <use xlink:href="images/sprite.svg#right-arrow"></use>
+          </svg>
+          <svg class="done-icon">
+            <use xlink:href="images/sprite.svg#icons8-checked"></use>
+          </svg>Details</a></li>
+      <li><a href="#" v-bind:class="{ done : step &gt; 6 , current : step == 6 }">
+          <svg class="default">
+            <use xlink:href="images/sprite.svg#right-arrow"></use>
+          </svg>
+          <svg class="done-icon">
+            <use xlink:href="images/sprite.svg#icons8-checked"></use>
+          </svg>Punkte</a></li>
+      <li><a href="#" v-bind:class="{ done : step &gt; 7 , current : step == 7 }">
+          <svg class="default">
+            <use xlink:href="images/sprite.svg#right-arrow"></use>
+          </svg>
+          <svg class="done-icon">
+            <use xlink:href="images/sprite.svg#icons8-checked"></use>
+          </svg>Dokumente</a></li>
+      <li><a href="#" v-bind:class="{ done : step &gt; 8 , current : step == 8 }">
+          <svg class="default">
+            <use xlink:href="images/sprite.svg#right-arrow"></use>
+          </svg>
+          <svg class="done-icon">
+            <use xlink:href="images/sprite.svg#icons8-checked"></use>
+          </svg>Führerschein</a></li>
+      <li><a href="#" v-bind:class="{ done : step &gt; 9 , current : step == 9 }">
+          <svg class="default">
+            <use xlink:href="images/sprite.svg#right-arrow"></use>
+          </svg>
+          <svg class="done-icon">
+            <use xlink:href="images/sprite.svg#icons8-checked"></use>
+          </svg>Daten</a></li>
+      <li><a href="#" v-bind:class="{ done : step &gt; 10 , current : step == 10 }">
+          <svg class="default">
+            <use xlink:href="images/sprite.svg#right-arrow"></use>
+          </svg>
+          <svg class="done-icon">
+            <use xlink:href="images/sprite.svg#icons8-checked"></use>
+          </svg>Kostenlose Auswertung</a></li>
+      <li><a href="result-option.html" v-bind:class="{ current : step == 11 }" @click="step = 11">
+          <svg class="default">
+            <use xlink:href="images/sprite.svg#right-arrow"></use>
+          </svg>
+          <svg class="done-icon">
+            <use xlink:href="images/sprite.svg#icons8-checked"></use>
+          </svg>Fallauswertung</a></li>
+    </ul>
+  </nav>
+  <nav class="nav" v-if="step &gt;= 10">
+    <ul>
+      <li><a class="current" href="#">
+          <svg class="default">
+            <use xlink:href="images/sprite.svg#right-arrow"></use>
+          </svg>Fallnummer B12625 Maximilian Mustermann Geschwindigkeitsverstoß</a></li>
+    </ul>
+  </nav>
+  <div class="info">
+    <p><a href="#">
+        <svg>
+          <use xlink:href="images/sprite.svg#icons8-ringer-volume"></use>
+        </svg>Kostenlose Hotline</a></p>
+    <p class="bottom-link"><span><a href="#">
+          <svg>
+            <use xlink:href="images/sprite.svg#new-window"></use>
+          </svg>Impressum</a></span><span><a href="#">Datenschutz</a></span></p>
+  </div>
+</aside>

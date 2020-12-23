@@ -1,0 +1,47 @@
+doctype html
+html(lang='en')
+  head
+    include elements/head.pug
+  body
+
+    // Main page start
+    main#app
+
+      // Header start
+      //include elements/aside.pug
+
+      include elements/header.pug
+
+      // Mobile header
+      //include elements/header-mobile.pug
+
+      // Section content start
+      section.content-section.no-padding
+
+        // Form section
+        .index-section
+
+          .section
+            .section-title
+              .author
+                img(src="images/rabier.png")
+              h3 "Jeder zweite Bußgeldbescheid ist fehlerhaft. Ist es Ihrer auch?"
+              p Mein Name ist Alexander Biernacki. Gemeinsam prüfen wir in wenigen Minuten, ob sich ein <b>Einspruch</b> gegen Bußgeld, Punkte oder Fahrverbot lohnt.
+
+            .form-container
+              .notice Die Prüfung ist <u>kostenlos</u> und <u>unverbindlich</u> !
+              a(href="form.html").next Kostenlose Prüfung starten
+
+              .header-partners
+                p Bekannt aus Rundfunk und TV
+                .partners-img
+                  img(src="images/welt_testimonial.png")
+                  img(src="images/heise_testimonial.png")
+                  img(src="images/br_testimonial.png")
+
+
+    // Footer start
+    include elements/footer.pug
+
+    // jQuery & Bootstrap scripts
+    include elements/scripts.pug

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width , initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>index</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--if lt IE 9
+    script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+    script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+    -->
+  </head>
+  <body>
+    <!-- Main page start-->
+    <main id="app">
+      <!-- Form page header on mobile-->
+      <header class="header-form">
+        <button class="menu"><span></span><span></span><span></span></button>
+        <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+        <!-- Progress bar-->
+        <div class="progress-bar">
+          <div class="progress" v-bind:style="{ width: currentWidth + '%'}"></div>
+        </div>
+        <div class="header-partners">
+          <p>Bekannt aus Rundfunk und TV</p>
+          <div class="partners-img"><img src="images/welt_testimonial.png"><img src="images/heise_testimonial.png"><img src="images/br_testimonial.png"></div>
+        </div>
+        <div class="author"><img src="images/rabier.png"></div>
+      </header>
+      <!-- Section content start-->
+      <section class="content-section no-padding">
+        <!-- Form section-->
+        <div class="form-section no-padding">
+          <transition name="fade" mode="out-in">
+            <!-- Question 1-->
+            <div class="section index-section" key="33" v-if="step == 1">
+              <div class="section-title">
+                <div class="author"><img src="images/rabier.png"></div>
+                <h3>Jeder zweite verschickte Bußgeldbescheid ist fehlerhaft! Ist es Ihrer auch?</h3>
+                <p>Jetzt <a href="#">kostenlosen</a> und <a href="#">unverbindlichen</a> prüfen</p>
+              </div>
+              <div class="form-container">
+                <p class="form-question">1. Was wird Ihnen vorgeworfen?</p>
+                <div class="form-card">
+                  <input type="radio" name="question" value="Geschwindigkeitsverstoß" id="question">
+                  <label for="question" v-on:click="next()"><span class="label-icon"><img src="images/icons8-speedometer.svg"></span><span>Geschwindigkeitsverstoß</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="question" value="Abstandsverstoß" id="question-2">
+                  <label for="question-2" v-on:click="next()"><span class="label-icon"><img src="images/icons8-sedan.svg"></span><span>Abstandsverstoß</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="question" value="Rotlichtverstoß" id="question-3">
+                  <label for="question-3" v-on:click="next()"><span class="label-icon"><img src="images/icons8-traffic-light.svg"></span><span>Rotlichtverstoß</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="question" value="Handy / Drogen / Parken" id="question-4">
+                  <label for="question-4" v-on:click="step = 222"><span class="label-icon"><img src="images/icons-beer.svg"></span><span>Handy / Drogen / Parken</span></label>
+                </div>
+              </div>
+            </div>
+            <!-- Question 2-->
+            <div class="section index-section" key="99" v-if="step == 222">
+              <div class="section-title">
+                <div class="author"><img src="images/rabier.png"></div>
+                <h3>Jeder zweite verschickte Bußgeldbescheid ist fehlerhaft! Ist es Ihrer auch?</h3>
+                <p>Jetzt <b>kostenlosen</b> und <b>unverbindlichen</b> prüfen</p>
+              </div>
+              <div class="form-container">
+                <p class="form-question">Bitte wählen Sie jetzt genau</p>
+                <div class="form-card">
+                  <input type="radio" name="question-1" value="Alkohol - / Drogenverstoß" id="question-211">
+                  <label for="question-211" v-on:click="step = 2"><span class="label-icon"><img src="images/icons8-speedometer.svg"></span><span>Alkohol - / Drogenverstoß</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="question-1" value="Handyverstoß" id="question-212">
+                  <label for="question-212" v-on:click="step = 2"><span class="label-icon"><img src="images/icons8-sedan.svg"></span><span>Handyverstoß</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="question-1" value="Parkverstoß" id="question-213">
+                  <label for="question-213" v-on:click="step = 2"><span class="label-icon"><img src="images/icons8-traffic-light.svg"></span><span>Parkverstoß</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="question-1" value="Sonstiges" id="question-214">
+                  <label for="question-214" v-on:click="step = 2"><span class="label-icon"><img src="images/icons-beer.svg"></span><span>Sonstiges</span></label>
+                </div>
+              </div>
+            </div>
+            <!-- Question 2-->
+            <div class="section index-section" key="22" v-if="step == 2">
+              <div class="section-title">
+                <div class="author"><img src="images/rabier.png"></div>
+                <h3>Alles klar! Haben Sie eine Rechtsschutzversicherung?</h3>
+                <p>Mit Ihren Angaben helfen Sie uns, Ihnen die richtige Vorgehensweise zu empfehlen. Selbstverständlich entstehen Ihnen keine Kosten!</p>
+              </div>
+              <div class="form-container">
+                <div class="form-card">
+                  <input type="radio" name="radio-1" value="Ja habe ich" id="radio-1">
+                  <label for="radio-1" v-on:click="next()"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>Ja habe ich</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="radio-1" value="Nein habe ich nicht" id="radio-2">
+                  <label for="radio-2" v-on:click="next()"><span class="label-icon"><img src="images/icons8-delete-shield.svg"></span><span>Nein habe ich nicht</span></label>
+                </div>
+              </div>
+            </div>
+            <!-- Question 3-->
+            <div class="section index-section" key="2" v-if="step == 3">
+              <div class="section-title">
+                <div class="author"><img src="images/rabier.png"></div>
+                <h3>Haben Sie bereits Post von einer Behörde erhalten?</h3>
+                <p>Dies kann eine Anhörung, ein Bußgeldbescheid, Zeugenfragebogen oder Strafbefehl sein.</p>
+              </div>
+              <div class="form-container">
+                <div class="form-card">
+                  <input type="radio" name="radio-2" value="Ja habe ich" id="radio-4">
+                  <label for="radio-4" v-on:click="next()"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>Ja habe ich</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="radio-2" value="Nein habe ich nicht" id="radio-5">
+                  <label for="radio-5" v-on:click="next()"><span class="label-icon"><img src="images/icons8-delete-shield.svg"></span><span>Nein habe ich nicht</span></label>
+                </div>
+              </div>
+            </div>
+            <!-- Question 4-->
+            <div class="section index-section" key="3" v-if="step == 4">
+              <div class="section-title">
+                <div class="author"><img src="images/rabier.png"></div>
+                <h3>Gut, wo waren Sie unterwegs?</h3>
+                <p>Bitte prüfen Sie den Bescheid: Sind Sie innerhalb oder außerhalb geschlossener Ortschaften geblitzt worden?</p>
+              </div>
+              <div class="form-container">
+                <div class="form-card">
+                  <input type="radio" name="radio-3" value="Innerorts" id="radio-7">
+                  <label for="radio-7" v-on:click="next()"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>Innerorts</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="radio-3" value="Außerorts" id="radio-8">
+                  <label for="radio-8" v-on:click="next()"><span class="label-icon"><img src="images/icons8-delete-shield.svg"></span><span>Außerorts</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="radio-3" value="Ich bin mir unsicher" id="radio-9">
+                  <label for="radio-9" v-on:click="next()"><span class="label-icon"><img src="images/icons8-delete-shield.svg"></span><span>Ich bin mir unsicher</span></label>
+                </div>
+              </div>
+            </div>
+            <!-- Question 5-->
+            <div class="section index-section" key="4" v-if="step == 5">
+              <div class="section-title">
+                <div class="author"><img src="images/rabier.png"></div>
+                <h3>Und wie viel km/h waren Sie zu schnell?</h3>
+                <p>Bitte prüfen Sie den Bescheid: Wie hoch ist die vorgeworfene Überschreitung der Geschwindigkeit</p>
+              </div>
+              <div class="form-container">
+                <div class="form-card">
+                  <input type="radio" name="radio-4" value="0 - 15 km/h" id="radio-10">
+                  <label for="radio-10" v-on:click="next()"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>0 - 15 km/h</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="radio-4" value="16 - 20 km/h" id="radio-11">
+                  <label for="radio-11" v-on:click="next()"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>16 - 20 km/h</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="radio-4" value="21 - 25 km/h" id="radio-12">
+                  <label for="radio-12" v-on:click="next()"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>21 - 25 km/h</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="radio-4" value="über 25 km/h" id="radio-13">
+                  <label for="radio-13" v-on:click="next()"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>über 25 km/h</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="radio-4" value="Ich bin mir unsicher" id="radio-14">
+                  <label for="radio-14" v-on:click="next()"><span class="label-icon"><img src="images/icons8-delete-shield.svg"></span><span>Ich bin mir unsicher</span></label>
+                </div>
+              </div>
+            </div>
+            <!-- Question 6-->
+            <div class="section index-section" key="8" v-if="step == 6">
+              <div class="section-title">
+                <div class="author"><img src="images/rabier.png"></div>
+                <h3>Wie viele Punkte in Flensburg haben Sie bereits?</h3>
+                <p>Die Höhe der Strafe ist davon abhängig, ob Sie bereits Punkte in Flensburg haben. Ist Ihnen bekannt, ob es solche Voreintragungen gibt?</p>
+              </div>
+              <div class="form-container">
+                <div class="form-card">
+                  <input type="radio" name="radio-6" value="Keine Punkte" id="radio-20">
+                  <label for="radio-20" v-on:click="next()"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>Keine Punkte</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="radio-6" value="1-3 Punkte" id="radio-21">
+                  <label for="radio-21" v-on:click="next()"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>1-3 Punkte</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="radio-6" value="Keine Unterlagen vorhanden" id="radio-22">
+                  <label for="radio-22" v-on:click="next()"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>4-8 Punkte</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="radio-6" value="Ich bin mir unsicher" id="radio-23">
+                  <label for="radio-23" v-on:click="next()"><span class="label-icon"><img src="images/icons8-delete-shield.svg"></span><span>Ich bin mir unsicher</span></label>
+                </div>
+              </div>
+            </div>
+            <!-- Question 7-->
+            <div class="section index-section" key="9" v-if="step == 7">
+              <div class="section-title">
+                <div class="author"><img src="images/rabier.png"></div>
+                <h3>Welches Dokument haben Sie erhalten?</h3>
+                <p>Bitte geben Sie an welches Dokument Sie von der Behörde erhalten haben. Diese Information finden Sie auf der ersten Seite des Schreibens.</p>
+              </div>
+              <div class="form-container">
+                <div class="form-card">
+                  <input type="radio" name="radio-7" value="Anhörungsbogen" id="radio-24">
+                  <label for="radio-24" v-on:click="next()"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>Anhörungsbogen</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="radio-7" value="Zeugenfragenbogen" id="radio-25">
+                  <label for="radio-25" v-on:click="next()"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>Zeugenfragenbogen</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="radio-7" value="Bußgeldbescheid" id="radio-26">
+                  <label for="radio-26" v-on:click="next()"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>Bußgeldbescheid</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="radio-7" value="Ich bin mir unsicher" id="radio-27">
+                  <label for="radio-27" v-on:click="next()"><span class="label-icon"><img src="images/icons8-delete-shield.svg"></span><span>Ich bin mir unsicher</span></label>
+                </div>
+              </div>
+            </div>
+            <!-- Question 8-->
+            <div class="section index-section" key="92" v-if="step == 8">
+              <div class="section-title">
+                <div class="author"><img src="images/rabier.png"></div>
+                <h3>Wurden Sie in den letzten 12 Monaten schon mal geblitzt?</h3>
+                <p>Bitte geben Sie an, ob Sie in den letzten zwölf Monaten bereits geblitzt wurden.</p>
+              </div>
+              <div class="form-container">
+                <div class="form-card">
+                  <input type="radio" name="radio-77" value="Ja" id="radio-242">
+                  <label for="radio-242" v-on:click="next()"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>Ja</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="radio-77" value="Nein" id="radio-252">
+                  <label for="radio-252" v-on:click="next()"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>Nein</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="radio-77" value="Weiß nicht genau" id="radio-262">
+                  <label for="radio-262" v-on:click="next()"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>Weiß nicht genau</span></label>
+                </div>
+              </div>
+            </div>
+            <!-- Question 9-->
+            <div class="section index-section" key="10" v-if="step == 9">
+              <div class="section-title">
+                <div class="author"><img src="images/rabier.png"></div>
+                <h3>Sind Sie auf Ihren Führerschein angewiesen?</h3>
+                <p>Gibt es besondere Gründe, die Sie von Ihrem Führerschein abhängig machen? Dies können berufliche oder wichtige private Gründe sein.</p>
+              </div>
+              <div class="form-container">
+                <div class="form-card">
+                  <input type="radio" name="radio-8" value="Ja, privat" id="radio-28">
+                  <label for="radio-28" v-on:click="next()"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>Ja, privat</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="radio-8" value="Ja, beruflich" id="radio-29">
+                  <label for="radio-29" v-on:click="next()"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>Ja, beruflich</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="radio-8" value="Nein bin ich nicht" id="radio-30">
+                  <label for="radio-30" v-on:click="next()"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>Nein bin ich nicht</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="radio-8" value="Ich bin mir unsicher" id="radio-31">
+                  <label for="radio-31" v-on:click="next()"><span class="label-icon"><img src="images/icons8-delete-shield.svg"></span><span>Ich bin mir unsicher</span></label>
+                </div>
+              </div>
+            </div>
+            <!-- Random data loading-->
+            <div class="section index-section random-section" key="333" v-if="step == 10">
+              <div class="section-title">
+                <h3>Ihre Fallauswertung wird nun erstellt</h3>
+              </div>
+              <div class="form-container">
+                <ul class="loading-data">
+                  <li>
+                    <svg class="static">
+                      <use xlink:href="images/sprite.svg#icons8-checkmark"></use>
+                    </svg>
+                    <svg class="loading-icon">
+                      <use xlink:href="images/sprite.svg#icons8-loading"></use>
+                    </svg>Daten werden verarbeitet
+                  </li>
+                  <li>
+                    <svg class="static">
+                      <use xlink:href="images/sprite.svg#icons8-checkmark"></use>
+                    </svg>
+                    <svg class="loading-icon">
+                      <use xlink:href="images/sprite.svg#icons8-loading"></use>
+                    </svg>Blitzerdatenbank wird gescannt
+                  </li>
+                  <li>
+                    <svg class="static">
+                      <use xlink:href="images/sprite.svg#icons8-checkmark"></use>
+                    </svg>
+                    <svg class="loading-icon">
+                      <use xlink:href="images/sprite.svg#icons8-loading"></use>
+                    </svg>Mögliche Strafen werden ermittelt
+                  </li>
+                  <li>
+                    <svg class="static">
+                      <use xlink:href="images/sprite.svg#icons8-checkmark"></use>
+                    </svg>
+                    <svg class="loading-icon">
+                      <use xlink:href="images/sprite.svg#icons8-loading"></use>
+                    </svg>Messfehler werden gesucht
+                  </li>
+                  <li>
+                    <svg class="static">
+                      <use xlink:href="images/sprite.svg#icons8-checkmark"></use>
+                    </svg>
+                    <svg class="loading-icon">
+                      <use xlink:href="images/sprite.svg#icons8-loading"></use>
+                    </svg>Prüfung wird vorbereitet
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Question 10-->
+            <div class="section index-section" key="12" v-if="step == 11">
+              <div class="section-title">
+                <div class="author"><img src="images/rabier.png"></div>
+                <h3>Fast geschafft! Wohin dürfen wir Ihr Ergebnis senden?</h3>
+                <p class="green-color">Die Prüfung Ihres Falles ist für Sie <b>kostenlos & unverbindlich</b>. Es erfolgt keine Weitergabe Ihrer Daten!</p>
+              </div>
+              <div class="form-container form-data">
+                <div class="input-row two-input">
+                  <div class="wrap-input">
+                    <input type="text" name="vorname" v-model="vorname" require><span class="label-input" v-bind:class="{ filled : vorname.length &gt;= 1 }">Ihr Vorname *</span>
+                  </div>
+                  <div class="wrap-input">
+                    <input type="text" name="nachname" v-model="nachname" require><span class="label-input" v-bind:class="{ filled : nachname.length &gt;= 1 }">Ihr Nachname *</span>
+                  </div>
+                </div>
+                <div class="input-row">
+                  <div class="wrap-input">
+                    <input type="email" name="email" v-model="email" require><span class="label-input" v-bind:class="{ filled : email.length &gt;= 1 }">Ihre E-Mail Adresse *</span>
+                  </div>
+                </div>
+                <div class="input-row">
+                  <div class="wrap-input">
+                    <input type="phone" name="telefonnumer" v-model="phone" require><span class="label-input" v-bind:class="{ filled : phone.length &gt;= 1 }">Ihre Telefonnummer *</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Question 11-->
+            <div class="section index-section" key="5" v-if="step == 12">
+              <div class="section-title">
+                <div class="author"><img src="images/rabier.png"></div>
+                <h3>Vielen Dank für Ihre Anfrage Bitte laden Sie zur Auswertung Ihre vorhandenen Unterlagen hoch</h3>
+                <p>Mein Name ist Alexander Biernacki. Ich bin Ihr persönlicher Ansprechpartner.</p>
+                <p>“Damit ich Ihren Fall besser beurteilen kann, benötige ich den Anhörungsbogen oder Bußgeldbescheid, den Sie von der Behörde bereits erhalten haben.”</p>
+              </div>
+              <div class="form-container">
+                <p class="form-question">Wie möchten Sie die Unterlagen senden?</p>
+                <div class="form-card">
+                  <input type="radio" name="radio-5" value="Hochladen (Per Foto oder Upload)" v-model="secondMethod" id="radio-15">
+                  <label for="radio-15" v-on:click="next()"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>Hochladen (Per Foto oder Upload)</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="radio-5" value="Per Whats übersenden" v-model="secondMethod" id="radio-16">
+                  <label for="radio-16" v-on:click="next()"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>Per Whats übersenden</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="radio-5" value="Keine Unterlagen vorhanden" v-model="secondMethod" id="radio-17">
+                  <label for="radio-17" v-on:click="next()"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>Keine Unterlagen vorhanden</span></label>
+                </div>
+              </div>
+            </div>
+            <!-- Question 7-->
+            <div class="section index-section" key="6" v-if="step == 13">
+              <div class="section-title">
+                <div class="author"><img src="images/rabier.png"></div>
+                <h3>Unterlagen hochladen per Foto oder Dateiupload</h3>
+                <p>Bitte klicken Sie den untenstehenden Button oder ziehen Sie die Datei ins Rechteck. Alternativ klicken Sie ebenfalls dem Button und fertigen Sie ein Foto mit Ihrer Tablet oder PC Kamera an.</p>
+              </div>
+              <div class="form-container">
+                <div class="form-card file-card">
+                  <input type="file" name="file" v-on:change="next()" id="radio-18">
+                  <label for="radio-18"><span class="upload-file"><img src="images/icons8-upload.svg"></span><span><u>Hier klicken</u> um Unterlagen auszuwählen/ fotografieren</span></label>
+                </div>
+              </div>
+            </div>
+            <!-- Question 8-->
+            <div class="section index-section" key="7" v-if="step == 14">
+              <div class="section-title">
+                <div class="author"><img src="images/rabier.png"></div>
+                <h3>Unterlagen hochladen per Foto oder Dateiupload</h3>
+                <p>Bitte klicken Sie den untenstehenden Button oder ziehen Sie die Datei ins Rechteck. Alternativ klicken Sie ebenfalls dem Button und fertigen Sie ein Foto mit Ihrer Tablet oder PC Kamera an.</p>
+              </div>
+              <div class="form-container">
+                <div class="form-card file-list">
+                  <div class="file-item">
+                    <p>Dateiname 12233112 <b>2.4 MB</b></p><a class="remove-file" href="#">LÖSCHEN<span>
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icons8-delete"></use>
+                        </svg></span></a>
+                  </div>
+                  <div class="file-item">
+                    <p>Dateiname 12233112 <b>2.4 MB</b></p><a class="remove-file" href="#">LÖSCHEN<span>
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icons8-delete"></use>
+                        </svg></span></a>
+                  </div>
+                  <div class="upload-more">
+                    <input type="file" name="file-more" id="radio-19">
+                    <label for="radio-19"><span class="upload-file"><img src="images/icons8-upload.svg"></span><span><u>Mehr Unterlagen</u> auswählen</span></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Question 15-->
+            <div class="section index-section" key="14" v-if="step == 15">
+              <div class="section-title">
+                <div class="author"><img src="images/rabier.png"></div>
+                <h3>Welches Messgerät steht auf Ihrem Bescheid?</h3>
+                <p>Bitte prüfen Sie Ihren Bescheid. Dort ist in der Rubrik „Beweismittel“ oder „Bemerkungen“ angegeben, welches Messgerät verwendet wurde. Ist Ihr Messgerät hier nicht aufgeführt oder weist Ihr Schreiben keine Informationen auf, wählen Sie bitte „Anderes/Weiß nicht"</p>
+              </div>
+              <div class="form-container">
+                <div class="form-card large-card">
+                  <input type="radio" name="radio-10" value="Lasermessgerät" id="radio-34">
+                  <label for="radio-34" v-on:click="next()"><span class="label-icon icon-circle"></span><span>Lasermessgerät <br> <b>Poliscan Speed, Leivtec XV3, Messung mit Lasergerät</b></span></label>
+                </div>
+                <div class="form-card large-card">
+                  <input type="radio" name="radio-10" value="Lichtschrankenmessgerät" id="radio-35">
+                  <label for="radio-35" v-on:click="next()"><span class="label-icon icon-circle"></span><span>Lichtschrankenmessgerät <br> <b>Eso ES 3.0, Lichtschranke, Sensormessung</b></span></label>
+                </div>
+                <div class="form-card large-card">
+                  <input type="radio" name="radio-10" value="Stationäre Anlage Laser" id="radio-36">
+                  <label for="radio-36" v-on:click="next()"><span class="label-icon icon-circle"></span><span>Stationäre Anlage Laser <br> <b>Traffistar S350, Poliscan Speed, Poliscan Speed Trailer, Vitronic Trailer</b></span></label>
+                </div>
+                <div class="form-card large-card">
+                  <input type="radio" name="radio-10" value="Weiß nicht genau / unsicher" id="radio-37">
+                  <label for="radio-37" v-on:click="next()"><span class="label-icon icon-circle"></span><span>Weiß nicht genau / unsicher</span></label>
+                </div>
+              </div>
+            </div>
+            <!-- Question 16-->
+            <div class="section index-section" key="15" v-if="step == 16">
+              <div class="section-title">
+                <div class="author"><img src="images/rabier.png"></div>
+                <h3>Danke! Wie können wir Ihnen nun behilflich sein?</h3>
+                <p>Bitte wählen Sie nun aus, wie wir mit Ihrem Fall weiter verfahren sollen.</p>
+              </div>
+              <div class="form-container">
+                <div class="form-card large-card">
+                  <input type="radio" name="radio-11" value="Lasermessgerät" id="radio-38">
+                  <label for="radio-38" v-on:click="next()"><span class="label-icon icon-circle"></span><span>Kostenlose Beratung <br> <b>Wir prüfen kostenlos Ihre Unterlagen und Angaben und informieren Sie über das Ergebnis</b></span></label>
+                </div>
+                <div class="form-card large-card">
+                  <input type="radio" name="radio-11" value="Verteidigung" v-model="versicherung" id="radio-39">
+                  <label for="radio-39" v-on:click="next()"><span class="label-icon icon-circle"></span><span>Sofort mit der Verteidigung beginnen <br> <b>Wir klären die Kostenübernahme mit Ihrer Rechtsschutzversicherung und verteidigen Sie gegen den Tatvorwurf. Wenn Sie über keine Rechtsschutzversicherung verfügen, informieren wir Sie über die Kosten</b></span></label>
+                </div>
+              </div>
+            </div>
+            <!-- Result-->
+            <div class="section result-section index-section" key="16" v-if="step == 17">
+              <div class="section-title">
+                <div class="icon-document"><img src="images/icons-check-document-active.png"></div>
+                <h3>Anfrage erfolgreich eingegangen. <br> Ihre Fallnummer lautet B121212</h3>
+                <p>Vielen Dank für Ihre Anfrage! Ihr Fall ist nun in Bearbeitung und wir werden uns umgehend bei Ihnen melden.</p>
+              </div>
+            </div>
+            <!-- Question 12-->
+            <div class="section index-section" key="11" v-if="step == 18">
+              <div class="section-title">
+                <div class="author"><img src="images/rabier.png"></div>
+                <h3>Bitte senden Sie uns die Unterlagen an 01522 / 3336037</h3>
+                <p>Sie können uns Ihren Bußgeldbescheid/ Anhörungsbogen auch gerne WhatsSApp/ MMS senden. Dafür fügen Sie bitte einfach folgende Nummer zu Ihrem Adressbuch hinzu und senden und die nötigen Unterlagen (Fotos vom Bescheid, etc.)</p>
+              </div>
+              <div class="form-container"><a class="whatsapp-link" href="#"><span>
+                    <svg>
+                      <use xlink:href="images/sprite.svg#whatsapp"></use>
+                    </svg></span>WhatsApp direkt öffnen</a>
+                <div class="form-question">Haben Sie die Unterlagen gesendet?</div>
+                <div class="form-card">
+                  <input type="radio" name="radio-9" value="Ja habe ich" v-model="secondMethod" id="radio-32">
+                  <label for="radio-32" v-on:click="step = 15"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>Ja habe ich</span></label>
+                </div>
+                <div class="form-card">
+                  <input type="radio" name="radio-9" value="Nein mache ich später" v-model="secondMethod" id="radio-33">
+                  <label for="radio-33" v-on:click="step = 15"><span class="label-icon"><img src="images/icons8-security-shield.svg"></span><span>Nein mache ich später</span></label>
+                </div>
+              </div>
+            </div>
+            <!-- Question 14-->
+            <div class="section index-section" key="13" v-if="step == 19">
+              <div class="section-title">
+                <div class="author"><img src="images/rabier.png"></div>
+                <h3>Wir benötigen Unterlagen um Ihren Fall bewerten zu können</h3>
+                <p>Um Ihrem Fall bewerten zu können benötigen wir optimalerweise von Ihnen einen Bußgeldbescheid/ Anhörungsbogen. Diesen haben Sie normalerweise von einer Behörde per Post erhalten. Sollten Ihnen diese Unterlagen zur Zeit nicht vorliegen oder Sie keinen Zugriff darauf haben, bitten wir Sie darum, uns die Unterlagen nach Erhalt schnellstmöglich zuzusenden. Bitte beachten Sie, dass bei Bußgeldbescheiden eine Frist einzuhalten ist, innerhalb derer bei der Behörde durch uns Einspruch eingelegt werden kann.</p>
+              </div>
+            </div>
+          </transition>
+          <div class="form-control" key="17">
+            <transition name="fade">
+              <button class="next" v-if="phone.length &gt;= 1" v-on:click="next() , showLoading()"><span v-if="load == true"></span>Auswertung anfordern</button>
+              <button class="next" v-else-if="step == 14" v-on:click="next() , showLoading()"><span v-if="load == true"></span>Unterlagen hochladen</button>
+              <button class="next" v-else-if="step == 19" v-on:click="step = 15 , showLoading()"><span v-if="load == true"></span>Verstanden & weiter</button>
+            </transition>
+            <p v-show="step &gt;= 2"><a class="prev" href="#" v-on:click.prevent="prev()">
+                <svg>
+                  <use xlink:href="images/sprite.svg#right-arrow"></use>
+                </svg>Zurück</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer start-->
+    <!-- Popup-->
+    <div class="mfp-hide white-popup-block" id="mobile-phone">
+      <p class="title-popup">Kostenlose 24h Soforthotline</p><a class="popup-number" href="tel: 0800/7234114">
+        <svg>
+          <use xlink:href="images/sprite.svg#icons8-ringer-volume"></use>
+        </svg><span>0800 / 723 41 14</span></a>
+      <p>Sie haben Frage und wünschen eine kostenlose Erstberatung per Telefon? Zögern Sie nicht uns unter oben genannter Nummer zu kontaktieren</p>
+    </div>
+    <div class="mfp-hide white-popup-block" id="result-text">
+      <p class="title-popup">Fallgutachten</p>
+      <p>Sehr geehrter Max Mustermann, <br><br></p>
+      <p>Zunächst müsste überprüft werden, ob anhand der vorhandenen Beweismittel in der Ermittlungsakte der Tatnachweis wirklich geführt werden kann. Dann sollte geklärt werden, ob die Messung korrekt erfolgt ist. Messfehler sind keine Seltenheit. Das bei Ihnen verwendete Messsystem ist in den letzten Monaten wieder sehr stark in die Kritik geraten. Es sind sehr viele Verfahren eingestellt worden. Erste Gerichte stellen die Verwertbarkeit dieses Messsystems generell in Frage. Allerdings ist immer eine Einzelfallbetrachtung notwendig.<br><br></p>
+      <p>Unabhängig hiervon müsste überprüft werden, ob sich andere Fahrzeuge im Messbereich befunden haben. Ferner müssten die Formalien der Messung: Eichung, Wartung, Schulung der Mess- und Auswertebeamten etc. überprüft werden. Auch hier gibt es häufig Ansatzpunkte. In diesem Zusammenhang müsste auch die Erkennbarkeit der konkreten Beschilderung und die korrekte Anordnung überprüft werden. Nicht zuletzt ist fraglich, ob das Originalbild zur zweifelsfreien Identifizierung ausreichend sein wird. <br><br></p>
+      <p>Die Messung ist angreifbar Wie geht's weiter?</p><a class="brand-btn" href="#" v-on:click="next()">Zu den Verteidigungsoptionen</a>
+      <div class="mfp-hide white-popup-block" id="result-video">
+        <p class="title-popup">Videoinformationen</p>
+        <div class="video">
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/Ot8n-nk_rAU?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="video"></iframe><a class="play-video" href="#"><img src="images/icons8-tv-show.svg"></a>
+        </div>
+        <p>Die Messung ist angreifbar Wie geht's weiter?</p><a class="brand-btn" href="#" v-on:click="next()">Zu den Verteidigungsoptionen</a>
+      </div>
+    </div>
+    <!-- jQuery & Bootstrap scripts-->
+    <!-- jQuery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Magnific popup-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    <!-- Vue JS-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <!-- Main script-->
+    <script src="js/main.js"></script>
+  </body>
+</html>
