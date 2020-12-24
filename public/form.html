@@ -20,8 +20,8 @@
     <main id="app">
       <!-- Form page header on mobile-->
       <header class="header-form">
-        <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
         <button class="menu"><span></span><span></span><span></span></button>
+        <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
         <ul class="mobile-nav">
           <li><a href="index.html">STARTSEITE</a></li>
           <li><a href="#">IMPRESSUM</a></li>
@@ -499,7 +499,7 @@
           </transition>
           <div class="form-control" key="17">
             <transition name="fade">
-              <button class="next" v-if="phone.length &gt;= 1" v-on:click="next() , showLoading()"><span v-if="load == true"></span>Auswertung kostenlos anfordern</button>
+              <button class="next disabled" v-if="step == 11" v-on:click="next() , showLoading()" v-bind:class="{ enabled : vorname.length &gt; 3 &amp;&amp; nachname.length &gt; 3 &amp;&amp; email.length &gt; 5 &amp;&amp; phone.length &gt; 7 }"><span v-if="load == true"></span>Auswertung kostenlos anfordern</button>
               <button class="next" v-else-if="step == 14" v-on:click="next() , showLoading()"><span v-if="load == true"></span>Unterlagen hochladen</button>
               <button class="next" v-else-if="step == 19" v-on:click="step = 15 , showLoading()"><span v-if="load == true"></span>Verstanden & weiter</button>
             </transition>

@@ -5,7 +5,7 @@ function checkContainer () {
     $('.loading-data > li').each(function (i, element) {
         setTimeout(function () {
             $(element).addClass('loading');
-        }, i * 1000);
+        }, i * 700);
     })
   } else {
     setTimeout(checkContainer, 50); //wait 50 ms, then try again
@@ -13,13 +13,6 @@ function checkContainer () {
 }
 
 $(function () {
-
-    /*$('.loading-data > li').each(function (i, element) {
-        setTimeout(function () {
-            $(element).addClass('loading');
-        }, i * 2000);
-    })*/
-
 
   // Toogle class button menu
   $('.menu').on('click' , function(){
@@ -32,16 +25,6 @@ $(function () {
     type: 'inline',
     preloader: false,
     modal: false
-  });
-
-  // Play video
-  $('.play-video').on('click', function(e) {
-
-    $("#video")[0].src += "&autoplay=1";
-    $(this).hide();
-    $('#video').show();
-    e.preventDefault();
-
   });
 
 });
@@ -64,14 +47,6 @@ var app = new Vue({
     schaft: '',
     nummer: '',
     snehmer: ''
-    /*
-    load: 0,
-    message: '',
-    status: 'Start'*/
-  },
-
-  mounted() {
-
   },
 
   methods: {
@@ -91,7 +66,7 @@ var app = new Vue({
     },
     next() {
       if (this.step == 9) {
-        setTimeout(() => { this.step = 11 }, 5000)
+        setTimeout(() => { this.step = 11 }, 3500)
       }
       setTimeout(
         () =>  {

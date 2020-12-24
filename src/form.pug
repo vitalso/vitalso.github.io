@@ -593,7 +593,7 @@ html(lang='en')
 
 					.form-control(key="17")
 						transition(name="fade")
-							button.next(v-if="phone.length >= 1" , v-on:click="next() , showLoading()")
+							button.next.disabled(v-if="step == 11" , v-on:click="next() , showLoading()" , v-bind:class="{ enabled : vorname.length > 3 && nachname.length > 3 && email.length > 5 && phone.length > 7 }")
 								span(v-if="load == true")
 								|Auswertung kostenlos anfordern
 							button.next(v-else-if="step == 14" , v-on:click="next() , showLoading()")

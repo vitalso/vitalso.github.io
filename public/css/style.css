@@ -512,6 +512,10 @@ h3 {
       font-size: 12px;
       line-height: 50px;
       color: #989898; }
+  .form-data .wrap-input.novalid input {
+    border-color: red; }
+  .form-data .wrap-input.novalid .label-input {
+    color: red; }
 
 .form-data input {
   width: 100%;
@@ -610,6 +614,13 @@ h3 {
     .form-control .prev:hover {
       opacity: 1; }
 
+.disabled {
+  opacity: .5;
+  pointer-events: none; }
+  .disabled.enabled {
+    opacity: 1;
+    pointer-events: auto; }
+
 button.next, a.next {
   position: relative;
   height: 50px;
@@ -690,7 +701,8 @@ button.next, a.next {
   max-width: 280px;
   margin-left: auto;
   margin-right: auto;
-  position: relative; }
+  position: relative;
+  text-align: left; }
   .loading-data li {
     margin: 20px 0;
     font-weight: 600;
@@ -714,9 +726,9 @@ button.next, a.next {
       color: #3d3d3d; }
       .loading-data li.loading svg.static {
         fill: #3C80DC;
-        animation: .5s linear showing; }
+        animation: .3s linear showing; }
       .loading-data li.loading svg.loading-icon {
-        animation: 1s linear rotate; }
+        animation: .7s linear rotate; }
 
 @keyframes showing {
   from {
@@ -1097,7 +1109,13 @@ blockquote {
 @media screen and (max-width: 480px) {
   .content-section {
     padding-top: 25px; }
-  .index-section .section-title h3 {
-    font-size: 20px;
-    line-height: 28px;
-    text-align: center; } }
+  .index-section .form-container {
+    text-align: center; }
+  .index-section .section-title {
+    text-align: center; }
+    .index-section .section-title .author {
+      margin: 0 auto 30px auto; }
+    .index-section .section-title h3 {
+      font-size: 20px;
+      line-height: 28px;
+      text-align: center; } }
