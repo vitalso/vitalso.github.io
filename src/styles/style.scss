@@ -117,7 +117,6 @@ header {
       cursor: pointer;
       outline: none;
       transition: all .3s ease-in-out;
-      display: none;
       span {
         display: block;
         margin: 3px 0;
@@ -201,7 +200,8 @@ header {
   //display: none;
 
   .author {
-    width: 27px;
+    max-width: 27px;
+    min-width: 27px;
     height: 27px;
     margin-left: 30px;
     display: none;
@@ -333,9 +333,11 @@ aside {
 .content-section {
   padding-left: 290px;
   min-height: calc(100vh - 80px);
-  display: flex;
+  /*display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center;*/
+  padding-top: 55px;
+  padding-bottom: 55px;
 
     &.no-padding {
       padding-left: 0;
@@ -366,6 +368,7 @@ aside {
     &.no-padding {
       max-width: 100%;
       padding-left: 0;
+      padding-right: 0;
     }
 }
 
@@ -659,6 +662,21 @@ aside {
       b {
         font-weight: 600;
       }
+      &.filled {
+        display: inline-block;
+        font-size: 14px;
+        padding: 6px 22px;
+        background: #4991741A;
+        border-radius: 3px;
+          svg {
+            width: 10px;
+            height: 10px;
+            vertical-align: middle;
+            fill: #428B6E;
+            margin-right: 12px;
+            margin-top: -1px;
+          }
+      }
   }
 
   .form-data {
@@ -890,6 +908,10 @@ aside {
       font-weight: 700;
     }
 
+    .text-center {
+        text-align: center;
+      }
+
     .section-title {
       padding-left: 0;
       .author , .icon-document {
@@ -921,7 +943,7 @@ aside {
 }
 
 .loading-data {
-  max-width: 300px;
+  max-width: 280px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -953,10 +975,10 @@ aside {
         color: #3d3d3d;
           svg.static {
             fill: $brand-color;
-            animation: 2s linear showing;
+            animation: .5s linear showing;
           }
           svg.loading-icon {
-            animation: 1.5s linear rotate;
+            animation: 1s linear rotate;
           }
       }
 
@@ -1303,7 +1325,6 @@ blockquote {
     padding-left: 0;
     min-height: auto;
     display: block;
-
   }
 
     .form-section {
@@ -1317,6 +1338,7 @@ blockquote {
 
     .section-title {
       text-align: center;
+      font-size: 14px;
       .author , .icon-document {
         position: relative;
         left: auto;
@@ -1349,13 +1371,14 @@ blockquote {
     }
 
     .form-control {
-      padding-left: 0;
+      padding-left: 15px;
       max-width: 530px;
       margin: 0 auto;
       text-align: center;
 
         button.next {
           width: 100%;
+          padding: 0 15px;
         }
 
     }
@@ -1497,14 +1520,6 @@ header .whatsapp-header , header .menu , header .header-title , .header-form .au
 
 }
 
-/*.form-section.no-padding {
-
-  .author {
-    display: none;
-  }
-
-}*/
-
 }
 
 @media screen and (max-width: 680px) {
@@ -1530,9 +1545,14 @@ header .whatsapp-header , header .menu , header .header-title , .header-form .au
 
 @media screen and (max-width: 480px) {
 
-  h3 {
-    font-size: 18px;
-    line-height: 22px;
+  .content-section {
+    padding-top: 25px;
+  }
+
+  .index-section .section-title h3 {
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
   }
 
 }

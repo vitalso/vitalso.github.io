@@ -21,13 +21,9 @@ html(lang='en')
 						// Question 1
 						.section.index-section(key="33" , v-if="step == 1")
 							.section-title
-								.author
-									img(src="images/rabier.png")
-								h3 Jeder zweite verschickte Bußgeldbescheid ist fehlerhaft! Ist es Ihrer auch?
-								p Jetzt <a href="#">kostenlosen</a> und <a href="#">unverbindlichen</a> prüfen
+								h3 1. Was wird Ihnen vorgeworfen?
 
 							.form-container
-								p.form-question 1. Was wird Ihnen vorgeworfen?
 
 								.form-card
 									input(type="radio" , name="question" , value="Geschwindigkeitsverstoß")#question
@@ -60,8 +56,6 @@ html(lang='en')
 						// Question 2
 						.section.index-section(key="99" , v-if="step == 222")
 							.section-title
-								.author
-									img(src="images/rabier.png")
 								h3 Jeder zweite verschickte Bußgeldbescheid ist fehlerhaft! Ist es Ihrer auch?
 								p Jetzt <b>kostenlosen</b> und <b>unverbindlichen</b> prüfen
 
@@ -99,8 +93,6 @@ html(lang='en')
 						// Question 2
 						.section.index-section(key="22" , v-if="step == 2")
 							.section-title
-								.author
-									img(src="images/rabier.png")
 								h3 Alles klar! Haben Sie eine Rechtsschutzversicherung?
 								p Mit Ihren Angaben helfen Sie uns, Ihnen die richtige Vorgehensweise zu empfehlen. Selbstverständlich entstehen Ihnen keine Kosten!
 
@@ -123,8 +115,6 @@ html(lang='en')
 						// Question 3
 						.section.index-section(key="2" , v-if="step == 3")
 							.section-title
-								.author
-									img(src="images/rabier.png")
 								h3 Haben Sie bereits Post von einer Behörde erhalten?
 								p Dies kann eine Anhörung, ein Bußgeldbescheid, Zeugenfragebogen oder Strafbefehl sein.
 
@@ -147,8 +137,6 @@ html(lang='en')
 						// Question 4
 						.section.index-section(key="3" , v-if="step == 4")
 							.section-title
-								.author
-									img(src="images/rabier.png")
 								h3 Gut, wo waren Sie unterwegs?
 								p Bitte prüfen Sie den Bescheid: Sind Sie innerhalb oder außerhalb geschlossener Ortschaften geblitzt worden?
 
@@ -178,8 +166,6 @@ html(lang='en')
 						// Question 5
 						.section.index-section(key="4" , v-if="step == 5")
 							.section-title
-								.author
-									img(src="images/rabier.png")
 								h3 Und wie viel km/h waren Sie zu schnell?
 								p Bitte prüfen Sie den Bescheid: Wie hoch ist die vorgeworfene Überschreitung der Geschwindigkeit
 
@@ -223,8 +209,6 @@ html(lang='en')
 						// Question 6
 						.section.index-section(key="8" , v-if="step == 6")
 							.section-title
-								.author
-									img(src="images/rabier.png")
 								h3 Wie viele Punkte in Flensburg haben Sie bereits?
 								p Die Höhe der Strafe ist davon abhängig, ob Sie bereits Punkte in Flensburg haben. Ist Ihnen bekannt, ob es solche Voreintragungen gibt?
 
@@ -261,8 +245,6 @@ html(lang='en')
 						// Question 7
 						.section.index-section(key="9" , v-if="step == 7")
 							.section-title
-								.author
-									img(src="images/rabier.png")
 								h3 Welches Dokument haben Sie erhalten?
 								p Bitte geben Sie an welches Dokument Sie von der Behörde erhalten haben. Diese Information finden Sie auf der ersten Seite des Schreibens.
 
@@ -299,8 +281,6 @@ html(lang='en')
 						// Question 8
 						.section.index-section(key="92" , v-if="step == 8")
 							.section-title
-								.author
-									img(src="images/rabier.png")
 								h3 Wurden Sie in den letzten 12 Monaten schon mal geblitzt?
 								p Bitte geben Sie an, ob Sie in den letzten zwölf Monaten bereits geblitzt wurden.
 
@@ -330,8 +310,6 @@ html(lang='en')
 						// Question 9
 						.section.index-section(key="10" , v-if="step == 9")
 							.section-title
-								.author
-									img(src="images/rabier.png")
 								h3 Sind Sie auf Ihren Führerschein angewiesen?
 								p Gibt es besondere Gründe, die Sie von Ihrem Führerschein abhängig machen? Dies können berufliche oder wichtige private Gründe sein.
 
@@ -368,7 +346,7 @@ html(lang='en')
 						// Random data loading
 						.section.index-section.random-section(key="333" , v-if="step == 10")
 							.section-title
-								h3 Ihre Fallauswertung wird nun erstellt
+								h3.text-center Ihre Fallauswertung wird nun erstellt
 
 							.form-container
 								ul.loading-data
@@ -410,10 +388,12 @@ html(lang='en')
 						// Question 10
 						.section.index-section(key="12" , v-if="step == 11")
 							.section-title
-								.author
-									img(src="images/rabier.png")
 								h3 Fast geschafft! Wohin dürfen wir Ihr Ergebnis senden?
-								p.green-color Die Prüfung Ihres Falles ist für Sie <b>kostenlos & unverbindlich</b>. Es erfolgt keine Weitergabe Ihrer Daten!
+							.text-center
+								p.green-color.filled
+									svg
+										use(xlink:href="images/sprite.svg#icons8-checkmark")
+									|Kostenlos und unverbindlich
 
 							.form-container.form-data
 
@@ -439,8 +419,6 @@ html(lang='en')
 						// Question 11
 						.section.index-section(key="5" , v-if="step == 12")
 							.section-title
-								.author
-									img(src="images/rabier.png")
 								h3 Vielen Dank für Ihre Anfrage Bitte laden Sie zur Auswertung Ihre vorhandenen Unterlagen hoch
 								p Mein Name ist Alexander Biernacki. Ich bin Ihr persönlicher Ansprechpartner.
 								p “Damit ich Ihren Fall besser beurteilen kann, benötige ich den Anhörungsbogen oder Bußgeldbescheid, den Sie von der Behörde bereits erhalten haben.”
@@ -472,8 +450,6 @@ html(lang='en')
 						// Question 7
 						.section.index-section(key="6" , v-if="step == 13")
 							.section-title
-								.author
-									img(src="images/rabier.png")
 								h3 Unterlagen hochladen per Foto oder Dateiupload
 								p Bitte klicken Sie den untenstehenden Button oder ziehen Sie die Datei ins Rechteck. Alternativ klicken Sie ebenfalls dem Button und fertigen Sie ein Foto mit Ihrer Tablet oder PC Kamera an.
 
@@ -489,8 +465,6 @@ html(lang='en')
 						// Question 8
 						.section.index-section(key="7" , v-if="step == 14")
 							.section-title
-								.author
-									img(src="images/rabier.png")
 								h3 Unterlagen hochladen per Foto oder Dateiupload
 								p Bitte klicken Sie den untenstehenden Button oder ziehen Sie die Datei ins Rechteck. Alternativ klicken Sie ebenfalls dem Button und fertigen Sie ein Foto mit Ihrer Tablet oder PC Kamera an.
 
@@ -523,8 +497,6 @@ html(lang='en')
 						// Question 15
 						.section.index-section(key="14" , v-if="step == 15")
 							.section-title
-								.author
-									img(src="images/rabier.png")
 								h3 Welches Messgerät steht auf Ihrem Bescheid?
 								p Bitte prüfen Sie Ihren Bescheid. Dort ist in der Rubrik „Beweismittel“ oder „Bemerkungen“ angegeben, welches Messgerät verwendet wurde. Ist Ihr Messgerät hier nicht aufgeführt oder weist Ihr Schreiben keine Informationen auf, wählen Sie bitte „Anderes/Weiß nicht"
 
@@ -557,8 +529,6 @@ html(lang='en')
 						// Question 16
 						.section.index-section(key="15" , v-if="step == 16")
 							.section-title
-								.author
-									img(src="images/rabier.png")
 								h3 Danke! Wie können wir Ihnen nun behilflich sein?
 								p Bitte wählen Sie nun aus, wie wir mit Ihrem Fall weiter verfahren sollen.
 
@@ -587,8 +557,6 @@ html(lang='en')
 						// Question 12
 						.section.index-section(key="11" , v-if="step == 18")
 							.section-title
-								.author
-									img(src="images/rabier.png")
 								h3 Bitte senden Sie uns die Unterlagen an 01522 / 3336037
 								p Sie können uns Ihren Bußgeldbescheid/ Anhörungsbogen auch gerne WhatsSApp/ MMS senden. Dafür fügen Sie bitte einfach folgende Nummer zu Ihrem Adressbuch hinzu und senden und die nötigen Unterlagen (Fotos vom Bescheid, etc.)
 
@@ -619,8 +587,6 @@ html(lang='en')
 						// Question 14
 						.section.index-section(key="13" , v-if="step == 19")
 							.section-title
-								.author
-									img(src="images/rabier.png")
 								h3 Wir benötigen Unterlagen um Ihren Fall bewerten zu können
 								p Um Ihrem Fall bewerten zu können benötigen wir optimalerweise von Ihnen einen Bußgeldbescheid/ Anhörungsbogen. Diesen haben Sie normalerweise von einer Behörde per Post erhalten. Sollten Ihnen diese Unterlagen zur Zeit nicht vorliegen oder Sie keinen Zugriff darauf haben, bitten wir Sie darum, uns die Unterlagen nach Erhalt schnellstmöglich zuzusenden. Bitte beachten Sie, dass bei Bußgeldbescheiden eine Frist einzuhalten ist, innerhalb derer bei der Behörde durch uns Einspruch eingelegt werden kann.
 
@@ -629,7 +595,7 @@ html(lang='en')
 						transition(name="fade")
 							button.next(v-if="phone.length >= 1" , v-on:click="next() , showLoading()")
 								span(v-if="load == true")
-								|Auswertung anfordern
+								|Auswertung kostenlos anfordern
 							button.next(v-else-if="step == 14" , v-on:click="next() , showLoading()")
 								span(v-if="load == true")
 								|Unterlagen hochladen
@@ -637,7 +603,7 @@ html(lang='en')
 								span(v-if="load == true")
 								|Verstanden & weiter
 
-						p(v-show="step >= 2")
+						p(v-show="step >= 2 && step != 10 && step != 11")
 							a(href="#" , v-on:click.prevent="prev()").prev
 								svg
 									use(xlink:href="images/sprite.svg#right-arrow")

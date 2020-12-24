@@ -5,7 +5,7 @@ function checkContainer () {
     $('.loading-data > li').each(function (i, element) {
         setTimeout(function () {
             $(element).addClass('loading');
-        }, i * 1500);
+        }, i * 1000);
     })
   } else {
     setTimeout(checkContainer, 50); //wait 50 ms, then try again
@@ -14,11 +14,11 @@ function checkContainer () {
 
 $(function () {
 
-    $('.loading-data > li').each(function (i, element) {
+    /*$('.loading-data > li').each(function (i, element) {
         setTimeout(function () {
             $(element).addClass('loading');
         }, i * 2000);
-    })
+    })*/
 
 
   // Toogle class button menu
@@ -91,7 +91,7 @@ var app = new Vue({
     },
     next() {
       if (this.step == 9) {
-        setTimeout(() => { this.step = 11 }, 7000)
+        setTimeout(() => { this.step = 11 }, 5000)
       }
       setTimeout(
         () =>  {

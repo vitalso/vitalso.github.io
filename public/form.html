@@ -20,8 +20,13 @@
     <main id="app">
       <!-- Form page header on mobile-->
       <header class="header-form">
-        <button class="menu"><span></span><span></span><span></span></button>
         <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+        <button class="menu"><span></span><span></span><span></span></button>
+        <ul class="mobile-nav">
+          <li><a href="index.html">STARTSEITE</a></li>
+          <li><a href="#">IMPRESSUM</a></li>
+          <li><a href="#">DATENSCHUTZ</a></li>
+        </ul>
         <!-- Progress bar-->
         <div class="progress-bar">
           <div class="progress" v-bind:style="{ width: currentWidth + '%'}"></div>
@@ -40,12 +45,9 @@
             <!-- Question 1-->
             <div class="section index-section" key="33" v-if="step == 1">
               <div class="section-title">
-                <div class="author"><img src="images/rabier.png"></div>
-                <h3>Jeder zweite verschickte Bußgeldbescheid ist fehlerhaft! Ist es Ihrer auch?</h3>
-                <p>Jetzt <a href="#">kostenlosen</a> und <a href="#">unverbindlichen</a> prüfen</p>
+                <h3>1. Was wird Ihnen vorgeworfen?</h3>
               </div>
               <div class="form-container">
-                <p class="form-question">1. Was wird Ihnen vorgeworfen?</p>
                 <div class="form-card">
                   <input type="radio" name="question" value="Geschwindigkeitsverstoß" id="question">
                   <label for="question" v-on:click="next()"><span class="label-icon"><img src="images/icons8-speedometer.svg"></span><span>Geschwindigkeitsverstoß</span></label>
@@ -67,7 +69,6 @@
             <!-- Question 2-->
             <div class="section index-section" key="99" v-if="step == 222">
               <div class="section-title">
-                <div class="author"><img src="images/rabier.png"></div>
                 <h3>Jeder zweite verschickte Bußgeldbescheid ist fehlerhaft! Ist es Ihrer auch?</h3>
                 <p>Jetzt <b>kostenlosen</b> und <b>unverbindlichen</b> prüfen</p>
               </div>
@@ -94,7 +95,6 @@
             <!-- Question 2-->
             <div class="section index-section" key="22" v-if="step == 2">
               <div class="section-title">
-                <div class="author"><img src="images/rabier.png"></div>
                 <h3>Alles klar! Haben Sie eine Rechtsschutzversicherung?</h3>
                 <p>Mit Ihren Angaben helfen Sie uns, Ihnen die richtige Vorgehensweise zu empfehlen. Selbstverständlich entstehen Ihnen keine Kosten!</p>
               </div>
@@ -112,7 +112,6 @@
             <!-- Question 3-->
             <div class="section index-section" key="2" v-if="step == 3">
               <div class="section-title">
-                <div class="author"><img src="images/rabier.png"></div>
                 <h3>Haben Sie bereits Post von einer Behörde erhalten?</h3>
                 <p>Dies kann eine Anhörung, ein Bußgeldbescheid, Zeugenfragebogen oder Strafbefehl sein.</p>
               </div>
@@ -130,7 +129,6 @@
             <!-- Question 4-->
             <div class="section index-section" key="3" v-if="step == 4">
               <div class="section-title">
-                <div class="author"><img src="images/rabier.png"></div>
                 <h3>Gut, wo waren Sie unterwegs?</h3>
                 <p>Bitte prüfen Sie den Bescheid: Sind Sie innerhalb oder außerhalb geschlossener Ortschaften geblitzt worden?</p>
               </div>
@@ -152,7 +150,6 @@
             <!-- Question 5-->
             <div class="section index-section" key="4" v-if="step == 5">
               <div class="section-title">
-                <div class="author"><img src="images/rabier.png"></div>
                 <h3>Und wie viel km/h waren Sie zu schnell?</h3>
                 <p>Bitte prüfen Sie den Bescheid: Wie hoch ist die vorgeworfene Überschreitung der Geschwindigkeit</p>
               </div>
@@ -182,7 +179,6 @@
             <!-- Question 6-->
             <div class="section index-section" key="8" v-if="step == 6">
               <div class="section-title">
-                <div class="author"><img src="images/rabier.png"></div>
                 <h3>Wie viele Punkte in Flensburg haben Sie bereits?</h3>
                 <p>Die Höhe der Strafe ist davon abhängig, ob Sie bereits Punkte in Flensburg haben. Ist Ihnen bekannt, ob es solche Voreintragungen gibt?</p>
               </div>
@@ -208,7 +204,6 @@
             <!-- Question 7-->
             <div class="section index-section" key="9" v-if="step == 7">
               <div class="section-title">
-                <div class="author"><img src="images/rabier.png"></div>
                 <h3>Welches Dokument haben Sie erhalten?</h3>
                 <p>Bitte geben Sie an welches Dokument Sie von der Behörde erhalten haben. Diese Information finden Sie auf der ersten Seite des Schreibens.</p>
               </div>
@@ -234,7 +229,6 @@
             <!-- Question 8-->
             <div class="section index-section" key="92" v-if="step == 8">
               <div class="section-title">
-                <div class="author"><img src="images/rabier.png"></div>
                 <h3>Wurden Sie in den letzten 12 Monaten schon mal geblitzt?</h3>
                 <p>Bitte geben Sie an, ob Sie in den letzten zwölf Monaten bereits geblitzt wurden.</p>
               </div>
@@ -256,7 +250,6 @@
             <!-- Question 9-->
             <div class="section index-section" key="10" v-if="step == 9">
               <div class="section-title">
-                <div class="author"><img src="images/rabier.png"></div>
                 <h3>Sind Sie auf Ihren Führerschein angewiesen?</h3>
                 <p>Gibt es besondere Gründe, die Sie von Ihrem Führerschein abhängig machen? Dies können berufliche oder wichtige private Gründe sein.</p>
               </div>
@@ -282,7 +275,7 @@
             <!-- Random data loading-->
             <div class="section index-section random-section" key="333" v-if="step == 10">
               <div class="section-title">
-                <h3>Ihre Fallauswertung wird nun erstellt</h3>
+                <h3 class="text-center">Ihre Fallauswertung wird nun erstellt</h3>
               </div>
               <div class="form-container">
                 <ul class="loading-data">
@@ -332,9 +325,14 @@
             <!-- Question 10-->
             <div class="section index-section" key="12" v-if="step == 11">
               <div class="section-title">
-                <div class="author"><img src="images/rabier.png"></div>
                 <h3>Fast geschafft! Wohin dürfen wir Ihr Ergebnis senden?</h3>
-                <p class="green-color">Die Prüfung Ihres Falles ist für Sie <b>kostenlos & unverbindlich</b>. Es erfolgt keine Weitergabe Ihrer Daten!</p>
+              </div>
+              <div class="text-center">
+                <p class="green-color filled">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#icons8-checkmark"></use>
+                  </svg>Kostenlos und unverbindlich
+                </p>
               </div>
               <div class="form-container form-data">
                 <div class="input-row two-input">
@@ -360,7 +358,6 @@
             <!-- Question 11-->
             <div class="section index-section" key="5" v-if="step == 12">
               <div class="section-title">
-                <div class="author"><img src="images/rabier.png"></div>
                 <h3>Vielen Dank für Ihre Anfrage Bitte laden Sie zur Auswertung Ihre vorhandenen Unterlagen hoch</h3>
                 <p>Mein Name ist Alexander Biernacki. Ich bin Ihr persönlicher Ansprechpartner.</p>
                 <p>“Damit ich Ihren Fall besser beurteilen kann, benötige ich den Anhörungsbogen oder Bußgeldbescheid, den Sie von der Behörde bereits erhalten haben.”</p>
@@ -384,7 +381,6 @@
             <!-- Question 7-->
             <div class="section index-section" key="6" v-if="step == 13">
               <div class="section-title">
-                <div class="author"><img src="images/rabier.png"></div>
                 <h3>Unterlagen hochladen per Foto oder Dateiupload</h3>
                 <p>Bitte klicken Sie den untenstehenden Button oder ziehen Sie die Datei ins Rechteck. Alternativ klicken Sie ebenfalls dem Button und fertigen Sie ein Foto mit Ihrer Tablet oder PC Kamera an.</p>
               </div>
@@ -398,7 +394,6 @@
             <!-- Question 8-->
             <div class="section index-section" key="7" v-if="step == 14">
               <div class="section-title">
-                <div class="author"><img src="images/rabier.png"></div>
                 <h3>Unterlagen hochladen per Foto oder Dateiupload</h3>
                 <p>Bitte klicken Sie den untenstehenden Button oder ziehen Sie die Datei ins Rechteck. Alternativ klicken Sie ebenfalls dem Button und fertigen Sie ein Foto mit Ihrer Tablet oder PC Kamera an.</p>
               </div>
@@ -426,7 +421,6 @@
             <!-- Question 15-->
             <div class="section index-section" key="14" v-if="step == 15">
               <div class="section-title">
-                <div class="author"><img src="images/rabier.png"></div>
                 <h3>Welches Messgerät steht auf Ihrem Bescheid?</h3>
                 <p>Bitte prüfen Sie Ihren Bescheid. Dort ist in der Rubrik „Beweismittel“ oder „Bemerkungen“ angegeben, welches Messgerät verwendet wurde. Ist Ihr Messgerät hier nicht aufgeführt oder weist Ihr Schreiben keine Informationen auf, wählen Sie bitte „Anderes/Weiß nicht"</p>
               </div>
@@ -452,7 +446,6 @@
             <!-- Question 16-->
             <div class="section index-section" key="15" v-if="step == 16">
               <div class="section-title">
-                <div class="author"><img src="images/rabier.png"></div>
                 <h3>Danke! Wie können wir Ihnen nun behilflich sein?</h3>
                 <p>Bitte wählen Sie nun aus, wie wir mit Ihrem Fall weiter verfahren sollen.</p>
               </div>
@@ -478,7 +471,6 @@
             <!-- Question 12-->
             <div class="section index-section" key="11" v-if="step == 18">
               <div class="section-title">
-                <div class="author"><img src="images/rabier.png"></div>
                 <h3>Bitte senden Sie uns die Unterlagen an 01522 / 3336037</h3>
                 <p>Sie können uns Ihren Bußgeldbescheid/ Anhörungsbogen auch gerne WhatsSApp/ MMS senden. Dafür fügen Sie bitte einfach folgende Nummer zu Ihrem Adressbuch hinzu und senden und die nötigen Unterlagen (Fotos vom Bescheid, etc.)</p>
               </div>
@@ -500,7 +492,6 @@
             <!-- Question 14-->
             <div class="section index-section" key="13" v-if="step == 19">
               <div class="section-title">
-                <div class="author"><img src="images/rabier.png"></div>
                 <h3>Wir benötigen Unterlagen um Ihren Fall bewerten zu können</h3>
                 <p>Um Ihrem Fall bewerten zu können benötigen wir optimalerweise von Ihnen einen Bußgeldbescheid/ Anhörungsbogen. Diesen haben Sie normalerweise von einer Behörde per Post erhalten. Sollten Ihnen diese Unterlagen zur Zeit nicht vorliegen oder Sie keinen Zugriff darauf haben, bitten wir Sie darum, uns die Unterlagen nach Erhalt schnellstmöglich zuzusenden. Bitte beachten Sie, dass bei Bußgeldbescheiden eine Frist einzuhalten ist, innerhalb derer bei der Behörde durch uns Einspruch eingelegt werden kann.</p>
               </div>
@@ -508,11 +499,11 @@
           </transition>
           <div class="form-control" key="17">
             <transition name="fade">
-              <button class="next" v-if="phone.length &gt;= 1" v-on:click="next() , showLoading()"><span v-if="load == true"></span>Auswertung anfordern</button>
+              <button class="next" v-if="phone.length &gt;= 1" v-on:click="next() , showLoading()"><span v-if="load == true"></span>Auswertung kostenlos anfordern</button>
               <button class="next" v-else-if="step == 14" v-on:click="next() , showLoading()"><span v-if="load == true"></span>Unterlagen hochladen</button>
               <button class="next" v-else-if="step == 19" v-on:click="step = 15 , showLoading()"><span v-if="load == true"></span>Verstanden & weiter</button>
             </transition>
-            <p v-show="step &gt;= 2"><a class="prev" href="#" v-on:click.prevent="prev()">
+            <p v-show="step &gt;= 2 &amp;&amp; step != 10 &amp;&amp; step != 11"><a class="prev" href="#" v-on:click.prevent="prev()">
                 <svg>
                   <use xlink:href="images/sprite.svg#right-arrow"></use>
                 </svg>Zurück</a></p>
@@ -528,20 +519,6 @@
           <use xlink:href="images/sprite.svg#icons8-ringer-volume"></use>
         </svg><span>0800 / 723 41 14</span></a>
       <p>Sie haben Frage und wünschen eine kostenlose Erstberatung per Telefon? Zögern Sie nicht uns unter oben genannter Nummer zu kontaktieren</p>
-    </div>
-    <div class="mfp-hide white-popup-block" id="result-text">
-      <p class="title-popup">Fallgutachten</p>
-      <p>Sehr geehrter Max Mustermann, <br><br></p>
-      <p>Zunächst müsste überprüft werden, ob anhand der vorhandenen Beweismittel in der Ermittlungsakte der Tatnachweis wirklich geführt werden kann. Dann sollte geklärt werden, ob die Messung korrekt erfolgt ist. Messfehler sind keine Seltenheit. Das bei Ihnen verwendete Messsystem ist in den letzten Monaten wieder sehr stark in die Kritik geraten. Es sind sehr viele Verfahren eingestellt worden. Erste Gerichte stellen die Verwertbarkeit dieses Messsystems generell in Frage. Allerdings ist immer eine Einzelfallbetrachtung notwendig.<br><br></p>
-      <p>Unabhängig hiervon müsste überprüft werden, ob sich andere Fahrzeuge im Messbereich befunden haben. Ferner müssten die Formalien der Messung: Eichung, Wartung, Schulung der Mess- und Auswertebeamten etc. überprüft werden. Auch hier gibt es häufig Ansatzpunkte. In diesem Zusammenhang müsste auch die Erkennbarkeit der konkreten Beschilderung und die korrekte Anordnung überprüft werden. Nicht zuletzt ist fraglich, ob das Originalbild zur zweifelsfreien Identifizierung ausreichend sein wird. <br><br></p>
-      <p>Die Messung ist angreifbar Wie geht's weiter?</p><a class="brand-btn" href="#" v-on:click="next()">Zu den Verteidigungsoptionen</a>
-      <div class="mfp-hide white-popup-block" id="result-video">
-        <p class="title-popup">Videoinformationen</p>
-        <div class="video">
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/Ot8n-nk_rAU?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="video"></iframe><a class="play-video" href="#"><img src="images/icons8-tv-show.svg"></a>
-        </div>
-        <p>Die Messung ist angreifbar Wie geht's weiter?</p><a class="brand-btn" href="#" v-on:click="next()">Zu den Verteidigungsoptionen</a>
-      </div>
     </div>
     <!-- jQuery & Bootstrap scripts-->
     <!-- jQuery-->

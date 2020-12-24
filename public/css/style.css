@@ -90,8 +90,7 @@ header {
     background: transparent;
     cursor: pointer;
     outline: none;
-    transition: all .3s ease-in-out;
-    display: none; }
+    transition: all .3s ease-in-out; }
     header .menu span {
       display: block;
       margin: 3px 0;
@@ -147,7 +146,8 @@ header {
           max-height: 18px; }
 
 .header-form .author {
-  width: 27px;
+  max-width: 27px;
+  min-width: 27px;
   height: 27px;
   margin-left: 30px;
   display: none; }
@@ -231,9 +231,11 @@ aside {
 .content-section {
   padding-left: 290px;
   min-height: calc(100vh - 80px);
-  display: flex;
+  /*display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;*/
+  padding-top: 55px;
+  padding-bottom: 55px; }
   .content-section.no-padding {
     padding-left: 0; }
 
@@ -255,7 +257,8 @@ aside {
   max-width: 750px; }
   .form-section.no-padding {
     max-width: 100%;
-    padding-left: 0; }
+    padding-left: 0;
+    padding-right: 0; }
 
 .section {
   position: relative;
@@ -471,6 +474,19 @@ h3 {
   color: #428B6E; }
   .green-color b {
     font-weight: 600; }
+  .green-color.filled {
+    display: inline-block;
+    font-size: 14px;
+    padding: 6px 22px;
+    background: #4991741A;
+    border-radius: 3px; }
+    .green-color.filled svg {
+      width: 10px;
+      height: 10px;
+      vertical-align: middle;
+      fill: #428B6E;
+      margin-right: 12px;
+      margin-top: -1px; }
 
 .form-data .input-row {
   margin-bottom: 20px; }
@@ -649,6 +665,8 @@ button.next, a.next {
   color: #3d3d3d; }
   .index-section b {
     font-weight: 700; }
+  .index-section .text-center {
+    text-align: center; }
   .index-section .section-title {
     padding-left: 0; }
     .index-section .section-title .author, .index-section .section-title .icon-document {
@@ -669,7 +687,7 @@ button.next, a.next {
     display: none; }
 
 .loading-data {
-  max-width: 300px;
+  max-width: 280px;
   margin-left: auto;
   margin-right: auto;
   position: relative; }
@@ -696,9 +714,9 @@ button.next, a.next {
       color: #3d3d3d; }
       .loading-data li.loading svg.static {
         fill: #3C80DC;
-        animation: 2s linear showing; }
+        animation: .5s linear showing; }
       .loading-data li.loading svg.loading-icon {
-        animation: 1.5s linear rotate; }
+        animation: 1s linear rotate; }
 
 @keyframes showing {
   from {
@@ -957,7 +975,8 @@ blockquote {
   .section-title, .form-container {
     padding-left: 0; }
   .section-title {
-    text-align: center; }
+    text-align: center;
+    font-size: 14px; }
     .section-title .author, .section-title .icon-document {
       position: relative;
       left: auto;
@@ -976,12 +995,13 @@ blockquote {
     .form-container .form-card.file-card label {
       text-align: center; }
   .form-control {
-    padding-left: 0;
+    padding-left: 15px;
     max-width: 530px;
     margin: 0 auto;
     text-align: center; }
     .form-control button.next {
-      width: 100%; }
+      width: 100%;
+      padding: 0 15px; }
   .form-data .input-row {
     margin-bottom: 10px; }
     .form-data .input-row.two-input {
@@ -1064,14 +1084,7 @@ blockquote {
   .header-form {
     display: flex; }
     .header-form .progress-bar {
-      display: block; }
-  /*.form-section.no-padding {
-
-  .author {
-    display: none;
-  }
-
-}*/ }
+      display: block; } }
 
 @media screen and (max-width: 576px) {
   .form-container .form-card.result-option .brand-btn {
@@ -1082,6 +1095,9 @@ blockquote {
     display: block; } }
 
 @media screen and (max-width: 480px) {
-  h3 {
-    font-size: 18px;
-    line-height: 22px; } }
+  .content-section {
+    padding-top: 25px; }
+  .index-section .section-title h3 {
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center; } }
