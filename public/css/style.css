@@ -323,6 +323,8 @@ h3 {
       cursor: pointer; }
       .form-container .form-card label .label-icon {
         margin-right: 25px; }
+        .form-container .form-card label .label-icon img {
+          max-width: 35px; }
         .form-container .form-card label .label-icon + span b {
           font-size: 12px;
           line-height: 16px;
@@ -1108,7 +1110,7 @@ blockquote {
 
 @media screen and (max-width: 480px) {
   .content-section {
-    padding-top: 25px; }
+    padding-top: 30px; }
   .index-section .form-container {
     text-align: center; }
   .index-section .section-title {
@@ -1116,6 +1118,7 @@ blockquote {
     .index-section .section-title .author {
       margin: 0 auto 30px auto; }
     .index-section .section-title h3 {
+      margin-bottom: 10px;
       font-size: 20px;
       line-height: 28px;
       text-align: center; } }

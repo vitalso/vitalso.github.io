@@ -453,6 +453,10 @@ aside {
             .label-icon {
               margin-right: 25px;
 
+                img {
+                  max-width: 35px;
+                }
+
                 & + span b {
                   font-size: 12px;
                   line-height: 16px;
@@ -1567,7 +1571,7 @@ header .whatsapp-header , header .menu , header .header-title , .header-form .au
 @media screen and (max-width: 480px) {
 
   .content-section {
-    padding-top: 25px;
+    padding-top: 30px;
   }
 
   .index-section {
@@ -1580,6 +1584,7 @@ header .whatsapp-header , header .menu , header .header-title , .header-form .au
         margin: 0 auto 30px auto;
       }
       h3 {
+        margin-bottom: 10px;
         font-size: 20px;
         line-height: 28px;
         text-align: center;
