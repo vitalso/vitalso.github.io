@@ -207,7 +207,7 @@ header {
         height: 24px;
         vertical-align: middle;
         margin-right: 27px; }
-      .intro-description .btn:hover {
+      .intro-description .btn:hover , .random-text a.btn:hover {
         background: #7bce57a1; }
 
 .bg-video, .bg-network {
