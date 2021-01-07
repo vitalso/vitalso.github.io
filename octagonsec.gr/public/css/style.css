@@ -1300,6 +1300,10 @@ xslide
     max-height: 55px;
   }
 
+    .payment-icon.certification li:nth-child(2) img , .payment-icon.certification li:nth-child(3) img {
+      opacity: .8;
+    }
+
 .random-text {
   max-width: 1150px;
   font-size: 18px;
@@ -1358,7 +1362,7 @@ xslide
     font-size: 28px;
     line-height: 34px;
     text-align: center;
-    background: #1A2414 0% 0% no-repeat padding-box;
+    background: #262626 0% 0% no-repeat padding-box;
     border: 2px solid #7DB45F;
     border-radius: 5px;
     position: relative;
@@ -1369,7 +1373,6 @@ xslide
     }
 
     .verify-item:last-child {
-      background: #262626 0% 0% no-repeat padding-box;
       border: 2px solid #5D5D5D;
       color: #fff;
     }
