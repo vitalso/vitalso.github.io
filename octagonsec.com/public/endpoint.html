@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width , initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Endpoint Security</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/infinite-slider.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--if lt IE 9
+    script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+    script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+    -->
+  </head>
+  <body>
+    <!-- Header start-->
+    <header>
+      <div class="container">
+        <div class="row full-justify">
+          <div class="logo"><a href="index.html"><img src="images/logo.svg"></a></div>
+          <div class="nav">
+            <ul>
+              <li><a href="index.html">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#HOME_ICON"></use>
+                  </svg><span>Home</span></a></li>
+              <li><a href="cyber.html">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#CYBER_SECURITY_ICON"></use>
+                  </svg><span>Cyber Security</span></a></li>
+              <li><a href="network.html">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#ENTERPRISE_NETWORKS_ICON"></use>
+                  </svg><span>Enterprise Networks</span></a></li>
+              <li><a class="current" href="endpoint.html">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#ENDPOINT_ICON"></use>
+                  </svg><span>Endpoint Security</span></a></li>
+              <li><a href="mobile.html">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#MOBILE_SECURITY_ICON"></use>
+                  </svg><span>Mobile Security</span></a></li>
+              <li><a href="data.html">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#DATA_BACKUP_ICON"></use>
+                  </svg><span>Data Backup</span></a></li>
+              <li><a href="server.html">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#SERVERS_ICON"></use>
+                  </svg><span>Servers Administration</span></a></li>
+              <li><a href="contact.html">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#CONTACT_ICON"></use>
+                  </svg><span>Contact</span></a></li>
+            </ul>
+          </div>
+          <button class="mobile-nav"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </header>
+    <!-- Main page start-->
+    <main>
+      <!-- Intro section-->
+      <div class="intro endpoint inner">
+        <div class="intro-description">
+          <h1>Built To Defend Against Tomorrow’s Threats <span>Today</span></h1>
+          <p>Protect a device connected to a network from malware, malicious applications <br> and investigate security incidents and alerts.</p>
+          <p><a class="btn" href="contact.html">
+              <svg>
+                <use xlink:href="images/sprite.svg#SHIELD_ICON"></use>
+              </svg><span>PROTECT YOUR Endpoint NOW</span></a></p>
+        </div>
+      </div>
+      <section>
+        <div class="container">
+          <h2 class="text-center">The World's Most Secure Operating System</h2>
+          <div class="text-center"><img src="images/OS_IMG.png"></div>
+          <div class="row full-justify row-wrap">
+            <div class="card-content">
+              <div class="card-content-title">Strong Isolation</div>
+              <p>Isolate software as if they were installed on separate physical machines using PV or HVM virtualization techniques.</p>
+            </div>
+            <div class="card-content">
+              <div class="card-content-title">Template System</div>
+              <p>Allow qubes called AppVMs to share a root file system without sacrificing security using the innovative Template system.</p>
+            </div>
+            <div class="card-content">
+              <div class="card-content-title">Multiple Operating Systems</div>
+              <p>Use multiple operating systems at the same time, including Fedora, Debian, or Windows.</p>
+            </div>
+            <div class="card-content">
+              <div class="card-content-title">Disposable VMs</div>
+              <p>Create disposable VMs which are spawned quickly and destroyed when closed.</p>
+            </div>
+            <div class="card-content">
+              <div class="card-content-title">Whonix Integration</div>
+              <p>Run Tor securely system-wide using Whonix with Qubes.</p>
+            </div>
+            <div class="card-content">
+              <div class="card-content-title">Controller Isolation</div>
+              <p>Secure device handling through isolation of network cards and USB controllers.</p>
+            </div>
+            <div class="card-content no-border">
+              <div class="card-content-title">Split GPG</div>
+              <p>Utilize Split GPG to store private GPG keys in an AppVM.</p>
+            </div>
+            <div class="card-content no-border">
+              <div class="card-content-title">U2F Proxy</div>
+              <p>Operate Qubes U2F proxy to use two-factor authentication.</p>
+            </div>
+            <div class="card-content no-border">
+              <div class="card-content-title">Open-Source</div>
+              <p>Users are free to use, copy and modify Qubes OS and are encouraged to do so.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="open-source bg-color-grey">
+        <div class="container">
+          <h2 class="text-center">Open Source Secure Firmware</h2>
+          <div class="text-center"><img src="images/open-source.png"></div>
+          <div class="full-card">
+            <div class="card-content-title">Flexibility</div>
+            <p>The primary flexibility that coreboot offers is through the use of different payloads. We support legacy OS boot through SeaBIOS, network boot with an integrated iPXE ROM, or the latest UEFI payload. Customized payloads can be created using the BSD licensed libpayload toolkit.</p>
+          </div>
+          <div class="full-card">
+            <div class="card-content-title">Security</div>
+            <p>Coreboot comes with a minimal Trusted Computing Base which reduces the general attack surface. It also supports a secure boot process called VBOOT2. It’s written in MISRA-C standard and provides other languages like Ada for formal verification of special properties. Also the use of platform features like IOMMU, flash protections and deactivated SMM mode increases the security as well.</p>
+          </div>
+          <div class="full-card">
+            <div class="card-content-title">Safety</div>
+            <p>The architecture of coreboot is designed to have an unbrickable update process. Updating firmware should be no more dangerous than installing your favorite app on your mobile phone.</p>
+          </div>
+          <div class="full-card">
+            <div class="card-content-title">Performance</div>
+            <p>Coreboot is designed to boot quickly. For desktops and laptop machines, it can frequently boot to the start of the operating system in under a second. For servers, it can cut minutes off of the boot time. Some vendors have demonstrated a decrease in boot time by more than 70% when compared to the OEM BIOS.</p>
+          </div>
+        </div>
+      </section>
+      <section class="employers">
+        <div class="container">
+          <h2 class="text-center">Keep Your Employees Safe and Productive</h2>
+          <p class="text-center">Use the power of AI to offer protection from malware, hackers, viruses, ransomware and malicious websites.</p>
+          <div class="text-center margin-top"><img src="images/CYLANCE_IMG.png"></div>
+          <div class="full-card text-center">
+            <p>Traditional Antivirus typically uses a signature based model, which is reliant on capturing new viruses in the wild and creating a master list of malware for users to download. This makes it especially vulnerable to zero-day attacks and modern threats which can alter themselves too quickly for signature updates to catch.</p>
+          </div>
+          <div class="content-grid two-column row-wrap">
+            <div class="card-content">
+              <div class="card-content-title">Stops infections before they can attack</div>
+              <p>Traditional antivirus waits for you to be infected before it can act. Cylance observes the behaviour of programs in real-time, detecting threats in milliseconds - before they can execute.</p>
+            </div>
+            <div class="card-content">
+              <div class="card-content-title">Protects against never before seen malware</div>
+              <p>Proactive AI provides protection from all types of malware, existing threats and those yet to be developed.</p>
+              <p>Cylance prevents attacks before they happen rather than relying on other users becoming infected to 'discover'.</p>
+            </div>
+            <div class="card-content">
+              <div class="card-content-title">Unobtrusive protection</div>
+              <p>We know you just want your antivirus to keep you safe, not waste your time. That’s why we guarantee to never bother you with unwanted alerts or pop-up ads. Promise.</p>
+            </div>
+            <div class="card-content">
+              <div class="card-content-title">Light on RAM and CPU</div>
+              <p>We do all the computational heavy lifting in the cloud. As a result, Cylance uses much less RAM and CPU than other AV solutions, making it perfect for gamers or alongside other intensive processes. You won't even notice we're there.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bottom-divider bg-color-grey">
+        <div class="container">
+          <h2 class="text-center">Solve your password management problems</h2>
+          <div class="text-center"><img src="images/PASSWORD_MANAGMENT_IMG.png"></div>
+          <h2 class="text-center">Your online safety is at risk</h2>
+          <p class="text-center">Password theft is a serious problem. Your online accounts are consistently under attack which is why <br> strong password security practices have never been more critical.</p>
+          <div class="content-grid two-column row-wrap">
+            <div class="card-content">
+              <div class="card-content-title">End-to-End Encryption</div>
+              <p>Lock your passwords and private information with end-to-end AES-256 bit encryption, salted hashing, and PBKDF2 SHA-256.</p>
+            </div>
+            <div class="card-content">
+              <div class="card-content-title">Cross-Platform Applications</div>
+              <p>Secure and share sensitive data within your Bitwarden Vault from any browser, mobile device, or desktop application.</p>
+            </div>
+            <div class="card-content">
+              <div class="card-content-title">Secure Password Sharing</div>
+              <p>Share your encrypted data quickly and easily, and only with the users or teams who need access.</p>
+            </div>
+            <div class="card-content">
+              <div class="card-content-title">Security Audit & Compliance</div>
+              <p>Open source and third-party audited, Bitwarden complies with Privacy Shield, GDPR, CCPA regulations.</p>
+            </div>
+            <div class="card-content">
+              <div class="card-content-title">Vault Health Reports</div>
+              <p>Access insightful reports to reveal weak, reused passwords, and other helpful data security metrics.</p>
+            </div>
+            <div class="card-content">
+              <div class="card-content-title">Directory Sync</div>
+              <p>Our powerful Directory Connector streamlines user and group onboarding and keeps them in sync.</p>
+            </div>
+            <div class="card-content">
+              <div class="card-content-title">Detailed Event Logs</div>
+              <p>Bitwarden creates audit trails to help you keep track of user and group access to sensitive data.</p>
+            </div>
+            <div class="card-content">
+              <div class="card-content-title">Flexible Integrations</div>
+              <p>Use our powerful APIs to automate onboarding and management functions.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer start-->
+    <footer>
+      <div class="container">
+        <div class="row full-justify">
+          <div class="column">
+            <div class="footer-logo"><img src="images/logo.png"></div>
+            <div class="contact-info">
+              <div class="phone-numbers">
+                <p>
+                  <a href="tel:+30 6944884661">+30 6944884661</a>
+                </p>
+                <p class="whatsapp">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#WHATSAPP_ICON"></use>
+                  </svg><a href="tel:+30 6944884661">+30 6944884661</a>
+                </p>
+                <p class="viber">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#VIBER_ICON"></use>
+                  </svg><a href="tel:+30 6944884661">+30 6944884661</a>
+                </p>
+                <p class="mail">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#MAIL_ICON"></use>
+                  </svg><a href="mailto: info@octagonsec.com">info@octagonsec.com</a>
+                </p>
+              </div><a class="btn primary-btn" href="contact.html">
+                <svg>
+                  <use xlink:href="images/sprite.svg#COFFEE_ICON"></use>
+                </svg>Coffee with us</a>
+              <div class="qr-code"><img src="images/QR_CODE_ICON.png"></div>
+            </div>
+            <div class="our-offices">
+              <h4>OUR OFFICES</h4>
+              <ul class="offices-list">
+                <li>
+                  <div class="office-icon"><img src="images/GREEK_FLAG.png"></div>
+                  <div class="office-location">Greece</div>
+                  <p>Evimerou 14 <br>Kos 85300 Greece</p>
+                </li>
+                <li>
+                  <div class="office-icon"><img src="images/BELGIUM_FLAG.png"></div>
+                  <div class="office-location">Belgium</div>
+                  <p>Rue de Sables 12 Brussels 1000 Belgium</p>
+                </li>
+                <li>
+                  <div class="office-icon"><img src="images/UK_FLAG.png"></div>
+                  <div class="office-location">UK</div>
+                  <p>Coming Soon</p>
+                </li>
+                <li>
+                  <div class="office-icon"><img src="images/DUBAI_FLAG.png"></div>
+                  <div class="office-location">Emirates</div>
+                  <p>Coming Soon</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="column wide">
+            <div class="footer-nav">
+              <h4>SITE MAP</h4>
+              <ul>
+                <li>
+                  <svg>
+                    <use xlink:href="images/sprite.svg#ARROW_ICON"></use>
+                  </svg><a href="index.html">Home</a>
+                </li>
+                <li>
+                  <svg>
+                    <use xlink:href="images/sprite.svg#ARROW_ICON"></use>
+                  </svg><a href="cyber.html">Cyber Security</a>
+                </li>
+                <li>
+                  <svg>
+                    <use xlink:href="images/sprite.svg#ARROW_ICON"></use>
+                  </svg><a href="network.html">Enterprise Networks</a>
+                </li>
+                <li>
+                  <svg>
+                    <use xlink:href="images/sprite.svg#ARROW_ICON"></use>
+                  </svg><a href="endpoint.html">Endpoint Security</a>
+                </li>
+                <li>
+                  <svg>
+                    <use xlink:href="images/sprite.svg#ARROW_ICON"></use>
+                  </svg><a href="mobile.html">Mobile Security</a>
+                </li>
+                <li>
+                  <svg>
+                    <use xlink:href="images/sprite.svg#ARROW_ICON"></use>
+                  </svg><a href="data.html">Data Backup</a>
+                </li>
+                <li>
+                  <svg>
+                    <use xlink:href="images/sprite.svg#ARROW_ICON"></use>
+                  </svg><a href="server.html">Servers Administration</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-nav">
+              <h4>INDUSTRIES WE IMPACT</h4>
+              <ul class="custom-mark">
+                <li><a href="#">Financial</a></li>
+                <li><a href="#">Healthcare</a></li>
+                <li><a href="#">Insurance</a></li>
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">Pharmaceutical</a></li>
+                <li><a href="#">Ε-Commerce</a></li>
+                <li><a href="#">Hospitality</a></li>
+              </ul>
+            </div>
+            <div class="social">
+              <h4>CONNECT WITH US</h4>
+              <ul class="social-link">
+                <li><a href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#LINKEDIN_ICON"></use>
+                    </svg></a></li>
+                <li><a href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#FACEBOOK_ICON"></use>
+                    </svg></a></li>
+                <li><a href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#TWITTER_ICON"></use>
+                    </svg></a></li>
+                <li><a href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#INSTAGRAM_ICON"></use>
+                    </svg></a></li>
+                <li><a href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#YOUTUBE_ICON"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="column">
+            <h4>PAYMENT METHODS</h4>
+            <ul class="payment-icon">
+              <li><img src="images/payment/BANK.png"></li>
+              <li><img src="images/payment/PAYPAL.png"></li>
+              <li><img src="images/payment/VISA.png"></li>
+              <li><img src="images/payment/MASTERCARD.png"></li>
+              <li><img src="images/payment/MAESTRO.png"></li>
+              <li><img src="images/payment/AMERIKAN-EXPRESS.png"></li>
+              <li><img src="images/payment/DISCOVER.png"></li>
+              <li><img src="images/payment/DINERS.png"></li>
+              <li><img src="images/payment/BITCOIN.png"></li>
+            </ul>
+            <h4>CERTIFICATIONS</h4>
+            <ul class="payment-icon certification margin-bottom-0">
+              <li><img src="images/payment/CCNA.png"></li>
+              <li><img src="images/payment/CEH.png"></li>
+              <li><img src="images/payment/CompTIA.png"></li>
+              <li><img src="images/payment/ISO.png"></li>
+              <li><img src="images/payment/KEYCERT.png"></li>
+              <li><img src="images/payment/Group-29.png"></li>
+              <li><img src="images/payment/GDPR.png"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <div class="row full-justify">
+            <p class="made-with">Made with
+              <svg>
+                <use xlink:href="images/sprite.svg#favorite-5"></use>
+              </svg>&
+              <svg>
+                <use xlink:href="images/sprite.svg#coffee-8"></use>
+              </svg>in Kos, Brussels and London.
+            </p>
+            <p>Copyright 2020 © Octagon. All Rights Reserved</p>
+            <div class="language"><a class="language-label" href="#">
+                <svg>
+                  <use xlink:href="images/sprite.svg#GLOBE_ICON"></use>
+                </svg><span>English</span></a>
+              <ul class="language-list">
+                <li><a href="https://octagonsec.gr/endpoint.html">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#GLOBE_ICON"></use>
+                    </svg><span>Greek</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div><a class="scroll-top" href="#">
+        <svg>
+          <use xlink:href="images/sprite.svg#SCROLL_TOP_ICON"></use>
+        </svg></a>
+    </footer>
+    <!-- jQuery & Bootstrap scripts-->
+    <!-- reCaptcha-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Slick slider (for partners logo scrolling)-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <!-- Main script-->
+    <script src="js/headline-effects.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

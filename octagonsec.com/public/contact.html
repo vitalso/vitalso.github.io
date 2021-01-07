@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width , initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Contact</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/infinite-slider.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Recaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!--if lt IE 9
+    script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+    script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+    -->
+  </head>
+  <body>
+    <!-- Header start-->
+    <header>
+      <div class="container">
+        <div class="row full-justify">
+          <div class="logo"><a href="index.html"><img src="images/logo.svg"></a></div>
+          <div class="nav">
+            <ul>
+              <li><a href="index.html">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#HOME_ICON"></use>
+                  </svg><span>Home</span></a></li>
+              <li><a href="cyber.html">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#CYBER_SECURITY_ICON"></use>
+                  </svg><span>Cyber Security</span></a></li>
+              <li><a href="network.html">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#ENTERPRISE_NETWORKS_ICON"></use>
+                  </svg><span>Enterprise Networks</span></a></li>
+              <li><a href="endpoint.html">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#ENDPOINT_ICON"></use>
+                  </svg><span>Endpoint Security</span></a></li>
+              <li><a href="mobile.html">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#MOBILE_SECURITY_ICON"></use>
+                  </svg><span>Mobile Security</span></a></li>
+              <li><a href="data.html">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#DATA_BACKUP_ICON"></use>
+                  </svg><span>Data Backup</span></a></li>
+              <li><a href="server.html">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#SERVERS_ICON"></use>
+                  </svg><span>Servers Administration</span></a></li>
+              <li><a class="current" href="contact.html">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#CONTACT_ICON"></use>
+                  </svg><span>Contact</span></a></li>
+            </ul>
+          </div>
+          <button class="mobile-nav"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </header>
+    <!-- Main page start-->
+    <main>
+      <!-- Intro section-->
+      <div class="intro contact inner">
+        <div class="intro-description">
+          <h1>Let's Build Something <span>Great</span> Together</h1>
+          <p>Let us know your needs and we’ll get back to you with the most optimal solutions and how to move forward.</p>
+        </div>
+      </div>
+      <section class="bg-color-grey">
+        <div class="container">
+          <h2 class="text-center">CONTACT US</h2>
+          <div class="success-message">
+            <h3>Your message has been sended. We will reply as soon as possible.</h3>
+          </div>
+          <form class="contact-form" method="post" id="contactForm">
+            <div class="form-row">
+              <label for="name">FULL NAME *</label>
+              <input type="text" name="name" placeholder="Enter Your Full Name" maxlength="100" id="name" required>
+            </div>
+            <div class="form-row half-width">
+              <label for="email">EMAIL *</label>
+              <input type="mail" name="email" placeholder="EMAIL *" maxlength="80" id="email" required>
+            </div>
+            <div class="form-row half-width">
+              <label for="phone">PHONE</label>
+              <input type="phone" name="phone" placeholder="+30 123 4567 890" maxlength="20" id="phone" required>
+            </div>
+            <div class="form-row">
+              <label for="company">COMPANY</label>
+              <input type="text" name="company" placeholder="Enter Your Company Name" maxlength="100" id="company">
+            </div>
+            <div class="form-row">
+              <label for="">CHOOSE YOUR SERVICE *</label>
+              <div class="wrap-checkbox">
+                <div class="check-input">
+                  <input type="checkbox" name="service[]" value="Cyber Security" id="cyber"><span></span>
+                  <label for="cyber">Cyber Security</label>
+                </div>
+                <div class="check-input">
+                  <input type="checkbox" name="service[]" value="Enterprise Networks" id="networks"><span></span>
+                  <label for="networks">Enterprise Networks</label>
+                </div>
+                <div class="check-input">
+                  <input type="checkbox" name="service[]" value="Endpoint Security" id="endpoint"><span></span>
+                  <label for="endpoint">Endpoint Security</label>
+                </div>
+                <div class="check-input">
+                  <input type="checkbox" name="service[]" value="Mobile Security" id="mobile"><span></span>
+                  <label for="mobile">Mobile Security</label>
+                </div>
+                <div class="check-input">
+                  <input type="checkbox" name="service[]" value="Data Backup" id="data"><span></span>
+                  <label for="data">Data Backup</label>
+                </div>
+                <div class="check-input">
+                  <input type="checkbox" name="service[]" value="Servers Administration" id="server"><span></span>
+                  <label for="server">Servers Administration</label>
+                </div>
+                <div class="check-input">
+                  <input type="checkbox" name="service[]" value="Coffee With Us" id="coffe"><span></span>
+                  <label for="coffee">Coffee With Us</label>
+                </div>
+                <div class="check-input">
+                  <input type="checkbox" name="service[]" value="Travel to your place" id="travel"><span></span>
+                  <label for="travel">Travel to your place</label>
+                </div>
+                <div class="check-input">
+                  <input type="checkbox" name="service[]" value="Other" id="other"><span></span>
+                  <label for="other">Other</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <label for="message">MESSAGE</label>
+              <textarea placeholder="Your Message Here" name="message" maxlength="800"></textarea>
+            </div>
+            <div class="form-row">
+              <div class="g-recaptcha" data-sitekey="6Le0a8YZAAAAAK4JFiU-Ja6FFCYQjWPEYBu00Qld" data-theme="dark"></div>
+              <button class="btn" type="submit" id="submit">
+                <svg>
+                  <use xlink:href="images/sprite.svg#SEND_ICON"></use>
+                </svg>SEND MESSAGE
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="team">
+        <div class="container">
+          <h2 class="text-center">A TEAM YOU CAN TRUST</h2>
+          <p class="text-center">Teamwork makes the dream work.</p>
+          <div class="row align-center margin-top">
+            <div class="feature team-item green">
+              <div class="top-line"></div>
+              <div class="team-img"><img src="images/team/team-1.jpg"></div>
+              <div class="team-title">Dimitris Chatzidimitris <span>Cyber Security Expert</span></div>
+              <p>Dimitris Chatzidimitris has a 20+ years professional experience in Cyber Security. Having worked with multinational organizations in the Private, Banking, Financial, Consumer and other sectors.</p>
+            </div>
+            <div class="feature team-item blue">
+              <div class="top-line"></div>
+              <div class="team-img"><img src="images/team/team-2.jpg"></div>
+              <div class="team-title">Alex Anghelus <span>Penetration Tester</span></div>
+              <p>Alex Anghelus is a highly accomplished expert in information security with a proven track record and performs security tests on networks, web-based applications, and computer systems daily.</p>
+            </div>
+            <div class="feature team-item red">
+              <div class="top-line green"></div>
+              <div class="team-img"><img src="images/team/team-3.jpg"></div>
+              <div class="team-title">Panagiotis Chatzidimitris <span>Data Backup Specialist</span></div>
+              <p>Panos Chatzidimitris is a backup Specialist and provides a fast and easy-to-use implementation of our custom build system backup and recovery methodology. Security of your data is his first priority.</p>
+            </div>
+            <div class="feature team-item yellow">
+              <div class="top-line green"></div>
+              <div class="team-img"><img src="images/team/team-4.jpg"></div>
+              <div class="team-title">Anastasis Vasileiadis <span>Mobile Penetration Tester</span></div>
+              <p>Anastasis Vasileiadis uses testing methods to pinpoint ways that attackers could exploit weaknesses in mobile phones. He tries to find possible exploits in different mobile systems and reports them.</p>
+            </div>
+
+            <div class="feature team-item purple">
+              <div class="top-line green"></div>
+              <div class="team-img"><img src="images/team/team-5.jpg"></div>
+              <div class="team-title">Ioannis Chionidis <span>Designer</span></div>
+              <p>Ioannis Chionidis worked with everyone from one person companies to large international organisations, creating beautiful websites and e-commerce solutions.</p>
+            </div>
+
+            <div class="feature team-item green">
+              <div class="top-line"></div>
+              <div class="team-img"><img src="images/team/maria.jpg"></div>
+              <div class="team-title">Maria Tzouros <span>Social Engineering Expert</span></div>
+              <p>Maria Tzouros speaks 6 languages and her expertise is Social Engineering. Social Engineering is not only email phishing. Maria executes the principles behind exploiting human behavior.</p>
+            </div>
+            <div class="feature team-item blue">
+              <div class="top-line"></div>
+              <div class="team-img image-resize"><img src="images/team/aris.jpg"></div>
+              <div class="team-title">Aris Giannopoulos <span>Developer</span></div>
+              <p>Aris Giannopoulos is currently working on e-commerce store projects, extending features and developing secure solutions for local businesses as well as their online presence.</p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+      <section class="corporate-service text-center">
+        <div class="container"><img src="images/AIRPLANE_ICON.png">
+          <h2>MEET UP</h2>
+          <p>We are able to travel to your corporate offices and discuss about our <br> solutions if needed.</p>
+          <p class="corporate-title">We haven't been everywhere, but it's on our list.</p>
+        </div>
+      </section>
+    </main>
+    <!-- Footer start-->
+    <footer>
+      <div class="container">
+        <div class="row full-justify">
+          <div class="column">
+            <div class="footer-logo"><img src="images/logo.png"></div>
+            <div class="contact-info">
+              <div class="phone-numbers">
+                <p>
+                  <a href="tel:+30 6944884661">+30 6944884661</a>
+                </p>
+                <p class="whatsapp">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#WHATSAPP_ICON"></use>
+                  </svg><a href="tel:+30 6944884661">+30 6944884661</a>
+                </p>
+                <p class="viber">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#VIBER_ICON"></use>
+                  </svg><a href="tel:+30 6944884661">+30 6944884661</a>
+                </p>
+                <p class="mail">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#MAIL_ICON"></use>
+                  </svg><a href="mailto: info@octagonsec.com">info@octagonsec.com</a>
+                </p>
+              </div><a class="btn primary-btn" href="contact.html">
+                <svg>
+                  <use xlink:href="images/sprite.svg#COFFEE_ICON"></use>
+                </svg>Coffee with us</a>
+              <div class="qr-code"><img src="images/QR_CODE_ICON.png"></div>
+            </div>
+            <div class="our-offices">
+              <h4>OUR OFFICES</h4>
+              <ul class="offices-list">
+                <li>
+                  <div class="office-icon"><img src="images/GREEK_FLAG.png"></div>
+                  <div class="office-location">Greece</div>
+                  <p>Evimerou 14 <br>Kos 85300 Greece</p>
+                </li>
+                <li>
+                  <div class="office-icon"><img src="images/BELGIUM_FLAG.png"></div>
+                  <div class="office-location">Belgium</div>
+                  <p>Rue de Sables 12 Brussels 1000 Belgium</p>
+                </li>
+                <li>
+                  <div class="office-icon"><img src="images/UK_FLAG.png"></div>
+                  <div class="office-location">UK</div>
+                  <p>Coming Soon</p>
+                </li>
+                <li>
+                  <div class="office-icon"><img src="images/DUBAI_FLAG.png"></div>
+                  <div class="office-location">Emirates</div>
+                  <p>Coming Soon</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="column wide">
+            <div class="footer-nav">
+              <h4>SITE MAP</h4>
+              <ul>
+                <li>
+                  <svg>
+                    <use xlink:href="images/sprite.svg#ARROW_ICON"></use>
+                  </svg><a href="index.html">Home</a>
+                </li>
+                <li>
+                  <svg>
+                    <use xlink:href="images/sprite.svg#ARROW_ICON"></use>
+                  </svg><a href="cyber.html">Cyber Security</a>
+                </li>
+                <li>
+                  <svg>
+                    <use xlink:href="images/sprite.svg#ARROW_ICON"></use>
+                  </svg><a href="network.html">Enterprise Networks</a>
+                </li>
+                <li>
+                  <svg>
+                    <use xlink:href="images/sprite.svg#ARROW_ICON"></use>
+                  </svg><a href="endpoint.html">Endpoint Security</a>
+                </li>
+                <li>
+                  <svg>
+                    <use xlink:href="images/sprite.svg#ARROW_ICON"></use>
+                  </svg><a href="mobile.html">Mobile Security</a>
+                </li>
+                <li>
+                  <svg>
+                    <use xlink:href="images/sprite.svg#ARROW_ICON"></use>
+                  </svg><a href="data.html">Data Backup</a>
+                </li>
+                <li>
+                  <svg>
+                    <use xlink:href="images/sprite.svg#ARROW_ICON"></use>
+                  </svg><a href="server.html">Servers Administration</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-nav">
+              <h4>INDUSTRIES WE IMPACT</h4>
+              <ul class="custom-mark">
+                <li><a href="#">Financial</a></li>
+                <li><a href="#">Healthcare</a></li>
+                <li><a href="#">Insurance</a></li>
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">Pharmaceutical</a></li>
+                <li><a href="#">Ε-Commerce</a></li>
+                <li><a href="#">Hospitality</a></li>
+              </ul>
+            </div>
+            <div class="social">
+              <h4>CONNECT WITH US</h4>
+              <ul class="social-link">
+                <li><a href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#LINKEDIN_ICON"></use>
+                    </svg></a></li>
+                <li><a href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#FACEBOOK_ICON"></use>
+                    </svg></a></li>
+                <li><a href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#TWITTER_ICON"></use>
+                    </svg></a></li>
+                <li><a href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#INSTAGRAM_ICON"></use>
+                    </svg></a></li>
+                <li><a href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#YOUTUBE_ICON"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="column">
+            <h4>PAYMENT METHODS</h4>
+            <ul class="payment-icon">
+              <li><img src="images/payment/BANK.png"></li>
+              <li><img src="images/payment/PAYPAL.png"></li>
+              <li><img src="images/payment/VISA.png"></li>
+              <li><img src="images/payment/MASTERCARD.png"></li>
+              <li><img src="images/payment/MAESTRO.png"></li>
+              <li><img src="images/payment/AMERIKAN-EXPRESS.png"></li>
+              <li><img src="images/payment/DISCOVER.png"></li>
+              <li><img src="images/payment/DINERS.png"></li>
+              <li><img src="images/payment/BITCOIN.png"></li>
+            </ul>
+            <h4>CERTIFICATIONS</h4>
+            <ul class="payment-icon certification margin-bottom-0">
+              <li><img src="images/payment/CCNA.png"></li>
+              <li><img src="images/payment/CEH.png"></li>
+              <li><img src="images/payment/CompTIA.png"></li>
+              <li><img src="images/payment/ISO.png"></li>
+              <li><img src="images/payment/KEYCERT.png"></li>
+              <li><img src="images/payment/Group-29.png"></li>
+              <li><img src="images/payment/GDPR.png"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <div class="row full-justify">
+            <p class="made-with">Made with
+              <svg>
+                <use xlink:href="images/sprite.svg#favorite-5"></use>
+              </svg>&
+              <svg>
+                <use xlink:href="images/sprite.svg#coffee-8"></use>
+              </svg>in Kos, Brussels and London.
+            </p>
+            <p>Copyright 2020 © Octagon. All Rights Reserved</p>
+            <div class="language"><a class="language-label" href="#">
+                <svg>
+                  <use xlink:href="images/sprite.svg#GLOBE_ICON"></use>
+                </svg><span>English</span></a>
+              <ul class="language-list">
+                <li><a href="https://octagonsec.gr/contact.html">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#GLOBE_ICON"></use>
+                    </svg><span>Greek</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div><a class="scroll-top" href="#">
+        <svg>
+          <use xlink:href="images/sprite.svg#SCROLL_TOP_ICON"></use>
+        </svg></a>
+    </footer>
+    <!-- jQuery & Bootstrap scripts-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Slick slider (for partners logo scrolling)-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <!-- Main script-->
+    <script src="js/headline-effects.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
