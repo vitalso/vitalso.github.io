@@ -208,6 +208,10 @@ header {
     padding-right: 20px; }
   .btn-primary.btn-grey {
     background: #d0d0d0; }
+  .btn-primary.width-auto {
+    width: auto;
+    padding-left: 25px;
+    padding-right: 25px; }
 
 footer {
   background: #1b98be;
