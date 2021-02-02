@@ -90,14 +90,11 @@ html {
     color: #43649E; }
 
 main {
-  max-width: 440px;
-  margin: 0 auto;
   background-color: #F7F9F9;
   background-image: url(../images/bg.svg);
   background-repeat: repeat-x;
   background-position: left bottom;
-  padding-bottom: 150px;
-  background-size: calc(100% * 2.5); }
+  padding-bottom: 150px; }
 
 header {
   height: 74px;
@@ -121,6 +118,8 @@ header {
   font-size: 15px;
   font-weight: 400;
   line-height: 32px; }
+  .intro .row {
+    justify-content: center; }
   .intro-img {
     width: 70px;
     margin-right: 18px; }
@@ -141,40 +140,16 @@ header {
 .wrap-form {
   margin: 0 auto;
   padding: 20px 0;
-  max-width: 345px;
+  max-width: 550px;
   background: #fff;
   border-radius: 3px; }
   .wrap-form.form-green {
-    max-width: 100%;
-    margin: 40px 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border: 2px solid #6ACE66;
-    border-radius: 17px; }
-    .wrap-form.form-green input {
-      height: 47px;
-      border: 1px solid #D2D5DC;
-      border-radius: 15px;
+    margin: 40px auto; }
+    .wrap-form.form-green input::placeholder {
       font-family: Roboto;
       font-size: 20px;
       font-weight: 200;
       line-height: 23px; }
-      .wrap-form.form-green input::placeholder {
-        font-family: Roboto;
-        font-size: 20px;
-        font-weight: 200;
-        line-height: 23px; }
-    .wrap-form.form-green .btn-primary {
-      width: auto;
-      height: auto;
-      outline: none;
-      padding: 12px 55px;
-      font-family: Roboto;
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 23px;
-      background: #6ACE66;
-      border-radius: 10px; }
 
 .center-text {
   text-align: center; }
@@ -184,13 +159,13 @@ header {
   .form-row label {
     display: block;
     font-size: 16px;
-    color: #43649E;
+    color: #000;
     margin-bottom: 5px; }
   .form-row input, .form-row select {
     width: 100%;
-    height: 42px;
+    height: 55px;
     padding-left: 15px;
-    border: 1px solid #43649E;
+    border: 1px solid #6ace66;
     border-radius: 3px;
     outline: none; }
     .form-row input.error-input, .form-row select.error-input {
@@ -221,30 +196,20 @@ header {
   text-align: center;
   font-size: 16px;
   color: #fff;
-  background: #43649E;
-  border-radius: 20px;
+  background: #6ace66;
+  border-radius: 5px;
   cursor: pointer;
   transition: all .3s ease-in-out; }
   .btn-primary:hover {
     opacity: .7; }
-  .btn-primary.green-btn {
-    background: #6ACE66;
-    width: auto;
-    border-radius: 10px;
-    font-size: 20px;
-    font-weight: 700;
-    padding: 0 35px; }
   .btn-primary.short {
     width: auto;
     padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 5px; }
+    padding-right: 20px; }
   .btn-primary.btn-grey {
     background: #d0d0d0; }
 
 footer {
-  max-width: 440px;
-  margin: 0 auto;
   background: #1b98be;
   padding: 40px 0;
   color: #fff;
@@ -296,7 +261,7 @@ footer {
       text-align: center; }
     .table-title span:last-child {
       flex: 0 0 25%;
-      text-align: center; }
+      text-align: right; }
   .table-row {
     display: flex;
     justify-content: space-between;
@@ -312,7 +277,7 @@ footer {
       font-weight: 700; }
     .table-row span:last-child {
       flex: 0 0 25%;
-      text-align: center;
+      text-align: right;
       position: relative; }
       .table-row span:last-child b {
         display: block;
@@ -320,16 +285,18 @@ footer {
         font-size: 10px;
         font-weight: 700;
         line-height: 12px;
-        color: #6ACE66;
+        color: #6ace66;
         text-align: right;
         position: absolute;
         right: 3px;
         bottom: -7px; }
+  .table.font-16 .table-title span:last-child {
+    text-align: right; }
   .table.font-16 .table-row {
     font-size: 16px;
     line-height: 19px; }
     .table.font-16 .table-row.green-color {
-      color: #6ACE66; }
+      color: #6ace66; }
     .table.font-16 .table-row span {
       flex: 0 0 auto;
       font-weight: 400; }
@@ -341,7 +308,8 @@ h3 {
   line-height: 23px; }
 
 .payout {
-  margin: 20px 0;
+  max-width: 550px;
+  margin: 20px auto;
   background: #fff;
   padding: 20px 10px;
   background: #fff; }
@@ -350,8 +318,6 @@ h3 {
   .payout label {
     font-weight: 700;
     color: #000; }
-  .payout input, .payout select {
-    border-color: #d0d0d0; }
 
 /* The switch - the box around the slider */
 .switch {
@@ -390,7 +356,7 @@ h3 {
   transition: .4s; }
 
 input:checked + .slider {
-  background-color: #43649E; }
+  background-color: #6ace66; }
 
 input:focus + .slider {
   box-shadow: 0 0 1px #2196F3; }
@@ -439,3 +405,7 @@ input:checked + .slider:before {
   padding-top: 10px;
   border-top: 1px solid #d0d0d0;
   text-align: right; }
+
+@media screen and (max-width: 576px) {
+  .table-title span:last-child {
+    text-align: right; } }
