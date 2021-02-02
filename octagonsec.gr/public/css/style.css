@@ -1372,7 +1372,7 @@ xslide
       margin-top: 30px;
     }
 
-    .verify-item:last-child {
+    .verify-item.grey-item {
       border: 2px solid #5D5D5D;
       color: #fff;
     }
