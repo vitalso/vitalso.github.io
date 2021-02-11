@@ -1,0 +1,51 @@
+
+<header>
+  <button class="menu"><span></span><span></span><span></span></button>
+  <ul class="header-title">
+    <!--li(v-show="index == true") ONLINE SCHEIDEN LASSEN-->
+    <!--li(v-show="berechnen >= 1") SCHEIDUNGSKOSTEN-->
+    <li v-show="step == 1 || step == 2">Zusatzoptionen</li>
+    <li v-show="step == 3">Scheidungsantrag</li>
+    <li v-show="step == 4">Zustimmung</li>
+    <li v-show="step == 5">Daten 1</li>
+    <li v-show="step == 6">Daten 2</li>
+    <li v-show="step == 7">Heirat & Trennung</li>
+    <li v-show="step == 8">Wohnung</li>
+    <li v-show="step == 9 || step == 10">Kinder</li>
+    <li v-show="step &gt;= 11">Kontaktdaten</li>
+  </ul><a class="whatsapp-header" href="#mobile-phone">
+    <svg>
+      <use xlink:href="images/sprite.svg#icons8-ringer-volume"></use>
+    </svg></a>
+  <!-- Mobile menu-->
+  <ul class="mobile-nav">
+    <li><a class="current" href="index.html">
+        <svg class="default">
+          <use xlink:href="images/sprite.svg#right-arrow"></use>
+        </svg>Startseite</a></li>
+    <li><a href="form.html">
+        <svg class="default">
+          <use xlink:href="images/sprite.svg#right-arrow"></use>
+        </svg>Scheidung beantragen</a></li>
+    <li><a href="calculator.html">
+        <svg class="default">
+          <use xlink:href="images/sprite.svg#right-arrow"></use>
+        </svg>Scheidungsrechner</a></li>
+    <li><a href="beratung.html">
+        <svg class="default">
+          <use xlink:href="images/sprite.svg#right-arrow"></use>
+        </svg>Beratung</a></li>
+    <li><a href="funktionierts.html">
+        <svg class="default">
+          <use xlink:href="images/sprite.svg#right-arrow"></use>
+        </svg>So funktioniert's</a></li>
+    <li><a href="faq.html">
+        <svg class="default">
+          <use xlink:href="images/sprite.svg#right-arrow"></use>
+        </svg>Häufige Fragen</a></li>
+    <li><a href="about.html">
+        <svg class="default">
+          <use xlink:href="images/sprite.svg#right-arrow"></use>
+        </svg>Über uns</a></li>
+  </ul>
+</header>
