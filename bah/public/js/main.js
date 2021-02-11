@@ -18,7 +18,7 @@ $(document).ready(function() {
   ScrollReveal().reveal('.animated' , { delay: 500 , distance: '100px' });
 
   // Scroll configure section
-  /*$('.side-scrolling.left ul').slick({
+  $('.side-scrolling.left ul').slick({
     autoplay: true,
     infinite: true,
     autoplaySpeed: 5000,
@@ -51,7 +51,7 @@ $(document).ready(function() {
     arrows: false,
     vertical: true
     //verticalReverse: true
-  });*/
+  });
 
   // Toogle class button menu
   $('.toggle-nav').on('click' , function(){
@@ -60,41 +60,21 @@ $(document).ready(function() {
   });
 
   // Popup
-  $('.whatsapp-header , .index-link , .via-phone , .phone-popup').magnificPopup({
+  /*$('.phone-popup').magnificPopup({
     type: 'inline',
     preloader: false,
     modal: false
-  });
-
-  // FAQ
-  $('.faq-title').on('click' , function() {
-    $(this).closest('.faq-item').toggleClass('open');
-  });
-
-  // Play video
-  $('.play-video').on('click', function(e) {
-
-    $("#video")[0].src += "&autoplay=1";
-    $(this).hide();
-    $('#video').show();
-    e.preventDefault();
-
-  });
+  });*/
 
   // Scrool
   $(window).on('scroll' , function() {
-
-    /*if ($(window).scrollTop() > 90) {
-      $('.solid-btn').addClass('active');
-    } else {
-      $('.solid-btn').removeClass('active');
-    }*/
 
     // Change background when scroll to section #Preveliges
     if ($(window).scrollTop() >= $('#preveliges').offset().top) {
       $('#preveliges').addClass('bg-change');
     }
 
+    // Rotate square colorful cards when scroll
     var currentScroll = Number(Math.trunc($(window).scrollTop() / 200));
 
     $('.square.first-orange').css({ transform: 'rotate(-' + (currentScroll - 15) + 'deg)' });
