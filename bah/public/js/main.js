@@ -15,10 +15,10 @@ $(document).ready(function() {
   });
 
   // Scroll Reveal - effects when scroll page
-  ScrollReveal().reveal('.animated' , { delay: 500 , distance: '100px' });
+  ScrollReveal().reveal('.animated' , { delay: 2000 , duration: 1300 , easing: 'ease' , distance: '100%' });
 
   // Scroll configure section
-  $('.side-scrolling.left ul').slick({
+  /*$('.side-scrolling.left ul').slick({
     autoplay: true,
     infinite: true,
     autoplaySpeed: 5000,
@@ -32,12 +32,13 @@ $(document).ready(function() {
     cssEase: 'linear',
     useTransform: false,
     arrows: false,
-    vertical: true
+    vertical: true,
+    verticalReverse: true
   });
 
   $('.side-scrolling.right ul').slick({
     autoplay: true,
-    infinite: true,
+    infinite: false,
     autoplaySpeed: 5000,
     centerMode: true,
     centerPadding: '0',
@@ -51,12 +52,38 @@ $(document).ready(function() {
     arrows: false,
     vertical: true
     //verticalReverse: true
-  });
+  });*/
+
+  /*$(".side-scrolling.right ul").on("beforeChange", function(event, slick, currentSlide) {
+
+    rand = Math.floor( Math.random() * 4 );
+
+    $(this).slick('slickGoTo', 1);
+
+    console.log(rand);
+
+  })*/
 
   // Toogle class button menu
   $('.toggle-nav').on('click' , function(){
+    $('body').toggleClass('overflow-y');
     $(this).toggleClass('open');
     $('.nav').toggleClass('open');
+  });
+
+  function scrollVideo() {
+    var video = $('.tree-video').get(0),
+      videoLength = video.duration,
+      scrollPosition = $(document).scrollTop();
+
+    video.currentTime = ((scrollPosition*3) / ($(document).height() - $(window).height()*4)) * videoLength;
+
+  }
+
+  $(window).scroll(function(e) {
+    //if ($(window).scrollTop() >= $('main').offset().top) {
+      scrollVideo();
+    //}
   });
 
   // Popup
@@ -75,7 +102,7 @@ $(document).ready(function() {
     }
 
     // Rotate square colorful cards when scroll
-    var currentScroll = Number(Math.trunc($(window).scrollTop() / 200));
+    var currentScroll = Number(Math.trunc($(window).scrollTop() / 170));
 
     $('.square.first-orange').css({ transform: 'rotate(-' + (currentScroll - 15) + 'deg)' });
     $('.square.blue').css({ transform: 'rotate(-' + (currentScroll - 10 ) + 'deg)' });
