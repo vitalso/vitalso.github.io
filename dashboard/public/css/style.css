@@ -415,6 +415,8 @@ footer {
 
 .tabs-form {
   padding: 2.5rem; }
+  .tabs-form button[type="submit"] {
+    max-width: 300px; }
 
 form .label-title {
   display: block;
@@ -463,15 +465,6 @@ form input[type="text"], form textarea {
 form textarea {
   height: 138px;
   resize: none; }
-
-form button[type="submit"] {
-  background: #398a80;
-  color: #fff;
-  font-size: .75rem;
-  line-height: .875rem;
-  padding: .625rem 1rem;
-  border-radius: 4px;
-  cursor: pointer; }
 
 .file-box {
   margin-bottom: 1rem; }
