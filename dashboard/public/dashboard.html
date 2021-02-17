@@ -15,13 +15,28 @@
     script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
     -->
   </head>
-  <body>
+  <!-- Remove .bg-dark-green if needed just white background of page-->
+  <body class="bg-dark-green dashboard">
     <!-- Header-->
     <header>
       <div class="container">
         <div class="row center">
-          <div class="logo"><a href="index.html"></a></div>
-          <div class="header-title">21grams</div>
+          <div class="logo"><a href="index.html"><img src="images/logo.svg"></a></div>
+          <div class="header-title">LabelPortal</div>
+          <button class="menu-button">
+            <svg>
+              <use xlink:href="images/sprite.svg#hamburger"></use>
+            </svg>
+          </button>
+          <div class="menu-dropdown">
+            <div class="user-name">dennis@stidner.com</div><a href="#"><span>Sign out</span>
+              <svg>
+                <use xlink:href="images/sprite.svg#logout"></use>
+              </svg></a><a href="#"><span>Support</span>
+              <svg>
+                <use xlink:href="images/sprite.svg#phone"></use>
+              </svg></a>
+          </div>
         </div>
       </div>
     </header>
@@ -123,6 +138,8 @@
         </div>
       </section>
     </main>
+    <!-- Patern for background-->
+    <div class="patern"></div>
     <!-- Footer start-->
     <!--include elements/footer.pug-->
     <!-- jQuery & Bootstrap scripts-->

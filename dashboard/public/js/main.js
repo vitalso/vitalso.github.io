@@ -15,6 +15,12 @@ $(document).ready(function() {
     $(this).closest('.table-row').toggleClass('current-row');
   });
 
+  // Menu button
+  $('.menu-button').on('click' , function(){
+    $(this).toggleClass('open');
+    $(this).next('.menu-dropdown').toggleClass('open');
+  });
+
   // Popup
   $('.password-popup').magnificPopup({
     type: 'inline',

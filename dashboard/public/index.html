@@ -15,13 +15,28 @@
     script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
     -->
   </head>
-  <body>
+  <!-- Remove .bg-dark-green if needed just white background of page-->
+  <body class="bg-dark-green">
     <!-- Header-->
     <header>
       <div class="container">
         <div class="row center">
-          <div class="logo"><a href="index.html"></a></div>
-          <div class="header-title">21grams</div>
+          <div class="logo"><a href="index.html"><img src="images/logo.svg"></a></div>
+          <div class="header-title">LabelPortal</div>
+          <button class="menu-button">
+            <svg>
+              <use xlink:href="images/sprite.svg#hamburger"></use>
+            </svg>
+          </button>
+          <div class="menu-dropdown">
+            <div class="user-name">dennis@stidner.com</div><a href="#"><span>Sign out</span>
+              <svg>
+                <use xlink:href="images/sprite.svg#logout"></use>
+              </svg></a><a href="#"><span>Support</span>
+              <svg>
+                <use xlink:href="images/sprite.svg#phone"></use>
+              </svg></a>
+          </div>
         </div>
       </div>
     </header>
@@ -53,16 +68,21 @@
     <!-- .d-none remove for show the preloader and add new class .d-flex-->
     <div class="preloader d-none">
       <div class="preloader-content">
-        <div class="logo"></div>
-        <p>21grams <span>/ File exchange</span></p>
+        <div class="logo"><img src="images/logo.svg"></div>
+        <p>LabelPortal</p>
         <div class="loader">Loading</div>
       </div>
     </div>
+    <!-- Patern for background-->
+    <div class="patern"></div>
     <!-- Footer start-->
     <footer>
       <div class="container">
         <div class="row justify">
-          <div class="logo footer-logo"><a href="index.html"></a></div>
+          <div class="footer-logo"><a href="index.html">
+              <svg>
+                <use xlink:href="images/sprite.svg#logo-small"></use>
+              </svg></a></div>
           <div class="footer-column ml-auto"><a class="column-link visit-us" href="#">
               <svg>
                 <use xlink:href="images/sprite.svg#right-arrow"></use>
