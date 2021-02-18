@@ -13,12 +13,21 @@ $(document).ready(function() {
     e.preventDefault();
     $(this).toggleClass('expanded');
     $(this).closest('.table-row').toggleClass('current-row');
+    $(this).closest('.table-row').next('.expand-table').toggleClass('open');
   });
 
   // Menu button
-  $('.menu-button').on('click' , function(){
-    $(this).toggleClass('open');
-    $(this).next('.menu-dropdown').toggleClass('open');
+  $('.menu-button , .app-button').on('click' , function(){
+    if ($(this).hasClass('open')) {
+      $(this).removeClass('open');
+      $(this).next('div').removeClass('open');
+    } else {
+      $('.menu-button , .app-button , .menu-dropdown , .menu-apps').removeClass('open');
+      $(this).addClass('open');
+      $(this).next('div').addClass('open');
+    }
+    //$(this).toggleClass('open');
+    //$(this).next('div').toggleClass('open');
   });
 
   // Popup
