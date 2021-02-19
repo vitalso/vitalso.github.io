@@ -11,7 +11,7 @@ $(document).ready(function() {
   $("#phone-input").mask("+38(099)-999-99-99");
 
   // Run some function only on Index page
-  if (window.location.pathname == "/") {
+  if (window.location.pathname == "/" || window.location.href.indexOf("index") > -1) {
 
     // Slick slider - Gallery pack
     $('.gallery-pack ul').slick({
@@ -124,7 +124,7 @@ $(document).ready(function() {
   });
 
 
-  if (window.location.pathname == "/how-we-build.html") {
+  if (window.location.href.indexOf("how-we-build") > -1) {
 
     // Top position of block
     var top_position = $('.step-list').offset().top;
@@ -184,7 +184,7 @@ $(document).ready(function() {
 
   };
 
-  if (window.location.pathname == "/configuration.html") {
+  if (window.location.href.indexOf("configuration") > -1) {
 
     $('.items.type .item').slick({
       infinite: false,
