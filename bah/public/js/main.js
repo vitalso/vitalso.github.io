@@ -11,7 +11,7 @@ $(document).ready(function() {
   $("#phone-input").mask("+38(099)-999-99-99");
 
   // Run some function only on Index page
-  if (window.location.pathname == "/index.html") {
+  if (window.location.pathname == "/") {
 
     // Slick slider - Gallery pack
     $('.gallery-pack ul').slick({
