@@ -103,7 +103,11 @@ header {
   header .header-title {
     font-size: 18px;
     font-weight: 700;
-    line-height: 21px; }
+    line-height: 21px;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    width: 100%; }
   header .logout {
     opacity: 0; }
     header .logout a {
@@ -147,9 +151,9 @@ header {
     margin: 40px auto; }
     .wrap-form.form-green input::placeholder {
       font-family: Roboto;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 200;
-      line-height: 23px; }
+      line-height: 55px; }
 
 .center-text {
   text-align: center; }
@@ -228,10 +232,14 @@ footer {
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  margin: 20px 0; }
+  margin: 20px auto;
+  max-width: 550px; }
   .tab-nav li.tab-current a {
     background: #F2FAF1; }
   .tab-nav a {
+    text-align: center;
+    display: inline-block;
+    min-width: 120px;
     padding: 12px 17px;
     background: #fff;
     font-family: Roboto;
@@ -247,9 +255,14 @@ footer {
   display: none; }
   .tab-content.current {
     display: block; }
+  .tab-content .container {
+    max-width: 580px; }
 
 .table {
-  margin-top: 40px; }
+  margin-top: 40px;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto; }
   .table-title {
     justify-content: space-between;
     display: flex;
