@@ -10,6 +10,19 @@ $(document).ready(function() {
   // Phone input mask
   $("#phone-input").mask("+38(099)-999-99-99");
 
+  // Scroll Reveal - effects when scroll page
+    ScrollReveal().reveal('.animated' , { delay: 1500 , duration: 1300 , easing: 'ease' , distance: '150px' });
+
+  // Parallax effect for inner intro section
+  $(window).on('scroll' , function() {
+
+    // Change position of image intro
+    $('.intro-img img').css('top' , - $(window).scrollTop()*0.3);
+    $('.intro-illustration img').css('top' , - $(window).scrollTop()*0.1);
+    console.log($(window).scrollTop()*0.3);
+
+  })
+
   // Run some function only on Index page
   if (window.location.pathname == "/" || window.location.href.indexOf("index") > -1) {
 
@@ -26,9 +39,6 @@ $(document).ready(function() {
       useTransform: false,
       arrows: false
     });
-
-    // Scroll Reveal - effects when scroll page
-    ScrollReveal().reveal('.animated' , { delay: 2000 , duration: 1300 , easing: 'ease' , distance: '100%' });
 
     function scrollVideo() {
       var video = $('.tree-video').get(0),
@@ -61,10 +71,8 @@ $(document).ready(function() {
       $('#preveliges').addClass('bg-change');
     }
 
-  }
-
-  // Scroll configure section
-  /*$('.side-scrolling.left ul').slick({
+    // Scroll configure section
+  $('.side-scrolling.left ul').slick({
     autoplay: true,
     infinite: true,
     autoplaySpeed: 5000,
@@ -84,33 +92,23 @@ $(document).ready(function() {
 
   $('.side-scrolling.right ul').slick({
     autoplay: true,
-    infinite: false,
-    autoplaySpeed: 5000,
+    infinite: true,
+    autoplaySpeed: 3000,
     centerMode: true,
     centerPadding: '0',
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     focusOnSelect: false,
     pauseOnFocus: false,
     pauseOnHover: false,
-    cssEase: 'linear',
-    useTransform: false,
+    //cssEase: 'linear',
+    //useTransform: false,
     arrows: false,
-    vertical: true
-    //verticalReverse: true
-  });*/
+    vertical: true,
+    verticalReverse: false
+  });
 
-  /*$(".side-scrolling.right ul").on("beforeChange", function(event, slick, currentSlide) {
-
-    rand = Math.floor( Math.random() * 4 );
-
-    $(this).slick('slickGoTo', 1);
-
-    console.log(rand);
-
-  })*/
-
-
+  }
 
   // Popup
   $('.consult').magnificPopup({
@@ -132,17 +130,12 @@ $(document).ready(function() {
     // Step 1 position
     var step_1_position = $('#step-1').offset().top;
 
-    // Step 2 position
-    var step_2_position = $('#step-2').offset().top;
-
-    // Step 3 position
-    var step_3_position = $('#step-3').offset().top;
-
-    // Step 4 position
-    var step_4_position = $('#step-4').offset().top;
-
     // Step 5 position
     var step_5_position = $('#step-5').offset().top;
+
+    // Full position
+    var full_position = (step_5_position - step_1_position) / 7;
+    console.log(full_position);
 
     if ($(window).width() > 768) {
 
@@ -155,25 +148,25 @@ $(document).ready(function() {
           $('.step-list').css('top' , ($(window).scrollTop() - top_position + 200));
         }
 
-        if ($(window).scrollTop() >= step_1_position && $(window).scrollTop() <= step_2_position) {
+        if ($(window).scrollTop() >= step_1_position && $(window).scrollTop() <= step_1_position + full_position) {
           $('.step-list li').removeClass('current-step');
           $('.step-list li').eq(0).addClass('current-step');
-        } else if ($(window).scrollTop() >= step_2_position && $(window).scrollTop() <= step_3_position) {
+        } else if ($(window).scrollTop() >= step_1_position + full_position && $(window).scrollTop() <= step_1_position + full_position * 2) {
           $('.step-list li').removeClass('current-step');
           $('.step-list li').eq(1).addClass('current-step');
-        } else if ($(window).scrollTop() >= step_3_position && $(window).scrollTop() <= step_4_position) {
+        } else if ($(window).scrollTop() >= step_1_position + full_position * 2 && $(window).scrollTop() <= step_1_position + full_position * 3) {
           $('.step-list li').removeClass('current-step');
           $('.step-list li').eq(2).addClass('current-step');
-        } else if ($(window).scrollTop() >= step_4_position && $(window).scrollTop() <= step_5_position) {
+        } else if ($(window).scrollTop() >= step_1_position + full_position * 3 && $(window).scrollTop() <= step_1_position + full_position * 4) {
           $('.step-list li').removeClass('current-step');
           $('.step-list li').eq(3).addClass('current-step');
-        } else if ($(window).scrollTop() >= step_5_position) {
+        } else if ($(window).scrollTop() >= step_1_position + full_position * 4 && $(window).scrollTop() <= step_1_position + full_position * 5) {
           $('.step-list li').removeClass('current-step');
           $('.step-list li').eq(4).addClass('current-step');
-        } else if ($(window).scrollTop() >= step_5_position) {
+        } else if ($(window).scrollTop() >= step_1_position + full_position * 5 && $(window).scrollTop() <= step_1_position + full_position * 6) {
           $('.step-list li').removeClass('current-step');
           $('.step-list li').eq(5).addClass('current-step');
-        } else if ($(window).scrollTop() >= step_5_position) {
+        } else if ($(window).scrollTop() >= step_1_position + full_position * 6) {
           $('.step-list li').removeClass('current-step');
           $('.step-list li').eq(6).addClass('current-step');
         }
@@ -231,5 +224,21 @@ $(document).ready(function() {
     $(".type input").closest("div").removeClass("checked");
     $(".type input:checked").closest("div").addClass("checked");
   });
+
+  // Tabs
+  $('.dark-tab').on('click', 'li:not(.current-percent)', function(e) {
+    e.preventDefault();
+    $(this)
+      .addClass('current-percent').siblings().removeClass('current-percent')
+      .closest('.component-costs').find('.payment-tab-section section').removeClass('current').eq($(this).index()).addClass('current');
+  });
+
+  // Change image on click by color scheme circle
+  $('.color-list .previous , .color-list .current , .color-list .next').on('click' , function(){
+    $('#color').fadeOut('fast').attr('src' , $(this).data('url')).fadeIn(300);
+    $('.color-list li').removeClass('active');
+    $(this).addClass('active');
+    console.log($(this).data('url'));
+  })
 
 })

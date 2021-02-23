@@ -49,18 +49,18 @@
           <div class="row">
             <div class="column-50">
               <div class="house-desc">
-                <div class="title white pl-0">Создайте свой идеальный дом из 60 базовых опций:</div>
+                <div class="title white pl-0 animated">Создайте свой идеальный дом из 60 базовых опций:</div>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="column-50">
-              <div class="house-desc">
+              <div class="house-desc animated">
                 <p>Вы можете выбрать один из четырех архитектурных  стилей, каждый стиль обозначен латинской буквой  (V, T, U или W), которая напоминает форму крыши или  фасад дома. В каждом стиле доступно три размера — малый, средний и большой.</p>
               </div>
             </div>
             <div class="column-50">
-              <div class="house-desc">
+              <div class="house-desc animated">
                 <p class="white">Любой из вариантов может быть предложен  с подобранными нашими архитекторами цветовыми решениями, обычно это комбинация двух цветов, либо один доминирующий цвет. Из этих вариаций,  ваших потребностей и тех решений, которыми мы располагаем — формируется уникальный  проект именно вашего дома.</p>
               </div>
             </div>
@@ -70,19 +70,19 @@
       <section class="how-to max-width">
         <div class="container">
           <div class="row">
-            <div class="how-item">
+            <div class="how-item animated">
               <p>Выбираете <br> стиль</p>
               <div class="how-image"><img src="images/style-1.png"><img src="images/style-2.png"><img src="images/style-3.png"><img src="images/style-4.png"></div>
             </div>
-            <div class="how-item">
+            <div class="how-item animated">
               <p>Выбираете <br> размер</p>
               <div class="how-image"><img src="images/size-s.png"><img src="images/size-m.png"><img src="images/size-l.png"></div>
             </div>
-            <div class="how-item">
+            <div class="how-item animated">
               <p>Выбираете <br> цвет</p>
               <div class="how-image"><img src="images/form-icons/color-1.svg"><img src="images/form-icons/color-2.svg"><img src="images/form-icons/color-3.svg"><img src="images/form-icons/color-4.svg"><img src="images/form-icons/color-5.svg"></div>
             </div>
-            <div class="how-item">
+            <div class="how-item animated">
               <p>Получаете свой вариант <br> из 60 базовых комбинаций</p>
               <div class="how-image"><img src="images/form-icons/type-1.svg"></div>
             </div>
@@ -91,29 +91,115 @@
       </section>
       <section class="example-house">
         <div class="container">
-          <div class="example-img"><img src="images/intro-build-3.png"></div>
+          <div class="example-img animated"><img src="images/colors3.png" id="color">
+            <!--img(src="images/colors2.png")#color-2-->
+            <!--img(src="images/colors3.png")#color-3-->
+          </div>
         </div>
       </section>
       <section class="color-scheme max-width">
         <div class="container">
-          <div class="title pl-0">Цветовые комбинации</div>
-          <p>Выберите одну из понравившихся вам цветовых <br> комбинаций для дома.</p>
-          <div class="color-list">
+          <div class="title pl-0 animated">Цветовые комбинации</div>
+          <p class="animated">Выберите одну из понравившихся вам цветовых <br> комбинаций для дома.</p>
+          <div class="color-list mobile-colors animated">
             <ul>
-              <li><a href="#"><img src="images/form-icons/color-1.svg"></a></li>
-              <li class="previous"><a href="#"><img src="images/form-icons/color-2.svg"></a></li>
-              <li class="current"><a href="#"><img src="images/form-icons/color-3.svg"></a></li>
-              <li class="next"><a href="#"><img src="images/form-icons/color-4.svg"></a></li>
-              <li><a href="#"><img src="images/form-icons/color-5.svg"></a></li>
+              <li class="previous" data-url="images/colors2.png">
+                <div class="circle">
+                  <div style="background: #9F725F"></div>
+                  <div style="background: #724B10"></div>
+                </div>
+              </li>
+              <li class="current active" data-url="images/colors3.png">
+                <div class="circle">
+                  <div style="background: #412F15"></div>
+                  <div style="background: #4C5756"></div>
+                </div>
+              </li>
+              <li class="next" data-url="images/colors1.png">
+                <div class="circle">
+                  <div style="background: #B59360"></div>
+                  <div style="background: #727272"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="color-list animated">
+            <ul>
+              <li>
+                <div class="circle">
+                  <div style="background: #9F725F"></div>
+                  <div style="background: #C58B35"></div>
+                </div>
+              </li>
+              <li>
+                <div class="circle">
+                  <div style="background: #412F15"></div>
+                  <div style="background: #67BCB5"></div>
+                </div>
+              </li>
+              <li>
+                <div class="circle">
+                  <div style="background: #B5720F"></div>
+                  <div style="background: #E5E5E5"></div>
+                </div>
+              </li>
+              <li>
+                <div class="circle">
+                  <div style="background: #412F15"></div>
+                  <div style="background: #4C5756"></div>
+                </div>
+              </li>
+              <li class="previous" data-url="images/colors2.png">
+                <div class="circle">
+                  <div style="background: #9F725F"></div>
+                  <div style="background: #724B10"></div>
+                </div>
+              </li>
+              <li class="current active" data-url="images/colors3.png">
+                <div class="circle">
+                  <div style="background: #412F15"></div>
+                  <div style="background: #4C5756"></div>
+                </div>
+              </li>
+              <li class="next" data-url="images/colors1.png">
+                <div class="circle">
+                  <div style="background: #B59360"></div>
+                  <div style="background: #727272"></div>
+                </div>
+              </li>
+              <li>
+                <div class="circle">
+                  <div style="background: #565656"></div>
+                  <div style="background: #188D8C"></div>
+                </div>
+              </li>
+              <li>
+                <div class="circle">
+                  <div style="background: #CF9E54"></div>
+                  <div style="background: #E1FFCA"></div>
+                </div>
+              </li>
+              <li>
+                <div class="circle">
+                  <div style="background: #E9CCA1"></div>
+                  <div style="background: #E5E5E5"></div>
+                </div>
+              </li>
+              <li>
+                <div class="circle">
+                  <div style="background: #000000"></div>
+                  <div style="background: #DFECE7"></div>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
       </section>
       <section class="basic max-width">
         <div class="container">
-          <div class="title text-center pl-0">Базовая комплектация</div>
+          <div class="title text-center pl-0 animated">Базовая комплектация</div>
           <div class="complection">
-            <div class="complection-row">
+            <div class="complection-row animated">
               <div class="column-50">
                 <p class="title">Фундамент</p>
               </div>
@@ -124,7 +210,7 @@
                 </div>
               </div>
             </div>
-            <div class="complection-row">
+            <div class="complection-row animated">
               <div class="column-50">
                 <p class="title">Полы</p>
               </div>
@@ -135,7 +221,7 @@
                 </div>
               </div>
             </div>
-            <div class="complection-row">
+            <div class="complection-row animated">
               <div class="column-50">
                 <p class="title">Каркас и стены</p>
               </div>
@@ -162,7 +248,7 @@
                 </div>
               </div>
             </div>
-            <div class="complection-row">
+            <div class="complection-row animated">
               <div class="column-50">
                 <p class="title">Окна и двери</p>
               </div>
@@ -177,7 +263,7 @@
                 </div>
               </div>
             </div>
-            <div class="complection-row">
+            <div class="complection-row animated">
               <div class="column-50">
                 <p class="title">Лестница</p>
               </div>
@@ -188,7 +274,7 @@
                 </div>
               </div>
             </div>
-            <div class="complection-row">
+            <div class="complection-row animated">
               <div class="column-50">
                 <p class="title">Инженерия</p>
               </div>
@@ -200,7 +286,7 @@
               </div>
             </div>
           </div>
-          <div class="bonus">
+          <div class="bonus animated">
             <div class="title">+ Терраса
               <div class="basic-icon"><img src="images/basic/basic-12.png"></div>
             </div>
@@ -210,57 +296,57 @@
       </section>
       <section class="result-house">
         <div class="container">
-          <h3>Итоговый дом внутри <br> в базовой комплектации</h3>
+          <h3 class="animated">Итоговый дом внутри <br> в базовой комплектации</h3>
           <div class="example-image"><img src="images/result-house.png"></div>
         </div>
       </section>
       <section class="additional-option">
         <div class="container">
-          <div class="title pl-0">Дополнительные опции</div>
+          <div class="title pl-0 animated">Дополнительные опции</div>
           <div class="row">
-            <div class="column-30">
+            <div class="column-30 animated">
               <div class="option-item">
                 <div class="option-icon"><img src="images/option/option-1.png"></div>
                 <p>Система “Умный дом”</p>
               </div>
             </div>
-            <div class="column-30">
+            <div class="column-30 animated">
               <div class="option-item">
                 <div class="option-icon"><img src="images/option/option-2.png"></div>
                 <p>Энергоэффективная климатическая система</p>
               </div>
             </div>
-            <div class="column-30">
+            <div class="column-30 animated">
               <div class="option-item">
                 <div class="option-icon"><img src="images/option/option-3.png"></div>
                 <p>Система водопровода и канализация</p>
               </div>
             </div>
-            <div class="column-30">
+            <div class="column-30 animated">
               <div class="option-item">
                 <div class="option-icon"><img src="images/option/option-4.png"></div>
                 <p>Солнечные панели</p>
               </div>
             </div>
-            <div class="column-30">
+            <div class="column-30 animated">
               <div class="option-item">
                 <div class="option-icon"><img src="images/option/option-5.png"></div>
                 <p>Финишная отделка и покраска стен и потолка</p>
               </div>
             </div>
-            <div class="column-30">
+            <div class="column-30 animated">
               <div class="option-item">
                 <div class="option-icon"><img src="images/option/option-6.png"></div>
                 <p>Финишная отделка пола плиткой</p>
               </div>
             </div>
-            <div class="column-30">
+            <div class="column-30 animated">
               <div class="option-item">
                 <div class="option-icon"><img src="images/option/option-7.png"></div>
                 <p>Формирование инженерной системы — топочная</p>
               </div>
             </div>
-            <div class="column-30">
+            <div class="column-30 animated">
               <div class="option-item">
                 <div class="option-icon"><img src="images/option/option-8.png"></div>
                 <p>Разведение инженерных систем  по всему дому</p>
@@ -271,21 +357,21 @@
       </section>
       <section class="result-of-work green max-width">
         <div class="container">
-          <div class="title pl-0 white">Итоговый комплект:</div>
+          <div class="title pl-0 white animated">Итоговый комплект:</div>
           <ul class="result-list">
-            <li>Чертежи и схемы</li>
-            <li>Документы</li>
-            <li>Готовый под ключ дом</li>
-            <li>Финализированная внутренняя отделка</li>
-            <li>Подводка всех коммуникаций</li>
-            <li>Поддержка и техническое обслуживание</li>
+            <li class="animated">Чертежи и схемы</li>
+            <li class="animated">Документы</li>
+            <li class="animated">Готовый под ключ дом</li>
+            <li class="animated">Финализированная внутренняя отделка</li>
+            <li class="animated">Подводка всех коммуникаций</li>
+            <li class="animated">Поддержка и техническое обслуживание</li>
           </ul>
         </div>
       </section>
       <section class="know-how-to">
         <div class="container">
           <div class="know-how">
-            <p>Узнайте, как просто купить дом и все его комплаектующие</p><a class="primary-btn small-btn" href="#"><span>Условия приобретения</span></a>
+            <p class="animated">Узнайте, как просто купить дом и все его комплаектующие</p><a class="primary-btn small-btn" href="requirements.html"><span>Условия приобретения</span></a>
           </div>
         </div>
       </section>
