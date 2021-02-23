@@ -26,20 +26,11 @@ $(document).ready(function() {
       $(this).addClass('open');
       $(this).next('div').addClass('open');
     }
-    //$(this).toggleClass('open');
-    //$(this).next('div').toggleClass('open');
   });
 
-  // Popup
-  $('.password-popup').magnificPopup({
-    type: 'inline',
-    preloader: false,
-    modal: false
-  });
-
-  $(document).on('click', '.popup-modal-dismiss', function (e) {
-    e.preventDefault();
-    $.magnificPopup.close();
-  });
+  // Login form
+  $('#login-form').submit(function(){
+    $(this).find('button[type="submit"]').text('One moment please...')
+  })
 
 })

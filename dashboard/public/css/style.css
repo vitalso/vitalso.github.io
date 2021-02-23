@@ -35,6 +35,8 @@ body {
     top: -5px; }
   body.dashboard .menu-button, body.dashboard .app-button {
     display: block; }
+  body.dashboard .patern {
+    background-size: 70%; }
 
 ol, ul {
   list-style: none; }
@@ -267,6 +269,7 @@ header {
   font-size: 1rem;
   line-height: 1rem;
   cursor: pointer;
+  outline: none;
   transition: all .3s ease-in-out; }
   .btn-primary:hover {
     opacity: .9; }
@@ -568,7 +571,8 @@ footer {
 .tabs-form {
   padding: 2.5rem; }
   .tabs-form button[type="submit"] {
-    max-width: 300px; }
+    max-width: 300px;
+    outline: none; }
 
 form .label-title {
   display: block;
@@ -605,7 +609,7 @@ form label {
 form .form-item {
   margin-bottom: 1.5rem; }
 
-form input[type="text"], form textarea {
+form input[type="text"], form textarea, form select {
   padding: .575rem .75rem;
   display: block;
   width: 100%;
@@ -617,6 +621,18 @@ form input[type="text"], form textarea {
 form textarea {
   height: 138px;
   resize: none; }
+
+form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(../images/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: 98% center;
+  background-size: 18px;
+  outline: none; }
+  form select option {
+    height: 50px; }
 
 .file-box {
   margin-bottom: 1rem; }
