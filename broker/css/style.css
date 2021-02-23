@@ -90,6 +90,7 @@ html {
     color: #43649E; }
 
 main {
+  min-height: calc(100vh - 327px);
   background-color: #F7F9F9;
   background-image: url(../images/bg.svg);
   background-repeat: repeat-x;
@@ -98,8 +99,14 @@ main {
 
 header {
   height: 74px;
-  padding: 17px 0;
+  padding: 11px 0;
   background-color: #fff; }
+  header .logo {
+    z-index: 1; }
+    header .logo a {
+      display: block; }
+    header .logo img {
+      width: 160px; }
   header .header-title {
     font-size: 18px;
     font-weight: 700;
@@ -140,6 +147,10 @@ header {
       margin-bottom: 20px; }
       .intro.font-17 p:last-child {
         margin-bottom: 0; }
+
+.form-img {
+  max-width: 550px;
+  margin: 0 auto; }
 
 .wrap-form {
   margin: 0 auto;

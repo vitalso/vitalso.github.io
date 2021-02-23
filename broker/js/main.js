@@ -20,4 +20,15 @@ $(document).ready(function() {
     $.magnificPopup.close();
   });
 
+  // This part of code need to be remove
+  $('.next-page').on('click' , function(e){
+    e.preventDefault();
+    window.location.href = 'form-1.html';
+  });
+
+  $('.next-one').on('click' , function(e){
+    e.preventDefault();
+    window.location.href = 'register.html';
+  });
+
 })
