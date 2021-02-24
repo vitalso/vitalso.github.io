@@ -18,10 +18,10 @@
     <header class="dark-link">
       <div class="container">
         <div class="row justify">
-          <div class="logo"><a href="index.html"><img src="images/logo-green-header.svg"></a></div>
+          <div class="logo"><a href="index.html"><img src="images/logo-green-header.svg"><img src="images/logo-green-mobile.svg"></a></div>
           <nav class="nav">
             <ul>
-              <li><a class="active" href="configuration.html">Выбор</a></li>
+              <li><a href="configuration.html">Выбор</a></li>
               <li><a href="how-we-build.html">Как мы строим дом</a></li>
               <li><a href="what-you-take.html">Что вы получаете</a></li>
               <li><a href="requirements.html">Условия</a></li>
@@ -38,7 +38,7 @@
       <div class="container">
         <h1 class="text-center">Что вы получаете</h1>
         <div class="intro-img text-center"><img src="images/intro-build-4.png"></div>
-        <div class="intro-illustration text-center"><img src="images/intro-illustration-4.png"></div>
+        <div class="intro-illustration text-center"><img src="images/intro-illustration-4.svg"></div>
       </div>
     </section>
     <!-- Main page start-->
@@ -297,7 +297,13 @@
       <section class="result-house">
         <div class="container">
           <h3 class="animated">Итоговый дом внутри <br> в базовой комплектации</h3>
-          <div class="example-image"><img src="images/result-house.png"></div>
+          <div class="example-image">
+            <!--img(src="images/result-house.png")-->
+            <video class="illustration-video-3" muted preload poster="">
+              <source src="video/illustration-3.mp4" type="video/mp4">
+              <source src="video/illustration-3.webm" type="video/webm">
+            </video>
+          </div>
         </div>
       </section>
       <section class="additional-option">
@@ -370,7 +376,7 @@
       </section>
       <section class="know-how-to">
         <div class="container">
-          <div class="know-how">
+          <div class="know-how border-btn">
             <p class="animated">Узнайте, как просто купить дом и все его комплаектующие</p><a class="primary-btn small-btn" href="requirements.html"><span>Условия приобретения</span></a>
           </div>
         </div>

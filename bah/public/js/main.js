@@ -3,6 +3,7 @@ $(document).ready(function() {
   // Toogle class button menu
   $('.toggle-nav').on('click' , function(){
     $('body').toggleClass('overflow-y');
+    $(this).closest('header').toggleClass('z-index');
     $(this).toggleClass('open');
     $('.nav').toggleClass('open');
   });
@@ -11,7 +12,7 @@ $(document).ready(function() {
   $("#phone-input").mask("+38(099)-999-99-99");
 
   // Scroll Reveal - effects when scroll page
-    ScrollReveal().reveal('.animated' , { delay: 1500 , duration: 1300 , easing: 'ease' , distance: '150px' });
+    ScrollReveal().reveal('.animated' , { delay: 1000 , duration: 1300 , easing: 'ease' , distance: '150px' });
 
   // Parallax effect for inner intro section
   $(window).on('scroll' , function() {
@@ -19,9 +20,8 @@ $(document).ready(function() {
     // Change position of image intro
     $('.intro-img img').css('top' , - $(window).scrollTop()*0.3);
     $('.intro-illustration img').css('top' , - $(window).scrollTop()*0.1);
-    console.log($(window).scrollTop()*0.3);
 
-  })
+  });
 
   // Run some function only on Index page
   if (window.location.pathname == "/" || window.location.href.indexOf("index") > -1) {
@@ -40,19 +40,66 @@ $(document).ready(function() {
       arrows: false
     });
 
-    function scrollVideo() {
+    /*function scrollVideo() {
       var video = $('.tree-video').get(0),
         videoLength = video.duration,
         scrollPosition = $(document).scrollTop();
 
       video.currentTime = ((scrollPosition*3) / ($(document).height() - $(window).height()*4)) * videoLength;
 
-    };
+    };*/
+
+    // Tree video position
+    var video_index = $('.tree-video').get(0);
+    var position_index = $('.tree-video').offset().top - $('.tree-video').height();
+
+    // Illustration 1
+    var video_illustration_1 = $('.illustration-video-1').get(0);
+    var position_illustration_1 = $('.illustration-video-1').offset().top - $('.illustration-video-1').height();
+
+    // Illustration 2
+    var video_illustration_2 = $('.illustration-video-2').get(0);
+    var position_illustration_2 = $('.illustration-video-2').offset().top - $('.illustration-video-2').height();
+
+    $('.tree-video , .illustration-video-1 , .illustration-video-2').on('ended', function(){this.playedThrough = true;});
+    $('.tree-video , .illustration-video-1 , .illustration-video-2').on('ended', function(){
+      $('body').removeClass('overflow-y');
+    });
+
+    // Prevelige position
+    var prevelige_position = $('#preveliges').offset().top;
 
     $(window).on('scroll' , function(){
 
       // Play video with tree when scroll
-      scrollVideo();
+      //scrollVideo();
+
+      if ($(window).scrollTop() > position_index) {
+        if (!video_index.playedThrough) {
+          video_index.play();
+          $('body').addClass('overflow-y');
+        } else {
+          video_index.pause();
+        }
+      }
+
+      if ($(window).scrollTop() > position_illustration_1) {
+        if (!video_illustration_1.playedThrough) {
+          video_illustration_1.play();
+          $('body').addClass('overflow-y');
+        } else {
+          video_illustration_1.pause();
+        }
+      }
+
+      if ($(window).scrollTop() > position_illustration_2) {
+        if (!video_illustration_2.playedThrough) {
+          video_illustration_2.play();
+          $('body').addClass('overflow-y');
+        } else {
+          video_illustration_2.pause();
+        }
+      }
 
       // Rotate square colorful cards when scroll
       var currentScroll = Number(Math.trunc($(window).scrollTop() / 170));
@@ -64,12 +111,12 @@ $(document).ready(function() {
       $('.square.light-green').css({ transform: 'rotate(' + (currentScroll - 20 ) + 'deg)' });
       $('.square.last-orange').css({ transform: 'rotate(-' + (currentScroll - 15 ) + 'deg)' });
 
-    });
+      // Change background when scroll to section #Preveliges
+      if ($(window).scrollTop() >= prevelige_position) {
+        $('#preveliges').addClass('bg-change');
+      }
 
-    // Change background when scroll to section #Preveliges
-    if ($(window).scrollTop() >= $('#preveliges').offset().top) {
-      $('#preveliges').addClass('bg-change');
-    }
+    });
 
     // Scroll configure section
   $('.side-scrolling.left ul').slick({
@@ -101,8 +148,6 @@ $(document).ready(function() {
     focusOnSelect: false,
     pauseOnFocus: false,
     pauseOnHover: false,
-    //cssEase: 'linear',
-    //useTransform: false,
     arrows: false,
     vertical: true,
     verticalReverse: false
@@ -214,6 +259,33 @@ $(document).ready(function() {
 
   }
 
+  // Run some function only on What you take page
+  if (window.location.href.indexOf("what-you-take") > -1) {
+
+    // Illustration 3
+    var video_illustration_3 = $('.illustration-video-3').get(0);
+    var position_illustration_3 = $('.illustration-video-3').offset().top - $('.illustration-video-3').height();
+
+    $('.illustration-video-3').on('ended', function(){this.playedThrough = true;});
+    $('.illustration-video-3').on('ended', function(){
+      $('body').removeClass('overflow-y');
+    });
+
+    $(window).on('scroll' , function(){
+
+      if ($(window).scrollTop() > position_illustration_3) {
+        if (!video_illustration_3.playedThrough) {
+          video_illustration_3.play();
+          $('body').addClass('overflow-y');
+        } else {
+          video_illustration_3.pause();
+        }
+      }
+
+    })
+
+  }
+
   // Form inputs add .checked class
   $(".rooms input").change(function() {
     $(".rooms input").parent().removeClass("checked");
@@ -238,7 +310,17 @@ $(document).ready(function() {
     $('#color').fadeOut('fast').attr('src' , $(this).data('url')).fadeIn(300);
     $('.color-list li').removeClass('active');
     $(this).addClass('active');
-    console.log($(this).data('url'));
-  })
+  });
+
+  var lastScrollTop = 0;
+  $(window).scroll(function(event){
+    var st = $(this).scrollTop();
+    if (st < lastScrollTop){
+      $('header.dark-link').addClass('sticky');
+    } else {
+      $('header.dark-link').removeClass('sticky');
+    }
+    lastScrollTop = st;
+  });
 
 })
