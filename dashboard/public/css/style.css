@@ -36,7 +36,8 @@ body {
   body.dashboard .menu-button, body.dashboard .app-button {
     display: block; }
   body.dashboard .patern {
-    background-size: 70%; }
+    background-size: 70%;
+    background-position: center top; }
 
 ol, ul {
   list-style: none; }
