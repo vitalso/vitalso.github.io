@@ -200,7 +200,10 @@ header {
     text-decoration: none;
     color: #fff;
     position: relative;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
     overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
     border-radius: 15px; }
     .nav a:after {
       content: "";
@@ -210,7 +213,7 @@ header {
       top: 0;
       left: 0;
       border-radius: 15px;
-      background: #DFECE7;
+      background: #ECBA6F;
       transition: all .3s ease;
       transform: translateX(-110%);
       z-index: -1; }
@@ -219,8 +222,12 @@ header {
       .nav a:hover:after {
         transform: translateX(0); }
     .nav a.active {
-      color: #008076;
-      background: #DFECE7; }
+      color: #008076; }
+      .nav a.active:after {
+        background: #DFECE7;
+        transform: translateX(0); }
+      .nav a.active:hover:after {
+        transform: translateX(100%); }
 
 .toggle-nav, .close-popup {
   width: 44px;
@@ -292,7 +299,7 @@ header {
       width: 100%;
       height: 100%;
       bottom: 0;
-      background: radial-gradient(circle at center 150%, #FFDFC0 10%, rgba(0, 0, 0, 0.001) 73%);
+      background: radial-gradient(circle at center 150%, #FFDFC0 10%, white 73%);
       z-index: -1; }
     .intro.inner .intro-img {
       position: absolute;
@@ -300,6 +307,8 @@ header {
       bottom: -10px; }
       .intro.inner .intro-img img {
         position: relative; }
+    .intro.inner .intro-build img {
+      max-width: 950px; }
     .intro.inner .intro-illustration {
       width: 100%;
       position: absolute;
@@ -466,7 +475,9 @@ h1, .title {
 
 .image-house {
   margin-top: 40px;
-  text-align: center; }
+  text-align: center;
+  opacity: 0;
+  transition: all .5s ease; }
   .image-house img {
     margin-bottom: -3px; }
 
@@ -1087,11 +1098,10 @@ footer {
     position: absolute;
     top: 100px;
     background: #fff;
-    margin-bottom: 40px;
-    /*&.sticky {
-          position: fixed !important;
-          top: 50px;
-        }*/ }
+    margin-bottom: 40px; }
+    .step-of-work .step-list.sticky {
+      position: fixed;
+      top: 100px; }
     .step-of-work .step-list li {
       display: flex;
       align-items: center;
@@ -1253,7 +1263,7 @@ footer {
     margin-bottom: 20px; }
 
 .example-house {
-  padding-top: 100px;
+  padding-top: 40px;
   text-align: center;
   background: url(../images/example-illustration.png) center 105% no-repeat;
   overflow: hidden; }
@@ -1265,7 +1275,7 @@ footer {
     margin-right: auto; }
 
 .color-scheme {
-  padding: 60px 0 130px 0;
+  padding: 60px 0;
   background: #EFEFEF;
   text-align: center; }
   .color-scheme .title {
@@ -1305,6 +1315,9 @@ footer {
         height: 26px;
         background: url(../images/checkbox.svg) no-repeat;
         background-size: cover; }
+  .color-list + p {
+    font-size: 18px;
+    margin-top: 60px; }
 
 .basic {
   padding-top: 140px;
@@ -1765,7 +1778,8 @@ footer {
   background: #E8E8E8;
   position: relative; }
   .item-progress .progress-bar {
-    height: 3px; }
+    height: 3px;
+    animation: progress 2s ease; }
   .item-progress:after {
     content: "";
     position: absolute;
@@ -1777,6 +1791,43 @@ footer {
 .item-budget {
   font-size: 12px;
   margin-top: 8px; }
+
+@keyframes progress {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background: #008076; }
+  .preloader-logo {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    z-index: 9; }
+    .preloader-logo img {
+      width: 430px; }
+  .preloader-progress {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #006F93;
+    border-bottom: 15px solid #fff;
+    left: 0;
+    transition: all .3s ease;
+    animation: load 2s ease; }
+
+@keyframes load {
+  from {
+    left: -100%; }
+  to {
+    left: 0; } }
 
 @media screen and (max-width: 1440px) {
   .nav {
@@ -2404,7 +2455,16 @@ footer {
     margin-left: -20px;
     margin-right: -20px; }
   .intro.inner + main {
-    margin-top: 480px; } }
+    margin-top: 480px; }
+  header.sticky .logo {
+    margin-bottom: 0; }
+  .color-scheme {
+    padding: 0 0 30px 0; }
+    .color-scheme .color-list + p {
+      font-size: 16px;
+      margin-top: 0; }
+  .preloader-logo img {
+    width: 80%; } }
 
 @media screen and (max-height: 800px) {
   .white-popup .popup-img {
