@@ -475,9 +475,7 @@ h1, .title {
 
 .image-house {
   margin-top: 40px;
-  text-align: center;
-  opacity: 0;
-  transition: all .5s ease; }
+  text-align: center; }
   .image-house img {
     margin-bottom: -3px; }
 

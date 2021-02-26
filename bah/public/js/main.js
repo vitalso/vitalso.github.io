@@ -128,7 +128,6 @@ $(document).ready(function() {
       // Change background when scroll to section #Preveliges
       if ($(window).scrollTop() >= prevelige_position) {
         $('#preveliges').addClass('bg-change');
-        $('.image-house').delay(100).animate({opacity:1},300)
       }
 
     });
