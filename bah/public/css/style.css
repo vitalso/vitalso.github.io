@@ -195,6 +195,7 @@ header {
       margin-left: 0; }
   .nav a {
     display: inline-block;
+    vertical-align: top;
     padding: 10px 18px;
     font-size: 18px;
     text-decoration: none;
@@ -204,7 +205,8 @@ header {
     overflow: hidden;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
-    border-radius: 15px; }
+    border-radius: 15px;
+    -webkit-backface-visibility: hidden; }
     .nav a:after {
       content: "";
       width: 100%;
@@ -215,19 +217,20 @@ header {
       border-radius: 15px;
       background: #ECBA6F;
       transition: all .3s ease;
-      transform: translateX(-110%);
-      z-index: -1; }
+      transform: translate3d(-110%, 0, 0);
+      z-index: -1;
+      -webkit-backface-visibility: hidden; }
     .nav a:hover {
       color: #008076; }
       .nav a:hover:after {
-        transform: translateX(0); }
+        transform: translate3d(0, 0, 0); }
     .nav a.active {
       color: #008076; }
       .nav a.active:after {
         background: #DFECE7;
-        transform: translateX(0); }
+        transform: translate3d(0, 0, 0); }
       .nav a.active:hover:after {
-        transform: translateX(100%); }
+        transform: translate3d(100%, 0, 0); }
 
 .toggle-nav, .close-popup {
   width: 44px;
@@ -304,7 +307,7 @@ header {
     .intro.inner .intro-img {
       position: absolute;
       width: 100%;
-      bottom: -10px; }
+      bottom: -14px; }
       .intro.inner .intro-img img {
         position: relative; }
     .intro.inner .intro-build img {
@@ -1263,7 +1266,7 @@ footer {
 .example-house {
   padding-top: 40px;
   text-align: center;
-  background: url(../images/example-illustration.png) center 105% no-repeat;
+  background: url(../images/example-illustration.svg) center 105% no-repeat;
   overflow: hidden; }
   .example-house .example-img {
     position: relative;
@@ -1335,7 +1338,7 @@ footer {
     justify-content: center;
     align-items: center;
     height: 290px;
-    background: url(../images/basic/basic-figure.png) no-repeat; }
+    background: url(../images/basic/basic-figure.svg) no-repeat; }
     .basic .bonus .title {
       margin-bottom: 0;
       display: flex; }
@@ -2436,7 +2439,7 @@ footer {
       .result-list li:after {
         top: 15px; }
   .basic .bonus {
-    background: url(../images/basic/basic-figure-mobile.png) center 20px no-repeat;
+    background: url(../images/basic/basic-figure-mobile.svg) center 20px no-repeat;
     margin-top: 0; }
     .basic .bonus .title {
       padding-left: 0;

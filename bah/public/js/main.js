@@ -33,7 +33,7 @@ $(document).ready(function() {
   });
 
   // Run some function only on Index page
-  if (window.location.pathname == "/" || window.location.href.indexOf("index") > -1) {
+  if (window.location.pathname == "/" > -1 || window.location.href.indexOf("index") > -1 || window.location.href.indexOf("localhost") > -1) {
 
     // Slick slider - Gallery pack
     $('.gallery-pack ul').slick({
@@ -118,12 +118,12 @@ $(document).ready(function() {
       // Rotate square colorful cards when scroll
       var currentScroll = Number(Math.trunc($(window).scrollTop() / 170));
 
-      $('.square.first-orange').css({ transform: 'rotate(-' + (currentScroll - 15) + 'deg)' });
-      $('.square.blue').css({ transform: 'rotate(-' + (currentScroll - 15 ) + 'deg)' });
-      $('.square.grey-color').css({ transform: 'rotate(' + (currentScroll - 10 ) + 'deg)' });
-      $('.square.second-green').css({ transform: 'rotate(-' + (currentScroll - 17 ) + 'deg)' });
-      $('.square.light-green').css({ transform: 'rotate(' + (currentScroll - 30 ) + 'deg)' });
-      $('.square.last-orange').css({ transform: 'rotate(-' + (currentScroll - 25 ) + 'deg)' });
+      $('.square.first-orange').css({ transform: 'rotate(-' + (currentScroll - 20) + 'deg)' });
+      $('.square.blue').css({ transform: 'rotate(-' + (currentScroll - 20 ) + 'deg)' });
+      $('.square.grey-color').css({ transform: 'rotate(' + (currentScroll - 20 ) + 'deg)' });
+      $('.square.second-green').css({ transform: 'rotate(-' + (currentScroll - 27 ) + 'deg)' });
+      $('.square.light-green').css({ transform: 'rotate(' + (currentScroll - 25 ) + 'deg)' });
+      $('.square.last-orange').css({ transform: 'rotate(-' + (currentScroll - 20 ) + 'deg)' });
 
       // Change background when scroll to section #Preveliges
       if ($(window).scrollTop() >= prevelige_position) {
@@ -175,7 +175,31 @@ $(document).ready(function() {
     arrows: false
   });
 
-  }
+  $('.side-scrolling.left ul').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    setInterval(function() {
+      $('.side-scrolling.left ul').slick('slickPause');
+    }, 4200);
+  });
+
+  $('.side-scrolling.left ul').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    setInterval(function() {
+      $('.side-scrolling.left ul').slick('slickPlay');
+    }, 5400);
+  });
+
+  $('.side-scrolling.right ul').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    setInterval(function() {
+      $('.side-scrolling.right ul').slick('slickPause');
+    }, 3000);
+  });
+
+  $('.side-scrolling.right ul').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    setInterval(function() {
+      $('.side-scrolling.right ul').slick('slickPlay');
+    }, 4200);
+  });
+
+}
 
   // Popup
   $('.consult').magnificPopup({
