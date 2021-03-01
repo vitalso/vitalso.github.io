@@ -33,7 +33,7 @@ $(document).ready(function() {
   });
 
   // Run some function only on Index page
-  if (window.location.pathname == "/" > -1 || window.location.href.indexOf("index") > -1 || window.location.href.indexOf("localhost") > -1) {
+  if (window.location.pathname == "/" > -1 || window.location.href.indexOf("index") > -1) {
 
     // Slick slider - Gallery pack
     $('.gallery-pack ul').slick({
@@ -118,8 +118,8 @@ $(document).ready(function() {
       // Rotate square colorful cards when scroll
       var currentScroll = Number(Math.trunc($(window).scrollTop() / 170));
 
-      $('.square.first-orange').css({ transform: 'rotate(-' + (currentScroll - 20) + 'deg)' });
-      $('.square.blue').css({ transform: 'rotate(-' + (currentScroll - 20 ) + 'deg)' });
+      $('.square.first-orange').css({ transform: 'rotate(-' + (currentScroll - 17) + 'deg)' });
+      $('.square.blue').css({ transform: 'rotate(-' + (currentScroll - 15 ) + 'deg)' });
       $('.square.grey-color').css({ transform: 'rotate(' + (currentScroll - 20 ) + 'deg)' });
       $('.square.second-green').css({ transform: 'rotate(-' + (currentScroll - 27 ) + 'deg)' });
       $('.square.light-green').css({ transform: 'rotate(' + (currentScroll - 25 ) + 'deg)' });
@@ -393,11 +393,15 @@ $(document).ready(function() {
   $(window).scroll(function(event){
     var st = $(this).scrollTop();
     if (st < lastScrollTop){
-      $('header.dark-link').addClass('sticky');
+      $('header').addClass('sticky');
     } else {
-      $('header.dark-link').removeClass('sticky');
+      $('header').removeClass('sticky');
     }
     lastScrollTop = st;
+
+    if (st < $('.intro').height()){
+      $('header').removeClass('sticky');
+    }
   });
 
 })
