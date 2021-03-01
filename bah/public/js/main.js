@@ -21,7 +21,7 @@ $(document).ready(function() {
   $("#phone-input").mask("+38(099)-999-99-99");
 
   // Scroll Reveal - effects when scroll page
-    ScrollReveal().reveal('.animated' , { delay: 1000 , duration: 1300 , easing: 'ease' , distance: '150px' });
+  ScrollReveal().reveal('.animated' , { delay: 1000 , duration: 1300 , easing: 'ease' , distance: '150px' });
 
   // Parallax effect for inner intro section
   $(window).on('scroll' , function() {
@@ -58,61 +58,110 @@ $(document).ready(function() {
 
     };
 
-    function scrollVideoSecond() {
-      var video = $('.illustration-video-1').get(0);
-        videoLength = video.duration,
-        scrollPosition = $(document).scrollTop()*4;
-
-      video.currentTime = scrollPosition / ( $(document).height() ) * videoLength;
-
-    };
-
-    function scrollVideoThird() {
-      var video = $('.illustration-video-2').get(0);
-        videoLength = video.duration,
-        scrollPosition = $(document).scrollTop()*2.9;
-
-      video.currentTime = scrollPosition / ( $(document).height() ) * videoLength;
-
-    };
-
     // Tree video position
     var video_index = $('.tree-video').get(0);
     var position_index = $('.tree-video').offset().top - $('.tree-video').height()*8;
 
-    // Illustration 1
-    var video_illustration_1 = $('.illustration-video-1').get(0);
-    var position_illustration_1 = $('.illustration-video-1').offset().top - $('.illustration-video-1').height()*5;
+    var position2 = $('.illustration-video-1').offset().top;
+    var height2 = $('.illustration-video-1').height();
+    var wHeight2 = $(window).height();
+    var position_top2 = position2 - wHeight2/2;
+    var step2 = height2 / 10;
 
-    // Illustration 2
-    var video_illustration_2 = $('.illustration-video-2').get(0);
-    var position_illustration_2 = $('.illustration-video-2').offset().top - $('.illustration-video-2').height()*4;
+    var initialSrc2 = "images/canvas-3/1.jpg";
+    var Img_11 = "images/canvas-3/2.jpg";
+    var Img_12 = "images/canvas-3/3.jpg";
+    var Img_13 = "images/canvas-3/4.jpg";
+    var Img_14 = "images/canvas-3/5.jpg";
+    var Img_15 = "images/canvas-3/6.jpg";
+    var Img_16 = "images/canvas-3/7.jpg";
+    var Img_17 = "images/canvas-3/8.jpg";
+    var Img_18 = "images/canvas-3/9.jpg";
+    var Img_19 = "images/canvas-3/10.jpg";
 
-    /*$('.illustration-video-1 , .illustration-video-2').on('ended', function(){this.playedThrough = true;});
-    $('.illustration-video-1 , .illustration-video-2').on('ended', function(){
-      $('body').removeClass('overflow-y');
-    });*/
+    var position = $('.illustration-video-2').offset().top;
+    var height = $('.illustration-video-2').height();
+    var wHeight = $(window).height();
+    var position_top = position - wHeight/2;
+    var step = height / 10;
+
+    var initialSrc = "images/canvas-2/1.jpg";
+    var Img_1 = "images/canvas-2/2.jpg";
+    var Img_2 = "images/canvas-2/3.jpg";
+    var Img_3 = "images/canvas-2/4.jpg";
+    var Img_4 = "images/canvas-2/5.jpg";
+    var Img_5 = "images/canvas-2/6.jpg";
+    var Img_6 = "images/canvas-2/7.jpg";
+    var Img_7 = "images/canvas-2/8.jpg";
+    var Img_8 = "images/canvas-2/9.jpg";
+    var Img_9 = "images/canvas-2/10.jpg";
 
     // Prevelige position
     var prevelige_position = $('#preveliges').offset().top;
 
     $(window).on('scroll' , function(){
 
-      //console.log($(window).scrollTop() , position_index , $('.tree-video').height());
-
-      // Play video with tree when scroll
-      //scrollVideo();
-
       if ($(window).scrollTop() > position_index) {
         scrollVideo();
       }
 
-      if ($(window).scrollTop() > position_illustration_1) {
-        scrollVideoSecond();
+      var value = $(window).scrollTop();
+
+      if ($(window).scrollTop() > position_top2) {
+
+        if (value > position_top2 && value < position_top2+step2) {
+          $(".illustration-video-1 img").attr("src", initialSrc2);
+        } else if (value > position_top2+step2*2 && value < position_top2+step2*3) {
+          $(".illustration-video-1 img").attr("src", Img_11);
+        } else if (value > position_top2+step2*3 && value < position_top2+step2*4) {
+          $(".illustration-video-1 img").attr("src", Img_12);
+        } else if (value > position_top2+step2*4 && value < position_top2+step2*5) {
+          $(".illustration-video-1 img").attr("src", Img_13);
+        } else if (value > position_top2+step2*5 && value < position_top2+step2*6) {
+          $(".illustration-video-1 img").attr("src", Img_14);
+        } else if (value > position_top2+step2*6 && value < position_top2+step2*7) {
+          $(".illustration-video-1 img").attr("src", Img_15);
+        } else if (value > position_top2+step2*7 && value < position_top2+step2*8) {
+          $(".illustration-video-1 img").attr("src", Img_16);
+        } else if (value > position_top2+step2*8 && value < position_top2+step2*9) {
+          $(".illustration-video-1 img").attr("src", Img_17);
+        } else if (value > position_top2+step2*9 && value < position_top2+step2*10) {
+          $(".illustration-video-1 img").attr("src", Img_18);
+        } else if (value > position_top2+step2*10) {
+          $(".illustration-video-1 img").attr("src", Img_19);
+        } else {
+          $(".illustration-video-1 img").attr("src", initialSrc2);
+        }
+
       }
 
-      if ($(window).scrollTop() > position_illustration_2) {
-        scrollVideoThird();
+      if ($(window).scrollTop() > position_top) {
+        //scrollVideoFours();
+
+        if (value > position_top && value < position_top+step) {
+          $(".illustration-video-2 img").attr("src", initialSrc);
+        } else if (value > position_top+step*2 && value < position_top+step*3) {
+          $(".illustration-video-2 img").attr("src", Img_1);
+        } else if (value > position_top+step*3 && value < position_top+step*4) {
+          $(".illustration-video-2 img").attr("src", Img_2);
+        } else if (value > position_top+step*4 && value < position_top+step*5) {
+          $(".illustration-video-2 img").attr("src", Img_3);
+        } else if (value > position_top+step*5 && value < position_top+step*6) {
+          $(".illustration-video-2 img").attr("src", Img_4);
+        } else if (value > position_top+step*6 && value < position_top+step*7) {
+          $(".illustration-video-2 img").attr("src", Img_5);
+        } else if (value > position_top+step*7 && value < position_top+step*8) {
+          $(".illustration-video-2 img").attr("src", Img_6);
+        } else if (value > position_top+step*8 && value < position_top+step*9) {
+          $(".illustration-video-2 img").attr("src", Img_7);
+        } else if (value > position_top+step*9 && value < position_top+step*10) {
+          $(".illustration-video-2 img").attr("src", Img_8);
+        } else if (value > position_top+step*10) {
+          $(".illustration-video-2 img").attr("src", Img_9);
+        } else {
+          $(".illustration-video-2 img").attr("src", initialSrc);
+        }
+
       }
 
       // Rotate square colorful cards when scroll
@@ -137,7 +186,7 @@ $(document).ready(function() {
     autoplay: true,
     infinite: true,
     autoplaySpeed: 0,
-    speed: 400,
+    speed: 500,
     centerMode: true,
     centerPadding: '0',
     slidesToShow: 3,
@@ -168,7 +217,7 @@ $(document).ready(function() {
     slidesToShow: 3,
     slidesToScroll: 2,
     autoplaySpeed: 0,
-    speed: 300,
+    speed: 500,
     pauseOnHover: false,
     cssEase: 'linear',
     useTransform: false,
@@ -184,19 +233,19 @@ $(document).ready(function() {
   $('.side-scrolling.left ul').on('afterChange', function(event, slick, currentSlide, nextSlide){
     setInterval(function() {
       $('.side-scrolling.left ul').slick('slickPlay');
-    }, 5400);
+    }, 6200);
   });
 
   $('.side-scrolling.right ul').on('afterChange', function(event, slick, currentSlide, nextSlide){
     setInterval(function() {
       $('.side-scrolling.right ul').slick('slickPause');
-    }, 3000);
+    }, 4200);
   });
 
   $('.side-scrolling.right ul').on('afterChange', function(event, slick, currentSlide, nextSlide){
     setInterval(function() {
       $('.side-scrolling.right ul').slick('slickPlay');
-    }, 4200);
+    }, 6200);
   });
 
 }
@@ -268,26 +317,6 @@ $(document).ready(function() {
 
     }
 
-    var initialSrc = "images/15.png";
-    var secondImg = "images/14.png";
-    var thirdImg = "images/13.png";
-    var foursImg = "images/12.png";
-
-    $(window).scroll(function() {
-      var value = $(window).scrollTop();
-
-      if (value > 30 && value < 60) {
-        $(".intro-build img").attr("src", secondImg);
-      } else if (value > 60 && value < 90) {
-        $(".intro-build img").attr("src", thirdImg);
-      } else if (value > 90) {
-        $(".intro-build img").attr("src", foursImg);
-      } else {
-        $(".intro-build img").attr("src", initialSrc);
-      }
-
-    });
-
   };
 
   if (window.location.href.indexOf("configuration") > -1) {
@@ -331,33 +360,48 @@ $(document).ready(function() {
   if (window.location.href.indexOf("what-you-take") > -1) {
 
     // Illustration 3
-    var video_illustration_3 = $('.illustration-video-3').get(0);
-    var position_illustration_3 = $('.illustration-video-3').offset().top - $('.illustration-video-3').height()/4;
+    //var video_illustration_3 = $('.illustration-video-3').get(0);
+    //var position_illustration_3 = $('.illustration-video-3').offset().top - $('.illustration-video-3').height()/4;
+    var position = $('.example-image').offset().top;
+    var height = $('.example-image').height();
+    var wHeight = $(window).height();
+    var position_top = position - wHeight/2;
+    var step = height / 6;
 
-
-    function scrollVideoFours() {
-      var video = $('.illustration-video-3').get(0);
-        videoLength = video.duration,
-        scrollPosition = $(document).scrollTop();
-
-      video.currentTime = scrollPosition / ( $(document).height() ) * videoLength;
-
-    };
+    var initialSrc = "images/canvas/1.jpg";
+    var Img_1 = "images/canvas/2.jpg";
+    var Img_2 = "images/canvas/3.jpg";
+    var Img_3 = "images/canvas/4.jpg";
+    var Img_4 = "images/canvas/5.jpg";
+    var Img_5 = "images/canvas/6.jpg";
 
     $(window).on('scroll' , function(){
 
-      if ($(window).scrollTop() > position_illustration_3) {
-        scrollVideoFours();
-      }
+      if ($(window).scrollTop() > position_top) {
+        //scrollVideoFours();
 
-      /*if ($(window).scrollTop() > position_illustration_3) {
-        if (!video_illustration_3.playedThrough) {
-          video_illustration_3.play();
-          $('body').addClass('overflow-y');
-        } else {
-          video_illustration_3.pause();
-        }
-      }*/
+        $(window).scroll(function() {
+          var value = $(window).scrollTop();
+
+          if (value > position_top && value < position_top+step) {
+            $(".example-image img").attr("src", initialSrc);
+          } else if (value > position_top+step*2 && value < position_top+step*3) {
+            $(".example-image img").attr("src", Img_1);
+          } else if (value > position_top+step*3 && value < position_top+step*4) {
+            $(".example-image img").attr("src", Img_2);
+          } else if (value > position_top+step*4 && value < position_top+step*5) {
+            $(".example-image img").attr("src", Img_3);
+          } else if (value > position_top+step*5 && value < position_top+step*6) {
+            $(".example-image img").attr("src", Img_4);
+          } else if (value > position_top+step*6) {
+            $(".example-image img").attr("src", Img_5);
+          } else {
+            $(".example-image img").attr("src", initialSrc);
+          }
+
+        });
+
+      }
 
     })
 

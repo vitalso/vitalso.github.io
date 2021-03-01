@@ -151,17 +151,27 @@ header {
       margin-bottom: 10px; }
       header.sticky .logo.index-logo {
         position: relative;
-        margin: 0; }
+        margin: 5px 0; }
         header.sticky .logo.index-logo a img:nth-child(1) {
           display: none; }
         header.sticky .logo.index-logo a img:nth-child(2) {
           display: inline-block; }
         header.sticky .logo.index-logo span {
           display: none; }
+        header.sticky .logo.index-logo + .nav + .toggle-nav {
+          margin-top: 0; }
+    header.sticky .nav li.language-link a {
+      border-color: rgba(0, 0, 0, 0.1); }
     header.sticky .nav a {
       color: #000; }
+    header.sticky .toggle-nav {
+      background: rgba(223, 236, 231, 0.5); }
+      header.sticky .toggle-nav span {
+        background: #008076; }
   header.dark-link .container {
     position: relative; }
+  header.dark-link .nav li.language-link a {
+    border-color: rgba(0, 0, 0, 0.1); }
   header.dark-link .nav a {
     color: #000; }
   header.dark-link .logo {
@@ -206,6 +216,15 @@ header {
     margin-left: 16px; }
     .nav li:first-child {
       margin-left: 0; }
+    .nav li.language-link a {
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      padding: 0;
+      text-align: center;
+      line-height: 35px;
+      font-size: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.1); }
   .nav a {
     display: inline-block;
     vertical-align: top;
@@ -1270,6 +1289,9 @@ footer {
     flex: 0 0 22%; }
     .how-item:last-child:after {
       display: none; }
+    .how-item:last-child .how-image img {
+      margin: 0;
+      height: 205px; }
 
 .how-image {
   display: flex;
@@ -1290,6 +1312,8 @@ footer {
     max-width: 74%;
     margin-left: auto;
     margin-right: auto; }
+    .example-house .example-img img {
+      transition: all .3s ease; }
 
 .color-scheme {
   padding: 60px 0;
@@ -1918,6 +1942,9 @@ canvas {
       text-align: center; }
     .nav li {
       margin: 1% 0; }
+      .nav li.language-link {
+        position: absolute;
+        top: 14%; }
     .nav a {
       color: #000; }
     .nav.open {
