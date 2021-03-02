@@ -363,6 +363,9 @@ header {
   height: 100%;
   object-fit: cover; }
 
+.bg-mobile {
+  display: none; }
+
 .instagram-link {
   font-size: 18px;
   text-decoration: none;
@@ -2433,6 +2436,10 @@ canvas {
     max-width: 100%; } }
 
 @media screen and (max-width: 480px) {
+  .bg-desktop {
+    display: none; }
+  .bg-mobile {
+    display: block; }
   .intro.inner .intro-img {
     position: absolute;
     bottom: 10px;
@@ -2453,8 +2460,8 @@ canvas {
       font-size: 11px;
       margin: 10px; }
   .bg-video {
-    transform: translateX(-46%);
-    width: 188%; }
+    transform: translateX(-5%);
+    width: 108%; }
   .cards {
     padding: 0 10px; }
     .cards.square {

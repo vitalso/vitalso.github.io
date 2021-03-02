@@ -360,8 +360,8 @@ $(document).ready(function() {
     var position = $('.example-image').offset().top;
     var height = $('.example-image').height();
     var wHeight = $(window).height();
-    var position_top = position - wHeight/2;
-    var step = height / 6;
+    var position_top = position - wHeight/1.3;
+    var step = height / 7;
 
     var initialSrc = "images/canvas/1.jpg";
     var Img_1 = "images/canvas/2.jpg";
