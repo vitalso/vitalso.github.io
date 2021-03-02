@@ -65,7 +65,7 @@ $(document).ready(function() {
     var position2 = $('.illustration-video-1').offset().top;
     var height2 = $('.illustration-video-1').height();
     var wHeight2 = $(window).height();
-    var position_top2 = position2 - wHeight2/2;
+    var position_top2 = position2 - wHeight2/1.3;
     var step2 = height2 / 10;
 
     var initialSrc2 = "images/canvas-3/1.jpg";
@@ -82,7 +82,7 @@ $(document).ready(function() {
     var position = $('.illustration-video-2').offset().top;
     var height = $('.illustration-video-2').height();
     var wHeight = $(window).height();
-    var position_top = position - wHeight/2;
+    var position_top = position - wHeight/1.3;
     var step = height / 10;
 
     var initialSrc = "images/canvas-2/1.jpg";
@@ -195,7 +195,7 @@ $(document).ready(function() {
     pauseOnFocus: false,
     pauseOnHover: false,
     cssEase: 'linear',
-    useTransform: false,
+    useTransform: true,
     arrows: false,
     vertical: true
     //verticalReverse: true
@@ -215,7 +215,7 @@ $(document).ready(function() {
     speed: 2500,
     pauseOnHover: false,
     cssEase: 'linear',
-    useTransform: false,
+    useTransform: true,
     arrows: false
   });
 

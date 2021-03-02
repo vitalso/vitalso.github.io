@@ -136,8 +136,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 2;
-  transition: all .3s ease; }
+  z-index: 2; }
   header.z-index {
     z-index: 3; }
   header .container {
