@@ -2499,8 +2499,10 @@ canvas {
     margin-bottom: 5px; }
   .copyright {
     font-size: 10px; }
+  .side-scrolling.right ul {
+    height: auto; }
   .side-scrolling.right ul li {
-    padding: 14% 0; }
+    padding: 21% 0; }
   .tree-animation {
     height: 200px; }
   .configure-form .items {
