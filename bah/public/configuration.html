@@ -38,7 +38,7 @@
     <section class="intro inner blue-gradient">
       <div class="container">
         <h1 class="text-center">Конфигуратор <br> потребностей</h1>
-        <div class="intro-img text-center"><img src="images/intro-build-1.png"></div>
+        <div class="intro-img intro-configure text-center"><img src="images/intro-build-1.png"></div>
         <div class="intro-illustration text-center"><img src="images/intro-illustration-1.svg"></div>
       </div>
     </section>
@@ -74,16 +74,16 @@
                     <div class="item-title"><span>Дети</span><img src="images/form-icons/icon-2.svg"></div>
                     <div class="item-options">
                       <label>
-                        <input type="radio" name="children" value="1"><span>1</span>
+                        <input type="radio" name="children" value="0"><span>0</span>
                       </label>
                       <label>
-                        <input type="radio" name="children" value="2" checked><span>2</span>
+                        <input type="radio" name="children" value="1" checked><span>1</span>
                       </label>
                       <label>
-                        <input type="radio" name="children" value="3"><span>3</span>
+                        <input type="radio" name="children" value="2"><span>2</span>
                       </label>
                       <label>
-                        <input type="radio" name="children" value="4"><span>4</span>
+                        <input type="radio" name="children" value="3+"><span>3+</span>
                       </label>
                     </div>
                   </div>
@@ -318,6 +318,15 @@
               </div>
             </div>
           </div>
+          <div class="blocks contact-form">
+            <div class="title text-center animated">Обратная связь</div>
+            <h3 class="block-title text-center animated">Контакты, по которым с вами связаться</h3>
+            <div class="wrap-form">
+              <input type="text" name="name" placeholder="Ваше имя">
+              <input type="text" name="phone" placeholder="+38 (0___) - ____ - ___ - ___" id="phone-input">
+              <input type="email" name="email" placeholder="E-mail">
+            </div>
+          </div>
           <div class="text-center submit-btn border-btn animated">
             <button class="configure-btn" type="submit"><span>Сконфигурировать свой дом Bah</span></button>
           </div>
@@ -363,14 +372,6 @@
     <script src="js/slick.min.js"></script>
     <!-- Phone input mask-->
     <script src="js/jquery.maskedinput.min.js"></script>
-    <!--script(src='js/canvas.js')
-    script(src='js/utils.js')
-    script(src='js/scroll-observable.js')
-    script(src='js/canvas-frame-scrubber.js')
-    script(src='js/frame-unpacker.js')
-    script(src='js/canvas-2.js')
-    
-    -->
     <!-- Main script-->
     <script src="js/main.js"></script>
   </body>
