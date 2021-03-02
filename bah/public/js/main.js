@@ -1,11 +1,13 @@
 $(window).on('load' , function(){
-  setTimeout(removeLoader, 2000);
-});
-
-function removeLoader(){
+  //setTimeout(removeLoader, 2000);
   $( ".preloader" ).fadeOut(500);
   $('body').removeClass('overflow-y');
-}
+});
+
+/*function removeLoader(){
+  $( ".preloader" ).fadeOut(500);
+  $('body').removeClass('overflow-y');
+}*/
 
 $(document).ready(function() {
 
@@ -190,7 +192,7 @@ $(document).ready(function() {
     centerMode: true,
     centerPadding: '0',
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     focusOnSelect: false,
     pauseOnFocus: false,
     pauseOnHover: false,
@@ -208,40 +210,16 @@ $(document).ready(function() {
     centerPadding: '0',
     focusOnSelect: false,
     pauseOnHover: false,
+    pauseOnFocus: false,
     vertical: true,
     slidesToShow: 3,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     autoplaySpeed: 0,
     speed: 2500,
-    pauseOnHover: false,
     cssEase: 'linear',
     useTransform: true,
     arrows: false
   });
-
-  /*$('.side-scrolling.left ul').on('afterChange', function(event, slick, currentSlide, nextSlide){
-    setInterval(function() {
-      $('.side-scrolling.left ul').slick('slickPause');
-    }, 4200);
-  });
-
-  $('.side-scrolling.left ul').on('afterChange', function(event, slick, currentSlide, nextSlide){
-    setInterval(function() {
-      $('.side-scrolling.left ul').slick('slickPlay');
-    }, 6200);
-  });
-
-  $('.side-scrolling.right ul').on('afterChange', function(event, slick, currentSlide, nextSlide){
-    setInterval(function() {
-      $('.side-scrolling.right ul').slick('slickPause');
-    }, 4200);
-  });
-
-  $('.side-scrolling.right ul').on('afterChange', function(event, slick, currentSlide, nextSlide){
-    setInterval(function() {
-      $('.side-scrolling.right ul').slick('slickPlay');
-    }, 6200);
-  });*/
 
 }
 
@@ -360,8 +338,8 @@ $(document).ready(function() {
     var position = $('.example-image').offset().top;
     var height = $('.example-image').height();
     var wHeight = $(window).height();
-    var position_top = position - wHeight/1.3;
-    var step = height / 7;
+    var position_top = position - wHeight/1.8;
+    var step = height / 6;
 
     var initialSrc = "images/canvas/1.jpg";
     var Img_1 = "images/canvas/2.jpg";

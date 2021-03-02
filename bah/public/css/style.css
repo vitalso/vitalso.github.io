@@ -200,7 +200,7 @@ header {
     font-weight: 500;
     display: inline-block;
     position: absolute; }
-  .logo.index-logo a img:nth-child(2) {
+  .logo.index-logo a img:nth-child(2), .logo.index-logo a img:nth-child(3) {
     display: none; }
 
 .nav {
@@ -500,7 +500,7 @@ h1, .title {
   background-image: url(../images/bg-preveliges.svg);
   background-repeat: no-repeat;
   background-position: center bottom;
-  overflow-x: hidden; }
+  overflow: hidden; }
 
 .bg-change {
   animation: bgColor 5s ease infinite; }
@@ -2436,6 +2436,10 @@ canvas {
     max-width: 100%; } }
 
 @media screen and (max-width: 480px) {
+  header.sticky .index-logo a img:nth-child(2) {
+    display: inline-block; }
+  header.sticky .index-logo a img:nth-child(3) {
+    display: none; }
   .bg-desktop {
     display: none; }
   .bg-mobile {
@@ -2453,12 +2457,6 @@ canvas {
       bottom: -4px;
       transform: scale(1);
       left: 40px; }
-  .logo {
-    max-width: 125px;
-    margin-left: -10px; }
-    .logo span {
-      font-size: 11px;
-      margin: 10px; }
   .bg-video {
     transform: translateX(-5%);
     width: 108%; }
@@ -2574,7 +2572,16 @@ canvas {
   .contact-form input:nth-child(1), .contact-form input:nth-child(2) {
     max-width: 100%;
     margin-left: 0;
-    margin-right: 0; } }
+    margin-right: 0; }
+  .logo {
+    max-width: 185px;
+    margin-left: 0; }
+    .logo span {
+      display: none; }
+    .logo.index-logo a img:nth-child(1) {
+      display: none; }
+    .logo.index-logo a img:nth-child(3) {
+      display: inline-block; } }
 
 @media screen and (max-height: 800px) {
   .white-popup .popup-img {
