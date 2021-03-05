@@ -189,6 +189,8 @@ section {
     text-align: center;
     margin: 30px 0;
     height: 60px; }
+    .site-card-img img {
+      max-width: 70%; }
   .site-card-list {
     margin: 0 12px 30px 12px;
     padding: 0 0 30px 0;

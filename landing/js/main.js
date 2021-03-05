@@ -6,4 +6,13 @@ $(document).ready(function() {
     $('.nav').toggleClass('open');
   });
 
+  // Scroll to section
+  $('.nav a').on('click' , function(e){
+    e.preventDefault();
+    var href = $(this).attr('href');
+    $('html, body').animate({
+        scrollTop: $(href).offset().top
+    }, 100);
+  });
+
 })
