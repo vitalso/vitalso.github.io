@@ -21,13 +21,10 @@
               <use xlink:href="images/sprite.svg#logo-dark"></use>
             </svg></a></div>
         <ul class="nav">
-          <li><a href="#">Magento</a></li>
-          <li><a href="#">App store</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact us</a></li>
-          <li><a href="#">Our team</a></li>
-          <li><a href="#">Svenska</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
         <button class="toggle-nav"><span></span><span></span><span></span></button>
       </div>
@@ -42,12 +39,12 @@
                   <use xlink:href="images/sprite.svg#logo"></use>
                 </svg></a></div>
             <div class="intro-title">
-              <h1>“Kvarna builds online services firstly focused to the Swedish market, with the goal of solving a problem for the many people. We are hungry, we are curious”</h1>
+              <h1>“Kvarna builds online services firstly focused to the Swedish market, with the goal of solving a problem for the many people. <br> We are hungry, we are curious”</h1>
             </div>
           </div>
         </div>
       </section>
-      <section>
+      <section class="services">
         <div class="container">
           <h2 class="section-title">BUILDING SERVICES FROM GROUND UP</h2>
           <div class="row">
@@ -99,7 +96,7 @@
             <div class="col-md-4">
               <div class="site-card">
                 <div class="site-card-header"><span></span><span></span><span></span></div>
-                <div class="site-card-img"></div>
+                <div class="site-card-img"><img src="images/stidner.svg"></div>
                 <ul class="site-card-list">
                   <li><span>URL:</span>www.stidner.com</li>
                   <li><span>Area:</span>Shipping administration B2B</li>
@@ -133,6 +130,7 @@
         <div class="container">
           <h2 class="section-title mb-3">MEET OUR TEAM</h2>
           <p>Kvarna always strives to create an edge for it's clients and see all stores as a unique experience. Our services differ from creating a new user experience from a current store to integrate your ERP system, payment gateway or shipping agent. Installing or adjusting a new module that helps clients increase there sales. We also offer third part logistic services that slim down your costs and helps you focusing on what’s important. <br> Don’t hesitate do get in contact with us, to see how we can help your ecommerce, cheers!</p>
+          <hr class="line">
           <div class="row">
             <div class="col-md-4">
               <div class="team-item">
@@ -150,7 +148,11 @@
                 <div class="item-header">
                   <div class="item-img"><img src="images/team-2.jpg"></div>
                   <div class="item-name">Lisa<span>Customer Support</span>
-                    <div class="item-email">Email: <a href="mailto: lisa@kvarna.com">lisa@kvarna.com</a></div>
+                    <div class="item-email">
+                      <svg>
+                        <use xlink:href="images/sprite.svg#email"></use>
+                      </svg>Email: <a href="mailto: lisa@kvarna.com">lisa@kvarna.com</a>
+                    </div>
                   </div>
                 </div>
                 <div class="item-description">
@@ -163,7 +165,11 @@
                 <div class="item-header">
                   <div class="item-img"><img src="images/team-3.png"></div>
                   <div class="item-name">Dennis<span>Project Manager</span>
-                    <div class="item-email">Email: <a href="mailto: dennis@kvarna.com">dennis@kvarna.com</a></div>
+                    <div class="item-email">
+                      <svg>
+                        <use xlink:href="images/sprite.svg#email"></use>
+                      </svg>Email: <a href="mailto: dennis@kvarna.com">dennis@kvarna.com</a>
+                    </div>
                   </div>
                 </div>
                 <div class="item-description">
@@ -176,7 +182,7 @@
       </section>
       <section class="blog">
         <div class="container">
-          <h2 class="section-title mb-3">BLOG</h2>
+          <h2 class="section-title mb-3">LATEST NEWS</h2>
           <p>As we are more then happy to share our knowledge, this is the place you should keep you eyes open for to learn the most about us as a company and also and the most important how we come up with all the upcoming problems we see in day to day work.</p>
           <div class="row">
             <div class="col-md-4">
@@ -253,10 +259,11 @@
           <div class="follow-us text-center">
             <ul>
               <li>FOLLOW US ON</li>
-              <li><a href="#">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#facebook"></use>
-                  </svg></a></li>
+              <!--li
+              a(href="#")
+                svg
+                  use(xlink:href="images/sprite.svg#facebook")
+              -->
               <li><a href="#">
                   <svg>
                     <use xlink:href="images/sprite.svg#twitter"></use>
@@ -265,10 +272,12 @@
                   <svg>
                     <use xlink:href="images/sprite.svg#linkedin"></use>
                   </svg></a></li>
-              <li><a href="#">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#instagram"></use>
-                  </svg></a></li>
+              <!--li
+              a(href="#")
+                svg
+                  use(xlink:href="images/sprite.svg#instagram")
+              
+              -->
             </ul>
           </div>
         </div>
@@ -285,7 +294,7 @@
                 </svg></a></div>
           </div>
           <div class="col-lg-4">
-            <div class="download-media"><a href="index.html">
+            <div class="download-media"><a href="https://drive.google.com/drive/folders/1cuPhSBlmsGFbPlgU4MHEZbMHYxgI3cIw?usp=sharing">
                 <svg>
                   <use xlink:href="images/sprite.svg#icon-download"></use>
                 </svg>Download media-package</a></div>
