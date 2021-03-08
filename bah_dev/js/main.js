@@ -2,6 +2,114 @@ $(window).on('load' , function(){
   //setTimeout(removeLoader, 2000);
   $( ".preloader" ).fadeOut(500);
   $('body').removeClass('overflow-y');
+
+
+  if (window.location.href.indexOf('how-we-build') > -1) {
+
+    // Top position of block
+    var top_position = $('.step-list').offset().top;
+
+    // Step 1 position
+    var step_1_position = $('#step-1').offset().top;
+
+    // Step 5 position
+    var step_5_position = $('#step-5').offset().top;
+
+    // Full position
+    var full_position = (step_5_position - step_1_position) / 7;
+    //console.log(full_position);
+
+    if ($(window).width() > 768) {
+
+      // Scrool
+      $(window).on('scroll' , function() {
+
+        // Change step when scroll
+        if ($(window).scrollTop() >= (top_position - 100) && $(window).scrollTop() <= step_5_position - 100) {
+          $('.step-list').addClass('sticky');
+          //$('.step-list').css('top' , ($(window).scrollTop() - top_position + 200));
+        } else {
+          $('.step-list').removeClass('sticky');
+        }
+
+        if ($(window).scrollTop() >= step_1_position && $(window).scrollTop() <= step_1_position + full_position) {
+          $('.step-list li').removeClass('current-step');
+          $('.step-list li').eq(0).addClass('current-step');
+        } else if ($(window).scrollTop() >= step_1_position + full_position && $(window).scrollTop() <= step_1_position + full_position * 2) {
+          $('.step-list li').removeClass('current-step');
+          $('.step-list li').eq(1).addClass('current-step');
+        } else if ($(window).scrollTop() >= step_1_position + full_position * 2 && $(window).scrollTop() <= step_1_position + full_position * 3) {
+          $('.step-list li').removeClass('current-step');
+          $('.step-list li').eq(2).addClass('current-step');
+        } else if ($(window).scrollTop() >= step_1_position + full_position * 3 && $(window).scrollTop() <= step_1_position + full_position * 4) {
+          $('.step-list li').removeClass('current-step');
+          $('.step-list li').eq(3).addClass('current-step');
+        } else if ($(window).scrollTop() >= step_1_position + full_position * 4 && $(window).scrollTop() <= step_1_position + full_position * 5) {
+          $('.step-list li').removeClass('current-step');
+          $('.step-list li').eq(4).addClass('current-step');
+        } else if ($(window).scrollTop() >= step_1_position + full_position * 5 && $(window).scrollTop() <= step_1_position + full_position * 6) {
+          $('.step-list li').removeClass('current-step');
+          $('.step-list li').eq(5).addClass('current-step');
+        } else if ($(window).scrollTop() >= step_1_position + full_position * 6) {
+          $('.step-list li').removeClass('current-step');
+          $('.step-list li').eq(6).addClass('current-step');
+        }
+
+      });
+
+    }
+
+  };
+
+  // Run some function only on What you take page
+  if (window.location.href.indexOf('what-you-take') > -1) {
+
+    var position = $('.example-image').offset().top;
+    var height = $('.example-image').height();
+    var wHeight = $(window).height();
+    var position_top = position - wHeight/1.8;
+    var step = height / 6;
+
+    var initialSrc = "images/canvas/1.jpg";
+    var Img_1 = "images/canvas/2.jpg";
+    var Img_2 = "images/canvas/3.jpg";
+    var Img_3 = "images/canvas/4.jpg";
+    var Img_4 = "images/canvas/5.jpg";
+    var Img_5 = "images/canvas/6.jpg";
+
+    $(window).on('scroll' , function(){
+
+      if ($(window).scrollTop() > position_top) {
+        //scrollVideoFours();
+
+        $(window).scroll(function() {
+          var value = $(window).scrollTop();
+
+          if (value > position_top && value < position_top+step) {
+            $(".example-image img").attr("src", initialSrc);
+          } else if (value > position_top+step*2 && value < position_top+step*3) {
+            $(".example-image img").attr("src", Img_1);
+          } else if (value > position_top+step*3 && value < position_top+step*4) {
+            $(".example-image img").attr("src", Img_2);
+          } else if (value > position_top+step*4 && value < position_top+step*5) {
+            $(".example-image img").attr("src", Img_3);
+          } else if (value > position_top+step*5 && value < position_top+step*6) {
+            $(".example-image img").attr("src", Img_4);
+          } else if (value > position_top+step*6) {
+            $(".example-image img").attr("src", Img_5);
+          } else {
+            $(".example-image img").attr("src", initialSrc);
+          }
+
+        });
+
+      }
+
+    })
+
+  }
+
+
 });
 
 $(document).ready(function() {
@@ -230,62 +338,7 @@ $(document).ready(function() {
   });
 
 
-  if (window.location.pathname == '/how-we-build.html') {
 
-    // Top position of block
-    var top_position = $('.step-list').offset().top;
-
-    // Step 1 position
-    var step_1_position = $('#step-1').offset().top;
-
-    // Step 5 position
-    var step_5_position = $('#step-5').offset().top;
-
-    // Full position
-    var full_position = (step_5_position - step_1_position) / 7;
-    //console.log(full_position);
-
-    if ($(window).width() > 768) {
-
-      // Scrool
-      $(window).on('scroll' , function() {
-
-        // Change step when scroll
-        if ($(window).scrollTop() >= (top_position - 100) && $(window).scrollTop() <= step_5_position - 100) {
-          $('.step-list').addClass('sticky');
-          //$('.step-list').css('top' , ($(window).scrollTop() - top_position + 200));
-        } else {
-          $('.step-list').removeClass('sticky');
-        }
-
-        if ($(window).scrollTop() >= step_1_position && $(window).scrollTop() <= step_1_position + full_position) {
-          $('.step-list li').removeClass('current-step');
-          $('.step-list li').eq(0).addClass('current-step');
-        } else if ($(window).scrollTop() >= step_1_position + full_position && $(window).scrollTop() <= step_1_position + full_position * 2) {
-          $('.step-list li').removeClass('current-step');
-          $('.step-list li').eq(1).addClass('current-step');
-        } else if ($(window).scrollTop() >= step_1_position + full_position * 2 && $(window).scrollTop() <= step_1_position + full_position * 3) {
-          $('.step-list li').removeClass('current-step');
-          $('.step-list li').eq(2).addClass('current-step');
-        } else if ($(window).scrollTop() >= step_1_position + full_position * 3 && $(window).scrollTop() <= step_1_position + full_position * 4) {
-          $('.step-list li').removeClass('current-step');
-          $('.step-list li').eq(3).addClass('current-step');
-        } else if ($(window).scrollTop() >= step_1_position + full_position * 4 && $(window).scrollTop() <= step_1_position + full_position * 5) {
-          $('.step-list li').removeClass('current-step');
-          $('.step-list li').eq(4).addClass('current-step');
-        } else if ($(window).scrollTop() >= step_1_position + full_position * 5 && $(window).scrollTop() <= step_1_position + full_position * 6) {
-          $('.step-list li').removeClass('current-step');
-          $('.step-list li').eq(5).addClass('current-step');
-        } else if ($(window).scrollTop() >= step_1_position + full_position * 6) {
-          $('.step-list li').removeClass('current-step');
-          $('.step-list li').eq(6).addClass('current-step');
-        }
-
-      });
-
-    }
-
-  };
 
   if (window.location.href.indexOf("configuration") > -1) {
 
@@ -321,54 +374,6 @@ $(document).ready(function() {
         }
       ]
     });
-
-  }
-
-  // Run some function only on What you take page
-  if (window.location.pathname == '/what-you-take.html') {
-
-    var position = $('.example-image').offset().top;
-    var height = $('.example-image').height();
-    var wHeight = $(window).height();
-    var position_top = position - wHeight/1.8;
-    var step = height / 6;
-
-    var initialSrc = "images/canvas/1.jpg";
-    var Img_1 = "images/canvas/2.jpg";
-    var Img_2 = "images/canvas/3.jpg";
-    var Img_3 = "images/canvas/4.jpg";
-    var Img_4 = "images/canvas/5.jpg";
-    var Img_5 = "images/canvas/6.jpg";
-
-    $(window).on('scroll' , function(){
-
-      if ($(window).scrollTop() > position_top) {
-        //scrollVideoFours();
-
-        $(window).scroll(function() {
-          var value = $(window).scrollTop();
-
-          if (value > position_top && value < position_top+step) {
-            $(".example-image img").attr("src", initialSrc);
-          } else if (value > position_top+step*2 && value < position_top+step*3) {
-            $(".example-image img").attr("src", Img_1);
-          } else if (value > position_top+step*3 && value < position_top+step*4) {
-            $(".example-image img").attr("src", Img_2);
-          } else if (value > position_top+step*4 && value < position_top+step*5) {
-            $(".example-image img").attr("src", Img_3);
-          } else if (value > position_top+step*5 && value < position_top+step*6) {
-            $(".example-image img").attr("src", Img_4);
-          } else if (value > position_top+step*6) {
-            $(".example-image img").attr("src", Img_5);
-          } else {
-            $(".example-image img").attr("src", initialSrc);
-          }
-
-        });
-
-      }
-
-    })
 
   }
 
