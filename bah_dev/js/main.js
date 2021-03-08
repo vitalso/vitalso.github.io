@@ -1,7 +1,7 @@
 $(window).on('load' , function(){
-  //setTimeout(removeLoader, 2000);
-  $( ".preloader" ).fadeOut(500);
-  $('body').removeClass('overflow-y');
+  setTimeout(removeLoader, 2000);
+  //$( ".preloader" ).fadeOut(500);
+  //$('body').removeClass('overflow-y');
 
 
   if (window.location.href.indexOf('how-we-build') > -1) {
@@ -111,6 +111,11 @@ $(window).on('load' , function(){
 
 
 });
+
+function removeLoader() {
+  $( ".preloader" ).fadeOut(500);
+  $('body').removeClass('overflow-y');
+}
 
 $(document).ready(function() {
 
