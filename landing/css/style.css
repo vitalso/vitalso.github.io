@@ -386,8 +386,7 @@ blockquote {
   font-family: 'Open Sans', sans-serif; }
   .follow-us ul {
     padding: 10px;
-    display: inline-block;
-    border: 1px solid #40D5A4; }
+    display: inline-block; }
   .follow-us li {
     display: inline-block;
     vertical-align: middle;
