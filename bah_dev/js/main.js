@@ -67,7 +67,7 @@ $(window).on('load' , function(){
     var position = $('.example-image').offset().top;
     var height = $('.example-image').height();
     var wHeight = $(window).height();
-    var position_top = position - wHeight/1.8;
+    var position_top = position - wHeight/2;
     var step = height / 6;
 
     var initialSrc = "images/canvas/1.jpg";
@@ -135,6 +135,21 @@ $(document).ready(function() {
     $('.intro-img img').css('top' , - $(window).scrollTop()*0.2);
     $('.intro-illustration img').css('top' , - $(window).scrollTop()*0.1);
 
+  });
+
+  var lastScrollTop = 0;
+  $(window).scroll(function(event){
+    var st = $(this).scrollTop();
+    if (st < lastScrollTop){
+      $('header').addClass('sticky');
+    } else {
+      $('header').removeClass('sticky');
+    }
+    lastScrollTop = st;
+
+    if (st < $('.intro').height()){
+      $('header').removeClass('sticky');
+    }
   });
 
   // Run some function only on Index page
@@ -401,21 +416,6 @@ $(document).ready(function() {
     $('#color').fadeOut('fast').attr('src' , $(this).data('url')).fadeIn(300);
     $('.color-list li').removeClass('active');
     $(this).addClass('active');
-  });
-
-  var lastScrollTop = 0;
-  $(window).scroll(function(event){
-    var st = $(this).scrollTop();
-    if (st < lastScrollTop){
-      $('header').addClass('sticky');
-    } else {
-      $('header').removeClass('sticky');
-    }
-    lastScrollTop = st;
-
-    if (st < $('.intro').height()){
-      $('header').removeClass('sticky');
-    }
   });
 
 })
