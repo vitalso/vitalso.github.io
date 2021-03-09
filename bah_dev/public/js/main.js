@@ -1,5 +1,5 @@
 $(window).on('load' , function(){
-  setTimeout(removeLoader, 2000);
+  setTimeout(removeLoader, 500);
   //$( ".preloader" ).fadeOut(500);
   //$('body').removeClass('overflow-y');
 
