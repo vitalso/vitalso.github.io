@@ -158,7 +158,7 @@ $(document).ready(function() {
   });
 
   // Run some function only on Index page
-  //if (window.location.href.indexOf('bah_dev') > -1 || window.location.href.indexOf('index') > -1) {
+  if (window.location.href.indexOf('public') > -1 || window.location.href.indexOf('index') > -1) {
 
     // Slick slider - Gallery pack
     $('.gallery-pack ul').slick({
@@ -344,7 +344,7 @@ $(document).ready(function() {
     arrows: false
   });
 
-//}
+}
 
   // Popup
   $('.consult').magnificPopup({
