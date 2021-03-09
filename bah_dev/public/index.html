@@ -62,12 +62,18 @@
               <p class="animated">Только натуральные <br> ресурсы служат для его <br> создания.</p>
             </div>
           </div>
-          <div class="tree-animation">
-            <video class="tree-video" muted playsinline>
+          <div class="tree-animation desktop-tree">
+            <video class="tree-video" autoplay muted playsinline>
               <source src="video/treeeee.mp4">
-              <!--source(src='video/treeeee.webm' onerror="fallback(parentNode)")-->
+              <source src="video/treeeee.webm" onerror="fallback(parentNode)">
             </video>
           </div>
+          <!--.tree-animation.mobile-tree
+          video(autoplay muted playsinline).tree-video
+          	source(src='video/treeeee.mp4')
+          	source(src='video/treeeee.webm' onerror="fallback(parentNode)")
+          
+          -->
         </div>
       </section>
       <section class="archi padding-100">
