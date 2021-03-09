@@ -113,7 +113,7 @@ $(window).on('load' , function(){
 
 $(document).ready(function() {
 
-  setTimeout(removeLoader, 2000);
+  setTimeout(removeLoader, 3000);
 
   function removeLoader() {
     $( ".preloader" ).fadeOut(500);
