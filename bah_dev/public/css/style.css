@@ -1915,6 +1915,9 @@ canvas {
   max-width: 100vw;
   max-height: 100vh; }
 
+.illustration-img {
+  display: none; }
+
 @media screen and (max-width: 1440px) {
   .nav {
     margin-right: 40px; }
@@ -2436,6 +2439,10 @@ canvas {
     max-width: 100%; } }
 
 @media screen and (max-width: 480px) {
+  .illustration-video-1, .illustration-video-2, .tree-video {
+    display: none; }
+  .illustration-img {
+    display: inline-block; }
   header.sticky .index-logo a img:nth-child(2) {
     display: inline-block; }
   header.sticky .index-logo a img:nth-child(3) {
