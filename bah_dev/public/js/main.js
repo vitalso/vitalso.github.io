@@ -1,5 +1,4 @@
 $(window).on('load' , function(){
-  setTimeout(removeLoader, 500);
   //$( ".preloader" ).fadeOut(500);
   //$('body').removeClass('overflow-y');
 
@@ -112,12 +111,14 @@ $(window).on('load' , function(){
 
 });
 
-function removeLoader() {
-  $( ".preloader" ).fadeOut(500);
-  $('body').removeClass('overflow-y');
-}
-
 $(document).ready(function() {
+
+  setTimeout(removeLoader, 2000);
+
+  function removeLoader() {
+    $( ".preloader" ).fadeOut(500);
+    $('body').removeClass('overflow-y');
+  }
 
   // Toogle class button menu
   $('.toggle-nav').on('click' , function(){
