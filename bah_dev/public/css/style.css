@@ -136,7 +136,8 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 2; }
+  z-index: 2;
+  -webkit-transform: translateZ(0); }
   header.z-index {
     z-index: 3; }
   header .container {
