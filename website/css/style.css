@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -143,6 +143,23 @@ nav {
   font-size: 14px;
   line-height: 20px;
   color: #000; }
+  .nav a.has-label {
+    position: relative;
+    padding-right: 12px; }
+    .nav a.has-label span {
+      font-family: 'Poppins', sans-serif;
+      font-size: 10px;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+      color: #fff;
+      text-transform: uppercase;
+      position: absolute;
+      top: -13px;
+      right: -15px;
+      padding: 4px 8px;
+      border-radius: 16px;
+      background: #329DFF;
+      transform: scale(0.6); }
 
 .side-nav {
   position: fixed;
@@ -181,7 +198,7 @@ nav {
     height: 18px; }
 
 section {
-  padding: 100px 0; }
+  padding: 50px 0; }
   section h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -208,6 +225,7 @@ section {
     align-items: center; }
   .card-item h3 {
     font-family: 'Poppins', sans-serif;
+    font-weight: 600;
     margin-bottom: 8px;
     font-size: 17px;
     line-height: 22px; }
@@ -259,6 +277,7 @@ section {
       max-width: 80%; }
   .promo-item h4 {
     font-family: 'Poppins', sans-serif;
+    font-weight: 600;
     font-size: 16px;
     line-height: 22px; }
     .promo-item h4 a {
@@ -316,6 +335,12 @@ section {
     flex: 0 0 62px; }
     .offers-img img {
       max-width: 80%; }
+    .offers-img.green {
+      background: #487a4a; }
+    .offers-img.blue {
+      background: #18355e; }
+    .offers-img.blue-dark {
+      background: #265f92; }
   .offers-desc {
     font-size: 14px;
     line-height: 20px;
@@ -344,6 +369,9 @@ footer {
     line-height: 20px;
     color: #fff;
     margin-bottom: 20px; }
+
+.subscribe-form h4 {
+  font-family: 'Poppins', sans-serif; }
 
 .subscribe-form input {
   width: 60%;
@@ -395,6 +423,7 @@ footer {
 
 .full-article h1 {
   font-family: 'Poppins', sans-serif;
+  font-weight: 600;
   font-size: 24px;
   line-height: 32px;
   margin-bottom: 20px; }
@@ -418,7 +447,8 @@ footer {
 
 h3 {
   font-family: 'Poppins', sans-serif;
-  font-size: 18px; }
+  font-size: 18px;
+  font-weight: 600; }
 
 .schedule {
   padding-top: 10px;
@@ -438,8 +468,7 @@ h3 {
     align-items: center;
     padding: 4px 20px 6px; }
   .schedule .item-name img {
-    width: 32px;
-    height: 32px; }
+    width: 52px; }
   .schedule .item-name span {
     font-size: 16px;
     font-weight: 700;
@@ -465,11 +494,63 @@ h3 {
   padding: 12px;
   display: inline-block; }
 
+.view-more {
+  height: 43px;
+  line-height: 43px;
+  border-radius: 32px;
+  display: inline-block;
+  background: #FFFFFF;
+  font-size: 14px;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  padding: 0 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04); }
+  .view-more:hover {
+    color: #000; }
+
+h4 {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 10px; }
+
+.row-promo {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */ }
+
+.row-promo::-webkit-scrollbar {
+  display: none; }
+
+.col-promo {
+  width: calc(25% - 15px); }
+
 @media screen and (max-width: 768px) {
   .subscribe-form, .footer-nav {
     margin-bottom: 20px; }
   .copyright {
-    margin-top: 40px; } }
+    margin-top: 40px; }
+  .col-promo {
+    min-width: 230px;
+    margin-right: 20px; } }
+
+@media screen and (max-width: 576px) {
+  header .col-6 {
+    width: 100%; }
+  .header-action {
+    flex-direction: row-reverse; }
+  .toggle-nav {
+    position: absolute; }
+  .logo {
+    margin-left: auto;
+    margin-right: auto; } }
 
 @media screen and (max-width: 480px) {
   .follow-us li {
