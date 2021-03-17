@@ -371,7 +371,7 @@ footer {
     margin-bottom: 20px; }
 
 .subscribe-form h4 {
-  font-family: 'Poppins', sans-serif; }
+  font-size: 20px; }
 
 .subscribe-form input {
   width: 60%;
@@ -554,4 +554,6 @@ h4 {
 
 @media screen and (max-width: 480px) {
   .follow-us li {
-    margin: 0 5px; } }
+    margin: 0 5px; }
+  .subscribe-form input {
+    width: 70%; } }
