@@ -485,6 +485,11 @@ h3 {
     margin: 0;
     font-size: 14px;
     color: #555; }
+    .schedule .game-time svg {
+      width: 16px;
+      height: 16px;
+      margin-right: 10px;
+      opacity: .7; }
   .schedule .game-link {
     font-size: 12px;
     line-height: 14px;
@@ -539,6 +544,308 @@ h4 {
 .col-promo {
   width: calc(25% - 15px); }
 
+.odds-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+  overflow: hidden; }
+  .odds-card .odds-header {
+    padding: 20px;
+    display: flex;
+    border-bottom: 1px solid #e7e9f2; }
+  .odds-card .odds-filter {
+    margin: 0 30px 0 0;
+    padding: 0; }
+    .odds-card .odds-filter li {
+      display: inline-block;
+      vertical-align: top; }
+    .odds-card .odds-filter a {
+      text-decoration: none;
+      display: inline-block;
+      padding: 6px 14px;
+      background: #FFF;
+      border: 1px solid #d9dbe8;
+      border-radius: 8px;
+      font-size: 14px;
+      line-height: 20px;
+      color: #000; }
+      .odds-card .odds-filter a.active {
+        background: #CA0005;
+        border-color: #CA0005;
+        color: #fff; }
+  .odds-card .odds-search {
+    position: relative; }
+    .odds-card .odds-search input[type="text"] {
+      height: 34px;
+      width: 280px;
+      border: 1px solid #d9dbe8;
+      border-radius: 8px;
+      font-size: 14px;
+      line-height: 20px;
+      padding: 0 8px 0 30px; }
+    .odds-card .odds-search svg {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 9px;
+      left: 6px;
+      opacity: 0.6; }
+  .odds-card .odds-column {
+    display: flex;
+    align-items: center; }
+    .odds-card .odds-column .column {
+      width: 80px;
+      height: 50px;
+      line-height: 50px;
+      padding: 0 25px;
+      font-size: 14px;
+      border-right: 1px solid #e7e9f2;
+      text-align: center; }
+      .odds-card .odds-column .column.last-column {
+        border: none;
+        text-align: left;
+        width: calc(120px*7);
+        padding: 0;
+        display: flex;
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */ }
+        .odds-card .odds-column .column.last-column::-webkit-scrollbar {
+          display: none; }
+      .odds-card .odds-column .column:nth-child(2) {
+        width: 200px;
+        flex: 0 0 200px; }
+      .odds-card .odds-column .column:nth-child(4) {
+        width: 180px;
+        flex: 0 0 180px; }
+      .odds-card .odds-column .column .odds-bet {
+        width: 100px;
+        height: 36px;
+        display: inline-block;
+        border-radius: 8px;
+        margin: 6px 10px;
+        line-height: 0;
+        background: #000;
+        text-align: center;
+        flex: 0 0 100px; }
+        .odds-card .odds-column .column .odds-bet img {
+          max-width: 66px;
+          height: 36px; }
+        .odds-card .odds-column .column .odds-bet.green {
+          background: #487a4a; }
+        .odds-card .odds-column .column .odds-bet.blue {
+          background: #18355e; }
+        .odds-card .odds-column .column .odds-bet.transparent {
+          background: transparent; }
+  .odds-card .odds-time {
+    padding-left: 15px;
+    height: 32px;
+    line-height: 32px;
+    background: #000;
+    color: #fff; }
+  .odds-card .odds-row {
+    height: auto;
+    padding: 8px 0;
+    display: flex;
+    background: #fff; }
+    .odds-card .odds-row:nth-child(2n+1) {
+      background: #F5F6F6; }
+      .odds-card .odds-row:nth-child(2n+1) .time {
+        background: #fff; }
+    .odds-card .odds-row .toggle {
+      height: 44px;
+      width: 28px;
+      text-align: center;
+      border: 1px solid #DFDFDF;
+      border-radius: 4px;
+      background: #fff;
+      display: none; }
+      .odds-card .odds-row .toggle svg {
+        width: 14px;
+        height: 14px; }
+      .odds-card .odds-row .toggle.open svg {
+        transform: rotate(180deg); }
+  .odds-card .odds-info {
+    height: 100%;
+    width: 280px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex: 0 0 280px; }
+    .odds-card .odds-info .time {
+      width: 64px;
+      height: 116px;
+      border-radius: 4px;
+      background: #F5F6F6;
+      margin-left: 8px;
+      display: inline-block;
+      text-align: center;
+      line-height: 116px;
+      font-size: 10px;
+      color: #000;
+      text-decoration: none;
+      flex: 0 0 64px; }
+    .odds-card .odds-info .game {
+      height: 116px; }
+      .odds-card .odds-info .game .item-game {
+        margin: 10px;
+        display: inline-block;
+        color: #000;
+        text-decoration: none; }
+        .odds-card .odds-info .game .item-game img {
+          width: 52px; }
+        .odds-card .odds-info .game .item-game span {
+          font-size: 14px;
+          font-weight: 700;
+          margin-left: 20px;
+          vertical-align: middle;
+          display: inline-block; }
+          .odds-card .odds-info .game .item-game span b {
+            font-weight: normal;
+            font-family: 'Roboto';
+            color: #555;
+            font-size: 14px;
+            display: block; }
+  .odds-card .odds-open-line {
+    width: 80px;
+    flex: 0 0 80px; }
+  .odds-card .odds-best-line {
+    width: 180px;
+    flex: 0 0 180px; }
+    .odds-card .odds-best-line .best-line-link {
+      height: 44px;
+      width: 126px;
+      display: block;
+      position: relative;
+      border: 1px solid #DFDFDF;
+      border-radius: 4px;
+      text-align: right;
+      margin: 9px auto; }
+      .odds-card .odds-best-line .best-line-link img {
+        width: 34px;
+        height: 34px;
+        border-radius: 4px;
+        margin: 4px 4px 0 0; }
+  .odds-card .odds-lines {
+    display: flex;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */ }
+    .odds-card .odds-lines::-webkit-scrollbar {
+      display: none; }
+    .odds-card .odds-lines .line-item {
+      width: 120px;
+      height: 100%;
+      flex: 0 0 120px; }
+      .odds-card .odds-lines .line-item .line-link {
+        height: 44px;
+        width: 100px;
+        display: block;
+        border: 1px solid #DFDFDF;
+        border-radius: 4px;
+        margin: 8px auto;
+        color: #888;
+        text-decoration: none;
+        line-height: 44px;
+        text-align: center; }
+
+.odds-mobile {
+  margin: 0 auto;
+  display: none; }
+  .odds-mobile.open {
+    display: block; }
+  .odds-mobile .lines {
+    width: 350px;
+    margin: 25px 0; }
+  .odds-mobile .line-top {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .odds-mobile .line-top img {
+      width: 34px;
+      height: 34px;
+      border-radius: 4px; }
+    .odds-mobile .line-top span {
+      margin-left: 7px;
+      font-weight: bold;
+      font-size: 10px;
+      line-height: 16px;
+      color: #777; }
+    .odds-mobile .line-top strong {
+      font-size: 10px;
+      line-height: 20px; }
+  .odds-mobile .line-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .odds-mobile .line-bottom div {
+      position: relative; }
+    .odds-mobile .line-bottom .item-game {
+      color: #000; }
+      .odds-mobile .line-bottom .item-game img {
+        width: 42px; }
+      .odds-mobile .line-bottom .item-game span {
+        font-size: 14px;
+        font-weight: 700;
+        margin-left: 10px;
+        vertical-align: middle;
+        display: inline-block; }
+        .odds-mobile .line-bottom .item-game span b {
+          font-weight: normal;
+          font-family: 'Roboto';
+          color: #555;
+          font-size: 14px;
+          display: block; }
+    .odds-mobile .line-bottom .line-link {
+      height: 32px;
+      width: 130px;
+      display: block;
+      border: 1px solid #DFDFDF;
+      border-radius: 4px;
+      color: #888;
+      text-decoration: none;
+      line-height: 32px;
+      padding-left: 15px;
+      font-size: 12px; }
+    .odds-mobile .line-bottom .small-link {
+      display: inline-block;
+      padding: 10px;
+      color: #fff;
+      font-size: 10px;
+      line-height: 12px;
+      text-decoration: none;
+      background: #000;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-radius: 0 4px 4px 0; }
+      .odds-mobile .line-bottom .small-link svg {
+        width: 12px;
+        height: 12px; }
+
+@media screen and (max-width: 992px) {
+  .odds-card .odds-column .column:nth-child(4) {
+    width: 100%;
+    flex: auto; }
+  .odds-card .odds-column .column.last-column {
+    display: none; }
+  .odds-card .odds-lines {
+    display: none; }
+  .odds-card .odds-best-line .best-line-link {
+    display: inline-block;
+    vertical-align: middle; }
+  .odds-card .odds-best-line .toggle {
+    display: inline-block; }
+  .odds-card .odds-row {
+    flex-wrap: wrap; } }
+
 @media screen and (max-width: 768px) {
   .subscribe-form, .footer-nav {
     margin-bottom: 20px; }
@@ -546,7 +853,23 @@ h4 {
     margin-top: 40px; }
   .col-promo {
     min-width: 230px;
-    margin-right: 20px; } }
+    margin-right: 20px; }
+  .odds-card .odds-header {
+    flex-direction: column; }
+    .odds-card .odds-header .odds-filter {
+      margin: 0 0 30px 0; }
+  .odds-card .odds-column .column:nth-child(2) {
+    flex: 0 0 150px; }
+  .odds-card .odds-info {
+    flex: 0 0 230px; }
+    .odds-card .odds-info .game .item-game {
+      margin: 0 10px; }
+      .odds-card .odds-info .game .item-game img {
+        width: 36px;
+        display: block; }
+      .odds-card .odds-info .game .item-game span {
+        margin-left: 0;
+        font-size: 12px; } }
 
 @media screen and (max-width: 576px) {
   header .col-6 {
@@ -563,4 +886,14 @@ h4 {
   .follow-us li {
     margin: 0 5px; }
   .subscribe-form input {
-    width: 70%; } }
+    width: 70%; }
+  .odds-card .odds-column .column:first-child {
+    display: none; }
+  .odds-card .odds-info {
+    flex: 0 0 190px; }
+  .odds-card .odds-open-line {
+    flex: 0 0 40px; }
+  .odds-card .odds-best-line {
+    flex: 0 0 115px; }
+    .odds-card .odds-best-line .best-line-link {
+      width: 80px; } }

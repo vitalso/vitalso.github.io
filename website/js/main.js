@@ -24,4 +24,20 @@ $(document).ready(function() {
     $(this).closest('.coockie').hide();
   });
 
+  // Scroll section on Odds page
+  $('.odds-lines').on('scroll', function () {
+    $('.last-column , .odds-lines').scrollLeft($(this).scrollLeft());
+  });
+
+  // Mobile option in Odds
+  $('.first .toggle').on('click' , function(){
+    $(this).closest('.odds-row').find('.odds-mobile.first').toggleClass('open');
+    $(this).toggleClass('open');
+  });
+
+  $('.second .toggle').on('click' , function(){
+    $(this).closest('.odds-row').find('.odds-mobile.second').toggleClass('open');
+    $(this).toggleClass('open');
+  });
+
 })
