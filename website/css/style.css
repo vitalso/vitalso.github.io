@@ -830,6 +830,11 @@ h4 {
         width: 12px;
         height: 12px; }
 
+.total, .moneyline {
+  display: none; }
+  .total.open, .moneyline.open {
+    display: block; }
+
 @media screen and (max-width: 992px) {
   .odds-card .odds-column .column:nth-child(4) {
     width: 100%;

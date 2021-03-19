@@ -24,6 +24,19 @@ $(document).ready(function() {
     $(this).closest('.coockie').hide();
   });
 
+  // Odds filter
+  $('.odds-filter a').on('click' , function(e){
+    e.preventDefault()
+    var type = $(this).attr('data-type');
+    if (type == 'spread') {
+      e.preventDefault()
+    } else {
+      $(this).toggleClass('active');
+    }
+    $('.'+type).toggleClass('open');
+    console.log(type);
+  });
+
   // Scroll section on Odds page
   $('.odds-lines').on('scroll', function () {
     $('.last-column , .odds-lines').scrollLeft($(this).scrollLeft());
