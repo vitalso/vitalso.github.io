@@ -606,6 +606,7 @@ h4 {
         border: none;
         text-align: left;
         width: calc(120px*7);
+        margin-right: 10px;
         padding: 0;
         display: flex;
         overflow-x: scroll;
@@ -713,6 +714,16 @@ h4 {
   .odds-card .odds-open-line {
     width: 80px;
     flex: 0 0 80px; }
+    .odds-card .odds-open-line span {
+      width: 100%;
+      height: 44px;
+      margin: 9px 0;
+      text-align: center;
+      display: block;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 44px;
+      color: #777; }
   .odds-card .odds-best-line {
     width: 180px;
     flex: 0 0 180px; }
@@ -724,14 +735,27 @@ h4 {
       border: 1px solid #DFDFDF;
       border-radius: 4px;
       text-align: right;
-      margin: 9px auto; }
+      margin: 9px auto;
+      text-decoration: none; }
       .odds-card .odds-best-line .best-line-link img {
         width: 34px;
         height: 34px;
         border-radius: 4px;
         margin: 4px 4px 0 0; }
+      .odds-card .odds-best-line .best-line-link strong {
+        margin-left: 10px;
+        font-size: 12px;
+        color: #000;
+        font-weight: 600;
+        float: left; }
+        .odds-card .odds-best-line .best-line-link strong span {
+          margin-left: 10px;
+          font-weight: 500;
+          line-height: 44px;
+          color: #777; }
   .odds-card .odds-lines {
     display: flex;
+    margin-right: 10px;
     overflow-x: scroll;
     -ms-overflow-style: none;
     /* IE and Edge */
@@ -750,10 +774,22 @@ h4 {
         border: 1px solid #DFDFDF;
         border-radius: 4px;
         margin: 8px auto;
-        color: #888;
         text-decoration: none;
         line-height: 44px;
-        text-align: center; }
+        text-align: center;
+        font-size: 12px; }
+        .odds-card .odds-lines .line-item .line-link strong {
+          color: #000;
+          font-weight: 600; }
+        .odds-card .odds-lines .line-item .line-link span {
+          margin-left: 10px;
+          font-weight: 500;
+          color: #777; }
+      .odds-card .odds-lines .line-item:last-child {
+        width: 110px;
+        flex: 0 0 110px; }
+        .odds-card .odds-lines .line-item:last-child .line-link {
+          margin-right: 0; }
 
 .odds-mobile {
   margin: 0 auto;

@@ -38,7 +38,7 @@ $(document).ready(function() {
   });
 
   // Scroll section on Odds page
-  $('.odds-lines').on('scroll', function () {
+  $('.odds-lines , .last-column').on('scroll', function () {
     $('.last-column , .odds-lines').scrollLeft($(this).scrollLeft());
   });
 
