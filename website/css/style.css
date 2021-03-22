@@ -872,6 +872,9 @@ h4 {
     display: block; }
 
 @media screen and (max-width: 992px) {
+  .odds-card .odds-open-line span {
+    height: 50px;
+    margin: 10px 0; }
   .odds-card .odds-column .column:nth-child(4) {
     width: 100%;
     flex: auto; }
@@ -928,13 +931,29 @@ h4 {
     margin: 0 5px; }
   .subscribe-form input {
     width: 70%; }
-  .odds-card .odds-column .column:first-child {
-    display: none; }
+  .odds-card .odds-search:after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 40px);
+    border-bottom: 1px solid #e7e9f2;
+    left: -20px;
+    top: -15px; }
+  .odds-card .odds-column .column {
+    font-size: 10px; }
+    .odds-card .odds-column .column:first-child {
+      display: none; }
+    .odds-card .odds-column .column:nth-child(2) {
+      flex: 0 0 160px; }
+    .odds-card .odds-column .column:nth-child(3) {
+      padding: 0 10px; }
   .odds-card .odds-info {
-    flex: 0 0 190px; }
+    flex: 0 0 150px; }
+    .odds-card .odds-info .game .item-game span {
+      font-size: 10px; }
   .odds-card .odds-open-line {
     flex: 0 0 40px; }
   .odds-card .odds-best-line {
-    flex: 0 0 115px; }
+    width: 100%;
+    flex: 0 0 calc(100% - 210px); }
     .odds-card .odds-best-line .best-line-link {
-      width: 80px; } }
+      width: calc(100% - 35px); } }
