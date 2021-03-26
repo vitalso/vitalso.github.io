@@ -6,8 +6,6 @@ $(document).ready(function() {
     $('.popup').hide();
   });
 
-  //setTimeout($('.popup').hide(), 3000);
-
   var popup_timer = 30;
   setTimeout(countDown,1000);
 

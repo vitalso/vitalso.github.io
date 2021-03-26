@@ -22,9 +22,12 @@
   .popup-action p {
     margin: 0; }
   .popup-action a {
-    margin-left: 10px;
+    margin-left: 5px;
     text-decoration: none;
     color: #000; }
+    .popup-action a b {
+      font-size: 12px;
+      letter-spacing: -1.5px; }
     .popup-action a:hover {
       text-decoration: underline; }
   .popup-content {
@@ -81,20 +84,50 @@
   .popup-content {
     max-width: 420px; }
     .popup-content .row {
-      flex-direction: column; }
+      display: block; }
   .popup-img, .popup-info {
     max-width: 100%;
     flex: 0 0 100%; }
   .popup-img {
-    height: 30vh; }
+    height: 40vh;
+    position: relative;
+    overflow: hidden; }
     .popup-img img {
-      height: auto; }
+      position: absolute;
+      height: auto;
+      object-fit: contain;
+      width: auto; }
   .popup-info {
     padding-left: 20px;
     padding-right: 20px; } }
 
 @media screen and (max-width: 480px) {
+  .popup-logo {
+    max-width: 130px; }
+  .popup-header {
+    padding: 5px 0 0 0; }
+  .popup-action p {
+    display: flex;
+    flex-direction: column-reverse; }
   .popup-action span {
     display: block; }
   .popup-action a {
-    margin-left: 0; } }
+    margin-left: 0; }
+    .popup-action a i {
+      display: none; }
+  .popup-info {
+    padding-top: 15px;
+    padding-bottom: 15px; }
+    .popup-info h3 {
+      font-size: 16px;
+      margin-bottom: 10px; }
+    .popup-info ul {
+      margin-bottom: 15px; }
+      .popup-info ul li {
+        margin: 5px 0;
+        padding-left: 40px;
+        line-height: 24px;
+        font-size: 14px; }
+        .popup-info ul li:after {
+          width: 24px;
+          height: 24px; } }
