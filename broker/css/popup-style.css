@@ -37,7 +37,8 @@
     position: relative;
     z-index: 2;
     border-radius: 0 0 16px 16px;
-    overflow: hidden; }
+    overflow: hidden;
+    cursor: pointer; }
   .popup-img {
     max-width: 50%;
     flex: 0 0 50%; }

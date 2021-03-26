@@ -19,4 +19,8 @@ $(document).ready(function() {
    $('.popup-action span b').text(popup_timer);
   }
 
+  $('.popup-content').on('click' , function(){
+    window.location.href="https://greenely.se/sv/smart-elavtal/?shortlink=tecknael&pid=Cross_sale&c=TecknaEl";
+  })
+
 })
