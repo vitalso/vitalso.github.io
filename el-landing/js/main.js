@@ -25,9 +25,9 @@ $(function () {
 
   // Example of works slider
   $('.example-slider').slick({
-    infinite: true,
+    infinite: false,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     arrows: false,
     dots: true,
     responsive: [
@@ -35,7 +35,7 @@ $(function () {
         breakpoint: 992,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToScroll: 1
         }
       },
       {
