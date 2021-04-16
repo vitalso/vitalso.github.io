@@ -14,6 +14,21 @@ $(function () {
 
   });
 
+  var movementStrength = 25;
+  var height = movementStrength / $(window).height();
+  var width = movementStrength / $(window).width();
+  $(".intro").mousemove(function(e){
+            var pageX = e.pageX - ($(window).width() / 2);
+            var pageY = e.pageY - ($(window).height() / 2);
+            var newvalueX = width * pageX * -1;
+            var newvalueY = height * pageY * -1;
+            $('.hero-person').css("top", newvalueX+"px");
+            $('.hero-person').css("left", newvalueY+"px");
+
+            $('.hero-bg').css("top", newvalueX*1.2+"px");
+            $('.hero-bg').css("right", newvalueY*1.2+"px");
+  });
+
   // Expert slider
   /*$('.experts-slider').slick({
     infinite: true,
