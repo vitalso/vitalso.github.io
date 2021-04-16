@@ -9,8 +9,8 @@ $(function () {
   $(window).on('scroll' , function() {
 
     // Change position of image intro
-    $('.hero-person').css('top' , - $(window).scrollTop()*0.2);
-    $('.hero-bg').css('top' , - $(window).scrollTop()*0.1);
+    $('.hero-person').css('top' , - $(window).scrollTop()*0.3);
+    $('.hero-bg').css('top' , - $(window).scrollTop()*0.2);
 
   });
 

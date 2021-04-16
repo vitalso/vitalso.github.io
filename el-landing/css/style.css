@@ -316,8 +316,9 @@ h4 {
   top: 100px; }
   .what-learn-img .effect-img {
     position: absolute;
-    right: 15px;
-    max-width: 320px; }
+    right: 70px;
+    max-width: 220px;
+    top: 50px; }
 
 .wrap-video {
   margin: 100px 0;
@@ -1061,7 +1062,10 @@ footer {
   footer {
     padding-bottom: 30px; }
   .title-circle:after {
-    display: none; } }
+    display: none; }
+  .what-learn-img .effect-img {
+    right: 0;
+    max-width: 160px; } }
 
 @media screen and (max-width: 480px) {
   .intro .sale {
