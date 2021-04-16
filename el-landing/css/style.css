@@ -483,6 +483,14 @@ h3 {
       line-height: 50px;
       display: block; }
 
+.program-effect {
+  text-align: right;
+  position: relative; }
+  .program-effect .effect-img {
+    position: absolute;
+    right: 0%;
+    top: -80%; }
+
 .works {
   padding: 120px 0; }
   .works h3 {
