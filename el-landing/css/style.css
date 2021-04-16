@@ -485,11 +485,13 @@ h3 {
 
 .program-effect {
   text-align: right;
-  position: relative; }
+  position: relative;
+  margin-bottom: 30px; }
   .program-effect .effect-img {
     position: absolute;
     right: 0%;
-    top: -80%; }
+    top: 0;
+    max-width: 200px; }
 
 .works {
   padding: 120px 0; }
@@ -939,7 +941,9 @@ footer {
   .social-nav {
     margin-top: 73px; }
   .footer-nav {
-    margin: 65px 0 0 0; } }
+    margin: 65px 0 0 0; }
+  .program-effect {
+    display: none; } }
 
 @media screen and (max-width: 768px) {
   header {
