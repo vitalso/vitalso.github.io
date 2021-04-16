@@ -6,7 +6,7 @@ $(function () {
   });
 
   // Expert slider
-  $('.experts-slider').slick({
+  /*$('.experts-slider').slick({
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 2,
@@ -21,7 +21,7 @@ $(function () {
         }
       }
     ]
-  });
+  });*/
 
   // Example of works slider
   $('.example-slider').slick({

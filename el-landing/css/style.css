@@ -180,7 +180,7 @@ nav a {
 
 .intro {
   margin-top: 100px;
-  padding: 120px 0;
+  padding: 60px 0;
   background: #000;
   color: #fff; }
   .intro h1 {
@@ -594,7 +594,10 @@ h3 {
   line-height: 32px;
   color: #fff;
   background: #0055F9;
-  border-radius: 5px; }
+  border-radius: 5px;
+  transition: all .3s ease; }
+  .free-consult button[type="submit"]:hover {
+    background: #001f5a; }
 
 .personal-data {
   font-size: 16px;
@@ -650,10 +653,11 @@ h3 {
 footer {
   padding: 70px 0;
   background: #000;
+  line-height: 24px;
   color: #fff; }
 
 .footer-logo {
-  margin-top: 20px; }
+  margin-top: 35px; }
 
 .footer-title {
   font-size: 20px;
@@ -663,13 +667,15 @@ footer {
   margin-bottom: 30px; }
 
 .footer-nav {
-  margin: 0;
+  margin: 70px 0 0 0;
   padding: 0; }
+  .footer-nav li {
+    margin: 0 0 10px 0; }
   .footer-nav a {
     font-family: 'Roboto';
     text-decoration: none;
-    font-size: 18px;
-    line-height: 40px;
+    font-size: 16px;
+    line-height: 30px;
     font-weight: 300;
     color: #fff; }
 
@@ -702,8 +708,10 @@ footer {
   .footer-email:hover {
     color: #1AFF00; }
 
-.social-nav a {
-  margin-left: 14px; }
+.social-nav {
+  margin-top: 50px; }
+  .social-nav a {
+    margin-right: 23px; }
 
 .copyright {
   font-size: 16px; }
@@ -916,7 +924,11 @@ footer {
   .download-presentation {
     margin: 40px 0; }
   .footer-nav img {
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+  .social-nav {
+    margin-top: 73px; }
+  .footer-nav {
+    margin: 65px 0 0 0; } }
 
 @media screen and (max-width: 768px) {
   header {
@@ -1011,7 +1023,13 @@ footer {
   .navbar-collapse {
     top: 80px; }
   .intro {
-    margin-top: 80px; } }
+    margin-top: 80px; }
+  .social-nav {
+    margin-top: 50px; }
+  .footer-nav {
+    margin: 25px 0 0 0; }
+  footer {
+    padding-bottom: 30px; } }
 
 @media screen and (max-width: 480px) {
   .intro .sale {
