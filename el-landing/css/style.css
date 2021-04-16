@@ -1029,3 +1029,7 @@ footer {
     top: 60%; }
   .how-study .brand-btn {
     padding: 6px; } }
+
+@media screen and (max-width: 380px) {
+  .hero-img {
+    max-width: 170px; } }
