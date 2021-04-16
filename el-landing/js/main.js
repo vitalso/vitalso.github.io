@@ -5,6 +5,15 @@ $(function () {
     $(this).toggleClass('open');
   });
 
+  // Parallax effect for inner intro section
+  $(window).on('scroll' , function() {
+
+    // Change position of image intro
+    $('.hero-person').css('top' , - $(window).scrollTop()*0.2);
+    $('.hero-bg').css('top' , - $(window).scrollTop()*0.1);
+
+  });
+
   // Expert slider
   /*$('.experts-slider').slick({
     infinite: true,
