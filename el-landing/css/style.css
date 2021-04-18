@@ -1117,7 +1117,10 @@ footer {
   .how-study .brand-btn {
     padding: 6px; }
   .example-item {
-    margin-right: 0; } }
+    margin-right: 0; }
+  .faq-item p {
+    font-size: 16px;
+    line-height: 20px; } }
 
 @media screen and (max-width: 380px) {
   .hero-img {
