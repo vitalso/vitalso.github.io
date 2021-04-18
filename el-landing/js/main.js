@@ -10,7 +10,7 @@ $(function () {
 
     // Change position of image intro
     $('.hero-person').css('top' , - $(window).scrollTop()*0.3);
-    $('.hero-bg').css('top' , - $(window).scrollTop()*0.2);
+    //$('.hero-bg').css('top' , - $(window).scrollTop()*0.2);
 
   });
 
@@ -25,8 +25,11 @@ $(function () {
             $('.hero-person').css("top", newvalueX+"px");
             $('.hero-person').css("left", newvalueY+"px");
 
-            $('.hero-bg').css("top", newvalueX*1.2+"px");
+            //$('.hero-bg').css("bottom", newvalueX*0.2+"px");
             $('.hero-bg').css("right", newvalueY*1.2+"px");
+
+            $('.hero-figure').css("top", newvalueX*1.7+"px");
+            $('.hero-figure').css("right", newvalueY*1.7+"px");
   });
 
   // Expert slider
@@ -75,6 +78,7 @@ $(function () {
   // FAQ
   $('.faq-item').on('click' , function() {
     $(this).toggleClass('open');
+    $(this).find('p').slideToggle();
   });
 
   // Popup with video

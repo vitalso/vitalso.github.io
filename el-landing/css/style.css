@@ -247,7 +247,11 @@ nav a {
     z-index: 1; }
   .hero-img .hero-bg {
     position: absolute;
-    right: 0; }
+    right: 0;
+    bottom: 25%; }
+  .hero-img .hero-figure {
+    position: absolute;
+    right: 30px; }
 
 .what-learn {
   padding: 100px 0;
@@ -658,13 +662,9 @@ h3 {
     background: url(../images/faq-icon.svg) no-repeat;
     transition: all .3s ease; }
   .faq-item p {
-    height: 0;
-    opacity: 0;
-    transition: all .3s ease; }
-  .faq-item.open p {
-    height: 100%;
-    overflow: visible;
-    opacity: 1; }
+    display: none; }
+  .faq-item:first-child p {
+    display: block; }
   .faq-item.open:after {
     transform: rotate(0deg); }
   .faq-item:last-child {
@@ -768,6 +768,18 @@ footer {
   .container {
     max-width: 1210px; } }
 
+@media screen and (max-width: 1280px) {
+  .intro {
+    padding: 30px 0; }
+  .hero-img {
+    max-width: 500px; }
+    .hero-img img {
+      max-width: 90%; }
+    .hero-img .hero-figure {
+      max-width: 100px; }
+  .mfp-iframe-holder .mfp-content {
+    max-width: 1100px; } }
+
 @media screen and (max-width: 1200px) {
   .intro {
     padding: 80px 0; }
@@ -780,7 +792,19 @@ footer {
     font-size: 18px; }
   .study-title {
     font-size: 18px;
-    line-height: 25px; } }
+    line-height: 25px; }
+  .cost-with-sale {
+    font-size: 38px;
+    line-height: 36px; }
+    .cost-with-sale span {
+      right: 0; }
+      .cost-with-sale span:after {
+        width: 100px;
+        left: -100px;
+        top: 0; }
+  .title-form {
+    font-size: 34px;
+    line-height: 34px; } }
 
 @media screen and (max-width: 992px) {
   .navbar-collapse {
@@ -1065,7 +1089,9 @@ footer {
     display: none; }
   .what-learn-img .effect-img {
     right: 0;
-    max-width: 160px; } }
+    max-width: 160px; }
+  .hero-img .hero-figure {
+    max-width: 70px; } }
 
 @media screen and (max-width: 480px) {
   .intro .sale {
