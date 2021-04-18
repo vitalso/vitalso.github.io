@@ -663,8 +663,6 @@ h3 {
     transition: all .3s ease; }
   .faq-item p {
     display: none; }
-  .faq-item:first-child p {
-    display: block; }
   .faq-item.open:after {
     transform: rotate(0deg); }
   .faq-item:last-child {
@@ -778,7 +776,16 @@ footer {
     .hero-img .hero-figure {
       max-width: 100px; }
   .mfp-iframe-holder .mfp-content {
-    max-width: 1100px; } }
+    max-width: 1100px; }
+  .cost-with-sale {
+    font-size: 42px;
+    line-height: 44px; }
+  .current-price {
+    margin-top: 90px; }
+  .time-course {
+    margin-bottom: 0; }
+  .free-consult button[type="submit"] {
+    margin-bottom: 15px; } }
 
 @media screen and (max-width: 1200px) {
   .intro {
