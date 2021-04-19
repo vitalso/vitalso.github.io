@@ -91,4 +91,10 @@ $(function () {
     fixedContentPos: true
   });
 
+  $('.popup-modal').magnificPopup({
+    type: 'inline',
+    preloader: false,
+    modal: false
+  });
+
 });

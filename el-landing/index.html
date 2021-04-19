@@ -34,14 +34,14 @@
                 <button class="navbar-toggler toggle-nav" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul>
-                    <li><a href="#">Курсы</a></li>
+                    <li><a href="https://www.extralevel.ru/" target="_blank">Курсы</a></li>
                   </ul>
-                  <div class="header-contact d-lg-none d-flex"><a class="primary-btn" href="#want-study">Хочу учиться</a><a class="header-phone" href="tel: +74959662866">+7 (495) 966-28-66</a></div>
+                  <div class="header-contact d-lg-none d-flex"><a class="primary-btn popup-modal" href="#want-study">Хочу учиться</a><a class="header-phone" href="tel: +74959662866">+7 (495) 966-28-66</a></div>
                 </div>
               </nav>
             </div>
             <div class="col-md-5">
-              <div class="header-contact"><a class="header-phone" href="tel: +74959662866">+7 (495) 966-28-66</a><a class="primary-btn" href="#want-study">Хочу учиться</a></div>
+              <div class="header-contact"><a class="header-phone" href="tel: +74959662866">+7 (495) 966-28-66</a><a class="primary-btn popup-modal" href="#want-study">Хочу учиться</a></div>
             </div>
           </div>
         </div>
@@ -54,7 +54,7 @@
             <div class="col-md-6">
               <div class="intro-description">
                 <h1>Онлайн-курс <br> по разработке <br> игр на Unity <br> для начинающих</h1>
-                <p>Вы освоите язык программирования C#, научитесь создавать мобильные игры на популярном игровом движке  Unity, создадите свой первый проект для портфолио и обретете востребованную в геймдеве профессию</p><a class="primary-btn brand-btn d-none d-md-inline-block" href="#">Записаться на курс</a>
+                <p>Вы освоите язык программирования C#, научитесь создавать мобильные игры на популярном игровом движке  Unity, создадите свой первый проект для портфолио и обретете востребованную в геймдеве профессию</p><a class="primary-btn brand-btn d-none d-md-inline-block popup-modal" href="#want-study">Записаться на курс</a>
               </div>
             </div>
             <div class="col-md-6">
@@ -65,7 +65,7 @@
               </ul>
               <div class="hero-img"><img class="hero-person" src="images/hero.png"><img class="hero-bg" src="images/hero-bg.png"><img class="hero-figure" src="images/hero-figure.png"></div>
             </div>
-            <div class="col-md-12"><a class="primary-btn brand-btn d-block d-md-none" href="#">Записаться на курс</a>
+            <div class="col-md-12"><a class="primary-btn brand-btn d-block d-md-none popup-modal" href="#want-study">Записаться на курс</a>
               <ul class="additional-info">
                 <li>Длительность: <span>3 месяца</span></li>
                 <li>Формат лекций: <span>видео</span></li>
@@ -153,10 +153,10 @@
               </div>
               <div class="col-lg-6 col-md-6">
                 <div class="expert-item">
-                  <div class="expert-img"><img src="images/expert-none.png"></div>
+                  <div class="expert-img"><img src="images/expert-1.png"></div>
                   <h5>Сергей Шапошников</h5>
                   <div class="author-position">Team Lead Unity в Crazy Panda</div>
-                  <p>Расскажет о практиках ведущих разработчиков в индустрии, чтобы вы могли освоить актуальные навыки</p>
+                  <p>Расскажет от том, как устроены рендеринг и шейдеры в Unity, а также поможет с оптимизацией вашего проекта</p>
                 </div>
               </div>
             </div>
@@ -226,7 +226,7 @@
                 <p>С которой уже можно начинать карьеру в геймдеве</p>
               </div>
             </div>
-            <div class="col-md-12 text-center"><a class="primary-btn brand-btn" href="#">Записаться на курс или получить бесплатную консультацию</a></div>
+            <div class="col-md-12 text-center"><a class="primary-btn brand-btn popup-modal" href="#want-study">Записаться на курс или получить бесплатную консультацию</a></div>
           </div>
         </div>
       </section>
@@ -317,20 +317,16 @@
                   <p>Осталось: <span>15 мест</span></p>
                 </div>
                 <div class="title-form">Записаться на курс или получить бесплатную консультацию</div>
-                <form class="free-consult">
-                  <div class="form-row">
-                    <input type="text" name="" placeholder="Имя и фамилия">
-                  </div>
-                  <div class="form-row">
-                    <input type="phone" name="" placeholder="Телефон">
-                  </div>
-                  <div class="form-row">
-                    <input type="email" name="" placeholder="Email">
-                  </div>
-                  <div class="form-row">
-                    <button type="submit">Записаться</button>
-                  </div>
-                </form>
+                <!--form.free-consult
+                .form-row: input(type="text" , name="" , placeholder="Имя и фамилия")
+                .form-row: input(type="phone" , name="" , placeholder="Телефон")
+                .form-row: input(type="email" , name="" , placeholder="Email")
+                .form-row: button(type="submit") Записаться
+                
+                -->
+                <div class="free-consult"><script id="amoforms_script_769354" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1618840462"></script>
+<script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"769354",hash:"206fd15000bf386dbb812f16193b2c3a",locale:"ru"})}(window,0,"amo_forms_","params","load");</script>
+                </div>
                 <p class="personal-data">Нажимая на кнопку, я соглашаюсь на обработку персональных данных.</p>
               </div>
             </div>
@@ -388,17 +384,20 @@
               <p><a class="footer-phone" href="tel: +74959662866">+7 (495) 966-28-66</a></p>
               <p><a class="footer-email" href="mailto: hello@extralevel.ru">hello@extralevel.ru</a></p>
             </div>
-            <div class="social-nav"><a href="#"><img src="images/facebook.svg"></a><a href="#"><img src="images/instagram.svg"></a><a href="#"><img src="images/vk.svg"></a></div>
+            <div class="social-nav"><a href="https://www.facebook.com/extralevel/" target="_blank"><img src="images/facebook.svg"></a><a href="https://instagram.com/extralevelschool?r=nametag" target="_blank"><img src="images/instagram.svg"></a><a href="https://vk.com/xtralevel" target="_blank"><img src="images/vk.svg"></a></div>
           </div>
           <div class="col-lg-4 col-md-4">
             <ul class="footer-nav">
-              <li><a href="#">Договор оферты</a></li>
-              <li><a href="#">Политика конфиденциальности</a></li>
+              <li><a href="https://www.extralevel.ru/landing/oferta.pdf" target="_blank">Договор оферты</a></li>
+              <li><a href="https://www.extralevel.ru/landing/privacy_policy.pdf" target="_blank">Политика конфиденциальности</a></li>
             </ul>
           </div>
         </div>
       </div>
     </footer>
+    <div class="mfp-hide white-popup-block" id="want-study">
+      <div class="title-popup">Записаться на курс или получить бесплатную консультацию</div>
+    </div>
     <!-- jQuery & Bootstrap scripts-->
     <!-- jQuery-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

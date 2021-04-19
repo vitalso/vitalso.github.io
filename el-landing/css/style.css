@@ -630,6 +630,7 @@ h3 {
     background: #001f5a; }
 
 .personal-data {
+  margin-top: -70px;
   font-size: 16px;
   line-height: 24px;
   color: #A1A1A1; }
@@ -761,6 +762,21 @@ footer {
 
 .mfp-iframe-holder .mfp-content {
   max-width: 1200px; }
+
+.white-popup-block {
+  position: relative;
+  background: #FFF;
+  padding: 24px 40px;
+  width: auto;
+  max-width: 580px;
+  margin: 20px auto; }
+
+.title-popup {
+  font-size: 28px;
+  line-height: 32px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-family: 'Roboto'; }
 
 @media (min-width: 1400px) {
   .container {
