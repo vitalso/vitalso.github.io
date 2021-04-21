@@ -770,6 +770,9 @@ footer {
   width: auto;
   max-width: 580px;
   margin: 20px auto; }
+  .white-popup-block .personal-data {
+    position: relative;
+    z-index: 99999; }
 
 .title-popup {
   font-size: 28px;
