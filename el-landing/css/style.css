@@ -1119,7 +1119,9 @@ footer {
     right: 0;
     max-width: 160px; }
   .hero-img .hero-figure {
-    max-width: 70px; } }
+    max-width: 70px; }
+  .primary-btn.brand-btn + .additional-info {
+    display: none; } }
 
 @media screen and (max-width: 480px) {
   .intro .sale {
