@@ -1020,4 +1020,6 @@ footer {
     .price-part p:last-child {
       font-size: 14px; }
   footer {
-    padding-top: 30px; } }
+    padding-top: 30px; }
+  .study-item p {
+    padding-left: 96px; } }
