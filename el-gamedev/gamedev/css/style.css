@@ -107,6 +107,7 @@ nav a {
   background: transparent;
   outline: none;
   display: none;
+  box-shadow: none !important;
   flex-direction: column;
   justify-content: space-around;
   margin-left: auto; }
@@ -181,7 +182,7 @@ nav a {
   border: none; }
   .brand-btn:hover {
     color: #fff;
-    background: #9f09ac; }
+    background: #001f5a; }
 
 .additional-info {
   margin: 25px 0 0 0;

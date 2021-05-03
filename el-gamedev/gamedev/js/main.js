@@ -34,7 +34,7 @@ $(function () {
 
   // Example of works slider
   $('.example-slider').slick({
-    infinite: false,
+    infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
@@ -67,14 +67,14 @@ $(function () {
   // Custom carousel nav
   $('button.prev').click(function(){
     $('.example-slider').slick('slickPrev');
-    $(this).removeClass('active');
-    $('button.next').addClass('active');
+    //$(this).removeClass('active');
+    //$('button.next').addClass('active');
   });
 
   $('button.next').click(function(){
     $('.example-slider').slick('slickNext');
-    $(this).removeClass('active');
-    $('button.prev').addClass('active');
+    //$(this).removeClass('active');
+    //$('button.prev').addClass('active');
   });
 
   // FAQ
