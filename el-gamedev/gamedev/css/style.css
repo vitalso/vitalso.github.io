@@ -371,16 +371,6 @@ h5 {
     margin-top: 10px; }
 
 .study-number {
-  width: 66px;
-  height: 66px;
-  margin-bottom: 30px;
-  background: #1B44DA;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 66px;
-  color: #1AFF00;
-  font-weight: 500;
-  font-size: 30px;
   position: relative; }
   .study-number:after {
     content: "";
@@ -389,7 +379,21 @@ h5 {
     left: -208px;
     width: 200px;
     height: 1px;
-    background: #A4B8C0; }
+    background: #A4B8C0;
+    z-index: -1; }
+  .study-number .number {
+    width: 66px;
+    height: 66px;
+    margin-bottom: 30px;
+    background: #1B44DA;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 66px;
+    color: #1AFF00;
+    font-weight: 500;
+    font-size: 30px;
+    position: relative;
+    z-index: 1; }
 
 .price-study {
   padding: 80px 0;
@@ -993,8 +997,8 @@ footer {
     font-size: 14px;
     margin-top: 40px; }
   .example-item img {
-    width: 250px;
-    height: 170px; }
+    width: 345px;
+    height: 215px; }
   .how-study .brand-btn {
     padding: 10px; }
   .faq-title {
