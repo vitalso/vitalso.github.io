@@ -203,10 +203,10 @@ nav a {
 
 .hero-img .hero-bg {
   position: absolute;
-  right: 65px;
-  bottom: 22%;
-  max-width: 500px;
-  animation: opacity 1s infinite; }
+  right: 110px;
+  bottom: 134px;
+  max-width: 450px;
+  animation: opacity 5s infinite; }
 
 .hero-img .hero-figure {
   position: absolute;
@@ -335,9 +335,15 @@ h5 {
   font-size: 18px;
   line-height: 26px;
   margin-bottom: 60px; }
+  .teacher-item:hover .teacher-img img {
+    transform: rotate(5deg) scale(1.15); }
 
 .teacher-img {
-  margin-bottom: 10px; }
+  max-width: 280px;
+  margin-bottom: 10px;
+  overflow: hidden; }
+  .teacher-img img {
+    transition: all .3s ease; }
 
 .teacher-position {
   font-size: 20px;
@@ -356,10 +362,10 @@ h5 {
       position: absolute;
       top: -50px;
       right: -150px;
-      animation: rotating 3s infinite; }
+      animation: rotating 5s infinite; }
 
 .faq-img {
-  animation: rotating 3s infinite; }
+  animation: rotating 5s infinite; }
 
 @keyframes rotating {
   0% {
@@ -410,13 +416,13 @@ h5 {
   .how-study .col-lg-3:first-child .study-number:after {
     display: none; }
   .how-study.transition .col-lg-3:nth-child(1) .number {
-    animation: fadeIn 1s 1 normal forwards; }
+    animation: fadeIn .8s 1 normal forwards; }
   .how-study.transition .col-lg-3:nth-child(2) .number {
-    animation: fadeIn 1s 0.5s 1 normal forwards; }
+    animation: fadeIn .8s 0.3s 1 normal forwards; }
   .how-study.transition .col-lg-3:nth-child(3) .number {
-    animation: fadeIn 1s 1s 1 normal forwards; }
+    animation: fadeIn .8s .6s 1 normal forwards; }
   .how-study.transition .col-lg-3:nth-child(4) .number {
-    animation: fadeIn 1s 1.5s 1 normal forwards; }
+    animation: fadeIn .8s .9s 1 normal forwards; }
 
 .study-item {
   font-size: 18px;
@@ -742,7 +748,7 @@ footer {
   .hero-img .hero-bg {
     right: 0; }
   .hero-img .hero-person {
-    right: 65px; } }
+    right: 19px; } }
 
 @media screen and (max-width: 1280px) {
   .intro {
@@ -767,8 +773,8 @@ footer {
 
 @media screen and (max-width: 1200px) {
   .hero-img .hero-bg {
-    right: -147px;
-    bottom: 40%; }
+    right: -94px;
+    bottom: 315px; }
   .hero-img .hero-person {
     right: 0; }
   .works .section-title img {
@@ -801,8 +807,8 @@ footer {
 
 @media screen and (max-width: 991px) {
   .hero-img .hero-bg {
-    right: -247px;
-    bottom: 32%; }
+    right: -193px;
+    bottom: 232px; }
   .slider-nav {
     display: none; }
   .teachers-img {
@@ -936,14 +942,14 @@ footer {
 
 @media screen and (max-width: 767px) {
   .hero-img .hero-bg {
-    right: -110px;
+    right: -90px;
     bottom: auto;
     top: 0;
     max-width: 300px; }
   .hero-img .hero-person {
     position: absolute;
-    top: 30px;
-    right: -191px;
+    top: 50px;
+    right: -187px;
     max-width: 400px; }
   .teachers-img {
     max-width: 100px;
@@ -1096,8 +1102,8 @@ footer {
     top: 50px;
     max-width: 200px; }
   .hero-img .hero-person {
-    top: 54px;
-    right: -130px;
+    top: 80px;
+    right: -149px;
     max-width: 270px; }
   .faq-item p {
     font-size: 16px;

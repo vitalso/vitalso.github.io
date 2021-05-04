@@ -19,8 +19,9 @@ $(function () {
     // Change position of image intro
     //$('.hero-person').css('top' , - $(window).scrollTop()*0.3);
     //$('.hero-bg').css('top' , - $(window).scrollTop()*0.2);
-    $('.teachers-figure').css({
-        'transform': 'rotate(' + ($(window).scrollTop() / $('.teachers').height() * 35) + 'deg)' , 'left' : $(window).scrollTop()*0.07 , 'top' : $(window).scrollTop()*0.01
+    $('.teachers-img img').css({
+        //'transform': 'rotate(' + ($(window).scrollTop() / $('.teachers').height() * 30) + 'deg)' , 'left' : $(window).scrollTop()*0.07 , 'top' : $(window).scrollTop()*0.01
+        'transform': 'rotate(' + ($(window).scrollTop() / $('.teachers').height() * 360) + 'deg)'
     });
 
   });
@@ -83,7 +84,7 @@ $(function () {
   });
 
   // Animation when scroll page
-  var slideUp = {
+  /*var slideUp = {
     distance: '100%',
     origin: 'bottom',
     delay: '300',
@@ -103,6 +104,6 @@ $(function () {
     if ($(window).width() < 991) {
       sr.destroy()
     }
-  });
+  });*/
 
 });
