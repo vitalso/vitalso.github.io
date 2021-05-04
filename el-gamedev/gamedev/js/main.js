@@ -21,7 +21,7 @@ $(function () {
     //$('.hero-bg').css('top' , - $(window).scrollTop()*0.2);
     $('.teachers-img img').css({
         //'transform': 'rotate(' + ($(window).scrollTop() / $('.teachers').height() * 30) + 'deg)' , 'left' : $(window).scrollTop()*0.07 , 'top' : $(window).scrollTop()*0.01
-        'transform': 'rotate(' + ($(window).scrollTop() / $('.teachers').height() * 360) + 'deg)'
+        'transform': 'rotate(' + ($(window).scrollTop() / $('.teachers').height() * 290) + 'deg)'
     });
 
   });
