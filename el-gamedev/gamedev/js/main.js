@@ -80,6 +80,7 @@ $(function () {
   $('.popup-modal').magnificPopup({
     type: 'inline',
     preloader: false,
+    fixedContentPos: false,
     modal: false
   });
 
