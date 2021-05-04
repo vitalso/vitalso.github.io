@@ -6,30 +6,23 @@ $(function () {
   });
 
   // Parallax effect for inner intro section
+  var top_position = $('.how-study').offset().top - $('.how-study').height()*3-300;
+
   $(window).on('scroll' , function() {
 
+    if ( $(window).scrollTop() >=  top_position) {
+      $('.how-study').addClass('transition');
+    } else {
+      //$('.how-study').removeClass('transition');
+    }
+
     // Change position of image intro
-    $('.hero-person').css('top' , - $(window).scrollTop()*0.3);
+    //$('.hero-person').css('top' , - $(window).scrollTop()*0.3);
     //$('.hero-bg').css('top' , - $(window).scrollTop()*0.2);
+    $('.teachers-figure').css({
+        'transform': 'rotate(' + ($(window).scrollTop() / $('.teachers').height() * 35) + 'deg)' , 'left' : $(window).scrollTop()*0.07 , 'top' : $(window).scrollTop()*0.01
+    });
 
-  });
-
-  var movementStrength = 25;
-  var height = movementStrength / $(window).height();
-  var width = movementStrength / $(window).width();
-  $(".intro").mousemove(function(e){
-            var pageX = e.pageX - ($(window).width() / 2);
-            var pageY = e.pageY - ($(window).height() / 2);
-            var newvalueX = width * pageX * -1;
-            var newvalueY = height * pageY * -1;
-            $('.hero-person').css("top", newvalueX+"px");
-            $('.hero-person').css("left", newvalueY+"px");
-
-            //$('.hero-bg').css("bottom", newvalueX*0.2+"px");
-            $('.hero-bg').css("right", newvalueY*1.2+"px");
-
-            $('.hero-figure').css("top", newvalueX*1.7+"px");
-            $('.hero-figure').css("right", newvalueY*1.7+"px");
   });
 
   // Example of works slider
@@ -83,20 +76,33 @@ $(function () {
     $(this).find('p').slideToggle();
   });
 
-  // Popup with video
-  $('.popup-youtube').magnificPopup({
-    disableOn: 700,
-    type: 'iframe',
-    mainClass: 'mfp-fade',
-    removalDelay: 160,
-    preloader: false,
-    fixedContentPos: true
-  });
-
   $('.popup-modal').magnificPopup({
     type: 'inline',
     preloader: false,
     modal: false
+  });
+
+  // Animation when scroll page
+  var slideUp = {
+    distance: '100%',
+    origin: 'bottom',
+    delay: '300',
+    duration: '400',
+    easing: 'ease-in',
+    mobile: false,
+    opacity: null
+  };
+
+  if ($(window).width() < 991) {
+    sr.destroy()
+  } else {
+    ScrollReveal().reveal('.animated' , slideUp);
+  }
+
+  $(window).on('resize' , function(){
+    if ($(window).width() < 991) {
+      sr.destroy()
+    }
   });
 
 });

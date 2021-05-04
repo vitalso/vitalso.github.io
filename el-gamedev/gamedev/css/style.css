@@ -197,12 +197,16 @@ nav a {
 
 .hero-img .hero-person {
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  max-width: 700px;
+  right: 100px; }
 
 .hero-img .hero-bg {
   position: absolute;
-  right: 0;
-  bottom: 25%; }
+  right: 65px;
+  bottom: 22%;
+  max-width: 500px;
+  animation: opacity 1s infinite; }
 
 .hero-img .hero-figure {
   position: absolute;
@@ -211,6 +215,18 @@ nav a {
 .hero-img .hero-large {
   position: absolute;
   right: -100px; }
+
+@keyframes opacity {
+  0% {
+    opacity: 0.3; }
+  25% {
+    opacity: 0.1; }
+  50% {
+    opacity: 0.7; }
+  75% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1; } }
 
 .find-way {
   padding: 70px 0; }
@@ -231,11 +247,15 @@ h2 {
 .way-item {
   font-size: 18px;
   line-height: 26px; }
+  .way-item:hover .way-img img {
+    transform: rotate(360deg); }
 
 .way-img {
   height: 60px;
   margin-bottom: 20px;
   line-height: 60px; }
+  .way-img img {
+    transition: all .3s ease; }
 
 .way-title {
   font-weight: 700;
@@ -261,10 +281,17 @@ h4 {
     height: 90%;
     background: #0E34BD;
     z-index: -1; }
+  .all-course a {
+    text-decoration: none; }
 
 .course-item {
   margin-bottom: 30px;
-  background: #fff; }
+  background: #fff;
+  color: #111F56;
+  transition: all .3s ease; }
+  .course-item:hover {
+    transform: scale(1.03) !important;
+    box-shadow: 6px 6px 20px 4px rgba(55, 84, 170, 0.4); }
   .course-item .course-img {
     display: flex;
     align-items: center;
@@ -297,6 +324,12 @@ h5 {
     right: 0;
     top: 0;
     z-index: -1; }
+  .teachers-figure {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 130px;
+    transition: all .3s ease; }
 
 .teacher-item {
   font-size: 18px;
@@ -313,7 +346,8 @@ h5 {
 
 .works {
   padding: 70px 0;
-  background: #0B2340; }
+  background: #0B2340;
+  overflow-x: hidden; }
   .works h2 {
     color: #fff; }
   .works .section-title {
@@ -321,7 +355,19 @@ h5 {
     .works .section-title img {
       position: absolute;
       top: -50px;
-      right: -150px; }
+      right: -150px;
+      animation: rotating 3s infinite; }
+
+.faq-img {
+  animation: rotating 3s infinite; }
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(25deg); }
+  100% {
+    transform: rotate(0deg); } }
 
 .wrap-example {
   max-width: 1180px;
@@ -363,6 +409,14 @@ h5 {
     margin-top: 40px; }
   .how-study .col-lg-3:first-child .study-number:after {
     display: none; }
+  .how-study.transition .col-lg-3:nth-child(1) .number {
+    animation: fadeIn 1s 1 normal forwards; }
+  .how-study.transition .col-lg-3:nth-child(2) .number {
+    animation: fadeIn 1s 0.5s 1 normal forwards; }
+  .how-study.transition .col-lg-3:nth-child(3) .number {
+    animation: fadeIn 1s 1s 1 normal forwards; }
+  .how-study.transition .col-lg-3:nth-child(4) .number {
+    animation: fadeIn 1s 1.5s 1 normal forwards; }
 
 .study-item {
   font-size: 18px;
@@ -393,7 +447,13 @@ h5 {
     font-weight: 500;
     font-size: 30px;
     position: relative;
-    z-index: 1; }
+    z-index: 1;
+    transform: scale(0); }
+
+@keyframes fadeIn {
+  0% { }
+  100% {
+    transform: scale(1); } }
 
 .price-study {
   padding: 80px 0;
@@ -678,6 +738,12 @@ footer {
   .container {
     max-width: 1210px; } }
 
+@media screen and (max-width: 1400px) {
+  .hero-img .hero-bg {
+    right: 0; }
+  .hero-img .hero-person {
+    right: 65px; } }
+
 @media screen and (max-width: 1280px) {
   .intro {
     padding: 30px 0; }
@@ -700,6 +766,11 @@ footer {
     margin-bottom: 15px; } }
 
 @media screen and (max-width: 1200px) {
+  .hero-img .hero-bg {
+    right: -147px;
+    bottom: 40%; }
+  .hero-img .hero-person {
+    right: 0; }
   .works .section-title img {
     top: -20px;
     max-width: 200px; }
@@ -729,6 +800,9 @@ footer {
     line-height: 34px; } }
 
 @media screen and (max-width: 991px) {
+  .hero-img .hero-bg {
+    right: -247px;
+    bottom: 32%; }
   .slider-nav {
     display: none; }
   .teachers-img {
@@ -861,6 +935,16 @@ footer {
     display: none; } }
 
 @media screen and (max-width: 767px) {
+  .hero-img .hero-bg {
+    right: -110px;
+    bottom: auto;
+    top: 0;
+    max-width: 300px; }
+  .hero-img .hero-person {
+    position: absolute;
+    top: 30px;
+    right: -191px;
+    max-width: 400px; }
   .teachers-img {
     max-width: 100px;
     right: -30px;
@@ -1006,6 +1090,15 @@ footer {
     line-height: 26px; } }
 
 @media screen and (max-width: 480px) {
+  .hero-img .hero-bg {
+    right: -80px;
+    bottom: auto;
+    top: 50px;
+    max-width: 200px; }
+  .hero-img .hero-person {
+    top: 54px;
+    right: -130px;
+    max-width: 270px; }
   .faq-item p {
     font-size: 16px;
     line-height: 20px; }

@@ -29,9 +29,10 @@
               <nav class="navbar navbar-expand-lg navbar-light">
                 <button class="navbar-toggler toggle-nav" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul>
-                    <li><a href="https://www.extralevel.ru/" target="_blank">Курсы</a></li>
-                  </ul>
+                  <!--ul
+                  li: a(href="https://www.extralevel.ru/" , target="_blank") Курсы
+                  
+                  -->
                   <div class="header-contact d-lg-none d-flex"><a class="primary-btn popup-modal" href="#want-study">Хочу учиться</a><a class="header-phone" href="tel: +74959662866">+7 (495) 966-28-66</a></div>
                 </div>
               </nav>
@@ -53,9 +54,8 @@
               </div>
             </div>
             <div class="col-md-5">
-              <div class="hero-img"><img class="hero-large" src="gamedev/images/hero-large.png">
-                <!--img(src=assetsUrl + "images/hero.png").hero-person-->
-                <!--img(src=assetsUrl + "images/hero-bg.png").hero-bg-->
+              <div class="hero-img">
+                <!--img(src=assetsUrl + "images/hero-large.png").hero-large--><img class="hero-person" src="gamedev/images/hero.png"><img class="hero-bg" src="gamedev/images/hero-bg.png">
               </div>
             </div>
             <div class="col-md-12">
@@ -106,17 +106,16 @@
             <h2>все курсы школы</h2>
           </div>
           <div class="row">
+            <div class="col-lg-4 col-md-6"><a href="https://www.extralevel.ru/unity" target="_blank">
+                <div class="course-item animated">
+                  <div class="course-img"><img src="gamedev/images/course-1.png"></div>
+                  <div class="course-desc">
+                    <h4>Разработка игр на Unity для начинающих</h4>
+                    <div class="course-time">Длительность: <span>3 месяца</span></div>
+                  </div>
+                </div></a></div>
             <div class="col-lg-4 col-md-6">
-              <div class="course-item">
-                <div class="course-img"><img src="gamedev/images/course-1.png"></div>
-                <div class="course-desc">
-                  <h4>Разработка игр на Unity для начинающих</h4>
-                  <div class="course-time">Длительность: <span>3 месяца</span></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="course-item">
+              <div class="course-item animated">
                 <div class="course-img"><img src="gamedev/images/course-2.png"></div>
                 <div class="course-desc">
                   <h4>Геймдизайн для начинающих</h4>
@@ -125,7 +124,7 @@
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="course-item">
+              <div class="course-item animated">
                 <div class="course-img"><img src="gamedev/images/course-3.png"></div>
                 <div class="course-desc">
                   <h4>3D-графика для начинающих</h4>
@@ -134,7 +133,7 @@
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="course-item">
+              <div class="course-item animated">
                 <div class="course-img"><img src="gamedev/images/course-4.png"></div>
                 <div class="course-desc">
                   <h4>Концепт-арт</h4>
@@ -143,7 +142,7 @@
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="course-item">
+              <div class="course-item animated">
                 <div class="course-img"><img src="gamedev/images/course-5.png"></div>
                 <div class="course-desc">
                   <h4>Разработка мобильных приложений iOS</h4>
@@ -152,7 +151,7 @@
               </div>
             </div>
             <div class="col-lg-4 col-md-6">
-              <div class="course-item">
+              <div class="course-item animated">
                 <div class="course-img"><img src="gamedev/images/course-6.png"></div>
                 <div class="course-desc">
                   <h4>Разработка мобильных приложений Android</h4>
@@ -167,11 +166,12 @@
       <section class="teachers">
         <div class="container position-relative">
           <div class="section-title">
-            <h2>Преподаватели — сотрудники ведущих компаний и крутые профессионалы</h2><img class="teachers-img" src="gamedev/images/teachers-img.png">
+            <h2>Преподаватели — сотрудники ведущих компаний и крутые профессионалы</h2>
+            <div class="teachers-img"><img src="gamedev/images/teachers-img.png"><img class="teachers-figure" src="gamedev/images/teachers-figure.png"></div>
           </div>
           <div class="row">
             <div class="col-md-4 col-8">
-              <div class="teacher-item">
+              <div class="teacher-item animated">
                 <div class="teacher-img"><img src="gamedev/images/teacher-1.jpg"></div>
                 <h5>Алексей Лукьянов</h5>
                 <p class="teacher-position">Lead Developer в Azur Games (Robot Warfare)</p>
@@ -179,7 +179,7 @@
               </div>
             </div>
             <div class="col-md-4 col-8">
-              <div class="teacher-item">
+              <div class="teacher-item animated">
                 <div class="teacher-img"><img src="gamedev/images/teacher-2.jpg"></div>
                 <h5>Игорь Клюкин</h5>
                 <p class="teacher-position">ex Chief Operating Officer в Pixonic (War Robots)</p>
@@ -187,7 +187,7 @@
               </div>
             </div>
             <div class="col-md-4 col-8">
-              <div class="teacher-item">
+              <div class="teacher-item animated">
                 <div class="teacher-img"><img src="gamedev/images/teacher-3.jpg"></div>
                 <h5>Леонид Маковский</h5>
                 <p class="teacher-position">eLearning Developer в Extra Level</p>
@@ -195,7 +195,7 @@
               </div>
             </div>
             <div class="col-md-4 col-8">
-              <div class="teacher-item">
+              <div class="teacher-item animated">
                 <div class="teacher-img"><img src="gamedev/images/teacher-4.jpg"></div>
                 <h5>Антон Кругляков</h5>
                 <p class="teacher-position">Enterprise Developer Relations Manager в компании Unity</p>
@@ -203,7 +203,7 @@
               </div>
             </div>
             <div class="col-md-4 col-8">
-              <div class="teacher-item">
+              <div class="teacher-item animated">
                 <div class="teacher-img"><img src="gamedev/images/teacher-5.jpg"></div>
                 <h5>Петр Вечкасов</h5>
                 <p class="teacher-position">Lead Artist в Crazy Panda</p>
@@ -211,7 +211,7 @@
               </div>
             </div>
             <div class="col-md-4 col-8">
-              <div class="teacher-item">
+              <div class="teacher-item animated">
                 <div class="teacher-img"><img src="gamedev/images/teacher-3.jpg"></div>
                 <h5>Леонид Маковский</h5>
                 <p class="teacher-position">eLearning Developer в Extra Level</p>
@@ -412,6 +412,8 @@
     <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <!-- Scroll Reveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <!-- Main script-->
     <script src="gamedev/js/main.js"></script>
   </body>
