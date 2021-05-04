@@ -287,7 +287,7 @@ h4 {
   transition: all .3s ease; }
   .course-item:hover {
     transform: scale(1.03) !important;
-    box-shadow: 6px 6px 20px 4px rgba(55, 84, 170, 0.7); }
+    box-shadow: 6px 6px 20px 4px rgba(0, 0, 0, 0.5); }
   .course-item .course-img {
     display: flex;
     align-items: center;
@@ -358,10 +358,10 @@ h5 {
       position: absolute;
       top: -50px;
       right: -150px;
-      animation: rotating 7s infinite; }
+      animation: rotating 9s infinite; }
 
 .faq-img {
-  animation: rotating 7s infinite; }
+  animation: rotating 9s infinite; }
 
 @keyframes rotating {
   0% {
@@ -777,7 +777,7 @@ button.mfp-close {
   background: url(../images/close.svg) no-repeat;
   background-size: cover;
   font-size: 0;
-  top: 15px;
+  top: 15px !important;
   right: 15px; }
 
 /*@media (min-width: 1440px) {
@@ -994,11 +994,15 @@ button.mfp-close {
   .title-popup {
     font-size: 20px;
     line-height: 26px; }
+  button.mfp-close {
+    width: 30px;
+    height: 30px; }
   .popup-form input {
     height: 34px;
-    margin-bottom: 30px;
     font-size: 16px;
     line-height: 22px; }
+  .popup-form .form-row {
+    margin-bottom: 30px; }
   .popup-form button[type="submit"] {
     padding: 6px 0;
     font-size: 14px;
@@ -1162,13 +1166,13 @@ button.mfp-close {
 
 @media screen and (max-width: 480px) {
   .hero-img .hero-bg {
-    right: -80px;
+    right: -100px;
     bottom: auto;
     top: 50px;
     max-width: 200px; }
   .hero-img .hero-person {
     top: 80px;
-    right: -149px;
+    right: -167px;
     max-width: 270px; }
   .faq-item p {
     font-size: 16px;
