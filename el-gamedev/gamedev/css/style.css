@@ -367,11 +367,7 @@ h5 {
     .works .section-title img {
       position: absolute;
       top: -50px;
-      right: -150px;
-      animation: rotating 13s infinite; }
-
-.faq-img {
-  animation: rotating 13s infinite; }
+      right: -150px; }
 
 @keyframes rotating {
   0% {
@@ -770,7 +766,8 @@ footer {
 .popup-form .error-label {
   position: absolute;
   font-size: 14px;
-  color: #DA0D57; }
+  color: #DA0D57;
+  display: none; }
 
 .popup-form + .personal-data {
   margin-top: 40px;
@@ -779,6 +776,13 @@ footer {
   line-height: 30px; }
   .popup-form + .personal-data a {
     color: #111F56; }
+
+.success {
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  display: none; }
 
 button.mfp-close {
   width: 44px;

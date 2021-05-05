@@ -24,6 +24,16 @@ $(function () {
         'transform': 'rotate(' + ($(window).scrollTop() / $('.teachers').height() * 290) + 'deg)'
     });
 
+    $('.example-img').css({
+        //'transform': 'rotate(' + ($(window).scrollTop() / $('.teachers').height() * 30) + 'deg)' , 'left' : $(window).scrollTop()*0.07 , 'top' : $(window).scrollTop()*0.01
+        'transform': 'rotate(' + ($(window).scrollTop() / ($('.works').height() / 0.2) * 30) + 'deg)'
+    });
+
+    $('.faq-img').css({
+        //'transform': 'rotate(' + ($(window).scrollTop() / $('.teachers').height() * 30) + 'deg)' , 'left' : $(window).scrollTop()*0.07 , 'top' : $(window).scrollTop()*0.01
+        'transform': 'rotate(' + ($(window).scrollTop() / ($('.faq').height() / 0.2) * 240) + 'deg)'
+    });
+
   });
 
   // Intro effect
@@ -95,6 +105,154 @@ $(function () {
     fixedContentPos: false,
     modal: false
   });
+
+  /**
+   *
+   * Работа с формами отправки данных пользователя в АМО
+   * Парсим адресную строку на наличие UTM меток
+   * Если метки utm_source в адресной строке нет, используем Referer
+   * Создаем JSON из данных в скрытых полях формы и utm меток
+   * Отправляем форму в АМО
+   */
+
+
+  function getParameterByName(paramName) {
+    var name = paramName.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+    var results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+
+
+  var utm_source = getParameterByName('utm_source') || document.referrer;
+  var utm_content = getParameterByName('utm_content');
+  var utm_medium = getParameterByName('utm_medium');
+  var utm_campaign = getParameterByName('utm_campaign');
+  var utm_term = getParameterByName('utm_term');
+
+  var getFormFieldVal = function ($form, filed) {
+    var el = $form.find( $('[name='+filed+' ]'));
+     return el.val();
+  }
+
+  var createAMOJSON = function  (form) {
+    var data = {
+      "name": getFormFieldVal(form, "name"),
+      "phone": getFormFieldVal(form, "phone"),
+      "email": getFormFieldVal(form, "email"),
+      "customFields": {
+        "lead": [
+          {
+            "field_id": 1052883,
+            "values": [
+              {
+                "value": utm_source
+              }
+            ]
+          },
+          {
+            "field_id": 1052889,
+            "values": [
+              {
+                "value": utm_content
+              }
+            ]
+          },
+          {
+            "field_id": 1052891,
+            "values": [
+              {
+                "value": utm_campaign
+              }
+            ]
+          },
+          {
+            "field_id": 1052893,
+            "values": [
+              {
+                "value": utm_medium
+              }
+            ]
+          },
+          {
+            "field_id": 1052895,
+            "values": [
+              {
+                "value": utm_term
+              }
+            ]
+          },
+          {
+            "field_id": 1052887,
+            "values": [
+              {
+                "value": getFormFieldVal(form, "page")
+              }
+            ]
+          },
+          {
+            "field_id": 1046103,
+            "values": [
+              {
+                "enum_id": parseInt(getFormFieldVal(form, "source"))
+              }
+            ]
+          },
+          {
+            "field_id": 307293,
+            "values": [
+              {
+                "enum_id": parseInt(getFormFieldVal(form, "profession"))
+              }
+            ]
+          },
+          {
+            "field_id": 307395,
+            "values": [
+              {
+                "enum_id": parseInt(getFormFieldVal(form, "course"))
+              }
+            ]
+          }
+        ]
+      }
+    }
+
+    return JSON.stringify(data)
+  }
+
+  $('form[name="getCourse"] input[name="phone"]').keypress(function (e) {
+    if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+      return false;
+    }
+   });
+
+  var $getCorseForm = $('form[name="getCourse"]');
+
+  if ($getCorseForm.length) {
+    $getCorseForm.each(function () {
+      var $this = $(this);
+
+      $this.submit(function(e) {
+        e.preventDefault();
+
+        $.ajax({
+          contentType: "application/json",
+          type: $this.attr('method'),
+          url: $this.attr('action'),
+          data: createAMOJSON($this)
+        }).done(function() {
+          console.log('success');
+          $('.success').show();
+          $getCorseForm.trigger('reset');
+          // TODO по событию success вывести сообщение об успешной отправки формы
+        }).fail(function() {
+          console.log('fail');
+          // TODO по событию fail вывести сообщение об ошибке
+        });
+      });
+    })
+  }
 
   // Animation when scroll page
   /*var slideUp = {

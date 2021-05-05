@@ -406,17 +406,24 @@
     </footer>
     <div class="mfp-hide white-popup-block" id="want-study">
       <div class="title-popup">Записаться на курс или получить консультацию</div>
-      <form class="popup-form">
-        <div class="form-row error">
-          <input type="text" name="" placeholder="ФИО"><span>*</span>
+      <div class="success">Спасибо! Менеджер скоро с вами свяжется</div>
+      <form class="popup-form" name="getCourse" method="post" action="http://extralevel-amo-service.d-01.srvdev.ru/applications" id="getCourse">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="ФИО" required><span>*</span>
           <label class="error-label">Некорректные данные</label>
         </div>
         <div class="form-row">
-          <input type="phone" name="" placeholder="Телефон"><span>*</span>
+          <input type="phone" name="phone" placeholder="Телефон" required><span>*</span>
+          <label class="error-label">Некорректные данные</label>
         </div>
         <div class="form-row">
-          <input type="email" name="" placeholder="Email">
+          <input type="email" name="email" placeholder="Email" required>
+          <label class="error-label">Некорректные данные</label>
         </div>
+        <input name="profession" type="hidden" value="159715">
+        <input name="course" type="hidden" value="740185">
+        <input name="page" type="hidden" value="unity">
+        <input name="source" type="hidden" value="741895">
         <div class="form-row text-center">
           <button class="primary-btn brand-btn" type="submit">Отправить</button>
         </div>
