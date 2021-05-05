@@ -214,7 +214,16 @@ nav a {
 
 .hero-img .hero-large {
   position: absolute;
-  right: -100px; }
+  right: -100px;
+  animation: translate 6s infinite; }
+
+@keyframes translate {
+  0% {
+    top: 0; }
+  50% {
+    top: -40px; }
+  100% {
+    top: 0; } }
 
 @keyframes opacity {
   0% {
@@ -337,7 +346,8 @@ h5 {
 .teacher-img {
   max-width: 280px;
   margin-bottom: 10px;
-  overflow: hidden; }
+  overflow: hidden;
+  background: #F0F0F0; }
   .teacher-img img {
     transition: all .3s ease; }
 
@@ -358,10 +368,10 @@ h5 {
       position: absolute;
       top: -50px;
       right: -150px;
-      animation: rotating 9s infinite; }
+      animation: rotating 13s infinite; }
 
 .faq-img {
-  animation: rotating 9s infinite; }
+  animation: rotating 13s infinite; }
 
 @keyframes rotating {
   0% {
@@ -766,10 +776,9 @@ footer {
   margin-top: 40px;
   text-align: center;
   font-size: 20px;
-  line-height: 30px;
-  color: #A4A6AD; }
+  line-height: 30px; }
   .popup-form + .personal-data a {
-    color: #A4A6AD; }
+    color: #111F56; }
 
 button.mfp-close {
   width: 44px;
@@ -819,6 +828,8 @@ button.mfp-close {
     margin-bottom: 15px; } }
 
 @media screen and (max-width: 1200px) {
+  .hero-img .hero-large {
+    right: -260px; }
   .hero-img .hero-bg {
     right: -94px;
     bottom: 315px; }

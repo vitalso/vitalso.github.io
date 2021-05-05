@@ -26,6 +26,18 @@ $(function () {
 
   });
 
+  // Intro effect
+  var movementStrength = 25;
+  var height = movementStrength / $(window).height();
+  var width = movementStrength / $(window).width();
+  $(".intro").mousemove(function(e){
+    var pageX = e.pageX - ($(window).width() / 2);
+    var pageY = e.pageY - ($(window).height() / 2);
+    var newvalueX = width * pageX * -1;
+    var newvalueY = height * pageY * -1;
+    $('.hero-large').css({"transform" : "translateX(" + newvalueX +"px"});
+  });
+
   // Example of works slider
   $('.example-slider').slick({
     infinite: true,
