@@ -222,10 +222,9 @@ $(function () {
   }
 
   $('form[name="getCourse"] input[name="phone"]').keypress(function (e) {
-    if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-      return false;
-    }
-   });
+    keys = ['0','1','2','3','4','5','6','7','8','9','+']
+    return keys.indexOf(event.key) > -1
+  });
 
   var $getCorseForm = $('form[name="getCourse"]');
 
