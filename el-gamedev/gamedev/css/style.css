@@ -748,6 +748,9 @@ footer {
   .popup-form input::placeholder {
     font-weight: 400;
     color: #A4A6AD; }
+  .popup-form input:focus + .placeholder, .popup-form input.active + .placeholder {
+    font-size: 14px;
+    transform: translateY(-25px); }
 
 .popup-form .form-row {
   margin-bottom: 40px;
@@ -777,6 +780,17 @@ footer {
   color: #A4A6AD; }
   .popup-form + .personal-data a {
     color: #A4A6AD; }
+
+.popup-form .placeholder {
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: #A4A6AD;
+  transition: all .3s ease;
+  pointer-events: none; }
 
 .success {
   font-size: 20px;

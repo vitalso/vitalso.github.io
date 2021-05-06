@@ -106,6 +106,15 @@ $(function () {
     modal: false
   });
 
+  // Popup form text field effect
+  $('.popup-form input').on('blur' , function(){
+    if ($(this).val().length != 0) {
+      $(this).addClass('active');
+    } else {
+      $(this).removeClass('active');
+    }
+  });
+
   /**
    *
    * Работа с формами отправки данных пользователя в АМО
