@@ -207,14 +207,14 @@ $(function () {
               }
             ]
           },
-          {
+          /*{
             "field_id": 307293,
             "values": [
               {
                 "enum_id": parseInt(getFormFieldVal(form, "profession"))
               }
             ]
-          },
+          },*/
           {
             "field_id": 307395,
             "values": [
@@ -242,6 +242,9 @@ $(function () {
       var $this = $(this);
 
       $this.submit(function(e) {
+
+        $this.find('button[type="submit"]').attr('disabled' , 'disabled');
+
         e.preventDefault();
 
         $.ajax({
@@ -253,6 +256,8 @@ $(function () {
           console.log('success');
           $('.success').show();
           $getCorseForm.trigger('reset');
+          $getCorseForm.find('button[type="submit"]').removeAttr('disabled');
+          $getCorseForm.find('input').removeClass('active');
           // TODO по событию success вывести сообщение об успешной отправки формы
         }).fail(function() {
           console.log('fail');

@@ -820,10 +820,8 @@ button.mfp-close {
     max-width: 1210px; } }
 
 @media screen and (max-width: 1400px) {
-  .hero-img .hero-bg {
-    right: 0; }
-  .hero-img .hero-person {
-    right: 19px; } }
+  .hero-img .hero-large {
+    right: -160px; } }
 
 @media screen and (max-width: 1280px) {
   .intro {
