@@ -258,6 +258,8 @@ $(function () {
           $getCorseForm.trigger('reset');
           $getCorseForm.find('button[type="submit"]').removeAttr('disabled');
           $getCorseForm.find('input').removeClass('active');
+          $getCorseForm.hide();
+          $getCorseForm.next('p').hide();
           // TODO по событию success вывести сообщение об успешной отправки формы
         }).fail(function() {
           console.log('fail');
