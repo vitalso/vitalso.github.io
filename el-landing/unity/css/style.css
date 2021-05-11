@@ -1211,7 +1211,30 @@ button.mfp-close {
   .hero-img .hero-figure {
     max-width: 70px; }
   .primary-btn.brand-btn + .additional-info {
-    display: none; } }
+    display: none; }
+  .white-popup-block {
+    max-width: 340px;
+    padding: 50px 20px; }
+  .title-popup {
+    font-size: 20px;
+    line-height: 26px; }
+  .popup-form input {
+    height: 34px;
+    font-size: 16px;
+    line-height: 22px; }
+  .popup-form .form-row {
+    margin-bottom: 30px; }
+  .popup-form button[type="submit"] {
+    padding: 8px 0;
+    font-size: 14px;
+    width: 100%;
+    text-transform: uppercase; }
+  .popup-form + .personal-data {
+    font-size: 14px;
+    line-height: 20px; }
+  button.mfp-close {
+    width: 30px;
+    height: 30px; } }
 
 @media screen and (max-width: 480px) {
   .intro .sale {
