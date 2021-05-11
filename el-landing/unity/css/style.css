@@ -605,10 +605,21 @@ h3 {
   line-height: 40px;
   margin-bottom: 40px; }
 
+.free-consult .form-row {
+  margin-bottom: 20px; }
+  .free-consult .form-row.error .error-label {
+    display: block; }
+  .free-consult .form-row.error input {
+    border-color: #DA0D57; }
+  .free-consult .form-row .error-label {
+    position: absolute;
+    font-size: 14px;
+    color: #DA0D57;
+    display: none; }
+
 .free-consult input {
   width: 100%;
   height: 50px;
-  margin-bottom: 20px;
   padding-left: 20px;
   border: 1px solid #000000;
   border-radius: 5px; }
@@ -618,7 +629,7 @@ h3 {
 .free-consult button[type="submit"] {
   width: 100%;
   height: 50px;
-  margin: 10px 0 35px 0;
+  margin: 10px 0 25px 0;
   text-align: center;
   font-size: 20px;
   line-height: 32px;
@@ -629,8 +640,20 @@ h3 {
   .free-consult button[type="submit"]:hover {
     background: #001f5a; }
 
+.success {
+  font-size: 20px;
+  line-height: 42px;
+  text-align: center;
+  margin-bottom: 20px;
+  display: none; }
+  .success span {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+    display: block;
+    color: #353535; }
+
 .personal-data {
-  margin-top: -70px;
   font-size: 16px;
   line-height: 24px;
   color: #A1A1A1;
@@ -768,20 +791,87 @@ footer {
 .white-popup-block {
   position: relative;
   background: #FFF;
-  padding: 24px 40px;
+  padding: 70px 90px;
   width: auto;
-  max-width: 580px;
-  margin: 20px auto; }
+  max-width: 720px;
+  margin: 20px auto;
+  border-top: 16px solid #1B44DA; }
   .white-popup-block .personal-data {
     position: relative;
     z-index: 99999; }
+  .white-popup-block .form-row {
+    margin-bottom: 30px; }
 
 .title-popup {
-  font-size: 28px;
-  line-height: 32px;
+  font-size: 36px;
+  line-height: 48px;
   margin-bottom: 40px;
+  text-transform: uppercase;
   font-weight: 700;
   font-family: 'Roboto'; }
+
+.popup-form input {
+  width: 100%;
+  height: 50px;
+  font-size: 24px;
+  line-height: 34px;
+  color: #353535;
+  border-bottom: 1px solid #A4A6AD; }
+  .popup-form input::placeholder {
+    font-weight: 400;
+    color: #A4A6AD; }
+  .popup-form input:focus + .placeholder, .popup-form input.active + .placeholder {
+    font-size: 14px;
+    transform: translateY(-25px); }
+
+.popup-form .form-row {
+  margin-bottom: 40px;
+  position: relative; }
+  .popup-form .form-row.error .error-label {
+    display: block; }
+  .popup-form .form-row.error input {
+    border-color: #DA0D57; }
+  .popup-form .form-row span {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font-size: 24px;
+    color: #DA0D57; }
+
+.popup-form .error-label {
+  position: absolute;
+  font-size: 14px;
+  color: #DA0D57;
+  display: none; }
+
+.popup-form + .personal-data {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+  color: #A4A6AD; }
+  .popup-form + .personal-data a {
+    color: #A4A6AD; }
+
+.popup-form .placeholder {
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: #A4A6AD;
+  transition: all .3s ease;
+  pointer-events: none; }
+
+button.mfp-close {
+  width: 44px;
+  height: 44px;
+  background: url(../images/close.svg) no-repeat;
+  background-size: cover;
+  font-size: 0;
+  top: 15px !important;
+  right: 15px; }
 
 @media (min-width: 1400px) {
   .container {

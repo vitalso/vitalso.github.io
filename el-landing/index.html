@@ -313,15 +313,32 @@
                   <p>Осталось: <span>12 мест</span></p>
                 </div>
                 <div class="title-form">Записаться на курс или получить бесплатную консультацию</div>
-                <!--form.free-consult
-                .form-row: input(type="text" , name="" , placeholder="Имя и фамилия")
-                .form-row: input(type="phone" , name="" , placeholder="Телефон")
-                .form-row: input(type="email" , name="" , placeholder="Email")
-                .form-row: button(type="submit") Записаться
+                <div class="success"><span>Спасибо за заявку!</span> Менеджер скоро с вами свяжется</div>
+                <form class="free-consult" name="getCourse" method="post" action="http://extralevel-amo-service.d-01.srvdev.ru/applications" id="getCourse">
+                  <div class="form-row">
+                    <input type="text" name="name" placeholder="Имя и фамилия" required>
+                    <label class="error-label">Некорректные данные</label>
+                  </div>
+                  <div class="form-row">
+                    <input type="phone" name="phone" placeholder="Телефон" required>
+                    <label class="error-label">Некорректные данные</label>
+                  </div>
+                  <div class="form-row">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <label class="error-label">Некорректные данные</label>
+                  </div>
+                  <input name="course" type="hidden" value="740185">
+                  <input name="page" type="hidden" value="Разработка игр на Unity для начинающих">
+                  <input name="source" type="hidden" value="741895">
+                  <div class="form-row">
+                    <button type="submit">Записаться</button>
+                  </div>
+                </form>
+                <!--.free-consult
+                <script id="amoforms_script_769354" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1618840462"></script>
+                <script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"769354",hash:"206fd15000bf386dbb812f16193b2c3a",locale:"ru"})}(window,0,"amo_forms_","params","load");</script>
+                
                 -->
-                <div class="free-consult"><script id="amoforms_script_769354" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1618840462"></script>
-<script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"769354",hash:"206fd15000bf386dbb812f16193b2c3a",locale:"ru"})}(window,0,"amo_forms_","params","load");</script>
-                </div>
                 <p class="personal-data">Нажимая на кнопку, я соглашаюсь на <a href="https://www.extralevel.ru/landing/privacy_policy.pdf" , target="_blank">обработку персональных данных.</a></p>
               </div>
             </div>
@@ -391,8 +408,29 @@
       </div>
     </footer>
     <div class="mfp-hide white-popup-block" id="want-study">
-      <div class="title-popup">Записаться на курс или получить консультацию</div><script id="amoforms_script_770383" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1618990975"></script>
-<script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"770383",hash:"11afe7bfa7a53cf77ea45add8b1efa12",locale:"ru"})}(window,0,"amo_forms_","params","load");</script>
+      <div class="title-popup">ЗАПИСАТЬСЯ НА КУРС ИЛИ ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</div>
+      <div class="success"><span>Спасибо за заявку!</span> Менеджер скоро с вами свяжется</div>
+      <form class="popup-form" name="getCourse-popup" method="post" action="http://extralevel-amo-service.d-01.srvdev.ru/applications" id="getCourse-popup">
+        <div class="form-row">
+          <input type="text" name="name" required><b class="placeholder">Имя</b>
+          <label class="error-label">Некорректные данные</label>
+        </div>
+        <div class="form-row">
+          <input type="phone" name="phone" required><b class="placeholder">Телефон</b>
+          <label class="error-label">Некорректные данные</label>
+        </div>
+        <div class="form-row">
+          <input type="email" name="email" required><b class="placeholder">Email</b>
+          <label class="error-label">Некорректные данные</label>
+        </div>
+        <input name="course" type="hidden" value="740185">
+        <input name="page" type="hidden" value="Разработка игр на Unity для начинающих">
+        <input name="source" type="hidden" value="741895">
+        <div class="form-row text-center">
+          <button class="primary-btn brand-btn" type="submit">Записаться</button>
+        </div>
+      </form>
+      <p class="personal-data">Нажимая на кнопку, я соглашаюсь <br> на <a href="https://www.extralevel.ru/landing/privacy_policy.pdf" ,="" target="_blank">обработку персональных данных.</p>
     </div>
     <!-- jQuery & Bootstrap scripts-->
     <!-- jQuery-->
