@@ -163,12 +163,8 @@ nav a {
     margin-bottom: 30px; }
     .intro h1 span {
       color: #1AFF00; }
-  .intro p {
-    max-width: 590px;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 34px;
-    margin-bottom: 50px; }
+  .intro .brand-btn {
+    margin-top: 60px; }
 
 .brand-btn {
   padding: 20px 42px;
@@ -185,7 +181,7 @@ nav a {
     background: #001f5a; }
 
 .additional-info {
-  margin: 25px 0 0 0;
+  margin: 120px 0 0 0;
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -241,6 +237,10 @@ nav a {
   margin-bottom: 40px; }
   .section-title h2 {
     text-transform: uppercase; }
+  .section-title p {
+    margin-top: -50px;
+    font-size: 24px;
+    line-height: 34px; }
 
 h2 {
   font-weight: 700;
@@ -648,7 +648,7 @@ footer {
   margin-bottom: 30px; }
 
 .footer-nav {
-  margin: 70px 0 0 0;
+  margin: 0 0 35px 0;
   padding: 0; }
   .footer-nav li {
     margin: 0 0 10px 0; }
@@ -721,7 +721,7 @@ footer {
 .white-popup-block {
   position: relative;
   background: #FFF;
-  padding: 70px 90px;
+  padding: 30px 90px;
   width: auto;
   max-width: 720px;
   margin: 20px auto;
@@ -753,7 +753,7 @@ footer {
     transform: translateY(-25px); }
 
 .popup-form .form-row {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   position: relative; }
   .popup-form .form-row.error .error-label {
     display: block; }
@@ -773,7 +773,6 @@ footer {
   display: none; }
 
 .popup-form + .personal-data {
-  margin-top: 40px;
   text-align: center;
   font-size: 20px;
   line-height: 30px;
@@ -887,6 +886,8 @@ button.mfp-close {
     line-height: 34px; } }
 
 @media screen and (max-width: 991px) {
+  .section-title p {
+    margin-top: -20px; }
   .hero-img .hero-bg {
     right: -193px;
     bottom: 232px; }
@@ -1016,12 +1017,13 @@ button.mfp-close {
     margin-bottom: 30px; }
   .social-nav {
     margin-top: 73px; }
-  .footer-nav {
-    margin: 65px 0 0 0; }
   .program-effect {
     display: none; } }
 
 @media screen and (max-width: 767px) {
+  .section-title p {
+    font-size: 16px;
+    line-height: 25px; }
   .white-popup-block {
     max-width: 340px;
     padding: 50px 20px; }
