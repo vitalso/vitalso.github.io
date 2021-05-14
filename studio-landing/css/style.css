@@ -320,7 +320,8 @@ h4 {
       border-bottom: 5px solid #0077B6; }
 
 .talk .section-title {
-  text-align: left; }
+  text-align: left;
+  margin-bottom: 50px; }
 
 .wrap-talk {
   max-width: 510px;
@@ -450,7 +451,13 @@ footer {
     margin-top: 30px; }
   .bottom-nav li {
     margin: 20px 0;
-    display: block; } }
+    display: block; }
+  .talk .col-md-6:first-child {
+    text-align: center; }
+    .talk .col-md-6:first-child img {
+      max-width: 50%; }
+  .talk .section-title {
+    margin-top: 30px; } }
 
 @media screen and (max-width: 480px) {
   h1, h2 {
