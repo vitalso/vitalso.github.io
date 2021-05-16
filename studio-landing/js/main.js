@@ -47,4 +47,12 @@ $(function () {
     ]
   });
 
+  // Play after click
+  $('.video button').click(function(e){
+    $('.video iframe')[0].src += '&autoplay=1';
+    $('.img-cover').hide();
+    $(this).hide();
+    e.preventDefault();
+  });
+
 });

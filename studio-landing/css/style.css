@@ -297,7 +297,9 @@ h4 {
   line-height: 36px; }
 
 .demo .video {
+  height: 100vh;
   max-width: 996px;
+  max-height: 560px;
   margin: 30px auto 0 auto;
   position: relative; }
   .demo .video button {
@@ -305,7 +307,12 @@ h4 {
     top: 50%;
     left: 50%;
     background: transparent;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    z-index: 1; }
+  .demo .video .img-cover {
+    position: absolute; }
+  .demo .video iframe {
+    height: 100%; }
 
 .why {
   background: #D2E5F0; }
