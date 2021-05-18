@@ -297,9 +297,7 @@ h4 {
   line-height: 36px; }
 
 .demo .video {
-  height: 100vh;
   max-width: 996px;
-  max-height: 560px;
   margin: 30px auto 0 auto;
   position: relative; }
   .demo .video button {
@@ -310,9 +308,13 @@ h4 {
     transform: translate(-50%, -50%);
     z-index: 1; }
   .demo .video .img-cover {
-    position: absolute; }
+    position: relative;
+    z-index: 1; }
   .demo .video iframe {
-    height: 100%; }
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%; }
 
 .why {
   background: #D2E5F0; }
@@ -467,9 +469,31 @@ footer {
     margin-top: 30px; } }
 
 @media screen and (max-width: 480px) {
+  .intro h1 {
+    font-size: 22px;
+    line-height: 30px;
+    padding-right: 90px;
+    font-weight: 600; }
+  .intro h6 {
+    padding-right: 90px;
+    font-weight: 600; }
   h1, h2 {
     font-size: 28px;
     line-height: 40px; }
   .stream-cover p {
     top: 30px;
-    left: 30px; } }
+    left: 30px; }
+  .padding-60 {
+    padding: 30px 0; }
+  .stream-cover {
+    margin: 30px 0; }
+  .services-item {
+    margin-top: 30px;
+    margin-bottom: 0; }
+  .why-item {
+    margin-top: 30px; }
+  .talk .col-md-6:first-child img {
+    max-height: 350px;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover; } }

@@ -50,7 +50,7 @@ $(function () {
   // Play after click
   $('.video button').click(function(e){
     $('.video iframe')[0].src += '&autoplay=1';
-    $('.img-cover').hide();
+    $('.img-cover').css('opacity' , 0);
     $(this).hide();
     e.preventDefault();
   });
