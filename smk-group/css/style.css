@@ -405,25 +405,33 @@ h4 {
 .bottom-slider-arrows {
   position: absolute;
   top: 14px;
-  right: 20px; }
+  right: 20px;
+  height: 32px;
+  border-radius: 22px;
+  overflow: hidden; }
   .bottom-slider-arrows:after {
     content: "";
     position: absolute;
-    top: 0;
+    top: 5px;
     left: 50%;
     width: 1px;
     height: 22px;
     background: rgba(255, 255, 255, 0.2); }
   .bottom-slider-arrows button {
+    width: 40px;
+    height: 32px;
     background: transparent;
-    outline: none; }
+    outline: none;
+    transition: all .3s ease; }
     .bottom-slider-arrows button svg {
-      width: 10px;
+      width: 18px;
       height: 18px;
-      stroke: #fff; }
+      fill: #fff;
+      margin-top: -2px; }
     .bottom-slider-arrows button.btn-next {
-      margin-left: 18px;
       transform: scale(-1, 1); }
+    .bottom-slider-arrows button:hover {
+      background: rgba(255, 255, 255, 0.4); }
   .bottom-slider-arrows.background {
     width: 80px;
     height: 32px;
@@ -439,6 +447,8 @@ h4 {
       width: 40px;
       margin: 0;
       background: rgba(255, 255, 255, 0.3); }
+      .bottom-slider-arrows.background button:hover {
+        background: rgba(255, 255, 255, 0.4); }
   .bottom-slider-arrows.border {
     border: 1px solid rgba(0, 0, 0, 0.1); }
     .bottom-slider-arrows.border:after {
@@ -448,6 +458,8 @@ h4 {
       .bottom-slider-arrows.border button svg {
         fill: #000;
         stroke: #000; }
+      .bottom-slider-arrows.border button:hover {
+        background: #E3E3E3; }
 
 .wrap-service {
   width: 100%;
