@@ -466,7 +466,9 @@ footer {
     .talk .col-md-6:first-child img {
       max-width: 50%; }
   .talk .section-title {
-    margin-top: 30px; } }
+    margin-top: 30px; }
+  .clients-slider img {
+    margin: 0 auto; } }
 
 @media screen and (max-width: 480px) {
   .intro h1 {
@@ -496,4 +498,8 @@ footer {
     max-height: 350px;
     width: 100%;
     max-width: 100%;
-    object-fit: cover; } }
+    object-fit: cover; }
+  .slick-prev {
+    left: 0; }
+  .slick-next {
+    right: 0; } }

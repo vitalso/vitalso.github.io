@@ -40,6 +40,10 @@ $(function () {
       {
         breakpoint: 480,
         settings: {
+          centerMode: true,
+          centerPadding: '0px',
+          variableWidth: false,
+          infinite: true,
           slidesToShow: 1,
           slidesToScroll: 1
         }
