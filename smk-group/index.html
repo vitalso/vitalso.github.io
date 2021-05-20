@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <!--link(rel='stylesheet' , href='css/jquery.pagepiling.css')-->
+    <!--link(rel='stylesheet' , href='css/mk_smoothScroll.css')-->
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -64,7 +64,7 @@
       </div>
     </header>
     <!-- Main page start-->
-    <main id="pagescroll">
+    <main>
       <ul class="section-nav">
         <li class="active"><span></span></li>
         <li><span></span></li>
@@ -74,7 +74,7 @@
         <li><span></span></li>
         <li><span></span></li>
       </ul>
-      <div class="section section-1">
+      <div class="section section-1 mk_scroller_block">
         <div class="wrap-section">
           <div class="section-description">
             <h1>Лидеры в мясопереработке производстве колбас мясных деликатесах</h1><a class="primary-btn" href="#">
@@ -83,28 +83,30 @@
               </svg>обратная cвязь</a>
           </div>
         </div>
-        <ul class="section-bottom-nav">
-          <li><a href="#">Трудоустройство <br> в SMK</a></li>
-          <li><a href="#">Cоциальная <br> ответсвенность</a></li>
-          <li><a href="#">Ключевые <br> показатели</a></li>
-          <li><span>Документы</span>
-            <div class="bottom-nav-slider"><a href="#">Фінансова звітність ТОВ “САЛТІВСЬКИЙ М’ЯСОКОМБІНАТ”</a><a href="#">Фінансова звітність</a><a href="#">ТОВ “САЛТІВСЬКИЙ М’ЯСОКОМБІНАТ”</a></div>
-            <div class="bottom-slider-arrows" id="bottom-slider">
-              <button class="btn-prev">
-                <svg>
-                  <use xlink:href="images/sprite.svg#icon-slider-arrow"></use>
-                </svg>
-              </button>
-              <button class="btn-next">
-                <svg>
-                  <use xlink:href="images/sprite.svg#icon-slider-arrow"></use>
-                </svg>
-              </button>
-            </div>
-          </li>
-        </ul>
+        <div class="section-bottom-nav">
+          <ul class="section-bottom-wrap">
+            <li><a href="#">Трудоустройство <br> в SMK</a></li>
+            <li><a href="#">Cоциальная <br> ответсвенность</a></li>
+            <li><a href="#">Ключевые <br> показатели</a></li>
+            <li><span>Документы</span>
+              <div class="bottom-nav-slider"><a href="#">Фінансова звітність ТОВ “САЛТІВСЬКИЙ М’ЯСОКОМБІНАТ”</a><a href="#">Фінансова звітність</a><a href="#">ТОВ “САЛТІВСЬКИЙ М’ЯСОКОМБІНАТ”</a></div>
+              <div class="bottom-slider-arrows" id="bottom-slider">
+                <button class="btn-prev">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#icon-slider-arrow"></use>
+                  </svg>
+                </button>
+                <button class="btn-next">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#icon-slider-arrow"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="section section-2">
+      <div class="section section-2 mk_scroller_block">
         <div class="wrap-section d-flex">
           <div class="section-description">
             <div class="section-title">O НАС</div>
@@ -148,7 +150,7 @@
           </div>
         </div>
       </div>
-      <div class="section section-3">
+      <div class="section section-3 mk_scroller_block">
         <div class="wrap-section">
           <div class="section-description">
             <div class="section-title">КЛЮЧЕВЫЕ <br> ПОКАЗАТЕЛИ</div>
@@ -190,9 +192,9 @@
           </div>
         </div>
       </div>
-      <div class="section section-4">
+      <div class="section section-4 mk_scroller_block">
         <div class="wrap-section">
-          <div class="section-title text-center">Предприятия SMK</div>
+          <div class="section-title text-center">ПРЕДПРИЯТИЯ SMK</div>
           <div class="company-list">
             <li><img src="images/company/company-1.png"><a class="company-link" href="#">
                 <svg>
@@ -216,7 +218,7 @@
           </div>
         </div>
       </div>
-      <div class="section section-5">
+      <div class="section section-5 mk_scroller_block">
         <div class="wrap-section">
           <div class="section-description">
             <div class="section-title">ВИДЫ <br> ДЕЯТЕЛЬНОСТИ</div>
@@ -232,7 +234,7 @@
         </div>
         <div class="activity-img"><img src="images/activity-1.jpg"></div>
       </div>
-      <div class="section section-6">
+      <div class="section section-6 mk_scroller_block">
         <div class="wrap-section">
           <div class="section-title text-center">ГЛАВНЫЕ НОВОСТИ</div>
           <div class="bottom-slider-arrows background border" id="news-nav">
@@ -247,17 +249,17 @@
               </svg>
             </button>
           </div>
-          <div class="news-wrap">
-            <div class="news-slider">
-              <div class="news-item"><a class="news-link" href="#"><img src="images/news/news-1.jpg">
-                  <h4>«SMK Group» выкупила курьерское подразделение производителя  электробайков «Delfast»</h4></a><a class="news-tag" href="#">Актуальное</a></div>
-              <div class="news-item"><a class="news-link" href="#"><img src="images/news/news-2.jpg">
-                  <h4>«SMK Group» выкупила курьерское подразделение производителя  электробайков «Delfast»</h4></a><a class="news-tag" href="#">Актуальное</a></div>
-              <div class="news-item"><a class="news-link" href="#"><img src="images/news/news-3.jpg">
-                  <h4>«SMK Group» выкупила курьерское подразделение производителя  электробайков «Delfast»</h4></a><a class="news-tag" href="#">Актуальное</a></div>
-              <div class="news-item"><a class="news-link" href="#"><img src="images/news/news-3.jpg">
-                  <h4>«SMK Group» выкупила курьерское подразделение производителя  электробайков «Delfast»</h4></a><a class="news-tag" href="#">Актуальное</a></div>
-            </div>
+        </div>
+        <div class="news-wrap">
+          <div class="news-slider">
+            <div class="news-item"><a class="news-link" href="#"><img src="images/news/news-1.jpg">
+                <h4>«SMK Group» выкупила курьерское подразделение производителя  электробайков «Delfast»</h4></a><a class="news-tag" href="#">Актуальное</a></div>
+            <div class="news-item"><a class="news-link" href="#"><img src="images/news/news-2.jpg">
+                <h4>«SMK Group» выкупила курьерское подразделение производителя  электробайков «Delfast»</h4></a><a class="news-tag" href="#">Актуальное</a></div>
+            <div class="news-item"><a class="news-link" href="#"><img src="images/news/news-3.jpg">
+                <h4>«SMK Group» выкупила курьерское подразделение производителя  электробайков «Delfast»</h4></a><a class="news-tag" href="#">Актуальное</a></div>
+            <div class="news-item"><a class="news-link" href="#"><img src="images/news/news-3.jpg">
+                <h4>«SMK Group» выкупила курьерское подразделение производителя  электробайков «Delfast»</h4></a><a class="news-tag" href="#">Актуальное</a></div>
           </div>
           <div class="news-feed">
             <div class="feed-header">
@@ -285,11 +287,14 @@
               <div class="feed-item">
                 <div class="feed-item-date">18.11.20</div><a href="#">В магазинах фірмової торгівлі Бердянського м`ясокомбінату ці вимоги дотримані, про що свідчить відео</a>
               </div>
-            </div>
+            </div><a class="inline-btn dark" href="#"><span>
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                </svg></span>ВСЕ НОВОСТИ</a>
           </div>
         </div>
       </div>
-      <div class="section section-7">
+      <div class="section section-7 mk_scroller_block">
         <div class="wrap-section">
           <div class="section-description">
             <div class="section-title">ОТКРЫТЫ <br> К СОТРУДНИЧЕСТВУ</div>
@@ -314,7 +319,7 @@
           </div>
         </div>
       </div>
-      <div class="section section-8">
+      <div class="section section-8 mk_scroller_block">
         <div class="wrap-section">
           <div class="section-description">
             <div class="section-title">МЫ В СОЦИАЛЬНЫХ СЕТЯХ</div>
@@ -365,7 +370,7 @@
           </div>
         </div>
       </div>
-      <div class="section section-9">
+      <div class="section section-9 mk_scroller_block">
         <div class="wrap-section">
           <div class="section-description">
             <div class="section-title">СВЯЗАТЬСЯ С НАМИ</div>
@@ -451,7 +456,8 @@
     <!-- Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <!-- Fullpage scrolling-->
-    <script src="js/jquery.partialScroll.min.js"></script>
+    <!--script(src='https://cdn.jsdelivr.net/npm/wheel-indicator@1.3.0/lib/wheel-indicator.js')-->
+    <!--script(src='js/mk_smoothScroll.js')-->
     <!-- Main script-->
     <script src="js/main.js"></script>
   </body>
