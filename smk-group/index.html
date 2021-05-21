@@ -19,10 +19,10 @@
     <!-- Header-->
     <header>
       <div class="header-wrap">
-        <div class="logo"><a href="#"><img src="images/smk-logo.svg"></a></div>
+        <div class="logo"><a href="index.html"><img src="images/smk-logo.svg"></a></div>
         <nav class="nav">
           <ul>
-            <li><a href="#">О нас</a></li>
+            <li><a href="about-us.html">О нас</a></li>
             <li><a href="#">Деятельность</a></li>
             <li><a href="#">Предприятия SMK</a></li>
             <li><a href="#">Новости</a></li>
@@ -62,9 +62,68 @@
           </button>
         </div>
       </div>
+      <!-- Side nav-->
+      <div class="side-nav">
+        <div class="wrap-side-nav">
+          <div class="social-nav"><a href="#">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-facebook"></use>
+              </svg></a><a href="#">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-instagram"></use>
+              </svg></a></div>
+          <ul>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Медиа-центр</a></li>
+            <li><a href="#">О нас</a></li>
+            <li class="subnav"><a href="#">Деятельность<span>
+                  <svg>
+                    <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                  </svg></span></a>
+              <ul class="subnav-list" data-count="6">
+                <li><a href="#">Мясокомбинаты</a></li>
+                <li><a href="#">Животноводство</a></li>
+                <li><a href="#">Стрит-фуд</a></li>
+                <li><a href="#">Фирменная торговля</a></li>
+                <li><a href="#">Онлайн-продажи</a></li>
+                <li><a href="#">Ореховый сад</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Менеджмент</a></li>
+            <li><a href="#">Торговые марки</a></li>
+            <li><a href="#">Карьера</a></li>
+            <li><a href="#">Соц. ответсвенность</a></li>
+            <li class="subnav"><a href="#">предприятия smk<span>
+                  <svg>
+                    <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                  </svg></span></a>
+              <ul class="subnav-list" data-count="3">
+                <li><a href="#">Мясокомбинаты</a></li>
+                <li><a href="#">Животноводство</a></li>
+                <li><a href="#">Стрит-фуд</a></li>
+              </ul>
+            </li>
+            <li class="subnav"><a href="#">контакты<span>
+                  <svg>
+                    <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                  </svg></span></a>
+              <ul class="subnav-list" data-count="3">
+                <li><a href="#">Фирменная торговля</a></li>
+                <li><a href="#">Онлайн-продажи</a></li>
+                <li><a href="#">Ореховый сад</a></li>
+              </ul>
+            </li>
+          </ul>
+          <button class="close-side-nav">
+            <svg>
+              <use xlink:href="images/sprite.svg#icon-close-button"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
     </header>
     <!-- Main page start-->
-    <main>
+    <main class="index-main">
       <ul class="section-nav">
         <li class="active"><span></span></li>
         <li><span></span></li>
@@ -150,7 +209,8 @@
           </div>
         </div>
       </div>
-      <div class="section section-3 mk_scroller_block">
+      <!-- Case number-->
+      <div class="section section-3">
         <div class="wrap-section">
           <div class="section-description">
             <div class="section-title">КЛЮЧЕВЫЕ <br> ПОКАЗАТЕЛИ</div>
