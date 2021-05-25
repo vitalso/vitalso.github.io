@@ -6,11 +6,21 @@ $(function () {
   });
 
   // Parallax effect for inner intro section
+  var top_position = $('#price-study').offset().top;
+
   $(window).on('scroll' , function() {
 
     // Change position of image intro
     $('.hero-person').css('top' , - $(window).scrollTop()*0.3);
     //$('.hero-bg').css('top' , - $(window).scrollTop()*0.2);
+
+    if ($(window).width() <= 480) {
+      if ($(window).scrollTop() > top_position - 900) {
+        $('.wrap-fixed-button').hide();
+      } else {
+        $('.wrap-fixed-button').show();
+      }
+    }
 
   });
 
@@ -31,24 +41,6 @@ $(function () {
             $('.hero-figure').css("top", newvalueX*1.7+"px");
             $('.hero-figure').css("right", newvalueY*1.7+"px");
   });
-
-  // Expert slider
-  /*$('.experts-slider').slick({
-    infinite: true,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    arrows: false,
-    dots: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });*/
 
   // Example of works slider
   $('.example-slider').slick({
@@ -80,6 +72,14 @@ $(function () {
     $(this).toggleClass('open');
     $(this).find('p').slideToggle();
   });
+
+  // Scroll to section
+  $('.scroll-down').on('click' , function(e){
+    e.preventDefault();
+    var hash = $(this).attr('href');
+
+    $('html, body').animate({scrollTop: $(hash).offset().top}, 1000);
+  })
 
   // Popup with video
   $('.popup-youtube').magnificPopup({
@@ -246,7 +246,7 @@ $(function () {
           data: createAMOJSON($this)
         }).done(function() {
           console.log('success');
-          $('.success').show();
+          $('.sign-to-course').find('.success').show();
           $getCorseForm.trigger('reset');
           $getCorseForm.find('button[type="submit"]').removeAttr('disabled');
           $getCorseForm.hide();
@@ -277,7 +277,7 @@ $(function () {
           data: createAMOJSON($this)
         }).done(function() {
           console.log('success');
-          $('.success').show();
+          $('.white-popup-block').find('.success').show();
           $getCorseFormPopup.trigger('reset');
           $getCorseFormPopup.find('button[type="submit"]').removeAttr('disabled');
           $getCorseFormPopup.find('input').removeClass('active');
