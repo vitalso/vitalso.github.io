@@ -675,8 +675,7 @@ h3 {
   font-size: 16px;
   line-height: 24px;
   color: #A1A1A1;
-  position: relative;
-  z-index: 999; }
+  position: relative; }
 
 .faq {
   padding: 130px 0;
@@ -1174,7 +1173,9 @@ button.mfp-close {
   .wrap-video {
     margin: 10px 0 40px 0; }
   .video-play {
-    width: 30px; }
+    width: 30px;
+    margin-left: -15px;
+    margin-top: -15px; }
   h3 {
     font-size: 26px;
     line-height: 32px; }
@@ -1278,8 +1279,9 @@ button.mfp-close {
   .faq-item p {
     font-size: 16px;
     line-height: 20px; }
-  .wrap-fixed-button {
-    display: block; } }
+  /*.wrap-fixed-button {
+		display: block;
+	}*/ }
 
 @media screen and (max-width: 380px) {
   .hero-img {
