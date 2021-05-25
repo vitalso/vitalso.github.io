@@ -21,9 +21,9 @@ $(function () {
         $('.wrap-fixed-button').hide();
       } else if ($(window).scrollTop() > top_position_1 - 200 && $(window).scrollTop() < top_position_1 - 200 + $('#what-learn-row').height()) {
         $('.wrap-fixed-button').show();
-      } else if ($(window).scrollTop() > top_position_2 && $(window).scrollTop() < top_position_2 + $('.how-study').height()) {
+      } else if ($(window).scrollTop() > top_position_2 + 200 && $(window).scrollTop() < top_position_2 + $('.how-study').height()) {
         $('.wrap-fixed-button').hide();
-      } else if ($(window).scrollTop() > top_position - 900 && $(window).scrollTop() < top_position - 900 + $('#price-study').height()) {
+      } else if ($(window).scrollTop() > top_position - 800 && $(window).scrollTop() < top_position - 800 + $('#price-study').height()) {
         $('.wrap-fixed-button').hide();
       } else {
         $('.wrap-fixed-button').show();
