@@ -32,10 +32,19 @@ $(function () {
 
   });
 
+  // Program list
+  $('.program-list .program-list-item').slice(7).hide();
+  $('.program-list .primary-btn').on('click' , function(e){
+    e.preventDefault();
+
+    $('.program-list .program-list-item').slice(7).slideDown(500);
+    $(this).hide();
+  });
+
   // FAQ
   $('.faq-item').on('click' , function() {
     $(this).toggleClass('open');
-    $(this).find('p').slideToggle();
+    $(this).find('p , ul').slideToggle();
   });
 
   // Scroll to section
