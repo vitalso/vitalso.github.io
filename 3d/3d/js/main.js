@@ -18,6 +18,10 @@ $(function () {
   var top_position = $('.intro').outerHeight();
   var top_position_2 = $('.how-study').offset().top - $('.how-study').height()*3-300;
 
+  var top_position_3 = $('.find-way').offset().top;
+  var top_position_4 = $('.how-study').offset().top;
+  var top_position_5 = $('#price-study').offset().top - 2000;
+
   $(window).on('scroll' , function() {
 
       if ($(window).scrollTop() >= top_position) {
@@ -30,6 +34,21 @@ $(function () {
         $('.how-study').addClass('transition');
       }
 
+      if ($(window).width() <= 480) {
+        if ($(window).scrollTop() >= 0 && $(window).scrollTop() < top_position_3) {
+          $('.wrap-fixed-button').hide();
+        } else if ($(window).scrollTop() > top_position_3 && $(window).scrollTop() < top_position_3 + $('.find-way').height()) {
+          $('.wrap-fixed-button').show();
+        } else if ($(window).scrollTop() > top_position_4 && $(window).scrollTop() < top_position_4 + $('.how-study').height()) {
+          $('.wrap-fixed-button').hide();
+        } else if ($(window).scrollTop() > top_position_5 && $(window).scrollTop() < top_position_5 + 500 + $('#price-study').height()) {
+          $('.wrap-fixed-button').hide();
+        } else {
+          $('.wrap-fixed-button').show();
+        }
+
+      }
+
   });
 
   // Program list
@@ -37,8 +56,15 @@ $(function () {
   $('.program-list .primary-btn').on('click' , function(e){
     e.preventDefault();
 
-    $('.program-list .program-list-item').slice(7).slideDown(500);
-    $(this).hide();
+    if ($(this).hasClass('open')) {
+      $('.program-list .program-list-item').slice(7).slideUp(500);
+      $(this).text('смотреть всю программу');
+      $(this).removeClass('open');
+    } else {
+      $(this).addClass('open');
+      $('.program-list .program-list-item').slice(7).slideDown(500);
+      $(this).text('скрыть программу');
+    }
   });
 
   // FAQ
@@ -52,7 +78,7 @@ $(function () {
     e.preventDefault();
     var hash = $(this).attr('href');
 
-    $('html, body').animate({scrollTop: $(hash).offset().top}, 1000);
+    $('html, body').animate({scrollTop: $(hash).offset().top - 100}, 1000);
   })
 
   // Popup with video

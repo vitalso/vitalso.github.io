@@ -697,6 +697,21 @@ h5 {
   line-height: 24px;
   color: #A1A1A1;
   position: relative; }
+  .personal-data a {
+    color: #A1A1A1; }
+
+.wrap-fixed-button {
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  z-index: 3;
+  padding: 10px 0;
+  display: none; }
+  .wrap-fixed-button a {
+    font-size: 18px;
+    padding: 14px 30px; }
 
 .faq {
   padding: 70px 0; }
@@ -1285,7 +1300,7 @@ button.mfp-close {
     padding-right: 70px; }
   .intro .brand-btn {
     padding: 11px;
-    max-width: 200px;
+    max-width: 250px;
     margin-left: auto;
     margin-right: auto; }
   .hero-img {
