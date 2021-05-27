@@ -106,7 +106,7 @@ $(function () {
     //centerMode: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    dots: true,
+    dots: false,
     arrows: false,
     infinite: true,
     cssEase: 'linear',

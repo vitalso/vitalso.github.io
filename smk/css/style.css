@@ -637,7 +637,11 @@ h4 {
     /* Firefox */ }
     .section-bottom-nav::-webkit-scrollbar {
       display: none; }
+    .section-bottom-nav li:last-child a {
+      font-size: 14px;
+      line-height: 18px; }
   .section-bottom-wrap {
+    height: 100%;
     min-width: 990px; }
     .section-bottom-wrap li {
       padding-top: 18px;
@@ -902,7 +906,7 @@ h4 {
       .company-list li a span {
         margin-right: -15px; }
   .company-desc {
-    margin-top: 0; } }
+    margin-top: 50px; } }
 
 .activity-desc .activity-number {
   font-weight: 500;
@@ -1331,7 +1335,9 @@ h4 {
   .contact-us.inner .contact-form {
     margin-left: 20px; }
   .contact-form form .d-flex .form-item:nth-child(3) {
-    bottom: 90px; } }
+    bottom: 90px; }
+  .section-9 .contact-form form .d-flex .form-item:nth-child(3) {
+    bottom: 110px; } }
 
 footer {
   padding: 20px 25px 60px 25px;
@@ -1439,6 +1445,10 @@ footer {
   footer.index-footer {
     margin-left: 0;
     padding-left: 50px; }
+    footer.index-footer .footer-wrap {
+      width: 100%; }
+    footer.index-footer .social-nav {
+      right: 0; }
   .footer-wrap {
     max-width: 100%;
     width: 100%;
@@ -1888,6 +1898,8 @@ main.index-main {
   background: rgba(90, 90, 90, 0.4); }
   .section-7 .section-description {
     max-width: none; }
+  .section-7 .section-title {
+    max-width: 50%; }
 
 .section-9 {
   height: auto;
@@ -1920,4 +1932,8 @@ main.index-main {
   .wrap-section .section-description {
     margin-left: 50px; }
   .section-1 .section-description {
-    margin-left: 20px; } }
+    margin-left: 20px; }
+  .section-7 .section-title {
+    max-width: 100%; }
+  .section-4 .section-title, .section-6 .section-title {
+    padding: 0 10%; } }
