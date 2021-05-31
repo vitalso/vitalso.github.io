@@ -5,72 +5,80 @@ $(function () {
     $(this).toggleClass('open');
   });
 
-  // Example of works slider
-  $('.example-slider').slick({
-    infinite: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: true
-  });
-
-  // Fixed header at top
-  var top_position = $('.intro').outerHeight();
-  var top_position_2 = $('.how-study').offset().top - $('.how-study').height()*3-300;
-
-  var top_position_3 = $('.find-way').offset().top;
-  var top_position_4 = $('.how-study').offset().top;
-  var top_position_5 = $('#price-study').offset().top - 2000;
+  // Parallax effect for inner intro section
+  var top_position = $('#price-study').offset().top;
+  var top_position_1 = $('#what-learn-row').offset().top;
+  var top_position_2 = $('.how-study').offset().top;
 
   $(window).on('scroll' , function() {
 
-      if ($(window).scrollTop() >= top_position) {
-        $('header').addClass('fixed');
+    // Change position of image intro
+    $('.hero-person').css('top' , - $(window).scrollTop()*0.3);
+    //$('.hero-bg').css('top' , - $(window).scrollTop()*0.2);
+
+    if ($(window).width() <= 480) {
+      if ($(window).scrollTop() >= 0 && $(window).scrollTop() < top_position_1) {
+        $('.wrap-fixed-button').hide();
+      } else if ($(window).scrollTop() > top_position_1 - 200 && $(window).scrollTop() < top_position_1 - 200 + $('#what-learn-row').height()) {
+        $('.wrap-fixed-button').show();
+      } else if ($(window).scrollTop() > top_position_2 + 200 && $(window).scrollTop() < top_position_2 + $('.how-study').height()) {
+        $('.wrap-fixed-button').hide();
+      } else if ($(window).scrollTop() > top_position - 800 && $(window).scrollTop() < top_position - 800 + $('#price-study').height()) {
+        $('.wrap-fixed-button').hide();
       } else {
-        $('header').removeClass('fixed');
+        $('.wrap-fixed-button').show();
       }
-
-      if ( $(window).scrollTop() >=  top_position_2) {
-        $('.how-study').addClass('transition');
-      }
-
-      if ($(window).width() <= 480) {
-        if ($(window).scrollTop() >= 0 && $(window).scrollTop() < top_position_3) {
-          $('.wrap-fixed-button').hide();
-        } else if ($(window).scrollTop() > top_position_3 && $(window).scrollTop() < top_position_3 + $('.find-way').height()) {
-          $('.wrap-fixed-button').show();
-        } else if ($(window).scrollTop() > top_position_4 && $(window).scrollTop() < top_position_4 + $('.how-study').height()) {
-          $('.wrap-fixed-button').hide();
-        } else if ($(window).scrollTop() > top_position_5 && $(window).scrollTop() < top_position_5 + 500 + $('#price-study').height()) {
-          $('.wrap-fixed-button').hide();
-        } else {
-          $('.wrap-fixed-button').show();
-        }
-
-      }
+    }
 
   });
 
-  // Program list
-  $('.program-list .program-list-item').slice(7).hide();
-  $('.program-list .primary-btn').on('click' , function(e){
-    e.preventDefault();
+  var movementStrength = 25;
+  var height = movementStrength / $(window).height();
+  var width = movementStrength / $(window).width();
+  $(".intro").mousemove(function(e){
+            var pageX = e.pageX - ($(window).width() / 2);
+            var pageY = e.pageY - ($(window).height() / 2);
+            var newvalueX = width * pageX * -1;
+            var newvalueY = height * pageY * -1;
+            $('.hero-person').css("top", newvalueX+"px");
+            $('.hero-person').css("left", newvalueY+"px");
 
-    if ($(this).hasClass('open')) {
-      $('.program-list .program-list-item').slice(7).slideUp(500);
-      $(this).text('смотреть всю программу');
-      $(this).removeClass('open');
-    } else {
-      $(this).addClass('open');
-      $('.program-list .program-list-item').slice(7).slideDown(500);
-      $(this).text('скрыть программу');
-    }
+            //$('.hero-bg').css("bottom", newvalueX*0.2+"px");
+            $('.hero-bg').css("right", newvalueY*1.2+"px");
+
+            $('.hero-figure').css("top", newvalueX*1.7+"px");
+            $('.hero-figure').css("right", newvalueY*1.7+"px");
+  });
+
+  // Example of works slider
+  $('.example-slider').slick({
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
 
   // FAQ
   $('.faq-item').on('click' , function() {
     $(this).toggleClass('open');
-    $(this).find('p , ul').slideToggle();
+    $(this).find('p').slideToggle();
   });
 
   // Scroll to section
@@ -78,29 +86,17 @@ $(function () {
     e.preventDefault();
     var hash = $(this).attr('href');
 
-    $('html, body').animate({scrollTop: $(hash).offset().top - 100}, 1000);
+    $('html, body').animate({scrollTop: $(hash).offset().top}, 1000);
   })
 
   // Popup with video
   $('.popup-youtube').magnificPopup({
+    disableOn: 700,
     type: 'iframe',
-    markup: '<div class="mfp-iframe-scaler">' +
-      '<div class="mfp-close"></div>' +
-      '<iframe class="mfp-iframe" frameborder="0" allow="autoplay"></iframe>' +
-      '</div>',
     mainClass: 'mfp-fade',
     removalDelay: 160,
     preloader: false,
-    fixedContentPos: true,
-    iframe: {
-      patterns: {
-        youtube: {
-          index: 'youtube.com',
-          id: 'v=',
-          src: 'https://www.youtube.com/embed/%id%?rel=0&autoplay=1'
-        }
-      }
-    },
+    fixedContentPos: true
   });
 
   $('.popup-modal').magnificPopup({

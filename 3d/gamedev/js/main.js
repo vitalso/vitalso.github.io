@@ -5,107 +5,104 @@ $(function () {
     $(this).toggleClass('open');
   });
 
-  // Example of works slider
-  $('.example-slider').slick({
-    infinite: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: true
-  });
-
-  // Fixed header at top
-  var top_position = $('.intro').outerHeight();
-  var top_position_2 = $('.how-study').offset().top - $('.how-study').height()*3-300;
-
-  var top_position_3 = $('.find-way').offset().top;
-  var top_position_4 = $('.how-study').offset().top;
-  var top_position_5 = $('#price-study').offset().top - 2000;
+  // Parallax effect for inner intro section
+  var top_position = $('.how-study').offset().top - $('.how-study').height()*3-300;
 
   $(window).on('scroll' , function() {
 
-      if ($(window).scrollTop() >= top_position) {
-        $('header').addClass('fixed');
-      } else {
-        $('header').removeClass('fixed');
-      }
+    if ( $(window).scrollTop() >=  top_position) {
+      $('.how-study').addClass('transition');
+    } else {
+      //$('.how-study').removeClass('transition');
+    }
 
-      if ( $(window).scrollTop() >=  top_position_2) {
-        $('.how-study').addClass('transition');
-      }
+    // Change position of image intro
+    //$('.hero-person').css('top' , - $(window).scrollTop()*0.3);
+    //$('.hero-bg').css('top' , - $(window).scrollTop()*0.2);
+    $('.teachers-img img').css({
+        //'transform': 'rotate(' + ($(window).scrollTop() / $('.teachers').height() * 30) + 'deg)' , 'left' : $(window).scrollTop()*0.07 , 'top' : $(window).scrollTop()*0.01
+        'transform': 'rotate(' + ($(window).scrollTop() / $('.teachers').height() * 290) + 'deg)'
+    });
 
-      if ($(window).width() <= 480) {
-        if ($(window).scrollTop() >= 0 && $(window).scrollTop() < top_position_3) {
-          $('.wrap-fixed-button').hide();
-        } else if ($(window).scrollTop() > top_position_3 && $(window).scrollTop() < top_position_3 + $('.find-way').height()) {
-          $('.wrap-fixed-button').show();
-        } else if ($(window).scrollTop() > top_position_4 && $(window).scrollTop() < top_position_4 + $('.how-study').height()) {
-          $('.wrap-fixed-button').hide();
-        } else if ($(window).scrollTop() > top_position_5 && $(window).scrollTop() < top_position_5 + 500 + $('#price-study').height()) {
-          $('.wrap-fixed-button').hide();
-        } else {
-          $('.wrap-fixed-button').show();
-        }
+    $('.example-img').css({
+        //'transform': 'rotate(' + ($(window).scrollTop() / $('.teachers').height() * 30) + 'deg)' , 'left' : $(window).scrollTop()*0.07 , 'top' : $(window).scrollTop()*0.01
+        'transform': 'rotate(' + ($(window).scrollTop() / ($('.works').height() / 0.4) * 150) + 'deg)'
+    });
 
-      }
+    $('.faq-img').css({
+        //'transform': 'rotate(' + ($(window).scrollTop() / $('.teachers').height() * 30) + 'deg)' , 'left' : $(window).scrollTop()*0.07 , 'top' : $(window).scrollTop()*0.01
+        'transform': 'rotate(' + ($(window).scrollTop() / ($('.faq').height() / 0.2) * 240) + 'deg)'
+    });
 
   });
 
-  // Program list
-  $('.program-list .program-list-item').slice(7).hide();
-  $('.program-list .primary-btn').on('click' , function(e){
-    e.preventDefault();
+  // Intro effect
+  var movementStrength = 25;
+  var height = movementStrength / $(window).height();
+  var width = movementStrength / $(window).width();
+  $(".intro").mousemove(function(e){
+    var pageX = e.pageX - ($(window).width() / 2);
+    var pageY = e.pageY - ($(window).height() / 2);
+    var newvalueX = width * pageX * -1;
+    var newvalueY = height * pageY * -1;
+    $('.hero-large').css({"transform" : "translateX(" + newvalueX +"px"});
+  });
 
-    if ($(this).hasClass('open')) {
-      $('.program-list .program-list-item').slice(7).slideUp(500);
-      $(this).text('смотреть всю программу');
-      $(this).removeClass('open');
-    } else {
-      $(this).addClass('open');
-      $('.program-list .program-list-item').slice(7).slideDown(500);
-      $(this).text('скрыть программу');
-    }
+  // Example of works slider
+  $('.example-slider').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+
+  // Custom carousel nav
+  $('button.prev').click(function(){
+    $('.example-slider').slick('slickPrev');
+    //$(this).removeClass('active');
+    //$('button.next').addClass('active');
+  });
+
+  $('button.next').click(function(){
+    $('.example-slider').slick('slickNext');
+    //$(this).removeClass('active');
+    //$('button.prev').addClass('active');
   });
 
   // FAQ
   $('.faq-item').on('click' , function() {
     $(this).toggleClass('open');
-    $(this).find('p , ul').slideToggle();
-  });
-
-  // Scroll to section
-  $('.scroll-down').on('click' , function(e){
-    e.preventDefault();
-    var hash = $(this).attr('href');
-
-    $('html, body').animate({scrollTop: $(hash).offset().top - 100}, 1000);
-  })
-
-  // Popup with video
-  $('.popup-youtube').magnificPopup({
-    type: 'iframe',
-    markup: '<div class="mfp-iframe-scaler">' +
-      '<div class="mfp-close"></div>' +
-      '<iframe class="mfp-iframe" frameborder="0" allow="autoplay"></iframe>' +
-      '</div>',
-    mainClass: 'mfp-fade',
-    removalDelay: 160,
-    preloader: false,
-    fixedContentPos: true,
-    iframe: {
-      patterns: {
-        youtube: {
-          index: 'youtube.com',
-          id: 'v=',
-          src: 'https://www.youtube.com/embed/%id%?rel=0&autoplay=1'
-        }
-      }
-    },
+    $(this).find('p').slideToggle();
   });
 
   $('.popup-modal').magnificPopup({
     type: 'inline',
     preloader: false,
+    fixedContentPos: false,
     modal: false
   });
 
@@ -233,13 +230,12 @@ $(function () {
     return JSON.stringify(data)
   }
 
-  $('form input[name="phone"]').keypress(function (e) {
+  $('form[name="getCourse"] input[name="phone"]').keypress(function (e) {
     keys = ['0','1','2','3','4','5','6','7','8','9','+']
     return keys.indexOf(event.key) > -1
   });
 
   var $getCorseForm = $('form[name="getCourse"]');
-  var $getCorseFormPopup = $('form[name="getCourse-popup"]');
 
   if ($getCorseForm.length) {
     $getCorseForm.each(function () {
@@ -258,9 +254,10 @@ $(function () {
           data: createAMOJSON($this)
         }).done(function() {
           console.log('success');
-          $('.sign-to-course').find('.success').show();
+          $('.success').show();
           $getCorseForm.trigger('reset');
           $getCorseForm.find('button[type="submit"]').removeAttr('disabled');
+          $getCorseForm.find('input').removeClass('active');
           $getCorseForm.hide();
           $getCorseForm.next('p').hide();
           // TODO по событию success вывести сообщение об успешной отправки формы
@@ -272,36 +269,27 @@ $(function () {
     })
   }
 
-  if ($getCorseFormPopup.length) {
-    $getCorseFormPopup.each(function () {
-      var $this = $(this);
+  // Animation when scroll page
+  /*var slideUp = {
+    distance: '100%',
+    origin: 'bottom',
+    delay: '300',
+    duration: '400',
+    easing: 'ease-in',
+    mobile: false,
+    opacity: null
+  };
 
-      $this.submit(function(e) {
-
-        $this.find('button[type="submit"]').attr('disabled' , 'disabled');
-
-        e.preventDefault();
-
-        $.ajax({
-          contentType: "application/json",
-          type: $this.attr('method'),
-          url: $this.attr('action'),
-          data: createAMOJSON($this)
-        }).done(function() {
-          console.log('success');
-          $('.white-popup-block').find('.success').show();
-          $getCorseFormPopup.trigger('reset');
-          $getCorseFormPopup.find('button[type="submit"]').removeAttr('disabled');
-          $getCorseFormPopup.find('input').removeClass('active');
-          $getCorseFormPopup.hide();
-          $getCorseFormPopup.next('p').hide();
-          // TODO по событию success вывести сообщение об успешной отправки формы
-        }).fail(function() {
-          console.log('fail');
-          // TODO по событию fail вывести сообщение об ошибке
-        });
-      });
-    })
+  if ($(window).width() < 991) {
+    sr.destroy()
+  } else {
+    ScrollReveal().reveal('.animated' , slideUp);
   }
+
+  $(window).on('resize' , function(){
+    if ($(window).width() < 991) {
+      sr.destroy()
+    }
+  });*/
 
 });
