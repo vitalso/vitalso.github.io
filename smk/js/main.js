@@ -35,6 +35,88 @@ $(function () {
     $(this).toggleClass('rotate');
   });
 
+  // Toggle principle
+  $('.principle-list-item-title').on('click' , function(){
+    $('.principle-list-item').removeClass('open');
+    $(this).closest('.principle-list-item').addClass('open');
+  });
+
+  // Photo list
+  $('.photo-list a').on('click' , function(e){
+    e.preventDefault();
+
+    $('.photo-list li').removeClass('open')
+
+    $(this).closest('li').addClass('open');
+    $(this).closest('ul').addClass('open');
+
+  });
+
+  // Trademark list slider
+  $('.trademark-list').slick({
+    infinite: true,
+    focusOnSelect: false,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    vertical: true,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    cssEase: 'linear',
+    useTransform: true,
+    arrows: false,
+    dots: true,
+    swipe: true,
+    verticalSwiping: true,
+    touchMove: true,
+    swipeToSlide: true,
+    asNavFor: '.trademark-description',
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 3,
+          vertical: false,
+          verticalSwiping: false,
+          variableWidth: true
+        }
+      }
+    ]
+  });
+
+  $('.trademark-list').on('click', '.slick-slide', function(event) {
+    event.preventDefault();
+    var goToSingleSlide = $(this).data('slick-index');
+
+    $('.trademark-description').slick('slickGoTo', goToSingleSlide);
+  });
+
+  $('.trademark-description').slick({
+    infinite: true,
+    focusOnSelect: false,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    vertical: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    cssEase: 'linear',
+    useTransform: true,
+    arrows: false,
+    dots: false,
+    swipe: true,
+    verticalSwiping: true,
+    touchMove: true,
+    swipeToSlide: true,
+    asNavFor: '.trademark-list',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
   // Fullpage scrolling
   //$('#pagepiling').pagepiling();
 
@@ -115,11 +197,11 @@ $(function () {
   });
 
   $('#news-nav .btn-prev').on('click' ,function(){
-    $('.news-slider').slick('slickPrev');
+    $(this).closest('.news-wrap').find('.news-slider').slick('slickPrev');
   });
 
   $('#news-nav .btn-next').click(function(){
-    $('.news-slider').slick('slickNext');
+    $(this).closest('.news-wrap').find('.news-slider').slick('slickNext');
   });
 
   // Custom slider nav
