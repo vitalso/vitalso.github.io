@@ -52,6 +52,11 @@ $(function () {
 
   });
 
+  // Footer toggle list
+  $('footer.inner .title-for-list').on('click' , function(){
+    $(this).toggleClass('open');
+  });
+
   // Trademark list slider
   $('.trademark-list').slick({
     infinite: true,
@@ -192,8 +197,15 @@ $(function () {
     arrows: false,
     infinite: true,
     cssEase: 'linear',
-    variableWidth: true
-    //variableHeight: true
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          dots: true
+        }
+      }
+    ]
   });
 
   $('#news-nav .btn-prev').on('click' ,function(){
