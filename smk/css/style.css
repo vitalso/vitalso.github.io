@@ -1270,7 +1270,10 @@ h4 {
     justify-content: space-between; }
   .contact-us.inner {
     padding: 100px 0;
-    background: #6AB6EB; }
+    background: #6AB6EB;
+    margin-bottom: 266px;
+    z-index: 2;
+    position: relative; }
     .contact-us.inner .contact-form {
       margin-right: 120px; }
 
@@ -1307,6 +1310,8 @@ h4 {
   .contact-form textarea {
     padding-top: 21px;
     resize: none; }
+    .contact-form textarea:focus + button:after {
+      opacity: 1; }
   .contact-form input[type="file"] {
     position: absolute;
     opacity: 0;
@@ -1316,20 +1321,54 @@ h4 {
       font-size: 12px;
       font-weight: 700;
       color: #fff;
-      cursor: pointer; }
+      cursor: pointer;
+      position: relative; }
+      .contact-form input[type="file"] + span:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -5px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #fff;
+        transform: scale(0);
+        transition: all .3s ease; }
       .contact-form input[type="file"] + span svg {
         width: 25px;
-        height: 25px; }
+        height: 25px;
+        position: relative;
+        z-index: 2;
+        stroke: #fff; }
+      .contact-form input[type="file"] + span:hover:after {
+        transform: scale(1); }
+      .contact-form input[type="file"] + span:hover svg {
+        stroke: #2274FF; }
   .contact-form button[type="submit"] {
     margin: 0;
     position: absolute;
     top: 50%;
     right: 20px;
-    transform: translateY(-50%); }
+    transform: translateY(-50%);
+    overflow: visible; }
     .contact-form button[type="submit"] span {
-      background: #2274FF; }
+      background: #2274FF;
+      z-index: 2; }
       .contact-form button[type="submit"] span svg {
         stroke: #fff; }
+    .contact-form button[type="submit"]:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: rgba(34, 116, 255, 0.2);
+      /*transform: scale(0);
+          transition: all .3s ease;*/
+      animation: scale 1s ease-in-out infinite;
+      opacity: 0; }
   .contact-form input[type="checkbox"] {
     width: 20px;
     height: 20px; }
@@ -1410,6 +1449,14 @@ h4 {
   .section-9 .contact-form form .d-flex .form-item:nth-child(3) {
     bottom: 110px; } }
 
+@keyframes scale {
+  0 {
+    transform: scale(0); }
+  50% {
+    transform: scale(1.5); }
+  100% {
+    transform: scale(0); } }
+
 footer {
   padding: 20px 25px 60px 25px;
   background: #000;
@@ -1432,6 +1479,11 @@ footer {
       margin: 0; }
   footer .title-for-list {
     display: none; }
+  footer.fixed-footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1; }
 
 .footer-wrap {
   width: 100%;
@@ -1452,7 +1504,17 @@ footer {
   .single-list-link a {
     text-transform: uppercase;
     text-decoration: none;
-    color: #fff; }
+    color: #fff;
+    /*overflow: hidden;
+      background: linear-gradient(to right, $blue-dark, $blue-dark 50%, #fff 50%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200% 100%;
+      background-position: 100%;
+      transition: background-position 275ms ease;*/ }
+    .single-list-link a:hover {
+      color: #2274FF; }
 
 .footer-contact-list {
   width: 100%;
@@ -1472,6 +1534,8 @@ footer {
   .footer-contact-list a {
     text-decoration: none;
     color: #fff; }
+    .footer-contact-list a:hover {
+      color: #2274FF; }
 
 .frontmen-icon {
   position: absolute;
@@ -1612,6 +1676,10 @@ footer {
   margin-top: 55px;
   padding-top: 90px;
   position: relative; }
+  .intro-inner.fixed-scroll {
+    position: fixed;
+    width: 100%;
+    z-index: 2; }
   .intro-inner-wrap {
     margin-left: 140px;
     display: flex;
@@ -1630,10 +1698,6 @@ footer {
         color: rgba(255, 255, 255, 0.4); }
       .intro-inner.blue .breadcrumbs li:last-child a, .intro-inner.green .breadcrumbs li:last-child a {
         color: white; }
-  .intro-inner.blue {
-    background: rgba(50, 124, 249, 0.9); }
-  .intro-inner.green {
-    background: rgba(89, 228, 136, 0.9); }
   .intro-inner.news {
     height: 422px; }
     .intro-inner.news .intro-desc {
@@ -1719,10 +1783,11 @@ footer {
     padding-right: 20px; } }
 
 .inner-gallery {
-  position: relative; }
+  position: relative;
+  padding-top: 569px; }
   .inner-gallery .wrap-section {
     position: relative;
-    z-index: 1; }
+    z-index: 3; }
   .inner-gallery:after {
     content: "";
     position: absolute;
@@ -3002,6 +3067,15 @@ footer {
 
 main.index-main {
   min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 2; }
+
+.background-video {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
   background: url(../images/section-1.png) center top/cover fixed no-repeat;
   overflow-x: hidden; }
 
@@ -3126,6 +3200,10 @@ main.index-main {
   max-width: 640px;
   margin: 0 auto 50px auto;
   padding: 0 20px; }
+
+.z-index {
+  display: none;
+  z-index: -1 !important; }
 
 @media screen and (max-width: 992px) {
   .section {

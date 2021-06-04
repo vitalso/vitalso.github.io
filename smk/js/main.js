@@ -234,4 +234,20 @@ $(function () {
     dots: true
   });
 
+  // Intro scroll effect
+  var position_gallery = $('.inner-gallery').offset().top + $('.intro-inner').outerHeight();
+  $(window).on('scroll' , function(){
+
+    if ($(window).scrollTop() >= position_gallery ) {
+      $('.intro-inner').addClass('z-index');
+      $('footer.inner').removeClass('z-index');
+    } else {
+      $('.intro-inner').removeClass('z-index');
+      $('footer.inner').addClass('z-index');
+    }
+
+    console.log(position_gallery);
+
+  });
+
 });
