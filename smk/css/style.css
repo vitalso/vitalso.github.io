@@ -1839,6 +1839,8 @@ footer {
     position: fixed;
     width: 100%;
     z-index: 2; }
+    .intro-inner.fixed-scroll.blue, .intro-inner.fixed-scroll.green, .intro-inner.fixed-scroll.white {
+      background: transparent; }
   .intro-inner-wrap {
     margin-left: 140px;
     display: flex;
@@ -1857,6 +1859,10 @@ footer {
         color: rgba(255, 255, 255, 0.4); }
       .intro-inner.blue .breadcrumbs li:last-child a, .intro-inner.green .breadcrumbs li:last-child a {
         color: white; }
+  .intro-inner.blue {
+    background: rgba(50, 124, 249, 0.9); }
+  .intro-inner.green {
+    background: rgba(89, 228, 136, 0.9); }
   .intro-inner.news {
     height: 422px; }
     .intro-inner.news .intro-desc {

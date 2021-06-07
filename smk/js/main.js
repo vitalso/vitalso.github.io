@@ -217,8 +217,10 @@ $(function () {
   });
 
   // Section scroll nav
-  if ($('body').find('.section-nav')) {
-    var about_us_position = $('#about-us').offset().top;
+  var about_us = $('#about-us');
+  if (about_us.length) {
+    console.log($('body .section_nav').length);
+    var about_us_position = about_us.offset().top;
 
     $(window).on('scroll' , function(){
       if ($(window).scrollTop() > about_us_position) {
@@ -227,12 +229,13 @@ $(function () {
         $('.section-nav').removeClass('open');
       }
     });
-  }
+  };
 
   // History timeline scroll effect
-  if ($('body').find('.history')) {
+  var history = $('.history');
+  if (history.length) {
 
-    var history_top = $('.history').offset().top - 500; // 500 just simple number ))
+    var history_top = history.offset().top - 500; // 500 just simple number ))
 
     var count_item = $('.timeline-item').length;
     var one_item = $('.timeline').height() / count_item;
