@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <!--link(rel='stylesheet' , href='css/mk_smoothScroll.css')-->
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -23,7 +22,46 @@
         <nav class="nav">
           <ul>
             <li><a href="about-us.html">О нас</a></li>
-            <li><a href="activity.html">Деятельность</a></li>
+            <li class="has-drop-menu"><a href="#">Деятельность</a>
+              <div class="drop-menu">
+                <div class="drop-menu-item"><a href="activity.html"><span>Мясокомбинаты</span><img src="images/gallery/image-3.jpg"></a>
+                  <button class="inline-btn dark"><span>
+                      <svg>
+                        <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                      </svg></span></button>
+                </div>
+                <div class="drop-menu-item"><a href="#"><span>Животноводство</span><img src="images/gallery/image-1.jpg"></a>
+                  <button class="inline-btn dark"><span>
+                      <svg>
+                        <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                      </svg></span></button>
+                </div>
+                <div class="drop-menu-item"><a href="#"><span>Стрит-фуд</span><img src="images/gallery/image-4.jpg"></a>
+                  <button class="inline-btn dark"><span>
+                      <svg>
+                        <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                      </svg></span></button>
+                </div>
+                <div class="drop-menu-item"><a href="#"><span>Фирменная <br> торговля</span><img src="images/gallery/image-2.jpg"></a>
+                  <button class="inline-btn dark"><span>
+                      <svg>
+                        <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                      </svg></span></button>
+                </div>
+                <div class="drop-menu-item"><a href="#"><span>Онлайн-<br>продажи</span><img src="images/gallery/image-5.jpg"></a>
+                  <button class="inline-btn dark"><span>
+                      <svg>
+                        <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                      </svg></span></button>
+                </div>
+                <div class="drop-menu-item"><a href="#"><span>Ореховый <br> сад</span><img src="images/gallery/image-1.jpg"></a>
+                  <button class="inline-btn dark"><span>
+                      <svg>
+                        <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                      </svg></span></button>
+                </div>
+              </div>
+            </li>
             <li><a href="factory.html">Предприятия SMK</a></li>
             <li><a href="news.html">Новости</a></li>
             <li><a href="contact.html">Контакты</a></li>
@@ -124,16 +162,26 @@
     </header>
     <!-- Main page start-->
     <main class="index-main">
-      <ul class="section-nav">
-        <li class="active"><span></span></li>
-        <li><span></span></li>
-        <li><span></span></li>
-        <li><span></span></li>
-        <li><span></span></li>
-        <li><span></span></li>
-        <li><span></span></li>
-      </ul>
-      <div class="section section-1 mk_scroller_block">
+      <div class="section-nav"><a class="chapter-link" href="#"><b>СТАРТ</b>
+          <div class="inline-btn white"><span>
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-arrow"></use>
+              </svg></span></div></a><a class="chapter-link" href="#"><b>КОНТАКТЫ</b>
+          <div class="inline-btn white"><span>
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-arrow"></use>
+              </svg></span></div></a>
+        <ul>
+          <li class="active"><a href="#" data-title="О нас"><span></span></a></li>
+          <li><a href="#" data-title="КЛЮЧЕВЫЕ ПОКАЗАТЕЛИ"><span></span></a></li>
+          <li><a href="#" data-title="ПРЕДПРИЯТИЯ SMK"><span></span></a></li>
+          <li><a href="#" data-title="ВИДЫ ДЕЯТЕЛЬНОСТИ"><span></span></a></li>
+          <li><a href="#" data-title="ГЛАВНЫЕ НОВОСТИ"><span></span></a></li>
+          <li><a href="#" data-title="ОТКРЫТЫ К СОТРУДНИЧЕСТВУ"><span></span></a></li>
+          <li><a href="#" data-title="МЫ В СОЦИАЛЬНЫХ СЕТЯХ"><span></span></a></li>
+        </ul>
+      </div>
+      <div class="section section-1">
         <div class="wrap-section">
           <div class="section-description">
             <h1>Лидеры в мясопереработке производстве колбас мясных деликатесах</h1><a class="primary-btn" href="#">
@@ -165,12 +213,12 @@
           </ul>
         </div>
       </div>
-      <div class="section section-2 mk_scroller_block">
+      <div class="section section-2" id="about-us">
         <div class="wrap-section d-flex">
           <div class="section-description">
             <div class="section-title">O НАС</div>
             <p>С момента создания предприятия в 2003 году, нашим основным заданием есть удовлетворения спроса покупателей качественной и вкусной продукцией.</p>
-            <p>За годы нашей работы нам удалось заслужить репутацию надежного партнера для наших клиентов и завоевать долгосрочную приверженность широкого круга потребителей нашей продукции.</p><a class="inline-btn blue" href="#"><span>
+            <p>За годы нашей работы нам удалось заслужить репутацию надежного партнера для наших клиентов и завоевать долгосрочную приверженность широкого круга потребителей нашей продукции.</p><a class="inline-btn blue" href="about-us.html"><span>
                 <svg>
                   <use xlink:href="images/sprite.svg#icon-arrow"></use>
                 </svg></span>подробнее о нас</a>
@@ -180,7 +228,7 @@
               <div class="our-service-img"><img src="images/our-service-1.jpg"></div>
               <div class="our-service-desc">
                 <div class="our-service-title">
-                  <h4>Виды <br> деятельности</h4><a class="inline-btn white" href="#"><span>
+                  <h4>Виды <br> деятельности</h4><a class="inline-btn white" href="activity.html"><span>
                       <svg>
                         <use xlink:href="images/sprite.svg#icon-arrow"></use>
                       </svg></span></a>
@@ -195,7 +243,7 @@
               <div class="our-service-img"><img src="images/our-service-2.jpg"></div>
               <div class="our-service-desc">
                 <div class="our-service-title">
-                  <h4>Наши <br> торговые марки</h4><a class="inline-btn white" href="#"><span>
+                  <h4>Наши <br> торговые марки</h4><a class="inline-btn white" href="trademark.html"><span>
                       <svg>
                         <use xlink:href="images/sprite.svg#icon-arrow"></use>
                       </svg></span></a>
@@ -210,7 +258,7 @@
         </div>
       </div>
       <!-- Case number-->
-      <div class="section section-3">
+      <div class="section section-3" id="case-number">
         <div class="wrap-section">
           <div class="section-description">
             <div class="section-title">КЛЮЧЕВЫЕ <br> ПОКАЗАТЕЛИ</div>
@@ -278,7 +326,7 @@
           </div>
         </div>
       </div>
-      <div class="section section-5 mk_scroller_block">
+      <div class="section section-5" id="activity">
         <div class="wrap-section">
           <div class="section-description">
             <div class="section-title">ВИДЫ <br> ДЕЯТЕЛЬНОСТИ</div>
@@ -294,7 +342,7 @@
         </div>
         <div class="activity-img"><img src="images/activity-1.jpg"></div>
       </div>
-      <div class="section section-6 mk_scroller_block">
+      <div class="section section-6" id="news-index">
         <div class="wrap-section">
           <div class="section-title text-center">ГЛАВНЫЕ НОВОСТИ</div>
           <div class="bottom-slider-arrows background border" id="news-nav">
@@ -312,49 +360,49 @@
         </div>
         <div class="news-wrap">
           <div class="news-slider">
-            <div class="news-item"><a class="news-link" href="#"><img src="images/news/news-1.jpg">
+            <div class="news-item"><a class="news-link" href="news-detail.html"><img src="images/news/news-1.jpg">
                 <h4>«SMK Group» выкупила курьерское подразделение производителя  электробайков «Delfast»</h4></a><a class="news-tag" href="#">Актуальное</a></div>
-            <div class="news-item"><a class="news-link" href="#"><img src="images/news/news-2.jpg">
+            <div class="news-item"><a class="news-link" href="news-detail.html"><img src="images/news/news-2.jpg">
                 <h4>«SMK Group» выкупила курьерское подразделение производителя  электробайков «Delfast»</h4></a><a class="news-tag" href="#">Актуальное</a></div>
+            <div class="news-item"><a class="news-link" href="news-detail.html"><img src="images/news/news-3.jpg">
+                <h4>«SMK Group» выкупила курьерское подразделение производителя  электробайков «Delfast»</h4></a><a class="news-tag" href="news-detail.html">Актуальное</a></div>
             <div class="news-item"><a class="news-link" href="#"><img src="images/news/news-3.jpg">
-                <h4>«SMK Group» выкупила курьерское подразделение производителя  электробайков «Delfast»</h4></a><a class="news-tag" href="#">Актуальное</a></div>
-            <div class="news-item"><a class="news-link" href="#"><img src="images/news/news-3.jpg">
-                <h4>«SMK Group» выкупила курьерское подразделение производителя  электробайков «Delfast»</h4></a><a class="news-tag" href="#">Актуальное</a></div>
+                <h4>«SMK Group» выкупила курьерское подразделение производителя  электробайков «Delfast»</h4></a><a class="news-tag" href="news-detail.html">Актуальное</a></div>
           </div>
           <div class="news-feed">
             <div class="feed-header">
-              <h4>ЛЕНТА НОВОСТЕЙ</h4><a class="inline-btn dark" href="#"><span>
+              <h4>ЛЕНТА НОВОСТЕЙ</h4><a class="inline-btn dark" href="news.html"><span>
                   <svg>
                     <use xlink:href="images/sprite.svg#icon-arrow"></use>
                   </svg></span>ВСЕ НОВОСТИ</a>
             </div>
             <div class="feed-row">
               <div class="feed-item">
-                <div class="feed-item-date">03.01.21</div><a href="#">Фінансова звітність ТОВ “САЛТІВСЬКИЙ М’ЯСОКОМБІНАТ”</a>
+                <div class="feed-item-date">03.01.21</div><a href="news-detail.html">Фінансова звітність ТОВ “САЛТІВСЬКИЙ М’ЯСОКОМБІНАТ”</a>
               </div>
               <div class="feed-item">
-                <div class="feed-item-date">31.12.20</div><a href="#">Салтівський м’ясокомбінат піклується про безпеку своїх покупців під час карантину, у цьому ви можете переконатися</a>
+                <div class="feed-item-date">31.12.20</div><a href="news-detail.html">Салтівський м’ясокомбінат піклується про безпеку своїх покупців під час карантину, у цьому ви можете переконатися</a>
               </div>
               <div class="feed-item">
-                <div class="feed-item-date">18.11.20</div><a href="#">В магазинах фірмової торгівлі Бердянського м`ясокомбінату ці вимоги дотримані, про що свідчить відео</a>
+                <div class="feed-item-date">18.11.20</div><a href="news-detail.html">В магазинах фірмової торгівлі Бердянського м`ясокомбінату ці вимоги дотримані, про що свідчить відео</a>
               </div>
               <div class="feed-item">
-                <div class="feed-item-date">03.01.21</div><a href="#">Фінансова звітність ТОВ “САЛТІВСЬКИЙ М’ЯСОКОМБІНАТ”</a>
+                <div class="feed-item-date">03.01.21</div><a href="news-detail.html">Фінансова звітність ТОВ “САЛТІВСЬКИЙ М’ЯСОКОМБІНАТ”</a>
               </div>
               <div class="feed-item">
-                <div class="feed-item-date">31.12.20</div><a href="#">Салтівський м’ясокомбінат піклується про безпеку своїх покупців під час карантину, у цьому ви можете переконатися</a>
+                <div class="feed-item-date">31.12.20</div><a href="news-detail.html">Салтівський м’ясокомбінат піклується про безпеку своїх покупців під час карантину, у цьому ви можете переконатися</a>
               </div>
               <div class="feed-item">
-                <div class="feed-item-date">18.11.20</div><a href="#">В магазинах фірмової торгівлі Бердянського м`ясокомбінату ці вимоги дотримані, про що свідчить відео</a>
+                <div class="feed-item-date">18.11.20</div><a href="news-detail.html">В магазинах фірмової торгівлі Бердянського м`ясокомбінату ці вимоги дотримані, про що свідчить відео</a>
               </div>
-            </div><a class="inline-btn dark" href="#"><span>
+            </div><a class="inline-btn dark" href="news.html"><span>
                 <svg>
                   <use xlink:href="images/sprite.svg#icon-arrow"></use>
                 </svg></span>ВСЕ НОВОСТИ</a>
           </div>
         </div>
       </div>
-      <div class="section section-7 mk_scroller_block">
+      <div class="section section-7" id="cooperation">
         <div class="wrap-section">
           <div class="section-description">
             <div class="section-title">ОТКРЫТЫ К СОТРУДНИЧЕСТВУ</div>
@@ -379,7 +427,7 @@
           </div>
         </div>
       </div>
-      <div class="section section-8 mk_scroller_block">
+      <div class="section section-8" id="we-social">
         <div class="wrap-section">
           <div class="section-description">
             <div class="section-title">МЫ В СОЦИАЛЬНЫХ СЕТЯХ</div>
@@ -431,7 +479,7 @@
         </div>
       </div>
       <!-- Section Contact Us-->
-      <div class="section section-9 contact-us">
+      <div class="section section-9 contact-us" id="contacts">
         <div class="wrap-section">
           <div class="section-description">
             <div class="section-title">СВЯЗАТЬСЯ С НАМИ</div>
@@ -526,6 +574,8 @@
         </footer>
       </div>
     </main>
+    <!-- Background video-->
+    <div class="background-video"></div>
     <!-- jQuery & Bootstrap scripts-->
     <!-- jQuery-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -534,8 +584,7 @@
     <!-- Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <!-- Fullpage scrolling-->
-    <!--script(src='https://cdn.jsdelivr.net/npm/wheel-indicator@1.3.0/lib/wheel-indicator.js')-->
-    <!--script(src='js/mk_smoothScroll.js')-->
+    <script src="js/jquery.scrollify.js"></script>
     <!-- Main script-->
     <script src="js/main.js"></script>
   </body>
