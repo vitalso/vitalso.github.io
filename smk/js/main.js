@@ -289,6 +289,7 @@ $(function () {
   // Intro scroll effect
   var position_gallery = $('.gallery').offset().top + $('.intro-inner').outerHeight();
   var position_gallery_height = $('.gallery').offset().top + $('.gallery').outerHeight();
+  var main_top_position = $('main').height() - 800;
   $(window).on('scroll' , function(){
 
     if ($(window).scrollTop() >= position_gallery ) {
@@ -298,7 +299,7 @@ $(function () {
       //$('.wrap-fixed-elements').addClass('z-index');
     }
 
-    if ($(window).scrollTop() >= position_gallery_height ) {
+    if ($(window).scrollTop() >= main_top_position ) {
       $('.wrap-fixed-elements').removeClass('z-index');
     } else {
       $('.wrap-fixed-elements').addClass('z-index');
