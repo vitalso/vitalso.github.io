@@ -6,9 +6,9 @@ $(function () {
   });
 
   // Parallax effect for inner intro section
-  var top_position = $('#price-study').offset().top;
-  var top_position_1 = $('#what-learn-row').offset().top;
-  var top_position_2 = $('.how-study').offset().top;
+  //var top_position = $('#price-study').offset().top;
+  //var top_position_1 = $('#what-learn-row').offset().top;
+  //var top_position_2 = $('.how-study').offset().top;
 
   $(window).on('scroll' , function() {
 
@@ -16,7 +16,7 @@ $(function () {
     $('.hero-person').css('top' , - $(window).scrollTop()*0.3);
     //$('.hero-bg').css('top' , - $(window).scrollTop()*0.2);
 
-    if ($(window).width() <= 480) {
+    /*if ($(window).width() <= 480) {
       if ($(window).scrollTop() >= 0 && $(window).scrollTop() < top_position_1) {
         $('.wrap-fixed-button').hide();
       } else if ($(window).scrollTop() > top_position_1 - 200 && $(window).scrollTop() < top_position_1 - 200 + $('#what-learn-row').height()) {
@@ -28,7 +28,7 @@ $(function () {
       } else {
         $('.wrap-fixed-button').show();
       }
-    }
+    }*/
 
   });
 
@@ -236,6 +236,7 @@ $(function () {
 
   var $getCorseForm = $('form[name="getCourse"]');
   var $getCorseFormPopup = $('form[name="getCourse-popup"]');
+  var $getCorseFormFree = $('form[name="getCourse-free"]');
 
   if ($getCorseForm.length) {
     $getCorseForm.each(function () {
@@ -291,6 +292,38 @@ $(function () {
           $getCorseFormPopup.find('input').removeClass('active');
           $getCorseFormPopup.hide();
           $getCorseFormPopup.next('p').hide();
+          // TODO по событию success вывести сообщение об успешной отправки формы
+        }).fail(function() {
+          console.log('fail');
+          // TODO по событию fail вывести сообщение об ошибке
+        });
+      });
+    })
+  }
+
+  if ($getCorseFormFree.length) {
+    $getCorseFormFree.each(function () {
+      var $this = $(this);
+
+      $this.submit(function(e) {
+
+        $this.find('button[type="submit"]').attr('disabled' , 'disabled');
+
+        e.preventDefault();
+
+        $.ajax({
+          contentType: "application/json",
+          type: $this.attr('method'),
+          url: $this.attr('action'),
+          data: createAMOJSON($this)
+        }).done(function() {
+          console.log('success');
+          $('.white-popup-block').find('.success').show();
+          $getCorseFormFree.trigger('reset');
+          $getCorseFormFree.find('button[type="submit"]').removeAttr('disabled');
+          $getCorseFormFree.find('input').removeClass('active');
+          $getCorseFormFree.hide();
+          $getCorseFormFree.next('p').hide();
           // TODO по событию success вывести сообщение об успешной отправки формы
         }).fail(function() {
           console.log('fail');

@@ -77,11 +77,12 @@ header {
   position: absolute;
   width: 100%;
   top: 0;
-  z-index: 3; }
-  header.fixed {
-    position: fixed;
-    top: 0;
-    background: #0B2340; }
+  z-index: 3;
+  /*&.fixed {
+  		position: fixed;
+  		top: 0;
+  		background: $dark-blue;
+  	}*/ }
   header .logo {
     position: relative;
     z-index: 3; }
@@ -365,7 +366,8 @@ h5 {
   position: absolute;
   top: calc(100% - 115px);
   right: -30px;
-  background: url(../images/slider-figure.svg) no-repeat; }
+  background: url(../images/slider-figure.svg) no-repeat;
+  pointer-events: none; }
 
 .progress-game {
   padding: 70px 0;
@@ -701,17 +703,42 @@ h5 {
     color: #A1A1A1; }
 
 .wrap-fixed-button {
-  background: #fff;
+  background: #F5B425;
   position: fixed;
   width: 100%;
   text-align: center;
   bottom: 0;
   z-index: 3;
-  padding: 10px 0;
-  display: none; }
+  height: 70px; }
+  .wrap-fixed-button .wrap {
+    max-width: 1100px;
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .wrap-fixed-button p {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px; }
+    .wrap-fixed-button p span {
+      color: #D05FDC; }
   .wrap-fixed-button a {
-    font-size: 18px;
-    padding: 14px 30px; }
+    height: 56px;
+    padding: 0 24px;
+    border-radius: 250px;
+    font-size: 24px;
+    text-decoration: none;
+    background: #fff;
+    text-transform: uppercase;
+    color: #111F56;
+    font-weight: 700;
+    line-height: 58px; }
+    .wrap-fixed-button a img {
+      vertical-align: top;
+      margin-right: 10px; }
 
 .faq {
   padding: 70px 0; }
@@ -751,7 +778,7 @@ h5 {
   font-weight: 700; }
 
 footer {
-  padding: 70px 0;
+  padding: 70px 0 140px 0;
   background: #0B2340;
   line-height: 24px;
   color: #fff; }
@@ -1253,7 +1280,27 @@ button.mfp-close {
     line-height: 20px; }
   button.mfp-close {
     width: 30px;
-    height: 30px; } }
+    height: 30px; }
+  .wrap-fixed-button {
+    height: 60px;
+    padding: 0 16px;
+    text-align: left; }
+    .wrap-fixed-button .wrap {
+      max-width: 400px;
+      height: 60px; }
+    .wrap-fixed-button img {
+      display: none; }
+    .wrap-fixed-button p {
+      font-size: 14px;
+      line-height: 18px;
+      max-width: 50%; }
+    .wrap-fixed-button a {
+      height: 40px;
+      margin-right: 40px;
+      font-size: 14px;
+      line-height: 40px; }
+      .wrap-fixed-button a img {
+        display: none; } }
 
 @media screen and (max-width: 480px) {
   .price-study {
