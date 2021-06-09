@@ -45,19 +45,22 @@ $(function () {
   });
 
   // Toggle principle
-  $('.principle-list-item-title').on('click' , function(){
-    $('.principle-list-item').removeClass('open');
-    $(this).closest('.principle-list-item').addClass('open');
+  $('.principle-list-item').on('click' , function(){
+    //$('.principle-list-item').removeClass('open');
+    $(this).toggleClass('open');
   });
 
   // Photo list
   $('.photo-list a').on('click' , function(e){
     e.preventDefault();
 
-    $('.photo-list li').removeClass('open')
-
-    $(this).closest('li').addClass('open');
-    $(this).closest('ul').addClass('open');
+    if ($(this).closest('li').hasClass('open')) {
+      $(this).closest('li').removeClass('open');
+      $(this).closest('ul').removeClass('open');
+    } else {
+      $(this).closest('li').addClass('open').siblings('.open').removeClass('open');
+      $(this).closest('ul').addClass('open');
+    }
 
   });
 
@@ -132,9 +135,97 @@ $(function () {
   });
 
   // Fullpage scrolling
-  /*$.scrollify({
-    section : ".section",
+  var pagescroll = $('.pagescroll');
+  if (pagescroll.length) {
+    $(".pagescroll").onepage_scroll({
+       sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
+       easing: "ease-in-out",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
+                                        // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+       animationTime: 1500,             // AnimationTime let you define how long each section takes to animate
+       pagination: false,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+       updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+       beforeMove: function(index) {
+        $('.section-nav').removeClass('open');
+       },  // This option accepts a callback function. The function will be called before the page moves.
+       afterMove: function(index) {
+        $('.section-nav ul li.active').removeClass('active');
+        $('.section-nav ul li').eq(index-2).addClass('active');
+        $('.section-nav').addClass('open');
+
+        if (index == 5) {
+          console.log('ok');
+          /*$('body').bind("mousewheel", function() {
+            return false;
+          });*/
+        }
+
+       },   // This option accepts a callback function. The function will be called after the page moves.
+       loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+       keyboard: true,                  // You can activate the keyboard controls
+       responsiveFallback: 992,        // You can fallback to normal page scroll by defining the width of the browser in which
+                                        // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
+                                        // the browser's width is less than 600, the fallback will kick in.
+       direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
+    });
+  }
+
+  $('.section-nav .chapter-link').on('click' , function(e){
+    e.preventDefault();
+
+    $("#main").moveTo($(this).data('index'));
+  });
+
+  $('.section-nav ul li a').on('click' , function(e){
+    e.preventDefault();
+
+    $('.section-nav ul li').removeClass('active');
+    $(this).closest('li').addClass('active');
+
+    $("#main").moveTo($(this).data('index'));
+  });
+
+  const activity_slider = $(".activity-slider");
+  activity_slider.slick({
+    dots: false,
+    arrows: false,
+    infinite:false,
+    speed: 1300,
+    variableWidth: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    vertical: true,
+    asNavFor: '.activity-desc-slider'
+  });
+
+  $('.activity-desc-slider').slick({
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    speed: 1300,
+    fade: true,
+    asNavFor: activity_slider
+  });
+
+  /*activity_slider.on('afterChange', function(event, slick, currentSlide) {
+    if (slick.$slides.length-1 == currentSlide) {
+      console.log("Last slide");
+      $('body').bind("mousewheel", function() {
+        return;
+      });
+    }
   });*/
+
+  $('.section-5').on('wheel', (function(e) {
+    e.preventDefault();
+
+    if (e.originalEvent.deltaY < 0) {
+      activity_slider.slick('slickPrev');
+    } else {
+      activity_slider.slick('slickNext');
+    }
+  }));
 
   // Section bottom slider
   $('.bottom-nav-slider').slick({
