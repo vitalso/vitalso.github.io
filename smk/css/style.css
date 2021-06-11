@@ -3190,11 +3190,13 @@ footer {
       font-weight: 600;
       line-height: 22px;
       bottom: 55px;
-      left: 65px;
-      right: 65px;
+      left: 50px;
+      right: 50px;
       opacity: 0;
       transition: all .3s ease;
       z-index: 2; }
+      .contact-grid .item p span {
+        display: block; }
     .contact-grid .item img {
       position: absolute;
       top: 0;
@@ -3279,6 +3281,7 @@ footer {
   .trademark-description .slick-current + .trademark-item {
     padding-top: 40px; }
   .trademark-item {
+    padding-top: 40px;
     line-height: 22px; }
     .trademark-item img {
       margin-bottom: 24px;
@@ -3579,6 +3582,9 @@ main {
   bottom: 0;
   width: 100%;
   z-index: 1; }
+
+.fixed-onepage-scroll main {
+  transform: translateY(-400%) !important; }
 
 @media screen and (max-width: 992px) {
   .onepage-wrapper {

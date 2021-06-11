@@ -146,6 +146,22 @@ $(function () {
        updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
        beforeMove: function(index) {
         $('.section-nav').removeClass('open');
+
+        if (index == 6) {
+
+          $('.pagescroll').moveTo(5);
+
+          $('.section-5').on('wheel', function(e) {
+            e.preventDefault();
+
+            if (e.originalEvent.deltaY < 0) {
+              activity_slider.slick('slickPrev');
+            } else {
+              activity_slider.slick('slickNext');
+            }
+          });
+        }
+
        },  // This option accepts a callback function. The function will be called before the page moves.
        afterMove: function(index) {
         $('.section-nav ul li.active').removeClass('active');
@@ -154,9 +170,9 @@ $(function () {
 
         if (index == 5) {
           console.log('ok');
-          /*$('body').bind("mousewheel", function() {
-            return false;
-          });*/
+
+          $('.pagescroll').moveDown();
+
         }
 
        },   // This option accepts a callback function. The function will be called after the page moves.
@@ -172,7 +188,7 @@ $(function () {
   $('.section-nav .chapter-link').on('click' , function(e){
     e.preventDefault();
 
-    $("#main").moveTo($(this).data('index'));
+    $(".pagescroll").moveTo($(this).data('index'));
   });
 
   $('.section-nav ul li a').on('click' , function(e){
@@ -181,7 +197,7 @@ $(function () {
     $('.section-nav ul li').removeClass('active');
     $(this).closest('li').addClass('active');
 
-    $("#main").moveTo($(this).data('index'));
+    $(".pagescroll").moveTo($(this).data('index'));
   });
 
   const activity_slider = $(".activity-slider");
@@ -208,24 +224,13 @@ $(function () {
     asNavFor: activity_slider
   });
 
-  /*activity_slider.on('afterChange', function(event, slick, currentSlide) {
-    if (slick.$slides.length-1 == currentSlide) {
+  activity_slider.on('beforeChange', function(event, slick, currentSlide , nextSlide) {
+    if (slick.$slides.length-1 == nextSlide) {
       console.log("Last slide");
-      $('body').bind("mousewheel", function() {
-        return;
-      });
-    }
-  });*/
 
-  $('.section-5').on('wheel', (function(e) {
-    e.preventDefault();
-
-    if (e.originalEvent.deltaY < 0) {
-      activity_slider.slick('slickPrev');
-    } else {
-      activity_slider.slick('slickNext');
+      $('.pagescroll').moveDown();
     }
-  }));
+  });
 
   // Section bottom slider
   $('.bottom-nav-slider').slick({
