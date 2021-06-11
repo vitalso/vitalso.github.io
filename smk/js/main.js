@@ -20,10 +20,29 @@ $(function () {
   })
 
   // Drop menu
-  $('.has-drop-menu a').eq(0).on('click' , function(e){
-    e.preventDefault();
+  /*$('.has-drop-menu').on('click' , function(e){
+    e.stopPropagation();
 
-    $(this).closest('li').find('.drop-menu').toggleClass('open');
+    if ($(this).hasClass('open')) {
+      $('nav li .drop-menu').removeClass('open');
+      $(this).removeClass('open');
+    } else {
+      $('nav li .drop-menu , .has-drop-menu').removeClass('open');
+      $(this).closest('li').find('.drop-menu').addClass('open');
+      $(this).addClass('open');
+    }
+
+  });*/
+
+  $('.has-drop-menu a').mouseenter(function(){
+    $('nav li .drop-menu , .has-drop-menu').removeClass('open');
+    $(this).closest('li').find('.drop-menu').addClass('open');
+    $(this).addClass('open');
+  });
+
+  $('.has-drop-menu').mouseleave(function(){
+    $('nav li .drop-menu').removeClass('open');
+    $(this).removeClass('open');
   });
 
   // Search form in header
@@ -68,6 +87,25 @@ $(function () {
   $('footer.inner .title-for-list').on('click' , function(){
     $(this).toggleClass('open');
   });
+
+  $('.footer-contact-list ul a').on('click' , function(){
+
+
+    $(this).closest('li').find('.sub-info').toggleClass('open');
+    $(this).toggleClass('open');
+
+    return false;
+  })
+
+  // Scroll to Contact Us
+  var contact_us = $('.contact-us.inner');
+  if (contact_us.length) {
+    $('.intro-inner .primary-btn').on('click' , function(e){
+      e.preventDefault();
+
+      $('html, body').animate({scrollTop: $(document).height()}, 1000);
+    });
+  }
 
   // Trademark list slider
   $('.trademark-list').slick({
@@ -147,7 +185,7 @@ $(function () {
        beforeMove: function(index) {
         $('.section-nav').removeClass('open');
 
-        if (index == 6) {
+        /*if (index == 6) {
 
           $('.pagescroll').moveTo(5);
 
@@ -160,7 +198,7 @@ $(function () {
               activity_slider.slick('slickNext');
             }
           });
-        }
+        }*/
 
        },  // This option accepts a callback function. The function will be called before the page moves.
        afterMove: function(index) {
@@ -168,12 +206,12 @@ $(function () {
         $('.section-nav ul li').eq(index-2).addClass('active');
         $('.section-nav').addClass('open');
 
-        if (index == 5) {
+        /*if (index == 5) {
           console.log('ok');
 
           $('.pagescroll').moveDown();
 
-        }
+        }*/
 
        },   // This option accepts a callback function. The function will be called after the page moves.
        loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
@@ -310,6 +348,10 @@ $(function () {
     arrows: false,
     dots: true,
     fade: true
+  });
+
+  $('.gallery-slider img').on('click' , function(){
+    $('.gallery-slider').slick('slickNext');
   });
 
   // Section scroll nav
