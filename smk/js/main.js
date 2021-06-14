@@ -34,11 +34,6 @@ $(function () {
 
   });*/
 
-  /*$('nav ul > li').mouseenter(function(e){
-    $('.open').find('.drop-menu').removeClass('open');
-    $(this).addClass('open').find('.drop-menu').addClass('open');
-  });*/
-
   // Search form in header
   $('.header-search .open-search').on('click' , function(e){
     e.preventDefault();
@@ -82,14 +77,17 @@ $(function () {
     $(this).toggleClass('open');
   });
 
-  $('.footer-contact-list ul a').on('click' , function(){
+  if ($(window).width() <= 480) {
+
+    $('.footer-contact-list ul a').on('click' , function(){
 
 
-    $(this).closest('li').find('.sub-info').toggleClass('open');
-    $(this).toggleClass('open');
+      $(this).closest('li').find('.sub-info').toggleClass('open');
+      $(this).toggleClass('open');
 
-    return false;
-  })
+      return false;
+    });
+  }
 
   // Scroll to Contact Us
   var contact_us = $('.contact-us.inner');
@@ -464,6 +462,18 @@ $(function () {
 
     if ($(window).width() <= 992) {
       $('body').css('padding-bottom' , 0);
+    }
+
+    if ($(window).width() <= 480) {
+
+      $('.footer-contact-list ul a').on('click' , function(){
+
+
+        $(this).closest('li').find('.sub-info').toggleClass('open');
+        $(this).toggleClass('open');
+
+        return false;
+      });
     }
 
   })
