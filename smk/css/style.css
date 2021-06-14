@@ -114,6 +114,10 @@ nav {
       margin: 0; }
     nav li:nth-child(3) .wrap {
       max-width: calc(4 * 240px); }
+    nav li.has-drop-menu:hover .drop-menu {
+      opacity: 1;
+      z-index: 1;
+      visibility: visible; }
   nav a {
     font-weight: 600;
     text-transform: uppercase;
@@ -3396,9 +3400,15 @@ footer {
   width: 100%;
   height: 320px;
   left: 0;
-  top: -150vh;
+  top: 100%;
   opacity: 0;
-  transition: all .5s ease; }
+  transition: all .5s ease;
+  z-index: -1;
+  visibility: hidden;
+  /*&.open {
+      top: 100%;
+      opacity: 1;
+    }*/ }
   .drop-menu .wrap {
     display: flex;
     justify-content: center;
@@ -3406,9 +3416,6 @@ footer {
     margin: 0 auto;
     position: relative;
     background: url(../images/gallery/image-3.jpg) center top/cover no-repeat; }
-  .drop-menu.open {
-    top: 100%;
-    opacity: 1; }
   .drop-menu:after {
     content: "";
     position: absolute;
@@ -3435,7 +3442,8 @@ footer {
         left: 20px;
         top: calc(100% - 55px);
         text-transform: none;
-        z-index: 1; }
+        z-index: 1;
+        padding-right: 20px; }
       .drop-menu-item a img {
         /*height: 100%;
               object-fit: cover;
@@ -3552,7 +3560,8 @@ main {
   align-items: flex-start;
   overflow-x: hidden; }
   .section-6 .wrap-section {
-    position: relative; }
+    position: relative;
+    padding-top: 180px; }
 
 .section-7.active {
   background: rgba(90, 90, 90, 0.4); }
@@ -3665,7 +3674,9 @@ main {
   .wrap-fixed-elements {
     position: relative; }
   .section-9 .wrap-section {
-    transform: none; } }
+    transform: none; }
+  .section-6 .wrap-section {
+    padding-top: 0; } }
 
 @media screen and (max-width: 768px) {
   .section-5 {

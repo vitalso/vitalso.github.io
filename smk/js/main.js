@@ -34,16 +34,10 @@ $(function () {
 
   });*/
 
-  $('.has-drop-menu a').mouseenter(function(){
-    $('nav li .drop-menu , .has-drop-menu').removeClass('open');
-    $(this).closest('li').find('.drop-menu').addClass('open');
-    $(this).addClass('open');
-  });
-
-  $('.has-drop-menu').mouseleave(function(){
-    $('nav li .drop-menu').removeClass('open');
-    $(this).removeClass('open');
-  });
+  /*$('nav ul > li').mouseenter(function(e){
+    $('.open').find('.drop-menu').removeClass('open');
+    $(this).addClass('open').find('.drop-menu').addClass('open');
+  });*/
 
   // Search form in header
   $('.header-search .open-search').on('click' , function(e){
