@@ -73,7 +73,7 @@ $(function () {
   });
 
   // Footer toggle list
-  $('footer.inner .title-for-list').on('click' , function(){
+  $('footer .title-for-list').on('click' , function(){
     $(this).toggleClass('open');
   });
 
@@ -178,35 +178,11 @@ $(function () {
        updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
        beforeMove: function(index) {
         $('.section-nav').removeClass('open');
-
-        /*if (index == 6) {
-
-          $('.pagescroll').moveTo(5);
-
-          $('.section-5').on('wheel', function(e) {
-            e.preventDefault();
-
-            if (e.originalEvent.deltaY < 0) {
-              activity_slider.slick('slickPrev');
-            } else {
-              activity_slider.slick('slickNext');
-            }
-          });
-        }*/
-
        },  // This option accepts a callback function. The function will be called before the page moves.
        afterMove: function(index) {
         $('.section-nav ul li.active').removeClass('active');
         $('.section-nav ul li').eq(index-2).addClass('active');
         $('.section-nav').addClass('open');
-
-        /*if (index == 5) {
-          console.log('ok');
-
-          $('.pagescroll').moveDown();
-
-        }*/
-
        },   // This option accepts a callback function. The function will be called after the page moves.
        loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
        keyboard: true,                  // You can activate the keyboard controls
@@ -256,13 +232,21 @@ $(function () {
     asNavFor: activity_slider
   });
 
-  activity_slider.on('beforeChange', function(event, slick, currentSlide , nextSlide) {
+  $('#activity-nav .btn-prev').on('click' ,function(){
+    activity_slider.slick('slickPrev');
+  });
+
+  $('#activity-nav .btn-next').click(function(){
+    activity_slider.slick('slickNext');
+  });
+
+  /*activity_slider.on('beforeChange', function(event, slick, currentSlide , nextSlide) {
     if (slick.$slides.length-1 == nextSlide) {
       console.log("Last slide");
 
       $('.pagescroll').moveDown();
     }
-  });
+  });*/
 
   // Section bottom slider
   $('.bottom-nav-slider').slick({
@@ -284,10 +268,6 @@ $(function () {
     variableWidth: true
     //variableHeight: true
   });
-
-  /*var count = $('.card-wrap .slick-dots').children('li').length;
-  var width_count = $('.card-wrap .slick-dots').width() / count;
-  $('.card-wrap .slick-dots li').width(width_count + '%');*/
 
   $('#card-nav .btn-prev').on('click' ,function(){
     $('.card-slider').slick('slickPrev');
