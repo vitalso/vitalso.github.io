@@ -3148,7 +3148,8 @@ footer {
     opacity: 0;
     background: rgba(34, 116, 255, 0.4);
     pointer-events: none;
-    transition: all .5s ease-in-out; }
+    transition: all .5s ease-in-out;
+    z-index: 2; }
   .photo-list.open:after {
     opacity: 1; }
   .photo-list li {
@@ -3158,7 +3159,8 @@ footer {
     max-height: 625px;
     overflow: hidden;
     position: absolute;
-    transition: all .5s ease-in-out; }
+    transition: all .5s ease-in-out;
+    z-index: 1; }
     .photo-list li img {
       width: 100%;
       height: 100%;
@@ -3177,7 +3179,7 @@ footer {
       transition: all .5s ease-in-out; }
     .photo-list li.open {
       width: 50%;
-      z-index: 2; }
+      z-index: 3; }
       .photo-list li.open h4 {
         opacity: 1; }
     .photo-list li:nth-child(2) {
@@ -3627,7 +3629,7 @@ main {
   overflow-x: hidden; }
   .section-6 .wrap-section {
     position: relative;
-    padding-top: 180px; }
+    padding-top: 40px; }
 
 .section-7.active {
   background: rgba(90, 90, 90, 0.4); }
