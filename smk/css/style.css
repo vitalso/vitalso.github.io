@@ -2013,11 +2013,12 @@ footer {
   .intro-inner.green {
     background: rgba(89, 228, 136, 0.9); }
   .intro-inner.news {
-    height: 422px; }
+    height: 422px;
+    /*.breadcrumbs {
+        bottom: 0;
+      }*/ }
     .intro-inner.news .intro-desc {
       padding-right: 0; }
-    .intro-inner.news .breadcrumbs {
-      bottom: 0; }
   .intro-inner.news-detail {
     height: 322px;
     background: #fff; }
@@ -3630,6 +3631,8 @@ main {
   .section-6 .wrap-section {
     position: relative;
     padding-top: 40px; }
+  .section-6 #news-nav {
+    top: 45px; }
 
 .section-7.active {
   background: rgba(90, 90, 90, 0.4); }
@@ -3718,6 +3721,12 @@ main {
 
 .fixed-onepage-scroll main {
   transform: translateY(-400%) !important; }
+
+@media screen and (max-width: 1280px) {
+  .section-5 .activity-img {
+    max-width: 40vw; }
+  .section-6 .feed-item {
+    max-width: calc(100% / 3 - 30px); } }
 
 @media screen and (max-width: 992px) {
   .onepage-wrapper {
