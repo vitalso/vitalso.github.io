@@ -99,6 +99,7 @@ header {
   z-index: 3; }
 
 nav {
+  height: 100%;
   margin-left: 64px; }
   nav ul {
     display: flex;
@@ -108,8 +109,10 @@ nav {
     align-items: center;
     justify-content: flex-end; }
   nav li {
+    height: 100%;
     margin-right: 48px;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    line-height: 55px; }
     nav li:last-child {
       margin: 0; }
     nav li:nth-child(3) .wrap {
@@ -1149,6 +1152,9 @@ h4 {
 #activity-nav {
   position: relative;
   margin-top: 60px; }
+
+.activity-slider img {
+  width: 100%; }
 
 @media screen and (max-width: 1280px) {
   .activity-img img {
@@ -3759,6 +3765,8 @@ main {
   .section-5 {
     flex-direction: column;
     align-items: flex-start; }
+    .section-5 .activity-img {
+      max-width: 100%; }
   .about-factory.small-text .wrap-section {
     max-width: 100%;
     padding-left: 90px;
