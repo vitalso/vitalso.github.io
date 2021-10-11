@@ -183,7 +183,7 @@ html {
 .intro {
   height: 42vh;
   max-height: 356px;
-  background: url(../images/intro.png) no-repeat; }
+  background: url(../images/intro.png) center top/cover no-repeat; }
   .intro + .logo {
     margin-top: 60px;
     margin-bottom: 80px; }
