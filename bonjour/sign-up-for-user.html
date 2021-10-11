@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width , initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Bonjour</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- Main page start-->
+    <main>
+      <div id="app">
+        <!-- Header-->
+        <header>
+          <button class="back inline">
+            <svg>
+              <use xlink:href="images/sprite.svg#arrow-left"></use>
+            </svg>
+          </button>
+          <h1>Sign up</h1>
+        </header>
+        <form class="sign-up-form">
+          <div class="form-row text-center">
+            <input type="file"><span>
+              <svg>
+                <use xlink:href="images/sprite.svg#add"></use>
+              </svg></span>
+            <label>Add profile pic</label>
+          </div>
+          <div class="form-row">
+            <label>Full name</label>
+            <input type="text" name="">
+          </div>
+          <div class="form-row">
+            <label>Username</label>
+            <input type="text" name="">
+          </div>
+          <div class="form-row">
+            <label>Email</label>
+            <input type="email" name="">
+          </div>
+          <div class="form-row">
+            <input type="checkbox" id="emailme"><span></span>
+            <label for="emailme">Email me exclusive offers and news</label>
+          </div>
+          <div class="form-row">
+            <!-- For make active button just remove 'disabled' attr-->
+            <button class="btn primary" type="submit" disabled>Sign up</button>
+          </div>
+        </form>
+        <p class="notice text-center"><span>By signing up, you agree to App’s</span> <a href="#">terms of service,</a> <span>including additional</span> <a href="#">terms and privacy policy.</a></p>
+      </div>
+    </main>
+    <!-- jQuery & Bootstrap scripts-->
+    <!-- jQuery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Main script-->
+    <script src="js/main.js"></script>
+  </body>
+</html>
