@@ -17,7 +17,7 @@
     <!-- Header start-->
     <header>
       <div class="header-container d-flex justify-content-between align-items-center">
-        <div class="logo"><a class="logo logo-white" href="index.html"><img src="images/logo-white.png" alt="logo-white"></a></div>
+        <div class="logo"><a class="logo" href="index.html"><img class="logo-red-white" src="images/logo-red-white.png" alt="logo-red-white"><img class="logo-white" src="images/logo-white.png" alt="logo-white"></a></div>
         <nav>
           <ul>
             <li><a href="#">Wer wir sind</a></li>
@@ -33,7 +33,7 @@
             </li>
           </ul>
           <div class="connect-with-us d-lg-none">
-            <p>Connect with us</p><a href="#">
+            <p class="mb-1">Connect with us</p><a href="#">
               <svg>
                 <use xlink:href="images/sprite.svg#linkedin"></use>
               </svg></a><a href="#">
@@ -51,8 +51,8 @@
       <section class="hero-section background-overlay">
         <div class="container">
           <div class="row">
-            <div class="col-md-9">
-              <h1>Du bist <span>Visionär?</span></h1>
+            <div class="col-lg-9">
+              <h1 class="typeeffect">Du bist <span>Visionär?</span></h1>
               <h3>Wir haben verstanden, dass der Lebensraum von morgen ander sein wird und wir sind dein Partner, damit Du die Welt von morgen nachhaltig prägen kannst.</h3>
             </div>
           </div>
@@ -60,6 +60,10 @@
           <svg>
             <use xlink:href="images/sprite.svg#arrow-down"></use>
           </svg></a>
+        <video class="bg-video" loop muted autoplay playsinline poster="images/hero-section.jpg">
+          <source src="video/bg-video.mp4" type="video/mp4">
+          <source src="video/bg-video.webm" type="video/webm">
+        </video>
       </section>
       <section class="padding-top-100">
         <div class="container">
@@ -242,6 +246,7 @@
           </div>
         </div>
         <div class="number-line d-lg-block d-none"></div>
+        <!--.number-curve-->
       </section>
       <section class="wrap-team padding-top-100">
         <div class="container">
@@ -259,11 +264,12 @@
             <div class="team-item"><img src="images/team-4.jpg" alt="team-image"></div>
             <div class="team-item"><img src="images/team-1.jpg" alt="team-image"></div>
             <div class="team-item"><img src="images/team-3.jpg" alt="team-image"></div>
-          </div><a class="link-primary link-more" href="#">Lerne uns Team kennen
+          </div>
+        </div>
+        <div class="container"><a class="link-primary link-more" href="#">Lerne uns Team kennen
             <svg>
               <use xlink:href="images/sprite.svg#arrow-link"></use>
-            </svg></a>
-        </div>
+            </svg></a></div>
       </section>
       <section class="vacancy padding-top-100">
         <div class="container">
