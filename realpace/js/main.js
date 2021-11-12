@@ -34,6 +34,7 @@ $(function () {
 
   // Fade in transition for numbers
   var top_position_number = $('.number-wrap').offset().top - 100;
+  var hero_height = $('.hero-section').height();
 
   $(window).on('scroll' , function() {
 
@@ -42,8 +43,9 @@ $(function () {
     }
 
     // Sticky header
-    if ( $(window).scrollTop() >= 1 ) {
+    if ( $(window).scrollTop() >= hero_height ) {
       $('header').addClass('sticky');
+      console.log(hero_height);
     } else {
       $('header').removeClass('sticky');
     }

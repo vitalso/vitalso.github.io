@@ -43,10 +43,6 @@ h5 {
     line-height: 28px;
     margin-bottom: 16px; } }
 
-@media screen and (max-width: 480px) {
-  h2.headline {
-    word-break: break-all; } }
-
 .btn {
   max-height: 48px;
   padding: 12px 24px;
@@ -164,8 +160,19 @@ header {
 
 @media screen and (max-width: 992px) {
   header {
-    position: absolute;
-    padding: 0 0 0 15px; }
+    padding: 0 0 0 15px;
+    /*&.sticky {
+      background: transparent;
+        .logo {
+          .logo-red-white {
+            display: inline-block;
+          }
+
+          .logo-white {
+            display: none;
+          }
+        }
+    }*/ }
     header nav {
       position: fixed;
       width: 100%;
@@ -191,13 +198,7 @@ header {
               text-decoration: none;
               border-bottom: 2px solid #fff; }
       header nav.open {
-        left: 0; }
-    header.sticky {
-      background: transparent; }
-      header.sticky .logo .logo-red-white {
-        display: inline-block; }
-      header.sticky .logo .logo-white {
-        display: none; } }
+        left: 0; } }
 
 .hero-section {
   height: 100vh;
@@ -233,6 +234,19 @@ header {
     font-size: 40px;
     line-height: 48px;
     letter-spacing: -0.02em; }
+    .hero-section h3 span {
+      position: relative;
+      display: inline-block; }
+      .hero-section h3 span:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        animation: fadeOut 1s 1 forwards;
+        animation-delay: 1s; }
 
 .bg-video {
   position: absolute;
@@ -267,10 +281,12 @@ header {
     color: #fff; }
 
 .typeeffect {
-  display: inline-block; }
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden; }
   .typeeffect span {
     width: 0;
-    display: block;
+    display: inline-block;
     overflow: hidden;
     padding-right: 5px;
     letter-spacing: .05em;
@@ -289,6 +305,12 @@ header {
     border-color: transparent; }
   to {
     border-color: #fff; } }
+
+@keyframes fadeOut {
+  from {
+    width: 100%; }
+  to {
+    width: 0; } }
 
 @media screen and (max-width: 768px) {
   .hero-section {
