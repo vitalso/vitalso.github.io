@@ -18,19 +18,12 @@ $(function () {
     $('body').toggleClass('overflow-hidden');
   });
 
-  // Typewritter effect on hero section title
-  /*var quoteArray = ["Visionär?"];
-  var textPosition = 0;
-  // speed in milliseconds
-  var speed = 100;
-  typewriter = () => {
-    document.querySelector("#type").innerHTML = quoteArray[0].substring(0, textPosition);
+  // Scroll on button 'See more'
+  $('.see-more').on('click' , function(e){
+    e.preventDefault();
 
-    if(textPosition++ != quoteArray[0].length)
-      setTimeout(typewriter, speed);
-  }
-
-  window.addEventListener("load", typewriter)*/
+    $('html, body').animate({scrollTop: $('.hero-section').outerHeight()}, 300);
+  });
 
   // Fade in transition for numbers
   var top_position_number = $('.number-wrap').offset().top - 100;
@@ -45,7 +38,6 @@ $(function () {
     // Sticky header
     if ( $(window).scrollTop() >= hero_height ) {
       $('header').addClass('sticky');
-      console.log(hero_height);
     } else {
       $('header').removeClass('sticky');
     }
