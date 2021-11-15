@@ -356,7 +356,11 @@ header {
 .inner-hero-section {
   padding: 250px 0 190px 0; }
   .inner-hero-section.abstract-background.blue-abstract:after {
-    top: 15%; }
+    top: 25%; }
+
+@media screen and (max-width: 1200px) {
+  .inner-hero-section.abstract-background.blue-abstract:after {
+    top: 33%; } }
 
 @media screen and (max-width: 768px) {
   .hero-section {
@@ -366,7 +370,9 @@ header {
 
 @media screen and (max-width: 576px) {
   .inner-hero-section {
-    padding: 150px 0 100px 0; } }
+    padding: 150px 0 100px 0; }
+    .inner-hero-section.abstract-background.blue-abstract:after {
+      top: 7%; } }
 
 .portfolio-list {
   margin: 128px 0;
@@ -876,6 +882,15 @@ section p {
     left: auto;
     right: -28%;
     background: url(../images/abstract-background-blue.png) no-repeat; }
+  .abstract-background.middle-abstract {
+    overflow: visible; }
+    .abstract-background.middle-abstract:after {
+      width: 370px;
+      height: 970px;
+      top: -63%;
+      right: 0;
+      left: auto;
+      background: url(../images/abstract-background-2.png) left center/cover no-repeat; }
   .abstract-background.bottom-abstract:after {
     top: auto;
     right: -50%;
@@ -912,6 +927,11 @@ section p {
   right: -5%;
   bottom: -68px; }
 
+.cover-column.position-absolute.right-top {
+  top: -35px;
+  right: -5%;
+  z-index: -1; }
+
 .our-rules {
   padding-bottom: 120px; }
   .our-rules-item {
@@ -945,6 +965,27 @@ section p {
     margin-bottom: 0;
     color: #fff; }
 
+.construction {
+  padding-top: 250px;
+  padding-bottom: 200px;
+  background: url(../images/construction.jpg) center/cover no-repeat; }
+
+.we-item {
+  max-width: 500px;
+  margin: 50px 0; }
+  .we-item h4 {
+    margin-bottom: 20px;
+    color: #fff; }
+    .we-item h4 span {
+      display: block;
+      font-family: "Libre Baskerville"; }
+
+.change {
+  margin-top: 100px;
+  padding-top: 250px;
+  padding-bottom: 250px;
+  background: url(../images/change.jpg) center/cover no-repeat; }
+
 @media screen and (max-width: 1400px) {
   .cover-column.position-absolute.right-bottom {
     position: relative !important;
@@ -965,4 +1006,6 @@ section p {
     padding-top: 60px; }
   .eco-item {
     max-width: 100%;
-    margin: 30px 0; } }
+    margin: 30px 0; }
+  .construction, .change {
+    padding: 60px 0; } }
