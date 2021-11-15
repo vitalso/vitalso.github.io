@@ -25,25 +25,6 @@ $(function () {
     $('html, body').animate({scrollTop: $('.hero-section').outerHeight()}, 300);
   });
 
-  // Fade in transition for numbers
-  var top_position_number = $('.number-wrap').offset().top - 100;
-  var hero_height = $('.hero-section').height();
-
-  $(window).on('scroll' , function() {
-
-    if ( $(window).scrollTop() >=  top_position_number) {
-      $('.number-wrap').addClass('transition');
-    }
-
-    // Sticky header
-    if ( $(window).scrollTop() >= hero_height ) {
-      $('header').addClass('sticky');
-    } else {
-      $('header').removeClass('sticky');
-    }
-
-  });
-
   // Slider in Team section
   $('.team-slider').slick({
     infinite: true,
@@ -64,5 +45,24 @@ $(function () {
   $('.team-slider').on('beforeChange', function (event, slick, currentSlide) {
     $('.team').addClass('ms-3');
   })
+
+  // Fade in transition for numbers
+  var top_position_number = $('.number-wrap').offset().top - 100;
+  var hero_height = $('.hero-section').height();
+
+  $(window).on('scroll' , function() {
+
+    if ( $(window).scrollTop() >=  top_position_number) {
+      $('.number-wrap').addClass('transition');
+    }
+
+    // Sticky header
+    if ( $(window).scrollTop() >= hero_height ) {
+      $('header').addClass('sticky');
+    } else {
+      $('header').removeClass('sticky');
+    }
+
+  });
 
 });
