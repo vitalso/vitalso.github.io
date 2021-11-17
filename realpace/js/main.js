@@ -46,6 +46,28 @@ $(function () {
     $('.team').addClass('ms-3');
   })
 
+  // Portfolio popup
+  $('.full-portfolio').magnificPopup({
+    delegate: 'a',
+    type: 'inline'
+  });
+
+  // Portfolio popup slider
+  $('.portfolio-slider').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: true,
+  });
+
+  // Show popup with current portfolio item
+  $('.full-portfolio .portfolio-item a').on('click' , function(e) {
+    e.preventDefault()
+    var slideNumber = $(this).data('slide');
+    $('.portfolio-slider').slick('slickGoTo', slideNumber - 1);
+  });
+
   // Fade in transition for numbers
   var top_position_number = $('.number-wrap').offset().top - 100;
   var hero_height = $('.hero-section').height();

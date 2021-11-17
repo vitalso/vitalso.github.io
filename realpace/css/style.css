@@ -380,7 +380,10 @@ header {
 .portfolio-list {
   margin: 128px 0;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  flex-wrap: wrap; }
+  .portfolio-list.full-portfolio .portfolio-item {
+    margin-bottom: 90px; }
 
 .portfolio-item {
   width: 100%;
@@ -392,7 +395,34 @@ header {
   align-items: center;
   border-bottom: 1px solid #3D657F; }
 
+.portfolio-slide {
+  display: flex !important;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center; }
+  .portfolio-slide .slide-image {
+    margin-right: 30px; }
+  .portfolio-slide .slide-description {
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 24px; }
+    .portfolio-slide .slide-description h4 {
+      padding-bottom: 24px;
+      border-bottom: 1px solid #3D657F; }
+
+@media screen and (max-width: 992px) {
+  .portfolio-slide {
+    flex-direction: column; }
+    .portfolio-slide .slide-image {
+      margin: 0 0 30px 0; }
+    .portfolio-slide .slide-description {
+      max-width: 560px; } }
+
 @media screen and (max-width: 768px) {
+  .portfolio-slide {
+    display: inline-block !important;
+    padding: 0 50px; }
   .portfolio-list {
     margin: 100px 0 0 0;
     flex-direction: column; }
@@ -401,7 +431,11 @@ header {
     height: 100px;
     margin: 0 0 80px 0; }
     .portfolio-item img {
-      max-width: 160px; } }
+      max-width: 160px; }
+  .slick-prev {
+    left: 10px; }
+  .slick-next {
+    right: 10px; } }
 
 .primary-list {
   margin-bottom: 100px; }
@@ -803,6 +837,43 @@ header {
     display: block;
     margin-left: 0;
     margin-top: 16px; } }
+
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 100%;
+  margin: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.mfp-container {
+  padding: 0; }
+
+.mfp-content {
+  height: 100%; }
+
+button.mfp-close {
+  background: url(../images/close-popup.svg) no-repeat;
+  font-size: 0;
+  top: 32px;
+  right: 32px;
+  opacity: 1; }
+  button.mfp-close:focus, button.mfp-close:active {
+    top: 32px; }
+
+.popup-logo {
+  position: absolute;
+  top: 16px;
+  left: 50px; }
+
+@media screen and (max-width: 992px) {
+  .white-popup {
+    display: block;
+    padding: 100px 0 50px 0; } }
 
 footer {
   padding: 55px 0;
