@@ -30,6 +30,9 @@ h3 {
   line-height: 48px;
   letter-spacing: -0.02em; }
 
+.blue-color {
+  color: #3D657F; }
+
 h4, h5 {
   margin-bottom: 30px;
   font-weight: 500;
@@ -95,6 +98,8 @@ h6 {
 
 .link-primary {
   color: #FF0049; }
+  .link-primary:hover {
+    color: #3D657F; }
 
 .link-more {
   font-weight: 600;
@@ -104,8 +109,6 @@ h6 {
     width: 12px;
     height: 12px;
     margin-left: 14px; }
-  .link-more:hover {
-    color: #FF0049; }
 
 header {
   padding: 14px 34px;
@@ -168,12 +171,8 @@ header {
         header .toggle-nav.open span:nth-child(3) {
           transform: rotate(-45deg); }
   header.sticky {
-    background: #FF0049;
+    background: #3D657F;
     z-index: 9; }
-    header.sticky .logo .logo-red-white {
-      display: none; }
-    header.sticky .logo .logo-white {
-      display: inline-block; }
   header.inner-header {
     background: #fff; }
     header.inner-header .logo .logo-red-white {
@@ -278,19 +277,26 @@ header {
       bottom: 0;
       left: 0;
       background: #fff; }
-  .hero-section h3 span {
-    position: relative;
-    display: inline-block; }
-    .hero-section h3 span:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background: #fff;
-      animation: fadeOut 1s 1 forwards;
-      animation-delay: 1s; }
+  .hero-section h3 {
+    height: 0;
+    overflow: hidden;
+    animation: heightIn 2s steps(30, end) 1 forwards;
+    animation-delay: 1.5s;
+    /*span {
+      position: relative;
+      display: inline-block;
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background: $white;
+          animation: fadeOut 1s 1 forwards;
+          animation-delay: 1s;
+        }
+    }*/ }
 
 .bg-video {
   position: absolute;
@@ -337,6 +343,12 @@ header {
     border-right: 2px solid #fff;
     animation: typing 2s steps(30, end) forwards, blink 0.5s infinite;
     vertical-align: bottom; }
+
+@keyframes heightIn {
+  from {
+    height: 0; }
+  to {
+    height: 100%; } }
 
 @keyframes typing {
   from {
@@ -394,6 +406,12 @@ header {
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #3D657F; }
+  .portfolio-item img {
+    transition: all .3s ease; }
+  .portfolio-item:hover {
+    border-width: 2px; }
+    .portfolio-item:hover img {
+      transform: scale(1.1); }
 
 .portfolio-slide {
   display: flex !important;
@@ -451,6 +469,8 @@ header {
     .primary-list.blue-list .primary-item-title svg {
       width: 16px;
       height: 16px; }
+    .primary-list.blue-list .primary-item-title:hover {
+      color: #FF0049; }
   .primary-list.blue-arrow .primary-item-title svg {
     width: 24px;
     height: 24px;
@@ -480,6 +500,8 @@ header {
       right: 0;
       stroke: #fff;
       stroke-width: 2px; }
+    .primary-item .primary-item-title:hover {
+      color: #3D657F; }
 
 @media screen and (max-width: 992px) {
   .primary-list.blue-list {
@@ -526,33 +548,40 @@ header {
   position: relative;
   z-index: 1; }
 
-.number-wrap.transition .number-section .row [class^="col"]:nth-child(1) {
+.transition .number-section [class^="col"]:nth-child(1), .transition .fade-in [class^="col"]:nth-child(1) {
   animation: fadeIn .8s 1 normal forwards; }
 
-.number-wrap.transition .number-section .row [class^="col"]:nth-child(2) {
+.transition .number-section [class^="col"]:nth-child(2), .transition .fade-in [class^="col"]:nth-child(2) {
   animation: fadeIn .8s .3s 1 normal forwards; }
 
-.number-wrap.transition .number-section .row [class^="col"]:nth-child(3) {
+.transition .number-section [class^="col"]:nth-child(3), .transition .fade-in [class^="col"]:nth-child(3) {
   animation: fadeIn .8s .6s 1 normal forwards; }
 
-.number-wrap.transition .number-line {
+.transition .number-section [class^="col"]:nth-child(4), .transition .fade-in [class^="col"]:nth-child(4) {
+  animation: fadeIn .8s .9s 1 normal forwards; }
+
+.transition .number-section [class^="col"]:nth-child(5), .transition .fade-in [class^="col"]:nth-child(5) {
+  animation: fadeIn .8s 1.2s 1 normal forwards; }
+
+.transition .number-section [class^="col"]:nth-child(6), .transition .fade-in [class^="col"]:nth-child(6) {
+  animation: fadeIn .8s 1.5s 1 normal forwards; }
+
+.transition .number-line {
   animation: fullwidth .6s 1 normal forwards; }
+
+.fade-in [class^="col"] {
+  transform: scale(0); }
 
 .number-section {
   padding: 0px 0 140px 0; }
   .number-section .row [class^="col"] {
     transform: scale(0); }
-    .number-section .row [class^="col"]:nth-child(1) {
-      margin-top: 18%; }
-    .number-section .row [class^="col"]:nth-child(2) {
-      margin-top: 14%; }
-    .number-section .row [class^="col"]:nth-child(3) {
-      margin-top: 5.5%; }
 
 .number-item {
   max-width: 355px; }
 
 .number-circle {
+  display: none !important;
   max-width: 64px;
   min-height: 64px;
   position: relative;
@@ -599,10 +628,10 @@ header {
 
 .number-line {
   width: 0;
-  height: 600px;
+  height: 680px;
   top: 120px;
   position: absolute;
-  background: url(../images/number-line.svg) no-repeat; }
+  background: url(../images/number-line-2.svg) left bottom/100% no-repeat; }
 
 /*.number-curve {
   width: 1920px;
@@ -624,30 +653,43 @@ header {
     width: 100%; } }
 
 @media screen and (max-width: 1440px) {
-  .number-section .row [class^="col"]:nth-child(1) {
-    margin-top: 11.5%; }
-  .number-section .row [class^="col"]:nth-child(2) {
-    margin-top: 9%; }
-  .number-section .row [class^="col"]:nth-child(3) {
-    margin-top: 3%; }
   .number-line {
     top: 0; } }
 
 @media screen and (max-width: 1280px) {
-  .number-section .row [class^="col"]:nth-child(1) {
-    margin-top: 8.5%; }
-  .number-section .row [class^="col"]:nth-child(2) {
-    margin-top: 6%; }
-  .number-section .row [class^="col"]:nth-child(3) {
-    margin-top: 0%; } }
+  /*.number-section {
+    .row {
+      [class^="col"] {
+        &:nth-child(1) {
+          margin-top: 8.5%;
+        }
+        &:nth-child(2) {
+          margin-top: 6%;
+        }
+        &:nth-child(3) {
+          margin-top: 0%;
+        }
+      }
+    }
+  }*/ }
 
 @media screen and (max-width: 1024px) {
-  .number-section .row [class^="col"]:nth-child(1) {
-    margin-top: 7%; }
-  .number-section .row [class^="col"]:nth-child(2) {
-    margin-top: 5%; }
+  /*.number-section {
+    .row {
+      [class^="col"] {
+        &:nth-child(1) {
+          margin-top: 7%;
+        }
+        &:nth-child(2) {
+          margin-top: 5%;
+        }
+      }
+    }
+  }
+
   .number-line {
-    top: -30px; } }
+    top: -30px;
+  }*/ }
 
 @media screen and (max-width: 992px) {
   .number-section {
@@ -870,6 +912,30 @@ button.mfp-close {
   top: 16px;
   left: 50px; }
 
+/* Zoom effect */
+.mfp-zoom-in .mfp-with-anim {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  transform: scale(0.8); }
+
+.mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  transition: all 0.3s ease-out; }
+
+.mfp-zoom-in.mfp-ready .mfp-with-anim {
+  opacity: 1;
+  transform: scale(1); }
+
+.mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8; }
+
+.mfp-zoom-in.mfp-removing .mfp-with-anim {
+  transform: scale(0.8);
+  opacity: 0; }
+
+.mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0; }
+
 @media screen and (max-width: 992px) {
   .white-popup {
     display: block;
@@ -920,6 +986,8 @@ footer {
     font-size: 16px;
     line-height: 22px;
     color: #fff; }
+    .footer-nav a:hover {
+      text-decoration: underline; }
 
 .footer-social {
   margin: 0;
@@ -1090,6 +1158,9 @@ section p {
 .light-blue-background {
   background: #EFF3F5; }
 
+.background-blue {
+  background: #3D657F; }
+
 .wrap-team {
   overflow-x: hidden; }
 
@@ -1175,11 +1246,15 @@ section p {
       display: block;
       font-family: "Libre Baskerville"; }
 
+.section-slider {
+  margin-top: 100px; }
+
 .change {
-  margin-top: 100px;
-  padding-top: 250px;
-  padding-bottom: 250px;
   background: url(../images/change.jpg) center/cover no-repeat; }
+
+.large-padding {
+  padding-top: 250px;
+  padding-bottom: 250px; }
 
 .w-40 {
   max-width: 40%; }
@@ -1210,7 +1285,7 @@ section p {
   .eco-item {
     max-width: 100%;
     margin: 30px 0; }
-  .construction, .change {
+  .construction, .large-padding {
     padding: 60px 0; }
   .inner-text {
     padding-left: 0;
