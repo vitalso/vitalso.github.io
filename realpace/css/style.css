@@ -548,7 +548,7 @@ header {
 
 .number-wrap .container {
   position: relative;
-  z-index: 1; }
+  z-index: 2; }
 
 .transition .number-section [class^="col"]:nth-child(1), .transition .fade-in [class^="col"]:nth-child(1) {
   animation: fadeIn .8s 1 normal forwards; }
@@ -568,8 +568,12 @@ header {
 .transition .number-section [class^="col"]:nth-child(6), .transition .fade-in [class^="col"]:nth-child(6) {
   animation: fadeIn .8s 1.5s 1 normal forwards; }
 
-.transition .number-curve:after {
-  animation: fullwidth .6s 1 normal forwards; }
+.transition .number-curve {
+  /*&:after {
+      animation: fullwidth .6s 1 normal forwards;
+    }*/ }
+  .transition .number-curve:before {
+    animation: leftOut 1s 1 normal forwards; }
 
 .fade-in [class^="col"] {
   transform: scale(0); }
@@ -643,18 +647,27 @@ header {
   height: 280px;
   position: absolute;
   top: 120px; }
-  .number-curve:after {
+  .number-curve:after, .number-curve:before {
     content: "";
     position: absolute;
     top: -100px;
     left: -10%;
-    width: 0;
+    width: 115%;
     height: 500px;
     border-left: 2px solid #3D657F;
     border-right: 2px solid #3D657F;
     border-bottom: 2px solid #3D657F;
     border-radius: 0 0 50% 50%;
     transform: rotate(-16deg); }
+  .number-curve:before {
+    width: 115%;
+    top: 0;
+    left: -5%;
+    position: absolute;
+    background: #EFF3F5;
+    border-radius: 0;
+    border: none;
+    z-index: 1; }
 
 @keyframes fadeIn {
   0% { }
@@ -666,6 +679,14 @@ header {
     width: 0; }
   to {
     width: 115%; } }
+
+@keyframes leftOut {
+  from {
+    left: -5%;
+    top: 0; }
+  to {
+    left: 100%;
+    top: -320px; } }
 
 @media screen and (max-width: 1400px) {
   .number-section .row [class^="col"]:nth-child(1) {

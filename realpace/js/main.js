@@ -105,13 +105,31 @@ $(function () {
   });
 
   $('.section-slider').on('wheel', (function(e) {
-    e.preventDefault();
+    /*e.preventDefault();
 
     if (e.originalEvent.deltaY < 0) {
       $(this).slick('slickNext');
     } else {
       $(this).slick('slickPrev');
+    }*/
+
+    var slideCount = $(this)[0].slick["slideCount"];
+    var currentIndex = $(this).slick("slickCurrentSlide");
+    var totalSildeToShow =  $(this)[0].slick.options["slidesToShow"];
+
+    if (e.originalEvent.deltaY < 0) {
+      if (currentIndex == 0)
+        return;
+      e.preventDefault();
+      $(this).slick('slickPrev');
+
+    } else {
+      if (slideCount - totalSildeToShow == currentIndex)
+        return;
+      e.preventDefault();
+      $(this).slick('slickNext')
     }
+
   }));
 
   // Fade in transition for numbers
