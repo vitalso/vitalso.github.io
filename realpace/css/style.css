@@ -568,7 +568,7 @@ header {
 .transition .number-section [class^="col"]:nth-child(6), .transition .fade-in [class^="col"]:nth-child(6) {
   animation: fadeIn .8s 1.5s 1 normal forwards; }
 
-.transition .number-curve {
+.transition .number-curve:after {
   animation: fullwidth .6s 1 normal forwards; }
 
 .fade-in [class^="col"] {
@@ -579,9 +579,9 @@ header {
   .number-section .row [class^="col"] {
     transform: scale(0); }
     .number-section .row [class^="col"]:nth-child(1) {
-      margin-top: 270px; }
+      margin-top: 11.7vw; }
     .number-section .row [class^="col"]:nth-child(2) {
-      margin-top: 130px; }
+      margin-top: 9.5%; }
 
 .number-item {
   max-width: 355px; }
@@ -639,13 +639,22 @@ header {
   background: url(../images/number-line-2.svg) left bottom/100% no-repeat; }
 
 .number-curve {
-  width: 0;
-  height: 2px;
+  width: 100%;
+  height: 280px;
   position: absolute;
-  top: 500px;
-  left: -10vw;
-  transform: rotate(-15deg);
-  background: #3D657F; }
+  top: 120px; }
+  .number-curve:after {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: -10%;
+    width: 0;
+    height: 500px;
+    border-left: 2px solid #3D657F;
+    border-right: 2px solid #3D657F;
+    border-bottom: 2px solid #3D657F;
+    border-radius: 0 0 50% 50%;
+    transform: rotate(-16deg); }
 
 @keyframes fadeIn {
   0% { }
@@ -656,16 +665,19 @@ header {
   from {
     width: 0; }
   to {
-    width: 120vw; } }
+    width: 115%; } }
 
 @media screen and (max-width: 1400px) {
-  .number-curve {
-    top: 570px;
-    transform: rotate(-20deg); } }
+  .number-section .row [class^="col"]:nth-child(1) {
+    margin-top: 10.5vw; }
+  .number-curve:after {
+    top: -50px; } }
 
 @media screen and (max-width: 1200px) {
-  .number-curve {
-    transform: rotate(-23deg); } }
+  .number-curve:after {
+    top: -60px; }
+  .number-section .row [class^="col"]:nth-child(1) {
+    margin-top: 9.5vw; } }
 
 @media screen and (max-width: 992px) {
   .number-section {

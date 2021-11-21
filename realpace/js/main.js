@@ -96,7 +96,7 @@ $(function () {
 
   // Full-section slider on Partner page
   $('.section-slider').slick({
-    infinite: true,
+    infinite: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: false,
