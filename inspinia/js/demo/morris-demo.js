@@ -52,6 +52,15 @@ $(function() {
         colors: ['#87d6c6', '#54cdb4','#1ab394'],
     });
 
+    Morris.Donut({
+        element: 'morris-donut-1',
+        data: [{ label: "Download Sales", value: 12 },
+            { label: "In-Store Sales", value: 30 },
+            { label: "Mail-Order Sales", value: 20 } ],
+        resize: true,
+        colors: ['#87d6c6', '#54cdb4','#1ab394'],
+    });
+
     Morris.Bar({
         element: 'morris-bar-chart',
         data: [{ y: '2006', a: 60, b: 50 },

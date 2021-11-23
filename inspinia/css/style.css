@@ -9863,3 +9863,26 @@ body.md-skin {
     margin: 0;
   }
 }
+
+/* Custom style for #right-side-nav */
+#right-side-nav a[data-toggle].collapsed {
+  color: #676A6C;
+}
+
+  #right-side-nav a[data-toggle].collapsed span.fa.fa-angle-down {
+    transform: rotate(90deg);
+  }
+
+#right-side-nav a[data-toggle]:not(.collapsed) {
+  border-left: 4px solid;
+  color: #1ab394;
+}
+
+  #right-side-nav a[data-toggle]:not(.collapsed) span.fa.fa-angle-down {
+    transform: rotate(0deg);
+  }
+
+#right-side-nav .sub-nav a.active {
+  font-weight: bold;
+  color: #000;
+}
