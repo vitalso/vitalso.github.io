@@ -9886,3 +9886,20 @@ body.md-skin {
   font-weight: bold;
   color: #000;
 }
+
+.sticky {
+  right: 0;
+  height: 100%;
+  max-height: calc(100vh - 30%);
+  overflow: auto;
+}
+
+@media screen and (max-width: 992px) {
+
+  .sticky {
+    position: relative !important;
+    height: auto;
+    max-height: auto;
+  }
+
+}

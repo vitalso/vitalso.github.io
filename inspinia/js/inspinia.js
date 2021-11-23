@@ -146,10 +146,14 @@ $(document).ready(function () {
     })
 
     // Right side nav add .active class to sub-nav
-    $("#right-side-nav .sub-nav a").on('click' , function(){
+    $("#right-side-nav .sub-nav a:not([href^='#third-level'])").on('click' , function(){
         $("#right-side-nav .sub-nav a").removeClass('active');
         $(this).addClass('active');
-    })
+        var target = $(this).attr("href");
+        $('html, body').animate({
+            scrollTop: $(target).offset().top
+        }, 1000);
+    });
 });
 
 // Minimalize menu when screen is less than 768px
