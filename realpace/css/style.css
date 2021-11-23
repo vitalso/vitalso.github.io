@@ -568,12 +568,8 @@ header {
 .transition .number-section [class^="col"]:nth-child(6), .transition .fade-in [class^="col"]:nth-child(6) {
   animation: fadeIn .8s 1.5s 1 normal forwards; }
 
-.transition .number-curve {
-  /*&:after {
-      animation: fullwidth .6s 1 normal forwards;
-    }*/ }
-  .transition .number-curve:before {
-    animation: leftOut 1s 1 normal forwards; }
+.transition .number-curve:before {
+  animation: leftOut 2s 1 normal forwards; }
 
 .fade-in [class^="col"] {
   transform: scale(0); }
