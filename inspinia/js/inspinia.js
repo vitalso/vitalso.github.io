@@ -146,6 +146,12 @@ $(document).ready(function () {
     })
 
     // Right side nav add .active class to sub-nav
+    $('#right-side-nav a.label-link').on('click' , function(){
+        $(this).closest("ul").find(".sub-nav.show").removeClass('show');
+        $(this).closest("ul").find(".sub-nav").prev('a').addClass('collapsed');
+        $(this).toggleClass('show');
+    });
+
     $("#right-side-nav .sub-nav a:not([href^='#third-level'])").on('click' , function(){
         $("#right-side-nav .sub-nav a").removeClass('active');
         $(this).addClass('active');
@@ -154,6 +160,27 @@ $(document).ready(function () {
             scrollTop: $(target).offset().top
         }, 1000);
     });
+
+    // Toogle all button
+    $('.toggle-box').on('click' , function(e){
+        e.preventDefault();
+
+        $('.tab-pane.active .ibox').toggleClass('collapsed');
+        $('.tab-pane.active .ibox .ibox-content').slideToggle(200);
+
+    });
+
+    // Sticky right side nav
+    var top_position_nav = $('#right-side-nav').offset().top;
+
+    $(window).on('scroll' , function(){
+        if ( $(window).scrollTop() >= top_position_nav ) {
+            $('#right-side-nav').closest('.col-lg-2').addClass('sticky');
+        } else {
+            $('#right-side-nav').closest('.col-lg-2').removeClass('sticky');
+        }
+    });
+
 });
 
 // Minimalize menu when screen is less than 768px

@@ -9878,6 +9878,15 @@ body.md-skin {
   color: #1ab394;
 }
 
+  #right-side-nav .sub-nav a[data-toggle]:not(.collapsed) {
+    border-left: none;
+    color: #a7b1c2;
+  }
+
+  #right-side-nav .sub-nav a[data-toggle].collapsed {
+    color: #a7b1c2;
+  }
+
   #right-side-nav a[data-toggle]:not(.collapsed) span.fa.fa-angle-down {
     transform: rotate(0deg);
   }
@@ -9888,18 +9897,35 @@ body.md-skin {
 }
 
 .sticky {
-  right: 0;
+  position: fixed;
+  top: 0;
+  right: 10px;
   height: 100%;
-  max-height: calc(100vh - 30%);
+  max-height: 100vh;
   overflow: auto;
+}
+
+  .sticky #right-side-nav {
+    margin-left: 40px;
+  }
+
+.tab-pane .ibox-title .ibox-tools i.fa {
+  position: absolute;
+  right: 0;
+  top: 15px;
 }
 
 @media screen and (max-width: 992px) {
 
   .sticky {
     position: relative !important;
+    right: autol;
     height: auto;
     max-height: auto;
   }
+
+    .sticky #right-side-nav {
+      margin-left: 0;
+    }
 
 }
