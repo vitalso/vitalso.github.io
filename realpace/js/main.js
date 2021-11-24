@@ -101,9 +101,30 @@ $(function () {
     slidesToScroll: 1,
     dots: false,
     arrows: false,
-    adaptiveHeight: true
+    adaptiveHeight: true,
+    verticalSwiping: true
   });
 
+  $('.section-slider').on('swipe', function(event, slick, direction){
+    var slideCount = $(this)[0].slick["slideCount"];
+    var currentIndex = $(this).slick("slickCurrentSlide");
+    var totalSildeToShow =  $(this)[0].slick.options["slidesToShow"];
+
+    if (direction == 'up') {
+      if (currentIndex == 0) {
+        console.log('first');
+      }
+      //$(this).slick('slickPrev');
+
+    } else {
+      if (slideCount - totalSildeToShow == currentIndex) {
+        console.log('last');
+      }
+      //$(this).slick('slickNext');
+    }
+  });
+
+  // Scroll slide when mouse on slider
   $('.section-slider').on('wheel', (function(e) {
 
     var slideCount = $(this)[0].slick["slideCount"];
@@ -122,19 +143,6 @@ $(function () {
       e.preventDefault();
       $(this).slick('slickNext')
     }
-
-  }));
-
-  $('.section-slider').on('swipeup', (function(e) {
-
-    var slideCount = $(this)[0].slick["slideCount"];
-    var currentIndex = $(this).slick("slickCurrentSlide");
-    var totalSildeToShow =  $(this)[0].slick.options["slidesToShow"];
-
-    if (slideCount - totalSildeToShow == currentIndex)
-        return;
-      e.preventDefault();
-      $(this).slick('slickNext')
 
   }));
 
