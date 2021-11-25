@@ -154,6 +154,7 @@ $(document).ready(function () {
 
     });
 
+    // Smooth scroll to the section
     $("#right-side-nav .sub-nav a:not([href^='#third-level'])").on('click' , function(){
         $("#right-side-nav .sub-nav a").removeClass('active');
         $(this).addClass('active');
