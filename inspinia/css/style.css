@@ -9865,15 +9865,15 @@ body.md-skin {
 }
 
 /* Custom style for #right-side-nav */
-#right-side-nav a[data-toggle].collapsed {
+#right-side-nav a.label-link.collapsed {
   color: #676A6C;
 }
 
-  #right-side-nav a[data-toggle].collapsed span.fa.fa-angle-down {
+  #right-side-nav a.label-link.collapsed span.fa.fa-angle-down {
     transform: rotate(90deg);
   }
 
-#right-side-nav a[data-toggle]:not(.collapsed) {
+#right-side-nav a.label-link:not(.collapsed) {
   border-left: 4px solid;
   color: #1ab394;
 }
@@ -9887,7 +9887,7 @@ body.md-skin {
     color: #a7b1c2;
   }
 
-  #right-side-nav a[data-toggle]:not(.collapsed) span.fa.fa-angle-down {
+  #right-side-nav a.label-link:not(.collapsed) span.fa.fa-angle-down {
     transform: rotate(0deg);
   }
 
@@ -9913,6 +9913,11 @@ body.md-skin {
   position: absolute;
   right: 0;
   top: 15px;
+  transition: all 0.3s ease;
+}
+
+.tab-pane .ibox.open .ibox-title .ibox-tools i.fa {
+  transform: rotate(180deg);
 }
 
 @media screen and (max-width: 992px) {
