@@ -147,17 +147,11 @@ $(document).ready(function () {
 
     // Right side nav add .active class to sub-nav
     $('#right-side-nav a.label-link').on('click' , function(){
-        //$(this).closest("ul").find(".sub-nav.show").toggleClass('show');
-        //$(this).closest("li").find(".sub-nav").prev('a').addClass('collapsed');
-        //$(this).toggleClass('show');
 
         $(this).next(".sub-nav").collapse('toggle').prev('a').toggleClass('collapsed');
         $('#right-side-nav').find(".sub-nav.show").removeClass('show');
-        //$('#right-side-nav a.label-link:not(".collapsed")').addClass('collapsed');
         $('#right-side-nav a.label-link').not(this).addClass('collapsed');
-        //$(this).removeClass('collapsed');
-        //$(this).closest("ul").find(".sub-nav.show").prev('a').addClass('active');
-        //$(this).toggleClass('collapsed');
+
     });
 
     $("#right-side-nav .sub-nav a:not([href^='#third-level'])").on('click' , function(){

@@ -9896,6 +9896,13 @@ body.md-skin {
   color: #000;
 }
 
+#right-side-nav .sub-nav {
+  -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
 .sticky {
   position: fixed;
   top: 0;
