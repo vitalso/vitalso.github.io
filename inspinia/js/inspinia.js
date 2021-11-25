@@ -149,7 +149,7 @@ $(document).ready(function () {
     $('#right-side-nav a.label-link').on('click' , function(){
 
         $(this).next(".sub-nav").collapse('toggle').prev('a').toggleClass('collapsed');
-        $('#right-side-nav').find(".sub-nav.show").removeClass('show');
+        $('#right-side-nav').find(".sub-nav.show").collapse('hide');
         $('#right-side-nav a.label-link').not(this).addClass('collapsed');
 
     });
