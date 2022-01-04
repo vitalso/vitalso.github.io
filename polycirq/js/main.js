@@ -15,6 +15,23 @@ $(function () {
     $('html, body').animate({scrollTop: $(target).offset().top}, 500);
   });
 
+  // Graphic effects
+  var graphicTopPosition = $('#process').offset().top;
+  $(window).on('scroll' , function(){
+
+    if ( $(window).scrollTop() >= graphicTopPosition/2 ) {
+      $('#process').addClass('animation');
+    } else {
+      $('#process').removeClass('animation');
+    }
+
+  });
+
+  $('.wrap-graphic ul li').on('click' , function(){
+    $('.wrap-graphic ul li').removeClass('active');
+    $(this).addClass('active');
+  });
+
   // Higlight number on scroll
   var countItem = $('.number-wrap .number-item').length;
   var heightItem = $('.number-wrap').height() / countItem - 50;
