@@ -29,6 +29,7 @@ $(function () {
 
   $('.wrap-graphic ul li').on('click' , function(){
     $('.wrap-graphic ul li').removeClass('active');
+    $('.wrap-graphic .graphic-logo').addClass('active');
     $(this).addClass('active');
   });
 

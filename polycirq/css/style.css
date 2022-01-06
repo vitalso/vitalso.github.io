@@ -217,7 +217,7 @@ header {
   color: rgba(188, 221, 197, 0.6); }
 
 .wrap-graphic {
-  margin-top: 100px;
+  margin-top: 140px;
   padding-bottom: 140px;
   position: relative; }
   .wrap-graphic ul {
@@ -239,6 +239,11 @@ header {
         left: 20px;
         top: 37px;
         fill: #fff; }
+      .wrap-graphic ul li:nth-child(1) .graphic-desc {
+        left: -110%;
+        top: -50%; }
+        .wrap-graphic ul li:nth-child(1) .graphic-desc:after {
+          transform: rotate(-40deg) translate(80px, 240px); }
       .wrap-graphic ul li:nth-child(2) {
         margin-top: -20px; }
         .wrap-graphic ul li:nth-child(2) svg:first-child {
@@ -251,6 +256,12 @@ header {
           left: 59px;
           top: 11px;
           fill: #fff; }
+        .wrap-graphic ul li:nth-child(2) .graphic-desc {
+          top: -55%;
+          left: auto;
+          right: -40%; }
+          .wrap-graphic ul li:nth-child(2) .graphic-desc:after {
+            transform: rotate(0deg) translate(100px, 240px); }
       .wrap-graphic ul li:nth-child(3) {
         margin-left: 20px; }
         .wrap-graphic ul li:nth-child(3) svg:first-child {
@@ -267,10 +278,27 @@ header {
           left: -70%; }
           .wrap-graphic ul li:nth-child(3) .graphic-desc:after {
             transform: rotate(50deg) translate(90px, -80px); }
-      .wrap-graphic ul li:nth-child(4) svg {
+      .wrap-graphic ul li:nth-child(4) svg:first-child {
         width: 256px;
         height: 138px;
-        transform: rotate(-90deg) translate(80px, -55px); }
+        transform: rotate(-90deg) translate(80px, -55px);
+        fill: none;
+        stroke: #BCDDC5;
+        stroke-width: 2px; }
+      .wrap-graphic ul li:nth-child(4) svg.graphic-title {
+        width: 74px;
+        height: 143px;
+        position: absolute;
+        left: 55px;
+        top: -70px; }
+      .wrap-graphic ul li:nth-child(4) svg.converter-text {
+        fill: #fff; }
+      .wrap-graphic ul li:nth-child(4).active svg:first-child {
+        fill: none; }
+      .wrap-graphic ul li:nth-child(4).active svg {
+        fill: #1C6970; }
+      .wrap-graphic ul li:nth-child(4).active .converter-arrow-circle {
+        background: #BCDDC5; }
       .wrap-graphic ul li.active svg:first-child {
         fill: #1C6970; }
       .wrap-graphic ul li.active svg.graphic-title {
@@ -291,6 +319,8 @@ header {
     top: 30%;
     left: 10%;
     fill: #BCDDC5; }
+    .wrap-graphic .graphic-logo.active {
+      fill: #1C6970; }
   .wrap-graphic .bg-graphic {
     fill: #BCDDC5; }
 
@@ -321,6 +351,18 @@ header {
     width: 2px;
     height: 100%;
     background: #BCDDC5; }
+  .graphic-desc.top-arrow {
+    top: calc(-100% - 100px);
+    right: -70%;
+    max-width: 260px; }
+    .graphic-desc.top-arrow:after {
+      top: 130%; }
+  .graphic-desc.bottom-arrow {
+    bottom: -80px;
+    right: -45%;
+    max-width: 260px; }
+    .graphic-desc.bottom-arrow:after {
+      top: -130%; }
 
 .circle-refresh {
   width: 44px;
@@ -355,27 +397,158 @@ header {
     background: #BCDDC5;
     transform: rotate(45deg); }
 
-.animation .wrap-graphic ul li {
-  /*&:nth-child(4) {
-          svg:first-child {
-            animation: fadeIn .5s linear;
-          }
-          svg.graphic-title {
-            animation: changeColor .5s linear;
-          }
-        }*/ }
-  .animation .wrap-graphic ul li:nth-child(1) svg:first-child {
-    animation: fadeIn .5s linear; }
-  .animation .wrap-graphic ul li:nth-child(1) svg.graphic-title {
-    animation: changeColor .5s linear; }
-  .animation .wrap-graphic ul li:nth-child(2) svg:first-child {
-    animation: fadeIn .5s linear .5s; }
-  .animation .wrap-graphic ul li:nth-child(2) svg.graphic-title {
-    animation: changeColor .5s linear .5s; }
-  .animation .wrap-graphic ul li:nth-child(3) svg:first-child {
-    animation: fadeIn .5s linear 1s; }
-  .animation .wrap-graphic ul li:nth-child(3) svg.graphic-title {
-    animation: changeColor .5s linear 1s; }
+.circle-desc {
+  width: 0;
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  top: -70px;
+  left: 160px;
+  width: 550px;
+  justify-content: flex-end; }
+  .circle-desc:after, .circle-desc:before {
+    content: "";
+    position: absolute;
+    border-top: 2px dashed #B9BBBC;
+    width: 320px;
+    z-index: -1;
+    left: 120px; }
+  .circle-desc:after {
+    top: 20px; }
+  .circle-desc:before {
+    bottom: 20px; }
+  .circle-desc .graphic-desc {
+    width: 100px;
+    color: #B9BBBC; }
+    .circle-desc .graphic-desc:after {
+      background: #B9BBBC; }
+    .circle-desc .graphic-desc:before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #B9BBBC;
+      left: -3px; }
+    .circle-desc .graphic-desc:nth-child(3) {
+      top: -50%;
+      left: 30%; }
+      .circle-desc .graphic-desc:nth-child(3):after {
+        top: 110%;
+        height: 70%; }
+      .circle-desc .graphic-desc:nth-child(3):before {
+        top: 190%; }
+    .circle-desc .graphic-desc:nth-child(4) {
+      top: -50%;
+      left: 65%; }
+      .circle-desc .graphic-desc:nth-child(4):after {
+        top: 110%;
+        height: 70%; }
+      .circle-desc .graphic-desc:nth-child(4):before {
+        top: 190%; }
+    .circle-desc .graphic-desc:nth-child(5) {
+      bottom: -40%;
+      left: 30%; }
+      .circle-desc .graphic-desc:nth-child(5):after {
+        top: -110%; }
+      .circle-desc .graphic-desc:nth-child(5):before {
+        top: -173%; }
+    .circle-desc .graphic-desc:nth-child(6) {
+      bottom: -40%;
+      left: 65%; }
+      .circle-desc .graphic-desc:nth-child(6):after {
+        top: -110%; }
+      .circle-desc .graphic-desc:nth-child(6):before {
+        top: -173%; }
+
+.raw-circle {
+  width: 145px;
+  height: 145px;
+  background: #D0D2D3;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+  font-family: "Silka-SemiBold";
+  color: #fff;
+  margin-left: 50px; }
+
+.converter-wrap {
+  width: 298px;
+  height: 257px;
+  position: absolute;
+  left: 4px;
+  top: -142px;
+  opacity: 0;
+  visibility: hidden; }
+
+.converter-text {
+  position: absolute;
+  left: 96px;
+  top: -84px;
+  z-index: 1;
+  fill: #fff;
+  opacity: 0;
+  visibility: hidden; }
+
+.converter-arrow {
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden; }
+  .converter-arrow.top {
+    top: -162px;
+    left: 60%;
+    transform: rotate(180deg); }
+    .converter-arrow.top + span {
+      top: -159px;
+      left: 63%;
+      background: #f4faf7; }
+  .converter-arrow.bottom {
+    bottom: 3px;
+    left: 35%; }
+    .converter-arrow.bottom + span {
+      left: 35%;
+      bottom: 7px;
+      background: #f4faf7; }
+
+.converter-arrow-circle {
+  position: absolute;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  background: rgba(188, 221, 197, 0.16); }
+
+.animation .wrap-graphic ul li:nth-child(1) svg:first-child {
+  animation: fadeIn .5s linear; }
+
+.animation .wrap-graphic ul li:nth-child(1) svg.graphic-title {
+  animation: changeColor .5s linear; }
+
+.animation .wrap-graphic ul li:nth-child(2) svg:first-child {
+  animation: fadeIn .5s linear .5s; }
+
+.animation .wrap-graphic ul li:nth-child(2) svg.graphic-title {
+  animation: changeColor .5s linear .5s; }
+
+.animation .wrap-graphic ul li:nth-child(3) svg:first-child {
+  animation: fadeIn .5s linear 1s; }
+
+.animation .wrap-graphic ul li:nth-child(3) svg.graphic-title {
+  animation: changeColor .5s linear 1s; }
+
+.animation .wrap-graphic ul li:nth-child(4) svg:first-child {
+  animation: stroke .5s linear 1.5s forwards; }
+
+.animation .wrap-graphic ul li:nth-child(4) .converter-wrap, .animation .wrap-graphic ul li:nth-child(4) .converter-text, .animation .wrap-graphic ul li:nth-child(4) .converter-arrow, .animation .wrap-graphic ul li:nth-child(4) .converter-arrow-circle {
+  animation: fadeFigure .5s linear 1.5s forwards; }
+
+.animation .wrap-graphic ul li:nth-child(4) .circle-desc {
+  animation: rightIn .5s linear 1.5s forwards; }
 
 @keyframes fadeIn {
   from {
@@ -388,6 +561,28 @@ header {
     fill: #fff; }
   to {
     fill: #BCDDC5; } }
+
+@keyframes rightIn {
+  from {
+    width: 0;
+    visibility: hidden; }
+  to {
+    width: 550px;
+    visibility: visible; } }
+
+@keyframes fadeFigure {
+  from {
+    opacity: 0;
+    visibility: hidden; }
+  to {
+    opacity: 1;
+    visibility: visible; } }
+
+@keyframes stroke {
+  from {
+    stroke: #BCDDC5; }
+  to {
+    stroke: none; } }
 
 .checklist {
   padding: 70px 0; }
@@ -405,7 +600,7 @@ header {
     color: rgba(188, 221, 197, 0.4);
     transition: all .3s ease; }
   .number-item.active .number-item-title {
-    color: #BCDDC5; }
+    color: #fff; }
 
 .about {
   height: 1290px;
