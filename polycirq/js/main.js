@@ -39,6 +39,11 @@ $(function () {
       $('.wrap-graphic ul li:nth-child(4)').addClass('scalling');
     }
 
+    // Make 'Extrusion' blink
+    if ( $(firstStep).hasClass('active') ) {
+      $('.wrap-graphic ul li:nth-child(1)').addClass('scalling');
+    }
+
     // Make bling 'Washing' as default
     if(!$('.wrap-graphic ul li').hasClass('active')) { 
       $(firstStep).addClass('scalling');

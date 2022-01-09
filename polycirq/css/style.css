@@ -246,6 +246,8 @@ header {
           transform: rotate(-40deg) translate(80px, 240px); }
       .wrap-graphic ul li:nth-child(1).active + li:not(.active) {
         animation: scaleIn 1.3s linear infinite; }
+      .wrap-graphic ul li:nth-child(1).active.scalling {
+        animation: none; }
       .wrap-graphic ul li:nth-child(2) {
         margin-top: -20px; }
         .wrap-graphic ul li:nth-child(2) svg:first-child {
