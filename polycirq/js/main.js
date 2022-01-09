@@ -30,9 +30,20 @@ $(function () {
   });
 
   $('.wrap-graphic ul li').on('click' , function(){
-    $(this).removeClass('scalling');
+    $('.wrap-graphic ul li').removeClass('scalling');
     $('.wrap-graphic .graphic-logo').addClass('active');
     $(this).toggleClass('active');
+    
+    // Make 'Raw material' blink
+    if ( $('.wrap-graphic ul li:nth-child(2)').hasClass('active') ) {
+      $('.wrap-graphic ul li:nth-child(4)').addClass('scalling');
+    }
+
+    // Make bling 'Washing' as default
+    if(!$('.wrap-graphic ul li').hasClass('active')) { 
+      $(firstStep).addClass('scalling');
+    }
+
   });
 
   // Higlight number on scroll

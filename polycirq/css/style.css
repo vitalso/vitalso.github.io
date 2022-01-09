@@ -280,6 +280,8 @@ header {
           left: -70%; }
           .wrap-graphic ul li:nth-child(3) .graphic-desc:after {
             transform: rotate(50deg) translate(90px, -80px); }
+        .wrap-graphic ul li:nth-child(3).active .circle-refresh, .wrap-graphic ul li:nth-child(3).active .graphic-notification {
+          opacity: 1; }
       .wrap-graphic ul li:nth-child(4) svg:first-child {
         width: 256px;
         height: 138px;
@@ -302,12 +304,12 @@ header {
         fill: #1C6970; }
       .wrap-graphic ul li:nth-child(4).active .converter-arrow-circle {
         background: #BCDDC5; }
-      .wrap-graphic ul li:nth-child(4).active .circle-refresh, .wrap-graphic ul li:nth-child(4).active .graphic-notification {
-        opacity: 1; }
       .wrap-graphic ul li:nth-child(4).active .converter-wrap, .wrap-graphic ul li:nth-child(4).active .converter-text, .wrap-graphic ul li:nth-child(4).active .converter-arrow, .wrap-graphic ul li:nth-child(4).active .converter-arrow-circle {
         animation: fadeFigure .5s linear forwards; }
       .wrap-graphic ul li:nth-child(4).active .circle-desc {
         animation: rightIn .5s linear forwards; }
+      .wrap-graphic ul li:nth-child(4).active.scalling {
+        animation: none; }
       .wrap-graphic ul li.active svg:first-child {
         fill: #1C6970; }
       .wrap-graphic ul li.active svg.graphic-title {
@@ -601,15 +603,17 @@ header {
   margin-top: 80px;
   font-size: 25px;
   line-height: 30px;
-  color: #fff; }
+  color: rgba(255, 255, 255, 0.5); }
   .number-item-title {
     font-family: "Silka-SemiBold";
     font-size: 120px;
     line-height: 114px;
     color: rgba(188, 221, 197, 0.4);
     transition: all .3s ease; }
-  .number-item.active .number-item-title {
-    color: #fff; }
+  .number-item.active {
+    color: #BCDDC5; }
+    .number-item.active .number-item-title {
+      color: #fff; }
 
 .about {
   height: 1290px;
