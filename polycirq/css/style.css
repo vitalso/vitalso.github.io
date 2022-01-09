@@ -244,6 +244,8 @@ header {
         top: -50%; }
         .wrap-graphic ul li:nth-child(1) .graphic-desc:after {
           transform: rotate(-40deg) translate(80px, 240px); }
+      .wrap-graphic ul li:nth-child(1).active + li:not(.active) {
+        animation: scaleIn 1.3s linear infinite; }
       .wrap-graphic ul li:nth-child(2) {
         margin-top: -20px; }
         .wrap-graphic ul li:nth-child(2) svg:first-child {
@@ -294,19 +296,26 @@ header {
       .wrap-graphic ul li:nth-child(4) svg.converter-text {
         fill: #fff; }
       .wrap-graphic ul li:nth-child(4).active svg:first-child {
-        fill: none; }
+        fill: none;
+        stroke: none; }
       .wrap-graphic ul li:nth-child(4).active svg {
         fill: #1C6970; }
       .wrap-graphic ul li:nth-child(4).active .converter-arrow-circle {
         background: #BCDDC5; }
+      .wrap-graphic ul li:nth-child(4).active .circle-refresh, .wrap-graphic ul li:nth-child(4).active .graphic-notification {
+        opacity: 1; }
+      .wrap-graphic ul li:nth-child(4).active .converter-wrap, .wrap-graphic ul li:nth-child(4).active .converter-text, .wrap-graphic ul li:nth-child(4).active .converter-arrow, .wrap-graphic ul li:nth-child(4).active .converter-arrow-circle {
+        animation: fadeFigure .5s linear forwards; }
+      .wrap-graphic ul li:nth-child(4).active .circle-desc {
+        animation: rightIn .5s linear forwards; }
       .wrap-graphic ul li.active svg:first-child {
         fill: #1C6970; }
       .wrap-graphic ul li.active svg.graphic-title {
         fill: #BCDDC5; }
       .wrap-graphic ul li.active .graphic-desc {
         display: block; }
-      .wrap-graphic ul li.active .circle-refresh, .wrap-graphic ul li.active .graphic-notification {
-        opacity: 1; }
+      .wrap-graphic ul li.scalling {
+        animation: scaleIn 1.3s linear infinite; }
       .wrap-graphic ul li:hover {
         cursor: pointer; }
     .wrap-graphic ul svg {
@@ -536,19 +545,13 @@ header {
   animation: changeColor .5s linear .5s; }
 
 .animation .wrap-graphic ul li:nth-child(3) svg:first-child {
-  animation: fadeIn .5s linear 1s; }
+  animation: fadeIn .5s linear 1.5s; }
 
 .animation .wrap-graphic ul li:nth-child(3) svg.graphic-title {
-  animation: changeColor .5s linear 1s; }
+  animation: changeColor .5s linear 1.5s; }
 
 .animation .wrap-graphic ul li:nth-child(4) svg:first-child {
-  animation: stroke .5s linear 1.5s forwards; }
-
-.animation .wrap-graphic ul li:nth-child(4) .converter-wrap, .animation .wrap-graphic ul li:nth-child(4) .converter-text, .animation .wrap-graphic ul li:nth-child(4) .converter-arrow, .animation .wrap-graphic ul li:nth-child(4) .converter-arrow-circle {
-  animation: fadeFigure .5s linear 1.5s forwards; }
-
-.animation .wrap-graphic ul li:nth-child(4) .circle-desc {
-  animation: rightIn .5s linear 1.5s forwards; }
+  animation: fadeIn .5s linear 1s; }
 
 @keyframes fadeIn {
   from {
@@ -583,6 +586,12 @@ header {
     stroke: #BCDDC5; }
   to {
     stroke: none; } }
+
+@keyframes scaleIn {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.05); } }
 
 .checklist {
   padding: 70px 0; }

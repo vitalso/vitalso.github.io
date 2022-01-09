@@ -17,10 +17,12 @@ $(function () {
 
   // Graphic effects
   var graphicTopPosition = $('#process').offset().top;
+  var firstStep = $('.wrap-graphic ul li:nth-child(3)');
   $(window).on('scroll' , function(){
 
     if ( $(window).scrollTop() >= graphicTopPosition/2 ) {
       $('#process').addClass('animation');
+      $(firstStep).delay(2500).queue('fx', function() { $(this).addClass('active'); $('.wrap-graphic ul li:nth-child(1)').addClass('scalling') });
     } else {
       $('#process').removeClass('animation');
     }
@@ -28,9 +30,9 @@ $(function () {
   });
 
   $('.wrap-graphic ul li').on('click' , function(){
-    $('.wrap-graphic ul li').removeClass('active');
+    $(this).removeClass('scalling');
     $('.wrap-graphic .graphic-logo').addClass('active');
-    $(this).addClass('active');
+    $(this).toggleClass('active');
   });
 
   // Higlight number on scroll
