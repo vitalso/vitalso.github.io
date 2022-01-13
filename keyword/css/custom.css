@@ -149,7 +149,7 @@ body .table-responsive {
   resize: none;
 }
 
-#wizard > .content > .body ul.structure-list {
+#wizard > .content > .body ul {
   list-style-type: none !important;
 }
 
@@ -166,27 +166,31 @@ body .table-responsive {
   height: 33px;
 }
 
-/*#wizard .steps ul li:last-child {
-  display: none;
+#wizard > .actions {
+  padding-bottom: 50px;
 }
 
-#wizard .steps ul {
-  padding: 15px 0;
-  display: flex;
-  justify-content: space-between;
+#wizard .group .circle {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  background: #e5b4b9;
+  line-height: 26px;
+  font-size: 16px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
 }
 
-  #wizard .steps ul li {
-    width: 85px;
-  }
+#wizard ul.keyword-list li {
+  border-color: #23c6c8 !important;
+}
 
-  #wizard .steps ul li a {
-    width: 85px;
-    height: 85px;
-    border-radius: 50%;
-    margin: 0;
+  #wizard ul.keyword-list li i {
+    vertical-align: middle;
+    transform: rotate(45deg);
   }
-  */
 
 @media screen and (max-width: 992px) {
 
