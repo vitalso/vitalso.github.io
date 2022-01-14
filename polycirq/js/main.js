@@ -17,12 +17,41 @@ $(function () {
 
   // Graphic effects
   var graphicTopPosition = $('#process').offset().top;
-  var firstStep = $('.wrap-graphic ul li:nth-child(3)');
+  var firstStep = $('.wrap-graphic ul li:nth-child(4)');
   $(window).on('scroll' , function(){
 
     if ( $(window).scrollTop() >= graphicTopPosition/2 ) {
       $('#process').addClass('animation');
-      $(firstStep).delay(2500).queue('fx', function() { $(this).addClass('active'); $('.wrap-graphic ul li:nth-child(1)').addClass('scalling') });
+      $(firstStep).delay(2500).queue('fx', function() { 
+        $(this).addClass('active');
+        $('.wrap-graphic ul li:nth-child(3)').addClass('scalling');
+
+        if ( $(window).width() <= 992 ) {
+          $('.wrap-graphic').css('padding-bottom' , 500);
+
+          $('.wrap-graphic ul li').on('click' , function(){
+            $('.wrap-graphic ul li').removeClass('active');
+            $(this).addClass('active');
+
+            if ( $('.wrap-graphic ul li:nth-child(4').hasClass('active') ) {
+              $('.wrap-graphic').css('padding-bottom' , 500);
+            } else {
+              $('.wrap-graphic').css('padding-bottom' , 140);
+            }
+
+          });
+
+        } else {
+          $('.wrap-graphic').css('padding-bottom' , 140);
+
+          $('.wrap-graphic ul li').on('click' , function(){
+
+            $('.wrap-graphic').css('padding-bottom' , 140);
+
+          });
+        }
+
+      });
     } else {
       $('#process').removeClass('animation');
     }
@@ -33,14 +62,9 @@ $(function () {
     $('.wrap-graphic ul li').removeClass('scalling');
     $('.wrap-graphic .graphic-logo').addClass('active');
     $(this).toggleClass('active');
-    
-    // Make 'Raw material' blink
-    if ( $('.wrap-graphic ul li:nth-child(2)').hasClass('active') ) {
-      $('.wrap-graphic ul li:nth-child(4)').addClass('scalling');
-    }
 
     // Make 'Extrusion' blink
-    if ( $(firstStep).hasClass('active') ) {
+    if ( $('.wrap-graphic ul li:nth-child(3)').hasClass('active') ) {
       $('.wrap-graphic ul li:nth-child(1)').addClass('scalling');
     }
 
@@ -50,6 +74,32 @@ $(function () {
     }
 
   });
+
+  /*$(window).on('resize' , function(){
+
+    if ( $(window).width() <= 992 ) {
+      $('.wrap-graphic ul li').removeClass('active');
+
+      $('.wrap-graphic ul li').on('click' , function(){
+        $('.wrap-graphic ul li').removeClass('active');
+        $(this).addClass('active');
+
+        if ( $('.wrap-graphic ul li:nth-child(4').hasClass('active') ) {
+          $('.wrap-graphic').css('padding-bottom' , 500);
+        } else {
+          $('.wrap-graphic').css('padding-bottom' , 140);
+        }
+      })
+    } else {
+      $('.wrap-graphic').css('padding-bottom' , 140);
+      
+      $('.wrap-graphic ul li').on('click' , function(){
+        $('.wrap-graphic ul li').removeClass('scalling');
+        $(this).toggleClass('active');
+      });
+    }
+
+  });*/
 
   // Higlight number on scroll
   var countItem = $('.number-wrap .number-item').length;

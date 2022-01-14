@@ -260,6 +260,13 @@ header {
           left: 59px;
           top: 11px;
           fill: #fff; }
+        .wrap-graphic ul li:nth-child(2) svg.mobile-title {
+          fill: #fff;
+          transform: rotate(-86deg);
+          width: 85px;
+          height: 130px;
+          left: 100px;
+          top: -7px; }
         .wrap-graphic ul li:nth-child(2) .graphic-desc {
           top: -55%;
           left: auto;
@@ -278,6 +285,12 @@ header {
           left: 46px;
           top: 33px;
           fill: #fff; }
+        .wrap-graphic ul li:nth-child(3) svg.mobile-title {
+          width: 82px;
+          height: 132px;
+          transform: rotate(-90deg);
+          top: 10px;
+          left: 75px; }
         .wrap-graphic ul li:nth-child(3) .graphic-desc {
           left: -70%; }
           .wrap-graphic ul li:nth-child(3) .graphic-desc:after {
@@ -312,6 +325,8 @@ header {
         animation: rightIn .5s linear forwards; }
       .wrap-graphic ul li:nth-child(4).active.scalling {
         animation: none; }
+      .wrap-graphic ul li svg.mobile-title {
+        display: none; }
       .wrap-graphic ul li.active svg:first-child {
         fill: #1C6970; }
       .wrap-graphic ul li.active svg.graphic-title {
@@ -330,7 +345,7 @@ header {
     height: 88px;
     position: absolute;
     top: 30%;
-    left: 10%;
+    left: 105px;
     fill: #BCDDC5; }
     .wrap-graphic .graphic-logo.active {
       fill: #1C6970; }
@@ -537,25 +552,25 @@ header {
   background: rgba(188, 221, 197, 0.16); }
 
 .animation .wrap-graphic ul li:nth-child(1) svg:first-child {
-  animation: fadeIn .5s linear; }
+  animation: fadeIn .5s linear 1s; }
 
 .animation .wrap-graphic ul li:nth-child(1) svg.graphic-title {
-  animation: changeColor .5s linear; }
+  animation: changeColor .5s linear 1s; }
 
 .animation .wrap-graphic ul li:nth-child(2) svg:first-child {
-  animation: fadeIn .5s linear .5s; }
-
-.animation .wrap-graphic ul li:nth-child(2) svg.graphic-title {
-  animation: changeColor .5s linear .5s; }
-
-.animation .wrap-graphic ul li:nth-child(3) svg:first-child {
   animation: fadeIn .5s linear 1.5s; }
 
-.animation .wrap-graphic ul li:nth-child(3) svg.graphic-title {
+.animation .wrap-graphic ul li:nth-child(2) svg.graphic-title {
   animation: changeColor .5s linear 1.5s; }
 
+.animation .wrap-graphic ul li:nth-child(3) svg:first-child {
+  animation: fadeIn .5s linear .5s; }
+
+.animation .wrap-graphic ul li:nth-child(3) svg.graphic-title {
+  animation: changeColor .5s linear .5s; }
+
 .animation .wrap-graphic ul li:nth-child(4) svg:first-child {
-  animation: fadeIn .5s linear 1s; }
+  animation: fadeIn .5s linear; }
 
 @keyframes fadeIn {
   from {
@@ -596,6 +611,55 @@ header {
     transform: scale(1); }
   to {
     transform: scale(1.05); } }
+
+@media screen and (max-width: 992px) {
+  .wrap-graphic {
+    margin-top: 0;
+    padding-bottom: 200px;
+    transform: scale(0.8); }
+    .wrap-graphic ul {
+      margin: 0 auto;
+      transform: rotate(90deg) translate(50px, 60px); }
+      .wrap-graphic ul li:nth-child(1) .graphic-desc {
+        left: auto;
+        top: auto;
+        transform: rotate(-90deg) translateY(465px); }
+      .wrap-graphic ul li:nth-child(2) .graphic-desc {
+        top: auto;
+        left: auto;
+        right: auto;
+        transform: rotate(-90deg) translate(-110px, 285px); }
+      .wrap-graphic ul li:nth-child(2) .graphic-title {
+        display: none; }
+      .wrap-graphic ul li:nth-child(2) svg.mobile-title {
+        display: block; }
+      .wrap-graphic ul li:nth-child(3) .graphic-desc {
+        transform: rotate(-90deg);
+        top: -30px;
+        left: auto;
+        right: -350px; }
+      .wrap-graphic ul li:nth-child(3) .graphic-title {
+        display: none; }
+      .wrap-graphic ul li:nth-child(3) svg.mobile-title {
+        display: block; }
+    .wrap-graphic .graphic-logo {
+      top: 155px; }
+  .raw-circle {
+    transform: rotate(-90deg); }
+  .graphic-desc:after {
+    display: none; }
+  .graphic-desc.top-arrow:after, .graphic-desc.bottom-arrow:after {
+    display: block; } }
+
+@media screen and (max-width: 480px) {
+  .wrap-graphic ul {
+    transform: rotate(90deg) translate(50px, 95px); }
+    .wrap-graphic ul li:nth-child(4) .graphic-desc.top-arrow, .wrap-graphic ul li:nth-child(4) .graphic-desc.bottom-arrow {
+      display: none; }
+      .wrap-graphic ul li:nth-child(4) .graphic-desc.top-arrow:after, .wrap-graphic ul li:nth-child(4) .graphic-desc.bottom-arrow:after {
+        display: none; }
+  .wrap-graphic .graphic-logo {
+    left: 75px; } }
 
 .checklist {
   padding: 70px 0; }
