@@ -26,6 +26,9 @@
     <!-- iCheck radiobutton -->
     <link rel="stylesheet" href="css/plugins/iCheck/custom.css">
 
+    <!-- ABC radiobutton -->
+    <link rel="stylesheet" href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css">
+
     <!-- Custom style -->
     <link href="css/custom.css" rel="stylesheet">
 
@@ -376,13 +379,110 @@
 
                                     <form action="">
                                         <div class="form-group">
-                                            <select class="form-control m-b">
+                                            <select class="form-control m-b" id="choose-campaign">
                                                 <option value="Please choose">Please choose</option>
-                                                <option value="Dominik AGG">Dominik AGG</option>
-                                                <option value="Optimizer">Optimizer</option>
+                                                <option value="agg">Dominik AGG</option>
+                                                <option value="optimizer">Optimizer</option>
                                             </select>
                                         </div>
                                     </form>
+
+                                    <div class="choosen-radio-group">
+                                        <ul id="agg" class="d-none">
+                                            <li class="form-check radio radio-info border-bottom py-2 pl-4">
+                                                <input class="form-check-input" type="radio" name="radio1" id="radio1" value="option1">
+                                                <label class="form-check-label mb-0" for="radio1">
+                                                    AGG Online Schulung
+                                                </label>
+                                            </li>
+
+                                            <li class="form-check radio radio-info border-bottom py-2 pl-4">
+                                                <input class="form-check-input" type="radio" name="radio1" id="radio2" value="option2">
+                                                <label class="form-check-label mb-0" for="radio2">
+                                                    AGG Schulung
+                                                </label>
+                                            </li>
+
+                                            <li class="form-check radio radio-info border-bottom py-2 pl-4">
+                                                <input class="form-check-input" type="radio" name="radio1" id="radio3" value="option3">
+                                                <label class="form-check-label mb-0" for="radio3">
+                                                    AGG E-Learning
+                                                </label>
+                                            </li>
+
+                                            <li class="form-check radio radio-info border-bottom py-2 pl-4">
+                                                <input class="form-check-input" type="radio" name="radio1" id="radio4" value="option4">
+                                                <label class="form-check-label mb-0" for="radio4">
+                                                    AGG Fortbildung
+                                                </label>
+                                            </li>
+
+                                            <li class="form-check radio radio-info border-bottom py-2 pl-4">
+                                                <input class="form-check-input" type="radio" name="radio1" id="radio5" value="option5">
+                                                <label class="form-check-label mb-0" for="radio5">
+                                                    AGG Kurs
+                                                </label>
+                                            </li>
+
+                                            <li class="form-check radio radio-info border-bottom py-2 pl-4">
+                                                <input class="form-check-input" type="radio" name="radio1" id="radio6" value="option6">
+                                                <label class="form-check-label mb-0" for="radio6">
+                                                    AGG Mitarbeitertraining
+                                                </label>
+                                            </li>
+
+                                            <li class="form-check radio radio-info border-bottom py-2 pl-4">
+                                                <input class="form-check-input" type="radio" name="radio1" id="radio7" value="option7">
+                                                <label class="form-check-label mb-0" for="radio7">
+                                                    AGG Online Seminar
+                                                </label>
+                                            </li>
+
+                                            <li class="form-check radio radio-info border-bottom py-2 pl-4">
+                                                <input class="form-check-input" type="radio" name="radio1" id="radio8" value="option8">
+                                                <label class="form-check-label mb-0" for="radio8">
+                                                    AGG Schulung Mitarbeiter
+                                                </label>
+                                            </li>
+
+                                            <li class="form-check radio radio-info border-bottom py-2 pl-4">
+                                                <input class="form-check-input" type="radio" name="radio1" id="radio9" value="option9">
+                                                <label class="form-check-label mb-0" for="radio9">
+                                                    AGG Schulung Online
+                                                </label>
+                                            </li>
+                                        </ul>
+
+                                        <ul id="optimizer" class="d-none">
+                                            <li class="form-check radio radio-info border-bottom py-2 pl-4">
+                                                <input class="form-check-input" type="radio" name="radio1" id="radio10" value="option10">
+                                                <label class="form-check-label mb-0" for="radio10">
+                                                    crawlOPTIMIZER
+                                                </label>
+                                            </li>
+
+                                            <li class="form-check radio radio-info border-bottom py-2 pl-4">
+                                                <input class="form-check-input" type="radio" name="radio1" id="radio11" value="option11">
+                                                <label class="form-check-label mb-0" for="radio11">
+                                                    crawlOPTIMIZER - neu
+                                                </label>
+                                            </li>
+
+                                            <li class="form-check radio radio-info border-bottom py-2 pl-4">
+                                                <input class="form-check-input" type="radio" name="radio1" id="radio12" value="option12">
+                                                <label class="form-check-label mb-0" for="radio12">
+                                                    GoogleBot Crawl
+                                                </label>
+                                            </li>
+
+                                            <li class="form-check radio radio-info border-bottom py-2 pl-4">
+                                                <input class="form-check-input" type="radio" name="radio1" id="radio13" value="option13">
+                                                <label class="form-check-label mb-0" for="radio13">
+                                                    SEO Analise
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
 
                                 </div>
                             </div>
