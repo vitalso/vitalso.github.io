@@ -131,6 +131,90 @@ body .table-responsive {
   overflow: visible;
 }
 
+/* Show more function style */
+.excerpt .excerpt-row.collapse:not(.show) {
+  display: block;
+  height: 2.5rem;
+  overflow: hidden;
+}
+
+.excerpt .excerpt-row.collapsing {
+  height: 2.5rem;
+}
+
+.excerpt .read-more-btn {
+  margin-left: 50px;
+}
+
+  .excerpt .read-more-btn:hover , .expand-table-btn:hover {
+    text-decoration: underline;
+  }
+
+.excerpt a.not-open::after {
+  content: '+ Read more';
+}
+
+  .expand-table-btn.not-open::after {
+    content: '+ Show more rows';
+  }
+
+.excerpt a:not(.not-open)::after {
+  content: '- Read less';
+}
+
+  .expand-table-btn:not(.not-open)::after {
+    content: '- Show less rows';
+  }
+
+.expanded-table.collapse:not(.show) {
+  display: block;
+  height: 143px;
+  overflow: hidden;
+}
+
+  .expanded-table.collapsing {
+    height: 143px;
+  }
+
+  .expanded-table table {
+    margin-bottom: 0;
+  }
+
+/*  Needed for filters */
+
+.hide { /* You can play with the seconds to change the "animation" */
+  animation: hide .5s ease 0s 1 normal forwards;
+  transform-origin: center;
+}
+.show { /* You can play with the seconds to change the "animation" */
+    animation: show .5s ease 0s 1 normal forwards;
+    transform-origin: center;
+}
+
+@keyframes hide {
+  0%{
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+}
+@keyframes show {
+  0%{
+    transform: scale(0);
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/*  // Needed for filters */
+
 /* Wizard steps custom styles */
 #wizard .content {
   padding: 1rem;
@@ -191,6 +275,10 @@ body .table-responsive {
     vertical-align: middle;
     transform: rotate(45deg);
   }
+
+#wizard > .steps > ul > li:nth-child(4) {
+  display: none;
+}
 
 @media screen and (max-width: 992px) {
 
