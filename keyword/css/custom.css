@@ -183,42 +183,46 @@ body .table-responsive {
 /*  Needed for filters */
 
 .hide { /* You can play with the seconds to change the "animation" */
-  animation: hide .3s ease 0s 1 normal forwards;
+  animation: hide .5s ease 0s 1 normal forwards;
   transform-origin: center;
 }
-.show { /* You can play with the seconds to change the "animation" */
-    animation: show .3s ease 0s 1 normal forwards;
+.showing { /* You can play with the seconds to change the "animation" */
+    animation: show .5s ease 0s 1 normal forwards;
     transform-origin: center;
 }
 
 @keyframes hide {
   0%{
-    transform: scale(1);
+    /*transform: scale(1);*/
     opacity: 1;
     visibility: visible;
   }
   100% {
-    transform: scale(0);
-    /*width: 0;*/
+    /*transform: scale(0);
+    width: 0;
     height: 0;
-    margin: 0;
+    margin: 0;*/
     opacity: 0;
     visibility: hidden;
+    height: 0;
+    overflow: hidden;
   }
 }
 @keyframes show {
   0%{
-    transform: scale(0);
-    /*width: 0;*/
+    /*transform: scale(0);
+    width: 0;
     height: 0;
-    margin: 0;
+    margin: 0;*/
     opacity: 0;
     visibility: hidden;
   }
   100% {
-    transform: scale(1);
+    /*transform: scale(1);*/
     opacity: 1;
     visibility: visible;
+    height: auto;
+    overflow: auto;
   }
 }
 /*  // Needed for filters */
