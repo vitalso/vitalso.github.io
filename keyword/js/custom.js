@@ -32,12 +32,12 @@ $(document).ready(function(){
 
       itemsToHide.forEach(el => {
         el.classList.add('hide');
-        el.classList.remove('show');
+        el.classList.remove('showing');
       });
 
       itemsToShow.forEach(el => {
         el.classList.remove('hide');
-        el.classList.add('show');
+        el.classList.add('showing');
       });
 
       $('.filter-content .panel-body').each(function(index, element){
