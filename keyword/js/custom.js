@@ -42,7 +42,7 @@ $(document).ready(function(){
 
       $('.filter-content .panel-body').each(function(index, element){
 
-        if ( $(this).find('.filter-item.show').length == 0 ) {
+        if ( $(this).find('.filter-item.showing').length == 0 ) {
           $(this).find('.alert').removeClass('d-none');
         } else {
           $(this).find('.alert').addClass('d-none');
