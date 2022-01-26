@@ -17,6 +17,14 @@ $(document).ready(function(){
   // Filter
   const filters = document.querySelectorAll('.filter');
 
+  const countError = document.querySelectorAll('.filter-content .panel-body .filter-item[data-filter="error"]').length;
+  const countWorking = document.querySelectorAll('.filter-content .panel-body .filter-item[data-filter="working"]').length;
+  const countRecomendation = document.querySelectorAll('.filter-content .panel-body .filter-item[data-filter="recomendation"]').length;
+
+  $('.filter-container .nav-link[data-filter="error"]').find('.filter-count').text(countError);
+  $('.filter-container .nav-link[data-filter="working"]').find('.filter-count').text(countWorking);
+  $('.filter-container .nav-link[data-filter="recomendation"]').find('.filter-count').text(countRecomendation);
+
   filters.forEach(filter => {
 
     filter.addEventListener('click', function() {
@@ -51,6 +59,7 @@ $(document).ready(function(){
       });
 
     });
+
   });
 
   // Right side nav add .active class to sub-nav
