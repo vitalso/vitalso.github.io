@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link href='https://fonts.gstatic.com' rel='preconnect' crossorigin />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Kreditdata (HTML)</title>
+  <meta name="description" content="My Store" />
+  <script>if ('ontouchstart' in window || navigator.MaxTouchPoints || navigator.msMaxTouchPoints) { document.documentElement.classList.add('is_touch'); }</script>
+  <!--<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i|Titillium+Web:400,400i,600,600i,700,700i&amp;subset=latin-ext" rel="stylesheet">-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="assets/css/app.css" media="screen" rel="stylesheet" type="text/css" />
+  <script defer src="assets/vendor/jquery/jquery.min.js"></script>
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="assets/vendor/selectize/js/standalone/selectize.min.js"></script>
+  <script defer src="assets/vendor/sticky-kit/sticky-kit.min.js"></script>
+  <script defer src="assets/vendor/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+  <script defer src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+  <script defer src="assets/js/app.min.js"></script>
+  <script>
+  // Load SVG icons
+  TB = {
+      svgResource: {
+          path:    "assets/svg/sprite.svg",
+          id:      "kreditdataSvg",
+          version: "1.0.2"
+      }
+  };
+  </script>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/kreditdata.webmanifest">
+  <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#006dbc">
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="msapplication-config" content="assets/favicon/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+
+
+<div id="wrapper">
+
+  <div class="bg-white position-fixed top-bar w-100 d-md-block d-none">
+  <div class="align-items-center d-flex justify-content-between">
+
+    <div class="top-bar-logo">
+      <img src="assets/img/redesign-logo.png" alt="logo">
+    </div>
+
+    <div class="top-bar-search w-100">
+      <div class="input-group input-group-merge">
+        <input class="form-control form-control-append bg-transparent" type="text" placeholder="Søg …" autocomplete="new-password">
+        <div class="input-group-prepend">
+          <div class="input-group-text bg-transparent">
+            <span class="tb__icon tb__icon--stroke" aria-hidden="true">
+              <svg width="20" height="20"><use xlink:href="#feather--search-alt"></use></svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-bar-user">
+      <div class="dropdown">
+        <a class="btn-link dropdown-toggle" href="#" role="button" id="user-dropdown-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="0,19">
+          <img src="assets/img/user-img.svg" alt="user-img" class="mr-1">
+          Hej, <b>John</b>
+        </a>
+
+        <div class="dropdown-menu bg-primary rounded-0 m-0 py-4" aria-labelledby="user-dropdown-menu">
+          <div class="dropdown-item px-3 mb-3">
+            <a href="#" class="btn-link text-white">
+              <span class="tb__icon mr-2">
+                <svg width="24" height="24"><use xlink:href="#feather--settings"></use></svg>
+              </span>
+              <span>Indstillinger</span>
+            </a>
+          </div>
+
+          <div class="dropdown-item text-white px-3 mb-3">
+              <span class="tb__icon mr-2">
+                <svg width="24" height="24"><use xlink:href="#feather--globe"></use></svg>
+              </span>
+              <span>
+                <a href="#" class="font-weight-bold text-light">DA</a>/
+                <a href="#" class="text-light">EN</a>
+              </span>
+          </div>
+
+          <div class="dropdown-item px-3">
+            <a href="#" class="btn-link text-white">
+              <span class="tb__icon mr-2">
+                <svg width="24" height="24"><use xlink:href="#feather--log-out"></use></svg>
+              </span>
+              <span>Log ud</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+  
+
+<header
+  id="header"
+  class="tb__header bg-primary tb__header--default tb__header--depth-1 ">
+
+  <p class="cases-header-title text-white bottom-line">
+    Navn på virksomhed
+  </p>
+
+  <div class="navbar bg-transparent">
+
+    <nav class="nav-level-1">
+
+      <ul class="nav flex-column flex-fill">
+        <li class="nav-item">
+          <a class="nav-link active" href="cases.html">
+            <span class="tb__icon">
+              <svg width="24" height="24"><use xlink:href="#feather--file"></use></svg>
+            </span>
+            <span class="nav-label">Cases</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <span class="tb__icon">
+              <svg width="24px" height="24px"><use xlink:href="#feather--git-branch"></use></svg>
+            </span>
+            <span class="nav-label">Flows</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <span class="tb__icon">
+              <svg width="24" height="24"><use xlink:href="#feather--users"></use></svg>
+            </span>
+            <span class="nav-label">Users</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="settings.html">
+            <span class="tb__icon">
+              <svg width="24" height="24"><use xlink:href="#feather--settings"></use></svg>
+            </span>
+            <span class="nav-label">Profile</span>
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+
+  </div>
+</header>
+
+
+
+  
+
+<aside class="aside bg-white flex-column h-100 justify-content-between position-fixed d-md-block d-none ">
+  <div class="aside-menu-1 aside-padding">
+    <h3 class="bottom-line">Case 12345</h3>
+
+    <p class="font-weight-bold mb-0">Vælg sag</p>
+
+    <div class="dropdown dropdown-aside mb-3">
+      <a class="btn btn-secondary dropdown-toggle shadow-none" href="#" role="button" id="dropdown-aside" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="status-badge active"></span>
+        John Doe Inc.
+      </a>
+
+      <div class="dropdown-menu m-0 p-0 shadow-none" aria-labelledby="dropdown-aside">
+        <a class="dropdown-item" href="#"><span class="status-badge paused"></span> John Doe</a>
+        <a class="dropdown-item" href="#"><span class="status-badge paused"></span> Jane Doe</a>
+        <a class="dropdown-item" href="#"><span class="status-badge active"></span> John Doe Two</a>
+      </div>
+    </div>
+
+    <ul class="aside-link-list m-0 p-0">
+      <li><a href="index.html" class="current">Forside</a></li>
+      <li><a href="eskatdata.html">Skatteoplysniger</a></li>
+      <li><a href="#">RKI</a></li>
+      <li><a href="#">PEP/AML</a></li>
+      <li><a href="#">Pensionsinfo</a></li>
+      <li><a href="budget.html">Budgetberegner</a></li>
+      <li><a href="#">Tinglysning</a></li>
+      <li><a href="form.html">Oplysninger</a></li>
+      <li><a href="#">Anden gæld</a></li>
+      <li><a href="customer_documents.html">Dokumenter</a></li>
+    </ul>
+  </div>
+
+  <div class="aside-menu-2">
+    <ul class="aside-link-list m-0 border-bottom aside-padding">
+      <li>
+        <a href="noter.html">
+          <span class="tb__icon mr-1">
+            <svg width="16" height="16"><use xlink:href="#feather--file"></use></svg>
+          </span>
+          Noter
+        </a>
+      </li>
+      <li>
+        <a href="customer_activity.html">
+          <span class="tb__icon mr-1">
+            <svg width="16" height="16"><use xlink:href="#feather--clock"></use></svg>
+          </span>
+          Activity log
+        </a>
+      </li>
+      <li>
+        <a href="customer_documents.html">
+          <span class="tb__icon mr-1">
+            <svg width="16" height="16"><use xlink:href="#feather--paperclip"></use></svg>
+          </span>
+          All documents
+        </a>
+      </li>
+    </ul>
+
+    <ul class="aside-link-list m-0 py-4 aside-padding">
+      <li>
+        <a href="#">
+          <span class="tb__icon mr-1">
+            <svg width="16" height="16"><use xlink:href="#feather--arrow-left"></use></svg>
+          </span>
+          Tilbage
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>
+
+
+
+  
+<section id="content" class="pt-md-7">
+  <div class="container">
+
+    <!-- Mobile topbar -->
+<div class="mobile-topbar d-md-none mb-3 d-flex">
+  <button class="btn btn-link bg-white p-0 mobile-info mobile-case-toggle rounded-lg">
+    <span class="tb__icon">
+      <svg width="18" height="18"><use xlink:href="#feather--info"></use></svg>
+    </span>
+  </button>
+
+  <div class="dropdown dropdown-aside ml-auto">
+    <a class="btn btn-secondary dropdown-toggle shadow-none" href="#" role="button" id="dropdown-aside" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="status-badge active"></span>
+      John Doe Inc.
+    </a>
+
+    <div class="dropdown-menu m-0 p-0 shadow-none" aria-labelledby="dropdown-aside">
+      <a class="dropdown-item" href="#"><span class="status-badge paused"></span> John Doe</a>
+      <a class="dropdown-item" href="#"><span class="status-badge paused"></span> Jane Doe</a>
+      <a class="dropdown-item" href="#"><span class="status-badge active"></span> John Doe Two</a>
+    </div>
+  </div>
+
+  <button class="btn btn-link bg-white p-0 mobile-info toggle-mobile rounded-lg ml-2">
+    <span class="tb__icon">
+      <svg width="18" height="18"><use xlink:href="#feather--align-right"></use></svg>
+      <svg width="24" height="24"><use xlink:href="#feather--x"></use></svg>
+    </span>
+  </button>
+
+</div>
+<!-- End mobile top bar -->
+
+<!-- Mobile menu -->
+<nav class="bg-white h-100 mobile-nav position-fixed top-0 w-100">
+  <ul class="list-style-none m-0 p-0">
+    <li><a href="index.html" class="current">Dashboard</a></li>
+      <li><a href="eskatdata.html">Skatteoplysniger</a></li>
+      <li><a href="#">RKI</a></li>
+      <li><a href="#">PEP/AML</a></li>
+      <li><a href="#">Pensionsinfo</a></li>
+      <li><a href="budget.html">Budgetberegner</a></li>
+      <li><a href="#">Tinglysning</a></li>
+      <li><a href="form.html">Oplysninger</a></li>
+      <li><a href="#">Anden gæld</a></li>
+      <li><a href="customer_documents.html">Dokumenter</a></li>
+    </ul>
+</nav>
+<!-- End Mobile menu -->
+
+
+    <div class="mt-md-4 mb-3 mb-md-5 pt-1 d-xl-flex justify-content-between align-items-center">
+      <div>
+        <p class="text-muted mb-0 d-md-block d-none">Case 12345</p>
+        <h1 class="mobile-padding">Noter</h1>
+      </div>
+
+      <div class="ml-1 ml-md-0 p-2 p-md-0 mt-2 mt-xl-0">
+        <a class="btn btn-primary h-auto py-2 rounded-lg" href="#" data-toggle="modal" data-target="#note-modal">
+          <span class="tb__icon tb__icon--stroke ml-n1 mr-2">
+            <svg width="20" height="20"><use xlink:href="#feather--plus-circle"></use></svg>
+          </span>
+          Ny note
+        </a>
+      </div>
+    </div>
+
+    <!-- Note modal -->
+    <div id="note-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header d-flex">
+        <h4 class="flex-fill mb-0 bottom-line pt-2">
+          Ny note
+        </h4>
+        <a href="#" class="btn-edit d-flex bg-white" type="button" data-dismiss="modal" aria-label="Close">
+          <span class="tb__icon">
+            <svg width="16" height="16"><use xlink:href="#feather--x"></use></svg>
+          </span>
+        </a>
+      </div>
+      <div class="modal-body pt-2">
+        <form action="#" class="font-size-16">
+          <div class="form-row mb-3 align-items-center">
+            <textarea class="form-control rounded-lg" rows="10" placeholder="Start typing or @tag somebody"></textarea>
+          </div>
+
+          <div class="align-items-center form-row justify-content-between">
+            <label class="custom-control custom-control-inline custom-checkbox">
+              <input type="checkbox" class="custom-control-input">
+              <span class="custom-control-label">Inkludér i PDF</span>
+            </label>
+
+            <button class="btn btn-primary rounded-lg px-2">
+              <span>Send</span>
+              <span class="tb__icon ml-1">
+                <svg width="16" height="16"><use xlink:href="#feather--arrow-right"></use></svg>
+              </span>
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- End node modal -->
+
+    <div class="card card-box card-redesign mb-5">
+
+      <div class="notes-row d-flex system mb-3">
+
+        <div class="notes-item">
+          <div class="notes-info d-flex justify-content-between align-items-center">
+            <strong>You</strong>
+            <span class="font-size-14">6/1/2021, 8:34 pm</span>
+          </div>
+          <div class="notes-content rounded-lg p-3 d-inline-block">
+            <p>Aenean arcu sem, vestibulum at justo vitae, fringilla dictum sapien. Suspendisse vel nisi at lectus porttitor consectetur non ut quam. Donec porttitor finibus augue, ut tincidunt sem euismod porta. Vivamus venenatis laoreet mi in lacinia. Sed ultricies at mauris quis porttitor</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="notes-row d-flex user mb-3">
+
+        <div class="notes-item">
+          <div class="notes-info d-flex justify-content-between align-items-center">
+            <strong>Troels Burmølle</strong>
+            <span class="font-size-14">5/1/2021, 8:34 pm</span>
+          </div>
+          <div class="notes-content rounded-lg p-3 d-inline-block">
+            <p>Aenean arcu sem, vestibulum at justo vitae, fringilla dictum sapien. Suspendisse vel nisi at lectus porttitor consectetur non ut quam. Donec porttitor finibus augue, ut tincidunt sem euismod porta. Vivamus venenatis laoreet mi in lacinia. Sed ultricies at mauris quis porttitor</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="notes-row d-flex user mb-3">
+
+        <div class="notes-item">
+          <div class="notes-info d-flex justify-content-between align-items-center">
+            <strong>Troels Burmølle</strong>
+            <span class="font-size-14">5/1/2021, 7:34 pm</span>
+          </div>
+          <div class="notes-content rounded-lg p-3 d-inline-block">
+            <p>Aenean arcu sem, vestibulum at justo vitae...</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="notes-row d-flex system mb-3">
+
+        <div class="notes-item">
+          <div class="notes-info d-flex justify-content-between align-items-center">
+            <strong>You</strong>
+            <span class="font-size-14">1/1/2021, 8:34 pm</span>
+          </div>
+          <div class="notes-content rounded-lg p-3 d-inline-block">
+            <p>Aenean arcu sem, vestibulum at justo vitae, fringilla dictum sapien.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="notes-row d-flex user mb-3">
+
+        <div class="notes-item">
+          <div class="notes-info d-flex justify-content-between align-items-center">
+            <strong>Troels Burmølle</strong>
+            <span class="font-size-14">5/12/2020, 8:30 pm</span>
+          </div>
+          <div class="notes-content rounded-lg p-3 d-inline-block">
+            <p>Aenean arcu sem, vestibulum at justo vitae, fringilla dictum sapien. Suspendisse vel nisi at lectus porttitor consectetur non ut quam. Donec porttitor finibus augue, ut tincidunt sem euismod porta. Vivamus venenatis laoreet mi in lacinia. Sed ultricies at mauris quis porttitor</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="notes-row d-flex user mb-3">
+
+        <div class="notes-item">
+          <div class="notes-info d-flex justify-content-between align-items-center">
+            <strong>Troels Burmølle</strong>
+            <span class="font-size-14">3/12/2020, 7:00 pm</span>
+          </div>
+          <div class="notes-content rounded-lg p-3 d-inline-block">
+            <p>Aenean arcu sem, vestibulum at justo vitae...</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Side bar -->
+<div class="bg-white case-sidebar position-fixed right-0 top-0 w-400p pt-9 h-100">
+
+  <button class="btn btn-link bg-white p-0 mobile-info mobile-case-toggle rounded-lg ml-2">
+    <span class="tb__icon">
+      <svg width="24" height="24"><use xlink:href="#feather--x"></use></svg>
+    </span>
+  </button>
+
+  <a href="#" class="btn-edit ml-auto d-md-flex d-none" id="toggle-sidebar">
+    <span class="tb__icon">
+      <svg width="16" height="16"><use xlink:href="#feather--align-right"></use></svg>
+    </span>
+  </a>
+
+  <div class="case-sidebar-info px-3 pt-3 pb-3 border-bottom hide-out">
+    <h4 class="bottom-line d-flex mb-4">Case info
+      <a href="#" class="btn-edit d-flex ml-2">
+        <span class="tb__icon">
+          <svg width="16" height="16"><use xlink:href="#feather--edit-2"></use></svg>
+        </span>
+      </a>
+    </h4>
+
+    <ul class="p-0 list-style-none font-size-16">
+      <li class="my-3"><b>Titel:</b> Case12345.</li>
+      <li class="my-3"><b>External ref:</b> 12345</li>
+      <li class="my-3"><b>Status:</b> <span class="badge badge-pill badge-warning font-weight-400 text-white">Under behandling</span></li>
+    </ul>
+
+  </div>
+
+  <div class="case-sidebar-tag p-3 border-bottom hide-out">
+    <p>Tags</p>
+    <div class="tags">
+      <span class="badge badge-pill badge-dark text-white font-size-15 font-weight-400">Tag</span>
+      <span class="badge badge-pill badge-dark text-white font-size-15 font-weight-400">Tag</span>
+      <span class="badge badge-pill badge-dark text-white font-size-15 font-weight-400">Tag</span>
+      <span class="badge badge-pill badge-dark text-white font-size-15 font-weight-400">Tag</span>
+      <span class="d-inline-block">
+        <a href="#" class="btn-edit d-flex text-primary">
+          <span class="tb__icon">
+            <svg width="16" height="16"><use xlink:href="#feather--plus"></use></svg>
+          </span>
+        </a>
+      </span>
+    </div>
+  </div>
+
+  <div class="case-sidebar-cards p-3 hide-out">
+    <div class="mb-3">
+      <p>Primær sag</p>
+      <div class="px-3 py-2 bg-light-redesign rounded-lg font-size-16">
+        <p class="font-weight-600">John Doe Inc.</p>
+        <p>John Doe <br> johndoe@example.com</p>
+        <span class="badge badge-pill badge-success font-weight-400 font-size-15">Godkendt</span>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <p>Tilknyttede sager</p>
+
+      <div class="mb-3 px-3 py-2 bg-light-redesign rounded-lg font-size-16 position-relative">
+        <p class="font-weight-600 mb-0">John Doe To</p>
+        <p>johndoeto@example.com</p>
+        <span class="badge badge-pill badge-warning text-white font-weight-400 font-size-15">Under behandling</span>
+
+        <button class="btn btn-link px-0 h-auto shadow-none position-absolute right-0 top-0 mr-1 mt-2">
+          <span class="tb__icon">
+            <svg width="24" height="24"><use xlink:href="#feather--more-vertical"></use></svg>
+          </span>
+        </button>
+      </div>
+
+      <div class="mb-3 px-3 py-2 bg-light-redesign rounded-lg font-size-16 position-relative">
+        <p class="font-weight-600 mb-0">John Doe Tre</p>
+        <p>johndoetre@example.com</p>
+        <span class="badge badge-pill badge-success font-weight-400 font-size-15">Godkendt</span>
+
+        <button class="btn btn-link px-0 h-auto shadow-none position-absolute right-0 top-0 mr-1 mt-2">
+          <span class="tb__icon">
+            <svg width="24" height="24"><use xlink:href="#feather--more-vertical"></use></svg>
+          </span>
+        </button>
+      </div>
+
+      <div class="px-3 py-2 bg-light-redesign rounded-lg font-size-16 position-relative">
+        <p class="font-weight-600 mb-0">John Doe Fire</p>
+        <p>johndoeto@example.com</p>
+        <span class="badge badge-pill badge-warning text-white font-weight-400 font-size-15">Under behandling</span>
+
+        <button class="btn btn-link px-0 h-auto shadow-none position-absolute right-0 top-0 mr-1 mt-2">
+          <span class="tb__icon">
+            <svg width="24" height="24"><use xlink:href="#feather--more-vertical"></use></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="aside-menu-2 position-fixed bg-white bottom-0 w-100">
+    <ul class="aside-link-list m-0 aside-padding d-flex justify-content-between align-items-center">
+      <li class="text-center">
+        <a href="noter.html">
+          <span class="tb__icon">
+            <svg width="18" height="18"><use xlink:href="#feather--file"></use></svg>
+          </span>
+          <span class="nav-label">Noter</span>
+        </a>
+      </li>
+
+      <li class="text-center">
+        <a href="customer_activity.html">
+          <span class="tb__icon">
+            <svg width="18" height="18"><use xlink:href="#feather--clock"></use></svg>
+          </span>
+          <span class="nav-label">Activity log</span>
+        </a>
+      </li>
+
+      <li class="text-center">
+        <a href="customer_documents.html">
+          <span class="tb__icon">
+            <svg width="18" height="18"><use xlink:href="#feather--paperclip"></use></svg>
+          </span>
+          <span class="nav-label">Documents</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+
+   
+
+</div>
+
+ 
+
+</body>
+
+</html>
