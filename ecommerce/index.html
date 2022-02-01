@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width , initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Інтернет-магазин</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"><!-- Bootstrap 5 styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><!-- Slick slider style -->
+    <link href="css/slick-theme.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet"><!-- Page style -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- Header start-->
+    <header>
+      <!-- Top bar-->
+      <div class="top-bar">
+        <div class="container-fluid">
+          <p class="mb-0">ТОТАЛЬНИЙ РОЗПРОДАЖ ДО -50%</p>
+        </div>
+      </div>
+      <div class="header-container">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-3 col-md-3 d-flex">
+              <button class="toggle-nav"><span></span><span></span><span></span></button>
+              <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="logo"></a></div>
+            </div>
+            <div class="col-lg-9 col-md-9 d-flex justify-content-between align-items-center"><a class="btn btn-primary catalog-link" href="#">
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-catalog"></use>
+                </svg><span>Каталог</span></a>
+              <div class="header-search">
+                <form>
+                  <div class="form-group position-relative"><span class="search-icon">
+                      <svg>
+                        <use xlink:href="images/sprite.svg#icon-search"></use>
+                      </svg></span>
+                    <input type="text" placeholder="Я шукаю...">
+                    <button class="btn btn-primary" type="submit">Знайти</button><span class="mic-icon">
+                      <svg>
+                        <use xlink:href="images/sprite.svg#icon-mic"></use>
+                      </svg></span>
+                  </div>
+                </form>
+              </div>
+              <ul class="nav header-nav align-items-center">
+                <li class="nav-item">
+                  <div class="tarrif text-white text-center">
+                    <p class="mb-0">Спробуйте</p><a class="badge bg-primary rounded-pill text-decoration-none" href="#">PREMIUM</a>
+                  </div>
+                </li>
+                <li class="nav-item mx-4"><a href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-user"></use>
+                    </svg></a></li>
+                <li class="nav-item"><a href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-basket"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Main page start-->
+    <main>
+      <!-- Content start-->
+      <div class="container">
+        <div class="row">
+          <!-- Left side bar-->
+          <div class="col-lg-3 col-md-3">
+            <div class="card card-box mb-3">
+              <ul class="nav flex-column side-nav">
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#nav-icon-1"></use>
+                    </svg><span>Ноутбуки та комп'ютери</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#nav-icon-2"></use>
+                    </svg><span>Смартфони, ТВ та електроніка</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#nav-icon-3"></use>
+                    </svg><span>Товари для геймерів</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#nav-icon-4"></use>
+                    </svg><span>Побутова техніка</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#nav-icon-5"></use>
+                    </svg><span>Товари для дому</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#nav-icon-6"></use>
+                    </svg><span>Інструменти та автотовари</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#nav-icon-7"></use>
+                    </svg><span>Сантехніка та ремонт</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#nav-icon-8"></use>
+                    </svg><span>Дача, сад та город</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#nav-icon-9"></use>
+                    </svg><span>Спорт та захоплення</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#nav-icon-10"></use>
+                    </svg><span>Одяг, взуття та прикраси</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#nav-icon-11"></use>
+                    </svg><span>Краса і здоров'я</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#nav-icon-12"></use>
+                    </svg><span>Дитячі товари</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#nav-icon-13"></use>
+                    </svg><span>Зоотовари</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#nav-icon-14"></use>
+                    </svg><span>Канцтовари та книги</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#nav-icon-15"></use>
+                    </svg><span>Алкогольні напої та продукти</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#nav-icon-16"></use>
+                    </svg><span>Товари для бізнесу та послуги</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#nav-icon-17"></use>
+                    </svg><span>Тури та відпочинок</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#nav-icon-18"></use>
+                    </svg><span>Акції</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#nav-icon-19"></use>
+                    </svg><span>Тотальний розпродаж</span></a></li>
+              </ul>
+            </div>
+            <div class="card card-box mb-3">
+              <ul class="nav flex-column side-nav">
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-support"></use>
+                    </svg><span>Довідковий центр</span></a></li>
+              </ul>
+            </div>
+            <div class="card card-box mb-3">
+              <h6 class="text-center">Ласкаво просимо!</h6>
+              <p class="text-center font-size-13">Увійдіть, щоб отримувати рекомендації, персональні бонуси та знижки.</p><a class="btn btn-primary rounded-pill mb-3 font-size-13" href="#">Увійдіть до особистого кабінету</a>
+            </div>
+            <div class="card card-box mb-3">
+              <p class="font-size-13">Ми в соціальних мережах</p>
+              <ul class="d-flex justify-content-between align-items-center social-link m-0 p-0">
+                <li><a href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#facebook"></use>
+                    </svg></a></li>
+                <li><a href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#twitter"></use>
+                    </svg></a></li>
+                <li><a href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#youtube"></use>
+                    </svg></a></li>
+                <li><a href="#"><img src="images/instagram.svg" alt="instagram"></a></li>
+                <li><a href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#viber"></use>
+                    </svg></a></li>
+                <li><a href="#"><img src="images/telegram.svg" alt="telegram"></a></li>
+              </ul>
+            </div>
+            <div class="card card-box mb-3">
+              <p class="mb-2 font-weight-500">Допомога</p>
+              <ul class="nav flex-column side-nav mb-4">
+                <li><a class="nav-link" href="#">Доставка та оплата</a></li>
+                <li><a class="nav-link" href="#">Кредит</a></li>
+                <li><a class="nav-link" href="#">Гарантія</a></li>
+                <li><a class="nav-link" href="#">Повернення товару</a></li>
+                <li><a class="nav-link" href="#">Сервісні центри</a></li>
+                <li><a class="nav-link" href="#">Відстежити замовлення</a></li>
+              </ul>
+              <p class="mb-2 font-weight-500">Інформація про компанію</p>
+              <ul class="nav flex-column side-nav mb-4">
+                <li><a class="nav-link" href="#">Про нас</a></li>
+                <li><a class="nav-link" href="#">Умови використання сайту</a></li>
+                <li><a class="nav-link" href="#">Вакансії</a></li>
+                <li><a class="nav-link" href="#">Контакти</a></li>
+              </ul>
+              <p class="mb-2 font-weight-500">Сервіси</p>
+              <ul class="nav flex-column side-nav mb-4">
+                <li><a class="nav-link" href="#">Бонусний рахунок</a></li>
+                <li><a class="nav-link" href="#">Premium</a></li>
+                <li><a class="nav-link" href="#">Подарункові сертифікати</a></li>
+                <li><a class="nav-link" href="#">Обмін</a></li>
+                <li><a class="nav-link" href="#">Rozetka Travel</a></li>
+              </ul>
+              <p class="mb-2 font-weight-500">Партнерам</p>
+              <ul class="nav flex-column side-nav mb-4">
+                <li><a class="nav-link" href="#">Франчайзинг</a></li>
+                <li><a class="nav-link" href="#">Продавати на Розетці</a></li>
+                <li><a class="nav-link" href="#">Співпраця з нами</a></li>
+              </ul>
+              <hr>
+              <div class="d-flex justify-content-between align-items-center"><img src="images/mastercard-logo.png" alt="mastercard-logo"><img src="images/visa-logo.png" alt="visa-logo"></div>
+            </div>
+          </div>
+          <!-- Content-->
+          <div class="col-lg-9 col-md-9">
+            <!-- Slider-->
+            <div class="wrap-slider">
+              <div class="index-slider"><img src="images/banner.png" alt="banner-image"><img src="images/banner.png" alt="banner-image"><img src="images/banner.png" alt="banner-image"></div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between my-3">
+              <h3>Акційні пропозиції</h3><a class="btn btn-light btn-lg ml-auto" href="#">Всі акції <span>1036</span></a>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 mb-2">
+                <div class="card product-item large-product"><a class="add-to-favorite" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-favorite"></use>
+                    </svg></a><a href="#"><img src="images/product-1.png" alt="product-image"><span>Ноутбук ASUS VivoBook S14 S435EA-HM020 (90NB0SU1-M00330) Deep Green</span></a>
+                  <p class="text-decoration-line-through price-before">33 999 ₴</p>
+                  <p class="current-price mb-0">30 999 ₴</p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="row" data-masonry="{&quot;percentPosition&quot;: true }">
+                  <div class="col-lg-6 col-md-3 mb-2">
+                    <div class="card product-item"><a class="add-to-favorite" href="#">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-favorite"></use>
+                        </svg></a><a href="#"><img src="images/product-2.png" alt="product-image"><span>Віскі Chivas Regal 1 л 12 років витримки 40% в подарунковій упаковці</span></a>
+                      <p class="text-decoration-line-through price-before">1670 ₴</p>
+                      <p class="current-price mb-0">1049 ₴</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-3 mb-2">
+                    <div class="card product-item"><a class="add-to-favorite" href="#">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-favorite"></use>
+                        </svg></a><a href="#"><img src="images/product-3.png" alt="product-image"><span>Ігрова консоль Microsoft Xbox Series X 1TB (RRT-00010)</span></a>
+                      <p class="text-decoration-line-through price-before">22 745 ₴</p>
+                      <p class="current-price mb-0">22 195 ₴</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-3 mb-2">
+                    <div class="card product-item"><a class="add-to-favorite" href="#">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-favorite"></use>
+                        </svg></a><a href="#"><img src="images/product-5.png" alt="product-image"><span>Електросамокат Xiaomi Mi Electric Scooter 1S Black (FBC4019GL/DDHBC05NEB)</span></a>
+                      <p class="text-decoration-line-through price-before">13 999 ₴</p>
+                      <p class="current-price mb-0">11 999 ₴</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-3 mb-2">
+                    <div class="card product-item"><a class="add-to-favorite" href="#">
+                        <svg>
+                          <use xlink:href="images/sprite.svg#icon-favorite"></use>
+                        </svg></a><a href="#"><img src="images/product-4.png" alt="product-image"><span>Мобільний телефон Apple iPhone 12 mini 128 GB White Офіційна гарантія</span></a>
+                      <p class="text-decoration-line-through price-before">23 999 ₴</p>
+                      <p class="current-price mb-0">21 999 ₴</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer start-->
+    <!--include elements/footer.pug-->
+    <!-- jQuery & Bootstrap scripts-->
+    <!-- jQuery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Slick slider-->
+    <script src="js/slick.min.js"></script>
+    <!-- Masonry grid for products item on Index page-->
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+    <!-- Main script-->
+    <script src="js/main.js"></script>
+  </body>
+</html>
