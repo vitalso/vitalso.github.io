@@ -9,9 +9,9 @@ h1 {
 
 h2 {
   margin-bottom: 40px;
-  font-size: 56px;
-  line-height: 67px;
-  font-weight: 500; }
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600; }
 
 h3 {
   font-weight: 500;
@@ -62,6 +62,12 @@ h6 {
     border: 1px solid #A6A5A5; }
     .btn.btn-light span {
       color: #727272; }
+    .btn.btn-light:hover {
+      background: #FF833D;
+      color: #fff;
+      border-color: #FF833D; }
+      .btn.btn-light:hover span {
+        color: #fff; }
   .btn.btn-lg {
     padding: 15px 57px;
     border-radius: 41px;
@@ -252,6 +258,25 @@ header {
     padding-bottom: 20px; }
     .product-item.add-height a span {
       margin-bottom: 15px; }
+  .product-item.waited {
+    font-size: 14px; }
+    .product-item.waited .current-price {
+      font-size: 18px; }
+
+.product-cover {
+  height: 300px;
+  font-size: 18px;
+  background-image: url(../images/product-cover.png); }
+  .product-cover a.btn {
+    position: absolute;
+    bottom: 40px;
+    left: 27%; }
+
+footer {
+  margin-top: 50px;
+  padding: 50px 0;
+  background: #2D2323;
+  color: #FF833D; }
 
 * {
   margin: 0;
@@ -339,6 +364,15 @@ main {
 .index-action > * {
   padding-left: 5px;
   padding-right: 5px; }
+
+.bg-green {
+  background-color: #23584F; }
+
+.bg-brown {
+  background-color: #974141; }
+
+.bg-primary {
+  background: #FF833D; }
 
 @media screen and (min-width: 1400px) {
   .container {
