@@ -17,7 +17,7 @@
     <!-- Header start-->
     <header>
       <!-- Top bar-->
-      <div class="top-bar">
+      <div class="top-bar d-none d-md-block">
         <div class="container-fluid">
           <p class="mb-0">ТОТАЛЬНИЙ РОЗПРОДАЖ ДО -50%</p>
         </div>
@@ -25,11 +25,11 @@
       <div class="header-container">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-lg-3 col-md-3 d-flex">
+            <div class="col-lg-3 col-md-3 col-sm-1 col-1 d-flex">
               <button class="toggle-nav"><span></span><span></span><span></span></button>
-              <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="logo"></a></div>
+              <div class="logo d-none d-md-block"><a href="index.html"><img src="images/logo.svg" alt="logo"></a></div>
             </div>
-            <div class="col-lg-9 col-md-9 d-flex justify-content-between align-items-center"><a class="btn btn-primary catalog-link" href="#">
+            <div class="col-lg-9 col-md-9 col-sm-11 col-11 d-flex justify-content-between align-items-center"><a class="btn btn-primary catalog-link d-none d-lg-block" href="#">
                 <svg>
                   <use xlink:href="images/sprite.svg#icon-catalog"></use>
                 </svg><span>Каталог</span></a>
@@ -48,16 +48,16 @@
                 </form>
               </div>
               <ul class="nav header-nav align-items-center">
-                <li class="nav-item">
+                <li class="nav-item mb-0 d-none d-md-block">
                   <div class="tarrif text-white text-center">
                     <p class="mb-0">Спробуйте</p><a class="badge bg-primary rounded-pill text-decoration-none" href="#">PREMIUM</a>
                   </div>
                 </li>
-                <li class="nav-item mx-4"><a href="#">
+                <li class="nav-item mx-4 mb-0 d-none d-md-block"><a href="#">
                     <svg>
                       <use xlink:href="images/sprite.svg#icon-user"></use>
                     </svg></a></li>
-                <li class="nav-item position-relative"><a href="#">
+                <li class="nav-item position-relative mb-0"><a href="#">
                     <svg>
                       <use xlink:href="images/sprite.svg#icon-basket"></use>
                     </svg><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">2</span></a></li>
@@ -73,7 +73,7 @@
       <div class="container">
         <div class="row">
           <!-- Left side bar-->
-          <div class="col-lg-3 col-md-3">
+          <div class="col-lg-3 col-md-3 d-none d-lg-block">
             <div class="card card-box mb-3">
               <ul class="nav flex-column side-nav">
                 <li class="nav-item"><a class="nav-link" href="#">
@@ -225,17 +225,19 @@
             </div>
           </div>
           <!-- Content-->
-          <div class="col-lg-9 col-md-9">
+          <div class="col-lg-9 col-md-12">
             <!-- Slider-->
             <div class="wrap-slider">
               <div class="index-slider"><img src="images/banner.png" alt="banner-image"><img src="images/banner.png" alt="banner-image"><img src="images/banner.png" alt="banner-image"></div>
-            </div>
+            </div><a class="btn btn-primary catalog-link mt-4 d-md-none d-block" href="#">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-catalog"></use>
+              </svg><span>Каталог</span></a>
             <div class="d-flex align-items-center justify-content-between my-3">
-              <h3>Акційні пропозиції</h3><a class="btn btn-light btn-lg ml-auto" href="#">Всі акції <span>1036</span></a>
+              <h3>Акційні пропозиції</h3><a class="btn btn-light btn-lg ml-auto d-none d-sm-block" href="#">Всі акції <span>1036</span></a>
             </div>
-            <!--.row.index-action-->
             <div class="row">
-              <div class="col-lg-6 col-md-6 mb-2">
+              <div class="col-lg-6 col-md-12 mb-2">
                 <div class="card product-item large-product"><a class="add-to-favorite" href="#">
                     <svg>
                       <use xlink:href="images/sprite.svg#icon-favorite"></use>
@@ -244,9 +246,9 @@
                   <p class="current-price mb-0">30 999 ₴</p>
                 </div>
               </div>
-              <div class="col-lg-6 ps-1 pe-3">
+              <div class="col-lg-6 ps-lg-1 pe-lg-3">
                 <div class="row index-action" data-masonry="{&quot;percentPosition&quot;: true }">
-                  <div class="col-lg-6">
+                  <div class="col-lg-6 col-sm-6 col-6">
                     <div class="card product-item add-height mb-2"><a class="add-to-favorite" href="#">
                         <svg>
                           <use xlink:href="images/sprite.svg#icon-favorite"></use>
@@ -255,7 +257,7 @@
                       <p class="current-price mb-0">1049 ₴</p>
                     </div>
                   </div>
-                  <div class="col-lg-6">
+                  <div class="col-lg-6 col-sm-6 col-6">
                     <div class="card product-item mb-2"><a class="add-to-favorite" href="#">
                         <svg>
                           <use xlink:href="images/sprite.svg#icon-favorite"></use>
@@ -264,7 +266,7 @@
                       <p class="current-price mb-0">22 195 ₴</p>
                     </div>
                   </div>
-                  <div class="col-lg-6">
+                  <div class="col-lg-6 col-sm-6 col-6 d-none d-md-block">
                     <div class="card product-item mb-2"><a class="add-to-favorite" href="#">
                         <svg>
                           <use xlink:href="images/sprite.svg#icon-favorite"></use>
@@ -273,7 +275,7 @@
                       <p class="current-price mb-0">11 999 ₴</p>
                     </div>
                   </div>
-                  <div class="col-lg-6">
+                  <div class="col-lg-6 col-sm-6 col-6 d-none d-md-block">
                     <div class="card product-item add-height mb-2"><a class="add-to-favorite" href="#">
                         <svg>
                           <use xlink:href="images/sprite.svg#icon-favorite"></use>
@@ -289,7 +291,7 @@
             <div class="mt-5">
               <h3>Зараз шукають</h3>
               <div class="row">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-sm-6 col-6">
                   <div class="card product-item add-height mb-2"><a class="add-to-favorite" href="#">
                       <svg>
                         <use xlink:href="images/sprite.svg#icon-favorite"></use>
@@ -298,7 +300,7 @@
                     <p class="current-price mb-0">46 499 ₴</p>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-sm-6 col-6">
                   <div class="card product-item add-height mb-2"><a class="add-to-favorite" href="#">
                       <svg>
                         <use xlink:href="images/sprite.svg#icon-favorite"></use>
@@ -307,7 +309,7 @@
                     <p class="current-price mb-0">17 899 ₴</p>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-sm-6 col-6 d-none d-md-block">
                   <div class="card product-item add-height mb-2"><a class="add-to-favorite" href="#">
                       <svg>
                         <use xlink:href="images/sprite.svg#icon-favorite"></use>
@@ -316,7 +318,7 @@
                     <p class="current-price mb-0">17 499 ₴</p>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-sm-6 col-6 d-none d-md-block">
                   <div class="card product-item add-height mb-2"><a class="add-to-favorite" href="#">
                       <svg>
                         <use xlink:href="images/sprite.svg#icon-favorite"></use>
@@ -325,12 +327,13 @@
                     <p class="current-price mb-0">14 490 ₴</p>
                   </div>
                 </div>
+                <div class="col-12 d-block d-md-none"><a class="btn card text-decoration-none show-more font-size-13" href="#">Показати ще</a></div>
               </div>
             </div>
             <div class="mt-5">
               <h3>Кращі подарунки на Новий рік</h3>
               <div class="row">
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                   <div class="card product-item mb-2 bg-green text-white d-block product-cover">
                     <div class="title-product w-75">
                       <p class="mb-0">Добірка подарунків у розділі</p>
@@ -338,7 +341,7 @@
                     </div><a class="btn btn-primary rounded-pill font-size-13" href="#">Перейти</a>
                   </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                   <div class="card product-item mb-2 bg-brown text-white d-block product-cover">
                     <div class="title-product w-75">
                       <p class="mb-0">Добірка подарунків у розділі</p>
@@ -351,7 +354,7 @@
             <div class="mt-5">
               <h3>Рекомендації на основі ваших переглядів</h3>
               <div class="row">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 col-6">
                   <div class="card product-item add-height mb-2"><a class="add-to-favorite" href="#">
                       <svg>
                         <use xlink:href="images/sprite.svg#icon-favorite"></use>
@@ -360,7 +363,7 @@
                     <p class="current-price mb-0">6 999 ₴</p>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 col-6">
                   <div class="card product-item add-height mb-2"><a class="add-to-favorite" href="#">
                       <svg>
                         <use xlink:href="images/sprite.svg#icon-favorite"></use>
@@ -369,7 +372,7 @@
                     <p class="current-price mb-0">799 ₴</p>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 col-6 d-none d-md-block">
                   <div class="card product-item add-height mb-2"><a class="add-to-favorite" href="#">
                       <svg>
                         <use xlink:href="images/sprite.svg#icon-favorite"></use>
@@ -378,7 +381,7 @@
                     <p class="current-price mb-0">1 494 ₴</p>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 col-6 d-none d-md-block">
                   <div class="card product-item add-height mb-2"><a class="add-to-favorite" href="#">
                       <svg>
                         <use xlink:href="images/sprite.svg#icon-favorite"></use>
@@ -387,12 +390,13 @@
                     <p class="current-price mb-0">1 799 ₴</p>
                   </div>
                 </div>
+                <div class="col-12 d-block d-md-none"><a class="btn card text-decoration-none show-more font-size-13" href="#">Показати ще</a></div>
               </div>
             </div>
             <div class="mt-5">
               <h3>Найбільш очікуванні товари</h3>
               <div class="row">
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-6 col-md-12">
                   <div class="card product-item large-product mb-2"><a class="add-to-favorite" href="#">
                       <svg>
                         <use xlink:href="images/sprite.svg#icon-favorite"></use>
@@ -402,7 +406,7 @@
                     <p class="mt-2 mb-0 font-size-13">Очікуєтся</p>
                   </div>
                 </div>
-                <div class="col-lg-6 col-md-6">
+                <div class="col-lg-6 col-md-12 d-flex d-lg-block justify-content-between">
                   <div class="card product-item mb-4 add-height waited"><a class="add-to-favorite" href="#">
                       <svg>
                         <use xlink:href="images/sprite.svg#icon-favorite"></use>
@@ -427,10 +431,11 @@
       </div>
     </main>
     <!-- Footer start-->
-    <footer>
+    <footer class="text-center text-md-start">
       <div class="container">
-        <div class="align-items-center d-flex justify-content-center">
-          <h2 class="me-5 mb-0">ЗАВАНТАЖУЙТЕ НАШІ ДОДАТКИ</h2><a class="me-4" href="#"><img src="images/button-google-play-ua.png" alt="google-play"></a><a href="#"><img src="images/button-appstore-ua.png" alt="app-store"></a>
+        <div class="align-items-center d-flex justify-content-center flex-column flex-md-row">
+          <h2 class="me-md-5 mb-0">ЗАВАНТАЖУЙТЕ НАШІ ДОДАТКИ</h2>
+          <div class="mt-md-0 mt-4"><a class="me-4" href="#"><img src="images/button-google-play-ua.png" alt="google-play"></a><a href="#"><img src="images/button-appstore-ua.png" alt="app-store"></a></div>
         </div>
       </div>
     </footer>

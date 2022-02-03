@@ -16,8 +16,7 @@ h2 {
 h3 {
   font-weight: 500;
   font-size: 18px;
-  line-height: 48px;
-  letter-spacing: -0.02em; }
+  line-height: 28px; }
 
 h4, h5 {
   margin-bottom: 30px;
@@ -44,10 +43,12 @@ h6 {
 .font-weight-500 {
   font-weight: 500; }
 
-@media screen and (max-width: 992px) {
-  h1 {
-    font-size: 32px;
-    line-height: 36px; } }
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 16px; }
+  h3 {
+    font-size: 14px;
+    line-height: 22px; } }
 
 .btn {
   max-height: 48px;
@@ -103,6 +104,7 @@ header {
   header .toggle-nav {
     width: 18px;
     height: 16px;
+    min-width: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -130,19 +132,21 @@ header {
   header .logo {
     flex: 1 1 0;
     text-align: center; }
-  header .catalog-link {
-    border-radius: 43px; }
-    header .catalog-link svg {
-      width: 20px;
-      height: 20px;
-      margin-right: 11px;
-      vertical-align: text-bottom; }
+
+.catalog-link {
+  border-radius: 43px; }
+  .catalog-link svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 11px;
+    vertical-align: text-bottom; }
 
 .header-container {
   padding: 16px 0; }
 
 .header-search {
   max-width: 770px;
+  margin: 0 15px;
   flex: 1 0 0; }
   .header-search .search-icon {
     position: absolute;
@@ -264,9 +268,12 @@ header {
       font-size: 18px; }
 
 .product-cover {
-  height: 300px;
+  height: 40vw;
+  max-height: 300px;
+  min-height: 200px;
   font-size: 18px;
-  background-image: url(../images/product-cover.png); }
+  background: url(../images/product-cover.png) no-repeat;
+  background-size: cover; }
   .product-cover a.btn {
     position: absolute;
     bottom: 40px;
@@ -377,3 +384,30 @@ main {
 @media screen and (min-width: 1400px) {
   .container {
     max-width: 1560px; } }
+
+@media screen and (max-width: 992px) {
+  .index-action > * {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .d-flex .product-item.waited {
+    max-width: calc(50% - 10px); } }
+
+@media screen and (max-width: 768px) {
+  .header-search {
+    margin-left: 0; }
+  .product-item.large-product {
+    padding: 40px 20px 15px 20px;
+    font-size: 13px; }
+    .product-item.large-product a span {
+      margin-top: 30px;
+      margin-bottom: 10px; }
+    .product-item.large-product .current-price {
+      font-size: 14px;
+      line-height: 18px; }
+  .show-more {
+    padding-top: 14px;
+    padding-bottom: 14px; }
+  .product-cover {
+    font-size: 14px; }
+    .product-cover a.btn {
+      bottom: 10px; } }
