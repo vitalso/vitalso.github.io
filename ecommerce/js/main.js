@@ -1,7 +1,7 @@
 $(function () {
 
   // Mobile toggle menu
-  $('.toggle-nav').on('click' , function(){
+  /*$('.toggle-nav').on('click' , function(){
     $(this).toggleClass('open');
     $('header nav').toggleClass('open');
     $('body').toggleClass('overflow-hidden');
@@ -13,7 +13,7 @@ $(function () {
     $('body').removeClass('overflow-hidden');
     var target = $(this).attr('href');
     $('html, body').animate({scrollTop: $(target).offset().top}, 500);
-  });
+  });*/
 
   // Slick slider
   $('.index-slider').slick({
