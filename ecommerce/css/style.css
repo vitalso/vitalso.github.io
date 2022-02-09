@@ -380,6 +380,10 @@ footer {
   color: #A6A5A5;
   text-align: right; }
 
+@media screen and (max-width: 768px) {
+  .copyright {
+    text-align: center; } }
+
 * {
   margin: 0;
   padding: 0;
