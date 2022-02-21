@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
 .bg-primary {
   background: #FF833D !important; }
@@ -360,6 +361,117 @@ header {
   .popular-products .product-img img {
     max-height: 100%; }
 
+.left-side-form {
+  width: 100%;
+  max-width: 340px;
+  margin-right: 30px;
+  position: relative; }
+  .left-side-form:after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 90%;
+    top: 5%;
+    right: -32px;
+    background: rgba(166, 165, 165, 0.3); }
+
+.right-side-form {
+  margin-left: 30px;
+  position: relative; }
+  .right-side-form .btn {
+    color: #3E77AA; }
+    .right-side-form .btn svg {
+      max-width: 32px;
+      height: 32px; }
+    .right-side-form .btn:nth-child(2) svg {
+      max-height: 22px;
+      width: 12px; }
+  .right-side-form:after {
+    content: "або";
+    position: absolute;
+    background: #F5F5F5;
+    top: 50%;
+    left: -42px;
+    padding: 5px 0;
+    color: rgba(166, 165, 165, 0.5);
+    transform: translateY(-50%); }
+
+.login-form .form-row {
+  position: relative; }
+
+.login-form a {
+  text-decoration: none;
+  color: #3E77AA; }
+
+.login-form input {
+  width: 100%;
+  height: 40px;
+  padding-left: 15px;
+  border-radius: 20px;
+  background: #fff;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(45, 35, 35, 0.2); }
+  .login-form input::placeholder {
+    color: rgba(0, 0, 0, 0.7); }
+  .login-form input + svg {
+    display: none; }
+
+.login-form label {
+  cursor: pointer; }
+
+.login-form input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  opacity: 0; }
+  .login-form input[type="checkbox"] + span {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #FF833D; }
+
+.login-form input[type="checkbox"]:checked + span {
+  background-color: #FF833D;
+  background-image: url(../images/icon-checkbox.svg);
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.login-form button[type="submit"] {
+  width: 100%;
+  background: #FF833D;
+  color: #fff;
+  text-align: center;
+  height: 48px;
+  border-radius: 30px; }
+
+.login-form input.error-label {
+  border-color: #FF833D; }
+
+.login-form .error-label {
+  color: #FF833D;
+  font-size: 11px;
+  padding-left: 10px; }
+  .login-form .error-label + svg {
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    display: block; }
+    .login-form .error-label + svg + .form-show-password {
+      right: 50px; }
+
+.form-show-password {
+  position: absolute;
+  right: 20px;
+  top: 10px; }
+  .form-show-password svg {
+    width: 20px;
+    height: 20px; }
+
 footer {
   margin-top: 50px; }
   footer .social-link svg, footer .social-link img {
@@ -503,6 +615,15 @@ main {
 .container-fluid {
   padding-left: 50px;
   padding-right: 50px; }
+
+.white-popup {
+  position: relative;
+  background: #F5F5F5;
+  padding: 30px;
+  width: auto;
+  max-width: 670px;
+  margin: 20px auto;
+  border-radius: 15px; }
 
 @media screen and (min-width: 1400px) {
   .container {
