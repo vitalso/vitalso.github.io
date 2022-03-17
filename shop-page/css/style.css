@@ -342,7 +342,6 @@ h4 {
     flex: auto; }
 
 .product-item {
-  min-width: 200px;
   width: calc(100% / 5 - 24px);
   margin-left: 12px;
   margin-right: 12px;
@@ -372,6 +371,14 @@ h4 {
   .product-item .add-to-favorite svg {
     width: 20px;
     height: 18px; }
+
+@media screen and (max-width: 1400px) {
+  .product-item {
+    width: calc(100% / 4 - 24px); } }
+
+@media screen and (max-width: 1200px) {
+  .product-item {
+    width: calc(100% / 3 - 24px); } }
 
 @media screen and (max-width: 992px) {
   .product-item {
