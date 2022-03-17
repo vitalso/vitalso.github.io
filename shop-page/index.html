@@ -15,9 +15,9 @@
     <!-- Header start-->
     <header>
       <!-- Top bar-->
-      <div class="top-bar d-none d-md-block border-bottom">
+      <div class="top-bar border-bottom">
         <div class="container-fluid">
-          <div class="row align-items-center">
+          <div class="row align-items-center d-none d-md-flex">
             <div class="col-6">
               <ul class="d-flex justify-content-between align-items-center social-link m-0 p-0">
                 <li><a href="#">
@@ -46,7 +46,7 @@
               <div class="text-end"><a class="btn btn-link text-decoration-none btn-inline fw-bold" href="#">SUBSCRIBE</a></div>
             </div>
           </div>
-          <div class="position-absolute top-0 top-bar-text w-100">
+          <div class="top-0 top-bar-text w-100">
             <p class="mb-0 text-center">We’re independently supported by our readers and we may earn a commission when you buy through our links.</p>
           </div>
         </div>
@@ -54,10 +54,13 @@
       <div class="header-container border-bottom">
         <div class="container-fluid">
           <div class="row align-items-center">
-            <div class="col-md-4">
+            <div class="col-2 d-block d-md-none">
+              <button class="toggle-nav"><span></span><span></span><span></span></button>
+            </div>
+            <div class="col-md-4 col-8">
               <div class="logo">Honest Brand Reviews</div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 col-2">
               <ul class="nav justify-content-end">
                 <li class="nav-item"><a class="nav-link" href="#">Reviews</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Brands</a></li>
@@ -79,7 +82,7 @@
       <!-- Content start-->
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-3 border-end">
+          <div class="col-md-3 border-end d-none d-md-block">
             <nav class="mt-5" aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Shop</a></li>
@@ -88,26 +91,230 @@
                 <li class="breadcrumb-item active" aria-current="page"><a href="#">Dresses</a></li>
               </ol>
             </nav>
-          </div>
-          <div class="col-md-9">
-            <div class="d-flex justify-content-between align-items-center mt-5 mb-4">
-              <h2>Newest Products</h2>
-              <div class="sorting align-items-center d-flex"><span class="me-2">Sort by:</span>
-                <div class="dropdown">
-                  <button class="btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">Newest
-                    <svg>
-                      <use xlink:href="images/sprite.svg#icon-arrow"></use>
-                    </svg>
-                  </button>
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item" href="#">Popular</a></li>
-                    <li><a class="dropdown-item" href="#">Sales</a></li>
-                    <li><a class="dropdown-item" href="#">Price</a></li>
-                  </ul>
+            <!-- Filters-->
+            <div class="accordion" id="accordionFilter">
+              <div class="accordion-item border-0 mb-5">
+                <h4 class="accordion-header" id="headingOne">
+                  <button class="accordion-button bg-transparent p-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">CATEGORY</button>
+                </h4>
+                <div class="accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionFilter">
+                  <div class="accordion-body p-0 mt-3">
+                    <div class="wrap-filter-group">
+                      <ul class="filter-list p-0 mb-0">
+                        <li><a href="#">T-Shirt </a></li>
+                        <li><a href="#">Pants </a></li>
+                        <li><a href="#">Sweaters </a></li>
+                        <li><a href="#">Underwears </a></li>
+                        <li><a href="#">Dresses</a></li>
+                        <li><a href="#">Shoes</a></li>
+                        <li><a href="#">T-Shirt 2</a></li>
+                        <li><a href="#">Pants 2</a></li>
+                        <li><a href="#">Sweaters 2</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 mb-5">
+                <h4 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed bg-transparent p-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">BRANDS</button>
+                </h4>
+                <div class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionFilter">
+                  <div class="accordion-body p-0 mt-3">
+                    <input class="w-100 mb-3 filter-input" type="text" placeholder="Search Brand">
+                    <div class="wrap-filter-group">
+                      <ul class="filter-list p-0 mb-0">
+                        <li><a href="#">Acne Studios</a></li>
+                        <li><a href="#">Adidas</a></li>
+                        <li><a href="#">Alexander Mcqueen</a></li>
+                        <li><a href="#">Boss</a></li>
+                        <li><a href="#">BP</a></li>
+                        <li><a href="#">Balenciaga</a></li>
+                        <li><a href="#">Acne Studios</a></li>
+                        <li><a href="#">Adidas</a></li>
+                        <li><a href="#">Alexander Mcqueen</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 mb-5">
+                <h4 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed bg-transparent p-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">COLORS</button>
+                </h4>
+                <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionFilter">
+                  <div class="accordion-body p-0 mt-3">
+                    <div class="wrap-filter-group color-group">
+                      <ul class="filter-list p-0 mb-0">
+                        <li>
+                          <label for="black">
+                            <input type="checkbox" id="black"><span></span><b class="filter-color black"></b>Black
+                          </label>
+                        </li>
+                        <li>
+                          <label for="blue">
+                            <input type="checkbox" id="blue"><span></span><b class="filter-color blue"></b>Blue
+                          </label>
+                        </li>
+                        <li>
+                          <label for="brown">
+                            <input type="checkbox" id="brown"><span></span><b class="filter-color brown"></b>Brown
+                          </label>
+                        </li>
+                        <li>
+                          <label for="gold">
+                            <input type="checkbox" id="gold"><span></span><b class="filter-color gold"></b>Gold
+                          </label>
+                        </li>
+                        <li>
+                          <label for="gray">
+                            <input type="checkbox" id="gray"><span></span><b class="filter-color gray"></b>Gray
+                          </label>
+                        </li>
+                        <li>
+                          <label for="green">
+                            <input type="checkbox" id="green"><span></span><b class="filter-color green"></b>Green
+                          </label>
+                        </li>
+                        <li>
+                          <label for="black">
+                            <input type="checkbox" id="black"><span></span><b class="filter-color black"></b>Black
+                          </label>
+                        </li>
+                        <li>
+                          <label for="blue">
+                            <input type="checkbox" id="blue"><span></span><b class="filter-color blue"></b>Blue
+                          </label>
+                        </li>
+                        <li>
+                          <label for="brown">
+                            <input type="checkbox" id="brown"><span></span><b class="filter-color brown"></b>Brown
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 mb-5">
+                <h4 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed bg-transparent p-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">Price</button>
+                </h4>
+                <div class="accordion-collapse collapse" id="collapseFour" aria-labelledby="headingFour" data-bs-parent="#accordionFilter">
+                  <div class="accordion-body p-0 mt-3">
+                    <div class="filter-price-form mb-3">
+                      <div class="row align-items-end">
+                        <div class="col-5 pe-0">
+                          <p>min price</p>
+                          <input class="w-100 filter-input" type="text" placeholder="$10">
+                        </div>
+                        <div class="col-5 pe-0">
+                          <p>max price</p>
+                          <input class="w-100 filter-input" type="text" placeholder="$10">
+                        </div>
+                        <div class="col-2">
+                          <button class="btn btn-primary" type="submit">Set</button>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="filter-list p-0 mb-0">
+                      <li>
+                        <label for="free-shipping">
+                          <input type="checkbox" checked id="free-shipping"><span></span>Free Shipping
+                        </label>
+                      </li>
+                      <li>
+                        <label for="sale">
+                          <input type="checkbox" id="sale"><span></span>Sale
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 mb-5">
+                <h4 class="accordion-header" id="headingFive">
+                  <button class="accordion-button collapsed bg-transparent p-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">SIZES</button>
+                </h4>
+                <div class="accordion-collapse collapse" id="collapseFive" aria-labelledby="headingFive" data-bs-parent="#accordionFilter">
+                  <div class="accordion-body p-0 mt-3">
+                    <ul class="filter-list p-0 mb-0">
+                      <li>
+                        <label for="xxs">
+                          <input type="checkbox" checked id="xss"><span></span>XXS
+                        </label>
+                      </li>
+                      <li>
+                        <label for="xs">
+                          <input type="checkbox" id="xs"><span></span>XS
+                        </label>
+                      </li>
+                      <li>
+                        <label for="s">
+                          <input type="checkbox" id="s"><span></span>S
+                        </label>
+                      </li>
+                      <li>
+                        <label for="m">
+                          <input type="checkbox" id="m"><span></span>M 
+                        </label>
+                      </li>
+                      <li>
+                        <label for="l">
+                          <input type="checkbox" id="l"><span></span>L 
+                        </label>
+                      </li>
+                      <li>
+                        <label for="xl">
+                          <input type="checkbox" id="xl"><span></span>XL
+                        </label>
+                      </li>
+                      <li>
+                        <label for="xxl">
+                          <input type="checkbox" id="xxl"><span></span>XXL
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="product-catalog justify-content-between align-items-start flex-wrap">
+          </div>
+          <div class="col-md-9 ps-4">
+            <div class="d-sm-flex justify-content-between align-items-center mt-3 mt-md-5 mb-0 mb-md-4">
+              <h2>Newest Products</h2>
+              <div class="sorting">
+                <div class="align-items-center d-sm-flex d-none"><span class="me-2">Sort by:</span>
+                  <div class="dropdown">
+                    <button class="btn" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">Newest
+                      <svg>
+                        <use xlink:href="images/sprite.svg#icon-arrow"></use>
+                      </svg>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <li><a class="dropdown-item" href="#">Popular</a></li>
+                      <li><a class="dropdown-item" href="#">Sales</a></li>
+                      <li><a class="dropdown-item" href="#">Price</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <ul class="tag-list d-sm-none d-flex ms-0 ps-0">
+                  <li><a href="#">WOMENS FASHION</a></li>
+                  <li><a href="#">MENS FASHION</a></li>
+                  <li><a href="#">KIDS</a></li>
+                  <li><a href="#">MENS FASHION</a></li>
+                  <li><a href="#">WOMENS FASHION</a></li>
+                </ul>
+                <div class="filter-mobile d-sm-none d-flex justify-content-end"><a class="me-3" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-sort-mobile"> </use>
+                    </svg><span>Sort</span></a><a href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-filter"> </use>
+                    </svg><span>Filter</span></a></div>
+              </div>
+            </div>
+            <div class="product-catalog justify-content-md-between align-items-start flex-wrap">
               <div class="product-item"><a class="product-img" href="#"><img src="images/products/product-1.png" alt="product-image"></a>
                 <p class="mb-2">BOMBA SOCKS</p>
                 <p class="mb-2"><a class="product-title mb-2" href="#">PATCHWORK CALF SOCKS </a></p>

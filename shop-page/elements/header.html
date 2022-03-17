@@ -1,9 +1,9 @@
 
 <header>
   <!-- Top bar-->
-  <div class="top-bar d-none d-md-block border-bottom">
+  <div class="top-bar border-bottom">
     <div class="container-fluid">
-      <div class="row align-items-center">
+      <div class="row align-items-center d-none d-md-flex">
         <div class="col-6">
           <ul class="d-flex justify-content-between align-items-center social-link m-0 p-0">
             <li><a href="#">
@@ -32,7 +32,7 @@
           <div class="text-end"><a class="btn btn-link text-decoration-none btn-inline fw-bold" href="#">SUBSCRIBE</a></div>
         </div>
       </div>
-      <div class="position-absolute top-0 top-bar-text w-100">
+      <div class="top-0 top-bar-text w-100">
         <p class="mb-0 text-center">We’re independently supported by our readers and we may earn a commission when you buy through our links.</p>
       </div>
     </div>
@@ -40,10 +40,13 @@
   <div class="header-container border-bottom">
     <div class="container-fluid">
       <div class="row align-items-center">
-        <div class="col-md-4">
+        <div class="col-2 d-block d-md-none">
+          <button class="toggle-nav"><span></span><span></span><span></span></button>
+        </div>
+        <div class="col-md-4 col-8">
           <div class="logo">Honest Brand Reviews</div>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8 col-2">
           <ul class="nav justify-content-end">
             <li class="nav-item"><a class="nav-link" href="#">Reviews</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Brands</a></li>
