@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@600&display=swap');
+
+.logo , h2 , h4 , .product-item .product-title {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 600;
+}
+
+.product-item .product-title {
+    font-size: 20px;
+    line-height: 23px;
+}
