@@ -343,7 +343,6 @@ h4 {
 
 .product-item {
   min-width: 200px;
-  max-width: 200px;
   width: calc(100% / 5 - 24px);
   margin-left: 12px;
   margin-right: 12px;
@@ -379,9 +378,15 @@ h4 {
     width: calc(100% / 2 - 24px);
     min-width: auto; } }
 
+@media screen and (max-width: 768px) {
+  .product-item {
+    max-width: 200px; } }
+
 @media screen and (max-width: 576px) {
   .product-item {
-    width: calc(50% - 24px); } }
+    width: calc(50% - 8px);
+    margin-left: 4px;
+    margin-right: 4px; } }
 
 footer {
   margin-top: 100px;
