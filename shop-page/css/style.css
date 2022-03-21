@@ -6,6 +6,9 @@
 .text-danger {
   color: #E22626 !important; }
 
+.text-primary {
+  color: #2727E6; }
+
 h1 {
   font-size: 46px;
   line-height: 55px;
@@ -48,6 +51,9 @@ h4 {
   h2 {
     font-size: 16px;
     margin-bottom: 10px; }
+    h2.section-title {
+      font-size: 44px;
+      line-height: 54px; }
   h3 {
     font-size: 14px;
     line-height: 22px; } }
@@ -492,6 +498,28 @@ h4 {
 
 .page-review-image {
   margin: 40px 0; }
+
+.top-item-post {
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 56px;
+  font-size: 16px;
+  line-height: 24px; }
+  .top-item-post-img {
+    margin-bottom: 16px;
+    overflow: hidden;
+    /*img {
+                height: 100%;
+                object-fit: cover;
+            }*/ }
+  .top-item-post h3 {
+    font-size: 32px;
+    line-height: 36px;
+    font-family: "Lexend Deca", sans-serif;
+    margin-bottom: 16px; }
+  .top-item-post p {
+    margin-bottom: 24px; }
 
 footer {
   margin-top: 100px;
