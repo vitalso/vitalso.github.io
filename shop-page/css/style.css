@@ -58,6 +58,13 @@ h4 {
     font-size: 14px;
     line-height: 22px; } }
 
+@media screen and (max-width: 576px) {
+  h2.section-title, h2.section-subtitle {
+    font-size: 28px;
+    line-height: 32px;
+    margin-top: 24px;
+    margin-bottom: 24px; } }
+
 .btn-inline {
   color: #111118; }
 
@@ -69,6 +76,11 @@ h4 {
 
 .btn-primary {
   background: #2727E6 !important; }
+
+@media screen and (max-width: 576px) {
+  .btn-lg {
+    font-size: 16px;
+    line-height: 18px; } }
 
 .top-bar {
   color: #2727E6;
@@ -445,6 +457,20 @@ h4 {
     font-size: 48px;
     line-height: 55px; }
 
+@media screen and (max-width: 768px) {
+  .banner {
+    margin: 24px 0; }
+    .banner-title {
+      font-size: 32px;
+      line-height: 37px; } }
+
+@media screen and (max-width: 480px) {
+  .banner {
+    height: 190px; }
+    .banner img {
+      height: 100%;
+      object-fit: cover; } }
+
 .top-item {
   margin-bottom: 24px;
   padding: 32px;
@@ -490,6 +516,10 @@ h4 {
       padding: 16px 24px;
       font-weight: 700;
       line-height: 16px; }
+  .top-item-more {
+    font-weight: 700;
+    text-decoration: none;
+    color: #111118; }
 
 .page-review-section {
   font-size: 18px;
@@ -520,6 +550,51 @@ h4 {
     margin-bottom: 16px; }
   .top-item-post p {
     margin-bottom: 24px; }
+
+@media screen and (max-width: 992px) {
+  .top-item {
+    flex-wrap: wrap; }
+    .top-item-desc {
+      order: 2;
+      width: 100%;
+      border-right: none;
+      margin-top: 20px;
+      padding-right: 0; }
+    .top-item-action {
+      flex: 1 0 0; } }
+
+@media screen and (max-width: 768px) {
+  .top-item {
+    padding: 13px 17px; }
+    .top-item-action {
+      min-width: 0;
+      padding-left: 24px; }
+      .top-item-action .btn {
+        font-size: 14px; }
+    .top-item h2 {
+      font-size: 32px;
+      line-height: 37px; } }
+
+@media screen and (max-width: 576px) {
+  .top-item-image {
+    width: 40%;
+    height: auto; }
+  .top-item h2 + p {
+    display: none; }
+  .top-item-benefits {
+    display: block;
+    font-size: 14px; }
+    .top-item-benefits li {
+      width: 100%; }
+  .top-item .mobile-details {
+    order: 3;
+    width: 100%; }
+  .page-review-section {
+    font-size: 16px;
+    line-height: 24px; }
+    .page-review-section h3 {
+      font-size: 16px;
+      line-height: 18px; } }
 
 footer {
   margin-top: 100px;
