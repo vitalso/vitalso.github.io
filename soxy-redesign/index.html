@@ -59,10 +59,7 @@
       <div class="header-container">
         <div class="container-fluid border-bottom position-relative">
           <div class="row align-items-center">
-            <div class="col-2 d-block d-md-none">
-              <button class="toggle-nav"><span></span><span></span><span></span></button>
-            </div>
-            <div class="col-lg-8 col-md-6 col-8 d-flex justify-content-between align-items-center">
+            <div class="col-lg-8 col-md-6 col-9 d-flex justify-content-between align-items-center">
               <div class="logo">Soxy</div>
               <form class="header-search position-relative d-none d-lg-block" action="">
                 <input type="text" placeholder="Bomba Socks"><span class="header-search-icon position-absolute">
@@ -71,12 +68,13 @@
                   </svg></span>
               </form>
             </div>
-            <div class="col-lg-4 col-md-6 col-4">
+            <div class="col-lg-4 col-md-6 col-4 d-none d-lg-block">
               <ul class="nav main-nav justify-content-end d-none d-md-flex">
-                <li class="nav-item"><a class="nav-link" href="#">Reviews</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Brands</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">For Bussiness</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Magazine</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+                <!--li.nav-itema(href="#").nav-link For Bussiness
+                -->
                 <!--li.nav-itema(href="#").nav-link.active Shop
                 -->
                 <!--li.nav-item.border-start.border-end
@@ -94,21 +92,33 @@
               
               -->
             </div>
+            <div class="col-3 d-flex d-md-none">
+              <ul class="nav-search mb-0 p-0">
+                <li class="nav-item border-start border-end m-0"><a class="nav-link" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-search"></use>
+                    </svg></a></li>
+              </ul>
+              <button class="toggle-nav"><span></span><span></span><span></span></button>
+            </div>
           </div>
         </div>
         <div class="container-fluid border-bottom">
           <div class="row">
             <div class="col-12">
               <ul class="nav index-nav justify-content-center d-none d-md-flex">
-                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Clothing</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Food</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Hair  Care</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Drink</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Pets</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Women</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Men</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Shoes</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Skin Cares</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Tech</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Bags</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Beauty</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Kids</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Brands</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#icon-cart"></use>
+                    </svg></a></li>
               </ul>
             </div>
           </div>
@@ -360,7 +370,10 @@
           <!--.col-md-8.col-lg-9.ps-4-->
           <div class="col right-side">
             <div class="d-md-flex justify-content-between align-items-center mt-3 mt-md-5 mb-0 mb-md-4">
-              <h1 class="mb-0 text-uppercase">Woman’s Dresses</h1>
+              <div>
+                <h1 class="mb-3 text-uppercase">Woman’s Dresses</h1>
+                <p class="mb-0">Showing 443,940 Clothes, Bags & Shoes Products</p>
+              </div>
               <div class="sorting">
                 <div class="align-items-center d-md-flex d-none"><span class="me-2">Sort by:</span>
                   <div class="dropdown">
@@ -376,7 +389,7 @@
                     </ul>
                   </div>
                 </div>
-                <ul class="tag-list d-md-none d-flex ms-0 ps-0">
+                <ul class="tag-list d-md-none d-flex ms-0 ps-0 mt-3 mt-md-0">
                   <li><a href="#">WOMENS FASHION</a></li>
                   <li><a href="#">MENS FASHION</a></li>
                   <li><a href="#">KIDS</a></li>
@@ -396,7 +409,7 @@
               <div class="product-item"><a class="product-img" href="#"><img src="images/products/product-1.png" alt="product-image"></a>
                 <div class="product-desc">
                   <p class="mb-2">BOMBA SOCKS</p>
-                  <p class="mb-2"><a class="product-title mb-2" href="#">PATCHWORK CALF SOCKS </a></p>
+                  <p class="mb-2"><a class="product-title mb-2" href="#">PATCHWORK CALF SOCKS PATCHWORK CALF SOCKS PATCHWORK CALF SOCKS</a></p>
                   <p class="mb-2">$20,00</p>
                   <div class="d-flex justify-content-between align-items-center"><a class="product-company" href="#">
                       <svg>
@@ -410,7 +423,7 @@
               <div class="product-item"><a class="product-img" href="#"><img src="images/products/product-2.png" alt="product-image"></a>
                 <div class="product-desc">   
                   <p class="mb-2">RITUAL VITAMINS</p>
-                  <p class="mb-2"><a class="product-title mb-2" href="#">VITAMIN KIT</a></p>
+                  <p class="mb-2"><a class="product-title mb-2" href="#">VITAMIN KIT VITAMIN KIT</a></p>
                   <p class="mb-2">$80,00</p>
                   <div class="d-flex justify-content-between align-items-center"><a class="product-company" href="#">
                       <svg>

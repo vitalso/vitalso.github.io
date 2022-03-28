@@ -55,6 +55,9 @@ h4 {
   line-height: 20px; }
 
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+    line-height: 26px; }
   h2 {
     font-size: 16px;
     margin-bottom: 10px; }
@@ -113,8 +116,8 @@ h4 {
 
 .logo {
   font-family: "Lexend Deca", sans-serif;
-  font-size: 40px;
-  line-height: 46px;
+  font-size: 32px;
+  line-height: 40px;
   font-weight: 600; }
 
 .nav {
@@ -123,9 +126,11 @@ h4 {
     margin: 0;
     padding: 0 24px; }
     .nav .nav-item:first-child {
-      padding-left: 0; }
+      padding-left: 0;
+      margin-left: auto; }
     .nav .nav-item:last-child {
-      padding-right: 0; }
+      padding-right: 0;
+      margin-left: auto; }
   .nav .nav-link {
     padding: 0;
     font-size: 16px;
@@ -143,10 +148,34 @@ h4 {
     .nav.index-nav .nav-item:last-child {
       padding-right: 0; }
 
+.nav-search {
+  display: flex; }
+  .nav-search .nav-item {
+    padding: 0 20px;
+    position: relative; }
+    .nav-search .nav-item:after, .nav-search .nav-item:before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 40px;
+      background: #F6F6FB;
+      top: -11px; }
+    .nav-search .nav-item:after {
+      left: 0; }
+    .nav-search .nav-item:before {
+      right: 0; }
+  .nav-search .nav-link {
+    padding: 0; }
+  .nav-search svg {
+    width: 17px;
+    height: 17px; }
+
 .toggle-nav {
   width: 15px;
-  height: 12px;
+  height: 15px;
   min-width: 15px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -216,7 +245,7 @@ h4 {
     font-size: 12px;
     height: auto; }
   .logo {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 18px;
     text-align: center; }
   header .logo {
@@ -235,6 +264,12 @@ h4 {
       z-index: 2;
       height: 100%;
       text-align: right; } }
+
+@media screen and (max-width: 480px) {
+  .nav-search .nav-item {
+    padding: 0 15px; }
+  .toggle-nav {
+    margin-right: 0; } }
 
 .breadcrumb a {
   font-size: 14px;
@@ -434,23 +469,16 @@ h4 {
       color: #10100E; }
   .product-item .product-title {
     font-family: "Lexend Deca", sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 23px;
     font-weight: 600;
     color: #10100E;
     text-decoration: none;
-    height: 23px;
     overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     display: block;
-    position: relative;
-    /*&:after {
-        content: "...";
-        position: absolute;
-        height: 100%;
-        right: 0;
-        bottom: 0;
-        background: $white;
-      }*/ }
+    position: relative; }
   .product-item .product-company {
     text-decoration: none;
     color: #979797; }
@@ -460,7 +488,13 @@ h4 {
       margin-right: 4px; }
   .product-item .add-to-favorite svg {
     width: 20px;
-    height: 18px; }
+    height: 18px;
+    fill: none;
+    stroke: #10100E;
+    transition: all .3s ease; }
+  .product-item .add-to-favorite:hover svg {
+    fill: #E22626;
+    stroke: #E22626; }
 
 @media screen and (max-width: 1400px) {
   .product-item {
@@ -477,13 +511,15 @@ h4 {
 
 @media screen and (max-width: 768px) {
   .product-item {
-    max-width: 200px; } }
+    max-width: 200px; }
+    .product-item .product-title {
+      font-size: 16px; } }
 
 @media screen and (max-width: 576px) {
   .product-item {
     width: calc(50% - 8px);
-    margin-left: 4px;
-    margin-right: 4px; } }
+    margin-left: 0;
+    margin-right: 0; } }
 
 .banner {
   margin: 48px 0; }
@@ -784,7 +820,8 @@ html {
 
 .right-side {
   padding-left: 13px;
-  padding-right: 13px; }
+  padding-right: 13px;
+  max-width: calc(100% - 263px); }
 
 .wrap-left-side .tag-list a {
   white-space: normal;
@@ -799,4 +836,6 @@ html {
     padding-left: 15px;
     padding-right: 15px; }
   .sorting {
-    font-size: 14px; } }
+    font-size: 14px; }
+  .right-side {
+    max-width: none; } }
