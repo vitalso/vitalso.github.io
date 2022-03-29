@@ -79,20 +79,31 @@
           -->
         </div>
         <div class="col-sm-2 col-3 d-flex d-lg-none">
-          <ul class="nav-search mb-0 p-0">
-            <li class="nav-item border-start border-end m-0"><a class="nav-link" href="#">
-                <svg>
-                  <use xlink:href="images/sprite.svg#icon-search"></use>
-                </svg></a></li>
-          </ul>
+          <!--ul.nav-search.mb-0.p-0.d-none.d-lg-flex
+          li.nav-item.border-start.border-end.m-0
+            a(href="#").nav-link
+              svg
+                use(xlink:href="images/sprite.svg#icon-search")
+          
+          -->
           <button class="toggle-nav"><span></span><span></span><span></span></button>
+        </div>
+        <div class="col-12 d-block d-lg-none">
+          <form class="header-search mobile-search position-relative">
+            <input type="text" placeholder="What are you looking for?"/>
+            <button class="header-search-icon position-absolute bg-white" type="submit">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-search"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </div>
     <div class="container-fluid border-bottom">
       <div class="row">
         <div class="col-12">
-          <ul class="nav index-nav justify-content-center d-none d-md-flex">
+          <ul class="nav index-nav justify-content-center d-none d-lg-flex">
             <li class="nav-item"><a class="nav-link" href="#">Women</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Men</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Shoes</a></li>

@@ -69,6 +69,11 @@ h4 {
     line-height: 22px; } }
 
 @media screen and (max-width: 576px) {
+  h1 {
+    font-size: 14px;
+    line-height: 20px; }
+    h1 + p {
+      font-size: 12px; }
   h2.section-title, h2.section-subtitle {
     font-size: 28px;
     line-height: 32px;
@@ -180,10 +185,11 @@ header.top-fixed {
     height: 17px; }
 
 .toggle-nav {
-  width: 15px;
+  width: 18px;
   height: 20px;
   min-width: 15px;
   margin-left: auto;
+  margin-right: 13px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -231,6 +237,20 @@ header.top-fixed {
     .header-search-icon svg {
       width: 17px;
       height: 17px; }
+  .header-search.mobile-search {
+    max-width: 100%;
+    margin-left: 0;
+    margin-top: 16px;
+    margin-bottom: 8px; }
+    .header-search.mobile-search input[type="text"] {
+      max-width: 100%;
+      height: 42px;
+      padding-left: 10px;
+      font-size: 14px;
+      border-color: #EDEDEA; }
+    .header-search.mobile-search button[type="submit"] {
+      right: 15px;
+      left: auto; }
 
 @media screen and (max-width: 1400px) {
   .nav .nav-item {
@@ -252,12 +272,12 @@ header.top-fixed {
     padding: 10px 0;
     font-size: 12px;
     height: auto; }
+  .header-container {
+    padding-top: 10px; }
   .logo {
-    font-size: 20px;
-    line-height: 18px;
+    font-size: 24px;
+    line-height: 28px;
     text-align: center; }
-  header .logo {
-    line-height: 40px; }
   header .nav {
     line-height: 40px; }
     header .nav .nav-item {
@@ -275,9 +295,7 @@ header.top-fixed {
 
 @media screen and (max-width: 480px) {
   .nav-search .nav-item {
-    padding: 0 15px; }
-  .toggle-nav {
-    margin-right: 0; } }
+    padding: 0 15px; } }
 
 .breadcrumb a {
   font-size: 14px;
@@ -293,6 +311,14 @@ header.top-fixed {
 .breadcrumb .breadcrumb-item.active a {
   font-weight: 700;
   color: #10100E; }
+
+.mobile-breadcrumbs {
+  margin-top: 16px;
+  margin-bottom: 18px; }
+
+@media screen and (max-width: 576px) {
+  .mobile-breadcrumbs a {
+    font-size: 12px; } }
 
 #accordionFilter .accordion-item {
   padding: 24px 0 40px 0;
@@ -525,9 +551,18 @@ header.top-fixed {
 
 @media screen and (max-width: 576px) {
   .product-item {
-    width: calc(50% - 8px);
+    width: calc(50% - 4px);
     margin-left: 0;
-    margin-right: 0; } }
+    margin-right: 0; }
+    .product-item .product-img {
+      max-height: 150px;
+      padding: 4px; }
+    .product-item .product-desc {
+      padding: 6px;
+      font-size: 12px; }
+    .product-item .product-title {
+      font-size: 14px;
+      line-height: 18px; } }
 
 .banner {
   margin: 48px 0; }
@@ -838,7 +873,7 @@ main {
   padding-right: 24px;
   position: sticky;
   top: 130px;
-  max-height: 100vh;
+  max-height: calc(100vh - 170px);
   overflow-y: auto; }
   .wrap-left-side::-webkit-scrollbar {
     width: 2px;
@@ -855,11 +890,13 @@ main {
 
 @media screen and (max-width: 768px) {
   main {
-    padding-top: 42px; }
+    padding-top: 106px; }
   .container-fluid {
     padding-left: 15px;
     padding-right: 15px; }
   .sorting {
-    font-size: 14px; }
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 18px; }
   .right-side {
     max-width: none; } }
