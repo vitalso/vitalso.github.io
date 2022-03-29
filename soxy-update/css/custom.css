@@ -1,0 +1,134 @@
+/* your styles go here */
+.collection__img
+{
+    mix-blend-mode: multiply;
+}
+.collection__img-wrapper
+{
+    background-color: #fafafa;
+}
+
+.welcome-products .container {
+  max-width: 1130px;
+}
+
+.shop-brands .container {
+  max-width: 1300px;
+}
+
+.welcome-products-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+  .welcome-products-row:after {
+    content: "";
+    flex: auto;
+  }
+
+  .welcome-products-row .col {
+    max-width: 200px;
+    padding: 0;
+  }
+
+  .welcome-products-row .card-body {
+    padding: 8px;
+    border-bottom: 1px solid #EDEDEA;
+  }
+
+  .card-body .text-muted a , .welcome-products__product-details {
+    font-size: 14px;
+    line-height: 18px;
+    color: #10100E !important;
+  }
+
+  .card-body .out_link {
+    font-family: 'Lexend Deca';
+    font-size: 20px;
+    line-height: 23px;
+    color: #10100E !important;
+  }
+
+  .product-company {
+    font-size: 14px;
+    line-height: 18px;
+    color: #979797;
+  }
+
+  .product-company svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
+  }
+
+  .add-to-favorite svg {
+    width: 20px;
+    height: 18px;
+    fill: none;
+    stroke: #10100E;
+    transition: all .3s ease;
+  }
+
+  .view-all-link {
+    border: none;
+    padding: 16px 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    background: #10100E;
+    color: #fff;
+    display: inline-block;
+    margin-top: 50px;
+  }
+
+  .shop-brands {
+    margin-top: 80px;
+    padding: 80px 0;
+    background: #EDEDEA;
+  }
+
+footer {
+  padding-top: 40px;
+  background: #10100E;
+  color: #fff; }
+  footer .social-link {
+    list-style-type: none;
+    max-width: 256px; }
+    footer .social-link svg {
+      width: 32px;
+      height: 32px; }
+  footer .nav .nav-link {
+    color: #fff; }
+    footer .nav .nav-link.active {
+      font-weight: 700;
+      color: #fff; }
+
+footer .logo {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 600;
+}
+
+.bottom-bar {
+  padding: 32px 0;
+  font-size: 14px;
+  line-height: 16px;
+  border-top: 1px solid #dee2e6; }
+
+@media screen and (max-width: 768px) {
+  footer .nav {
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    line-height: 40px; }
+    footer .nav .nav-item {
+      display: inline-block; }
+  .bottom-bar {
+    font-size: 12px;
+    padding-bottom: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 1.3; } }
