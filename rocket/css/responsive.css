@@ -125,10 +125,10 @@
         width: 80%;
         top: -100px;
     }
-    .p_service_item.agency_service_item{
+    /*.p_service_item.agency_service_item{
         padding-right: 0px;
         padding-left: 0;
-    }
+    }*/
     .saas_featured_info .f_img_two{
         margin-right: 0px;
     }
@@ -198,6 +198,11 @@
     .menu_one .tracking_btn .er_btn{
         padding: 8px 20px;
     }
+
+    .features_info .dot_img,.dot{
+        display: none;
+    }
+
 /*    responsive css */
     .features_item img{
         max-width: 100%;
@@ -664,6 +669,54 @@
 }
 
 @media (max-width:1199px){
+
+    .menu > .nav-item + .nav-item{
+        margin-left: 0px;
+    }
+    .menu > .nav-item{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .menu{
+        padding: 10px 30px;
+        background: #fff;
+        max-width: 960px;
+        margin: 0 auto 30px auto;
+    }
+    .menu_one .navbar-collapse {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .navbar-collapse,.menu_four .navbar-collapse{
+        overflow-y: scroll;
+        margin-left: 0px;
+        margin-right: 0px;
+        background: #fff;
+        height: 100vh;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding-top: 150px;
+    }
+    .menu > .nav-item{
+        margin-right: 0;
+    }
+    .header_area .navbar-brand,.menu_toggle{
+        transition: all 0.2s linear;
+    }
+    .navbar .pl_100 {
+        padding-left: 20px;
+        padding-right: 15px;
+    }
+    .header_area.navbar_fixed .navbar-brand,.navbar_fixed .menu_toggle{
+        margin-bottom: 0px;
+    }
+    .menu > .nav-item > .nav-link{
+        display: inline-block;
+    }
+
     .s_service_item{
         padding: 50px 22px 40px;
     }
@@ -720,11 +773,8 @@
         padding-right: 0px;
         padding-left: 20px;
     }
-    .features_info .dot_img,.dot{
-        display: none;
-    }
-    .agency_featured_item {
-        margin-top: 80px;
+    .agency_featured_item , .agency_featured_item.agency_featured_item_three , .agency_featured_item.agency_featured_item_four {
+        margin-top: 50px;
     }
     .features_info{
         padding-bottom: 0px;
@@ -844,9 +894,9 @@
     .blog-sidebar .widget.widget_recent_post .post_item .media-body{
         padding-left: 12px;
     }
-    .menu > .nav-item + .nav-item {
+    /*.menu > .nav-item + .nav-item {
         margin-left: 20px;
-    }
+    }*/
     .blog_post_item .blog_content {
         padding: 22px 12px 35px;
     }
@@ -1873,8 +1923,9 @@
         margin-top: 50px;
     }
     .partner_logo .p_logo_item{
-        width: calc(100% / 4);
-        margin-bottom: 20px;
+        /*width: calc(100% / 4);
+        margin-bottom: 20px;*/
+        margin: 0 10px;
     }
     .p_feature_item .p_feture_img_one {
         margin-right: 0;
@@ -2099,6 +2150,8 @@
     }
     .agency_content{
         max-width: 500px;   
+        margin-left: auto;
+        margin-right: auto;
     }
     .agency_featured_item .agency_featured_content{
         padding-left: 0px;
@@ -2128,7 +2181,7 @@
     .sec_title p br{
         display: none;
     }
-    .menu > .nav-item + .nav-item{
+    /*.menu > .nav-item + .nav-item{
         margin-left: 0px;
     }
     .menu > .nav-item{
@@ -2166,7 +2219,7 @@
     }
     .menu > .nav-item > .nav-link{
         display: inline-block;
-    }
+    }*/
     .menu > .nav-item.submenu .dropdown-menu .nav-item > .dropdown-menu{
         box-shadow: none;
     }
@@ -2253,7 +2306,6 @@
         margin-left: 29px;
     }
     .menu_four .btn_get{
-        border-color: #ccc5fa;
         box-shadow: none;
         margin-left: 20px;
     }
@@ -3600,6 +3652,15 @@
 }
 
 @media (max-width:767px){
+    .agency_content {
+        max-width: 100%;
+    }
+
+        .agency_content h2 {
+            font-size: 43px;
+            line-height: 52px;
+        }
+
     .sec_title br,.prototype_service_info h2 br,.hosting_title h2 br{
         display: none;
     }
@@ -3630,18 +3691,18 @@
         text-align: left;
         margin-bottom: 0 !important;
     }
-    .partner_logo .p_logo_item {
+    /*.partner_logo .p_logo_item {
         width: calc(100% / 3);
-    }
+    }*/
     .prototype_featured_area h2 br{
         display: none;
     }
     .service_carousel{
         padding-left: 0;
     }
-     .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev{
+    /*.owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev{
         opacity: 0;
-    }
+    }*/
     .service_carousel:hover .owl-nav .owl-next,.service_carousel:hover .owl-nav .owl-prev{
         opacity: 1;
     }
@@ -3677,14 +3738,15 @@
         padding: 70px 0px;
     }
     .agency_featured_area {
-        padding-top: 120px;
+        padding-top: 0px;
+        padding-bottom: 60px;
     }
     .agency_testimonial_area,.software_featured_area{
         padding-top: 70px
     }
-    .agency_testimonial_info .testimonial_slider{
+    /*.agency_testimonial_info .testimonial_slider{
         padding: 50px 20px;
-    }
+    }*/
     .sec_pad,.prototype_service_info{
         padding: 70px 0px;
     }
@@ -4840,7 +4902,7 @@
         display: none;
     }
     .h_features_item{
-        padding-right: 0;+
+        padding-right: 0;
     }
     .h_price_body .h_p_list .h_price_item{
         position: relative;
@@ -5137,23 +5199,24 @@
     .footer_area_two .footer_bottom p{
         margin-bottom: 8px !important; 
     }
-    .partner_logo .p_logo_item{
+    /*.partner_logo .p_logo_item{
         width: 100%;
         margin-bottom: 30px;
+    }*/
+    .partner_logo {
+        padding-bottom: 0;
     }
     .agency_content h2{
-        font-size: 28px;
-        line-height: 45px;
         margin-bottom: 23px;
     }
-    .agency_content .action_btn{
+    /*.agency_content .action_btn{
         display: block !important;
         text-align: center;
     }
     .agency_content .action_btn .agency_banner_btn{
         display: block;
         margin-bottom: 20px;
-    }
+    }*/
     .agency_banner_btn_two{
         margin-left: 0px;
     }

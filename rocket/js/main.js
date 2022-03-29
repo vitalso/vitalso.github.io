@@ -75,6 +75,14 @@
                 autoplay: false,
                 smartSpeed: 1000,
                 responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 4,
+                    },
+                    992: {
+                        items: 5,
+                    },
+                },
                 //navContainer: ".partner_logo_nav",
                 //navText: ['<i class="arrow_left"></i>', '<i class="arrow_right"></i>']
             });
@@ -1709,6 +1717,61 @@
         $('html, body').animate({
             scrollTop: $("body").offset().top
         }, 2000);
+
+    });
+
+    /* Tab features slider */
+    function top_featureSlider() {
+        var top_feature_slider = $(".top-feature-tab");
+        if (top_feature_slider.length) {
+            top_feature_slider.owlCarousel({
+                loop: false,
+                margin: 0,
+                items: 6,
+                nav: true,
+                dots: false,
+                autoplay: false,
+                smartSpeed: 100,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 3,
+                    },
+                    992: {
+                        items: 4,
+                    },
+                    1200: {
+                        items: 5,
+                    },
+                    1550: {
+                        items: 6,
+                    },
+                },
+                //navContainer: ".partner_logo_nav",
+                //navText: ['<i class="arrow_left"></i>', '<i class="arrow_right"></i>']
+            });
+        }
+    }
+    top_featureSlider();
+    /* Partner logo slider */
+
+    $(".top-feature-tab .nav-link").on("click" , function(){
+        $(".top-feature-tab .nav-link").removeClass("active show");
+        $(this).addClass("active show");
+
+        $(".top-feature-content .tab-pane").removeClass("active show");
+        $(".top-feature-content").find(".tab-pane[id=" + $(this).attr('href').replace('#', '') + "] ").addClass("active show");
+    });
+
+    // Price nav mobile
+    $(".price-nav-mobile a").on("click" , function(e){
+        e.preventDefault();
+
+        $(".price-nav-mobile a").removeClass("active");
+        $(this).addClass("active");
+        
+        $(".price_content .row").find(".col-12").addClass("d-none").removeClass("d-block");
+        $(".price_content .row").find(".col-12[id="+ $(this).attr('href').replace('#', '') +"]").removeClass("d-none").addClass("d-block");
 
     });
 
