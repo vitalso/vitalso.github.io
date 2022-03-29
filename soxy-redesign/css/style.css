@@ -88,6 +88,13 @@ h4 {
 .btn-primary {
   background: #10100E !important; }
 
+header.top-fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background: #fff;
+  top: 0; }
+
 .top-bar {
   color: #2727E6;
   font-size: 14px;
@@ -141,6 +148,8 @@ h4 {
     .nav .nav-link.active {
       font-weight: 700;
       color: #2727E6; }
+  .nav.main-nav .nav-item:last-child {
+    margin-left: 0; }
   .nav.index-nav .nav-item {
     padding: 0 40px; }
     .nav.index-nav .nav-item:first-child {
@@ -172,10 +181,9 @@ h4 {
 
 .toggle-nav {
   width: 15px;
-  height: 15px;
+  height: 20px;
   min-width: 15px;
   margin-left: auto;
-  margin-right: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -769,6 +777,9 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+main {
+  padding-top: 130px; }
+
 .sorting {
   font-size: 16px;
   min-width: 180px; }
@@ -816,22 +827,35 @@ html {
   opacity: 1; }
 
 .left-side {
-  max-width: 263px; }
+  max-width: 298px; }
 
 .right-side {
   padding-left: 13px;
   padding-right: 13px;
-  max-width: calc(100% - 263px); }
+  max-width: calc(100% - 298px); }
 
-.wrap-left-side .tag-list a {
-  white-space: normal;
-  padding: 8px; }
+.wrap-left-side {
+  padding-right: 24px;
+  position: sticky;
+  top: 130px;
+  max-height: 100vh;
+  overflow-y: auto; }
+  .wrap-left-side::-webkit-scrollbar {
+    width: 2px;
+    background: #CACADB; }
+  .wrap-left-side::-webkit-scrollbar-thumb {
+    background: #10100E; }
+  .wrap-left-side .tag-list a {
+    white-space: normal;
+    padding: 8px; }
 
 @media screen and (min-width: 1400px) {
   .container {
     max-width: 1140px; } }
 
 @media screen and (max-width: 768px) {
+  main {
+    padding-top: 42px; }
   .container-fluid {
     padding-left: 15px;
     padding-right: 15px; }
