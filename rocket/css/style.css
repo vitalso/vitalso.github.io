@@ -814,6 +814,10 @@ a, .btn, button {
   .header_area.inner-header {
     background: #fff; }
 
+.navbar-brand img {
+  width: 100%;
+  max-width: 275px; }
+
 .menu_one {
   padding: 0px; }
   .menu_one .btn_get {
@@ -2491,6 +2495,9 @@ a, .btn, button {
     .partner_logo .owl-nav button.owl-next {
       transform: scale(-1, 1);
       right: -46px; }
+
+.agency_banner_area .protype_img {
+  max-width: 1000px; }
 
 /*============== agency_banner_area css =============*/
 .agency_banner_area {
@@ -6329,19 +6336,19 @@ a, .btn, button {
     /* Add custom arrow */
     background-repeat: no-repeat;
     background-position: right center; }
-  .price_content .price_item:hover {
+  .price_content .price_item:hover, .price_content .price_item.price-item-active {
     border-color: #1d89c6;
     background: #1d89c6; }
-    .price_content .price_item:hover *, .price_content .price_item:hover li {
+    .price_content .price_item:hover *, .price_content .price_item:hover li, .price_content .price_item.price-item-active *, .price_content .price_item.price-item-active li {
       color: #fff; }
-    .price_content .price_item:hover .p_list li i {
+    .price_content .price_item:hover .p_list li i, .price_content .price_item.price-item-active .p_list li i {
       color: #1d89c6;
       background: #fff; }
-    .price_content .price_item:hover .price_btn {
+    .price_content .price_item:hover .price_btn, .price_content .price_item.price-item-active .price_btn {
       background: #ff516c; }
-    .price_content .price_item:hover .price-sale {
+    .price_content .price_item:hover .price-sale, .price_content .price_item.price-item-active .price-sale {
       background: rgba(255, 255, 255, 0.2); }
-    .price_content .price_item:hover select {
+    .price_content .price_item:hover select, .price_content .price_item.price-item-active select {
       color: #636363; }
 
 .actual-price {
@@ -6543,7 +6550,7 @@ a, .btn, button {
   .curved.bottom {
     top: auto;
     bottom: 0;
-    background: url("../img/main-img/sharp.png") repeat-x scroll center 4px; }
+    background: url("../img/main-img/sharp-pattern.png") repeat-x scroll center 4px; }
     .curved.bottom.color {
       background: url("../img/main-img/sharp-color.png") repeat-x scroll center 4px; }
   .curved.color {
@@ -21781,7 +21788,7 @@ footer .f_menu {
 
 /*====================================================*/
 .top-features {
-  background: url(../img/main-img/tab-bg.png) 87% 74% no-repeat; }
+  background: url(../img/main-img/tab-bg.png) 87% 500px no-repeat; }
 
 .top-feature-tab {
   margin-bottom: 60px; }
@@ -21817,6 +21824,8 @@ footer .f_menu {
     .top-feature-tab .tab-icon img {
       display: inline-block;
       width: auto; }
+    .top-feature-tab .tab-icon span {
+      font-size: 2.5rem; }
   .top-feature-tab .owl-nav {
     text-align: center; }
     .top-feature-tab .owl-nav button {

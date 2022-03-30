@@ -1733,6 +1733,7 @@
                 autoplay: false,
                 smartSpeed: 100,
                 responsiveClass: true,
+                mouseDrag: false,
                 responsive: {
                     0: {
                         items: 3,
