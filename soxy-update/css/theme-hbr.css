@@ -53,6 +53,7 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow-x: hidden;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -21235,7 +21236,6 @@ button.bg-black:focus {
 }
 
 .welcome-posts__posts-wrapper {
-  margin: 0 -10px;
   max-width: 1300px;
 }
 
@@ -21276,7 +21276,7 @@ button.bg-black:focus {
   font-weight: 700;
   font-size: 16px;
   text-transform: uppercase;
-  padding: 0 15px;
+  padding: 24px 0 12px 0;
 }
 
 .welcome-posts__post-category a {
@@ -21291,7 +21291,7 @@ button.bg-black:focus {
   font-family: 'Lexend Deca' , sans-serif;
   font-weight: 600;
   font-size: 24px;
-  padding: 0 15px;
+  padding: 0;
   line-height: 28px;
 }
 
@@ -21325,10 +21325,6 @@ button.bg-black:focus {
   }
   .welcome-posts__post-title {
     padding: 0;
-  }
-  .welcome-posts__post-category {
-    padding: 24px 0 12px 0;
-    font-size: 16px;
   }
   .welcome-posts__post-image-box img {
     width: 100%;
@@ -21659,6 +21655,10 @@ button.bg-black:focus {
   max-width: 100%;
   max-height: 650px;
 }
+
+  .product-details__img {
+    max-height: 100%;
+  }
 
 .product-details__redirect {
   -webkit-appearance: none;
