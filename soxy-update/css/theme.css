@@ -19618,15 +19618,16 @@ amp-mega-menu li:not([open]) [role=dialog] {
   max-height: 100%;
 }
 
-.product-details__title--thestylegenie {
+/*.product-details__title--thestylegenie {
   border-bottom: 1px solid #E5E5E5;
-}
+}*/
 
 .product-details__benefits {
-  border-bottom: 1px solid #E5E5E5;
-  color: #525252;
+  /*border-bottom: 1px solid #EDEDEA;*/
+  color: #000;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 400;
+  padding-bottom: 30px;
 }
 
 .product-details__benefits.border-0 {
