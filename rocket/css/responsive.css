@@ -4175,14 +4175,6 @@
     .price_info_two .pr_list:last-child{
         display: none;
     }
-    .blog_breadcrumb_area .breadcrumb_content_two h1 br{
-        display: none;
-    }
-    .blog_breadcrumb_area .breadcrumb_content_two h1{
-        font-size: 7vw;
-        font-weight: 700;
-        line-height: 1.5em;
-    }
     .header_social_icon li {
         margin: 0px 0px 0px 13px;
     }
