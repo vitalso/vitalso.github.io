@@ -3654,6 +3654,7 @@
 @media (max-width:767px){
     .agency_content {
         max-width: 100%;
+        min-width: 100%;
     }
 
         .agency_content h2 {
@@ -5199,6 +5200,7 @@
         padding-bottom: 0;
     }
     .agency_content h2{
+        margin-top: 30px;
         margin-bottom: 23px;
     }
     /*.agency_content .action_btn{

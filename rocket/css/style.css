@@ -347,6 +347,9 @@ a, .btn, button {
   right: -150px;
   top: -30px; }
 
+.max-height {
+  height: 850px; }
+
 /*====================================================*/
 /*====================================================*/
 .btn_hover {
@@ -5341,7 +5344,27 @@ ol.breadcrumb-list {
 .agency_service_item {
   margin-bottom: 30px;
   padding: 27px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  /*a {
+        font: 400 14px/26px $pop;
+        color: #222d39;
+        vertical-align: middle;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s linear 0s;
+
+        &:before {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background: #222d39;
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            z-index: -1;
+            transition: width 0.3s linear 0s;
+        }
+    }*/ }
   .agency_service_item .icon {
     width: auto;
     height: auto;
@@ -5351,23 +5374,6 @@ ol.breadcrumb-list {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
-  .agency_service_item a {
-    font: 400 14px/26px "Poppins", sans-serif;
-    color: #222d39;
-    vertical-align: middle;
-    position: relative;
-    z-index: 1;
-    transition: color 0.3s linear 0s; }
-    .agency_service_item a:before {
-      content: "";
-      width: 100%;
-      height: 1px;
-      background: #222d39;
-      left: 0;
-      bottom: 0;
-      position: absolute;
-      z-index: -1;
-      transition: width 0.3s linear 0s; }
   .agency_service_item p {
     display: inline-block; }
     .agency_service_item p i {
@@ -9996,6 +10002,30 @@ ol.breadcrumb-list {
         box-shadow: none; }
 
 /*=============== seo_subscribe_area css ============*/
+.contact-features {
+  margin-top: 80px;
+  margin-bottom: 80px; }
+  .contact-features .p_service_item {
+    border: 1px solid #dcdcdc;
+    max-width: 460px;
+    margin: 0 auto; }
+    .contact-features .p_service_item h5 {
+      max-width: 100%; }
+    .contact-features .p_service_item p {
+      font-size: 17px; }
+
+.contact-adress {
+  margin: 10px 0 30px 0;
+  padding-left: 50px;
+  background: url(../img/main-img/icons/icon-adress.png) left center no-repeat;
+  font-size: 18px;
+  line-height: 30px; }
+
+.contact-adress + .footer-phone {
+  background: url(../img/main-img/icons/icon-phone-red.png) left center no-repeat; }
+  .contact-adress + .footer-phone a {
+    color: #ff516c; }
+
 /*====================================================*/
 /*====================================================*/
 /*================= error_area css ==================*/
@@ -15593,6 +15623,12 @@ a .h_head:hover {
   .btn_six:hover {
     background: #ebfaf9;
     color: #17c7bd; }
+
+.bg-danger {
+  background: #ff516c !important; }
+
+.bg-yellow {
+  background: #f8ab59; }
 
 /*====================================================*/
 /*====================================================*/
@@ -21884,6 +21920,11 @@ footer .f_menu {
     background: url(../img/main-img/icons/icon-top-list.png) left 2px no-repeat; }
     .top-list-features li:last-child {
       margin-bottom: 0; }
+  .top-list-features.column-list {
+    column-count: 2;
+    column-gap: 20px; }
+    .top-list-features.column-list li {
+      margin-bottom: 20px; }
 
 @media screen and (max-width: 768px) {
   .top-features {
@@ -21968,7 +22009,7 @@ footer .f_menu {
   margin-top: 60px; }
   .contact-form .form-group {
     margin-bottom: 30px; }
-  .contact-form input, .contact-form textarea {
+  .contact-form input, .contact-form textarea, .contact-form select {
     width: 100%;
     height: 55px;
     padding-left: 20px;
@@ -21976,8 +22017,19 @@ footer .f_menu {
     color: #868686;
     border-radius: 5px;
     border: 1px solid #b6b6b6; }
-    .contact-form input::placeholder, .contact-form textarea::placeholder {
+    .contact-form input::placeholder, .contact-form textarea::placeholder, .contact-form select::placeholder {
       color: #868686; }
+  .contact-form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -ms-appearance: none;
+    /* get rid of default appearance for IE8, 9 and 10*/
+    background-image: url(../img/main-img/icons/icon-input-select.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 15px) center; }
+    .contact-form select:focus {
+      outline: none; }
   .contact-form textarea {
     padding-top: 15px;
     resize: none;
@@ -21986,6 +22038,75 @@ footer .f_menu {
   .contact-form button {
     padding-top: 17px;
     padding-bottom: 17px; }
+  .contact-form label {
+    font-size: 17px;
+    color: #525252;
+    margin-bottom: 10px; }
+  .contact-form.office-form {
+    padding: 30px 50px;
+    border-radius: 8px;
+    box-shadow: 4px 0 33px 0 rgba(0, 0, 0, 0.1); }
+  .contact-form.intro-form {
+    position: relative;
+    margin-top: 100px;
+    z-index: 3; }
+
+.form-page {
+  margin-bottom: 30px; }
+  .form-page li {
+    position: relative;
+    margin-right: 130px; }
+    .form-page li:after {
+      content: "";
+      position: absolute;
+      width: 111px;
+      height: 3px;
+      top: 50%;
+      left: 60px;
+      transform: translateY(-50%);
+      background: #d2e6f4; }
+    .form-page li:last-child {
+      margin-right: 0; }
+      .form-page li:last-child:after {
+        display: none; }
+  .form-page a {
+    color: #1c83c6;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    display: inline-block;
+    background: #d2e6f4;
+    border-radius: 50%;
+    font-weight: 600;
+    position: relative; }
+    .form-page a span {
+      z-index: 1;
+      position: relative; }
+    .form-page a.active {
+      color: #fff; }
+      .form-page a.active:after {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #1c83c6; }
+
+.demo-intro-1, .demo-intro-2 {
+  position: absolute;
+  z-index: 2; }
+
+.demo-intro-1 {
+  top: 44%;
+  left: -300px; }
+
+.demo-intro-2 {
+  right: -280px;
+  top: 0; }
 
 @media screen and (max-width: 1550px) {
   .price-save {
@@ -22103,7 +22224,9 @@ footer .f_menu {
   .blog_single_info {
     margin-top: 50px; }
   .agency_banner_area .protype_img {
-    max-width: 500px; } }
+    max-width: 500px; }
+  .max-height {
+    height: 1050px; } }
 
 @media screen and (max-width: 768px) {
   .agency_content p {
@@ -22216,7 +22339,25 @@ footer .f_menu {
     font-size: 16px; }
   .contact-form button {
     padding-top: 14px;
-    padding-bottom: 14px; } }
+    padding-bottom: 14px; }
+  .contact-form.office-form {
+    padding: 20px 25px; }
+  .agency_banner_area {
+    padding-bottom: 40px; }
+  .contact-form.intro-form {
+    margin-top: 230px; }
+  .demo-intro-2 {
+    right: 0;
+    max-width: 100%; }
+  .top-list-features.column-list {
+    column-count: 1;
+    column-gap: 0; }
+    .top-list-features.column-list li {
+      background-size: 20px; } }
+
+@media screen and (max-width: 576px) {
+  .max-height {
+    height: 1200px; } }
 
 @media screen and (max-width: 480px) {
   .price-nav-mobile a {
