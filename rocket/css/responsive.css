@@ -2358,9 +2358,9 @@
         padding-left: 20px;
         padding-right: 20px;
     }
-    .menu_one,.header_area.navbar_fixed .menu_one,.menu_two,.menu_six,.menu_seven{
+    /*.menu_one,.header_area.navbar_fixed .menu_one,.menu_two,.menu_six,.menu_seven{
         padding: 15px 0px;
-    }
+    }*/
     .w_menu .nav-item .nav-link{
         color: #051441;
     }

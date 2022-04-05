@@ -1756,6 +1756,28 @@
     top_featureSlider();
     /* Partner logo slider */
 
+    /* Signup review slider */
+    function ReviewSlider() {
+        var signup_review_slider = $(".review-slider");
+        if (signup_review_slider.length) {
+            signup_review_slider.owlCarousel({
+                loop: true,
+                margin: 0,
+                items: 1,
+                nav: false,
+                dots: true,
+                autoplay: false,
+                smartSpeed: 100,
+                responsiveClass: true,
+                mouseDrag: false,
+                //navContainer: ".partner_logo_nav",
+                //navText: ['<i class="arrow_left"></i>', '<i class="arrow_right"></i>']
+            });
+        }
+    }
+    ReviewSlider();
+    /* Partner logo slider */
+
     $(".top-feature-tab .nav-link").on("click" , function(){
         $(".top-feature-tab .nav-link").removeClass("active show");
         $(this).addClass("active show");
@@ -1773,6 +1795,19 @@
         
         $(".price_content .row").find(".col-12").addClass("d-none").removeClass("d-block");
         $(".price_content .row").find(".col-12[id="+ $(this).attr('href').replace('#', '') +"]").removeClass("d-none").addClass("d-block");
+
+    });
+
+    // FAQ
+    $('.accordion-item').on('click' , function(){
+        
+        if ( $(this).is('.active') ) {
+            $('.accordion-item').removeClass('active');
+            $(this).removeClass('active');
+        } else {
+            $('.accordion-item').removeClass('active');
+            $(this).addClass('active');
+        }
 
     });
 

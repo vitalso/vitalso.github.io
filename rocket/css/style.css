@@ -819,7 +819,8 @@ a, .btn, button {
 
 .navbar-brand img {
   width: 100%;
-  max-width: 275px; }
+  max-width: 275px;
+  transform: translateX(-18px); }
 
 .menu_one {
   padding: 0px; }
@@ -6579,6 +6580,11 @@ ol.breadcrumb-list {
       background: url("../img/main-img/sharp-color.png") repeat-x scroll center 4px; }
   .curved.color {
     background: url("../img/main-img/sharp-top-color.png") repeat-x scroll center -4px; }
+  .curved.left {
+    width: 100vw;
+    transform: rotate(-90deg) translateY(45px) scale(-1, 1);
+    top: 50%;
+    position: fixed; }
 
 .action_area_three {
   background-image: linear-gradient(0deg, #5e2ced 0%, #6c3cf4 100%);
@@ -9168,6 +9174,68 @@ ol.breadcrumb-list {
     padding: 0px 0px 45px;
     font: 400 15px/26px "Poppins", sans-serif;
     color: #677294; }
+
+.accordion-item {
+  padding: 30px 15px;
+  border-bottom: 1px solid #dcdcdc; }
+  .accordion-item.active {
+    border-radius: 10px;
+    border: 2px solid #1d89c6; }
+  .accordion-item-header {
+    background: url(../img/main-img/icons/icon-faq.png) no-repeat; }
+    .accordion-item-header .btn-link {
+      line-height: 41px;
+      padding: 0 30px 0 55px;
+      font-size: 24px;
+      font-weight: 600;
+      color: #414141;
+      position: relative;
+      display: inline;
+      white-space: initial; }
+      .accordion-item-header .btn-link i {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: none;
+        font-size: 20px; }
+        .accordion-item-header .btn-link i + i {
+          display: block;
+          color: #1d89c6; }
+      .accordion-item-header .btn-link.collapsed i {
+        display: block;
+        color: #5d5d5d; }
+        .accordion-item-header .btn-link.collapsed i + i {
+          display: none; }
+  .accordion-item .card-body {
+    font-size: 19px;
+    color: #5d5d5d;
+    padding-left: 55px;
+    padding-bottom: 0; }
+
+.widget-free-demo {
+  border-radius: 10px;
+  border: 2px solid #ff516c; }
+
+.free-demo-header {
+  background: #ff516c;
+  color: #fff;
+  font-size: 32px;
+  line-height: 40px;
+  padding: 20px 30px 20px 30px; }
+
+.free-demo-contact {
+  padding: 10px 20px; }
+  .free-demo-contact .footer-email a, .free-demo-contact .footer-phone a {
+    font-size: 22px;
+    color: #1c83c6;
+    background: #1c83c6;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #1c83c6; }
+  .free-demo-contact .footer-email {
+    background-image: url(../img/main-img/icons/icon-mail-dark.png); }
+  .free-demo-contact .footer-phone {
+    background-image: url(../img/main-img/icons/icon-phone-dark.png); }
 
 /*====================================================*/
 /*====================================================*/
@@ -21841,6 +21909,10 @@ footer .f_menu {
         margin-right: 18px;
         vertical-align: middle; }
 
+footer .f-logo img {
+  max-width: 275px;
+  transform: translateX(-35px); }
+
 /*====================================================*/
 .top-features {
   background: url(../img/main-img/tab-bg.png) 87% 500px no-repeat; }
@@ -22108,6 +22180,143 @@ footer .f_menu {
   right: -280px;
   top: 0; }
 
+.checkbox {
+  font-size: 16px;
+  color: #929598; }
+  .checkbox input {
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    transform: translateY(5px);
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer; }
+    .checkbox input:checked + span {
+      background: url(../img/main-img/icons/icon-checkbox.png) center no-repeat; }
+  .checkbox span {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 5px;
+    border: 1px solid #218acb;
+    border-radius: 5px;
+    transform: translateY(3px); }
+  .checkbox a {
+    color: #218acb; }
+
+.text-after-form p {
+  color: rgba(25, 35, 46, 0.6);
+  font-size: 17px; }
+  .text-after-form p:last-child {
+    padding: 30px 0;
+    font-size: 15px; }
+    .text-after-form p:last-child span {
+      color: #23c7c9; }
+
+.signup-right {
+  height: 100%;
+  padding-left: 120px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .signup-right:after {
+    content: "";
+    position: absolute;
+    width: 50vw;
+    height: 100%;
+    top: 0;
+    right: -50vw;
+    background: #1d89c6; }
+
+.review-slider li {
+  margin-top: 100px; }
+
+.review-slider p {
+  font-size: 20px;
+  line-height: 31px;
+  color: #fff;
+  position: relative; }
+
+.review-slider .owl-dots {
+  margin-top: 30px;
+  text-align: right; }
+  .review-slider .owl-dots button.owl-dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    margin: 0 5px;
+    border: 2px solid rgba(255, 255, 255, 0.3); }
+    .review-slider .owl-dots button.owl-dot span {
+      margin: 0;
+      border: none;
+      background: transparent; }
+    .review-slider .owl-dots button.owl-dot.active {
+      width: 26px;
+      background: #fff;
+      border-radius: 10px; }
+
+.review-text {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px 20px 20px 20px;
+  border-radius: 15px; }
+  .review-text:after {
+    content: "";
+    position: absolute;
+    width: 66px;
+    height: 55px;
+    top: -25px;
+    left: 20px;
+    background: url(../img/main-img/icons/icon-review.png) no-repeat; }
+  .review-text:before {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 28px;
+    bottom: -28px;
+    left: 20px;
+    background: url(../img/main-img/review-img.png) no-repeat; }
+
+.author-review {
+  margin-top: 40px;
+  margin-left: 20px;
+  padding-left: 62px; }
+  .author-review:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 52px;
+    height: 2px;
+    transform: translateY(-1px);
+    background: #23c7c9; }
+
+.trusted {
+  margin-top: 120px; }
+  .trusted-title {
+    position: relative; }
+    .trusted-title span {
+      background: #1d89c6;
+      z-index: 1;
+      position: relative;
+      padding: 0 30px; }
+    .trusted-title:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      left: 0;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.3);
+      top: 50%; }
+  .trusted-img {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .trusted-img img {
+      max-width: calc(100% / 4 - 30px); }
+
 @media screen and (max-width: 1550px) {
   .price-save {
     font-size: 24px; }
@@ -22150,7 +22359,10 @@ footer .f_menu {
     line-height: 20px; }
   .why-partner-img {
     right: auto;
-    max-width: 100%; } }
+    max-width: 100%; }
+  .navbar-brand img {
+    max-height: 80px;
+    transform: translateX(-10px); } }
 
 @media screen and (max-width: 992px) {
   .navbar-collapse, .menu_four .navbar-collapse {
@@ -22226,7 +22438,18 @@ footer .f_menu {
   .agency_banner_area .protype_img {
     max-width: 500px; }
   .max-height {
-    height: 1050px; } }
+    height: 1050px; }
+  .signup-right {
+    margin-left: -15px;
+    padding-left: 15px;
+    padding-top: 80px;
+    padding-bottom: 150px; }
+    .signup-right .curved {
+      transform: none;
+      position: absolute;
+      top: 0; }
+    .signup-right .trusted {
+      margin-top: 30px; } }
 
 @media screen and (max-width: 768px) {
   .agency_content p {
@@ -22353,7 +22576,30 @@ footer .f_menu {
     column-count: 1;
     column-gap: 0; }
     .top-list-features.column-list li {
-      background-size: 20px; } }
+      background-size: 20px; }
+  .accordion-item-header .btn-link {
+    font-size: 18px; }
+  .accordion-item .card-body {
+    font-size: 14px; }
+  .signup-form label {
+    font-size: 13px;
+    margin-bottom: 5px; }
+  .signup-form input, .signup-form select {
+    height: 37px;
+    font-size: 13px; }
+  .signup-form p {
+    font-size: 13px; }
+  .text-after-form p {
+    font-size: 14px;
+    line-height: 18px; }
+  .review-slider li {
+    margin-top: 50px; }
+  .review-slider p {
+    font-size: 14px;
+    line-height: 18px; }
+  .f_size_48 {
+    font-size: 27px;
+    line-height: 32px; } }
 
 @media screen and (max-width: 576px) {
   .max-height {
