@@ -96,7 +96,7 @@ h4 {
 header.top-fixed {
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 9;
   background: #fff;
   top: 0; }
 
@@ -221,6 +221,9 @@ header.top-fixed {
   margin-left: 48px;
   flex: 1 0 0; }
   .header-search input[type="text"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     width: 100%;
     max-width: 600px;
     height: 50px;
@@ -343,9 +346,9 @@ header.top-fixed {
   overflow-y: auto; }
   .wrap-filter-group::-webkit-scrollbar {
     width: 2px;
-    background: #CACADB; }
+    background: #fff; }
   .wrap-filter-group::-webkit-scrollbar-thumb {
-    background: #10100E; }
+    background: #CACADB; }
   .wrap-filter-group.color-group {
     height: 194px; }
 
@@ -711,6 +714,10 @@ header.top-fixed {
       font-size: 16px;
       line-height: 18px; } }
 
+.checkout-form__field.invalid {
+  border-color: #ff6f61;
+  color: #ff6f61; }
+
 footer {
   margin-top: 100px;
   padding-top: 40px;
@@ -877,9 +884,9 @@ main {
   overflow-y: auto; }
   .wrap-left-side::-webkit-scrollbar {
     width: 2px;
-    background: #CACADB; }
+    background: #fff; }
   .wrap-left-side::-webkit-scrollbar-thumb {
-    background: #10100E; }
+    background: #CACADB; }
   .wrap-left-side .tag-list a {
     white-space: normal;
     padding: 8px; }
