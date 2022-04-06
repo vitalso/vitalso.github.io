@@ -1,51 +1,10 @@
 
 <header class="top-fixed">
-  <!-- Top bar-->
-  <!--.top-bar.border-bottom
-  .container-fluid
-  
-    .row.align-items-center.d-none.d-md-flex
-  
-      .col-6
-        ul.d-flex.justify-content-between.align-items-center.social-link.m-0.p-0
-          li
-            a(href="#")
-              svg
-                use(xlink:href="images/sprite.svg#icon-facebook")
-  
-          li
-            a(href="#")
-              svg
-                use(xlink:href="images/sprite.svg#icon-instagram")
-  
-          li
-            a(href="#")
-              svg
-                use(xlink:href="images/sprite.svg#icon-twitter")
-  
-          li
-            a(href="#")
-              svg
-                use(xlink:href="images/sprite.svg#icon-youtube")
-  
-          li
-            a(href="#")
-              svg
-                use(xlink:href="images/sprite.svg#icon-tiktok")
-  
-      .col-6
-        .text-end
-          a(href="#").btn.btn-link.text-decoration-none.btn-inline.fw-bold SUBSCRIBE
-  
-    .top-0.top-bar-text.w-100
-      p.mb-0.text-center We’re independently supported by our readers and we may earn a commission when you buy through our links.
-  
-  -->
-  <div class="header-container">
+  <div class="header-container navbar-expand-lg">
     <div class="container-fluid border-bottom position-relative">
       <div class="row align-items-center">
-        <div class="col-lg-8 col-sm-10 col-9 d-flex justify-content-between align-items-center">
-          <div class="logo">Soxy</div>
+        <div class="col-lg-8 col-sm-3 col-8 d-flex justify-content-between align-items-center">
+          <div class="logo"><a href="#">Soxy</a></div>
           <form class="header-search position-relative d-none d-lg-block" action="">
             <input type="text" placeholder="Bomba Socks"/><span class="header-search-icon position-absolute">
               <svg>
@@ -53,40 +12,18 @@
               </svg></span>
           </form>
         </div>
-        <div class="col-lg-4 col-md-6 col-4 d-none d-lg-block">
-          <ul class="nav main-nav justify-content-end d-none d-md-flex">
-            <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Magazine</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
-            <!--li.nav-itema(href="#").nav-link For Bussiness
-            -->
-            <!--li.nav-itema(href="#").nav-link.active Shop
-            -->
-            <!--li.nav-item.border-start.border-end
-            a(href="#").nav-link
-              svg
-                use(xlink:href="images/sprite.svg#icon-search")
-            
-            -->
-          </ul>
-          <!--ul.nav.d-flex.d-md-none
-          li.nav-item.border-start.border-end
-            a(href="#").nav-link
-              svg
-                use(xlink:href="images/sprite.svg#icon-search")
-          
-          -->
+        <div class="col-lg-4 col-sm-6 col-1">
+          <div class="collapse navbar-collapse w-100" id="mobileMenu">
+            <ul class="nav main-nav justify-content-end ms-auto">
+              <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Magazine</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Help</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="col-sm-2 col-3 d-flex d-lg-none">
-          <!--ul.nav-search.mb-0.p-0.d-none.d-lg-flex
-          li.nav-item.border-start.border-end.m-0
-            a(href="#").nav-link
-              svg
-                use(xlink:href="images/sprite.svg#icon-search")
-          
-          -->
-          <button class="toggle-nav"><span></span><span></span><span></span></button>
+        <div class="col-sm-3 col-3 d-flex d-lg-none">
+          <button class="toggle-nav" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
         </div>
         <div class="col-12 d-block d-lg-none">
           <form class="header-search mobile-search position-relative">
