@@ -11393,6 +11393,17 @@ $('document').ready(function () {
     $(this).toggleClass('open');
     $('.mobile-nav').toggleClass('open');
     $('html').toggleClass('overflow-y');
+  }); // Form builder. Open field setting
+
+  $('.form-builder .field-option .field-setting').on('click', function (e) {
+    e.preventDefault(); // Hide the form elements
+
+    $('.form-builder-wrap #accordion .card-body').closest('.show').find('.form-builder-element-wrap').toggleClass('d-flex d-none'); // Show field setting
+
+    $('.form-builder-wrap #accordion .card-body').closest('.show').find('.form-builder-element-setting').toggleClass('d-none d-block'); // Show button for save setting
+
+    $('.form-builder-wrap').find('.field-setting-save').toggleClass('d-none d-inline-flex');
+    $(this).toggleClass('open');
   });
 });
 
