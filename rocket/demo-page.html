@@ -102,7 +102,7 @@
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav menu ml-auto justify-content-between">
+                        <ul class="navbar-nav menu ml-auto justify-content-around">
                             <li class="nav-item">
                                 <a class="nav-link" title="Features" href="#">Features</a>
                             </li>
@@ -117,9 +117,6 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" title="About Us" href="#">FAQ</a>
-                            </li>
-                            <li class="nav-item text-danger">
-                                <a class="nav-link" title="Login" href="#">LOGIN</a>
                             </li>
                         </ul>
                         <a class="btn_get btn_hover menu_cus ml-3 shadow-none" href="#">Start free trial <i class="ti-angle-right"></i></a>
@@ -150,45 +147,54 @@
                             <p class="f_600 f_size_48 l_height50">Book Your Hands-On Demo</p>
 
                             <ul class="form-page p-0 list-unstyled d-flex align-items-center">
-                                <li><a href="#" class="active"><span>1</span></a></li>
-                                <li><a href="#"><span>2</span></a></li>
+                                <li><p class="mb-0 active"><span>1</span></p></li>
+                                <li><p class="mb-0"><span>2</span></p></li>
                             </ul>
 
-                            <form action="">
-                                <div class="form-group">
-                                    <label for="">Full name</label>
-                                    <input type="text" placeholder="">
-                                </div>
-                                
-                                <div class="row">
-                                    <div class="form-group col-sm-6 col-12">
-                                        <label for="">Company name</label>
+                            <form action="" class="form-demo">
+                                <div class="form-page-1">
+                                    <div class="form-group">
+                                        <label for="">Full name</label>
                                         <input type="text" placeholder="">
                                     </div>
                                     
-                                    <div class="form-group col-sm-6 col-12">
-                                        <label for="">Company size</label>
+                                    <div class="row">
+                                        <div class="form-group col-sm-6 col-12">
+                                            <label for="">Company name</label>
+                                            <input type="text" placeholder="">
+                                        </div>
+                                        
+                                        <div class="form-group col-sm-6 col-12">
+                                            <label for="">Company size</label>
+                                            <select name="" id="">
+                                                <option value="" selected="true" disabled="disabled">Select size</option>
+                                                <option value="">Small size(1 - 9)</option>
+                                                <option value="">Medium size(10 - 100)</option>
+                                                <option value="">Medium size(more then 100)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="">Your role</label>
                                         <select name="" id="">
-                                            <option value="" selected="true" disabled="disabled">Select size</option>
-                                            <option value="">Small size(1 - 9)</option>
-                                            <option value="">Medium size(10 - 100)</option>
-                                            <option value="">Medium size(more then 100)</option>
+                                            <option value="" selected="true" disabled="disabled">Select role</option>
+                                            <option value="">Designer</option>
+                                            <option value="">SMM</option>
+                                            <option value="">Developer</option>
                                         </select>
                                     </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="">Your role</label>
-                                    <select name="" id="">
-                                        <option value="" selected="true" disabled="disabled">Select role</option>
-                                        <option value="">Designer</option>
-                                        <option value="">SMM</option>
-                                        <option value="">Developer</option>
-                                    </select>
+                                <div class="form-page-2 d-none">
+                                    <div class="form-group">
+                                        <label for="">Your comments</label>
+                                        <textarea placeholder=""></textarea>
+                                    </div>
                                 </div>
     
                                 <div class="text-center pb-3">
-                                    <button type="submit" class="btn_get btn_hover bg-danger d-block w-100 text-white border-0 btn-trial shadow-none">Continue <i class="ti-angle-right"></i></button>
+                                    <button type="button" class="btn_get btn_hover bg-danger d-block w-100 text-white border-0 btn-trial shadow-none">Continue <i class="ti-angle-right"></i></button>
                                 </div>
                             </form>
 
@@ -241,7 +247,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-12 col-sm-9 col-9 pt-5 pt-lg-0 text-lg-center text-left">
                         <h2 class="f_size_48 f_700 text-white mb-0 wow fadeInUp" data-wow-delay="0.2s">Get Started With PPC Rocket Today</h2>
-                        <p class="f_500 f_size_20 mb-5 mt-3 text-white wow fadeInUp" data-wow-delay="0.3s">Get 7 days of full access to all toolkits. cancel anytime.</p>
+                        <p class="f_500 f_size_20 mb-sm-5 mt-3 text-white wow fadeInUp" data-wow-delay="0.3s">Get 7 days of full access to all toolkits. cancel anytime.</p>
                         <a class="btn_get btn_hover bg-danger text-white border-0 btn-trial shadow-none wow fadeInUp" data-wow-delay="0.4s" href="#">Start free trial <i class="ti-angle-right"></i></a>
                     </div>
                 </div>
@@ -268,17 +274,11 @@
                                     <a href="#"><i class="ti-instagram"></i></a>
                                     <a href="#"><i class="ti-youtube"></i></a>
                                 </div>
-
-                                <ul class="list-unstyled f_menu d-block d-lg-none mt_30">
-                                    <li><a href="#">Imprint</a></li>
-                                    <li><a href="#">Terms of Use</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                </ul>
                             </div>
                         </div>
 
                         <div class="col-lg-2 col-md-6 col-sm-6 col-6">
-                            <div class="f_widget about-widget pl_40">
+                            <div class="f_widget about-widget">
                                 <h3 class="f-title f_500 f_size_24 mb-30 text-white">About Us</h3>
                                 <ul class="list-unstyled f_list">
                                     <li><a href="#">Home</a></li>
@@ -308,6 +308,13 @@
                                 <p class="footer-email"><a href="mailto: info@ppcrocket.com">info@ppcrocket.com</a></p>
                                 <p class="footer-phone"><a href="mailto: info@ppcrocket.com">0172/3494071</a></p>
                             </div>
+
+                            <ul class="list-unstyled f_menu d-block d-lg-none mt_30">
+                                <li><a href="#">Imprint</a></li>
+                                <li><a href="#">Terms of Use</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+
                         </div>
 
                     </div>

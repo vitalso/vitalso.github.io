@@ -78,9 +78,11 @@
                 responsive: {
                     0: {
                         items: 4,
+                        nav: false,
                     },
                     992: {
                         items: 5,
+                        nav: true,
                     },
                 },
                 //navContainer: ".partner_logo_nav",
@@ -1736,6 +1738,9 @@
                 mouseDrag: false,
                 responsive: {
                     0: {
+                        items: 2,
+                    },
+                    576: {
                         items: 3,
                     },
                     992: {
@@ -1776,7 +1781,29 @@
         }
     }
     ReviewSlider();
-    /* Partner logo slider */
+    
+    // About us review
+    function AboutReviewSlider() {
+        var about_review_slider = $(".review");
+        if (about_review_slider.length) {
+            about_review_slider.owlCarousel({
+                loop: false,
+                margin: 0,
+                items: 3,
+                nav: true,
+                dots: false,
+                autoplay: false,
+                smartSpeed: 100,
+                responsiveClass: true,
+                mouseDrag: false,
+                navText: [
+                '<i class="ti-arrow-left"></i>',
+                '<i class="ti-arrow-right"></i>',
+                ],
+            });
+        }
+    }
+    AboutReviewSlider();
 
     $(".top-feature-tab .nav-link").on("click" , function(){
         $(".top-feature-tab .nav-link").removeClass("active show");
@@ -1809,6 +1836,16 @@
             $(this).addClass('active');
         }
 
+    });
+
+    // Demo page form
+    $('.form-demo button').on('click' , function(){
+
+        $('.form-page-1').addClass('d-none');
+        $('.form-page-2').removeClass('d-none');
+
+        $('.form-page li p').removeClass('active');
+        $('.form-page li:last-child p').addClass('active');
     });
 
 })(jQuery);

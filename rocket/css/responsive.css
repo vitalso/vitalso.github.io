@@ -698,7 +698,7 @@
         width: 100%;
         top: 0;
         left: 0;
-        padding-top: 150px;
+        padding-top: 70px;
     }
     .menu > .nav-item{
         margin-right: 0;
@@ -3652,14 +3652,26 @@
 }
 
 @media (max-width:767px){
+
+    .menu{
+        padding: 10px 13px;
+    }
+
+    .header_area a.menu_cus,.header_area .btn_get.ml-0{
+        margin-left: 13px !important;
+        max-width: 240px;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
     .agency_content {
         max-width: 100%;
         min-width: 100%;
     }
 
         .agency_content h2 {
-            font-size: 43px;
-            line-height: 52px;
+            font-size: 30px;
+            line-height: 40px;
         }
 
     .sec_title br,.prototype_service_info h2 br,.hosting_title h2 br{
@@ -3736,6 +3748,7 @@
         margin-bottom: 50px;
     }
     .agency_service_area{
+        margin-top: 0;
         padding: 70px 0px;
     }
     .agency_featured_area {
@@ -4728,9 +4741,9 @@
     .payment_clients_area .payment_clients_inner {
         height: 690px;
     }
-    .agency_featured_area {
+    /*.agency_featured_area {
         padding-top: 80px;
-    }
+    }*/
     .about_img .about_img_slider .about_item .about_text{
         bottom: 30px;
     }
