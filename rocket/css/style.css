@@ -7510,18 +7510,19 @@ ol.breadcrumb-list {
 
 .about-us-bg {
   position: absolute;
-  left: 15px;
-  top: 230px;
+  left: -100px;
+  bottom: -100px;
   z-index: 2; }
 
 .made-in {
   position: absolute;
-  top: 130px;
-  right: 30px; }
+  top: 0;
+  right: -100px; }
 
 .about-us-img {
   position: relative; }
   .about-us-img img {
+    max-width: 100%;
     position: relative;
     z-index: 2;
     border-radius: 10px; }
@@ -7584,7 +7585,8 @@ ol.breadcrumb-list {
   width: auto; }
 
 .review-item {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   margin: 30px 15px; }
   .review-item-img {
     max-width: 65px;
@@ -22611,7 +22613,27 @@ footer .f-logo img {
       position: absolute;
       top: 0; }
     .signup-right .trusted {
-      margin-top: 30px; } }
+      margin-top: 30px; }
+  .about-us-bg {
+    left: 15px; }
+  .made-in {
+    right: 15px; }
+  .about-us-img:after {
+    right: auto;
+    transform: translateX(-50%);
+    left: 50%;
+    max-width: 500px;
+    background-size: contain;
+    background-position: left top; }
+  .about-us-img:before {
+    left: -20px;
+    bottom: -30px; }
+  .about-us-img.right:before {
+    left: -20px;
+    right: auto; }
+  .about-number-img {
+    max-width: 100px;
+    bottom: 0; } }
 
 @media screen and (max-width: 768px) {
   .agency_content p {
@@ -22800,13 +22822,30 @@ footer .f-logo img {
   .navbar-brand img {
     transform: translateX(-30px); }
   .transform-none .navbar-brand img {
-    transform: translateX(0px); } }
+    transform: translateX(0px); }
+  .made-in {
+    max-width: 100px; }
+  .about-us-bg {
+    max-width: 70px; }
+  .about-number-img {
+    bottom: -3vw; }
+  .review.owl-carousel .owl-nav {
+    position: absolute;
+    top: 0;
+    left: 85vw;
+    transform: translate(0); } }
 
 @media screen and (max-width: 576px) {
   .max-height {
-    height: 1200px; } }
+    height: 1200px; }
+  .about-us-img:before, .about-us-img.right:before {
+    left: -50px; }
+  .about-number-img {
+    bottom: -6vw; } }
 
 @media screen and (max-width: 480px) {
+  .review-item {
+    max-width: 360px; }
   .price-nav-mobile a {
     margin: 0 2px;
     padding: 9px 20px; }
@@ -22868,4 +22907,6 @@ footer .f-logo img {
   .curved.left {
     left: 0; }
   .signup-right {
-    padding-bottom: 50px; } }
+    padding-bottom: 50px; }
+  .about-number-img {
+    bottom: -8vw; } }

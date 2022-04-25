@@ -1796,6 +1796,14 @@
                 smartSpeed: 100,
                 responsiveClass: true,
                 mouseDrag: false,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    576: {
+                        items: 3,
+                    },
+                },
                 navText: [
                 '<i class="ti-arrow-left"></i>',
                 '<i class="ti-arrow-right"></i>',
