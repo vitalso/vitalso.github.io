@@ -723,6 +723,10 @@ header {
   to {
     transform: scale(1.05); } }
 
+.sale-img {
+  top: 15%;
+  left: 70%; }
+
 @media screen and (max-width: 992px) {
   .wrap-graphic {
     margin-top: 0;
@@ -763,6 +767,11 @@ header {
     display: none; }
   .graphic-desc.top-arrow:after, .graphic-desc.bottom-arrow:after {
     display: block; } }
+
+@media screen and (max-width: 576px) {
+  .sale-img {
+    top: 20%;
+    max-width: 100px; } }
 
 @media screen and (max-width: 480px) {
   .wrap-graphic ul {
@@ -983,18 +992,22 @@ main {
   overflow-x: hidden; }
 
 .get-in-touch {
-  position: absolute;
-  right: -20px;
-  bottom: -80px;
-  border-radius: 8px;
-  padding: 14px 260px 14px 20px;
-  background: #1C6970; }
+  position: fixed;
+  right: -8px;
+  top: 50%;
+  border-radius: 8px 0 0 8px;
+  padding: 14px 20px;
+  background: #1C6970;
+  z-index: 2;
+  transition: all .3s ease; }
   .get-in-touch span {
     width: 90px;
     display: inline-block;
     font-family: "Silka-Medium";
     font-size: 28px;
     color: #BCDDC5; }
+  .get-in-touch:hover {
+    right: 0; }
 
 @media screen and (min-width: 1400px) {
   .container {
@@ -1014,4 +1027,7 @@ main {
 
 @media screen and (max-width: 768px) {
   .get-in-touch {
-    padding-right: 30px; } }
+    top: 80%; }
+    .get-in-touch span {
+      width: 60px;
+      font-size: 18px; } }
