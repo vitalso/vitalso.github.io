@@ -133,13 +133,19 @@
                         <div class="agency_content">
                             <h2 class="f_700 t_color3 mb_40 wow fadeInLeft" data-wow-delay="0.3s">Maximize Every Euro You Spend on Google Ads</h2>
                             <p class="f_500 l_height28 wow fadeInLeft" data-wow-delay="0.4s">PPC Rocket gives you all the tools you need to create relevant, targeted, & optimized Google Ads Accounts.</p>
-                            <form action="" class="form-free-trial mt_60 wow fadeInLeft" data-wow-delay="0.5s">
+                            <form action="" id="form-free-trial" class="form-free-trial mt_60 wow fadeInLeft" data-wow-delay="0.5s">
                                 <div class="form-input">
-                                    <input type="text" placeholder="Enter Your Email">
-                                    <i class=""></i>
+                                    <input type="email" name="email" placeholder="Enter Your Email" required>
+                                </div>
+                                <div class="form-group mt-3 d-none legal-checkbox">
+                                    <label for="ckeckbox" class="checkbox">
+                                        <input type="checkbox" id="checkbox" checked>
+                                        <span></span>
+                                        By signing up, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms and Conditions</a>.
+                                    </label>
                                 </div>
                                 <div class="action_btn d-flex align-items-center mt_30">
-                                    <a href="#" class="btn_hover agency_banner_btn">START FREE TRIAL <i class="ti-angle-right"></i></a>
+                                    <button type="submit" class="btn_hover agency_banner_btn border-0">START FREE TRIAL <i class="ti-angle-right"></i></button>
                                     <a href="#" class="agency_banner_btn_two">BOOK A DEMO <i class="ti-angle-right"></i></a>
                                 </div>
                             </form>
@@ -708,17 +714,18 @@
                                 <p class="mt_30">For small and medium-sized businesses, our pricing is based on the monthly account spend.</p>
                                 <div class="price mt_30">
                                     <p>Please choose your monthly spending:</p>
-                                    <select name="" id="">
-                                        <option value="2000">< 2.000EUR/USD</option>
+                                    <select name="" id="price-select">
+                                        <option value="0" selected>Choose spending</option>
+                                        <option value="1000">< 2.000EUR/USD</option>
                                         <option value="2000">> 2.000EUR/USD</option>
-                                        <option value="2000">< 5.000EUR/USD</option>
-                                        <option value="2000">> 5.000EUR/USD</option>
+                                        <option value="4000">< 5.000EUR/USD</option>
+                                        <option value="6000">> 5.000EUR/USD</option>
                                     </select>
                                 </div>
                                 <div class="my-3 actual-price f_size_24"><span>20€</span> /MONTH</div>
                                 <div class="my-3 actual-price f_size_24 price-sale">
-                                    <div><span>70€</span> /YEAR</div>
-                                    <div class="price-save"><b>SAVE <span>20%</span></b></div>
+                                    <div><span><b class="price-year-count">0€</b></span> /YEAR</div>
+                                    <div class="price-save"><b>SAVE <span class="price-save-count">0%</span></b></div>
                                 </div>
                                 <ul class="list-unstyled p_list">
                                     <li><i class="ti-check"></i>Quality Score Tracker</li>
@@ -728,7 +735,8 @@
                                     <li><i class="ti-check"></i>10% discount on custom development</li>
                                     <li><i class="ti-check"></i>Cancellation period of 3 months</li>
                                 </ul>
-                                <a href="#" class="price_btn btn_hover">SIGN UP <i class="ti-angle-right"></i></a>
+                                <a href="#" class="price_btn btn_hover choose-price">SIGN UP <i class="ti-angle-right"></i></a>
+                                <p class="d-none">Please choose your monthly spending from dropdown above</p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-8 col-12 mx-auto d-none d-lg-block" id="enterprise">

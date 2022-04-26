@@ -1887,4 +1887,95 @@
         $('.form-page li:last-child p').addClass('active');
     });
 
+    // Start free trial form
+    $('.form-free-trial input[type="email"]').on('keydown' , function(){
+        if ( $(this).val().length >= 3 ) {
+            $(this).closest('form').find('.legal-checkbox').removeClass('d-none');
+        } else {
+            $(this).closest('form').find('.legal-checkbox').addClass('d-none');
+        }
+    });
+
+    $('.form-free-trial input[type="email"]').on('change' , function(){
+        if ( $(this).val().length >= 3 ) {
+            $(this).closest('form').find('.legal-checkbox').removeClass('d-none');
+        } else {
+            $(this).closest('form').find('.legal-checkbox').addClass('d-none');
+        }
+    });
+
+    $('#form-free-trial').on('submit' , function(e) {
+        e.preventDefault();
+
+        var email = $(this).find('input[type="email"]').val();
+        localStorage.setItem('userEmail', email);
+        window.location.href = 'sign-up.html';
+        //alert(localStorage.getItem('userEmail'));
+    });
+
+    // Insert email from LocalStorage
+    $('.signup-form input[type="email"]').val(localStorage.getItem('userEmail'));
+
+    // Price select
+    $('#price-select').on('change' , function(){
+        var val = $(this).find('option:selected').val();
+        $('.choose-price').next('p').addClass('d-none');
+
+        if ( val == 1000 ) {
+            $('.price-year-count').text('50€');
+            $('.price-save-count').text('30%');
+        }
+
+        if ( val == 2000 ) {
+            $('.price-year-count').text('60€');
+            $('.price-save-count').text('20%');
+        }
+
+        if ( val == 4000 ) {
+            $('.price-year-count').text('70€');
+            $('.price-save-count').text('10%');
+        }
+
+        if ( val == 6000 ) {
+            $('.price-year-count').text('90€');
+            $('.price-save-count').text('5%');
+        }
+
+    });
+
+    // Check if selected price form dropdown
+    $('.choose-price').on('click' , function(e) {
+        e.preventDefault();
+
+        if ( $('#price-select option:selected').val() == 0 ) {
+            $(this).next('p').removeClass('d-none');
+        }
+    });
+
+    // Get in touch form
+    $('#get-in-touch-form').submit(function(e){
+
+        e.preventDefault(); // avoid to execute the actual submit of the form.
+
+        var form = $(this);
+        var actionUrl = form.attr('action');
+        
+        $.ajax({
+            type: "POST",
+            url: actionUrl,
+            data: form.serialize(), // serializes the form's elements.
+            success: function(data)
+            {
+                //alert(data); // show response from the php script.
+                form.hide();
+                $('.success-message').removeClass('d-none');
+            },
+            error: function(response) {
+                //alert('not sent');
+                $('.error-message').removeClass('d-none');
+            }
+        });
+
+    });
+
 })(jQuery);

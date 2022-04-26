@@ -249,32 +249,35 @@
                 <h2 class="f_size_48 f_700 text-center mb-0 wow fadeInUp" data-wow-delay="0.2s">Get in Touch</h2>
                 
                 <div class="contact-form wow fadeInUp" data-wow-delay="0.3s">
-                    <form action="">
+                    <form action="/php/get-in-touch.php" id="get-in-touch-form">
                         <div class="row">
                             
                             <div class="col-md-8">
                                 <div class="row">
-                                    <div class="form-group col-sm-6 col-12"><input type="text" placeholder="First Name"></div>
-                                    <div class="form-group col-sm-6 col-12"><input type="text" placeholder="Last Name"></div>
+                                    <div class="form-group col-sm-6 col-12"><input type="text" name="name" placeholder="First Name" required></div>
+                                    <div class="form-group col-sm-6 col-12"><input type="text" name="surname" placeholder="Last Name"></div>
                                 </div>
 
                                 <div class="row">
-                                    <div class="form-group col-sm-6 col-12"><input type="text" placeholder="Company"></div>
-                                    <div class="form-group col-sm-6 col-12"><input type="email" placeholder="E-Mail"></div>
+                                    <div class="form-group col-sm-6 col-12"><input type="text" name="company" placeholder="Company"></div>
+                                    <div class="form-group col-sm-6 col-12"><input type="email" name="email" placeholder="E-Mail" required></div>
                                 </div>
 
                                 <div class="row">
-                                    <div class="form-group col-sm-6 col-12"><input type="phone" placeholder="Phone number"></div>
-                                    <div class="form-group col-sm-6 col-12"><input type="text" placeholder="Website"></div>
+                                    <div class="form-group col-sm-6 col-12"><input type="phone" name="phone" placeholder="Phone number"></div>
+                                    <div class="form-group col-sm-6 col-12"><input type="text" name="website" placeholder="Website"></div>
                                 </div>
                             </div>
 
                             <div class="col-md-4">
-                                <div class="form-group"><textarea name="" id="" placeholder="Your message"></textarea></div>
+                                <div class="form-group"><textarea name="" id="" name="message" placeholder="Your message"></textarea></div>
                                 <button type="submit" class="btn_get btn_hover bg-danger text-white border-0 btn-trial shadow-none">Join Now <i class="ti-angle-right"></i></button>
                             </div>
                         </div>
                     </form>
+
+                    <div class="success-message d-none text-center"><h4>Your message has ben sent</h4></div>
+                    <div class="error-message d-none text-center"><h4>Your message not be sent</h4></div>
                 </div>
                 
             </div>
