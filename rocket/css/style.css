@@ -3503,6 +3503,30 @@ a, .btn, button {
   background-repeat: no-repeat;
   background-position: center center; }
 
+.made-in-small {
+  right: 0;
+  top: -20px; }
+
+.transform-top-80 {
+  position: relative;
+  top: 80px; }
+
+.paid-traffic-img {
+  max-height: 200px;
+  z-index: 2; }
+  .paid-traffic-img img {
+    max-width: 100%; }
+
+.traffic-img-1, .traffic-img-2 {
+  position: absolute;
+  bottom: -170%; }
+
+.traffic-img-1 {
+  left: -50px; }
+
+.traffic-img-2 {
+  right: 11%; }
+
 /*====================================================*/
 /*====================================================*/
 /*================= Start breadcrumb_area css =================*/
@@ -8809,6 +8833,14 @@ ol.breadcrumb-list {
     .get_started_section .btn_four:hover {
       box-shadow: none;
       color: #fff; }
+
+.testimonials-image.z-index {
+  z-index: 10;
+  position: relative; }
+
+.transform-bottom-60 {
+  margin-top: -64px;
+  z-index: 9; }
 
 /*====================================================*/
 /*====================================================*/
@@ -22061,6 +22093,8 @@ footer .f-logo img {
 /*====================================================*/
 .top-features {
   background: url(../img/main-img/tab-bg.png) 87% 500px no-repeat; }
+  .top-features.second-version {
+    background: url(../img/main-img/tab-bg-2.png) 13% 470px no-repeat; }
 
 .top-feature-tab {
   margin-bottom: 60px; }
@@ -22113,6 +22147,10 @@ footer .f-logo img {
       .top-feature-tab .owl-nav button.owl-next {
         transform: scale(-1, 1);
         right: auto; }
+  .top-feature-tab.second-feature-tab .nav-link {
+    max-width: 315px;
+    height: 150px;
+    font-size: 26px; }
 
 .top-feature-content h3 {
   font-size: 35px; }
@@ -22472,6 +22510,22 @@ footer .f-logo img {
     .trusted-img img {
       max-width: calc(100% / 4 - 30px); }
 
+.form-free-trial.request-demo-form input {
+  height: 70px;
+  font-size: 20px;
+  padding-left: 25px;
+  background: #fff;
+  border: none;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05); }
+  .form-free-trial.request-demo-form input::-webkit-input-placeholder, .form-free-trial.request-demo-form input::placeholder {
+    font-size: 20px; }
+
+.form-free-trial.request-demo-form button {
+  top: 5px;
+  right: 5px;
+  text-transform: uppercase;
+  background: #1ab394; }
+
 .owl-carousel .owl-stage {
   display: flex;
   align-items: center; }
@@ -22492,6 +22546,9 @@ footer .f-logo img {
     bottom: 60%; } }
 
 @media screen and (max-width: 1200px) {
+  .top-feature-tab.second-feature-tab .nav-link {
+    max-width: 250px;
+    font-size: 20px; }
   .p_service_item {
     height: 340px;
     overflow: hidden;
@@ -22524,7 +22581,9 @@ footer .f-logo img {
     transform: translateX(-10px); }
   .navbar-brand.crop-logo img {
     max-height: none;
-    transform: translateX(-20px); } }
+    transform: translateX(-20px); }
+  .form-free-trial.request-demo-form button {
+    padding: 19px 28px; } }
 
 @media screen and (max-width: 992px) {
   .navbar-collapse, .menu_four .navbar-collapse {
@@ -22833,7 +22892,26 @@ footer .f-logo img {
     position: absolute;
     top: 0;
     left: 85vw;
-    transform: translate(0); } }
+    transform: translate(0); }
+  .made-in-small {
+    right: 4px;
+    top: 10px; }
+  .transform-top-80 {
+    top: 55px; }
+  .top-feature-tab.second-feature-tab .nav-link {
+    max-width: 190px;
+    line-height: 28px; }
+  .top-list-features li {
+    min-height: 28px;
+    line-height: 28px; }
+  .paid-traffic-img .traffic-img-1 {
+    max-width: 80px;
+    bottom: -130%;
+    left: 0;
+    z-index: 2; }
+  .paid-traffic-img .traffic-img-2 {
+    max-width: 120px;
+    bottom: -120%; } }
 
 @media screen and (max-width: 576px) {
   .max-height {
@@ -22841,7 +22919,21 @@ footer .f-logo img {
   .about-us-img:before, .about-us-img.right:before {
     left: -50px; }
   .about-number-img {
-    bottom: -6vw; } }
+    bottom: -6vw; }
+  .made-in-small {
+    max-width: 130px; }
+  .top-feature-tab.second-feature-tab .nav-link {
+    max-width: 150px;
+    line-height: 28px; }
+  .form-free-trial.request-demo-form input {
+    font-size: 16px; }
+    .form-free-trial.request-demo-form input::-webkit-input-placeholder, .form-free-trial.request-demo-form input::placeholder {
+      font-size: 16px; }
+  .form-free-trial.request-demo-form button {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .transform-bottom-60 {
+    margin-top: 0; } }
 
 @media screen and (max-width: 480px) {
   .review-item {
@@ -22909,4 +23001,6 @@ footer .f-logo img {
   .signup-right {
     padding-bottom: 50px; }
   .about-number-img {
-    bottom: -8vw; } }
+    bottom: -8vw; }
+  .paid-traffic-img .traffic-img-1, .paid-traffic-img .traffic-img-2 {
+    bottom: -70%; } }

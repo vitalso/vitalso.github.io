@@ -1724,7 +1724,7 @@
 
     /* Tab features slider */
     function top_featureSlider() {
-        var top_feature_slider = $(".top-feature-tab");
+        var top_feature_slider = $(".first-feature-tab");
         if (top_feature_slider.length) {
             top_feature_slider.owlCarousel({
                 loop: false,
@@ -1760,6 +1760,37 @@
     }
     top_featureSlider();
     /* Partner logo slider */
+
+    function top_featureSlider2() {
+        var top_feature_slider2 = $(".second-feature-tab");
+        if (top_feature_slider2.length) {
+            top_feature_slider2.owlCarousel({
+                loop: false,
+                margin: 0,
+                items: 4,
+                nav: true,
+                dots: false,
+                autoplay: false,
+                smartSpeed: 100,
+                responsiveClass: true,
+                mouseDrag: false,
+                responsive: {
+                    0: {
+                        items: 2,
+                    },
+                    992: {
+                        items: 3,
+                    },
+                    1200: {
+                        items: 4,
+                    },
+                },
+                //navContainer: ".partner_logo_nav",
+                //navText: ['<i class="arrow_left"></i>', '<i class="arrow_right"></i>']
+            });
+        }
+    }
+    top_featureSlider2();
 
     /* Signup review slider */
     function ReviewSlider() {
