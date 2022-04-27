@@ -120,6 +120,16 @@
                             </li>
                         </ul>
                         <a class="btn_get btn_hover menu_cus ml-3 shadow-none" href="#">Start free trial <i class="ti-angle-right"></i></a>
+
+                        <div class="dropdown dropdown-language ml-2">
+                            <button class="btn bg-transparent dropdown-toggle" type="button" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              EN
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownLanguage">
+                                <a class="dropdown-item" href="#" data-lang="en">EN</a>
+                                <a class="dropdown-item" href="#" data-lang="de">DE</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -203,33 +213,36 @@
 
                     <div class="col-lg-8">
                         <div class="contact-form office-form mt-5 mt-lg-0 wow fadeInRight" data-wow-delay="0.2s">
-                            <form action="">
+                            <form action="/php/contact-form.php" id="contact-form">
                                     <div class="form-group">
                                         <label for="">Company</label>
-                                        <input type="text" placeholder="">
+                                        <input type="text" name="company" placeholder="">
                                     </div>
                                     
                                     <div class="row">
                                         <div class="form-group col-sm-6 col-12">
                                             <label for="">Name</label>
-                                            <input type="text" placeholder="">
+                                            <input type="text" name="name" placeholder="" required>
                                         </div>
                                         
                                         <div class="form-group col-sm-6 col-12">
                                             <label for="">E-mail</label>
-                                            <input type="email" placeholder="">
+                                            <input type="email" name="email" placeholder="" required>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label for="">Message</label>
-                                        <textarea name="" id="" placeholder=""></textarea>
+                                        <textarea name="" id="" name="message" placeholder="" required></textarea>
                                     </div>
         
                                     <div class="text-center">
                                         <button type="submit" class="btn_get btn_hover bg-success text-white border-0 btn-trial shadow-none">Get Started<i class="ti-angle-right"></i></button>
                                     </div>
                             </form>
+                            
+                            <div class="success-message d-none text-center"><h4>Your message has ben sent</h4></div>
+                            <div class="error-message d-none text-center"><h4>Your message not be sent</h4></div>
                         </div>
                     </div>
                 </div>

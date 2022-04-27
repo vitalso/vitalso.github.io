@@ -1878,17 +1878,28 @@
     });
 
     // Demo page form
-    $('.form-demo button').on('click' , function(){
+    $('.form-demo button.bg-danger').on('click' , function(){
 
         $('.form-page-1').addClass('d-none');
         $('.form-page-2').removeClass('d-none');
+        $('.form-demo button.bg-success').removeClass('d-none').addClass('d-block');
+        $(this).addClass('d-none').removeClass('d-block');
+        $('.form-demo button[type="submit"]').removeClass('d-none').addClass('d-block');
 
         $('.form-page li p').removeClass('active');
         $('.form-page li:last-child p').addClass('active');
     });
 
+    $('.form-demo button.bg-success').on('click' , function(){
+        $('.form-page-1').removeClass('d-none');
+        $('.form-page-2').addClass('d-none');
+        $(this).addClass('d-none').removeClass('d-block');
+        $('.form-demo button.bg-danger').removeClass('d-none').addClass('d-block');
+        $('.form-demo button[type="submit"]').addClass('d-none').removeClass('d-block');
+    });
+
     // Start free trial form
-    $('.form-free-trial input[type="email"]').on('keydown' , function(){
+    $('.form-free-trial input[type="email"] , .form-article-email input[type="email"]').on('keydown' , function(){
         if ( $(this).val().length >= 3 ) {
             $(this).closest('form').find('.legal-checkbox').removeClass('d-none');
         } else {
@@ -1896,7 +1907,7 @@
         }
     });
 
-    $('.form-free-trial input[type="email"]').on('change' , function(){
+    $('.form-free-trial input[type="email"] , .form-article-email input[type="email"]').on('change' , function(){
         if ( $(this).val().length >= 3 ) {
             $(this).closest('form').find('.legal-checkbox').removeClass('d-none');
         } else {
@@ -1972,10 +1983,143 @@
             },
             error: function(response) {
                 //alert('not sent');
+                form.hide();
                 $('.error-message').removeClass('d-none');
             }
         });
 
+    });
+
+    // Contact form
+    $('#contact-form').submit(function(e){
+
+        e.preventDefault(); // avoid to execute the actual submit of the form.
+
+        var form = $(this);
+        var actionUrl = form.attr('action');
+        
+        $.ajax({
+            type: "POST",
+            url: actionUrl,
+            data: form.serialize(), // serializes the form's elements.
+            success: function(data)
+            {
+                //alert(data); // show response from the php script.
+                form.hide();
+                $('.success-message').removeClass('d-none');
+            },
+            error: function(response) {
+                //alert('not sent');
+                form.hide();
+                $('.error-message').removeClass('d-none');
+            }
+        });
+
+    });
+
+    $('#article-email-form , #article-email').submit(function(e){
+
+        e.preventDefault(); // avoid to execute the actual submit of the form.
+
+        var form = $(this);
+        var actionUrl = form.attr('action');
+        
+        $.ajax({
+            type: "POST",
+            url: actionUrl,
+            data: form.serialize(), // serializes the form's elements.
+            success: function(data)
+            {
+                //alert(data); // show response from the php script.
+                form.hide();
+                $('.success-message').removeClass('d-none');
+            },
+            error: function(response) {
+                //alert('not sent');
+                form.hide();
+                $('.error-message').removeClass('d-none');
+            }
+        });
+
+    });
+
+    $('#demo-form').submit(function(e){
+
+        e.preventDefault(); // avoid to execute the actual submit of the form.
+
+        var form = $(this);
+        var actionUrl = form.attr('action');
+        
+        $.ajax({
+            type: "POST",
+            url: actionUrl,
+            data: form.serialize(), // serializes the form's elements.
+            success: function(data)
+            {
+                //alert(data); // show response from the php script.
+                form.hide();
+                $('.success-message').removeClass('d-none');
+            },
+            error: function(response) {
+                //alert('not sent');
+                form.hide();
+                $('.error-message').removeClass('d-none');
+            }
+        });
+
+    });
+
+    // Sign up form
+    $('#signup-form').submit(function(e){
+        e.preventDefault();
+                
+        var form = $(this);
+        var actionUrl = form.attr('action');
+        
+        $.ajax({
+            type: "POST",
+            url: actionUrl,
+            data: form.serialize(), // serializes the form's elements.
+            success: function(data)
+            {
+                //alert(data); // show response from the php script.
+                form.hide();
+                $('.success-message').removeClass('d-none');
+            },
+            error: function(response) {
+                //alert('not sent');
+                form.hide();
+                $('.error-message').removeClass('d-none');
+            }
+        });
+
+    });
+
+    $('#signup-form button[type="button"]').on('click' , function(){
+        if ( $('#signup-form input[name="name"]').val() !== '' ) {
+            $(this).closest('form').find('.input-group-1').hide();
+            $(this).closest('form').find('.input-group-2').removeClass('d-none');
+            $('#signup-form button[type="submit"]').removeClass('d-none');
+            $(this).addClass('d-none');
+        }
+    });
+
+    // Dropdown language
+    $('.dropdown-language .dropdown-menu a').on('click' , function(e){
+        e.preventDefault();
+
+        var lang = $(this).data('lang');
+        var langTitle = $(this).text();
+
+        $(this).closest('.dropdown').find('button').text(langTitle);
+
+        if (lang == 'de') {
+            window.location.href = '/de';
+        } else {
+            window.location.href = '/index.html';
+        }
+
+        console.log(lang , langTitle);
     });
 
 })(jQuery);

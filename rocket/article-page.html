@@ -278,13 +278,22 @@
 
                                 <div class="blog-signup bg-primary-blue my-5">
                                     <h3 class="text-white">Get Update by sign-up newslatter</h3>
-                                    <form action="" class="form-free-trial position-relative">
+                                    <form action="/php/article-email.php" id="article-email" class="form-free-trial form-article-email position-relative">
                                         <div class="form-input">
-                                            <input type="text" placeholder="Enter Your Email" class="">
-                                            <i class=""></i>
+                                            <input type="email" name="email" placeholder="Enter Your Email" required>
+                                        </div>
+                                        <div class="form-group mt-3 d-none legal-checkbox">
+                                            <label for="ckeckbox" class="checkbox">
+                                                <input type="checkbox" id="checkbox" checked>
+                                                <span></span>
+                                                By signing up, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms and Conditions</a>.
+                                            </label>
                                         </div>
                                         <button type="submit" class="btn_hover agency_banner_btn">SIGN UP <i class="ti-angle-right"></i></button>
                                     </form>
+
+                                    <div class="success-message d-none text-center"><h4 class="text-white">Your message has ben sent</h4></div>
+                                    <div class="error-message d-none text-center"><h4 class="text-white">Your message not be sent</h4></div>
                                 </div>
 
                                 <h3>Are Google Ads Legit?</h3>
@@ -486,8 +495,20 @@
                                 <div class="bg-primary-blue rounded wrap-signup-widget">
                                     <h3 class="text-white">Sign up for our weekly newsletter!</h3>
                                     <div class="widget-signup">
-                                        <input type="text" placeholder="Email Address" class="rounded border-0">
-                                        <button type="submit" class="bg-danger btn-sm text-white rounded border-0 mt-3">SIGN UP <i class="ti-angle-right"></i></button>
+                                        <form action="/php/article-email.php" id="article-email-form" class="form-article-email">
+                                            <input type="email" name="email" placeholder="Email Address" class="rounded border-0" required>
+                                            <div class="form-group mt-3 d-none legal-checkbox mb-0">
+                                                <label for="ckeckbox" class="checkbox">
+                                                    <input type="checkbox" id="checkbox" checked>
+                                                    <span></span>
+                                                    By signing up, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms and Conditions</a>.
+                                                </label>
+                                            </div>
+                                            <button type="submit" class="bg-danger btn-sm text-white rounded border-0 mt-3">SIGN UP <i class="ti-angle-right"></i></button>
+                                        </form>
+
+                                        <div class="success-message d-none text-center"><h4 class="text-white">Your message has ben sent</h4></div>
+                                        <div class="error-message d-none text-center"><h4 class="text-white">Your message not be sent</h4></div>
                                     </div>
                                 </div>
                             </div>

@@ -120,6 +120,16 @@
                             </li>
                         </ul>
                         <a class="btn_get btn_hover menu_cus ml-3 shadow-none" href="#">Start free trial <i class="ti-angle-right"></i></a>
+
+                        <div class="dropdown dropdown-language ml-2">
+                            <button class="btn bg-transparent dropdown-toggle" type="button" id="dropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              EN
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownLanguage">
+                                <a class="dropdown-item" href="#" data-lang="en">EN</a>
+                                <a class="dropdown-item" href="#" data-lang="de">DE</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -146,11 +156,18 @@
                     </div>
 
                     <div class="col-lg-6 offset-lg-3 col-md-12">
-                        <form action="" class="form-free-trial my-5 request-demo-form position-relative wow fadeInUp" data-wow-delay="0.5s">
+                        <form action="" id="form-free-trial" class="form-free-trial my-5 request-demo-form position-relative wow fadeInUp" data-wow-delay="0.5s">
                             <div class="form-input">
-                                <input type="text" placeholder="Email Address" class="">
+                                <input type="email" name="email" placeholder="Email Address" required>
                             </div>
-                            <button type="submit" class="btn_hover agency_banner_btn border-0 position-absolute">Request a demo <i class="ti-angle-right"></i></button>
+                            <div class="form-group mt-3 d-none legal-checkbox">
+                                <label for="ckeckbox" class="checkbox">
+                                    <input type="checkbox" id="checkbox" checked>
+                                    <span></span>
+                                    By signing up, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms and Conditions</a>.
+                                </label>
+                            </div>
+                            <button type="submit" class="btn_hover agency_banner_btn border-0 position-absolute">Start free trial <i class="ti-angle-right"></i></button>
                         </form>
                     </div>
                 </div>

@@ -12027,6 +12027,11 @@ p {
     padding-left: 17px;
     font-size: 16px;
     color: #222222; }
+    .widget-signup input:focus {
+      box-shadow: none !important;
+      outline: none !important; }
+    .widget-signup input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px #fff inset; }
     .widget-signup input.placeholder {
       color: #222222; }
     .widget-signup input:-moz-placeholder {
@@ -12039,7 +12044,8 @@ p {
     padding: 10px 27px;
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
-    font-weight: 600; }
+    font-weight: 600;
+    cursor: pointer; }
 
 hr {
   margin: 50px 0;
@@ -12099,6 +12105,18 @@ hr {
 
 .blog_content .btn-inline:hover {
   color: #4cb393 !important; }
+
+.form-article-email .checkbox input:checked + span {
+  background: url(../img/main-img/icons/icon-checkbox-white.png) center no-repeat; }
+
+.form-article-email .checkbox {
+  font-size: 14px;
+  color: #fff; }
+  .form-article-email .checkbox a {
+    text-decoration: underline;
+    color: #fff; }
+  .form-article-email .checkbox span {
+    border-color: #fff; }
 
 /*====================================================*/
 /*====================================================*/
