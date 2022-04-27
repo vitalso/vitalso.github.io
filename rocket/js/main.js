@@ -2,7 +2,7 @@
     "use strict";
 
     /*-------------------------------------------------------------------------------
-	  Navbar 
+	  Navbar
 	-------------------------------------------------------------------------------*/
 
     function navbarFixed() {
@@ -822,7 +822,7 @@
             height: $("footer").outerHeight(true)
         });
     }
-    
+
 //    if ($(".personal_description_area").length) {
 //         var count = $('.personal_description_area').data("count");
 //        $(".personal_description_area").css({
@@ -1119,7 +1119,7 @@
     hamberger_menu();
 
     /*-------------------------------------------------------------------------------
-	  Full screen sections 
+	  Full screen sections
 	-------------------------------------------------------------------------------*/
     if ($(".pagepiling").length > 0) {
         $(".pagepiling").pagepiling({
@@ -1689,7 +1689,7 @@
 //                    },
 //                },
             ],
-            
+
             })
             .on('afterChange', onSliderAfterChange)
             .on('wheel', onSliderWheel);
@@ -1812,7 +1812,7 @@
         }
     }
     ReviewSlider();
-    
+
     // About us review
     function AboutReviewSlider() {
         var about_review_slider = $(".review");
@@ -1858,7 +1858,7 @@
 
         $(".price-nav-mobile a").removeClass("active");
         $(this).addClass("active");
-        
+
         $(".price_content .row").find(".col-12").addClass("d-none").removeClass("d-block");
         $(".price_content .row").find(".col-12[id="+ $(this).attr('href').replace('#', '') +"]").removeClass("d-none").addClass("d-block");
 
@@ -1866,7 +1866,7 @@
 
     // FAQ
     $('.accordion-item').on('click' , function(){
-        
+
         if ( $(this).is('.active') ) {
             $('.accordion-item').removeClass('active');
             $(this).removeClass('active');
@@ -1970,7 +1970,7 @@
 
         var form = $(this);
         var actionUrl = form.attr('action');
-        
+
         $.ajax({
             type: "POST",
             url: actionUrl,
@@ -1997,7 +1997,7 @@
 
         var form = $(this);
         var actionUrl = form.attr('action');
-        
+
         $.ajax({
             type: "POST",
             url: actionUrl,
@@ -2023,7 +2023,7 @@
 
         var form = $(this);
         var actionUrl = form.attr('action');
-        
+
         $.ajax({
             type: "POST",
             url: actionUrl,
@@ -2049,7 +2049,7 @@
 
         var form = $(this);
         var actionUrl = form.attr('action');
-        
+
         $.ajax({
             type: "POST",
             url: actionUrl,
@@ -2072,10 +2072,10 @@
     // Sign up form
     $('#signup-form').submit(function(e){
         e.preventDefault();
-                
+
         var form = $(this);
         var actionUrl = form.attr('action');
-        
+
         $.ajax({
             type: "POST",
             url: actionUrl,
@@ -2114,9 +2114,9 @@
         $(this).closest('.dropdown').find('button').text(langTitle);
 
         if (lang == 'de') {
-            window.location.href = '/de';
+            window.location.href = '/rocket/de';
         } else {
-            window.location.href = '/index.html';
+            window.location.href = '/rocket/index.html';
         }
 
         console.log(lang , langTitle);
