@@ -2,7 +2,7 @@
     "use strict";
 
     /*-------------------------------------------------------------------------------
-	  Navbar
+	  Navbar 
 	-------------------------------------------------------------------------------*/
 
     function navbarFixed() {
@@ -822,7 +822,7 @@
             height: $("footer").outerHeight(true)
         });
     }
-
+    
 //    if ($(".personal_description_area").length) {
 //         var count = $('.personal_description_area').data("count");
 //        $(".personal_description_area").css({
@@ -1119,7 +1119,7 @@
     hamberger_menu();
 
     /*-------------------------------------------------------------------------------
-	  Full screen sections
+	  Full screen sections 
 	-------------------------------------------------------------------------------*/
     if ($(".pagepiling").length > 0) {
         $(".pagepiling").pagepiling({
@@ -1689,7 +1689,7 @@
 //                    },
 //                },
             ],
-
+            
             })
             .on('afterChange', onSliderAfterChange)
             .on('wheel', onSliderWheel);
@@ -1812,7 +1812,7 @@
         }
     }
     ReviewSlider();
-
+    
     // About us review
     function AboutReviewSlider() {
         var about_review_slider = $(".review");
@@ -1858,7 +1858,7 @@
 
         $(".price-nav-mobile a").removeClass("active");
         $(this).addClass("active");
-
+        
         $(".price_content .row").find(".col-12").addClass("d-none").removeClass("d-block");
         $(".price_content .row").find(".col-12[id="+ $(this).attr('href').replace('#', '') +"]").removeClass("d-none").addClass("d-block");
 
@@ -1866,7 +1866,7 @@
 
     // FAQ
     $('.accordion-item').on('click' , function(){
-
+        
         if ( $(this).is('.active') ) {
             $('.accordion-item').removeClass('active');
             $(this).removeClass('active');
@@ -1878,7 +1878,23 @@
     });
 
     // Demo page form
-    $('.form-demo button.bg-danger').on('click' , function(){
+    $('.form-page li').on('click' , function(){
+        $('.form-page li p').removeClass('active');
+        
+        if ( $(this).index() == 0 ) {
+            $(this).find('p').addClass('active');
+            $('.intro-form').find('.form-page-1').removeClass('d-none');
+            $('.intro-form').find('.form-page-2').addClass('d-none');
+        }
+
+        if ( $(this).index() == 1 ) {
+            $(this).find('p').addClass('active');
+            $('.intro-form').find('.form-page-2').removeClass('d-none');
+            $('.intro-form').find('.form-page-1').addClass('d-none');
+        }
+
+    });
+    /*$('.form-demo button.bg-danger').on('click' , function(){
 
         $('.form-page-1').addClass('d-none');
         $('.form-page-2').removeClass('d-none');
@@ -1896,7 +1912,7 @@
         $(this).addClass('d-none').removeClass('d-block');
         $('.form-demo button.bg-danger').removeClass('d-none').addClass('d-block');
         $('.form-demo button[type="submit"]').addClass('d-none').removeClass('d-block');
-    });
+    });*/
 
     // Start free trial form
     $('.form-free-trial input[type="email"] , .form-article-email input[type="email"]').on('keydown' , function(){
@@ -1919,8 +1935,13 @@
         e.preventDefault();
 
         var email = $(this).find('input[type="email"]').val();
-        localStorage.setItem('userEmail', email);
-        window.location.href = 'sign-up.html';
+        var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+        if ( testEmail.test(email) ) {
+            localStorage.setItem('userEmail', email);
+            window.location.href = 'sign-up.html';
+        } else {
+            $(this).find('input[type="email"]').addClass('border-danger');
+        }
         //alert(localStorage.getItem('userEmail'));
     });
 
@@ -1935,21 +1956,25 @@
         if ( val == 1000 ) {
             $('.price-year-count').text('50€');
             $('.price-save-count').text('30%');
+            $('.price-month-count').text('20€');
         }
 
         if ( val == 2000 ) {
             $('.price-year-count').text('60€');
             $('.price-save-count').text('20%');
+            $('.price-month-count').text('25€');
         }
 
         if ( val == 4000 ) {
             $('.price-year-count').text('70€');
             $('.price-save-count').text('10%');
+            $('.price-month-count').text('30€');
         }
 
         if ( val == 6000 ) {
             $('.price-year-count').text('90€');
             $('.price-save-count').text('5%');
+            $('.price-month-count').text('35€');
         }
 
     });
@@ -1970,7 +1995,7 @@
 
         var form = $(this);
         var actionUrl = form.attr('action');
-
+        
         $.ajax({
             type: "POST",
             url: actionUrl,
@@ -1997,7 +2022,7 @@
 
         var form = $(this);
         var actionUrl = form.attr('action');
-
+        
         $.ajax({
             type: "POST",
             url: actionUrl,
@@ -2023,7 +2048,7 @@
 
         var form = $(this);
         var actionUrl = form.attr('action');
-
+        
         $.ajax({
             type: "POST",
             url: actionUrl,
@@ -2043,13 +2068,14 @@
 
     });
 
+    // First part demo form
     $('#demo-form').submit(function(e){
 
         e.preventDefault(); // avoid to execute the actual submit of the form.
 
         var form = $(this);
         var actionUrl = form.attr('action');
-
+        
         $.ajax({
             type: "POST",
             url: actionUrl,
@@ -2058,12 +2084,47 @@
             {
                 //alert(data); // show response from the php script.
                 form.hide();
-                $('.success-message').removeClass('d-none');
+                //$('.intro-form .success-message').removeClass('d-none');
+                $('.intro-form').find('.form-page-2').removeClass('d-none');
+                $('.intro-form').find('.form-page-1').addClass('d-none');
+                $('.form-page li p').removeClass('active');
+                $('.form-page li:eq(1) p').addClass('active');
             },
             error: function(response) {
                 //alert('not sent');
                 form.hide();
-                $('.error-message').removeClass('d-none');
+                //$('.intro-form .error-message').removeClass('d-none');
+                $('.intro-form').find('.form-page-2').removeClass('d-none');
+                $('.intro-form').find('.form-page-1').addClass('d-none');
+                $('.form-page li p').removeClass('active');
+                $('.form-page li:eq(1) p').addClass('active');
+            }
+        });
+
+    });
+
+    // Second part demo form
+    $('#demo-form-2').submit(function(e){
+
+        e.preventDefault(); // avoid to execute the actual submit of the form.
+
+        var form = $(this);
+        var actionUrl = form.attr('action');
+        
+        $.ajax({
+            type: "POST",
+            url: actionUrl,
+            data: form.serialize(), // serializes the form's elements.
+            success: function(data)
+            {
+                //alert(data); // show response from the php script.
+                form.hide();
+                $('.intro-form .success-message').removeClass('d-none');
+            },
+            error: function(response) {
+                //alert('not sent');
+                form.hide();
+                $('.intro-form .error-message').removeClass('d-none');
             }
         });
 
@@ -2072,10 +2133,10 @@
     // Sign up form
     $('#signup-form').submit(function(e){
         e.preventDefault();
-
+                
         var form = $(this);
         var actionUrl = form.attr('action');
-
+        
         $.ajax({
             type: "POST",
             url: actionUrl,
@@ -2084,25 +2145,57 @@
             {
                 //alert(data); // show response from the php script.
                 form.hide();
-                $('.success-message').removeClass('d-none');
+                //$('.success-message').removeClass('d-none');
+                form.closest('.signup-form').find('.input-group-1').hide();
+                form.closest('.signup-form').find('.input-group-2').removeClass('d-none');
             },
             error: function(response) {
                 //alert('not sent');
                 form.hide();
-                $('.error-message').removeClass('d-none');
+                //$('.error-message').removeClass('d-none');
+                form.closest('.signup-form').find('.input-group-1').hide();
+                form.closest('.signup-form').find('.input-group-2').removeClass('d-none');
             }
         });
 
     });
 
-    $('#signup-form button[type="button"]').on('click' , function(){
+    $('#signup-form-2').submit(function(e){
+        e.preventDefault();
+                
+        var form = $(this);
+        var actionUrl = form.attr('action');
+        
+        $.ajax({
+            type: "POST",
+            url: actionUrl,
+            data: form.serialize(), // serializes the form's elements.
+            success: function(data)
+            {
+                //alert(data); // show response from the php script.
+                form.hide();
+                $('.after-form-info').removeClass('d-none');
+                $('.sign-up-form-info').addClass('d-none').removeClass('d-flex');
+                $('.signup-form .success-message').removeClass('d-none');
+            },
+            error: function(response) {
+                //alert('not sent');
+                form.hide();
+                $('.after-form-info').removeClass('d-none');
+                $('.sign-up-form-info').addClass('d-none').removeClass('d-flex');
+                $('.signup-form .error-message').removeClass('d-none');
+            }
+        });
+
+    });
+
+    /*$('#signup-form button[type="button"]').on('click' , function(){
         if ( $('#signup-form input[name="name"]').val() !== '' ) {
-            $(this).closest('form').find('.input-group-1').hide();
-            $(this).closest('form').find('.input-group-2').removeClass('d-none');
+            
             $('#signup-form button[type="submit"]').removeClass('d-none');
             $(this).addClass('d-none');
         }
-    });
+    });*/
 
     // Dropdown language
     $('.dropdown-language .dropdown-menu a').on('click' , function(e){
@@ -2111,15 +2204,26 @@
         var lang = $(this).data('lang');
         var langTitle = $(this).text();
 
+        var pathname = window.location.pathname;
+        console.log(pathname);
+
         $(this).closest('.dropdown').find('button').text(langTitle);
 
         if (lang == 'de') {
-            window.location.href = '/rocket/de';
+            window.location.href = '/de' + pathname;
         } else {
-            window.location.href = '/rocket/index.html';
+            window.location.href = '/index.html';
         }
 
         console.log(lang , langTitle);
+    });
+
+    // Toggle accordion
+    $('.toggle').on('click' , function(){
+        $('#accordion .collapse').each(function(){
+            //$(this).collapse('toggle');
+            $(this).toggleClass('show');
+        });
     });
 
 })(jQuery);

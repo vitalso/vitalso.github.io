@@ -1,0 +1,183 @@
+/*============== faq area css =============*/
+.faq_tab{
+    border:1px solid rgb(244, 244, 249);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 2px 4px 0px rgba(12, 0, 46, 0.04);
+    padding: 50px 40px;
+    .nav-tabs{
+        border: 0px;
+        margin-bottom: 0px;
+        display: block;
+    }
+    .nav-item{
+        margin: 0px;
+        .nav-link{
+            font: 400 16px/22px $pop;
+            color: #677294;
+            padding: 0px;
+            border: 0px;
+            border-radius: 0px;
+            display: inline-block;
+            position: relative;
+            margin-bottom: 20px;
+            &:before{
+                content: "";
+                width: 0;
+                height: 1px;
+                background: #5e2ced;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                transition: width 0.2s linear;
+            }
+            &.active{
+                color: #5e2ced;
+                &:before{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.faq_content{
+    .tab-pane{
+        .card{
+            border: 0px;
+            border-radius: 0px;
+            background: transparent;
+            border-bottom: 1px solid #e4e0ee;
+            .card-header{
+                padding: 0px;
+                border: 0px;
+                background: transparent;
+                .btn{
+                    color: #5e2ced;
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                    font: 500 18px/26px $pop;
+                    padding: 20px 30px 20px 0px;
+                    position: relative;
+                    white-space: normal;
+                    i{
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        display: none;
+                        font-size: 20px;
+                        & + i{
+                            display: block;
+                        }
+                    }
+                    &.collapsed{
+                        color: #576370;
+                        i{
+                            display: block;
+                            & + i{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .card-body{
+                padding: 0px 0px 45px;
+                font: 400 15px/26px $pop;
+                color: #677294;
+            }
+        }
+    }
+}
+
+
+// Vitalso changes
+.accordion-item {
+    padding: 30px 15px;
+    border-bottom: 1px solid #dcdcdc;
+
+    &.active {
+        border-radius: 10px;
+        border: 2px solid #1d89c6;
+    }
+
+    &-header {
+        background: url(../img/main-img/icons/icon-faq.png) no-repeat;
+        .btn-link {
+            line-height: 41px;
+            padding: 0 30px 0 55px;
+            font-size: 24px;
+            font-weight: 600;
+            color: #414141;
+            position: relative;
+            display: inline;
+            white-space: initial;
+
+            i{
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                display: none;
+                font-size: 20px;
+                & + i{
+                    display: block;
+                    color: #1d89c6;
+                }
+            }
+            &.collapsed{
+                i{
+                    display: block;
+                    color: #5d5d5d;
+                    & + i{
+                        display: none;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .card-body {
+        font-size: 19px;
+        color: #414141;
+        padding-left: 55px;
+        padding-bottom: 0;
+    }
+
+}
+
+.widget-free-demo {
+    border-radius: 10px;
+    border: 2px solid #ff516c;
+}
+
+    .free-demo-header {
+        background: #ff516c;
+        color: #fff;
+        font-size: 32px;
+        line-height: 40px;
+        padding: 20px 30px 20px 30px;
+    }
+
+    .free-demo-contact {
+        padding: 10px 20px;
+        .footer-email , .footer-phone {
+            a {
+                font-size: 22px;
+                color: #1c83c6;
+                background: #1c83c6;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: #1c83c6;
+            }
+        }
+
+        .footer-email {
+            background-image: url(../img/main-img/icons/icon-mail-dark.png);
+        }
+
+        .footer-phone {
+            background-image: url(../img/main-img/icons/icon-phone-dark.png);
+        }
+    }

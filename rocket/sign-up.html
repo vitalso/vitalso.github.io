@@ -98,33 +98,46 @@
                         <p class="f_size_19 f_600 text-center text-lg-left">It’s simple. Just import your Google Ads*, see immediate results. Try out the full-featured experience free for 14 days. </p>
 
                         <div class="contact-form office-form signup-form mt-5 wow fadeInRight" data-wow-delay="0.2s">
-                            <form action="/php/sign-up.php" id="signup-form">
-                                <div class="input-group-1">
+                            <div class="input-group-1">
+                                <form action="/php/sign-up.php" id="signup-form">
                                     <div class="form-group">
                                         <input type="text" name="name" placeholder="First name" required>
                                     </div>
                                         
                                     <div class="form-group">
-                                        <input type="text" name="surname" placeholder="Last Name">
+                                        <input type="text" name="surname" placeholder="Last Name" required>
                                     </div>
                                             
                                     <div class="form-group">
                                         <input type="email" name="email" placeholder="E-mail" required>
                                     </div>
-                                </div>
 
-                                <div class="input-group-2 d-none">
+                                    <div class="form-group">
+                                        <label for="ckeckbox" class="checkbox">
+                                            <input type="checkbox" id="checkbox" checked>
+                                            <span></span>
+                                            By signing up, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms and Conditions</a>.
+                                        </label>
+                                    </div>
+
+                                    <button type="submit" class="btn_get btn_hover bg-success text-white border-0 btn-trial shadow-none">Create My Free Account<i class="ti-angle-right"></i></button>
+
+                                </form>
+                            </div>
+
+                            <div class="input-group-2 d-none">
+                                <form action="/php/sign-up-2.php" id="signup-form-2">
                                     <div class="form-group">
                                         <input type="text" placeholder="Company" name="company" required>
                                     </div>
                                     
                                     <div class="d-flex">
                                         <div class="form-group w-50 mr-2">
-                                            <input type="text" placeholder="Street" name="street">
+                                            <input type="text" placeholder="Street" name="street" required>
                                         </div>
                                                 
                                         <div class="form-group w-50 ml-2">
-                                            <input type="number" placeholder="Zip" name="zip">
+                                            <input type="number" placeholder="Zip" name="zip" required>
                                         </div>
                                     </div>
     
@@ -145,20 +158,21 @@
                                             <option value="">Developer</option>
                                         </select>
                                     </div>
-                                </div>
 
-                                <div class="form-group">
-                                    <label for="ckeckbox" class="checkbox">
-                                        <input type="checkbox" id="checkbox" checked>
-                                        <span></span>
-                                        By signing up, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms and Conditions</a>.
-                                    </label>
-                                </div>
-    
-                                <button type="submit" class="btn_get btn_hover bg-success text-white border-0 btn-trial shadow-none d-none">Create My Free Account<i class="ti-angle-right"></i></button>
-                                <button type="button" class="btn_get btn_hover bg-success text-white border-0 btn-trial shadow-none">Create My Free Account<i class="ti-angle-right"></i></button>
+                                    <div class="form-group">
+                                        <label for="ckeckbox" class="checkbox">
+                                            <input type="checkbox" id="checkbox" checked>
+                                            <span></span>
+                                            By signing up, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms and Conditions</a>.
+                                        </label>
+                                    </div>
+
+                                    <button type="submit" class="btn_get btn_hover bg-success text-white border-0 btn-trial shadow-none">Create My Free Account<i class="ti-angle-right"></i></button>
+
+                                </form>
+                            </div>
                                 
-                                <div class="d-flex mt-3">
+                                <div class="d-flex mt-3 sign-up-form-info">
                                     <p class="mr-4">
                                         <span class="ti-check-box"></span>
                                         No long term commitment.
@@ -169,15 +183,15 @@
                                         No credit card required.
                                     </p>
                                 </div>
-                            </form>
 
-                            <div class="success-message d-none text-center"><h4>Your message has ben sent</h4></div>
-                            <div class="error-message d-none text-center"><h4>Your message not be sent</h4></div>
+
+                                <div class="success-message d-none text-center pb_120 pt_120"><h4>Your message has ben sent</h4></div>
+                                <div class="error-message d-none text-center pb_120 pt_120"><h4>Your message not be sent</h4></div>
 
                         </div>
 
                         <div class="text-after-form text-center text-lg-left mt-5">
-                            <p>*We’ll analyze 30% of all your keywords during the 14 day free trial period. The trial allows you to import 50% of your Google Ads accounts, every second campaign, with no limits 
+                            <p class="after-form-info d-none">*We’ll analyze 30% of all your keywords during the 14 day free trial period. The trial allows you to import 50% of your Google Ads accounts, every second campaign, with no limits 
                                 on functionality. </p>
                             <hr class="my-4">
                             <h4>Privacy Guarantee</h4>

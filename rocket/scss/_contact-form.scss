@@ -1,0 +1,357 @@
+// Contact form
+.contact-form {
+    margin-top: 60px;
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    input , textarea , select {
+        width: 100%;
+        height: 55px;
+        padding-left: 20px;
+        font-size: 18px;
+        color: #868686;
+        border-radius: 5px;
+        border: 1px solid #b6b6b6;
+
+            &::placeholder {
+                color: #868686;
+            }
+
+            &:focus {
+                box-shadow: none;
+                outline: none;
+            }
+
+    }
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        -ms-appearance: none; /* get rid of default appearance for IE8, 9 and 10*/
+        background-image: url(../img/main-img/icons/icon-input-select.png);
+        background-repeat: no-repeat;
+        background-position: calc(100% - 15px) center;
+
+        &:focus {
+            outline: none;
+        }
+
+    }
+
+    textarea {
+        padding-top: 15px;
+        resize: none;
+        height: 140px;
+        margin-bottom: -10px;
+        box-shadow: none;
+        outline: none;
+    }
+
+    button {
+        padding-top: 17px;
+        padding-bottom: 17px;
+    }
+
+    label {
+        font-size: 17px;
+        color: $default-text;
+        margin-bottom: 6px;
+    }
+
+    &.office-form {
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, .2);
+    }
+
+    &.intro-form {
+        position: relative;
+        margin-top: 100px;
+        z-index: 3;
+    }
+
+    &.signup-form {
+        input[type='email'] {
+            background-image: url(../img/main-img/icons/icon-mail.png);
+            background-repeat: no-repeat;
+            background-position: 18px center;
+            padding-left: 45px;
+        }
+    }
+
+}
+
+.form-page {
+    margin-bottom: 30px;
+    li {
+        position: relative;
+        margin-right: 130px;
+        cursor: pointer;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 111px;
+            height: 3px;
+            top: 50%;
+            left: 60px;
+            transform: translateY(-50%);
+            background: #d2e6f4;
+        }
+
+        &:last-child {
+            margin-right: 0;
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    p {
+        color: #1c83c6;
+        font-size: 25px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        display: inline-block;
+        background: #d2e6f4;
+        border-radius: 50%;
+        font-weight: 600;
+        position: relative;
+
+        span {
+            z-index: 1;
+            position: relative;
+        }
+
+        &.active {
+            color: #fff;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: #1c83c6;
+            }
+        }
+
+    }
+}
+
+.demo-intro-1 , .demo-intro-2 {
+    position: absolute;
+    z-index: 2;
+}
+
+.demo-intro-1 {
+    top: 44%;
+    left: -300px;
+}
+
+.demo-intro-2 {
+    right: -280px;
+    top: 0;
+}
+
+.checkbox {
+    font-size: 16px;
+    color: #929598;
+        input {
+            width: 17px;
+            height: 17px;
+            position: absolute;
+            transform: translateY(5px);
+            opacity: 0;
+            z-index: 2;
+            cursor: pointer;
+                &:checked + span {
+                    background: url(../img/main-img/icons/icon-checkbox.png) center no-repeat;
+                }
+        }
+        span {
+            width: 17px;
+            height: 17px;
+            display: inline-block;
+            cursor: pointer;
+            margin-right: 5px;
+            border: 1px solid #218acb;
+            border-radius: 5px;
+            transform: translateY(3px);
+        }
+        a {
+            color: #218acb;
+        }
+}
+
+.text-after-form {
+    p {
+        color: rgba(25, 35, 46, .6);
+        font-size: 17px;
+        &:last-child {
+            padding: 30px 0;
+            font-size: 15px;
+            span {
+                color: #23c7c9;
+            }
+        }
+    }
+}
+
+.signup-right {
+    height: 100%;
+    min-height: 100vh;
+    padding-left: 120px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &:after {
+        content: "";
+        position: absolute;
+        width: 50vw;
+        height: 100%;
+        top: 0;
+        right: -50vw;
+        background: #1d89c6;
+    }
+}
+
+.review-slider {
+    li {
+        margin-top: 100px;
+    }
+    p {
+        font-size: 20px;
+        line-height: 31px;
+        color: #fff;
+        position: relative;
+    }
+
+    .owl-dots {
+        margin-top: 30px;
+        text-align: right;
+
+        button.owl-dot {
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            margin: 0 5px;
+            border: 2px solid rgba(255, 255, 255, .3);
+                span {
+                    margin: 0;
+                    border: none;
+                    background: transparent;
+                }
+                &.active {
+                    width: 26px;
+                    background: #fff;
+                    border-radius: 10px;
+                }
+        }
+
+    }
+
+}
+
+    .review-text {
+        background: rgba(255, 255, 255, .1);
+        padding: 40px 20px 20px 20px;
+        border-radius: 15px;
+            &:after {
+                content: "";
+                position: absolute;
+                width: 66px;
+                height: 55px;
+                top: -25px;
+                left: 20px;
+                background: url(../img/main-img/icons/icon-review.png) no-repeat;
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                width: 48px;
+                height: 28px;
+                bottom: -28px;
+                left: 20px;
+                background: url(../img/main-img/review-img.png) no-repeat;
+            }
+    }
+
+    .author-review {
+        margin-top: 40px;
+        margin-left: 20px;
+        padding-left: 62px;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 52px;
+            height: 2px;
+            transform: translateY(-1px);
+            background: #23c7c9;
+        }
+    }
+
+.trusted {
+    margin-top: 120px;
+
+    &-title {
+        position: relative;
+        span {
+            background: #1d89c6;
+            z-index: 1;
+            position: relative;
+            padding: 0 30px;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            left: 0;
+            height: 1px;
+            background: rgba(255, 255, 255, .3);
+            top: 50%;
+        }
+    }
+
+    &-img {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img {
+            max-width: calc(100% / 4 - 30px);
+            //filter: contrast(0.3%);
+        }
+    }
+}
+
+.form-free-trial {
+    &.request-demo-form {
+        input {
+            height: 70px;
+            font-size: 20px;
+            border: none;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+            border: 1px solid transparent;
+
+            &::-webkit-input-placeholder , &::placeholder {
+                font-size: 20px;
+            }
+
+        }
+        button {
+            top: 5px;
+            right: 5px;
+            text-transform: uppercase;
+            background: $green-color;
+        }
+    }
+}

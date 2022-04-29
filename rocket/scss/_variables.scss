@@ -1,0 +1,53 @@
+/*=== fonts ====*/
+$pop: 'Poppins', sans-serif;
+$inter: 'Inter', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&family=Archivo:wght@500;600;700&display=swap');
+
+/* Vitalso variables */
+$work-sans: 'Work Sans', sans-serif;
+$Montserrat: 'Montserrat', sans-serif;
+$Archivo: 'Archivo', sans-serif;
+
+$default-text: #000000;
+$default-text-second: #292943;
+$primary-red: #ff516c;
+$dark: #000;
+$border-color: #a2a2a7;
+$primary-blue: #1d89c6;
+$secondary-gray: #686868;
+$secondary-light: #3a3a3a;
+
+/*===== color =====*/
+$h_dk:#051441;
+$p-color:#677294;
+$rating_star: #febf00;
+$default_blue: #3e5ae8;
+$default_black: #222d39;
+
+$white: #fff;
+$green-color: #1ab394;
+$blue-color: #1c83c6;
+$yellow-color: #f8ab59;
+$light-color: #868686;
+
+
+
+// Mixins
+@mixin transition($property: all, $duration: 400ms, $animate: linear, $delay:0s){
+    transition: $property $duration $animate $delay; 
+}
+
+// Placeholder Mixins
+
+@mixin placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+@mixin transform_time($total_time) {
+    -webkit-transition: $total_time;
+    transition: $total_time;
+}

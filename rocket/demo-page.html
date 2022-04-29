@@ -161,11 +161,11 @@
                                 <li><p class="mb-0"><span>2</span></p></li>
                             </ul>
 
-                            <form action="/php/demo-form.php" id="demo-form" class="form-demo">
-                                <div class="form-page-1">
+                            <div class="form-page-1">
+                                <form action="/php/demo-form.php" id="demo-form" class="form-demo">
                                     <div class="form-group">
                                         <label for="">Company name</label>
-                                        <input type="text" name="company-name" placeholder="">
+                                        <input type="text" name="company-name" placeholder="" required>
                                     </div>
                                     
                                     <div class="row">
@@ -176,7 +176,7 @@
                                         
                                         <div class="form-group col-sm-6 col-12">
                                             <label for="">Last name</label>
-                                            <input type="text" name="last-name" placeholder="">
+                                            <input type="text" name="last-name" placeholder="" required>
                                         </div>
                                     </div>
 
@@ -184,22 +184,31 @@
                                         <label for="">Email</label>
                                         <input type="email" name="email" placeholder="" required>
                                     </div>
-                                </div>
 
-                                <div class="form-page-2 d-none">
+                                    <div class="text-center pb-3">
+                                        <button type="submit" class="btn_get btn_hover bg-danger d-block w-100 text-white border-0 btn-trial shadow-none">Continue <i class="ti-angle-right"></i></button>
+                                    </div>
+
+                                </form>
+                            </div>
+
+                            <div class="form-page-2 d-none">
+                                <form action="/php/demo-form-2.php" id="demo-form-2" class="form-demo">
                                     <div class="form-group">
                                         <label for="">Street</label>
                                         <input type="text" name="street" placeholder="">
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="">Zip</label>
-                                        <input type="number" name="zip" placeholder="">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="">City</label>
-                                        <input type="text" name="city" placeholder="">
+                                    <div class="row">
+                                        <div class="form-group col-sm-6 col-12">
+                                            <label for="">Zip</label>
+                                            <input type="number" name="zip" placeholder="">
+                                        </div>
+                                        
+                                        <div class="form-group col-sm-6 col-12">
+                                            <label for="">City</label>
+                                            <input type="text" name="city" placeholder="">
+                                        </div>
                                     </div>
 
                                     <div class="form-group">
@@ -211,14 +220,13 @@
                                             <option value="">Australia</option>
                                         </select>
                                     </div>
-                                </div>
-    
-                                <div class="text-center pb-3">
-                                    <button type="button" class="btn_get btn_hover bg-success mb-3 w-100 text-white border-0 btn-trial shadow-none d-none"><i class="ti-angle-left"></i> Back</button>
-                                    <button type="button" class="btn_get btn_hover bg-danger d-block w-100 text-white border-0 btn-trial shadow-none">Continue <i class="ti-angle-right"></i></button>
-                                    <button type="submit" class="btn_get btn_hover bg-danger w-100 text-white border-0 btn-trial shadow-none d-none">Send <i class="ti-angle-right"></i></button>
-                                </div>
-                            </form>
+
+                                    <div class="text-center pb-3">
+                                        <button type="submit" class="btn_get btn_hover bg-danger d-block w-100 text-white border-0 btn-trial shadow-none">Continue <i class="ti-angle-right"></i></button>
+                                    </div>
+
+                                </form>
+                            </div>
 
                             <div class="success-message d-none pb_150 pt_150 text-center"><h4>Your message has ben sent</h4></div>
                             <div class="error-message d-none pb_150 pt_150 text-center"><h4>Your message not be sent</h4></div>
