@@ -4,6 +4,7 @@
 
     .form-group {
         margin-bottom: 25px;
+        position: relative;
     }
 
     input , textarea , select {
@@ -75,10 +76,16 @@
 
     &.signup-form {
         input[type='email'] {
-            background-image: url(../img/main-img/icons/icon-mail.png);
-            background-repeat: no-repeat;
-            background-position: 18px center;
             padding-left: 45px;
+
+            &:-webkit-autofill , &:-webkit-autofill:hover , &:-webkit-autofill:focus , &:-webkit-autofill:active {
+                -webkit-box-shadow: 0 0 0px 1000px white inset;
+            }
+
+        }
+
+        .input-icon {
+            top: 52%;
         }
     }
 
@@ -344,6 +351,10 @@
 
             &::-webkit-input-placeholder , &::placeholder {
                 font-size: 20px;
+            }
+
+            &:-webkit-autofill , &:-webkit-autofill:hover , &:-webkit-autofill:focus , &:-webkit-autofill:active {
+                -webkit-box-shadow: 0 0 0px 1000px white inset;
             }
 
         }

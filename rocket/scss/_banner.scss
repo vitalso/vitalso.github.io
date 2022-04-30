@@ -279,7 +279,7 @@
         padding-left: 45px;
         border: 1px solid $border-color;
         border-radius: 4px;
-        background-image: url(../img/main-img/icons/icon-mail.png);
+        //background-image: url(../img/main-img/icons/icon-mail.png);
         background-repeat: no-repeat;
         background-position: 18px center;
         background-color: #fff;
@@ -304,6 +304,18 @@
             }
 
     }
+
+}
+
+.input-icon {
+    display: block;
+    width: 20px;
+    height: 14px;
+    left: 19px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url(../img/main-img/icons/icon-mail.png);
 }
 
 /*================ software_banner_area css ================*/

@@ -2569,7 +2569,6 @@ a, .btn, button {
   padding-left: 45px;
   border: 1px solid #a2a2a7;
   border-radius: 4px;
-  background-image: url(../img/main-img/icons/icon-mail.png);
   background-repeat: no-repeat;
   background-position: 18px center;
   background-color: #fff;
@@ -2586,6 +2585,16 @@ a, .btn, button {
     outline: none; }
   .form-free-trial input:-webkit-autofill, .form-free-trial input:-webkit-autofill:hover, .form-free-trial input:-webkit-autofill:focus, .form-free-trial input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0px 1000px white inset; }
+
+.input-icon {
+  display: block;
+  width: 20px;
+  height: 14px;
+  left: 19px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url(../img/main-img/icons/icon-mail.png); }
 
 /*================ software_banner_area css ================*/
 .software_banner_area {
@@ -22287,7 +22296,8 @@ footer .f-logo img {
 .contact-form {
   margin-top: 60px; }
   .contact-form .form-group {
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    position: relative; }
   .contact-form input, .contact-form textarea, .contact-form select {
     width: 100%;
     height: 55px;
@@ -22335,10 +22345,11 @@ footer .f-logo img {
     margin-top: 100px;
     z-index: 3; }
   .contact-form.signup-form input[type='email'] {
-    background-image: url(../img/main-img/icons/icon-mail.png);
-    background-repeat: no-repeat;
-    background-position: 18px center;
     padding-left: 45px; }
+    .contact-form.signup-form input[type='email']:-webkit-autofill, .contact-form.signup-form input[type='email']:-webkit-autofill:hover, .contact-form.signup-form input[type='email']:-webkit-autofill:focus, .contact-form.signup-form input[type='email']:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0px 1000px white inset; }
+  .contact-form.signup-form .input-icon {
+    top: 52%; }
 
 .form-page {
   margin-bottom: 30px; }
@@ -22544,6 +22555,8 @@ footer .f-logo img {
   border: 1px solid transparent; }
   .form-free-trial.request-demo-form input::-webkit-input-placeholder, .form-free-trial.request-demo-form input::placeholder {
     font-size: 20px; }
+  .form-free-trial.request-demo-form input:-webkit-autofill, .form-free-trial.request-demo-form input:-webkit-autofill:hover, .form-free-trial.request-demo-form input:-webkit-autofill:focus, .form-free-trial.request-demo-form input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px white inset; }
 
 .form-free-trial.request-demo-form button {
   top: 5px;
