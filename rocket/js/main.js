@@ -2189,14 +2189,6 @@
 
     });
 
-    /*$('#signup-form button[type="button"]').on('click' , function(){
-        if ( $('#signup-form input[name="name"]').val() !== '' ) {
-            
-            $('#signup-form button[type="submit"]').removeClass('d-none');
-            $(this).addClass('d-none');
-        }
-    });*/
-
     // Dropdown language
     $('.dropdown-language .dropdown-menu a').on('click' , function(e){
         e.preventDefault();
@@ -2205,17 +2197,16 @@
         var langTitle = $(this).text();
 
         var pathname = window.location.pathname;
-        console.log(pathname);
+        var location = window.location.origin;
 
         $(this).closest('.dropdown').find('button').text(langTitle);
 
         if (lang == 'de') {
-            window.location.href = '/de' + pathname;
+            window.location.href = location + '/de' + pathname;
         } else {
-            window.location.href = '/index.html';
+            window.location.href = location + '/index.html';
         }
 
-        console.log(lang , langTitle);
     });
 
     // Toggle accordion
