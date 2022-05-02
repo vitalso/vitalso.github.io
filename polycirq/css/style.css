@@ -188,6 +188,9 @@ header {
   z-index: 2;
   width: 100%;
   top: 0; }
+  header.header-short {
+    position: absolute;
+    top: 0; }
   header .header-container {
     padding: 0 5%; }
   header .logo {
