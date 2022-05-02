@@ -2198,13 +2198,14 @@
 
         var pathname = window.location.pathname;
         var location = window.location.origin;
+        var fullLocation = window.location.href;
 
         $(this).closest('.dropdown').find('button').text(langTitle);
 
         if (lang == 'de') {
-            window.location.href = location + '/de' + pathname;
+            window.location.replace(location + '/de' + pathname);
         } else {
-            window.location.href = location + '/index.html';
+            window.location.replace( fullLocation.replace('/de' , ''));
         }
 
     });
