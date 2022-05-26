@@ -46,6 +46,9 @@ Table of Content:
 /*===== color =====*/
 /*====================================================*/
 /*====================================================*/
+html {
+  overflow-x: hidden; }
+
 a {
   text-decoration: none; }
   a:hover, a:focus {
@@ -2359,6 +2362,10 @@ a, .btn, button {
   height: 80px;
   justify-content: center;
   margin-right: 0; }
+
+@media screen and (max-width: 992px) {
+  .dropdown-language {
+    margin-top: 20px; } }
 
 /*====================================================*/
 /*====================================================*/
@@ -22253,6 +22260,9 @@ footer .f-logo img {
       margin-bottom: 10px; }
       .top-feature-tab .tab-icon img {
         max-height: 25px; }
+      .top-feature-tab .tab-icon svg {
+        max-width: 35px;
+        height: 35px; }
   .top-feature-content h3 {
     font-size: 30px; }
   .top-feature-content .top-list-features li:last-child {
