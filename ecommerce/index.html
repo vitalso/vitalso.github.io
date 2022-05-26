@@ -24,9 +24,9 @@
         </div>
       </div>
       <div class="header-container">
-        <div class="container">
+        <div class="container-fluid">
           <div class="row align-items-center">
-            <div class="col-lg-3 col-md-3 col-sm-1 col-1 d-flex">
+            <div class="col-lg-3 col-md-3 col-sm-1 col-1 d-flex align-items-center">
               <button class="toggle-nav"><span></span><span></span><span></span></button>
               <div class="logo d-none d-md-block"><a href="index.html"><img src="images/logo.svg" alt="logo"></a></div>
             </div>
@@ -51,7 +51,7 @@
               <ul class="nav header-nav align-items-center">
                 <li class="nav-item mb-0 d-none d-md-block">
                   <div class="tarrif text-white text-center">
-                    <p class="mb-0">Спробуйте</p><a class="badge bg-primary rounded-pill text-decoration-none" href="#">PREMIUM</a>
+                    <p class="mb-0">Спробуйте</p><a class="badge bg-warning rounded-pill text-decoration-none text-dark" href="#">PREMIUM</a>
                   </div>
                 </li>
                 <li class="nav-item mx-4 mb-0 d-none d-md-block"><a class="open-popup" href="#login-popup">
@@ -465,7 +465,7 @@
                 </svg></a>
             </div>
             <div class="form-row d-flex justify-content-between align-items-center">
-              <label class="d-flex" for="member">
+              <label class="d-flex custom-checkbox" for="member">
                 <input class="d-none" type="checkbox" id="member"><span></span>Запам’ятати мене
               </label><a class="font-weight-500" href="#">Нагадати пароль</a>
             </div>
@@ -545,8 +545,14 @@
       <div class="footer-app text-center text-md-start">
         <div class="container">
           <div class="align-items-center d-flex justify-content-center flex-column flex-md-row">
-            <h2 class="me-md-5 mb-0">ЗАВАНТАЖУЙТЕ НАШІ ДОДАТКИ</h2>
-            <div class="mt-md-0 mt-4"><a class="me-4" href="#"><img src="images/button-google-play-ua.png" alt="google-play"></a><a href="#"><img src="images/button-appstore-ua.png" alt="app-store"></a></div>
+            <h3 class="me-md-5 mb-0 text-uppercase">Будьте в курсі вигідних пропозицій!</h3>
+            <div class="subscribe-form">
+              <form class="d-block d-sm-flex" action="">
+                <input class="rounded-pill me-4" type="email" name="email" placeholder="Ел.пошта">
+                <button class="btn btn-primary text-dark rounded-pill" type="submit">Підписатися</button>
+              </form>
+            </div>
+            <div class="mt-md-0 mt-4 d-none"><a class="me-4" href="#"><img src="images/button-google-play-ua.png" alt="google-play"></a><a href="#"><img src="images/button-appstore-ua.png" alt="app-store"></a></div>
           </div>
         </div>
       </div>
