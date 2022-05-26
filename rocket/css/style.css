@@ -2594,7 +2594,8 @@ a, .btn, button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-image: url(../img/main-img/icons/icon-mail.png); }
+  background-image: url(../img/main-img/icons/icon-mail.png);
+  background-size: 100%; }
 
 /*================ software_banner_area css ================*/
 .software_banner_area {
@@ -3520,7 +3521,8 @@ a, .btn, button {
 
 .made-in-small {
   right: 0;
-  top: -20px; }
+  top: -20px;
+  max-width: 130px; }
 
 .transform-top-80 {
   position: relative;
@@ -5444,14 +5446,14 @@ ol.breadcrumb-list {
         }
     }*/ }
   .agency_service_item .icon {
-    width: auto;
-    height: auto;
     display: inline-block; }
     .agency_service_item .icon i {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
+    .agency_service_item .icon img {
+      max-width: 100%; }
   .agency_service_item p {
     display: inline-block; }
     .agency_service_item p i {
@@ -7661,8 +7663,11 @@ ol.breadcrumb-list {
     margin: 0 auto; }
     .agency_testimonial_info .testimonial_slider img {
       display: inline;
-      width: auto; }
+      width: auto;
+      object-fit: contain;
+      height: 45px; }
     .agency_testimonial_info .testimonial_slider .testimonial_item {
+      padding-left: 5px;
       z-index: 0;
       transition: all 0.2s linear; }
       .agency_testimonial_info .testimonial_slider .testimonial_item .author_img {
@@ -8856,6 +8861,13 @@ ol.breadcrumb-list {
 .transform-bottom-60 {
   margin-top: -64px;
   z-index: 9; }
+
+.review-rating img {
+  max-width: 16px; }
+
+.blockquote-icon {
+  object-fit: cover;
+  width: 40px !important; }
 
 /*====================================================*/
 /*====================================================*/
@@ -10277,11 +10289,12 @@ ol.breadcrumb-list {
   margin: 10px 0 30px 0;
   padding-left: 50px;
   background: url(../img/main-img/icons/icon-adress.png) left center no-repeat;
+  background-size: 30px;
   font-size: 18px;
   line-height: 30px; }
 
 .contact-adress + .footer-phone {
-  background: url(../img/main-img/icons/icon-phone-red.png) left center no-repeat; }
+  background: url(../img/main-img/icons/icon-phone-red.svg) left center no-repeat; }
   .contact-adress + .footer-phone a {
     color: #ff516c; }
 
@@ -22062,7 +22075,8 @@ footer .btn-trial {
 
 .footer-email {
   margin: 30px 0;
-  background: url(../img/main-img/icons/icon-email.png) left center no-repeat; }
+  background: url(../img/main-img/icons/icon-email.png) left center no-repeat;
+  background-size: 36px; }
   .footer-email a {
     font-size: 24px;
     text-decoration: none;
@@ -22158,8 +22172,13 @@ footer .f-logo img {
         border-top: 15px solid #ff516c;
         border-left: 17px solid transparent;
         border-right: 17px solid transparent; }
+      .top-feature-tab .nav-link.active svg {
+        fill: #fff; }
   .top-feature-tab .tab-icon {
-    margin-bottom: 20px; }
+    margin-bottom: 10px; }
+    .top-feature-tab .tab-icon svg {
+      max-width: 60px;
+      height: 60px; }
     .top-feature-tab .tab-icon img {
       display: inline-block;
       width: auto; }
@@ -22277,7 +22296,11 @@ footer .f-logo img {
   justify-content: center;
   font-size: 60px;
   color: #1d89c6;
-  transition: all .3s ease; }
+  transition: all .3s ease;
+  align-items: center; }
+  .get-item-icon img {
+    max-width: 50%;
+    width: 100%; }
 
 .get-item:hover .get-item-icon {
   background: #1d89c6;
@@ -22460,6 +22483,9 @@ footer .f-logo img {
     right: -50vw;
     background: #1d89c6; }
 
+.review-slider .owl-item {
+  margin-left: 5px; }
+
 .review-slider li {
   margin-top: 100px; }
 
@@ -22563,6 +22589,30 @@ footer .f-logo img {
   right: 5px;
   text-transform: uppercase;
   background: #1ab394; }
+
+.custom-checkbox {
+  width: 100%;
+  line-height: 1;
+  cursor: pointer;
+  text-align: center; }
+  .custom-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0; }
+    .custom-checkbox input[type="checkbox"] + span {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      border: 1px solid #1ab394; }
+    .custom-checkbox input[type="checkbox"]:checked + span {
+      background-color: #1ab394;
+      background-image: url(../img/main-img/icons/icon-checkbox-white.png);
+      background-repeat: no-repeat;
+      background-position: center; }
 
 .owl-carousel .owl-stage {
   display: flex;

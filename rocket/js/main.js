@@ -2218,4 +2218,9 @@
         });
     });
 
+    // Account table
+    $('.select-all-account').on('click' , function(){
+        $('#account-table').find('input[type="checkbox"]').prop('checked' , true);
+    });
+
 })(jQuery);
