@@ -581,7 +581,7 @@ h2.product-title {
   width: 125px;
   margin-right: 20px; }
   .product-thumbnail-image a {
-    height: 87px;
+    padding: 5px;
     line-height: 87px;
     margin-bottom: 25px; }
     .product-thumbnail-image a:last-child {
@@ -595,7 +595,10 @@ h2.product-title {
   flex: 1 0 0;
   padding: 50px;
   border: 1px solid rgba(166, 165, 165, 0.5);
-  border-radius: 25px; }
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .product-desc {
   padding: 20px 40px; }
@@ -680,7 +683,7 @@ h2.product-title {
     height: 30px; }
 
 .product-price {
-  margin-right: 50px;
+  margin-right: 30px;
   font-size: 48px;
   flex: 1 0 auto; }
   .product-price span {
@@ -715,9 +718,25 @@ h2.product-title {
   top: 50%;
   transform: translate(-50%, -50%); }
 
+.product-landing-desc {
+  flex-wrap: wrap; }
+  .product-landing-desc .desc-item {
+    flex: 0 0 20%;
+    margin-bottom: 70px; }
+    .product-landing-desc .desc-item b {
+      font-size: 20px;
+      font-weight: 600; }
+    .product-landing-desc .desc-item p {
+      margin: 20px 0 0 0; }
+
+.box-desc .col-md-6 .card {
+  max-height: 440px; }
+
 @media screen and (max-width: 992px) {
   .product-saler {
-    text-align: left; } }
+    text-align: left; }
+  .product-landing-desc .desc-item {
+    flex: 0 0 30%; } }
 
 @media screen and (max-width: 768px) {
   .card {
@@ -738,7 +757,11 @@ h2.product-title {
     justify-content: space-between;
     margin-top: 20px; }
     .product-thumbnail-image a {
-      width: 100px; } }
+      width: 100px;
+      max-height: 87px;
+      padding: 0 10px; }
+  .product-landing-desc .desc-item {
+    flex: 0 0 50%; } }
 
 @media screen and (max-width: 480px) {
   .breadcrumbs li {

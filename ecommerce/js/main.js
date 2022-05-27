@@ -95,4 +95,15 @@ $(function () {
 
   });
 
+  // Product gallery
+  $('.product-thumbnail-image a').on('click' , function(e){
+    e.preventDefault();
+
+    $('.product-cover-image img').attr('src' , $(this).find('img').attr('src'));
+
+    //var currentImage = $(this).find('img').attr('src');
+
+
+  });
+
 });
