@@ -22146,7 +22146,7 @@ footer .f-logo img {
 
 /*====================================================*/
 .top-features {
-  background: url(../img/main-img/tab-bg.png) 87% 500px no-repeat; }
+  background: url(../img/main-img/tab-bg.png) 87% 420px no-repeat; }
   .top-features.second-version {
     background: url(../img/main-img/tab-bg-2.png) 13% 470px no-repeat; }
 
@@ -22308,13 +22308,15 @@ footer .f-logo img {
   color: #1d89c6;
   transition: all .3s ease;
   align-items: center; }
-  .get-item-icon img {
-    max-width: 50%;
-    width: 100%; }
+  .get-item-icon svg {
+    width: 70px;
+    height: 70px;
+    fill: #1d89c6; }
 
 .get-item:hover .get-item-icon {
-  background: #1d89c6;
-  color: #fff; }
+  background: #1d89c6; }
+  .get-item:hover .get-item-icon svg {
+    fill: #fff; }
 
 .get-item:hover h3 {
   color: #1d89c6; }
