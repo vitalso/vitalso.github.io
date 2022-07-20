@@ -79,7 +79,7 @@ p {
 }
 .top-bar {
   padding: 14px 0;
-  background-image: url(/images/top-bar-bg-1.svg), url(/images/top-bar-bg-2.svg);
+  background-image: url(../images/top-bar-bg-1.svg), url(../images/top-bar-bg-2.svg);
   background-position: 7% top, 90% center;
   background-repeat: no-repeat, no-repeat;
   background-color: #FAC705;
