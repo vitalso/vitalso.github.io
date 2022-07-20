@@ -210,7 +210,7 @@ header {
   height: 100vh;
   max-height: 890px;
   padding: 0;
-  background: url(/images/hero-image.png) no-repeat;
+  background: url(../images/hero-image.png) no-repeat;
 }
 .hero-section h1 {
   color: #F6F1EA;
@@ -590,7 +590,7 @@ header {
   right: 5%;
   width: 970px;
   height: 540px;
-  background: url(/images/contact-image.svg) no-repeat;
+  background: url(../images/contact-image.svg) no-repeat;
   pointer-events: none;
 }
 
