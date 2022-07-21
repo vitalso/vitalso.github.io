@@ -1,5 +1,18 @@
 $(function () {
 
+  // Fixed header
+  var header = $('header');
+  var headerHeight = header.outerHeight();
+  $(window).scroll(function(){
+
+    if ( $(window).scrollTop() >= headerHeight ) {
+      header.addClass('fixed');
+    } else {
+      header.removeClass('fixed');
+    }
+
+  });
+
   // Blog slider on index page
   $('.blog-slider').slick({
     infinite: true,
@@ -40,7 +53,20 @@ $(function () {
     ]*/
   });
 
+  // Popup
+  $('.popup-video').magnificPopup({
+		disableOn: 700,
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+
+		fixedContentPos: false
+	});
+
   // AOS scroll animation
-  AOS.init();
+  AOS.init({
+    once: true
+  });
 
 });
