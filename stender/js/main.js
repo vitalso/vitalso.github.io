@@ -57,6 +57,25 @@ $(function () {
     ]
   });
 
+  $('.event-slider').slick({
+    infinite: true,
+    arrows: false,
+    dots: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    swipeToSlide: 1,
+    variableWidth: true,
+    touchThreshold: 7,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
   // History slider
   $('.history-slider').slick({
     infinite: true,
@@ -93,6 +112,26 @@ $(function () {
   // Scroll up
   $('.scroll-up').on('click' , function(){
     $("html, body").animate({ scrollTop: 0 } , 1000);
+  });
+
+  // Gallery
+  $('.gallery').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		mainClass: 'mfp-img-mobile',
+    gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+		},
+	});
+
+  // Map
+  $('.map .point').on('click' , function(){
+
+    $(this).toggleClass('open');
+    $(this).next('.point-desc').toggleClass('d-none');
+
   });
 
   // AOS scroll animation
