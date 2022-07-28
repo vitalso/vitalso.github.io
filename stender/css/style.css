@@ -12,6 +12,10 @@
   width: 100vw;
 }
 
+.mh-100vh {
+  min-height: 100vh;
+}
+
 .overflow-x-scroll {
   overflow-x: auto;
   -ms-overflow-style: none;
@@ -29,6 +33,10 @@
   font-weight: 600 !important;
 }
 
+.fw-medium {
+  font-weight: 500;
+}
+
 .blob-animation svg {
   max-width: 100%;
   height: auto;
@@ -39,6 +47,14 @@
 
 .mw-60 {
   max-width: 60%;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.fs-20 {
+  font-size: 20px;
 }
 
 @media screen and (max-width: 1400px) {
@@ -949,6 +965,10 @@ header .navbar-toggler[aria-expanded=true] svg.icon-close {
   color: #FDF5E6;
 }
 
+.btn-green {
+  background: #C4D473;
+}
+
 @media screen and (max-width: 768px) {
   .btn {
     font-size: 16px;
@@ -1782,6 +1802,10 @@ footer .social-nav .nav-item {
   background: #C4D473;
 }
 
+.wrap-point {
+  height: 100%;
+}
+
 .white-point {
   width: 65px;
   height: 65px;
@@ -1851,6 +1875,28 @@ footer .social-nav .nav-item {
     right: -9vw;
   }
 }
+@media screen and (max-width: 992px) {
+  .wrap-point {
+    min-height: 50vh;
+  }
+  .wrap-point .white-point:nth-child(1) {
+    transform: scale(0.7) rotate(-25deg);
+  }
+  .wrap-point .white-point:nth-child(2) {
+    transform: scale(0.7) rotate(15deg);
+  }
+  .wrap-point .white-point:nth-child(3) {
+    transform: scale(0.7) rotate(35deg);
+  }
+  .wrap-point .white-point span {
+    right: -28vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrap-point .white-point span {
+    right: -210px;
+  }
+}
 @media screen and (max-width: 576px) {
   .map .point-desc.orange {
     top: -17%;
@@ -1872,6 +1918,51 @@ footer .social-nav .nav-item {
     background-size: 30%;
   }
 }
+form .form-row {
+  margin-bottom: 12px;
+}
+form input, form select, form textarea {
+  width: 100%;
+  background-color: #fff;
+  height: 62px;
+  padding-left: 16px;
+  border-radius: 6px;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 160%;
+  letter-spacing: 0.15px;
+  color: rgba(54, 33, 42, 0.8);
+  border: 1px solid rgba(12, 12, 11, 0.2);
+  outline: none;
+  box-shadow: none;
+}
+form input::placeholder, form select::placeholder, form textarea::placeholder {
+  color: rgba(54, 33, 42, 0.4);
+}
+form input::-moz-placeholder, form select::-moz-placeholder, form textarea::-moz-placeholder {
+  color: rgba(54, 33, 42, 0.4);
+}
+form input:-ms-input-placeholder, form select:-ms-input-placeholder, form textarea:-ms-input-placeholder {
+  color: rgba(54, 33, 42, 0.4);
+}
+form input::-webkit-input-placeholder, form select::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
+  color: rgba(54, 33, 42, 0.4);
+}
+form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(../images/select-icon.svg);
+  background-position: 97% center;
+  background-repeat: no-repeat;
+  color: rgba(54, 33, 42, 0.4);
+}
+form textarea {
+  height: 170px;
+  padding-top: 15px;
+  resize: none;
+}
+
 * {
   margin: 0;
   padding: 0;
