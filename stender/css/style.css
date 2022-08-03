@@ -3,6 +3,10 @@
   background: #025939;
 }
 
+.bg-akcent-color {
+  background: #FAC705;
+}
+
 .list-icon svg {
   width: 20px;
   height: 20px;
@@ -37,14 +41,6 @@
   font-weight: 500;
 }
 
-.blob-animation svg {
-  max-width: 100%;
-  height: auto;
-}
-.blob-animation svg path {
-  fill: transparent !important;
-}
-
 .mw-60 {
   max-width: 60%;
 }
@@ -63,6 +59,10 @@
 
 .fs-22 {
   font-size: 22px;
+}
+
+.border-radius-6 {
+  border-radius: 6px;
 }
 
 @media screen and (max-width: 1400px) {
@@ -487,6 +487,9 @@ header .navbar-toggler[aria-expanded=true] svg.icon-close {
   top: 0;
   left: 0;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+.hero-section.bg-sustainabillity {
+  background: url(../images/bg-mission-section.png) center/cover no-repeat;
 }
 
 .scroll-down {
@@ -1233,6 +1236,15 @@ header .navbar-toggler[aria-expanded=true] svg.icon-close {
   min-height: 320px;
 }
 
+.card-label {
+  padding: 43px 25px;
+}
+.card-label h4 {
+  margin-bottom: 0;
+  font-size: 28px;
+  line-height: 38px;
+}
+
 @media screen and (max-width: 992px) {
   .card-item .card-desc {
     top: 14px;
@@ -1317,6 +1329,8 @@ header .navbar-toggler[aria-expanded=true] svg.icon-close {
 }
 
 .cover-title-video {
+  width: auto !important;
+  height: auto !important;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1819,6 +1833,60 @@ footer .social-nav .nav-item {
     left: 10%;
   }
 }
+@keyframes fadeLine {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes outLine {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+[data-aos=rotate-up].aos-animate {
+  transform: rotate(90deg);
+  opacity: 1;
+}
+
+.blob-animation {
+  max-width: 80%;
+  position: absolute;
+  top: -25%;
+  right: -30%;
+  animation: rotate 50s infinite linear;
+}
+.blob-animation svg {
+  max-width: 100%;
+  height: auto;
+  animation: scaleOn 10s infinite alternate;
+}
+.blob-animation svg #figure-1 path {
+  animation: fadeLine 3s infinite alternate;
+}
+.blob-animation svg #figure-2 path {
+  animation: outLine 3s infinite alternate;
+}
+
 .vacancy-nav {
   margin-bottom: 30px;
 }
@@ -1853,11 +1921,11 @@ footer .social-nav .nav-item {
   width: 12px;
   height: 20px;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%) rotate(-90deg);
+  top: 5px;
+  transform: rotate(-90deg);
 }
 .collapse-item a[aria-expanded=true] svg {
-  transform: translateY(-50%) rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .map {
@@ -2134,6 +2202,85 @@ form textarea {
   resize: none;
 }
 
+.roadmap-heading p, .roadmap-heading h2 {
+  position: relative;
+  z-index: 1;
+}
+.roadmap-heading:after {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  width: 100%;
+  max-width: 1196px;
+  height: 150px;
+  transform: translateX(-50%);
+  background: #FEFAF2;
+  border-radius: 12px;
+}
+
+.roadmap-title {
+  font-size: 48px;
+}
+
+.bg-top-figure {
+  padding-top: 312px;
+}
+.bg-top-figure:after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 312px;
+  background: url(../images/bg-top-figure.svg) center/cover no-repeat;
+}
+
+.roadmap-number {
+  max-width: 390px;
+  height: 380px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.roadmap-number span {
+  font-size: 108px;
+  font-family: "Mansalva";
+  background: linear-gradient(324.11deg, #C4D473 15.67%, #F29F05 84.6%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.roadmap-number-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/roadmap-number-border.svg) center/cover no-repeat;
+  pointer-events: none;
+  transform: rotate(-90deg);
+  opacity: 0;
+}
+.roadmap-number-border.double {
+  height: calc(100% + 10px);
+  background: url(../images/roadmap-number-border-double.svg) center/cover no-repeat;
+}
+
+.roadmap .row {
+  margin: 220px 0;
+}
+
+.roadmap-line {
+  position: absolute;
+  top: 2%;
+  left: 0;
+  transform: translateX(-4%);
+  max-width: 1266px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -2239,7 +2386,7 @@ section {
   background: rgba(196, 212, 115, 0.25);
 }
 
-.bg-green-secondary {
+.bg-green-secondary-dark {
   background: #055A3A;
 }
 
@@ -2249,6 +2396,10 @@ section {
 
 .light-border {
   border: 2px solid #F0F1D2;
+}
+
+.bg-blue {
+  background: #ADD0F0;
 }
 
 .bg-orange {
@@ -2292,6 +2443,10 @@ section {
   top: 0;
   left: 0;
   background: #fff;
+}
+
+.bg-was-torf {
+  background: url(../images/bg-was-torf.png) center/cover no-repeat;
 }
 
 @media screen and (max-width: 1200px) {
