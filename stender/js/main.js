@@ -3,6 +3,7 @@ $(function () {
   // Fixed header
   var header = $('header');
   var headerHeight = header.outerHeight();
+  
   $(window).scroll(function(){
 
     if ( $(window).scrollTop() >= headerHeight ) {
@@ -11,8 +12,26 @@ $(function () {
       header.removeClass('fixed');
     }
 
+    // Show roadmap line
+    var scrollAmount = $(window).scrollTop();
+    var roadmap = $('.roadmap');
+    if ( roadmap.length ) {
+      var offsetTop = roadmap.offset().top - 300;
+    }
+
+    // calculate the percentage the user has scrolled down the page
+    var scrollPercent = scrollAmount - offsetTop;
+
+    $('.roadmap-wrap-line').css({
+        height: scrollPercent + 'px'
+    });
+
     // Animate number
-    if ( $(window).scrollTop() > $('#number-section').offset().top / 2.5 ) {
+    var numberSection = $('#number-section');
+    if ( numberSection.length ) {
+      var numberTop = numberSection.offset().top / 2.5;
+    }
+    if ( $(window).scrollTop() > numberTop ) {
       count();
     }
 
