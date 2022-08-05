@@ -20,9 +20,13 @@ $(function () {
         if ( $(this).is(':checked') ) {
             $('.price-switcher .current-price').text(annuallyPrice);
             $('#change-plan').addClass('disabled').attr('href' , 'test.php?sub=annually');
+            $('.plan-switch').closest('.ibox-content').find('.alert.monthly').addClass('d-none');
+            $('.plan-switch').closest('.ibox-content').find('.alert.annually').removeClass('d-none');
         } else {
             $('.price-switcher .current-price').text(monthlyPrice);
             $('#change-plan').removeClass('disabled').attr('href' , 'test.php?sub=monthly');
+            $('.plan-switch').closest('.ibox-content').find('.alert.monthly').removeClass('d-none');
+            $('.plan-switch').closest('.ibox-content').find('.alert.annually').addClass('d-none');
         }
     });
 
