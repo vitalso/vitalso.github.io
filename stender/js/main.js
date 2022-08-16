@@ -3,6 +3,14 @@ $(function () {
   // Fixed header
   var header = $('header');
   var headerHeight = header.outerHeight();
+
+  $('.navbar-toggler').on('click' , function() {
+    //header.removeClass('fixed');
+    if ( header.is('.fixed') ) {
+      $('.logo').toggleClass('open-menu');
+    }
+    //$('html').toggleClass('overflow-hidden');
+  });
   
   $(window).scroll(function(){
 
@@ -29,7 +37,7 @@ $(function () {
     // Animate number
     var numberSection = $('#number-section');
     if ( numberSection.length ) {
-      var numberTop = numberSection.offset().top / 2.5;
+      var numberTop = numberSection.offset().top / 2;
     }
     if ( $(window).scrollTop() > numberTop ) {
       count();
@@ -47,7 +55,7 @@ $(function () {
         countNum: countTo
       },
       {
-        duration: 3000,
+        duration: 1000,
         easing:'linear',
         step:function() {
           $this.text(Math.floor(this.countNum));
@@ -62,7 +70,8 @@ $(function () {
   // Blog slider on index page
   $('.blog-slider').slick({
     infinite: true,
-    arrows: false,
+    arrows: true,
+    nextArrow:"<button type='button' class='blog-next'></button>",
     dots: true,
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -153,14 +162,18 @@ $(function () {
 
   });
 
+  // Member modal
+  $('.member-popup').magnificPopup({
+		type: 'inline',
+		preloader: false,
+		modal: false
+	});
+	$(document).on('click', '.popup-modal-dismiss', function (e) {
+		e.preventDefault();
+		$.magnificPopup.close();
+	});
+
   // Filter vacancy list
-  var $grid = $('.vacancy-grid').isotope({
-    // options
-    itemSelector: '.collapse-item',
-    layoutMode: 'fitRows',
-  });
-  
-  // change is-checked class on buttons
   var $buttonGroup = $('.vacancy-nav');
   $buttonGroup.on( 'click', 'a', function( event ) {
     event.preventDefault();
@@ -168,7 +181,12 @@ $(function () {
     var $button = $( event.currentTarget );
     $button.addClass('active');
     var filterValue = $button.attr('data-filter');
-    $grid.isotope({ filter: filterValue });
+    if ( filterValue == 'all' ) {
+      $('.vacancy-grid .collapse-item').removeClass("d-none");  
+    } else {
+      $('.vacancy-grid .collapse-item').addClass("d-none");
+      $('.vacancy-grid .collapse-item').filter('.'+filterValue).removeClass("d-none");
+    }
   });
 
   // AOS scroll animation
