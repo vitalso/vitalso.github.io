@@ -1999,26 +1999,15 @@ footer .social-nav .nav-item {
   position: absolute;
   top: -25%;
   right: -30%;
-  animation: rotate 50s infinite linear;
+  animation: rotate 100s infinite linear;
 }
-.blob-animation svg {
-  max-width: 100%;
-  height: auto;
-  animation: scaleOn 3s infinite alternate;
-}
-.blob-animation svg #figure-1 path {
-  animation: fadeLine 3s infinite alternate;
-}
-.blob-animation svg #figure-2 path {
-  animation: outLine 3s infinite alternate;
+.blob-animation img {
+  animation: scaleOn 5s infinite alternate;
 }
 .blob-animation.blob-left-side {
   top: -15%;
   right: auto;
   left: -10%;
-}
-.blob-animation.blob-left-side img {
-  animation: scaleOn 3s infinite alternate;
 }
 
 .vacancy-nav {
