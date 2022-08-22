@@ -1,0 +1,92 @@
+.pool
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		padding: 80px 47.5px
+	&__content
+		width: 100%
+		max-width: 555px
+	&__title
+		margin-bottom: 30px
+	&__text
+		margin-bottom: 30px
+	&__links
+		display: flex
+		ul
+			margin-bottom: -3px
+			flex-direction: column
+			margin-right: 32px
+			&:last-child
+				margin-right: 0
+		li
+			margin-bottom: 3px
+		a
+			font-weight: 500
+			font-size: 16px
+			line-height: 27px
+			color: var(--color-primary-blue)
+			border-color: var(--color-primary-blue)
+			&:hover
+				border-color: transparent
+	&__img
+		width: 320px
+		height: 320px
+		margin-left: auto
+		&.--hidden
+			display: none
+
+@media (max-width: 1280px)
+	.pool
+		&__content
+			max-width: 510px
+		&__img
+			width: 300px
+			height: 300px
+			margin-top: 100px
+
+@media (max-width: 1024px)
+	.pool
+		&__wrap
+			padding: 75px 67px
+			position: relative
+		&__content
+			max-width: 100%
+		&__title
+			margin-bottom: 40px
+			text-align: center
+		&__text
+			margin-bottom: 24px
+		&__links
+			max-width: 252px
+		&__img
+			display: none
+			width: 280px
+			height: 280px
+			margin: 0 auto 40px
+			&.--hidden
+				display: block
+
+@media (max-width: 767px)
+	.pool
+		&__title
+			// margin-bottom: 280px
+		&__img
+			// top: 180px
+			width: 230px
+			height: 230px
+		&__wrap
+			padding: 42px 0
+		&__content
+			max-width: 100%
+		&__title
+			margin-bottom: 30px
+		&__text
+			margin-bottom: 30px
+		&__links
+			li
+				margin-bottom: 2px
+		&__img
+			top: 150px
+			width: 200px
+			height: 200px

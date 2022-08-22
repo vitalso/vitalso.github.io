@@ -1,0 +1,19 @@
+include ../../pug/vars
+
+if pool
+	.pool.case
+		+breadcrumbs()
+		.pool__wrap
+			.pool__content
+				.pool__title.h2= pool.title
+				.pool__img.--hidden
+					img(src=pool.img alt="")
+				.pool__text.t2= pool.text
+				.pool__links
+					each ul in pool.links
+						ul
+							each item in ul
+								li
+									a(href="")=item
+			.pool__img
+				img(src=pool.img alt="")

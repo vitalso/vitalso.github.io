@@ -1,0 +1,85 @@
+include ../../pug/vars
+
+<section class="price-plan case">
+	h2(class="price-plan__headline")= pricePlanTitle ? pricePlanTitle : 'Pricing'
+	if pricePlanText
+		.price-plan__text.t2!= pricePlanText
+	.price-plan__btn-main.btn 3 Day Trial for $1.99 on any Plan!
+	<ul class="price-plan__list">
+		<li class="price-plan__item">
+			<h3 class="price-plan__label">Start Plan</h3>
+
+			<img aria-hidden="true" class="price-plan__image" src="uploads/homepage/price-plan/start-plan.webp" alt=""/>
+
+			<p class="price-plan__price">$360</p>
+			<p class="price-plan__price-month">40GB / month</p>
+			<p class="price-plan__per-gb">9.00$ / GB</p>
+			<button class="price-plan__button " data-target="#formModal">3 day trial for $1.99</button>
+		</li>
+		<li class="price-plan__item">
+			<h3 class="price-plan__label">Pro Plan</h3>
+			<img aria-hidden="true" class="price-plan__image" src="uploads/homepage/price-plan/pro-plan.webp" alt=""/>
+			<p class="price-plan__price">$700</p>
+			<p class="price-plan__price-month">100GB / month</p>
+			<p class="price-plan__per-gb">7.00$ / GB</p>
+			<button class="price-plan__button" data-target="#formModal">3 day trial for $1.99</button>
+		</li>
+		<li class="price-plan__item price-plan__item_red">
+			<span class="price-plan__ticket price-plan__ticket_red">Top</span>
+
+			<h3 class="price-plan__label">Plus Plan</h3>
+			<img aria-hidden="true" class="price-plan__image" src="uploads/homepage/price-plan/plus-plan.webp" alt=""/>
+			<p class="price-plan__price">$2,400</p>
+			<p class="price-plan__price-month">400GB / month</p>
+			<p class="price-plan__per-gb">6.00$ / GB</p>
+			<button class="price-plan__button" data-target="#formModal">3 day trial for $1.99</button>
+		</li>
+		<li class="price-plan__item">
+			<h3 class="price-plan__label">High Volume</h3>
+			<img aria-hidden="true" class="price-plan__image" src="uploads/homepage/price-plan/high-plan.webp" alt=""/>
+			<p class="price-plan__price">$3,500</p>
+			<p class="price-plan__price-month">1,000GB / month</p>
+			<p class="price-plan__per-gb">3.50$ / GB</p>
+			<button class="price-plan__button" data-target="#formModal">3 day trial for $1.99</button>
+		</li>
+		<li class="price-plan__item price-plan__item_hide">
+			<h3 class="price-plan__label">Bulk Volume</h3>
+			<img aria-hidden="true" class="price-plan__image" src="uploads/homepage/price-plan/bulk-plan.webp" alt=""/>
+			<p class="price-plan__price">$20,000</p>
+			<p class="price-plan__price-month">10,000GB / month</p>
+			<p class="price-plan__per-gb">2.00$ / GB</p>
+			<button class="price-plan__button" data-target="#formModal">3 day trial for $1.99</button>
+		</li>
+		<li class="price-plan__item price-plan__item_last">
+			<h3 class="price-plan__label">Pay as you Go</h3>
+			<img aria-hidden="true" class="price-plan__image" src="uploads/homepage/price-plan/pay-as-plan.webp" alt="">
+			<p class="price-plan__price">$360</p>
+			<p class="price-plan__price-month">Customized</p>
+			<p class="price-plan__per-gb">12.00$ / GB</p>
+			<button class="price-plan__button" data-target="#formModal">3 day trial for $1.99</button>
+		</li>
+
+		<li class="price-plan__item-enterprise">
+			<span class="price-plan__ticket price-plan__ticket_green">Best Value</span>
+			<div>
+				<h3 class="price-plan__item-enterprise-headline">ENTERPRISE</h3>
+				<div class="grid-row justify-content-start price-plan__wrap">
+					<img class="price-plan__item-enterprise-image" src="uploads/homepage/price-plan/bulk-plan.webp" alt=""/>
+					<div>
+						<span class="price-plan__small">From</span>
+						<p class="price-plan__price price-plan__price_large">$20,000<span> / month</span></p>
+					</div>
+				</div>
+
+				<button class="price-plan__item-enterprise-action" data-target="#formModal">Contact Us</button>
+			</div>
+
+			<ul class="price-plan__item-enterprise-list">
+				<li>N-day free trial</li>
+				<li>Dedicated IP’s </li>
+				<li>24/7 priority support</li>
+				<li>Custom monthly requests</li>
+			</ul>
+		</li>
+	</ul>
+</section>

@@ -1,0 +1,166 @@
+.g
+	display: flex
+	flex-direction: column
+	align-items: center
+	position: relative
+	padding-top: 100px
+	padding-bottom: 100px
+	&__cloud
+		position: absolute
+		&:nth-of-type(1)
+			max-width: 94px
+			top: 135px
+			left: calc(50% - var(--container-width) / 2 + 385px)
+		&:nth-of-type(2)
+			max-width: 52px
+			top: 280px
+			right: calc(50% - var(--container-width) / 2 + 327px)
+		&:nth-of-type(3)
+			top: 69px
+			left: calc(50% - var(--container-width) / 2 - 71px)
+		&:nth-of-type(4)
+			top: 257px
+			right: calc(50% - var(--container-width) / 2 - 150px)
+		&:nth-of-type(5)
+			top: 785px
+			left: calc(50% - var(--container-width) / 2 - 220px)
+		&:nth-of-type(6)
+			top: 1105px
+			right: calc(50% - var(--container-width) / 2 - 250px)
+		svg
+			max-width: 100%
+			max-height: 100%
+		&.--mob-hide
+			display: none
+	&__icon
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-bottom: 30px
+		&-user
+			margin-left: 60px
+	&__title
+		text-align: center
+		margin-bottom: 30px
+		max-width: 900px
+
+	&__text
+		max-width: 800px
+		margin-bottom: 30px
+		text-align: center
+
+	&__list
+		display: grid
+		gap: 60px 18px
+		grid-template-columns: repeat(4, 1fr)
+		padding: 60px
+		&.--w5
+			grid-template-columns: repeat(5, 1fr)
+			padding-left: 0
+			padding-right: 0
+
+	&__item
+		display: flex
+		flex-direction: column
+		align-items: center
+		&-icon
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 120px
+			height: 120px
+			border-radius: 50%
+			background: linear-gradient(180deg, #3D2AA4 0%, #291A7A 100%)
+			margin-bottom: 40px
+			img
+				&[src*="freedom"]
+					position: relative
+					right: -13px
+		&-title
+			font-weight: 600
+			font-size: 18px
+			line-height: 26px
+			text-align: center
+
+@media (max-width: 1024px)
+	.g
+		padding-top: 86px
+		padding-bottom: 79px
+		&__cloud
+			&:nth-of-type(1)
+				top: 65px
+			&:nth-of-type(2)
+				top: 203px
+				right: calc(50% - var(--container-width) / 2 + 387px)
+			&:nth-of-type(3)
+				top: 580px
+				right: auto
+				left: calc(50% - var(--container-width) / 2 + 187px)
+			&:nth-of-type(4)
+				top: 810px
+				right: calc(50% - var(--container-width) / 2 + 160px)
+			&:nth-of-type(5)
+				top: auto
+				bottom: 330px
+				left: calc(50% - var(--container-width) / 2 + 157px)
+			&:nth-of-type(6)
+				top: auto
+				bottom: 220px
+				right: calc(50% - var(--container-width) / 2 + 145px)
+			&.--mob-hide
+				display: block
+		&__title
+			max-width: 550px
+		&__list
+			grid-template-columns: repeat(2, 1fr)
+			&.--w5
+				padding: 50px 110px
+				grid-template-columns: repeat(2, 1fr)
+
+@media (max-width: 767px)
+	.g
+		&__list
+			&.--w5
+				padding: 50px 60px
+
+@media (max-width: 580px)
+	.g
+		padding-top: 80px
+		padding-bottom: 136px
+		&__cloud
+			&:nth-of-type(1)
+				top: 75px
+				left: calc(50% - var(--container-width) / 2 + 405px)
+			&:nth-of-type(2)
+				top: 190px
+				right: calc(50% - var(--container-width) / 2 + 417px)
+			&:nth-of-type(3)
+				top: 900px
+				left: calc(50% - var(--container-width) / 2 + 275px)
+				transform: scale(-1, 1)
+			&:nth-of-type(4)
+				top: 630px
+				right: calc(50% - var(--container-width) / 2 + 270px)
+			&:nth-of-type(5)
+				bottom: 630px
+				left: calc(50% - var(--container-width) / 2 + 280px)
+				transform: scale(-1, 1)
+			&:nth-of-type(6)
+				bottom: 370px
+				right: calc(50% - var(--container-width) / 2 + 265px)
+				transform: scale(-1, 1)
+		&__icon
+			margin-bottom: 40px
+		&__title
+			font-size: 24px
+			line-height: 30px
+			margin-bottom: 20px
+		&__text
+			margin-bottom: 40px
+		&__list
+			display: block
+			padding: 0
+		&__item
+			margin-bottom: 24px
+			&:last-of-type
+				margin-bottom: 0

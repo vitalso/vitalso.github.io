@@ -1,0 +1,80 @@
+extends ../../templates/default
+block vars
+	-
+		title = "Residential Proxies Pricing Plans - Infatica"
+		breadcrumbs = [
+			['Главная', 'index.html'],
+			[title]
+		]
+block content
+	-
+		intro = {
+			icon: {
+				el: 'uploads/money.svg'
+			},
+			desc: 'Buy The Cheapest Proxy | Infatica',
+			title: 'Residential Proxies Pricing Plans',
+			text: 'Looking to buy reliable and high-performance residential proxies? <br>Infatica is a market-leading provider that offers you mobile and <br>residential proxies at a great price.',
+		}
+	include ../../../blocks/intro/intro
+	+style('intro', 'blocks')
+
+	-
+		pricePlanTitle = 'Clear and customizable proxy pricing'
+		pricePlanText = 'Choose from a wide array of pricing plans to find the best fit for your <br>small-, medium-, or large scale project – or use the pay-as-you-go option <br>for even more control and customizability.'
+	include ../../../blocks/price-plan/price-plan
+	+style('price-plan', 'blocks')
+
+	include ../../../blocks/methods/methods
+	+style('methods', 'blocks')
+
+	-
+		gIcon = 2
+		gTitle = 'Why Choose Residential Proxies?'
+		gText = ''
+		gListClass = '--w5'
+		gList = [
+			['High bandwidth and thread count', 'infinite.svg'],
+			['Millions of rotating IP addresses', 'ip-location.svg'],
+			['More security with HTTPS', 'https.svg'],
+			['Wide country selection', 'earth-points.svg'],
+			['Easy-to-use and set up', 'easy.svg'],
+			['IPs from dedicated desktop and mobile devices', 'responsive.svg'],
+			['24/7 technical support', '24.svg'],
+			['Low response time', 'rocket.svg'],
+			['99,9% uptime', 'uptime-bg.svg'],
+			['Traffic monitoring dashboard', 'traffic.svg'],
+		]
+	include ../../../blocks/g/g
+	+style('g', 'blocks')
+
+	-
+		ipsTitle = 'Global Portfolio of Residential IPs'
+		ipsText = '<p>Residential IP addresses make web scraping and similar activities much easier: buy proxy IPs from residential zones, your connection is safer and more anonymous.'
+
+	include ../../../blocks/ips/ips
+	+style('ips', 'blocks')
+
+
+	include ../../../blocks/why/why
+	+style('why', 'blocks')
+
+	include ../../../blocks/guarantee/guarantee
+	+style('guarantee', 'blocks')
+
+	-
+		questions = [
+			["How much do proxies cost?", "Proxy pricing is usually calculated per gigabyte of traffic. Several additional factors like proxy type (datacenter IPs are typically cheaper) and monthly traffic volume also play a part. High-traffic proxy plans, for instance, can make each gigabyte as cheap as $2; in a regular pricing plan, gigabyte would cost $7."],
+			["Is it possible to buy proxies?", "Yes – you can find proxy providers all across the web. Their offers are likely to have key differences: Some providers offer the pay-as-you-go model that requires additional funds, while others will ask you to sign up for a monthly commitment. As for Infatica, we feature both of these proxies price models – and our pay-as-you-go plan is also customizable."],
+			["Why can some proxies be expensive?", "Proxy servers require constant upgrades and maintenance, which is reflected in the proxy cost. High-quality and white-listed IP addresses also make it costlier. Still, the cheapest proxies can charge as little as $1-2 per gigabyte. In certain scenarios, free proxies can be an OK alternative."],
+			["How much can sneaker proxies cost?", "A working sneaker copping setup needs datacenter proxies as a minimum, which can cost a few dollars per gigabyte. To encounter less CAPTCHAs and IP bans, use residential proxies – although the price is higher, your sneaker bot will work much faster."],
+			["How much money does a proxy server need?", "A cheap pre-set proxy server would cost $3-4 per month. However, its key features (bandwidth, threads, IP authorization, proxy pool, etc.) would be severely limited, which makes it less fitting for a large-scale project."],
+			["Are free proxies any good?", "Free proxies can be OK for testing purposes when you’re just starting out. Keep in mind that free proxies are often overburdened by the large number of network users, which leads to frequent CAPTCHAs and IP address blocks. More importantly, free proxies might sell your traffic to ad agencies or even try to steal your sensitive data."],
+			["Can I trust proxies with my data?", "<p>Yes, if your proxy provider upholds its ethical code, ensuring that the proxy server infrastructure can resist hacker attacks – and that the IP addresses are sourced from consenting users. </p><p>Conversely, sending sensitive information over free proxies may be dangerous as it may get intercepted by third parties.</p>"],
+			["Can smartphones use proxies?", "Yes – both iOS and Android devices can be configured to use and typically need the server’s dedicated domain and port to run. This gives way to mobile proxies – mobile devices that can route your traffic through the proxy network, which makes tasks like social media management much easier."],
+			["Are residential proxies safe to use?", "Yes – a residential proxy is simply a network utility which routes your traffic. Moreover, said traffic is typically encrypted and the proxy changes your IP type and/or address, which makes using the web with proxies more secure and private. Last but not least, a residential proxy will never cause a service like Google or Amazon to ban your account."],
+			["Where can I view my account balance and other details?", "Head over to your <a href='#'>Client Area</a> to view the traffic dashboard, proxy package details, billing page, quickstart video, and more."],
+			
+		]
+	include ../../../blocks/questions/questions
+	+style('questions', 'blocks')

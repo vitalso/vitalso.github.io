@@ -1,0 +1,19 @@
+.field__wrap {
+  position: relative;
+  cursor: text;
+}
+.field__area {
+  display: block;
+  font-size: 12px;
+  font-family: var(--font-Metropolis);
+  width: 100%;
+  overflow: hidden;
+  resize: none;
+  transition: 0.3s;
+}
+.field__area::placeholder {
+  opacity: 0;
+}
+.field.--error .field__area {
+  border-color: #f00;
+}

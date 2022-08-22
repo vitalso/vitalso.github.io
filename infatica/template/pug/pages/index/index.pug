@@ -1,0 +1,50 @@
+extends ../../templates/default
+block vars
+	-
+		title = "Home - Infatica"
+		breadcrumbs = [
+			['Главная', 'index.html'],
+			[title]
+		]
+block content
+	include ../../../blocks/services/services
+	+style('services', 'blocks')
+
+	include ../../../blocks/high-speed/high-speed
+	+style('high-speed', 'blocks')
+
+	include ../../../blocks/industrial/industrial
+	+style('industrial', 'blocks')
+
+	include ../../../blocks/advantage/advantage
+	+style('advantage', 'blocks')
+
+	include ../../../blocks/premium/premium
+	+style('premium', 'blocks')
+
+	include ../../../blocks/reviews/reviews
+	+style('reviews', 'blocks')
+	+script('reviews', 'blocks')
+
+	include ../../../blocks/price-plan/price-plan
+	+style('price-plan', 'blocks')
+
+	-
+		questions = [
+			["How much does a proxy cost?", "A Proxy or Proxy Server is an intermediary server, either software or hardware, that sits between an end user and a website or other service's server. Proxies are used for different reasons including efficiency, privacy, and security."],
+			["Can you buy proxies?", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, consequuntur corporis deleniti eligendi, est fuga fugit id nostrum nulla quia quisquam soluta veniam. Deserunt nobis odit quia recusandae ullam."],
+			["Why are proxies expensive?", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, consequuntur corporis deleniti eligendi, est fuga fugit id nostrum nulla quia quisquam soluta veniam. Deserunt nobis odit quia recusandae ullam."],
+			["How much are sneaker proxies?", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, consequuntur corporis deleniti eligendi, est fuga fugit id nostrum nulla quia quisquam soluta veniam. Deserunt nobis odit quia recusandae ullam."],
+			["Does a proxy server cost money?", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, consequuntur corporis deleniti eligendi, est fuga fugit id nostrum nulla quia quisquam soluta veniam. Deserunt nobis odit quia recusandae ullam."],
+			["Are free proxies worth it?", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, consequuntur corporis deleniti eligendi, est fuga fugit id nostrum nulla quia quisquam soluta veniam. Deserunt nobis odit quia recusandae ullam."],
+			["Can proxies be trusted?", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, consequuntur corporis deleniti eligendi, est fuga fugit id nostrum nulla quia quisquam soluta veniam. Deserunt nobis odit quia recusandae ullam."],
+			["How much are sneaker bot proxies?", "Proxies are servers or devices to which you can connect to mask your real IP address. When connected to a proxy, you reroute your traffic through it and pick up its IP. Therefore, when you reach the website you need, it won’t be able to see your real data. Instead, the destination server will see the IP of a proxy. Thus, you remain anonymous and safe."],
+		]
+	include ../../../blocks/questions/questions
+	+style('questions', 'blocks')
+
+	include ../../../blocks/feedback/feedback
+	+style('feedback', 'blocks')
+
+	include ../../../blocks/free-trial/free-trial
+	+style('free-trial', 'blocks')

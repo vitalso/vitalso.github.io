@@ -1,0 +1,136 @@
+.how {
+  z-index: 1;
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: #FFFFFF;
+}
+.how__sun {
+  width: 100%;
+  max-width: 494px;
+  margin: -188px auto -92px;
+  display: none;
+}
+.how__cloud {
+  position: absolute;
+}
+.how__cloud:nth-of-type(1) {
+  top: -140px;
+  right: calc(50% - var(--container-width) / 2 - 280px);
+}
+.how__cloud:nth-of-type(2) {
+  top: 395px;
+  left: calc(50% - var(--container-width) / 2 - 280px);
+}
+.how__cloud:nth-of-type(3) {
+  top: 867px;
+  right: calc(50% - var(--container-width) / 2 - 280px);
+}
+.how__cloud:nth-of-type(4) {
+  top: 1161px;
+  left: calc(50% - var(--container-width) / 2 - 280px);
+}
+.how__title {
+  margin-bottom: 20px;
+}
+.how__text {
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+.how__wrap {
+  padding: 60px;
+  background: #F1FAFE;
+  border: 3px solid #000000;
+  box-shadow: 12px 12px 0px #000000;
+  border-radius: 6px;
+}
+.how__list {
+  margin: 0 -20px -40px;
+}
+.how__item {
+  width: calc(50% - 40px);
+  margin: 0 20px 40px;
+}
+.how__item-icon {
+  display: inline-flex;
+  border-radius: 50%;
+  border: 20px solid #CFEAE7;
+  margin-bottom: 24px;
+}
+.how__item-title {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 1024px) {
+  .how {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .how__sun {
+    display: block;
+  }
+  .how__clouds {
+    display: none;
+  }
+  .how__title {
+    font-size: 40px;
+    line-height: 54px;
+    text-align: center;
+  }
+  .how__text {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .how__wrap {
+    padding: 58px 90px;
+  }
+  .how__list {
+    margin: 0;
+  }
+  .how__item {
+    width: 100%;
+    margin: 0 0 55px;
+  }
+  .how__item-icon {
+    margin-bottom: 22px;
+  }
+  .how__item:last-of-type {
+    margin: 0;
+  }
+}
+@media (max-width: 767px) {
+  .how__wrap {
+    padding: 40px;
+  }
+}
+@media (max-width: 580px) {
+  .how__sun {
+    margin: -170px auto -56px;
+  }
+  .how__title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .how__wrap {
+    padding: 60px 20px;
+    box-shadow: 8px 8px 0px #000000;
+  }
+  .how__item {
+    margin: 0 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .how__item-text {
+    text-align: center;
+  }
+  .how__item-title {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 15px;
+  }
+  .how__item-desc {
+    text-align: center;
+  }
+}

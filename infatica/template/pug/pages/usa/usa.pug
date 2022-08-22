@@ -1,0 +1,128 @@
+extends ../../templates/default
+block vars
+	-
+		title = "USA Proxies - Infatica"
+		breadcrumbs = [
+			['Main', 'index.html'],
+			['Locations', 'index.html'],
+			['North America', 'index.html'],
+			['USA Proxies'],
+		]
+block content
+	-
+		intro = {
+			icon: {
+				el: 'uploads/intro-usa.png'
+			},
+			desc: '',
+			title: 'USA Proxies (65129080 IPs)',
+			text: 'Infatica’s network of USA proxies offers a large pool of residential IP <br>addresses from major regions and cities all across the United States. <br>Engineered for reliability, performance, and anonymity, Infatica’s <br>American proxy servers are a great choice for data collection, SEO, <br>ecommerce, and many other projects.',
+			btns: [
+				{
+					cls: '--green --lg',
+					title: 'Free Trial'
+				},
+				{
+					cls: '--b-white --lg',
+					title: 'Contact Sales'
+				},
+			]
+		}
+	include ../../../blocks/intro/intro
+	+style('intro', 'blocks')
+
+	-
+		pool = {
+			title: 'Huge pool of USA Proxies',
+			text: 'Access websites and other online services via authentic residential IP addresses from cities like New York, Los Angeles, Chicago, Houston, Phoenix, Philadelphia, San Antonio, San Diego, Dallas, San Jose, and more.',
+			img: 'uploads/pool-usa.svg',
+			links: [
+				[
+					'New York',
+					'Boston',
+					'Sacramento',
+					'Los Angeles',
+					'Utah',
+					'Washington',
+					'New Jersey',
+				],
+				[
+					'Atlanta',
+					'Houston',
+					'Minesota',
+					'Portland',
+					'Philadelphia',
+					'Orlando',
+					'Miami',
+				]
+			]
+		}
+	include ../../../blocks/pool/pool
+	+style('pool', 'blocks')
+
+	-
+		real = {
+			title: 'Residential proxy with IP address of Real People',
+			text: 'Infatica’s proxy list comprises large amounts of residential IP addresses. All addresses are sourced through real devices, including desktop computers and smartphones.',
+			img: 'uploads/real-usa.svg'
+		}
+	include ../../../blocks/real/real
+	+style('real', 'blocks')
+
+
+	-
+		blocked = {
+			title: 'Visit any American website without being blocked',
+			text: 'For many businesses and products, entering local markets is key. If you’re targeting an American audience or working with geo-restricted content, use Infatica’s residential proxy server to acquire web data in the United States: Collect public data, access local websites, perform local SEO, monitor your competitors, and more.',
+			img: 'uploads/blocked-usa.png'
+
+		}
+	include ../../../blocks/blocked/blocked
+	+style('blocked', 'blocks')
+
+
+
+	-
+		work = {
+			title: 'How USA Proxies Work',
+			subtitle: 'USA Proxies',
+			text: 'A residential proxy server is an intermediary between you and your target website. It masks your original <a href="">IP address</a>, providing a new residential one. This new IP address is issued by the given country’s ISP, which helps you appear as a regular user from the United States. This makes local data collection and other activities much easier, with the added benefits of improved privacy and security.',
+			img: 'uploads/usa-round.svg'
+		}
+	include ../../../blocks/work/work
+	+style('work', 'blocks')
+
+	include ../../../blocks/vs/vs
+	+style('vs', 'blocks')
+
+	- should__title = 'Why You Should Choose Infatica USA proxies'
+	include ../../../blocks/should/should
+	+style('should', 'blocks')
+
+	include ../../../blocks/cases/cases
+	+style('cases', 'blocks')
+
+	include ../../../blocks/reviews/reviews
+	+style('reviews', 'blocks')
+	+script('reviews', 'blocks')
+
+	- pricePlanText = 'We’re offering a set of pricing plans with varying parameters like IP address count and channel bandwidth – or use our flexible pricing option to fine-tune the parameters yourself. Choose the plan that fits your project’s needs best:'
+	include ../../../blocks/price-plan/price-plan
+	+style('price-plan', 'blocks')
+
+	include ../../../blocks/trial/trial
+	+style('trial', 'blocks')
+
+	-
+		ipsTitle = 'Other Countries' 
+	include ../../../blocks/ips/ips
+	+style('ips', 'blocks')
+
+	-
+		questions = [
+			["What can I use USA proxies for?", "US proxies are invaluable in any project involving data collection. A few good examples of such products include price aggregators, search engine optimization software, brand protection measures, marketing strategies, academic research initiatives, uptime and performance testing suites, corporate data protection measures, and more."],
+			["Are free American proxies any good?", "You can give them a try, but generally, you shouldn’t expect a fast proxy list from this type of service: They can be OK for a quick geo-restriction bypass, but any serious activity (e.g. web scraping, SEO, marketing, ecommerce, etc.) is impossible with free proxies because anti-scraping systems will have an easy time detecting them and blocking you."],
+			["Can I use a proxy in browsers?", "Yes: One way to install and use any proxy type involves a proxy management tool – these are typically browser extensions which can manage your proxy configurations via an easy-to-use graphical interface. Any major browser (e.g. Google Chrome, Microsoft Edge, Mozilla Firefox, etc.) support a wide variety of proxy management tools."],
+		]
+	include ../../../blocks/questions/questions
+	+style('questions', 'blocks')

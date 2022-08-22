@@ -1,0 +1,135 @@
+extends ../../templates/default
+block vars
+	-
+		title = "UK Proxies - Infatica"
+		breadcrumbs = [
+			['Main', 'index.html'],
+			['Locations', 'index.html'],
+			['Europe', 'index.html'],
+			['UK Proxies'],
+		]
+block content
+	-
+		intro = {
+			icon: {
+				el: 'uploads/intro-uk.png'
+			},
+			desc: '',
+			title: 'UK Proxies (100000 IPs)',
+			text: "Do you need a proxy service that offers UK IP addresses? Look no further than <br>Infatica! We have a large selection of proxies available, and our proxies are fast and <br>anonymous. Our prices are also very reasonable, making us the perfect choice for <br>businesses and individuals looking to expand their reach in the United Kingdom. <br>Contact us today to learn more about our services!",
+			btns: [
+				{
+					cls: '--green --lg',
+					title: 'Free Trial'
+				},
+				{
+					cls: '--b-white --lg',
+					title: 'Contact Sales'
+				},
+			]
+		}
+	include ../../../blocks/intro/intro
+	+style('intro', 'blocks')
+
+	-
+		pool = {
+			title: 'Huge pool of UK proxies',
+			text: 'We also have a large pool of UK proxies, with over 100,000 IP addresses. You can buy as many IPs as you want without any hassle. We have both static and rotating proxies so that you can choose the one that best fits your needs. Gain access to websites and other online services via authentic residential IP addresses from cities like:',
+			img: 'uploads/pool-uk.svg',
+			links: [
+				[
+					'London',
+					'Birmingham',
+					'Leeds',
+					'Glasgow',
+					'Sheffield',
+					'Bradford	',
+					'Liverpool',
+				],
+				[
+					'Edinburgh',
+					'Manchester',
+					'Bristol',
+					'Kirklees',
+					'Fife',
+					'Wirral',
+					'North Lanarkshire',
+				],
+				[
+					'Wakefield',
+					'Cardiff',
+					'Dudley',
+					'Wigan',
+				]
+			]
+		}
+	include ../../../blocks/pool/pool
+	+style('pool', 'blocks')
+
+	-
+		real = {
+			title: 'Residential Proxies with IP Address of Real People',
+			text: '<p>All of our proxies come with residential IPs. This means that they come from real people living in the country. With Infatica, you can be sure that your online activity is backed by a real person in the United Kingdom.</p><p>Get in touch with us to learn more about our services and how we can help you achieve your goals. We look forward to hearing from you soon. Infatica is the leading provider of UK proxies, and we are confident that we can meet your needs. Contact us today!</p>',
+			img: 'uploads/real-uk.svg'
+		}
+	include ../../../blocks/real/real
+	+style('real', 'blocks')
+
+
+	-
+		blocked = {
+			title: 'Visit any UK Website without being Blocked',
+			text: "If you are trying to access a British website from outside the country, you will likely be blocked. However, with Infatica's UK proxies, you can bypass these restrictions and visit any site you want. Whether you're trying to access geo-restricted content or simply want to browse the web anonymously, our proxies will give you the freedom and flexibility you need. <br>Don't wait any longer, order UK proxies from Infatica today and get access to the data you need. We offer the best prices and the most reliable service in the industry. Contact us today to learn more about our services and how we can help you achieve your goals. Infatica is the leading provider of UK proxies, and we are confident that we can meet your needs. Contact us today!",
+			img: 'uploads/blocked-uk.png'
+		}
+	include ../../../blocks/blocked/blocked
+	+style('blocked', 'blocks')
+
+
+
+	-
+		work = {
+			title: 'How Proxies Work',
+			subtitle: 'UK Proxies',
+			text: 'A residential proxy server is an intermediary between you and your target website. It masks your original <a href="">IP address</a>, providing a new residential one. This new IP address is issued by the given country’s ISP, which helps you appear as a regular user from India. This makes local data collection and other activities much easier, with the added benefits of improved privacy and security.',
+			img: 'uploads/uk-round.svg'
+		}
+	include ../../../blocks/work/work
+	+style('work', 'blocks')
+
+	include ../../../blocks/vs/vs
+	+style('vs', 'blocks')
+
+	- should__title = 'Why you should choose Infatica  UK proxies'
+	include ../../../blocks/should/should
+	+style('should', 'blocks')
+
+	include ../../../blocks/cases/cases
+	+style('cases', 'blocks')
+
+	include ../../../blocks/reviews/reviews
+	+style('reviews', 'blocks')
+	+script('reviews', 'blocks')
+
+	- pricePlanText = 'We’re offering a set of pricing plans with varying parameters like IP address count and channel bandwidth – or use our flexible pricing option to fine-tune the parameters yourself. Choose the plan that fits your project’s needs best:'
+	include ../../../blocks/price-plan/price-plan
+	+style('price-plan', 'blocks')
+
+	include ../../../blocks/trial/trial
+	+style('trial', 'blocks')
+
+	-
+		ipsTitle = 'Other Countries' 
+	include ../../../blocks/ips/ips
+	+style('ips', 'blocks')
+
+	-
+		questions = [
+			["What is a UK proxy?", "A UK proxy is a United Kingdom IP address provided by a proxy server. In turn, the proxy server obtains said IP address from a UK resident. Using a UK proxy makes interacting with British websites and services (e.g. collecting data from them) much easier."],
+			["How can I get UK IP?", "You can get a UK IP address by using a proxy server, VPN, or by physically being in the United Kingdom."],
+			["Which type of proxy is best?", "There are different proxy types for different goals: for instance, residential proxies (less detectable) vs. data center ones (cheaper); static proxies (better for services that need a static IP) vs. rotating ones (better for data collection.) The best proxy type is the one that helps you with the least amount of effort."],
+			["What is the best proxy service provider?", "”The best” may be hard to define – for starters, you may want to look into the provider’s uptime statistics and IP address pool. More importantly, the provider must be ethical, i.e. source IP addresses via white-hat methods."],
+			["Are residential proxies legal in the UK?", "Yes, residential proxies are legal in the United Kingdom: Like VPNs, proxies are simply networking utilities – they’re used to enhance online privacy and security, which isn’t a crime in any country."],
+		]
+	include ../../../blocks/questions/questions
+	+style('questions', 'blocks')

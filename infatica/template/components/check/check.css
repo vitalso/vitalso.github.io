@@ -1,0 +1,7 @@
+.check {
+  display: flex;
+  cursor: pointer;
+}
+.check__input {
+  display: none;
+}

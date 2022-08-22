@@ -1,0 +1,7 @@
+.tog__body {
+  height: 0;
+}
+
+.tog.--show .tog__body {
+  height: auto;
+}

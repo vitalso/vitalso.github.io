@@ -1,0 +1,133 @@
+@import fonts
+@import vars
+@import reset
+@import grid
+
+@import ../components/button/button
+@import ../components/btn/btn
+// @import ../components/field/field
+// @import ../components/check/check
+// @import ../components/select/select
+// @import ../components/popup/popup
+// // @import ../components/tabs/tabs
+// // @import ../components/popup/popup
+// // @import ../components/slider/slider
+@import ../components/tog/tog
+
+@import ../components/accordion/accordion
+
+@import typography
+
+.overflow-disable
+	overflow: hidden
+
+.custom-swiper-button
+	position: absolute
+	top: 50%
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 30px
+	height: 30px
+	background-color: transparent
+	border: 1px solid var(--color-gray05)
+	border-radius: 50%
+	transform: translateY(-50%)
+	transition: .2s
+	z-index: 1
+
+.swiper-button-disabled.custom-swiper-button
+	cursor: default
+
+.custom-swiper-button-icon
+	width: 24px
+	height: 24px
+	fill: var(--color-gray05)
+
+.custom-swiper-button-icon-prev
+	transform: rotate(180deg)
+
+/* Carousel pagination */
+.custom-swiper-pagination
+	display: grid
+	grid-auto-flow: column
+	align-items: center
+	justify-content: center
+	grid-column-gap: 6px
+	z-index: 10
+
+.custom-swiper-pagination .swiper-pagination-bullet
+	margin: 0 !important
+	width: 4px
+	height: 4px
+	background-color: var(--color-white)
+	border-radius: 50%
+	cursor: pointer
+	opacity: 1
+	transition: .2s
+
+.custom-swiper-pagination .swiper-pagination-bullet-active
+	background-color: var(--color-green03)
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after, .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after
+	display: none
+
+.breadcrumbs
+	padding-top: 45px
+	padding-bottom: 45px
+	&__list
+		display: flex
+		flex-wrap: wrap
+	&__item
+		position: relative
+		font-size: 16px
+		line-height: 16px
+		font-weight: 500
+		margin-right: 32px
+		&:last-child
+			margin-right: 0
+			&::after
+				display: none
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			right: -18px
+			width: 6px
+			height: 9px
+			transform: translateY(-50%)
+			background: url('../../uploads/chevron.svg') no-repeat center
+	&__text
+		color: #8F8F9F
+
+	&__link
+		&:hover
+			border-color: var(--color-black04)
+
+.text-color-blue
+	color: var(--color-secondary)
+
+.text-color-green
+	color: var(--color-green03)
+
+.modal
+	display: none !important
+@media (max-width: 1024px)
+	.breadcrumbs
+		padding-top: 42px
+		&__list
+			justify-content: center
+
+@media (max-width: 767px)
+	.breadcrumbs
+		display: none
+
+// Additional clases
+.d-flex
+	display: flex !important
+
+.justify-content-end
+	justify-content: flex-end
+
+.me-auto
+	margin-right: auto

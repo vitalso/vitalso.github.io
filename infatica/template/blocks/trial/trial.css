@@ -1,0 +1,123 @@
+.trial {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-top: 1px solid #DDDDE8;
+}
+.trial__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 970px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.trial__title {
+  margin-bottom: 20px;
+}
+.trial__text {
+  max-width: 830px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+.trial__list {
+  width: 100%;
+  justify-content: space-between;
+}
+.trial__item {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+}
+.trial__item-count {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  color: #fff;
+  background: #8D21EF;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  border: 15px solid #F7F0FE;
+  padding-top: 1px;
+}
+.trial__item-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+.trial__item:after {
+  content: "";
+  position: absolute;
+  right: -145px;
+  top: 40px;
+  width: 230px;
+  height: 1px;
+  background: #8D21EF;
+}
+.trial__item:last-child:after {
+  display: none;
+}
+.trial__btn {
+  margin-top: 40px;
+  padding-left: 56px;
+  padding-right: 56px;
+}
+
+@media (max-width: 1024px) {
+  .trial {
+    padding-top: 76px;
+  }
+  .trial__text {
+    max-width: 640px;
+    margin-bottom: 40px;
+  }
+  .trial__list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .trial__item {
+    margin-bottom: 99px;
+  }
+  .trial__item:after {
+    z-index: 1;
+    width: 6px;
+    height: 63px;
+    top: 134px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url("../../../uploads/divider.svg") no-repeat;
+  }
+  .trial__item:last-of-type {
+    margin-bottom: 0;
+  }
+  .trial__item-count {
+    margin: 0 auto 20px;
+  }
+  .trial__item-title {
+    font-size: 12px;
+  }
+  .trial__btn.--lg {
+    height: 75px;
+  }
+}
+@media (max-width: 580px) {
+  .trial {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-top: none;
+  }
+  .trial__title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .trial__btn {
+    margin-top: 50px;
+  }
+}

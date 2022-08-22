@@ -1,0 +1,90 @@
+extends ../../templates/default
+block vars
+	-
+		title = "Mobile Proxies - Infatica"
+		breadcrumbs = [
+			['Главная', 'index.html'],
+			[title]
+		]
+block content
+	-
+		intro = {
+			icon: {
+				el: 'uploads/intro-phone.svg'
+			},
+			desc: 'Buy 3G and 4G Mobile Proxy With Free Trial',
+			title: 'Mobile Proxies',
+			text: 'Looking for reliable mobile proxies? Infatica’s 4G mobile proxies are optimized for reliability and performance – the perfect tool for SEO, data collection, and more.',
+			btns: [
+				{
+					cls: '--green --lg',
+					title: 'Free Trial'
+				},
+				{
+					cls: '--b-white --lg',
+					title: 'Contact Sales'
+				},
+			]
+		}
+	include ../../../blocks/intro/intro
+	+style('intro', 'blocks')
+
+	include ../../../blocks/mobile/mobile
+	+style('mobile', 'blocks')
+
+
+	-
+		gIcon = 1
+		gTitle = 'Enjoy using Infatica’s mobile proxies, fast real-peer 3G/4G IPs from around the world'
+		gText = 'With high targeting precision and a large IP address pool, our dedicated mobile proxy is truly global. Enter any local market and bypass any geo-restriction.'
+		gList = [
+			['Over 1 million mobile IPs', 'ip-location.svg'],
+			['Fastest response time', 'rocket.svg'],
+			['Privacy & anonymity', 'anynumous.svg'],
+			['Honest approach', 'deal.svg'],
+			['24/7 technical support', '24.svg'],
+			['5 USA locations', 'usa-locations.svg'],
+			['Complete freedom', 'freedom.svg'],
+			['Real 3G/4G connections', '3g4g.svg'],
+		]
+	include ../../../blocks/g/g
+	+style('g', 'blocks')
+
+	include ../../../blocks/how/how
+	+style('how', 'blocks')
+
+	-
+		ipsCls = '--pt --map-md --tal'
+		ipsIcon = true
+		ipsTitle = '1M+ Mobile Residential IPs'
+		ipsText = '<p>Our fast LTE proxy pool offers a wide variety of country, city, carrier, and ASN combos. This provides powerful geo-targeting from countless dedicated mobile devices with residential IPs. <br>The mobile web is transforming today’s digital landscape, with new companies emerging and building innovative products. A residential IP in every major city is the right tool for introducing something new:</p><ul><li>Create marketing strategies, </li><li>Perform search engine optimization, </li><li>Start an ecommerce business, </li><li>And more.</li></ul>'
+
+	include ../../../blocks/ips/ips
+	+style('ips', 'blocks')
+
+	include ../../../blocks/reviews/reviews
+	+style('reviews', 'blocks')
+	+script('reviews', 'blocks')
+
+	- pricePlanText = 'We’re offering several pricing plans with varying parameters like IP address count and channel bandwidth. Choose the plan that fits your project’s needs best:'
+	include ../../../blocks/price-plan/price-plan
+	+style('price-plan', 'blocks')
+
+	include ../../../blocks/trial/trial
+	+style('trial', 'blocks')
+
+	-
+		questions = [
+			["What is a mobile proxy?", "Mobile proxies are devices with web connectivity capabilities – for instance, smartphones or tablets. They have mobile residential IPs issued by local carriers, which helps them avoid anti-bot systems like Cloudflare. Proxy providers (like Infatica) integrate these devices into a network, creating a mobile proxy."],
+			["Why are mobile proxies so useful?", "Being a part of a proxy network, they allow users to route their internet connection through them to perform various tasks, all the while appearing as a genuine human user during browsing. This makes it possible to work with the mobile web at scale – a good example of that is data collection."],
+			["What is different about 4G mobile proxies?", "These are mobile proxies that utilize the 4G broadband cellular technology. Succeeding 3G, 4G offers higher connection speed (up to 100 Mbit/s) and better coverage – these factors help to increase the proxy network’s overall performance and uptime."],
+			["Where can I buy mobile proxies?", "The optimal approach is contacting a proxy provider (like Infatica), which will be able to tailor the offer for your needs. Another option is renting a VPS to set up a homemade proxy server and merging several mobile devices into a proxy network – but this will provide poorer experience and performance."],
+			["Do mobile proxies offer privacy?", "Public mobile proxies are typically free, attracting large numbers of users whom mobile proxy operators cannot vet. In this case, privacy is a component you have to sacrifice. Infatica’s private mobile proxy, on the other hand, is white-listed and ethically-sourced, which offers excellent privacy and anonymity."],
+			["Are mobile IP addresses different?", "Both desktop and mobile internet use the same connectivity standards, so their basic functionality and IP addresses are essentially the same. When customers choose a mobile proxy plan in particular, they’re looking for mobile-specific features (e.g. mobile search engine results.)"],
+			["What is a residential IP address?", "This is an IP address issued by a local ISP or mobile carrier. A mobile residential network helps you see the mobile web like a real user. Proxy providers like Infatica can help you obtain a residential mobile IP in every major city all across the world."],
+			["Can providers offer unlimited mobile proxy?", "An unlimited proxy access plan wouldn’t be cost-effective, so providers typically offer a basic set of features available for each plan (e.g. rotating proxy pools or geo-targeting) and additional customizable parameters (e.g. amount of included IP address and channel bandwidth.)"],
+			["Can mobile proxies bypass CAPTCHAs?", "Anti-scraping systems can detect web crawlers via IP addresses, among other things. To solve this problem, data collection software can use mobile proxies to make its requests appear human-like. Noticing IPs of mobile carriers, these systems assume that they’re dealing with a genuine user and avoid throwing them a CAPTCHA."],
+			["Can mobile proxies bypass web restrictions?", "Yes: They mask your IP address, effectively changing the country you’re surfing the web from. Most web restrictions are geographic (i.e. prohibiting users from certain countries from accessing the given content.) With a new IP address, you can visit blocked sites without any hassle."],
+		]
+	include ../../../blocks/questions/questions
+	+style('questions', 'blocks')

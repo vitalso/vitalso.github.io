@@ -1,0 +1,17 @@
+include ../../pug/vars
+
+.intro.case(style="background-image: url('uploads/intro-bg.png')")
+	.intro__wrap
+		if intro
+			if intro.icon
+				.intro__icon
+					img(src=intro.icon.el)
+			.intro__desc.h4= intro.desc
+			.intro__title.h1= intro.title
+			.intro__text.t1!= intro.text
+			if intro.btns
+				.intro__btns
+					each btn in intro.btns
+						.intro__btn.btn(class=btn.cls)=btn.title
+	.intro__bg
+		

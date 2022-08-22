@@ -1,0 +1,89 @@
+.intro
+	z-index: 1
+	position: relative
+	color: #fff
+	border-bottom: 10px solid #1C1C20
+	border-radius: 0px 0px 100px 0px
+	overflow: hidden
+	background-size: cover
+	&__wrap
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-align: center
+		padding-top: 80px
+		padding-bottom: 80px
+		max-width: 985px
+		margin: 0 auto
+	&__icon
+		width: 160px
+		margin-bottom: 24px
+	&__desc
+		text-transform: capitalize
+		color: #34CCA9
+		margin-bottom: 15px
+	&__title
+		margin-bottom: 15px
+	&__btns
+		display: flex
+		margin-top: 35px
+		margin-left: -5px
+		margin-right: -5px
+	&__btn
+		min-width: 215px
+		margin-left: 5px
+		margin-right: 5px
+	&__bg
+		z-index: -1
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+@media (max-width: 1024px)
+	.intro
+		border-radius: 0px 0px 50px 0px
+		&__wrap
+			padding-top: 54px
+			padding-bottom: 50px
+		&__desc
+			margin-bottom: 10px
+		&__title
+			margin-bottom: 10px
+		&__btns
+			margin-top: 30px
+
+@media (max-width: 960px)
+	.intro
+		&__text
+			br
+				display: none
+@media (max-width: 767px)
+	.intro
+		&__icon
+			width: 130px
+		&__text
+			br
+				display: none
+
+@media (max-width: 580px)
+	.intro
+		&__icon
+			width: 120px
+			margin-bottom: 26px
+		&__desc
+			margin-bottom: 8px
+		&__title
+			margin-bottom: 15px
+		&__btns
+			margin-top: 14px
+			flex-direction: column
+		&__btn
+			margin-bottom: 10px
+			&:last-of-type
+				margin-bottom: 0
