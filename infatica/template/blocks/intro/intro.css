@@ -54,6 +54,18 @@
   object-fit: cover;
 }
 
+.bg-center {
+  background-position: center 26%;
+  background-repeat: no-repeat;
+  background-size: 74%;
+}
+
+.intro-white {
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: none;
+}
+
 @media (max-width: 1024px) {
   .intro {
     border-radius: 0px 0px 50px 0px;

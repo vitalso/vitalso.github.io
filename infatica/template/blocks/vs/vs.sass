@@ -55,6 +55,19 @@
 		border-radius: 8px
 		padding: 30px 40px
 		margin: 0 20px 40px
+		&.bg-gradient
+			min-height: 240px
+			margin-top: 40px
+			margin-bottom: 40px
+			background: linear-gradient(180deg, #3D2AA4 0%, #291A7A 100%)
+			display: flex
+			justify-content: center
+			align-items: center
+			overflow: hidden
+			&.small
+				min-height: 200px
+				max-height: 200px
+				padding: 0
 		&-title
 			padding-bottom: 24px
 			border-bottom: 1px solid rgba(#DDDDE8, 0.6)
@@ -79,6 +92,20 @@
 	&__btn
 		margin-top: 50px
 		min-width: 300px
+
+.vs-item-icon
+	width: 120px
+	height: 120px
+	margin: 0 auto 15px auto
+	background: linear-gradient(180deg, #3D2AA4 0%, #291A7A 100%)
+	border-radius: 50%
+	display: flex
+	justify-content: center
+	align-items: center
+	& + p
+		font-size: 18px
+		line-height: 26px
+		font-weight: 600
 
 @media (max-width: 1280px)
 	.vs

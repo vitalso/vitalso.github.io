@@ -25,6 +25,33 @@
   box-shadow: 20px 20px 0 #000;
   border-radius: 50px;
 }
+.questions__wrap.example-scraping {
+  max-width: 1310px;
+  margin-bottom: 80px;
+  padding: 80px 70px;
+}
+.questions__wrap.example-scraping .h1 {
+  margin-bottom: 40px;
+}
+.questions__wrap.example-scraping .example-amazon-scraping {
+  margin: 40px 0;
+}
+
+.tag-list {
+  margin-top: 30px;
+}
+.tag-list span {
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  border: 1px solid #FFFFFF;
+  border-radius: 4px;
+  padding: 5px 37px;
+  color: #fff;
+}
 
 .questions__list {
   position: relative;

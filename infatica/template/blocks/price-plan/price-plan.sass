@@ -212,6 +212,47 @@
 	border-bottom: 1px solid var(--color-silver06)
 	color: var(--color-black04)
 
+// Redesign price plan
+.price-item
+	margin-top: 10px
+	display: flex
+	flex-direction: column
+	padding: 30px 20px
+	background: #FFFFFF
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06)
+	border-radius: 8px
+	.p
+		margin-bottom: 20px
+	.p + p
+		font-size: 14px
+		line-height: 24px
+	.price-number
+		margin-top: 20px
+		font-size: 32px
+		line-height: 40px
+		font-weight: 600
+		span
+			vertical-align: super
+			font-weight: 400
+			font-size: 14px
+			line-height: 20px
+			color: #7D7D82
+	hr
+		margin-top: 20px
+	.price-list
+		margin-top: 20px
+		margin-bottom: 40px
+		font-size: 14px
+		line-height: 22px
+		li
+			display: flex
+			align-items: center
+			margin-bottom: 14px
+		span
+			margin-left: 8px
+	.button
+		margin-top: auto
+
 @media (max-width: 1440px)
 	.price-plan
 		padding-top: 80px
