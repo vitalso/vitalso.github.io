@@ -74,7 +74,8 @@
 }
 
 .header__menu_client {
-  width: 1324px;
+  width: 100vw;
+  max-width: 1324px;
 }
 
 .header__menu_products {
@@ -188,7 +189,7 @@
 .header-white .header__item-button, .header-white .header__link {
   color: #1C1C20;
 }
-.header-white .header__icon, .header-white .header__logo-top, .header-white .header__logo-bottom {
+.header-white .header__icon {
   fill: #1C1C20;
 }
 .header-white .header__button {
@@ -198,10 +199,33 @@
 .header-white .header .hamburger-lines .line {
   background: #434396;
 }
+.header-white .header__logo {
+  display: none;
+}
+.header-white .header .logo-dark {
+  display: inline-block;
+}
 
 @media (max-width: 1700px) {
   .header__menu_client {
-    width: 1150px;
+    max-width: 1180px;
+    left: -6.5vw;
+  }
+  .header__menu_client.header__menu::after {
+    left: 65%;
+  }
+}
+@media (max-width: 1500px) {
+  .header__menu_client {
+    left: -7vw;
+  }
+  .header__menu_client.header__menu::after {
+    left: 64%;
+  }
+}
+@media (max-width: 1300px) {
+  .header__menu_client {
+    left: -9vw;
   }
 }
 .header__menu-client .header__menu-headline:nth-of-type(1) {

@@ -66,7 +66,8 @@
 	grid-column-gap: 8px
 
 .header__menu_client
-	width: 1324px
+	width: 100vw
+	max-width: 1324px
 
 .header__menu_products
 	display: flex
@@ -166,7 +167,7 @@
 		background: #fff
 		&__item-button , &__link
 			color: #1C1C20
-		&__icon , &__logo-top , &__logo-bottom
+		&__icon
 			fill: #1C1C20
 		&__button
 			background: #434396
@@ -174,10 +175,27 @@
 		.hamburger-lines
 			.line
 				background: #434396
+		&__logo
+			display: none
+		.logo-dark
+			display: inline-block
 
 @media (max-width: 1700px)
 	.header__menu_client
-		width: 1150px
+		max-width: 1180px
+		left: -6.5vw
+		&.header__menu::after
+			left: 65%
+
+@media (max-width: 1500px)
+	.header__menu_client
+		left: -7vw
+		&.header__menu::after
+			left: 64%
+
+@media (max-width: 1300px)
+	.header__menu_client
+		left: -9vw
 
 .header__menu-client .header__menu-headline:nth-of-type(1)
 	grid-column: 1 / 4

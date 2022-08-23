@@ -909,7 +909,7 @@ hr {
   color: #218AEF;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .container .row {
     justify-content: center;
   }
