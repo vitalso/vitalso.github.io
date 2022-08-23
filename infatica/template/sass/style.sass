@@ -121,6 +121,12 @@
 @media (max-width: 767px)
 	.breadcrumbs
 		display: none
+	
+	.col-4
+		max-width: 390px
+	
+	.col-3
+		max-width: 300px
 
 // Additional clases
 .d-flex
@@ -225,3 +231,46 @@ hr
 
 .text-blue
 	color: #218AEF
+
+// Additional responsive style
+@media (max-width: 767px)
+	.container
+		.row
+			justify-content: center
+			.col-3 , .col-4
+				margin: 0 15px 30px 15px
+			.col-4
+				max-width: 390px
+	
+	.col-3
+		max-width: 300px
+	.py-100 + .py-100
+		padding-top: 0
+	.text-md-center
+		text-align: center
+
+@media (max-width: 580px)
+	.py-100
+		padding-top: 40px
+		padding-bottom: 40px
+	.container
+		.row
+			.col-3 , .col-4
+				max-width: 100%
+				margin: 0 0 30px 0
+				.vs__item
+					max-width: 100%
+		.h2
+			font-size: 24px
+			font-weight: 600
+			line-height: 30px
+	.wrap-contact
+		padding: 40px 25px
+		background: #F1FAFE
+		border: 1px solid #000000
+		box-shadow: 6px 6px 0px #000000
+		border-radius: 12px
+		p
+			text-align: justify
+		.btn
+			width: 100%

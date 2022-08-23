@@ -55,7 +55,7 @@
 }
 
 .bg-center {
-  background-position: center 26%;
+  background-position: center 40px;
   background-repeat: no-repeat;
   background-size: 74%;
 }
@@ -109,13 +109,24 @@
     margin-bottom: 15px;
   }
   .intro__btns {
+    margin-left: 0;
+    margin-right: 0;
     margin-top: 14px;
     flex-direction: column;
+    width: 100%;
+    padding: 0 10px;
   }
   .intro__btn {
     margin-bottom: 10px;
   }
   .intro__btn:last-of-type {
     margin-bottom: 0;
+  }
+  .intro.bg-center {
+    background-position: center 140px;
+    background-size: 150%;
+  }
+  .intro.bg-center .intro__wrap {
+    padding-top: 0;
   }
 }

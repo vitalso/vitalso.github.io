@@ -26,6 +26,12 @@
 		max-width: 1310px
 		margin-bottom: 80px
 		padding: 80px 70px
+		.example-amazon-scraping-mobile
+			display: none
+			img
+				display: inline-block
+				margin-bottom: 40px
+					
 		.h1
 			margin-bottom: 40px
 		.example-amazon-scraping
@@ -179,3 +185,32 @@
 	.questions__button
 		padding-right: 10px
 		text-align: left
+	
+	.questions__wrap.example-scraping
+		padding: 40px 30px
+		.tag-list
+			span
+				font-size: 15px
+				margin-right: 6px
+				margin-bottom: 5px
+				&:last-child
+					margin-right: 0
+
+@media (max-width: 580px)
+	.questions__wrap.example-scraping
+		margin: 0 15px !important
+		padding: 60px 25px
+		p
+			text-align: justify
+		.h1
+			font-size: 24px
+			text-align: center
+			font-weight: 600
+		.tag-list
+			span
+				width: calc(50% - 6px)
+				text-align: center
+		.example-amazon-scraping-mobile
+			display: block
+		.example-amazon-scraping
+			display: none

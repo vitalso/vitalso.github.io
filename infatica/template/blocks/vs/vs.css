@@ -162,6 +162,10 @@
     order: 2;
     margin: 0 auto;
   }
+  .vs__item.bg-gradient {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
   .vs__btn.--lg {
     height: 75px;
   }

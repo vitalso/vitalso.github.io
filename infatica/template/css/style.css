@@ -528,6 +528,7 @@ img, svg, path, circle, rect, line {
 @media (max-width: 580px) {
   .btn.--lg {
     height: 60px;
+    line-height: 60px;
   }
 }
 .tog__body {
@@ -770,6 +771,12 @@ img, svg, path, circle, rect, line {
   .breadcrumbs {
     display: none;
   }
+  .col-4 {
+    max-width: 390px;
+  }
+  .col-3 {
+    max-width: 300px;
+  }
 }
 .d-flex {
   display: flex !important;
@@ -900,4 +907,56 @@ hr {
 
 .text-blue {
   color: #218AEF;
+}
+
+@media (max-width: 767px) {
+  .container .row {
+    justify-content: center;
+  }
+  .container .row .col-3, .container .row .col-4 {
+    margin: 0 15px 30px 15px;
+  }
+  .container .row .col-4 {
+    max-width: 390px;
+  }
+  .col-3 {
+    max-width: 300px;
+  }
+  .py-100 + .py-100 {
+    padding-top: 0;
+  }
+  .text-md-center {
+    text-align: center;
+  }
+}
+@media (max-width: 580px) {
+  .py-100 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .container .row .col-3, .container .row .col-4 {
+    max-width: 100%;
+    margin: 0 0 30px 0;
+  }
+  .container .row .col-3 .vs__item, .container .row .col-4 .vs__item {
+    max-width: 100%;
+  }
+  .container .h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+  .wrap-contact {
+    padding: 40px 25px;
+    background: #F1FAFE;
+    border: 1px solid #000000;
+    box-shadow: 6px 6px 0px #000000;
+    border-radius: 12px;
+  }
+  .wrap-contact p {
+    text-align: justify;
+  }
+  .wrap-contact .btn {
+    width: 100%;
+  }
 }
