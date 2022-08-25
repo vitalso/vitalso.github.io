@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>INSPINIA | Subscription</title>
+    <title>INSPINIA | Top bar</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -14,12 +14,21 @@
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- Custom CSS file -->
+    <!-- Some style for tob bar -->
     <link rel="stylesheet" href="css/custom.css">
 
 </head>
 
 <body class="">
+
+    <div class="top-bar bg-success alert alert-dismissable py-2 mb-0 px-0 rounded-0">
+        <button aria-hidden="true" data-dismiss="alert" class="close text-white mr-5 mt-1" type="button">×</button>
+        <div class="d-flex align-items-center justify-content-center">
+            <div class="btn btn-default btn-circle text-white px-0 border-0"><i class="fa fa-rocket"></i></div>
+            <p class="text-white mb-0 ml-4 mr-5">Upgrade Now to a Paid Plan to fully analyze all of your Account(s)</p>
+            <a href="#" class="btn btn-w-m btn-warning">Upgrade Now</a>
+        </div>
+    </div>
 
     <div id="wrapper">
 
@@ -382,164 +391,33 @@
         </div>
             <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-sm-4">
-                    <h2>Subscription</h2>
+                    <h2>This is main title</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li class="breadcrumb-item">
-                            <a href="#">E-commerce</a>
+                            <a href="index.html">This is</a>
                         </li>
                         <li class="breadcrumb-item active">
-                            <strong>Subscription</strong>
+                            <strong>Breadcrumb</strong>
                         </li>
                     </ol>
+                </div>
+                <div class="col-sm-8">
+                    <div class="title-action">
+                        <a href="" class="btn btn-primary">This is action area</a>
+                    </div>
                 </div>
             </div>
 
             <div class="wrapper wrapper-content">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="ibox mb-4">
-                            <div class="ibox-title">
-                                <h5>Your Current Subscription</h5>
-                            </div>
-                            <div class="ibox-content">
-                                <h2 class="font-bold">PPC Rocket Start <span class="label label-success ml-4 vertical-align">Free</span></h2>
-                                <p class="mt-4"><span class="btn btn-warning btn-circle mr-3"><i class="fa fa-bar-chart-o"></i></span> Analyze <b>40%</b> of your Accounts. </p>
-                                <div class="gray-bg mt-5 p-3">
-                                    <p class="mb-0">Upgrade Now to PPC Rocket Suite to analyze your Account(s) fully.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="ibox mb-4">
-                            <div class="ibox-title">
-                                <h5>Your Current Subscription</h5>
-                            </div>
-                            <div class="ibox-content">
-                                <h2 class="font-bold">PPC Rocket Suite <span class="label label-primary ml-4 vertical-align">Active</span></h2>
-                                <p class="mt-4"><span class="btn btn-warning btn-circle mr-3"><i class="fa fa-rocket"></i></span> Spend up to 2,000 EUR/USD (last 3 month average)</p>
-                                <div class="d-flex align-items-center justify-content-between mt-5">
-                                    <p class="mb-0">Your monthly average spend for the last three months was <b>33.25 EUR</b></p>
-                                    <button class="btn btn-outline btn-info">Invoices</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <div class="panel panel-primary mb-4">
-                            <div class="panel-body bg-primary text-center">
-                                <div class="btn btn-default btn-circle btn-lg mx-auto px-0 text-info border-0"><i class="fa fa-rocket font-size-28"></i></div>
-                                <h2 class="text-white font-bold">PPC Rocket Suite</h2>
-                                <p class="mb-1"><b>35 EUR/month</b> or <b>30 EUR yearly</b></p>
-                                <p>Considering your average spending of 33.25 EUR in the last 3 months</p>
-                                <button class="btn btn-w-m btn-default btn-lg text-dark mt-3 px-5 py-3" data-toggle="modal" data-target="#modalSubscription">Upgrade Now</button>
-                            </div>
-                        </div>
-
-                        <div class="ibox mb-4">
-                            <div class="ibox-title">
-                                <h5>Your Billing</h5>
-                            </div>
-                            <div class="ibox-content">
-                                <div class="gray-bg plan-switch p-3 text-center d-flex justify-content-center align-items-center mb-2">
-                                    <span>Monthly</span>
-                                    <div class="switch-button mx-3">
-                                        <input type="checkbox" id="switch" checked />
-                                        <label for="switch" class="mb-0">Toggle</label>
-                                    </div>
-                                    <span class="text-dark">Annually</span> <span class="label label-success ml-2">Save <b>15%</b></span>
-                                </div>
-                                <div class="alert alert-success mb-2 annually">
-                                    Switching to a annually subscription will save you <b>112 EUR</b> per year! 
-                                </div>
-                                <div class="alert alert-warning mb-2 annually">
-                                    The annually Subsciption will start after the end of your monthly subscription.
-                                </div>
-                                <div class="alert alert-warning mb-2 d-none monthly">
-                                    Switching to a monthly subscription will cost <b>48 EUR</b> more per year!
-                                </div>
-                                <div class="alert alert-warning mb-2 d-none monthly">
-                                    The monthly Subsciption will start after the end of your annually subscription.
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <a href="#" id="change-plan" class="btn btn-w-m btn-warning btn-lg px-5 py-3 disabled">Change</a>
-
-                                    <div id="plan-price" class="price-switcher d-inline-block m-0 p-0 border-0">
-                                        For only <span class="current-price font-bold text-dark">30</span> <b class="text-dark">EUR</b> <span class="uppertext position-relative">/month</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="ibox-content mt-4">
-                                <div class="gray-bg plan-switch p-3 text-center d-flex justify-content-center align-items-center mb-2">
-                                    <span>Monthly</span>
-                                    <div class="switch-button mx-3">
-                                        <input type="checkbox" id="switch" />
-                                        <label for="switch" class="mb-0">Toggle</label>
-                                    </div>
-                                    <span class="text-dark">Annually</span> <span class="label label-success ml-2">Save <b>15%</b></span>
-                                </div>
-                                <div class="alert alert-warning mb-2">
-                                    Switching to a monthly subscription will cost <b>48 EUR</b> more per year!
-                                </div>
-                                <div class="alert alert-warning mb-2">
-                                    The monthly Subsciption will start after the end of your annually subscription.
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <a href="#" id="change-plan" class="btn btn-w-m btn-warning btn-lg px-5 py-3">Change</a>
-
-                                    <div id="plan-price" class="price-switcher d-inline-block m-0 p-0 border-0">
-                                        For only <span class="current-price font-bold text-dark">30</span> <b class="text-dark">EUR</b> <span class="uppertext position-relative">/month</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="middle-box text-center animated fadeInRightBig">
+                    <h3 class="font-bold">This is page content</h3>
+                    <div class="error-desc">
+                        You can create here any grid layout you want. And any variation layout you imagine:) Check out
+                        main dashboard and other site. It use many different layout.
+                        <br/><a href="index.html" class="btn btn-primary m-t">Dashboard</a>
                     </div>
                 </div>
             </div>
-
-            <!-- Subscription modal -->
-            <div class="modal fade" id="modalSubscription" tabindex="-1" role="dialog" aria-labelledby="modalSubscription" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header border-0 pb-0">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">×</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="btn-primary btn-circle btn-lg px-0 mb-4 mx-auto"><i class="fa fa-file-text"></i></div>
-                            <h2 class="text-dark text-center font-bold mt-0">Choose your Subscription</h2>
-                            <p class="text-center">Considering your average spending of 33.25 EUR in the last three months.</p>
-
-                            <div class="plan-switcher text-center">
-                                <label for="pay-monthly">
-                                    <input type="radio" name="pay-choose" value="119" id="pay-monthly" checked>
-                                    <span>Pay Monthly</span>
-                                </label>
-                                <label for="pay-annually">
-                                    <input type="radio" name="pay-choose" value="129" id="pay-annually">
-                                    <span>Pay Annually <i class="label label-success">Save <b>15%</b></i> </span>
-                                </label>
-                            </div>
-
-                            <div class="text-center">
-                                <div id="modal-price" class="price-switcher d-inline-block">
-                                    For only <span class="current-price font-bold text-dark">119</span> <b class="text-dark">EUR</b> <span class="uppertext">/month</span>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="modal-footer border-0 text-center d-block">
-                            <a href="test.php?sub=monthly" id="go-to-payment" class="btn btn-primary py-3 px-3">Go to Payment</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="footer">
                 <div class="float-right">
                     10GB of <strong>250GB</strong> Free.
@@ -562,9 +440,6 @@
     <!-- Custom and plugin javascript -->
     <script src="js/inspinia.js"></script>
     <script src="js/plugins/pace/pace.min.js"></script>
-
-    <!-- Custom .js file -->
-    <script src="js/custom.js"></script>
 
 
 </body>
