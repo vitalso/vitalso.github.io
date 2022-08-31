@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Mansalva&family=Outfit:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mansalva&family=Inter:wght@400;700&family=Outfit:wght@300;400;500;600&display=swap");
 .bg-green-secondary {
   background: #025939;
 }
@@ -119,6 +119,10 @@
     height: 28px;
     top: 30px;
     right: 30px;
+  }
+  .bg-blob {
+    max-width: 50%;
+    top: 10% !important;
   }
 }
 @media screen and (max-width: 576px) {
@@ -430,7 +434,7 @@ header .navbar-toggler[aria-expanded=true] svg.icon-close {
     width: 100%;
     left: 0;
     background: #fff;
-    top: -16px;
+    top: -17px;
     padding: 150px 25px 60px 25px;
     border-radius: 0 0 16px 16px;
     box-shadow: 0px 4.16px 10.4px rgba(0, 0, 0, 0.15);
@@ -579,7 +583,7 @@ header .navbar-toggler[aria-expanded=true] svg.icon-close {
   position: fixed;
   right: 0;
   top: 20vh;
-  z-index: 2;
+  z-index: 3;
 }
 .fixed-btn a {
   display: flex;
@@ -1078,6 +1082,63 @@ header .navbar-toggler[aria-expanded=true] svg.icon-close {
 .article-content ul li {
   list-style-type: disc;
 }
+.article-content ul.article-nav li {
+  list-style-type: none;
+}
+
+.article-nav {
+  background: #FEFAF2;
+  letter-spacing: 0.15px;
+  position: absolute;
+  left: 10vw;
+  z-index: 2;
+}
+.article-nav li {
+  margin-bottom: 0;
+  padding: 10px 10px 0 10px;
+}
+.article-nav li.current-chapter a {
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+.article-nav li:last-child a {
+  border-bottom: 0;
+}
+.article-nav a {
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+  padding-bottom: 10px;
+  color: #A6A6A6;
+  border-bottom: 1px solid #A6A6A6;
+}
+.article-nav.sticky {
+  position: fixed;
+  top: 136px;
+}
+
+.info-box {
+  font-family: "Inter";
+  margin-bottom: 40px;
+  padding: 40px;
+  border-radius: 12px;
+}
+.info-box-icon {
+  margin-right: 16px;
+}
+.info-box-icon svg {
+  width: 36px;
+  height: 36px;
+}
+.info-box h6 {
+  font-weight: 700;
+  color: #fff;
+}
+.info-box p {
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+}
 
 @media screen and (max-width: 1400px) {
   .blog-cover .hover-card-desc p {
@@ -1123,6 +1184,7 @@ header .navbar-toggler[aria-expanded=true] svg.icon-close {
   }
   .blog-cover.index {
     margin-top: -20vh;
+    margin-bottom: 40px;
   }
   .blog-cover.index .blog-cover-link:after {
     display: none;
@@ -1148,6 +1210,9 @@ header .navbar-toggler[aria-expanded=true] svg.icon-close {
     line-height: 32px;
     font-size: 12px;
     background: url(../images/bg-blog-date-small.svg) center/100% no-repeat;
+  }
+  .article-content {
+    margin-top: 40px;
   }
   .article-content blockquote, .article-content ul {
     max-width: 100%;
@@ -2639,6 +2704,10 @@ section {
 
 .z-index-1 {
   z-index: 1;
+}
+
+.z-index-2 {
+  z-index: 2;
 }
 
 .text-secondary {

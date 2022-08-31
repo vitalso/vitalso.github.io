@@ -11,6 +11,12 @@ $(function () {
     }
     //$('html').toggleClass('overflow-hidden');
   });
+
+  // Article nav
+  var articleNav = $('.article-nav');
+  if ( articleNav.length ) {
+    var offsetArticleNav = articleNav.offset().top;
+  }
   
   $(window).scroll(function(){
 
@@ -41,6 +47,14 @@ $(function () {
     }
     if ( $(window).scrollTop() > numberTop ) {
       count();
+    }
+
+    if ( $(window).scrollTop() > offsetArticleNav ) {
+      articleNav.addClass('sticky');
+      //articleNav.css('top' , $(window).scrollTop());
+    } else {
+      articleNav.removeClass('sticky');
+      //articleNav.css('top' , 'auto');
     }
 
   });
@@ -187,6 +201,77 @@ $(function () {
       $('.vacancy-grid .collapse-item').addClass("d-none");
       $('.vacancy-grid .collapse-item').filter('.'+filterValue).removeClass("d-none");
     }
+  });
+
+  // Article gallery slider
+  $('.article-slider').slick({
+    infinite: true,
+    arrows: false,
+    dots: false,
+    centerMode: true,
+    variableWidth: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        }
+      }
+    ]
+  });
+
+  // Scroll on blog
+  // Cache selectors
+  var lastId="",
+  topMenu = $(".article-nav"),
+  topHeader = $("header"),
+  topMenuHeight = topHeader.outerHeight()+1,
+  // All list items
+  menuItems = topMenu.find("a"),
+  // Anchors corresponding to menu items
+  scrollItems = menuItems.map(function(){
+  var indexItm = $(this).attr('href').indexOf('#');
+  var str = $(this).attr('href').substring(indexItm);
+  var item = $(str);
+  if (item.length) { return item; }
+  });
+
+  // Bind click handler to menu items
+  // so we can get a fancy scroll animation
+  menuItems.click(function(e){
+  menuItems.parent().removeClass('current-chapter');
+  $(this).parent().addClass('current-chapter');
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+  $('html, body').stop().animate({
+      scrollTop: offsetTop
+  }, 500);
+  e.preventDefault();
+  });
+
+  // Bind to scroll
+  $(window).scroll(function(){
+  // Get container scroll position
+  var fromTop = $(this).scrollTop()+topMenuHeight;
+
+  // Get id of current scroll item
+  var cur = scrollItems.map(function(){
+      if ($(this).offset().top < fromTop)
+      return this;
+  });
+  // Get the id of the current element
+  cur = cur[cur.length-1];
+  var id = cur && cur.length ? cur[0].id : "";
+
+  if (lastId !== id) {
+      lastId = id;
+      // Set/remove active class
+      menuItems
+        .parent().removeClass("current-chapter")
+        .end().filter("[href*="+id+"]").parent().addClass("current-chapter");
+  }
   });
 
   // AOS scroll animation
