@@ -222,6 +222,16 @@ $(function () {
     ]
   });
 
+  // Card slider
+  $('.card-slider').slick({
+    infinite: true,
+    arrows: false,
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true
+  });
+
   // Scroll on blog
   // Cache selectors
   var lastId="",

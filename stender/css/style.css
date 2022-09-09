@@ -99,6 +99,66 @@
   top: 45px;
 }
 
+.tab-nav .nav-item {
+  margin-right: 50px;
+}
+.tab-nav .nav-item:last-child {
+  margin-right: 0;
+}
+.tab-nav .nav-link {
+  font-size: 32px;
+  font-weight: 700;
+  color: #D6D6D6;
+  border-radius: 0;
+}
+.tab-nav .nav-link.active {
+  border-bottom: 1px solid #F29F05;
+  color: #F29F05;
+}
+.tab-nav .nav-link:hover {
+  border-bottom: 1px solid;
+}
+
+.card-slider .slick-dots {
+  bottom: 40px;
+  text-align: left;
+  padding-left: 40px;
+}
+.card-slider .slick-dots li {
+  width: 16px;
+  height: 16px;
+  margin-right: 32px;
+}
+.card-slider .slick-dots li:last-child {
+  margin-right: 0;
+}
+.card-slider .slick-dots li button {
+  width: 16px;
+  height: 16px;
+}
+.card-slider .slick-dots li button:before {
+  width: 16px;
+  height: 16px;
+  opacity: 1;
+  color: #FEFAF2;
+  background: #FEFAF2;
+}
+.card-slider .slick-dots li.slick-active button {
+  width: 16px;
+  height: 16px;
+}
+.card-slider .slick-dots li.slick-active button:before {
+  width: 16px;
+  height: 16px;
+  color: #025939;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #025939;
+}
+
+.card-slider.slick-initialized {
+  display: block;
+  height: 100% !important;
+}
+
 @media screen and (max-width: 1200px) {
   .white-popup-block {
     padding: 50px;
@@ -123,6 +183,14 @@
   .bg-blob {
     max-width: 50%;
     top: 10% !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .tab-nav .nav-item {
+    margin-right: 15px;
+  }
+  .tab-nav .nav-link {
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -2459,7 +2527,7 @@ form textarea {
   left: 0;
   width: 100%;
   height: 312px;
-  background: url(../images/bg-top-figure.svg) center bottom/cover no-repeat;
+  background: url(../images/bg-top-figure.png) center bottom/cover no-repeat;
 }
 
 .roadmap-number {
