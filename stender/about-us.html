@@ -368,8 +368,10 @@
           <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra in placerat sed non non. Aliquam nec est id fames diam. Tellus, consectetur sodales eget ligula aliquam dignissim quis. Eget justo vestibulum, maecenas pellentesque.</p>
         </div>
         <div class="col-lg-6">
-          <div class="cover-video"><img src="images/karriere-video-cover.png" alt="cover-video">
-            <button class="play-video">
+          <div class="cover-video bg-dark">
+            <iframe src="https://player.vimeo.com/video/23379117?api=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" id="video"></iframe>
+            <script src="https://player.vimeo.com/api/player.js"></script><img src="images/karriere-video-cover.png" alt="cover-video">
+            <button class="play-video" id="play-button">
               <svg>
                 <use xlink:href="images/sprite.svg#icon-play-video"></use>
               </svg>
@@ -436,8 +438,8 @@
     <script src="js/aos.js"></script>
     <!-- Masonry grid for gallery-->
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
-    <!-- Isotope filter-->
-    <script src="js/isotope.pkgd.min.js"> </script>
+    <!-- For vimeo video-->
+    <script src="https://cdn.jsdelivr.net/npm/vimeo-froogaloop@0.1.0/froogaloop.min.js"></script>
     <!-- Main js file-->
     <script src="js/main.js"></script>
   </body>

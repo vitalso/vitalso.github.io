@@ -222,6 +222,25 @@ $(function () {
     ]
   });
 
+  // Partner slider
+  $('.partner-slider').slick({
+    infinite: true,
+    arrows: false,
+    dots: true,
+    centerMode: false,
+    variableWidth: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        }
+      }
+    ]
+  });
+
   // Card slider
   $('.card-slider').slick({
     infinite: true,
@@ -287,6 +306,23 @@ $(function () {
   // AOS scroll animation
   AOS.init({
     once: true
+  });
+
+  // Cover video play on click button
+  var iframe = document.getElementById('video');
+
+  // $f == Froogaloop
+  var player = $f(iframe);
+
+  // bind events
+  var playButton = document.getElementById("play-button");
+  playButton.addEventListener("click", function() {
+    player.api("play");
+  });
+
+  $('.cover-video .play-video').on('click' , function(){
+    $(this).closest('.cover-video').addClass('play');
+    $(this).hide();
   });
 
 });

@@ -1566,6 +1566,24 @@ header .navbar-toggler[aria-expanded=true] svg.icon-close {
   width: 23px;
   height: 26px;
 }
+.cover-video iframe {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.cover-video.play iframe {
+  z-index: 1;
+  opacity: 1;
+}
+.cover-video.play img {
+  opacity: 0;
+}
+.cover-video.play:after {
+  display: none;
+}
 
 .cover-title-video {
   width: auto !important;
@@ -1744,8 +1762,6 @@ header .navbar-toggler[aria-expanded=true] svg.icon-close {
 .partner-wrap {
   margin-left: calc((100vw - 1660px) / 2);
   padding-left: 30px;
-  display: flex;
-  flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
   -ms-overflow-style: none;
@@ -1756,6 +1772,15 @@ header .navbar-toggler[aria-expanded=true] svg.icon-close {
 }
 .partner-wrap h6 {
   transition: all 0.3s ease;
+}
+.partner-wrap .slick-dots {
+  bottom: -30px;
+}
+.partner-wrap .slick-dots li button:before {
+  background: rgba(54, 33, 42, 0.7);
+}
+.partner-wrap .slick-dots li.slick-active button:before {
+  background: #F29F05;
 }
 
 .partner-item {
