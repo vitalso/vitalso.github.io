@@ -309,20 +309,19 @@ $(function () {
   });
 
   // Cover video play on click button
-  var iframe = document.getElementById('video');
-
-  // $f == Froogaloop
-  var player = $f(iframe);
-
-  // bind events
-  var playButton = document.getElementById("play-button");
-  playButton.addEventListener("click", function() {
-    player.api("play");
-  });
+  var iframe = $('.cover-video iframe');
+  var player = new Vimeo.Player(iframe);
 
   $('.cover-video .play-video').on('click' , function(){
     $(this).closest('.cover-video').addClass('play');
-    $(this).hide();
+    player.play();
+  });
+
+  $('.after-play .play-button').on('click' , function(e){
+    e.preventDefault();
+    
+    $(this).closest('.after-play').prev('.cover-video').addClass('play');
+    player.play();
   });
 
 });
