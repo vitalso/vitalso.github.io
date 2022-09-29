@@ -122,7 +122,7 @@ p {
   letter-spacing: 0.83px;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   h1 {
     font-size: 32px;
   }
@@ -288,7 +288,7 @@ header {
   font-size: 12px;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   header {
     padding-bottom: 11px;
   }
@@ -423,7 +423,7 @@ header {
   border-color: #000;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   .btn.btn-lg {
     text-align: left;
     font-size: 14px;
@@ -439,7 +439,7 @@ header {
     transform: translateY(-50%);
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .btn.btn-sm {
     min-width: 155px;
     padding: 6px 17px;
@@ -488,7 +488,7 @@ footer .footer-links a {
   margin: 0 7px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   footer {
     padding-bottom: 25px;
   }
@@ -570,7 +570,7 @@ footer .footer-links a {
   object-fit: cover;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   .hero-section .hero-slide {
     height: 100vh;
     max-height: 778px;
@@ -703,7 +703,7 @@ footer .footer-links a {
   transform: scale(1.1);
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   .category-item-icon {
     max-width: 60%;
   }
@@ -715,7 +715,7 @@ footer .footer-links a {
     margin-bottom: 26px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .news-slider .news-item {
     margin-left: auto;
     margin-right: auto;
@@ -819,13 +819,13 @@ footer .footer-links a {
   font-weight: 600;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   .club {
     padding-top: 0;
     background: transparent;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .club {
     padding-bottom: 0;
   }
@@ -884,7 +884,7 @@ footer .footer-links a {
   left: 3px;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   .card-icon svg {
     width: 64px;
     height: 64px;
@@ -893,7 +893,7 @@ footer .footer-links a {
     font-size: 16px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .card h6 {
     font-size: 22px;
   }
