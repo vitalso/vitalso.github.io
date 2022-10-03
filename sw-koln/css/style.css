@@ -575,6 +575,11 @@ footer .footer-links a {
   font-size: 24px;
   letter-spacing: 0.9px;
 }
+.hero-section .hero-slide p.news-hero-title {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 1.05px;
+}
 .hero-section .hero-slide img {
   width: 100%;
   max-height: 900px;
@@ -641,6 +646,11 @@ footer .footer-links a {
   .hero-section.inner-hero .hero-slide .container .row div[class*=col] {
     padding-bottom: 0;
   }
+  .hero-section.inner-hero .hero-slide p.news-hero-title {
+    font-size: 30px;
+    line-height: 42px;
+    letter-spacing: 0.42px;
+  }
   .hero-section.inner-hero .hero-number {
     position: relative;
     padding: 0;
@@ -670,16 +680,16 @@ footer .footer-links a {
     font-weight: 600;
   }
 }
-.news-slider .slick-slide, .news-slider-large .slick-slide {
+.news-slider .slick-slide, .news-slider-large .slick-slide, .news-detail-slider .slick-slide {
   margin: 0 5px;
 }
-.news-slider .slick-dots, .news-slider-large .slick-dots {
+.news-slider .slick-dots, .news-slider-large .slick-dots, .news-detail-slider .slick-dots {
   bottom: -64px;
 }
-.news-slider .slick-dots li button, .news-slider-large .slick-dots li button {
+.news-slider .slick-dots li button, .news-slider-large .slick-dots li button, .news-detail-slider .slick-dots li button {
   background-color: #000;
 }
-.news-slider + .pattern-image, .news-slider-large + .pattern-image {
+.news-slider + .pattern-image, .news-slider-large + .pattern-image, .news-detail-slider + .pattern-image {
   top: 30px;
   left: -2px;
 }
@@ -786,6 +796,51 @@ footer .footer-links a {
   top: -15px;
 }
 
+.news-detail {
+  padding-top: 20px;
+  font-size: 18px;
+}
+.news-detail p {
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 1.8px;
+}
+.news-detail p.news-date {
+  margin-bottom: 40px;
+  font-size: 15px;
+  letter-spacing: 1.13px;
+  font-family: 500;
+  font-style: italic;
+}
+.news-detail p.news-share-title {
+  font-size: 20px;
+  letter-spacing: normal;
+}
+.news-detail p.news-share-title img {
+  width: 20px;
+  height: 20px;
+}
+.news-detail-slider {
+  margin: 80px 0;
+}
+.news-detail-slider .slick-dots {
+  bottom: -30px;
+}
+
+.news-line {
+  margin: 20px 0;
+  opacity: 1;
+  background: #000;
+}
+
+.news-share a {
+  margin-left: 15px;
+}
+.news-share a svg {
+  width: 30px;
+  height: 30px;
+}
+
 @media screen and (max-width: 991px) {
   .category-item-icon {
     max-width: 60%;
@@ -841,6 +896,9 @@ footer .footer-links a {
     transform: rotate(90deg);
     max-width: initial;
   }
+  .news-detail p {
+    letter-spacing: 0.68px;
+  }
   .category-item {
     margin-left: 0;
     margin-right: 0;
@@ -855,6 +913,27 @@ footer .footer-links a {
   .propose .pattern-image img {
     max-width: initial;
     transform: rotate(90deg);
+  }
+}
+@media screen and (max-width: 576px) {
+  .news-detail-slider {
+    margin-left: -35px;
+    margin-right: -35px;
+  }
+  .news-detail-slider .slick-prev, .news-detail-slider .slick-next {
+    width: 48px;
+    height: 48px;
+  }
+  .news-detail-slider .slick-prev:before, .news-detail-slider .slick-next:before {
+    width: 48px;
+    height: 48px;
+    background-size: 100%;
+  }
+  .news-detail p.news-share-title {
+    font-size: 18px;
+  }
+  .news-share a {
+    margin-left: 5px;
   }
 }
 .club {
@@ -1239,6 +1318,46 @@ footer .footer-links a {
 .team-item-desc p:first-child {
   font-size: 20px;
   font-weight: 600;
+}
+.team-item.plane-item {
+  margin-bottom: 20px;
+}
+.team-item.plane-item .team-item-desc {
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+.team-item.plane-item ul {
+  font-size: 20px;
+}
+.team-item.plane-item ul li {
+  padding: 8px 0;
+  border-top: 1px solid #000;
+}
+.team-item.plane-item ul li strong {
+  font-weight: 600;
+}
+
+.collapse-line {
+  margin: 30px -30px;
+  opacity: 1;
+}
+
+button[data-bs-toggle=collapse] {
+  font-size: 20px;
+  padding-right: 30px;
+  text-align: left;
+}
+button[data-bs-toggle=collapse] svg {
+  width: 46px;
+  height: 46px;
+  position: absolute;
+  right: -17px;
+  top: 50%;
+  margin-top: -23px;
+  transform: rotate(90deg);
+}
+button[data-bs-toggle=collapse].show svg {
+  transform: rotate(-90deg);
 }
 
 @media screen and (max-width: 767px) {
