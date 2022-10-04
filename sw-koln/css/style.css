@@ -29,6 +29,13 @@ section {
   left: -7px;
   z-index: -1;
 }
+.pattern-image.medium-pattern {
+  top: -20px;
+  max-width: 99%;
+}
+.pattern-image.medium-pattern img {
+  max-width: 150%;
+}
 
 .slick-dots {
   bottom: 30px;
@@ -77,10 +84,22 @@ section {
   width: 33.3%;
 }
 
+.fs-18, p.fs-18 {
+  font-size: 18px;
+}
+
+.fs-15, p.fs-15 {
+  font-size: 15px;
+}
+
 @media screen and (max-width: 576px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     padding-left: 30px;
     padding-right: 30px;
+  }
+  .wide-element {
+    margin-left: -30px;
+    margin-right: -30px;
   }
 }
 h1 {
@@ -363,7 +382,7 @@ header {
   min-width: 200px;
   position: relative;
   font-weight: 700;
-  padding: 12px 60px 12px 23px;
+  padding: 13px 60px 13px 23px;
   border-radius: 25px;
 }
 .btn svg {
@@ -585,6 +604,9 @@ footer .footer-links a {
   max-height: 900px;
   object-fit: cover;
 }
+.hero-section .hero-slide.without-image {
+  min-height: 430px;
+}
 .hero-section .hero-number {
   position: absolute;
   width: 100%;
@@ -625,6 +647,16 @@ footer .footer-links a {
   .hero-section .hero-slide p {
     font-size: 20px;
     letter-spacing: 0.75px;
+  }
+  .hero-section .hero-slide.without-image {
+    min-height: 200px;
+    height: auto;
+    max-height: none;
+    margin-top: 50px;
+  }
+  .hero-section .hero-slide.without-image h1.hero-title {
+    font-size: 32px;
+    letter-spacing: 0.88px;
   }
   .hero-section.inner-hero .hero-slide .container .row div[class*=col] {
     padding-top: 0;
@@ -819,6 +851,15 @@ footer .footer-links a {
 .news-detail p.news-share-title img {
   width: 20px;
   height: 20px;
+}
+.news-detail ul {
+  list-style-type: disc;
+  padding-left: 0;
+  margin-left: 20px;
+}
+.news-detail ul li {
+  line-height: 28px;
+  letter-spacing: 1.8px;
 }
 .news-detail-slider {
   margin: 80px 0;
@@ -1059,11 +1100,48 @@ footer .footer-links a {
   line-height: 1.7;
   letter-spacing: 0.83px;
 }
+.card.bg-grey .card-content p {
+  font-size: 15px;
+}
 .card.bg-grey .card-content a.border-bottom {
   border-color: #000 !important;
 }
 .card.bg-grey .card-content a.border-bottom:hover {
   border-bottom: none !important;
+}
+
+.sponsor-card {
+  height: 304px;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+.sponsor-card img {
+  max-height: 88px;
+}
+
+.management-cover {
+  height: 189px;
+  margin-bottom: 10px;
+}
+
+.management-type {
+  margin-bottom: 10px;
+  line-height: 54px;
+  font-style: italic;
+  font-weight: 500;
+}
+.management-type span {
+  line-height: 1.3;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.management-name {
+  line-height: 1.56;
+  letter-spacing: 1.8px;
+  font-size: 18px;
+  font-weight: 600;
+  padding-right: 30%;
 }
 
 @media screen and (max-width: 991px) {
@@ -1078,6 +1156,20 @@ footer .footer-links a {
 @media screen and (max-width: 767px) {
   .card h6 {
     font-size: 22px;
+  }
+  .management-cover {
+    height: 145px;
+  }
+  .management-type {
+    line-height: 43px;
+  }
+  .management-name {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .management-cover {
+    height: 145px;
   }
 }
 .table-data {
@@ -1207,6 +1299,17 @@ footer .footer-links a {
   margin-right: 22px;
   background: url(../images/arrow-down-black.svg) no-repeat;
 }
+.accordion-flush .accordion-item.small-item .accordion-button {
+  font-size: 18px;
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+.accordion-flush .accordion-item.small-item .accordion-button:after {
+  width: 14px;
+  height: 19px;
+  background-size: 100%;
+  border-bottom: 1px solid #000;
+}
 
 @media screen and (max-width: 767px) {
   .accordion-flush .accordion-item .accordion-button {
@@ -1224,6 +1327,14 @@ footer .footer-links a {
   .accordion-flush .accordion-item .accordion-body {
     line-height: 22px;
     letter-spacing: 0.77px;
+  }
+  .accordion-flush .accordion-item.small-item .accordion-button {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .accordion-flush .accordion-item.small-item .accordion-button:after {
+    margin-left: auto;
+    margin-right: 0;
   }
 }
 @media screen and (max-width: 576px) {
