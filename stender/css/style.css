@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Mansalva&family=Inter:wght@400;700&family=Outfit:wght@300;400;500;600&display=swap");
-.bg-green-secondary {
-  background: #025939;
-}
-
 .bg-akcent-color {
   background: #FAC705;
 }
@@ -633,6 +629,9 @@ header .navbar-toggler[aria-expanded=true] svg.icon-close {
   height: 100vh;
   background: url(../images/bg-mission-section.png) center/cover no-repeat;
 }
+.hero-section.hero-magazin {
+  padding-top: 30vh;
+}
 
 .scroll-down {
   position: absolute;
@@ -975,7 +974,7 @@ header .navbar-toggler[aria-expanded=true] svg.icon-close {
   z-index: 1;
 }
 .blog-cover.index .blog-cover-link:after {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #36212A 100%);
+  background: rgba(0, 0, 0, 0.3);
 }
 .blog-cover.index .blog-label {
   font-weight: 600;
@@ -994,6 +993,27 @@ header .navbar-toggler[aria-expanded=true] svg.icon-close {
   margin-top: -80vh;
 }
 
+.hero-magazin .blog-cover.index {
+  margin-bottom: 145px;
+}
+.hero-magazin .blog-cover.index .blog-cover-desc {
+  left: 133px;
+}
+.hero-magazin .blog-cover.index .blog-date {
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+.hero-magazin .blog-cover.index .blog-label {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 500;
+}
+.hero-magazin .blog-cover.index h3 {
+  font-size: 48px;
+  line-height: 57px;
+}
+
 .blog-item {
   display: flex;
   align-items: center;
@@ -1009,6 +1029,12 @@ header .navbar-toggler[aria-expanded=true] svg.icon-close {
 }
 .blog-item-image img {
   transition: all 0.3s ease;
+}
+.blog-item .blog-cover-link.small {
+  max-height: 267px;
+}
+.blog-item .blog-cover-link.large {
+  max-height: 650px;
 }
 .blog-item a {
   text-decoration: none;
@@ -1217,10 +1243,27 @@ header .navbar-toggler[aria-expanded=true] svg.icon-close {
   .blog-cover.index .blog-cover-desc {
     max-width: 100%;
   }
+  .blog-item .blog-cover-link.large + .blog-item-desc {
+    width: 100% !important;
+  }
 }
 @media screen and (max-width: 992px) {
   .blog-cover.article-cover {
     margin-top: -40vh;
+  }
+  .hero-magazin .blog-cover.index {
+    margin-bottom: 80px;
+  }
+  .hero-magazin .blog-cover.index .blog-cover-desc {
+    left: 20px;
+  }
+  .hero-magazin .blog-cover.index .blog-label {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+  .hero-magazin .blog-cover.index h3 {
+    font-size: 36px;
+    line-height: 44px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1286,6 +1329,16 @@ header .navbar-toggler[aria-expanded=true] svg.icon-close {
     max-width: 100%;
     font-size: 16px;
     line-height: 26px;
+  }
+  .hero-magazin .blog-cover.index .blog-date {
+    margin-top: 20px;
+    left: auto;
+    top: auto;
+    position: relative !important;
+  }
+  .hero-magazin .blog-cover.index .blog-cover-desc {
+    left: 0;
+    color: #F6F1EA;
   }
 }
 .btn {
@@ -2401,6 +2454,14 @@ footer .social-nav .nav-item {
   display: block;
 }
 
+.gallery div[data-masonry] a {
+  display: block;
+}
+.gallery div[data-masonry] img {
+  min-height: 457px;
+  height: 100%;
+}
+
 @media screen and (max-width: 1200px) {
   .white-point:before {
     right: -9vw;
@@ -2829,6 +2890,10 @@ section {
 
 .bg-was-torf {
   background: url(../images/bg-was-torf.png) center/cover no-repeat;
+}
+
+.bg-green-secondary {
+  background: #025939;
 }
 
 @media screen and (max-width: 1200px) {

@@ -324,4 +324,10 @@ $(function () {
     player.play();
   });
 
+  // Masonry gallery
+  $('div[data-masonry]').masonry({
+    itemSelector: '[class^="col-"]',
+    percentPosition: true
+  });
+
 });
