@@ -85,96 +85,80 @@
     </header>
     <!-- Main page start-->
     <main>
-      <section class="faq-section py-5">
-        <div class="container py-5">
+      <section class="bg-thin-grey py-3 min-vh-100">
+        <div class="container custom-container">
           <div class="row">
-            <div class="col-xl-5">
-              <div class="nav flex-column nav-pills me-5" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <button class="nav-link text-start p-0 fs-5 bg-transparent active" id="what-is-tab" data-bs-toggle="pill" data-bs-target="#what-is" type="button" role="tab" aria-controls="what-is" aria-selected="true">What is 123VISA?</button>
-                <hr class="hr">
-                <button class="nav-link text-start p-0 fs-5 bg-transparent" id="for-which-tab" data-bs-toggle="pill" data-bs-target="#for-which" type="button" role="tab" aria-controls="for-which" aria-selected="false">For which countries can you apply for a visa?</button>
-                <hr class="hr">
-                <button class="nav-link text-start p-0 fs-5 bg-transparent" id="how-is-tab" data-bs-toggle="pill" data-bs-target="#how-is" type="button" role="tab" aria-controls="how-is" aria-selected="false">How is the payment made?</button>
-                <hr class="hr">
-                <button class="nav-link text-start p-0 fs-5 bg-transparent" id="how-can-tab" data-bs-toggle="pill" data-bs-target="#how-can" type="button" role="tab" aria-controls="how-can" aria-selected="false">How can I contact you?</button>
+            <div class="col-lg-3 ps-0">
+              <div class="panel bg-white h-100">
+                <div class="d-flex">
+                  <div class="panel-flag"><img src="images/USA-flag.jpg" alt="USA"></div>
+                  <div class="panel-header">
+                    <div class="subtitle-md">USA - ESTA Application</div>
+                    <p>Non Immigrant Longterm Visa A-O</p><a class="text-decoration-none gradient-text edit-btn" href="#"><img src="images/icon-edit.svg" alt="icon-edit">Change Country/Visa</a>
+                  </div>
+                </div>
+                <hr class="hr light">
+                <form class="mt-4" action=""> 
+                  <div class="mb-4">
+                    <label class="form-label">Type of Visa</label>
+                    <div class="dropdown dropdown-select">
+                      <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="typeVisa" type="button" data-bs-toggle="dropdown" aria-expanded="false">ESTA Application</button>
+                      <ul class="dropdown-menu w-100" aria-labelledby="typeVisa">
+                        <li><a class="dropdown-item" href="#">Visa Exempted (B-1)</a></li>
+                        <li><a class="dropdown-item" href="#">Tourist / Transit (General) (B-2-1)</a></li>
+                        <li><a class="dropdown-item" href="#">Short-Term General (C-3-1)</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="mb-4">
+                    <div class="subtitle-sm fw-normal">Processing Time</div>
+                    <label class="custom-radio-btn" for="normal">
+                      <input type="radio" name="time" id="normal"><span class="d-inline-block rounded-circle"></span>normal (3 working days)
+                    </label>
+                    <label class="custom-radio-btn" for="urgent">
+                      <input type="radio" name="time" id="urgent"><span class="d-inline-block rounded-circle"></span>urgent (1 working day)
+                    </label>
+                  </div>
+                  <hr class="hr light">
+                  <div class="mb-3">
+                    <div class="subtitle-md mb-3">99€ per Person</div>
+                    <div class="input-group mb-3">
+                      <input class="form-control shadow-none" type="text" placeholder="Promo Code" aria-label="Promo Code" aria-describedby="button-add-code">
+                      <button class="btn btn-primary border-0" id="button-add-code" type="button">Add</button>
+                    </div>
+                  </div>
+                  <p>Included services</p>
+                  <ul class="panel-services-list m-0 p-0">
+                    <li>Final price including all Embassy fees</li>
+                    <li>Easy processing in German</li>
+                    <li>100% online without visiting an Embassy</li>
+                    <li>No Risk - Payment only after receiving the visa</li>
+                  </ul>
+                </form>
               </div>
             </div>
-            <div class="col-lg-7">
-              <div class="tab-content" id="v-pills-tabContent">
-                <div class="tab-pane fade show active" id="what-is" role="tabpanel" aria-labelledby="what-is-tab">
-                  <div class="subtitle-md mb-3">What is 123VISA?</div>
-                  <p>123VISA is your modern application service for electronic travel visas worldwide. <br> Our goal is to make the process as easy as possible, with us you don't have to send your passport by post, a photo is enough for us. You can track the status of your application online at any time and because we are sure that you will be satisfied with us, you do not have to pay anything in advance.</p>
-                </div>
-                <div class="tab-pane fade" id="for-which" role="tabpanel" aria-labelledby="for-which-tab">
-                  <div class="subtitle-md mb-3">For which countries can you apply for a visa?</div>
-                  <p>We are constantly expanding our range and adding new countries. You can see which countries you can use our innovative service for at any time in the country selection on the start page.</p>
-                </div>
-                <div class="tab-pane fade" id="how-is" role="tabpanel" aria-labelledby="how-is-tab">
-                  <div class="subtitle-md mb-3">How is the payment made?</div>
-                  <p>The payment of the application fees of the embassy together with our service fee only takes place AFTER your VISA has been successfully approved, you take no risk and do not have to pay anything in advance.</p>
-                </div>
-                <div class="tab-pane fade" id="how-can" role="tabpanel" aria-labelledby="how-can-tab">
-                  <div class="subtitle-md mb-3">How can I contact you?</div>
-                  <p>Our goal is to make everything as easy and convenient for you as possible. In addition to the classic contact options such as telephone and email, you can also simply write us a WhatsApp or contact us via Facebook Messenger</p>
-                </div>
+            <div class="col-lg-9">
+              <div class="panel bg-white h-100">
+                <div class="subtitle-md mb-3">General information on entry with ESTA Visa</div>
+                <p class="mb-3">What is ESTA?</p>
+                <p class="mb-3 fs-16">Since 2008, travelers from Visa Waiver Program (VWP) countries are required to apply for an ESTA online before boarding a flight or ship bound for the United States. Passengers who have not registered for the ESTA risk being denied a flight.</p>
+                <p class="mb-3">What is checked?</p>
+                <p class="mb-5 fs-16">The Electronic Travel Authorization System (ESTA) is a process used to assess the vulnerability of visitors to the United States to determine if they pose a risk to homeland security or law enforcement. The system checks law enforcement databases.</p>
+                <div class="subtitle-md mb-3">Visa regulations</div>
+                <p class="mb-3 fs-16">To apply for your ESTA USA we need the following documents</p>
+                <ul class="benefits-list small mb-5 p-0">
+                  <li class="border-0"><span class="fs-16 fw-bolder">Photo of your passport (1x passport photo in colour)</span></li>
+                  <li class="border-0"><span class="fs-16 fw-bolder">Must be valid for at least 6 months after leaving the USA</span></li>
+                </ul>
+                <p class="mb-3">Changes from May 02, 2022</p>
+                <p class="mb-5 fs-16">Beginning May 2, 2022, electronic ESTA authorization will also replace the I-94W form entry.</p>
+                <button class="btn btn-primary border-0 px-5 py-3 h-auto">Start Process</button>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <!-- Footer-->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-2">
-            <div class="footer-logo mb-3"><img src="images/logo.svg" alt="footer-logo"></div>
-            <div class="social-links align-items-center d-flex"> <a class="text-decoration-none me-1" href="#">
-                <svg>
-                  <use xlink:href="images/sprite.svg#facebook"></use>
-                </svg></a><a class="text-decoration-none" href="#">
-                <svg>
-                  <use xlink:href="images/sprite.svg#instagram"></use>
-                </svg></a></div>
-          </div>
-          <div class="col-md-2 offset-lg-1">
-            <div class="list-title">Legal</div>
-            <ul class="m-0 p-0 list-links">
-              <li><a href="imprint.html">Imprint</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-              <li><a href="data-protection.html">Data Protection</a></li>
-            </ul>
-          </div>
-          <div class="col-md-2">
-            <div class="list-title">Contact</div>
-            <ul class="m-0 p-0 list-links">
-              <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-          </div>
-          <div class="col-md-5">
-            <div class="list-title">Popular Destinations</div>
-            <ul class="m-0 p-0 list-links d-flex flex-wrap">
-              <li class="me-4"><a href="#">Thailand</a></li>
-              <li class="me-4"><a href="#">USA</a></li>
-              <li class="me-4"><a href="#">Canada</a></li>
-              <li class="me-4"><a href="#">Australia</a></li>
-              <li class="me-4"><a href="#">Russia</a></li>
-              <li class="me-4"><a href="#">India</a></li>
-              <li class="me-4"><a href="#">China</a></li>
-              <li class="me-4"><a href="#">Singapur</a></li>
-              <li class="me-4"><a href="#">Cuba</a></li>
-              <li class="me-4"><a href="#">Egypt</a></li>
-              <li class="me-4"><a href="#">Cape Verde</a></li>
-            </ul>
-          </div>
-          <div class="col-12 mt-5">
-            <div class="copyright">
-              <p class="mb-0">© Visa, 2022 - All rights reserved</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
     <!-- Modal window-->
     <!-- Login modal-->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

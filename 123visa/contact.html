@@ -85,38 +85,42 @@
     </header>
     <!-- Main page start-->
     <main>
-      <section class="faq-section py-5">
+      <section class="py-5">
         <div class="container py-5">
           <div class="row">
-            <div class="col-xl-5">
-              <div class="nav flex-column nav-pills me-5" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <button class="nav-link text-start p-0 fs-5 bg-transparent active" id="what-is-tab" data-bs-toggle="pill" data-bs-target="#what-is" type="button" role="tab" aria-controls="what-is" aria-selected="true">What is 123VISA?</button>
-                <hr class="hr">
-                <button class="nav-link text-start p-0 fs-5 bg-transparent" id="for-which-tab" data-bs-toggle="pill" data-bs-target="#for-which" type="button" role="tab" aria-controls="for-which" aria-selected="false">For which countries can you apply for a visa?</button>
-                <hr class="hr">
-                <button class="nav-link text-start p-0 fs-5 bg-transparent" id="how-is-tab" data-bs-toggle="pill" data-bs-target="#how-is" type="button" role="tab" aria-controls="how-is" aria-selected="false">How is the payment made?</button>
-                <hr class="hr">
-                <button class="nav-link text-start p-0 fs-5 bg-transparent" id="how-can-tab" data-bs-toggle="pill" data-bs-target="#how-can" type="button" role="tab" aria-controls="how-can" aria-selected="false">How can I contact you?</button>
+            <div class="col-lg-4">
+              <div class="subtitle-md font-Open-Sans mb-3">Our Contact</div>
+              <p class="mb-3 fs-16">You can leave us a message so we can contact you, or you can call us or contact us directly via Whatsapp.</p>
+              <div class="mt-5">
+                <div class="contact-data d-flex align-items-center mb-3">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#icon-email"></use>
+                  </svg><a class="text-decoration-none font-Open-Sans fs-16" href="mailto: info@123visa.de">info@123visa.de</a>
+                </div>
+                <div class="contact-data d-flex align-items-center">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#icon-whatsapp"></use>
+                  </svg><a class="text-decoration-none font-Open-Sans fs-16" href="tel: +4904060779096">+49 (0) 40 - 60 77 90 96</a>
+                </div>
               </div>
             </div>
-            <div class="col-lg-7">
-              <div class="tab-content" id="v-pills-tabContent">
-                <div class="tab-pane fade show active" id="what-is" role="tabpanel" aria-labelledby="what-is-tab">
-                  <div class="subtitle-md mb-3">What is 123VISA?</div>
-                  <p>123VISA is your modern application service for electronic travel visas worldwide. <br> Our goal is to make the process as easy as possible, with us you don't have to send your passport by post, a photo is enough for us. You can track the status of your application online at any time and because we are sure that you will be satisfied with us, you do not have to pay anything in advance.</p>
+            <div class="col-lg-5">
+              <form action="#">
+                <div class="mb-3">
+                  <label class="form-label">Full Name</label>
+                  <input class="form-control shadow-none" type="text" name="name">
                 </div>
-                <div class="tab-pane fade" id="for-which" role="tabpanel" aria-labelledby="for-which-tab">
-                  <div class="subtitle-md mb-3">For which countries can you apply for a visa?</div>
-                  <p>We are constantly expanding our range and adding new countries. You can see which countries you can use our innovative service for at any time in the country selection on the start page.</p>
+                <div class="mb-3">
+                  <label class="form-label">Subject</label>
+                  <input class="form-control shadow-none" type="text">
                 </div>
-                <div class="tab-pane fade" id="how-is" role="tabpanel" aria-labelledby="how-is-tab">
-                  <div class="subtitle-md mb-3">How is the payment made?</div>
-                  <p>The payment of the application fees of the embassy together with our service fee only takes place AFTER your VISA has been successfully approved, you take no risk and do not have to pay anything in advance.</p>
+                <div class="mb-3">
+                  <label class="form-label">Message</label>
+                  <textarea class="form-control shadow-none" rows="7"></textarea>
                 </div>
-                <div class="tab-pane fade" id="how-can" role="tabpanel" aria-labelledby="how-can-tab">
-                  <div class="subtitle-md mb-3">How can I contact you?</div>
-                  <p>Our goal is to make everything as easy and convenient for you as possible. In addition to the classic contact options such as telephone and email, you can also simply write us a WhatsApp or contact us via Facebook Messenger</p>
-                </div>
+              </form>
+              <div class="d-flex justify-content-end">
+                <button class="btn btn-primary btn-lg border-0 shadow-none px-5 fs-6" type="submit">Send</button>
               </div>
             </div>
           </div>
