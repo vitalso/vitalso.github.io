@@ -34,7 +34,7 @@
         </div>
         <div class="collapse navbar-collapse" id="nav">
           <ul class="navbar-nav align-items-lg-center ms-auto">
-            <li class="nav-item mb-0"><a class="active nav-link" href="index.html">Home</a></li>
+            <li class="nav-item mb-0"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item mb-0"><a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Destinations</a>
               <!-- Dropdown menu-->
               <div class="dropdown-menu rounded-0 border-0 w-100 start-0">
@@ -72,7 +72,7 @@
               </div>
             </li>
             <li class="nav-item mb-0"><a class="nav-link" href="#">Prices</a></li>
-            <li class="nav-item mb-0"><a class="nav-link" href="travel-agency.html">Travel Agencies</a></li>
+            <li class="nav-item mb-0"><a class="active nav-link" href="travel-agency.html">Travel Agencies</a></li>
             <li class="nav-item mb-0"><a class="nav-link" href="#">Content</a></li>
             <li class="nav-item mb-0"><a class="nav-link" href="#">
                 <svg>
@@ -85,67 +85,42 @@
   </header>
   <!-- Main page start-->
   <main>
+    <!-- Alert message-->
+    <!-- For default this message hidden, for show message please remove class 'd-none'-->
+    <div class="alert alert-success border-0 d-inline-block position-fixed px-5 start-50 translate-middle d-none" role="alert">
+      <p class="text-white mb-0">Welcome to 123 VISA! We sent you a confirmation email to your inbox.</p>
+    </div>
     <!-- Hero section-->
     <section class="hero-section">
       <div class="container">
         <div class="row">
           <div class="col-md-5">
-            <h1>We <span>simplify</span> your travel <span>formalities</span></h1>
-            <p class="mb-1">Do you want to travel, but you’re tired of complicated processes to apply for e-VISA, ESTA or COVID licenses? </p>
-            <p>Apply easily with us!</p>
-            <form class="mt-5 me-5 pe-5" action="#">
-              <div class="mb-3">
-                <label class="form-label">Select travel country</label>
-                <div class="dropdown dropdown-select">
-                  <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountry" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                  <ul class="dropdown-menu w-100" aria-labelledby="dropdownCountry">
-                    <li>
-                      <input class="form-control search-input shadow-none" type="text" placeholder="Search Country">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Thailand</a></li>
-                    <li><a class="dropdown-item" href="#">USA</a></li>
-                    <li><a class="dropdown-item" href="#">Zambia</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="mb-5">
-                <label class="form-label">Select visa type</label>
-                <div class="dropdown dropdown-select">
-                  <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownVisaType" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                  <ul class="dropdown-menu w-100" aria-labelledby="dropdownVisaType">
-                    <li><a class="dropdown-item" href="#">Visa Exempted (B-1)</a></li>
-                    <li><a class="dropdown-item" href="#">Tourist / Transit (General) (B-2-1)</a></li>
-                    <li><a class="dropdown-item" href="#">Short-Term General (C-3-1)</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="mb-5">
-                <button class="btn btn-primary btn-lg text-center w-100 border-0 shadow-none" type="submit">Start Process</button>
-              </div>
-              <div class="line position-relative mb-4 mx-3"><span class="bg-white position-absolute start-50 top-50 translate-middle">OR</span></div>
-            </form>
-            <div class="text-center me-5 pe-5">
-              <button class="btn btn-link text-decoration-none text-dark p-0 shadow-none" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Continue Existing Process </button>
-            </div>
+            <h1 class="mb-4">Are you a travel agency?</h1>
+            <p class="mb-5">Do you want to start using our system to apply for visas to your clients? Start today with a free registration.</p>
+            <button class="btn btn-primary btn-lg border-0 shadow-none" type="button" data-bs-toggle="modal" data-bs-target="#companyRegisterModal">Start Registration</button>
           </div>
-          <div class="col-md-5 offset-xl-1">
-            <div class="hero-blob text-white">
-              <div class="hero-blob-title">How it works?</div>
-              <ul class="hero-blob-list mb-0 p-0">
-                <li class="d-flex align-items-center">
-                  <div class="blob-icon rounded-circle bg-white d-flex align-items-center justify-content-center"><img src="images/icon-map.png" alt="image"></div>Choose a Country
-                </li>
-                <li class="d-flex align-items-center">
-                  <div class="blob-icon rounded-circle bg-white d-flex align-items-center">
-                    <svg>
-                      <use xlink:href="images/sprite.svg#icon-form"></use>
-                    </svg>
-                  </div>Fill in the Form
-                </li>
-                <li class="d-flex align-items-center">
-                  <div class="blob-icon rounded-circle bg-white d-flex align-items-center justify-content-center"><img src="images/icon-visa.png" alt="image"></div>Get the Visa
-                </li>
-              </ul>
+          <div class="col-md-5 offset-xl-1 pt-3">
+            <div class="hero-blob-title mb-5">How it works?</div>
+            <div class="how-item d-flex mb-5">
+              <div class="how-item-circle rounded-circle d-flex align-items-center justify-content-center"><img src="images/icon-file.png" alt="icon-file"></div>
+              <div>
+                <div class="subtitle-md">Register</div>
+                <p class="mb-0">To start applying for a visa, register in our platform. It’s easy and free.</p>
+              </div>
+            </div>
+            <div class="how-item d-flex mb-5">
+              <div class="how-item-circle rounded-circle d-flex align-items-center justify-content-center"><img src="images/icon-map-2.png" alt="icon-map"></div>
+              <div>
+                <div class="subtitle-md">Choose Country</div>
+                <p class="mb-0">After the registration you can start a visa process. The first step is to choose the country and then fill in the form with all the information asked.</p>
+              </div>
+            </div>
+            <div class="how-item d-flex mb-5">
+              <div class="how-item-circle rounded-circle d-flex align-items-center justify-content-center"><img src="images/icon-world.png" alt="icon-world"></div>
+              <div>
+                <div class="subtitle-md">Get the visa</div>
+                <p class="mb-0">After you applied for a visa you just need to wait and you’ll get notified about it.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -161,68 +136,14 @@
     </section>
     <section class="bg-light-grey my-5 py-5">
       <div class="container">
-        <h2 class="text-center">Why trust on us?</h2>
-        <div class="trust-image d-flex justify-content-center align-items-center mt-5"><img class="mx-4" src="images/made-in-germany.svg" alt="trust-image"><img class="mx-4" src="images/guarantee.svg" alt="trust-image"><img class="mx-4" src="images/premium-quality.svg" alt="trust-image"><img class="mx-4" src="images/success.svg" alt="trust-image"></div>
-      </div>
-    </section>
-    <section class="my-5 py-3">
-      <div class="container">
-        <div class="row">
+        <div class="row mt-5">
           <div class="col-md-4">
-            <h2>Your benefits at a glance</h2>
+            <h2>About us</h2>
           </div>
           <div class="col-md-6 offset-xl-2">
-            <ul class="benefits-list mb-0 p-0">
-              <li>
-                <div class="subtitle-sm">Application in German</div>
-                <p>Many visa applications are only available in the local language or in English. 123VISA takes care of the entire application process in German for you. We make sure you understand everything.</p>
-              </li>
-              <li>
-                <div class="subtitle-sm">Documents and Evidence</div>
-                <p>Various documents and evidence are required for the application, all of which must be in a specific file format. You simply send us your documents as they are and we will take care of the correct format.</p>
-              </li>
-              <li>
-                <div class="subtitle-sm">No PC, scanner or printer</div>
-                <p>You don't have a PC, scanner or printer at hand? No problem, thanks to the WhatsApp connection, you simply send us (mobile phone) photos of the required documents and we will do the rest.</p>
-              </li>
-              <li>
-                <div class="subtitle-sm">No risk - the 123VISA guarantee</div>
-                <p>Our services are only due after your visa has been successfully applied for and approved. No Visa - No Payment</p>
-              </li>
-              <li>
-                <div class="subtitle-sm">Insurance</div>
-                <p>For some visas and entry permits, proof of special (travel) health insurance is required. We check whether your existing insurance covers all services. Alternatively, you can also book suitable insurance at a reasonable price.</p>
-              </li>
-              <li>
-                <div class="subtitle-sm">Technology and Real People</div>
-                <p>Real people work for us and we combine modern technology with personal contact. You can view the status of your application 24/7 in our customer area and follow the application process. Nevertheless, if you have any questions, you can always reach your personal contact person by phone, email or WhatsApp.</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="bg-light-grey my-5 py-5">
-      <div class="container">
-        <h2 class="text-center">Visa in numbers</h2>
-        <div class="row mt-5">
-          <div class="col-md-3 offset-xl-1">
-            <div class="text-center">
-              <div class="number-title">30</div>
-              <p>covered destinations</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="text-center border-start border-end">
-              <div class="number-title"><span class="gradient-text">80.000</span></div>
-              <p>documents every year</p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="text-center">
-              <div class="number-title">2</div>
-              <p>languages</p>
-            </div>
+            <p class="fs-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultricies pellentesque tortor in blandit. Donec in ultricies est. Nullam sit amet libero ullamcorper massa congue venenatis. Cras augue quam, malesuada id neque ac, ullamcorper eleifend nulla. Duis facilisis vehicula maximus. Aenean efficitur quis sapien iaculis vestibulum. Nulla eget ante vel dolor interdum varius eget et libero. Maecenas ullamcorper odio vel dui suscipit convallis. In id dui at elit mollis auctor. Suspendisse volutpat consequat orci, quis elementum diam. Pellentesque hendrerit pulvinar tincidunt. Sed elementum fermentum massa. Nulla ligula erat, vulputate at rutrum vel, molestie et sem. Integer ut lorem eget sapien efficitur rhoncus. Sed quis ligula tincidunt, pharetra quam ut, placerat nibh.</p>
+            <p class="fs-6">Integer pretium massa leo, ut aliquam lectus euismod ut. Etiam bibendum turpis vehicula, consequat ante ut, semper tellus. Sed a scelerisque leo. Sed tortor dui, pellentesque et lobortis id, commodo ut mi. Vivamus aliquam ac quam sit amet varius. Maecenas feugiat posuere dignissim. Morbi efficitur in mi suscipit tempor. Integer efficitur nisl at fringilla facilisis.</p>
+            <p class="fs-6">Curabitur pellentesque et felis eget tincidunt. Nunc tempor elit id enim feugiat ultricies. Sed ut odio placerat nisl aliquet venenatis. Proin felis purus, luctus a nisl sed, pharetra consequat diam. Vivamus vehicula augue ut eros tincidunt, vitae dapibus velit pharetra. Vivamus dapibus iaculis dolor, vitae sagittis lorem. Mauris et libero id lectus viverra sagittis. Nulla viverra, felis non euismod tristique, nibh turpis laoreet ipsum, ac rhoncus neque ex eu ante. Aliquam posuere nunc enim, at auctor nulla rhoncus a. Aenean euismod quam pharetra libero iaculis auctor. Nunc interdum ut orci eget scelerisque. Proin consectetur consectetur justo, eget semper odio. Ut tempor velit ut risus molestie, id tempus metus maximus. Suspendisse potenti. Suspendisse maximus nisl felis, sollicitudin euismod est interdum ac. Morbi luctus magna vitae enim consectetur dignissim.</p>
           </div>
         </div>
       </div>

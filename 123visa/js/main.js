@@ -42,6 +42,17 @@ $(function () {
           ]
     });
 
+    // Show password
+    $('.show-password').on('click' , function(){
+      let inputPasword = $(this).closest('div').find('input');
+      let inputType = inputPasword.attr('type');
+      if ( inputType == 'password' ) {
+        inputPasword.attr('type' , 'text');
+      } else {
+        inputPasword.attr('type' , 'password');
+      }
+    });
+
     // Button collapse change the class
     $('.btn-collapse').on('click' , function(){
       $(this).toggleClass('show');
