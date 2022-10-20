@@ -101,12 +101,11 @@ $(function () {
     });
 
     // Phone number
-    /*var input = document.querySelector("#phone");
-      window.intlTelInput(input, {
-        autoHideDialCode: false,
-        nationalMode: false,
-        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/js/utils.js"
-    });*/
+    $(".phone").intlTelInput({
+      autoHideDialCode: false,
+      nationalMode: false,
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.0.3/js/utils.js"
+    });      
 
     // Question sidebar
     $('.question-sidebar .close-sidebar').on('click' , function(){
