@@ -883,6 +883,7 @@ form textarea.form-control {
   margin-top: 50px;
   counter-reset: section;
   position: relative;
+  pointer-events: none;
 }
 .step-steps li {
   display: flex;
@@ -1137,6 +1138,13 @@ form textarea.form-control {
   font-family: "Open Sans";
   font-size: 12px;
   color: #272B30;
+}
+
+.offcanvas {
+  width: 530px;
+}
+.offcanvas p {
+  font-size: 16px;
 }
 
 * {
