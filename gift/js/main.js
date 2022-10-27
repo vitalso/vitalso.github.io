@@ -5,73 +5,49 @@ $(function () {
       $(this).toggleClass('open');
     });
 
-    // Hero section slider
-    $('.hero-slider').slick({
-        infinite: true,
-        arrows: false,
-        dots: true,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    });
-
-    // News slider
-    $('.news-slider').slick({
-        infinite: true,
-        arrows: false,
-        dots: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        responsive: [
-            {
-              breakpoint: 992,
-              settings: {
-                slidesToShow: 2
-              }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                  slidesToShow: 2,
-                  vertical: true,
-                  dots: false,
-                  swipe: false
-                }
-              }
-          ]
-    });
-
-    // News slider with 2 card
-    $('.news-slider-large').slick({
-      infinite: true,
-      arrows: false,
-      dots: true,
-      slidesToShow: 2,
-      slidesToScroll: 2,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2,
-            vertical: true,
+    // Browser slider
+    var topPosition = $('#browser-step').offset().top;
+    $(window).on('scroll' , function(){
+      if ( !topPosition.length ) {
+        
+        if ( $(window).scrollTop() >= topPosition ) {
+          $('.browser-slider').slick({
+            infinite: false,
+            arrows: false,
             dots: false,
-            swipe: false
-          }
+            fade: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplaySpeed: 800,
+            speed: 200,
+            pauseOnFocus: false,
+            pauseOnHover: false,
+            touchMove: false,
+            autoplay: true
+          });
+
+          $('.browser-slider').on('afterChange' , function(event , slick , currentSlide){
+            var currentElement = $(this).slick('slickCurrentSlide');
+            //console.log(currentElement);
+            if (currentElement == 3) {
+              //$(this).slick('unslick');
+              $(this).slick({
+                autoplay: false,
+                infinite: false
+              });
+              //$(this).slick('unslick');
+            }
+          });
+    
         }
-      ]
+      
+      }
+
     });
 
-    // News detail slider
-    $('.news-detail-slider').slick({
-      infinite: true,
-      arrows: true,
-      dots: true,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    });
-
-    // Button collapse change the class
-    $('.btn-collapse').on('click' , function(){
-      $(this).toggleClass('show');
+    // AOS scroll animation
+    AOS.init({
+      once: true
     });
 
 });

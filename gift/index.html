@@ -9,8 +9,9 @@
     <title>index</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon"><!-- Bootstrap 5 styles -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><!-- Slick Slider -->
-    <!--link(rel="stylesheet", href="css/slick-theme.css")-->
-    <!--link(rel="stylesheet", href="css/slick.css")--><!-- Template file style -->
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css"><!-- AOS animate -->
+    <link rel="stylesheet" href="css/aos.css"><!-- Template file style -->
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -198,7 +199,7 @@
         </div>
       </section>
       <!-- How it work-->
-      <section class="how-it-work bg-dark-blue">
+      <section class="how-it-work bg-dark-blue" id="browser-step">
         <div class="container">
           <div class="row">
             <div class="col-lg-6 offset-xl-1">
@@ -210,7 +211,7 @@
           <div class="how-it-work-step offset-xl-1">
             <div class="row align-items-center">
               <div class="col-lg-3">
-                <div class="how-item text-white">
+                <div class="how-item text-white" data-aos="fade-right">
                   <svg class="how-item-icon">
                     <use xlink:href="images/sprite.svg#u_gift"></use>
                   </svg>
@@ -219,7 +220,7 @@
                 </div>
               </div>
               <div class="col-lg-3">
-                <div class="how-item text-white">
+                <div class="how-item text-white" data-aos="fade-right" data-aos-delay="1000">
                   <svg class="how-item-icon">
                     <use xlink:href="images/sprite.svg#u_plus-circle"></use>
                   </svg>
@@ -228,7 +229,7 @@
                 </div>
               </div>
               <div class="col-lg-3">
-                <div class="how-item text-white">
+                <div class="how-item text-white" data-aos="fade-right" data-aos-delay="2000">
                   <svg class="how-item-icon">
                     <use xlink:href="images/sprite.svg#u_user-check"></use>
                   </svg>
@@ -237,7 +238,7 @@
                 </div>
               </div>
               <div class="col-lg-3">
-                <div class="how-item text-white">
+                <div class="how-item text-white" data-aos="fade-right" data-aos-delay="3000">
                   <svg class="how-item-icon">
                     <use xlink:href="images/sprite.svg#u_credit-card"></use>
                   </svg>
@@ -247,7 +248,15 @@
               </div>
             </div>
           </div>
-          <div class="broswer-mockup text-center"><img src="images/screenshot.png" alt="broswer"></div>
+          <div class="browser-mockup position-relative">
+            <div class="browser-option position-absolute"><img src="images/browser-option.svg" alt="browser-option"></div>
+            <div class="browser-slider">
+              <div class="slide-item"><img src="images/screenshot.png" alt="broswer"></div>
+              <div class="slide-item"><img class="mw-70" src="images/salesfunnel-2.png" alt="broswer"></div>
+              <div class="slide-item"><img class="mw-70" src="images/salesfunnel-3.png" alt="broswer"></div>
+              <div class="slide-item"><img class="mw-70" src="images/salesfunnel-4.png" alt="broswer"></div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- We work-->
@@ -500,6 +509,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- Slick Slider-->
     <script src="js/slick.min.js"></script>
+    <!-- AOS animate-->
+    <script src="js/aos.js"></script>
     <!-- Main js file-->
     <script src="js/main.js"></script>
   </body>
