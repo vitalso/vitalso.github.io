@@ -60,7 +60,7 @@
   content: "";
   position: absolute;
   width: 130%;
-  height: 582px;
+  height: 482px;
   left: -15%;
   transform: rotate(-8deg);
 }
@@ -72,7 +72,7 @@
 }
 
 .with-figure-top:after {
-  top: -290px;
+  top: -190px;
 }
 
 .with-figure-bottom + section .container {
@@ -80,7 +80,7 @@
   z-index: 1;
 }
 .with-figure-bottom:after {
-  bottom: -290px;
+  bottom: -240px;
 }
 
 .pl-70 {
@@ -90,12 +90,6 @@
 @media screen and (max-width: 767px) {
   .with-figure-top:after, .with-figure-bottom:after {
     height: 380px;
-  }
-  .with-figure-top:after {
-    top: -190px;
-  }
-  .with-figure-bottom:after {
-    bottom: -240px;
   }
   .mw-70 {
     max-width: 90%;
@@ -580,7 +574,7 @@ footer.inner .social-link svg {
   }
 }
 .faq {
-  padding: 190px 0;
+  padding: 150px 0;
 }
 .faq-wrap {
   margin-top: 50px;
@@ -687,8 +681,8 @@ form.hero-form button[type=submit]:hover {
   }
 }
 .our-clients {
-  padding-top: 170px;
-  padding-bottom: 170px;
+  padding-top: 50px;
+  padding-bottom: 150px;
 }
 
 .table-client {
@@ -755,7 +749,6 @@ form.hero-form button[type=submit]:hover {
 
 @media screen and (max-width: 991px) {
   .our-clients {
-    padding-top: 80px;
     padding-bottom: 80px;
   }
 }
@@ -880,7 +873,7 @@ form.hero-form button[type=submit]:hover {
   }
 }
 .our-benefits {
-  padding: 210px 0;
+  padding: 100px 0 150px 0;
 }
 
 .benefits-item {
@@ -898,7 +891,7 @@ form.hero-form button[type=submit]:hover {
 
 @media screen and (max-width: 991px) {
   .our-benefits {
-    padding: 110px 0;
+    padding: 70px 0;
   }
   .benefits-item {
     max-width: 100%;
@@ -906,8 +899,8 @@ form.hero-form button[type=submit]:hover {
   }
 }
 .our-gifts {
-  padding-top: 170px;
-  padding-bottom: 230px;
+  padding-top: 150px;
+  padding-bottom: 150px;
 }
 
 .gift-row {
@@ -940,21 +933,21 @@ form.hero-form button[type=submit]:hover {
 
 @media screen and (max-width: 991px) {
   .our-gifts {
-    padding-top: 80px;
-    padding-bottom: 115px;
+    padding-top: 70px;
+    padding-bottom: 7px;
   }
   .gift-row {
     justify-content: center;
   }
 }
 .how-it-work {
-  padding-top: 350px;
-  padding-bottom: 180px;
+  padding-top: 150px;
+  padding-bottom: 80px;
 }
 .how-it-work-step {
   max-width: 1192px;
   padding-top: 110px;
-  padding-bottom: 230px;
+  padding-bottom: 110px;
 }
 .how-it-work-step div[class^=col]:first-child .how-item:after {
   display: none;
@@ -1030,14 +1023,14 @@ form.hero-form button[type=submit]:hover {
 
 @media screen and (max-width: 991px) {
   .how-it-work {
-    padding-top: 170px;
-    padding-bottom: 90px;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
   .how-it-work div[class*=col]:nth-child(3) .how-item:after {
     display: none;
   }
   .how-it-work-step {
-    padding-bottom: 100px;
+    padding-bottom: 70px;
   }
   .how-item {
     width: 50%;
@@ -1058,7 +1051,7 @@ form.hero-form button[type=submit]:hover {
 }
 .personal-gift {
   padding-top: 150px;
-  padding-bottom: 130px;
+  padding-bottom: 100px;
 }
 .personal-gift-card {
   margin-top: 90px;
@@ -1205,8 +1198,8 @@ html {
 }
 
 .how-much {
-  padding-top: 280px;
-  padding-bottom: 240px;
+  padding-top: 150px;
+  padding-bottom: 100px;
 }
 
 .product-count {
@@ -1278,19 +1271,22 @@ html {
     padding-bottom: 30px;
   }
   .how-much {
-    padding-top: 140px;
-    padding-bottom: 120px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .we-work {
+    padding-top: 0;
   }
   .choose-gift {
-    padding-top: 110px;
-    padding-bottom: 90px;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
   .address-gift {
-    padding-top: 120px;
+    padding-top: 70px;
     padding-bottom: 70px;
   }
   .delivery-gift {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 }

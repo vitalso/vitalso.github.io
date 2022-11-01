@@ -5,6 +5,11 @@ $(function () {
       $(this).toggleClass('open');
     });
 
+    // AOS scroll animation
+    AOS.init({
+      once: true
+    });
+
     // Browser slider
     $('.how-item[data-slide]').click(function(e) {
       e.preventDefault();
@@ -21,7 +26,7 @@ $(function () {
       $(window).on('scroll' , function(){
       
         if ( $(window).scrollTop() >= topPosition ) {
-          $('.browser-slider').slick({
+          $('.browser-slider').not('.slick-initialized').slick({
             infinite: false,
             arrows: false,
             dots: false,
@@ -40,16 +45,15 @@ $(function () {
               $(this).slick('slickPause');
             }
           });
+
+          AOS.init({
+            once: true
+          });
     
         }
       
       });
 
     };
-
-    // AOS scroll animation
-    AOS.init({
-      once: true
-    });
 
 });
