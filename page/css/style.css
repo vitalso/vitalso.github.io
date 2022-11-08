@@ -167,21 +167,21 @@ p {
 .btn.btn-primary {
   background: #105FAD;
 }
+.btn.btn-primary:hover {
+  background: #22A7CF;
+  color: #fff;
+  border-color: #22A7CF;
+}
 
 .btn-light {
+  color: #105FAD;
   background: #fff;
   border-color: #fff;
 }
-.btn-light svg {
-  position: absolute;
-  right: 7px;
-  top: 50%;
-  transform: translateY(-50%);
-}
 .btn-light:hover {
-  background: #000;
+  background: #22A7CF;
   color: #fff;
-  border-color: #000;
+  border-color: #22A7CF;
 }
 
 .btn-dark {
@@ -216,6 +216,9 @@ p {
   letter-spacing: 0.97px;
   font-weight: 500;
   padding: 0;
+}
+.footer-nav .nav-link:hover {
+  color: #22A7CF;
 }
 
 .copyright {
@@ -346,6 +349,11 @@ html {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.wrap-form {
+  width: 100%;
+  min-height: 700px;
 }
 
 .who-is {
