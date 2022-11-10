@@ -116,11 +116,13 @@ $(function () {
     var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
     var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
       return new bootstrap.Popover(popoverTriggerEl)
-    })
+    });
 
-    // Button collapse change the class
-    $('.btn-collapse').on('click' , function(){
-      $(this).toggleClass('show');
+    // Table
+    var $table = $('#table')
+    
+    $table.bootstrapTable('refreshOptions' , {
+      classes: 'table-striped table table-bordered'
     });
 
 });

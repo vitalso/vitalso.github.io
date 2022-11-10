@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="css/slick.css"><!-- jQuery Steps plugin style file -->
     <link rel="stylesheet" href="css/jquery-steps.css"><!-- Boottsrap Datepicker -->
     <link rel="stylesheet" href="css/bootstrap-datepicker.standalone.css"><!-- Phone number input with country flags -->
-    <link rel="stylesheet" href="css/intlTelInput.css"><!-- Template file style -->
+    <link rel="stylesheet" href="css/intlTelInput.css"><!-- Bootstrap Table -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.1/dist/bootstrap-table.min.css"><!-- Template file style -->
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body></body>
@@ -23,22 +24,10 @@
       <nav class="navbar navbar-expand-lg p-0">
         <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
         <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="logo"></a></div>
-        <div class="header-info">
-          <p class="mb-0">
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-phone"></use>
-            </svg>+49 (0) 40 - 60 77 90 96
-          </p>
-          <p class="mb-0">
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-calendar"></use>
-            </svg>Monday to Friday - 09:00 to 18:00
-          </p>
-        </div>
         <div class="collapse navbar-collapse" id="nav">
-          <ul class="navbar-nav align-items-lg-center ms-auto">
-            <li class="nav-item mb-0"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item mb-0"><a class="active nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Destinations</a>
+          <ul class="navbar-nav align-items-lg-center mx-auto">
+            <li class="nav-item mb-0"><a class="nav-link" href="index.html">Start</a></li>
+            <li class="nav-item mb-0"><a class="active nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Reiseziele</a>
               <!-- Dropdown menu-->
               <div class="dropdown-menu custom rounded-0 border-0 w-100 start-0">
                 <div class="row mx-0">
@@ -74,13 +63,16 @@
                 </div>
               </div>
             </li>
-            <li class="nav-item mb-0"><a class="nav-link" href="#">Prices</a></li>
-            <li class="nav-item mb-0"><a class="nav-link" href="travel-agency.html">Travel Agencies</a></li>
-            <li class="nav-item mb-0"><a class="nav-link" href="#">Content</a></li>
-            <li class="nav-item mb-0"><a class="nav-link" href="#">
+            <li class="nav-item mb-0"><a class="nav-link" href="#">Visaberater</a></li>
+            <li class="nav-item mb-0"><a class="nav-link" href="travel-agency.html">FAQ</a></li>
+            <li class="nav-item mb-0"><a class="nav-link" href="#">Für Reisebüros</a></li>
+          </ul>
+          <ul class="navbar-nav align-items-lg-center">
+            <li class="nav-item mb-0 border-0 me-3"><a class="nav-link fw-normal" href="#">
                 <svg>
                   <use xlink:href="images/sprite.svg#icon-user"></use>
                 </svg>Login</a></li>
+            <li class="nav-item mb-0"><a class="btn btn-primary border-0 shadow-none" href="#">Antrag starten</a></li>
           </ul>
         </div>
       </nav>
@@ -103,43 +95,51 @@
               <p class="fs-6 mb-3">The Republic of Korea is a country with a high degree of security. The greatest difficulties for the foreign visitor (or resident) reside in the relatively poor command of English by the general population, namely employees in commercial establishments (supermarkets, shopping centers, stores), or in services. However, the authorities have been making efforts to facilitate communication and contact with foreigners in the country, through the creation of specific services or units for this purpose.</p>
               <p class="fs-6 mb-3">There are also - obviously - cultural differences that may eventually condition a better understanding of local attitudes, but they should not be dramatized. In general, the population has empathy for the visitor or resident abroad, and it is easy to find elements ready to help overcome any communication difficulties.</p>
               <p class="fs-6 mb-3">The consumption or trafficking of drugs or narcotics is penalized with heavy penalties, so all possible precautions in this matter are strongly recommended.</p>
-              <p class="mb-0"><strong>Weather</strong></p>
+              <p class="mb-0 fs-16"><strong>Weather</strong></p>
               <p class="fs-6 mb-3">In Korea there are four distinct seasons. Spring and Autumn are short seasons. Summer is hot and humid. July is the month of rains. Winter is cold and dry, accompanied by snowfalls. The temperature varies with the regions of the country. In summer it can reach 33º centigrade and in winter more than minus 10º.</p>
-              <p class="mb-0"><strong>Language</strong></p>
+              <p class="mb-0 fs-16"><strong>Language</strong></p>
               <p class="fs-6 mb-3">The official language is Korean. English, Japanese and Chinese are the most widely spoken foreign languages.</p>
-              <p class="mb-0"><strong>Local currency / banking system</strong></p>
+              <p class="mb-0 fs-16"><strong>Local currency / banking system</strong></p>
               <p class="fs-6 mb-3">The local currency is won (KRW). The exchange rate can be consulted on the Banco de Portugal portal. You should check with your bank and make sure the electronic cards are valid at local ATMs. Major credit cards are accepted in most shops and restaurants in the main urban centres.</p>
               <div class="subtitle-md mt-5 mb-3">Visa Types</div>
-              <div class="row">
-                <div class="col-lg-4">
-                  <div class="rounded-3 bg-light-grey px-3 py-2 h-100 d-flex flex-column justify-content-between">
-                    <div class="d-flex mb-4">
-                      <p class="mt-2 mb-0">Visa Exempted (B-1)</p><a class="btn btn-link text-decoration-none attention-btn px-2 shadow-none ms-auto" href="#visa-1" data-bs-toggle="offcanvas" role="button" aria-controls="visa-1">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#info_circle"></use>
-                        </svg></a>
-                    </div><a class="gradient-text text-decoration-none fs-16 mb-2" href="user-identification.html">Start Process</a>
-                  </div>
+              <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="pills-1-tab" data-bs-toggle="pill" data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-1" aria-selected="true">Visa Exempted (B-1)</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-2-tab" data-bs-toggle="pill" data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-2" aria-selected="false">Tourist / Transit (General) (B-2-1)</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="pills-3-tab" data-bs-toggle="pill" data-bs-target="#pills-3" type="button" role="tab" aria-controls="pills-3" aria-selected="false">Short-Term General (C-3-1)</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane pt-4 fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">
+                  <p class="fs-6 mb-4">Person who plans to visit Korea for tour or transit without a visa.</p>
+                  <p class="fs-18 mb-4"><strong>Eligible Applicants</strong></p>
+                  <p class="fs-6 mb-4">Nationals of countries, except for the 24 xecluded countries (Syria, Sudan, Iran, Macedonia, Cuba, Republic Of Kosovo, Palestine, Afghanistan, Iraq, Nigeria, Ghana, Yemen, Gambia, Senegal, Bangladesh, Kyrgyzstan, Pakistan, Somalia, Uzbekistan, Nepal, Cameron, Sri Lanka, Myanmar, Egypt) that are not granted visa free entry into Korea. (a) Persons who hold a visa to the United States(including Guam and Saipan), Canada, Australia, or New Zealand, who transit through Korea to enter the abovementioned countries; or (b) persons who stayed in and departed from one of the abovementioned countries and transit through Korea bound for the country of origin or a third country. (a) Persons who hold a visa (or permanent residency) to at least one of the 30 European countires (Greece, Netherlands, Norway, Denmark, Germany, Latvia, Rumania, Luxemburg, Lithuania, Liechtenstein, Malta, Belgium, Sweden, Switzerland, Spain, Slovakia, Slovenia, Iceland, Ireland, Estonia, United Kingdom, Austria, Italy, Czech, Cyprus, Portugal, Poland, France, Finland, Hungary), who transit through Korea bound for one of the 30 European countries; or (b) persons who departed from one of the 30 European countries, transit through Korea bound for the country of origin or a third country.</p>
+                  <p class="fs-18 mb-4"><strong>Requirements</strong></p>
+                  <p class="fs-6 mb-4">Persons who hold a visa (re-entry permit, permanent residency, etc.) to enter the United States, Canada, Australia, or New Zealand (hereinafter referred to as “the four advanced countries”) and <br> 1) who go to one of the four advanced countries in transit through Korea; or <br> 2) who stay in one of the four advanced countries and take a direct flight from the country to Korea to go to a country of nationality or a third country. <br> Please be noted that: <br> - If you are a U.S. visa holder who transit through Korea and Saipan to reach the U.S. as the final destination, you are permitted to enter Korea without a visa. (However, if you depart from the U.S. and enter Korea via Saipan, you are not granted no-visa entry to Korea.) <br> - If you are a Chinese group tourist holding a group-tourist visa to Japan and meet certain requirements (e.g. using a travel agency that only attracts Chinese group tourists), you are permitted to enter Korea without a visa. <br> - If you hold an e-visa to Australia and a visa label is attached to your passport, you are permitted to enter Korea without a visa. However, if the label is not on your passport, you are granted no-visa entry only when you depart from Australia and transit through Korea.</p>
+                  <p class="fs-18 mb-4"><strong>Condition of Permission</strong></p>
+                  <p class="fs-6 mb-4">You have a confirmed onward flight ticket for departure within 30 days after entering Korea, in addition to having no record of criminal offence such as overstay in the countries mentioned above <br> You had not been denied entry into Korea, or had not been fined more than 5 million KRW or not have been forcibly evicted or received a deportation order for violation of law in the past 3 years preceding the date of entry <br> You stayed no more than 3 days in the country of transit or stopover. (But, Not applicable when the person is returning to the immediate previous point of departure(country of transit or stopover) <br> For hloders of U.S., Canada, Australia, or New Zealand e-visas, a visa sticker must be attached to the passport; if unattached, visa free entry will be applicable when departing from the 4 countries mentioned above bound for the country of origin or a third country.</p><a class="btn btn-primary btn-lg text-center border-0 shadow-none" href="#">Antrag starten</a>
                 </div>
-                <div class="col-lg-4">
-                  <div class="rounded-3 bg-light-grey px-3 py-2 h-100 d-flex flex-column justify-content-between">
-                    <div class="d-flex mb-4">
-                      <p class="mt-2 mb-0">Tourist / Transit (General) (B-2-1)</p><a class="btn btn-link text-decoration-none attention-btn px-2 shadow-none ms-auto" href="#visa-2" data-bs-toggle="offcanvas" role="button" aria-controls="visa-2">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#info_circle"></use>
-                        </svg></a>
-                    </div><a class="gradient-text text-decoration-none fs-16 mb-2" href="user-identification.html">Start Process</a>
-                  </div>
+                <div class="tab-pane pt-4 fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
+                  <p class="fs-6 mb-4">Person who plans to visit Korea for tour or transit without a visa.</p>
+                  <p class="fs-18 mb-4"><strong>Eligible Applicants 2</strong></p>
+                  <p class="fs-6 mb-4">Nationals of countries, except for the 24 xecluded countries (Syria, Sudan, Iran, Macedonia, Cuba, Republic Of Kosovo, Palestine, Afghanistan, Iraq, Nigeria, Ghana, Yemen, Gambia, Senegal, Bangladesh, Kyrgyzstan, Pakistan, Somalia, Uzbekistan, Nepal, Cameron, Sri Lanka, Myanmar, Egypt) that are not granted visa free entry into Korea. (a) Persons who hold a visa to the United States(including Guam and Saipan), Canada, Australia, or New Zealand, who transit through Korea to enter the abovementioned countries; or (b) persons who stayed in and departed from one of the abovementioned countries and transit through Korea bound for the country of origin or a third country. (a) Persons who hold a visa (or permanent residency) to at least one of the 30 European countires (Greece, Netherlands, Norway, Denmark, Germany, Latvia, Rumania, Luxemburg, Lithuania, Liechtenstein, Malta, Belgium, Sweden, Switzerland, Spain, Slovakia, Slovenia, Iceland, Ireland, Estonia, United Kingdom, Austria, Italy, Czech, Cyprus, Portugal, Poland, France, Finland, Hungary), who transit through Korea bound for one of the 30 European countries; or (b) persons who departed from one of the 30 European countries, transit through Korea bound for the country of origin or a third country.</p>
+                  <p class="fs-18 mb-4"><strong>Requirements 2</strong></p>
+                  <p class="fs-6 mb-4">Persons who hold a visa (re-entry permit, permanent residency, etc.) to enter the United States, Canada, Australia, or New Zealand (hereinafter referred to as “the four advanced countries”) and <br> 1) who go to one of the four advanced countries in transit through Korea; or <br> 2) who stay in one of the four advanced countries and take a direct flight from the country to Korea to go to a country of nationality or a third country. <br> Please be noted that: <br> - If you are a U.S. visa holder who transit through Korea and Saipan to reach the U.S. as the final destination, you are permitted to enter Korea without a visa. (However, if you depart from the U.S. and enter Korea via Saipan, you are not granted no-visa entry to Korea.) <br> - If you are a Chinese group tourist holding a group-tourist visa to Japan and meet certain requirements (e.g. using a travel agency that only attracts Chinese group tourists), you are permitted to enter Korea without a visa. <br> - If you hold an e-visa to Australia and a visa label is attached to your passport, you are permitted to enter Korea without a visa. However, if the label is not on your passport, you are granted no-visa entry only when you depart from Australia and transit through Korea.</p>
+                  <p class="fs-18 mb-4"><strong>Condition of Permission 2</strong></p>
+                  <p class="fs-6 mb-4">You have a confirmed onward flight ticket for departure within 30 days after entering Korea, in addition to having no record of criminal offence such as overstay in the countries mentioned above <br> You had not been denied entry into Korea, or had not been fined more than 5 million KRW or not have been forcibly evicted or received a deportation order for violation of law in the past 3 years preceding the date of entry <br> You stayed no more than 3 days in the country of transit or stopover. (But, Not applicable when the person is returning to the immediate previous point of departure(country of transit or stopover) <br> For hloders of U.S., Canada, Australia, or New Zealand e-visas, a visa sticker must be attached to the passport; if unattached, visa free entry will be applicable when departing from the 4 countries mentioned above bound for the country of origin or a third country.</p><a class="btn btn-primary btn-lg text-center border-0 shadow-none" href="#">Antrag starten</a>
                 </div>
-                <div class="col-lg-4">
-                  <div class="rounded-3 bg-light-grey px-3 py-2 h-100 d-flex flex-column justify-content-between">
-                    <div class="d-flex mb-4">
-                      <p class="mt-2 mb-0">Short-Term General (C-3-1)</p><a class="btn btn-link text-decoration-none attention-btn px-2 shadow-none ms-auto" href="#visa-3" data-bs-toggle="offcanvas" role="button" aria-controls="visa-3">
-                        <svg>
-                          <use xlink:href="images/sprite.svg#info_circle"></use>
-                        </svg></a>
-                    </div><a class="gradient-text text-decoration-none fs-16 mb-2" href="user-identification.html">Start Process</a>
-                  </div>
+                <div class="tab-pane pt-4 fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab">
+                  <p class="fs-6 mb-4">Person who plans to visit Korea for tour or transit without a visa.</p>
+                  <p class="fs-18 mb-4"><strong>Eligible Applicants 3</strong></p>
+                  <p class="fs-6 mb-4">Nationals of countries, except for the 24 xecluded countries (Syria, Sudan, Iran, Macedonia, Cuba, Republic Of Kosovo, Palestine, Afghanistan, Iraq, Nigeria, Ghana, Yemen, Gambia, Senegal, Bangladesh, Kyrgyzstan, Pakistan, Somalia, Uzbekistan, Nepal, Cameron, Sri Lanka, Myanmar, Egypt) that are not granted visa free entry into Korea. (a) Persons who hold a visa to the United States(including Guam and Saipan), Canada, Australia, or New Zealand, who transit through Korea to enter the abovementioned countries; or (b) persons who stayed in and departed from one of the abovementioned countries and transit through Korea bound for the country of origin or a third country. (a) Persons who hold a visa (or permanent residency) to at least one of the 30 European countires (Greece, Netherlands, Norway, Denmark, Germany, Latvia, Rumania, Luxemburg, Lithuania, Liechtenstein, Malta, Belgium, Sweden, Switzerland, Spain, Slovakia, Slovenia, Iceland, Ireland, Estonia, United Kingdom, Austria, Italy, Czech, Cyprus, Portugal, Poland, France, Finland, Hungary), who transit through Korea bound for one of the 30 European countries; or (b) persons who departed from one of the 30 European countries, transit through Korea bound for the country of origin or a third country.</p>
+                  <p class="fs-18 mb-4"><strong>Requirements 3</strong></p>
+                  <p class="fs-6 mb-4">Persons who hold a visa (re-entry permit, permanent residency, etc.) to enter the United States, Canada, Australia, or New Zealand (hereinafter referred to as “the four advanced countries”) and <br> 1) who go to one of the four advanced countries in transit through Korea; or <br> 2) who stay in one of the four advanced countries and take a direct flight from the country to Korea to go to a country of nationality or a third country. <br> Please be noted that: <br> - If you are a U.S. visa holder who transit through Korea and Saipan to reach the U.S. as the final destination, you are permitted to enter Korea without a visa. (However, if you depart from the U.S. and enter Korea via Saipan, you are not granted no-visa entry to Korea.) <br> - If you are a Chinese group tourist holding a group-tourist visa to Japan and meet certain requirements (e.g. using a travel agency that only attracts Chinese group tourists), you are permitted to enter Korea without a visa. <br> - If you hold an e-visa to Australia and a visa label is attached to your passport, you are permitted to enter Korea without a visa. However, if the label is not on your passport, you are granted no-visa entry only when you depart from Australia and transit through Korea.</p>
+                  <p class="fs-18 mb-4"><strong>Condition of Permission 3</strong></p>
+                  <p class="fs-6 mb-4">You have a confirmed onward flight ticket for departure within 30 days after entering Korea, in addition to having no record of criminal offence such as overstay in the countries mentioned above <br> You had not been denied entry into Korea, or had not been fined more than 5 million KRW or not have been forcibly evicted or received a deportation order for violation of law in the past 3 years preceding the date of entry <br> You stayed no more than 3 days in the country of transit or stopover. (But, Not applicable when the person is returning to the immediate previous point of departure(country of transit or stopover) <br> For hloders of U.S., Canada, Australia, or New Zealand e-visas, a visa sticker must be attached to the passport; if unattached, visa free entry will be applicable when departing from the 4 countries mentioned above bound for the country of origin or a third country.</p><a class="btn btn-primary btn-lg text-center border-0 shadow-none" href="#">Antrag starten</a>
                 </div>
               </div>
             </div>
@@ -148,46 +148,70 @@
       </div>
     </section>
   </main>
-  <!-- Offcanvas - sidebar with detail info about type of Visa-->
-  <div class="offcanvas offcanvas-end" id="visa-1" tabindex="-1" aria-labelledby="offcanvasExampleLabel">
-    <div class="offcanvas-header">
-      <div class="subtitle-sm mb-0">Visa Exempted (B-1)</div>
-      <button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  <!-- Footer-->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="footer-logo mb-3"><img src="images/logo.svg" alt="footer-logo"></div>
+          <div class="social-links align-items-center d-flex"> <a class="text-decoration-none me-1" href="#">
+              <svg>
+                <use xlink:href="images/sprite.svg#facebook"></use>
+              </svg></a><a class="text-decoration-none" href="#">
+              <svg>
+                <use xlink:href="images/sprite.svg#instagram"></use>
+              </svg></a></div>
+          <div class="header-info mt-4">
+            <p class="mb-2">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-phone"></use>
+              </svg>+49 (0) 40 - 60 77 90 96
+            </p>
+            <p class="mb-0">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-calendar"></use>
+              </svg>Montag bis Freitag <br> 09:00 bis 18:00
+            </p>
+          </div>
+        </div>
+        <div class="col-md-2 offset-lg-1">
+          <div class="list-title">Rechtliches</div>
+          <ul class="m-0 p-0 list-links">
+            <li><a href="imprint.html">Impessung</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="data-protection.html">Datenschutz</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <div class="list-title">Kontakt</div>
+          <ul class="m-0 p-0 list-links">
+            <li><a href="contact.html">Kontakt</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <div class="list-title">Beliebte Reiseziele</div>
+          <ul class="m-0 p-0 list-links d-flex flex-wrap">
+            <li class="me-4"><a href="#">Thailand</a></li>
+            <li class="me-4"><a href="#">USA</a></li>
+            <li class="me-4"><a href="#">Kanada</a></li>
+            <li class="me-4"><a href="#">Australien</a></li>
+            <li class="me-4"><a href="#">Russland</a></li>
+            <li class="me-4"><a href="#">Indien</a></li>
+            <li class="me-4"><a href="#">China</a></li>
+            <li class="me-4"><a href="#">Singapur</a></li>
+            <li class="me-4"><a href="#">Kuba</a></li>
+            <li class="me-4"><a href="#">Ägypten</a></li>
+            <li class="me-4"><a href="#">Kapverden</a></li>
+          </ul>
+        </div>
+        <div class="col-12 mt-5">
+          <div class="copyright">
+            <p class="mb-0">© Visa, 2022 - All rights reserved</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="offcanvas-body">
-      <p>Person who plans to visit Korea for tour or transit without a visa.</p>
-      <p class="mb-0 fw-bold">Eligible Applicants</p>
-      <p>Nationals of countries, except for the 24 xecluded countries (Syria, Sudan, Iran, Macedonia, Cuba, Republic Of Kosovo, Palestine, Afghanistan, Iraq, Nigeria, Ghana, Yemen, Gambia, Senegal, Bangladesh, Kyrgyzstan, Pakistan, Somalia, Uzbekistan, Nepal, Cameron, Sri Lanka, Myanmar, Egypt) that are not granted visa free entry into Korea. (a) Persons who hold a visa to the United States(including Guam and Saipan), Canada, Australia, or New Zealand, who transit through Korea to enter the abovementioned countries; or (b) persons who stayed in and departed from one of the abovementioned countries and transit through Korea bound for the country of origin or a third country. (a) Persons who hold a visa (or permanent residency) to at least one of the 30 European countires (Greece, Netherlands, Norway, Denmark, Germany, Latvia, Rumania, Luxemburg, Lithuania, Liechtenstein, Malta, Belgium, Sweden, Switzerland, Spain, Slovakia, Slovenia, Iceland, Ireland, Estonia, United Kingdom, Austria, Italy, Czech, Cyprus, Portugal, Poland, France, Finland, Hungary), who transit through Korea bound for one of the 30 European countries; or (b) persons who departed from one of the 30 European countries, transit through Korea bound for the country of origin or a third country.</p>
-      <p class="mb-0 fw-bold">Requirements</p>
-      <p>Persons who hold a visa (re-entry permit, permanent residency, etc.) to enter the United States, Canada, Australia, or New Zealand (hereinafter referred to as “the four advanced countries”) and</p>
-    </div>
-  </div>
-  <div class="offcanvas offcanvas-end" id="visa-2" tabindex="-1" aria-labelledby="offcanvasExampleLabel">
-    <div class="offcanvas-header">
-      <div class="subtitle-sm mb-0">Tourist / Transit (General) (B-2-1)</div>
-      <button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <p>Person who plans to visit Korea for tour or transit without a visa.</p>
-      <p class="mb-0 fw-bold">Eligible Applicants</p>
-      <p>Nationals of countries, except for the 24 xecluded countries (Syria, Sudan, Iran, Macedonia, Cuba, Republic Of Kosovo, Palestine, Afghanistan, Iraq, Nigeria, Ghana, Yemen, Gambia, Senegal, Bangladesh, Kyrgyzstan, Pakistan, Somalia, Uzbekistan, Nepal, Cameron, Sri Lanka, Myanmar, Egypt) that are not granted visa free entry into Korea. (a) Persons who hold a visa to the United States(including Guam and Saipan), Canada, Australia, or New Zealand, who transit through Korea to enter the abovementioned countries; or (b) persons who stayed in and departed from one of the abovementioned countries and transit through Korea bound for the country of origin or a third country. (a) Persons who hold a visa (or permanent residency) to at least one of the 30 European countires (Greece, Netherlands, Norway, Denmark, Germany, Latvia, Rumania, Luxemburg, Lithuania, Liechtenstein, Malta, Belgium, Sweden, Switzerland, Spain, Slovakia, Slovenia, Iceland, Ireland, Estonia, United Kingdom, Austria, Italy, Czech, Cyprus, Portugal, Poland, France, Finland, Hungary), who transit through Korea bound for one of the 30 European countries; or (b) persons who departed from one of the 30 European countries, transit through Korea bound for the country of origin or a third country.</p>
-      <p class="mb-0 fw-bold">Requirements</p>
-      <p>Persons who hold a visa (re-entry permit, permanent residency, etc.) to enter the United States, Canada, Australia, or New Zealand (hereinafter referred to as “the four advanced countries”) and</p>
-    </div>
-  </div>
-  <div class="offcanvas offcanvas-end" id="visa-3" tabindex="-1" aria-labelledby="offcanvasExampleLabel">
-    <div class="offcanvas-header">
-      <div class="subtitle-sm mb-0">Short-Term General (C-3-1)</div>
-      <button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <p>Person who plans to visit Korea for tour or transit without a visa.</p>
-      <p class="mb-0 fw-bold">Eligible Applicants</p>
-      <p>Nationals of countries, except for the 24 xecluded countries (Syria, Sudan, Iran, Macedonia, Cuba, Republic Of Kosovo, Palestine, Afghanistan, Iraq, Nigeria, Ghana, Yemen, Gambia, Senegal, Bangladesh, Kyrgyzstan, Pakistan, Somalia, Uzbekistan, Nepal, Cameron, Sri Lanka, Myanmar, Egypt) that are not granted visa free entry into Korea. (a) Persons who hold a visa to the United States(including Guam and Saipan), Canada, Australia, or New Zealand, who transit through Korea to enter the abovementioned countries; or (b) persons who stayed in and departed from one of the abovementioned countries and transit through Korea bound for the country of origin or a third country. (a) Persons who hold a visa (or permanent residency) to at least one of the 30 European countires (Greece, Netherlands, Norway, Denmark, Germany, Latvia, Rumania, Luxemburg, Lithuania, Liechtenstein, Malta, Belgium, Sweden, Switzerland, Spain, Slovakia, Slovenia, Iceland, Ireland, Estonia, United Kingdom, Austria, Italy, Czech, Cyprus, Portugal, Poland, France, Finland, Hungary), who transit through Korea bound for one of the 30 European countries; or (b) persons who departed from one of the 30 European countries, transit through Korea bound for the country of origin or a third country.</p>
-      <p class="mb-0 fw-bold">Requirements</p>
-      <p>Persons who hold a visa (re-entry permit, permanent residency, etc.) to enter the United States, Canada, Australia, or New Zealand (hereinafter referred to as “the four advanced countries”) and</p>
-    </div>
-  </div>
+  </footer>
   <!-- Script-->
   <!-- jQuery-->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -198,7 +222,10 @@
   <script src="js/jquery-steps.min.js"></script>
   <!-- Bootstrap Datepicker-->
   <script src="js/bootstrap-datepicker.min.js"></script>
+  <!-- Phone number input with country flags-->
   <script src="js/intlTelInput-jquery.js"></script>
+  <!-- Bootstrap Table-->
+  <script src="https://unpkg.com/bootstrap-table@1.21.1/dist/bootstrap-table.min.js"></script>
   <!-- Main js file-->
   <script src="js/main.js"></script>
 </html>

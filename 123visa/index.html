@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="css/slick.css"><!-- jQuery Steps plugin style file -->
     <link rel="stylesheet" href="css/jquery-steps.css"><!-- Boottsrap Datepicker -->
     <link rel="stylesheet" href="css/bootstrap-datepicker.standalone.css"><!-- Phone number input with country flags -->
-    <link rel="stylesheet" href="css/intlTelInput.css"><!-- Template file style -->
+    <link rel="stylesheet" href="css/intlTelInput.css"><!-- Bootstrap Table -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.21.1/dist/bootstrap-table.min.css"><!-- Template file style -->
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body></body>
@@ -23,22 +24,10 @@
       <nav class="navbar navbar-expand-lg p-0">
         <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
         <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="logo"></a></div>
-        <div class="header-info">
-          <p class="mb-0">
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-phone"></use>
-            </svg>+49 (0) 40 - 60 77 90 96
-          </p>
-          <p class="mb-0">
-            <svg>
-              <use xlink:href="images/sprite.svg#icon-calendar"></use>
-            </svg>Monday to Friday - 09:00 to 18:00
-          </p>
-        </div>
         <div class="collapse navbar-collapse" id="nav">
-          <ul class="navbar-nav align-items-lg-center ms-auto">
-            <li class="nav-item mb-0"><a class="active nav-link" href="index.html">Home</a></li>
-            <li class="nav-item mb-0"><a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Destinations</a>
+          <ul class="navbar-nav align-items-lg-center mx-auto">
+            <li class="nav-item mb-0"><a class="active nav-link" href="index.html">Start</a></li>
+            <li class="nav-item mb-0"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Reiseziele</a>
               <!-- Dropdown menu-->
               <div class="dropdown-menu custom rounded-0 border-0 w-100 start-0">
                 <div class="row mx-0">
@@ -74,13 +63,16 @@
                 </div>
               </div>
             </li>
-            <li class="nav-item mb-0"><a class="nav-link" href="#">Prices</a></li>
-            <li class="nav-item mb-0"><a class="nav-link" href="travel-agency.html">Travel Agencies</a></li>
-            <li class="nav-item mb-0"><a class="nav-link" href="#">Content</a></li>
-            <li class="nav-item mb-0"><a class="nav-link" href="#">
+            <li class="nav-item mb-0"><a class="nav-link" href="#">Visaberater</a></li>
+            <li class="nav-item mb-0"><a class="nav-link" href="travel-agency.html">FAQ</a></li>
+            <li class="nav-item mb-0"><a class="nav-link" href="#">Für Reisebüros</a></li>
+          </ul>
+          <ul class="navbar-nav align-items-lg-center">
+            <li class="nav-item mb-0 border-0 me-3"><a class="nav-link fw-normal" href="#">
                 <svg>
                   <use xlink:href="images/sprite.svg#icon-user"></use>
                 </svg>Login</a></li>
+            <li class="nav-item mb-0"><a class="btn btn-primary border-0 shadow-none" href="#">Antrag starten</a></li>
           </ul>
         </div>
       </nav>
@@ -93,18 +85,14 @@
       <div class="container">
         <div class="row">
           <div class="col-md-5">
-            <h1>We <span>simplify</span> your travel <span>formalities</span></h1>
-            <p class="mb-1">Do you want to travel, but you’re tired of complicated processes to apply for e-VISA, ESTA or COVID licenses? </p>
-            <p>Apply easily with us!</p>
+            <div class="title mb-4"><span>Wir machen Visa einfach !</span></div>
+            <div class="subtitle-sm">Jetzt Visa und Einreisegnehmigung einfach online beantragen.</div>
             <form class="mt-5 me-5 pe-5" action="#">
               <div class="mb-3">
-                <label class="form-label">Select travel country</label>
+                <label class="form-label">Wohin möchten Sie verreisen</label>
                 <div class="dropdown dropdown-select">
-                  <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountry" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span></span></button>
+                  <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountry" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Bitte auswählen</span></button>
                   <ul class="dropdown-menu w-100" aria-labelledby="dropdownCountry">
-                    <li>
-                      <input class="form-control search-input shadow-none" type="text" placeholder="Search Country">
-                    </li>
                     <li><a class="dropdown-item" href="#">Thailand</a></li>
                     <li><a class="dropdown-item" href="#">USA</a></li>
                     <li><a class="dropdown-item" href="#">Zambia</a></li>
@@ -112,9 +100,9 @@
                 </div>
               </div>
               <div class="mb-5">
-                <label class="form-label">Select visa type</label>
+                <label class="form-label">Wählen Sie den Visatyp</label>
                 <div class="dropdown dropdown-select">
-                  <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownVisaType" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span></span></button>
+                  <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownVisaType" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Bitte auswählen</span></button>
                   <ul class="dropdown-menu w-100" aria-labelledby="dropdownVisaType">
                     <li><a class="dropdown-item" href="#">Visa Exempted (B-1)</a></li>
                     <li><a class="dropdown-item" href="#">Tourist / Transit (General) (B-2-1)</a></li>
@@ -123,32 +111,19 @@
                 </div>
               </div>
               <div class="mb-5">
-                <button class="btn btn-primary btn-lg text-center w-100 border-0 shadow-none" type="submit">Start Process</button>
+                <button class="btn btn-primary btn-lg text-center w-100 border-0 shadow-none" type="submit">Weiter</button>
               </div>
-              <div class="line position-relative mb-4 mx-3"><span class="bg-white position-absolute start-50 top-50 translate-middle">OR</span></div>
+              <div class="line position-relative mb-4 mx-3"><span class="bg-white position-absolute start-50 top-50 translate-middle">ODER</span></div>
             </form>
-            <div class="text-center me-5 pe-5">
-              <button class="btn btn-link text-decoration-none text-dark p-0 shadow-none" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Continue Existing Process </button>
+            <div class="text-center me-5 pe-5 mb-3">
+              <button class="btn btn-link text-decoration-none text-dark p-0 shadow-none" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Bestehenden Antrag fortsetzen </button>
             </div>
           </div>
           <div class="col-md-5 offset-xl-1">
-            <div class="hero-blob text-white">
-              <div class="hero-blob-title">How it works?</div>
-              <ul class="hero-blob-list mb-0 p-0">
-                <li class="d-flex align-items-center">
-                  <div class="blob-icon rounded-circle bg-white d-flex align-items-center justify-content-center"><img src="images/icon-map.png" alt="image"></div>Choose a Country
-                </li>
-                <li class="d-flex align-items-center">
-                  <div class="blob-icon rounded-circle bg-white d-flex align-items-center">
-                    <svg>
-                      <use xlink:href="images/sprite.svg#icon-form"></use>
-                    </svg>
-                  </div>Fill in the Form
-                </li>
-                <li class="d-flex align-items-center">
-                  <div class="blob-icon rounded-circle bg-white d-flex align-items-center justify-content-center"><img src="images/icon-visa.png" alt="image"></div>Get the Visa
-                </li>
-              </ul>
+            <div class="mockup-phone position-relative text-center">
+              <div class="mockup-phone-badge rounded-circle text-white d-flex justify-content-center align-items-center">
+                <div class="subtitle-sm text-white mb-0 px-3">Online beantragen</div>
+              </div><img src="images/mockup-phone.png" alt="mockup-phone">
             </div>
           </div>
         </div>
@@ -162,95 +137,210 @@
             </svg>
           </div></a></div>
     </section>
-    <section class="bg-light-grey my-5 py-5">
-      <div class="container">
-        <h2 class="text-center">Why trust on us?</h2>
-        <div class="trust-image d-flex justify-content-center align-items-center mt-5"><img class="mx-4" src="images/made-in-germany.svg" alt="trust-image"><img class="mx-4" src="images/guarantee.svg" alt="trust-image"><img class="mx-4" src="images/premium-quality.svg" alt="trust-image"><img class="mx-4" src="images/success.svg" alt="trust-image"></div>
+    <section class="bg-light-grey mb-5 py-5">
+      <div class="container my-5">
+        <div class="row">
+          <div class="col-xl-3 col-lg-6">
+            <div class="features-item">
+              <div class="text-center mb-4"><img src="images/feature-icon-1.svg" alt="features-icon"></div>
+              <div class="subtitle-md mb-3">Geführter und intiuitver Prozess auf Deutsch</div>
+              <p>Schluss mit Anträgen auf Englisch oder in fremden Sprachen. Unser Antragssystemauf Deutsch führt Dich ganz einfach durch den Visaantrag. Wir sorgen dafür das Du alles verstehst.</p>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="features-item">
+              <div class="text-center mb-4"><img src="images/feature-icon-2.svg" alt="features-icon"></div>
+              <div class="subtitle-md mb-3">Dokumente und Nachweise</div>
+              <p>Für den Antrag werden verschiedene Dokumente und Nachweise benötigt, die alle in einem bestimmten Dateiformat vorliegen müssen. Sie schicken uns Ihre Unterlagen einfach so, wie sie sind, und wir kümmern uns um das richtige Format.</p>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="features-item">
+              <div class="text-center mb-4"><img src="images/feature-icon-3.svg" alt="features-icon"></div>
+              <div class="subtitle-md mb-3">Alles einfach einfach</div>
+              <p>Schluss mit Anträgen auf Englisch oder in fremden Sprachen. Unser Antragssystemauf Deutsch führt Dich ganz einfach durch den Visaantrag. Wir sorgen dafür das Du alles verstehst.</p>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="features-item">
+              <div class="text-center mb-4"><img src="images/feature-icon-4.svg" alt="features-icon"></div>
+              <div class="subtitle-md mb-3">Erfolgsgarantie ohne Risiko</div>
+              <p>Schluss mit Anträgen auf Englisch oder in fremden Sprachen. Unser Antragssystemauf Deutsch führt Dich ganz einfach durch den Visaantrag. Wir sorgen dafür das Du alles verstehst.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section class="my-5 py-3">
-      <div class="container">
+      <div class="container my-5">
         <div class="row">
           <div class="col-md-4">
-            <h2>Your benefits at a glance</h2>
+            <h2>So funktioniert 123VISA</h2>
+            <div class="subtitle-sm fw-normal">In nur 4 einfachen Schritten beantragst Du dein Visum: einfach, sicher und smart</div>
           </div>
           <div class="col-md-6 offset-xl-2">
-            <ul class="benefits-list mb-0 p-0">
-              <li>
-                <div class="subtitle-sm">Application in German</div>
-                <p>Many visa applications are only available in the local language or in English. 123VISA takes care of the entire application process in German for you. We make sure you understand everything.</p>
-              </li>
-              <li>
-                <div class="subtitle-sm">Documents and Evidence</div>
-                <p>Various documents and evidence are required for the application, all of which must be in a specific file format. You simply send us your documents as they are and we will take care of the correct format.</p>
-              </li>
-              <li>
-                <div class="subtitle-sm">No PC, scanner or printer</div>
-                <p>You don't have a PC, scanner or printer at hand? No problem, thanks to the WhatsApp connection, you simply send us (mobile phone) photos of the required documents and we will do the rest.</p>
-              </li>
-              <li>
-                <div class="subtitle-sm">No risk - the 123VISA guarantee</div>
-                <p>Our services are only due after your visa has been successfully applied for and approved. No Visa - No Payment</p>
-              </li>
-              <li>
-                <div class="subtitle-sm">Insurance</div>
-                <p>For some visas and entry permits, proof of special (travel) health insurance is required. We check whether your existing insurance covers all services. Alternatively, you can also book suitable insurance at a reasonable price.</p>
-              </li>
-              <li>
-                <div class="subtitle-sm">Technology and Real People</div>
-                <p>Real people work for us and we combine modern technology with personal contact. You can view the status of your application 24/7 in our customer area and follow the application process. Nevertheless, if you have any questions, you can always reach your personal contact person by phone, email or WhatsApp.</p>
-              </li>
-            </ul>
+            <div class="d-flex">
+              <div class="progress-list-bar me-4 w-20"><img src="images/progress-bar.svg" alt="progress-bar"></div>
+              <div class="progress-list">
+                <div class="d-flex align-items-center progress-list-item">
+                  <div class="subtitle me-4">01</div>
+                  <div class="subtitle-sm fw-normal mb-0">Wähle Dein Reiseland aus</div>
+                </div>
+                <div class="d-flex align-items-center progress-list-item">
+                  <div class="subtitle me-4">02</div>
+                  <div class="subtitle-sm fw-normal mb-0">Fülle den Antrag online aus und lade Deine Dokumente hoch</div>
+                </div>
+                <div class="d-flex align-items-center progress-list-item">
+                  <div class="subtitle me-4">03</div>
+                  <div class="subtitle-sm fw-normal mb-0">Wir prüfen Deinen Antrag auf Vollständigkeit und eventuelle Fehler und übermitteln ihn an die Behörden</div>
+                </div>
+                <div class="d-flex align-items-center progress-list-item">
+                  <div class="subtitle me-4">04</div>
+                  <div class="subtitle-sm fw-normal mb-0">Erhalte dein Visa ohne aufwendigen Botschaftsbesuch und Termine</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <section class="bg-light-grey my-5 py-5">
       <div class="container">
-        <h2 class="text-center">Visa in numbers</h2>
+        <h2 class="text-center d-flex align-items-center justify-content-center"><img class="me-2" src="images/logo.svg" alt="logo">in Zahlen</h2>
         <div class="row mt-5">
           <div class="col-md-3 offset-xl-1">
             <div class="text-center">
               <div class="number-title">30</div>
-              <p>covered destinations</p>
+              <p class="fs-6">Verschiedene Visaarten</p>
             </div>
           </div>
           <div class="col-md-4">
             <div class="text-center border-start border-end">
               <div class="number-title"><span class="gradient-text">80.000</span></div>
-              <p>documents every year</p>
+              <p class="fs-6">Verarbeite Dokumente jedes Jahr</p>
             </div>
           </div>
           <div class="col-md-3">
             <div class="text-center">
-              <div class="number-title">2</div>
-              <p>languages</p>
+              <div class="number-title">28</div>
+              <p class="fs-6">Länder</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="my-5 py-5">
-      <div class="container">
-        <h2 class="text-center">Our customer reviews</h2>
+    <section class="my-5 py-3">
+      <div class="container my-5">
         <div class="row">
-          <div class="col-md-10 offset-lg-1">
-            <div class="reviews-slider mt-5">
-              <div class="review-item position-relative text-center text-white review-left">
-                <p class="mb-2">Mary Wade</p><img src="images/quote-review.svg" alt="image">
-                <p class="mt-3 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla vitae dolor eu pellentesque.</p>
+          <div class="col-md-5">
+            <h2>Warum wir <br> die Nummer 1 sind</h2>
+            <div class="subtitle-sm fw-normal">123VISA macht reisen wieder einfach, wir kümmern sich um alle notwendigen Formalitäten für ihr Reiseland und stellen sicher, dass Sie keine bösen Überraschungen am Flughafen oder bei der Einreise erleben</div>
+          </div>
+          <div class="col-md-6 offset-lg-1">
+            <div class="compare-table ms-0 ms-md-auto">
+              <div class="d-flex align-items-center">
+                <div class="w-40 px-2 py-3 fs-6 fw-bolder">Funktion</div>
+                <div class="w-40 px-2 py-3 fs-6 fw-bolder">Manuelle Beantragung</div>
+                <div class="w-20 px-2 py-3"><img class="logo" src="images/logo.svg" alt="logo"></div>
               </div>
-              <div class="review-item position-relative text-center text-white review-center">
-                <p class="mb-2">John Doe</p><img src="images/quote-review.svg" alt="image">
-                <p class="mt-3 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla vitae dolor eu pellentesque.</p>
+              <div class="bg-neutral-color d-flex align-items-center">
+                <div class="w-40 px-2 py-3">Antrag auf Deutsch</div>
+                <div class="w-40 px-2 py-3"><img src="images/icon-check.svg" alt="icon-check"></div>
+                <div class="w-20 px-2 py-3"><img src="images/icon-check.svg" alt="icon-check"></div>
               </div>
-              <div class="review-item position-relative text-center text-white review-right">
-                <p class="mb-2">Frank Matts</p><img src="images/quote-review.svg" alt="image">
-                <p class="mt-3 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla vitae dolor eu pellentesque.</p>
+              <div class="d-flex align-items-center">
+                <div class="w-40 px-2 py-3">Sofort beantragen ohne Wartezeiten und Termine</div>
+                <div class="w-40 px-2 py-3"><img src="images/close.svg" alt="icon-close"></div>
+                <div class="w-20 px-2 py-3"><img src="images/icon-check.svg" alt="icon-check"></div>
               </div>
-              <div class="review-item position-relative text-center text-white review-center">
-                <p class="mb-2">John Doe</p><img src="images/quote-review.svg" alt="image">
-                <p class="mt-3 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla vitae dolor eu pellentesque.</p>
+              <div class="bg-neutral-color d-flex align-items-center">
+                <div class="w-40 px-2 py-3">Unkomplizierte Übermittlung von Dokumenten</div>
+                <div class="w-40 px-2 py-3"><img src="images/close.svg" alt="icon-close"></div>
+                <div class="w-20 px-2 py-3"><img src="images/icon-check.svg" alt="icon-check"></div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="w-40 px-2 py-3">Benutzerfreundliches Antragssystem</div>
+                <div class="w-40 px-2 py-3"><img src="images/close.svg" alt="icon-close"></div>
+                <div class="w-20 px-2 py-3"><img src="images/icon-check.svg" alt="icon-check"></div>
+              </div>
+              <div class="bg-neutral-color d-flex align-items-center">
+                <div class="w-40 px-2 py-3">Kein aufwendiger Versand von Pässen per Post</div>
+                <div class="w-40 px-2 py-3"><img src="images/close.svg" alt="icon-close"></div>
+                <div class="w-20 px-2 py-3"><img src="images/icon-check.svg" alt="icon-check"></div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="w-40 px-2 py-3">Persönlicher Ansprechpartner</div>
+                <div class="w-40 px-2 py-3"><img src="images/close.svg" alt="icon-close"></div>
+                <div class="w-20 px-2 py-3"><img src="images/icon-check.svg" alt="icon-check"></div>
+              </div>
+              <div class="bg-neutral-color d-flex align-items-center">
+                <div class="w-40 px-2 py-3">Keine Überraschungen am Flughafen aufgrund von Fehlern</div>
+                <div class="w-40 px-2 py-3"><img src="images/close.svg" alt="icon-close"></div>
+                <div class="w-20 px-2 py-3"><img src="images/icon-check.svg" alt="icon-check"></div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="w-40 px-2 py-3">Expressbearbeitung auch für kurzfristige Reisen</div>
+                <div class="w-40 px-2 py-3"><img src="images/close.svg" alt="icon-close"></div>
+                <div class="w-20 px-2 py-3"><img src="images/icon-check.svg" alt="icon-check"></div>
+              </div>
+              <div class="bg-neutral-color d-flex align-items-center">
+                <div class="w-40 px-2 py-3">Zahlung der Visagebühren per Rechnung nach Ausstellung</div>
+                <div class="w-40 px-2 py-3"><img src="images/close.svg" alt="icon-close"></div>
+                <div class="w-20 px-2 py-3"><img src="images/icon-check.svg" alt="icon-check"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="my-5 py-3">
+      <div class="container my-5">
+        <div class="row">
+          <div class="col-md-5">
+            <h2>FAQ</h2>
+            <div class="subtitle-sm fw-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis non at pellentesque urna, cras nibh vulputate. </div>
+          </div>
+          <div class="col-md-6 offset-lg-1">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button class="accordion-button bg-white shadow-none text-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</button>
+                </h2>
+                <div class="accordion-collapse collapse" id="flush-collapseOne" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget ut et etiam interdum sem id mi, gravida. Laoreet ut eu lorem consequat, nisl interdum tempor tempor. Est, nulla quis egestas quisque. Ut velit fermentum nec metus enim quam.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button class="accordion-button bg-white shadow-none text-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</button>
+                </h2>
+                <div class="accordion-collapse collapse" id="flush-collapseTwo" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item&apos;s accordion body. Let&apos;s imagine this being filled with some actual content.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button class="accordion-button bg-white shadow-none text-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</button>
+                </h2>
+                <div class="accordion-collapse collapse" id="flush-collapseThree" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item&apos;s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                  <button class="accordion-button bg-white shadow-none text-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</button>
+                </h2>
+                <div class="accordion-collapse collapse" id="flush-collapseFour" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item&apos;s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFife">
+                  <button class="accordion-button bg-white shadow-none text-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFife" aria-expanded="false" aria-controls="flush-collapseFife">Lorem ipsum dolor sit amet, consectetur adipiscing elit?</button>
+                </h2>
+                <div class="accordion-collapse collapse" id="flush-collapseFife" aria-labelledby="flush-headingFife" data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item&apos;s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                </div>
               </div>
             </div>
           </div>
@@ -262,7 +352,7 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-3">
           <div class="footer-logo mb-3"><img src="images/logo.svg" alt="footer-logo"></div>
           <div class="social-links align-items-center d-flex"> <a class="text-decoration-none me-1" href="#">
               <svg>
@@ -271,35 +361,47 @@
               <svg>
                 <use xlink:href="images/sprite.svg#instagram"></use>
               </svg></a></div>
+          <div class="header-info mt-4">
+            <p class="mb-2">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-phone"></use>
+              </svg>+49 (0) 40 - 60 77 90 96
+            </p>
+            <p class="mb-0">
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-calendar"></use>
+              </svg>Montag bis Freitag <br> 09:00 bis 18:00
+            </p>
+          </div>
         </div>
         <div class="col-md-2 offset-lg-1">
-          <div class="list-title">Legal</div>
+          <div class="list-title">Rechtliches</div>
           <ul class="m-0 p-0 list-links">
-            <li><a href="imprint.html">Imprint</a></li>
+            <li><a href="imprint.html">Impessung</a></li>
             <li><a href="faq.html">FAQ</a></li>
-            <li><a href="data-protection.html">Data Protection</a></li>
+            <li><a href="data-protection.html">Datenschutz</a></li>
           </ul>
         </div>
         <div class="col-md-2">
-          <div class="list-title">Contact</div>
+          <div class="list-title">Kontakt</div>
           <ul class="m-0 p-0 list-links">
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
           </ul>
         </div>
-        <div class="col-md-5">
-          <div class="list-title">Popular Destinations</div>
+        <div class="col-md-4">
+          <div class="list-title">Beliebte Reiseziele</div>
           <ul class="m-0 p-0 list-links d-flex flex-wrap">
             <li class="me-4"><a href="#">Thailand</a></li>
             <li class="me-4"><a href="#">USA</a></li>
-            <li class="me-4"><a href="#">Canada</a></li>
-            <li class="me-4"><a href="#">Australia</a></li>
-            <li class="me-4"><a href="#">Russia</a></li>
-            <li class="me-4"><a href="#">India</a></li>
+            <li class="me-4"><a href="#">Kanada</a></li>
+            <li class="me-4"><a href="#">Australien</a></li>
+            <li class="me-4"><a href="#">Russland</a></li>
+            <li class="me-4"><a href="#">Indien</a></li>
             <li class="me-4"><a href="#">China</a></li>
             <li class="me-4"><a href="#">Singapur</a></li>
-            <li class="me-4"><a href="#">Cuba</a></li>
-            <li class="me-4"><a href="#">Egypt</a></li>
-            <li class="me-4"><a href="#">Cape Verde</a></li>
+            <li class="me-4"><a href="#">Kuba</a></li>
+            <li class="me-4"><a href="#">Ägypten</a></li>
+            <li class="me-4"><a href="#">Kapverden</a></li>
           </ul>
         </div>
         <div class="col-12 mt-5">
@@ -607,7 +709,10 @@
   <script src="js/jquery-steps.min.js"></script>
   <!-- Bootstrap Datepicker-->
   <script src="js/bootstrap-datepicker.min.js"></script>
+  <!-- Phone number input with country flags-->
   <script src="js/intlTelInput-jquery.js"></script>
+  <!-- Bootstrap Table-->
+  <script src="https://unpkg.com/bootstrap-table@1.21.1/dist/bootstrap-table.min.js"></script>
   <!-- Main js file-->
   <script src="js/main.js"></script>
 </html>
