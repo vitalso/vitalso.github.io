@@ -5,6 +5,50 @@ $(function () {
       $(this).toggleClass('open');
     });
 
+    // How it work vertical progress bar
+    $(window).scroll(function(){
+      var scrollAmount = $(window).scrollTop();
+      var progressBar = $('#how-it-work');
+      var progressItem = $('.progress-list .progress-list-item');
+      var progressItemHeight = progressItem.outerHeight(true);
+      
+      if ( progressBar.length ) {
+        var offsetTop = progressBar.offset().top - 300;
+      }
+
+      // calculate the percentage the user has scrolled down the page
+      var scrollPercent = scrollAmount - offsetTop;
+
+      $('.vertical-progress-bar').css({
+          height: scrollPercent + 'px'
+      });
+
+      if ( scrollPercent > 0 ) {
+        progressItem.eq(0).addClass('active');
+      } else {
+        progressItem.eq(0).removeClass('active');
+      }
+
+      if ( scrollPercent > progressItemHeight ) {
+        progressItem.eq(1).addClass('active');
+      } else {
+        progressItem.eq(1).removeClass('active');
+      }
+
+      if ( scrollPercent > progressItemHeight*2 ) {
+        progressItem.eq(2).addClass('active');
+      } else {
+        progressItem.eq(2).removeClass('active');
+      }
+
+      if ( scrollPercent > progressItemHeight*3 ) {
+        progressItem.eq(3).addClass('active');
+      } else {
+        progressItem.eq(3).removeClass('active');
+      }
+    
+    });
+
     // Dropdown behavior like a <select>
     $('.dropdown-select .dropdown-menu a').on('click' , function(e){
       e.preventDefault();
@@ -55,8 +99,51 @@ $(function () {
       }
     });
 
+    // Validate Email
+    var validate_email = function(email){
+      var pattern = /^([a-zA-A0-9_.-])+@([a-zA-Z0-9_.-])+([a-zA-Z])+/;
+      var is_email_valid = false;
+      if(email.match(pattern) != null){
+        is_email_valid = true;
+      }
+      return is_email_valid;
+    }
+    
+    $('#validate-email').on('focusout' , function(){
+      var input_val = $(this).val();
+      var is_success = validate_email(input_val); 
+
+      if ( !is_success ) {
+        $(this).focus();
+        $('button[data-step-action="next"]').addClass('disabled');
+      } else {
+        $('button[data-step-action="next"]').removeClass('disabled');
+      }
+    });
+
+    // Additional input(radio button)
+    $('.additional-radio-btn input[type="radio"]').on('change' , function(){
+      var value = $(this).filter(':checked').val();
+
+      if ( value == 'ja' ) {
+        $(this).closest('.additional-radio-btn').next('.additional-input').removeClass('d-none');
+      } else {
+        $(this).closest('.additional-radio-btn').next('.additional-input').addClass('d-none');
+      }
+
+    });
+
+    // Checked terms and condition
+    $('input[name="terms-and-privacy"]').on('change' , function(){
+
+      if ( $('input[name="terms-and-privacy"]:checked').length >= 2 ) {
+        $('button[data-bs-target="#successAppModal"]').removeClass('disabled');
+      }
+
+    });
+
     // Init jQuery steps
-    var steps = $('.step-app').steps({
+    var steps = $('#app-form').steps({
       onFinish: function () { 
         //alert('complete');
         $('#app-form').addClass('d-none'); // Hide section with steps
@@ -64,22 +151,32 @@ $(function () {
       }
     });
 
+    // Form for new traveler step
+    $('#demo').steps();
+
     steps_api = steps.data('plugin_Steps');
 
-    $('.step-footer button').on('click', function () {
+    $('.app-nav button').on('click', function (e) {
       var idx = steps_api.getStepIndex()+1;
 
-      // Show sidebar question
-      if ( idx == 3 ) {
-        $('.question-sidebar').removeClass('d-none');
+      // Show Email validate modal
+      if ( $(this).data('step-action') == 'next' && idx <= 2 ) {
+        e.preventDefault();
+        $('#validationModal').modal('show');
       }
 
       // Show previous button
-      if ( idx == 4 ) {
-        $('.step-footer button[data-step-action="prev"]').removeClass('d-none');
+      if ( idx == 3 ) {
+        $('.app-nav button[data-step-action="prev"]').removeClass('d-none');
+        $('.app-nav button[data-step-action="next"]').addClass('disabled');
       }
 
 		});
+
+    $('#newTravelerModal').on('hidden.bs.modal', function (e) {
+      $('.traveler-wrap').removeClass('d-none');
+      $('.app-nav button[data-step-action="next"]').removeClass('disabled');
+    })
 
     // Edit Traveler
     $('.edit-traveler').on('click', function (e) {

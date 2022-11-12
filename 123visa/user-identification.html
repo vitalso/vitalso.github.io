@@ -88,8 +88,8 @@
               <div class="d-flex">
                 <div class="panel-flag"><img src="images/USA-flag.jpg" alt="USA"></div>
                 <div class="panel-header">
-                  <div class="subtitle-md">USA - ESTA Application</div>
-                  <p>Non Immigrant Longterm Visa A-O</p>
+                  <div class="subtitle-md">USA - ESTA Antrag</div>
+                  <p>Visa Waiver Program</p>
                 </div>
               </div>
             </div>
@@ -104,58 +104,43 @@
                   <svg class="no-risk-icon">
                     <use xlink:href="images/sprite.svg#no-risk-icon"></use>
                   </svg>
-                  <div><strong class="fs-16">No Risk</strong>
-                    <p class="mb-0 lh-1">Payment via invoice only after successfull approval of the visa.</p>
+                  <div><strong class="fs-16">Kein Risiko</strong>
+                    <p class="mb-0 lh-1">Zahlung der Rechnung erst nach erfolgreicher Genehmigung Deines VISA's</p>
                   </div>
                 </div>
               </div>
               <div class="rounded-3 order-summary my-4">
-                <div class="subtitle-md fw-normal px-3">Order Summary</div>
+                <div class="subtitle-md fw-normal px-3">Zusammenfassung</div>
                 <ul class="order-list m-b4 p-0">
                   <li class="border-bottom d-flex justify-content-between align-items-center">
-                    <p class="mb-0">Visa Fee - John Smith Doe</p>
-                    <p class="mb-0">49.50€</p>
+                    <p class="mb-0 fw-bold">Zusammenfassung - John</p>
+                    <p class="mb-0 fw-bold">€</p>
                   </li>
                   <li class="border-bottom d-flex justify-content-between align-items-center">
-                    <p class="mb-0">Visa Fee - Kate Terry Doe</p>
-                    <p class="mb-0">49.50€</p>
-                  </li>
-                  <li class="border-bottom d-flex justify-content-between align-items-center">
-                    <p class="mb-0">Processing Time - Normal</p>
-                    <p class="mb-0">0€</p>
-                  </li>
-                  <li class="border-bottom d-flex justify-content-between align-items-center">
-                    <p class="mb-0">Visa Fee - John Smith Doe</p>
-                    <p class="mb-0">49.50€</p>
-                  </li>
-                  <li class="border-bottom d-flex justify-content-between align-items-center">
-                    <p class="mb-0">Total Price</p>
+                    <p class="mb-0">Gesamtpreis</p>
                     <p class="mb-0">99€</p>
                   </li>
                 </ul>
                 <p class="ps-3">Included services</p>
-                <ul class="panel-services-list m-0 ps-3">
-                  <li>Final price including all Embassy fees</li>
-                  <li>100% online without visiting an Embassy</li>
+                <ul class="panel-services-list simple-list m-0 ps-3">
+                  <li>Gesamtpeis beinhaltet bereits alle Botschaftsgebühren</li>
+                  <li>Einfache Abwicklung auf Deutsch</li>
+                  <li>100% online ohne nervige Botschaftsbesuche</li>
+                  <li>KEIN RISIKO - Zahlung erst nach Erhalt deines Visums</li>
                 </ul>
               </div>
-              <div class="my-4">
+              <div class="mt-4 mb-2">
                 <label class="custom-checkbox-btn fs-16" for="terms-and-privacy">
-                  <input type="checkbox" name="terms-and-privacy" id="terms-and-privacy"><span class="d-inline-block"></span>By selecting the checkbox you agree to our general terms.
+                  <input type="checkbox" name="terms-and-privacy" id="terms-and-privacy"><span class="d-inline-block"></span>AGB's gelesen und akzeptiert
                 </label>
               </div>
-              <button class="btn btn-primary btn-lg border-0 shadow-none my-2 w-100 fs-6" type="button">Send Application</button>
-              <button class="btn btn-outline-primary btn-lg shadow-none my-2 w-100 fs-6" type="button" data-bs-toggle="modal" data-bs-target="#cancelAppModal"><span>Cancel Application</span></button>
-            </div>
-            <!-- Sent application success-->
-            <div class="col-lg-6 offset-lg-3 d-none">
-              <div class="text-center">
-                <div class="my-4"><img src="images/application-success.svg" alt="app-icon-success"></div>
-                <div class="subtitle-lg mb-3">Your application was sent successfully!</div>
-                <div class="subtitle-sm">Application number: 38883</div>
-                <p class="mt-5">Access your member area to check the status of your application</p>
-                <button class="btn btn-primary btn-lg border-0 shadow-none my-2 px-5 fs-6" type="button">Access Member Area</button>
+              <div class="mb-4">
+                <label class="custom-checkbox-btn fs-16" for="terms-and-privacy-2">
+                  <input type="checkbox" name="terms-and-privacy" id="terms-and-privacy-2"><span class="d-inline-block"></span>Ich verzichte auf mein 14-tägiges Widerrufsrecht und bitte um sofortige Bearbeitung meines Antrags
+                </label>
               </div>
+              <button class="btn btn-primary btn-lg border-0 shadow-none my-2 w-100 fs-6 disabled" type="button" data-bs-toggle="modal" data-bs-target="#successAppModal">Antrag absenden</button>
+              <button class="btn btn-outline-primary btn-lg shadow-none my-2 w-100 fs-6" type="button" data-bs-toggle="modal" data-bs-target="#cancelAppModal"><span>Antrag Abbrechen</span></button>
             </div>
           </div>
         </div>
@@ -168,591 +153,669 @@
                 <div class="d-flex">
                   <div class="panel-flag"><img src="images/USA-flag.jpg" alt="USA"></div>
                   <div class="panel-header">
-                    <div class="subtitle-md">USA - ESTA Application</div>
-                    <p>Non Immigrant Longterm Visa A-O</p>
+                    <div class="subtitle-lg fw-bolder">USA - ESTA Antrag</div>
+                    <p class="text-center">Visa Waiver Program</p>
+                    <div class="text-center"><a class="text-decoration-none gradient-text edit-btn" href="#" data-bs-toggle="modal" data-bs-target="#changeVisaModal"><img src="images/icon-edit.svg" alt="icon-edit">Land / Visa ändern</a></div>
                   </div>
                 </div>
+                <hr class="hr light">
                 <ul class="step-steps mb-0 p-0">
-                  <li data-step-target="step1">
-                    <div class="subtitle-sm fw-normal mb-0">User Identification</div>
+                  <li class="d-none" data-step-target="step1">
+                    <div class="subtitle-sm fw-normal mb-0">Antragsteller</div>
                   </li>
                   <li data-step-target="step2">
-                    <div class="subtitle-sm fw-normal mb-0">Travelers</div>
+                    <div class="subtitle-sm fw-normal mb-0">Antragsteller</div>
                   </li>
                   <li data-step-target="step3">
-                    <div class="subtitle-sm fw-normal mb-0">Personal Information</div>
+                    <div class="subtitle-sm fw-normal mb-0">Reiseteilnehmer</div>
                   </li>
                   <li class="d-none" data-step-target="step4">
-                    <div class="subtitle-sm fw-normal mb-0">Personal Information</div>
+                    <div class="subtitle-sm fw-normal mb-0">Persönliche Daten</div>
                   </li>
                   <li class="d-none" data-step-target="step5">
-                    <div class="subtitle-sm fw-normal mb-0">Personal Information</div>
+                    <div class="subtitle-sm fw-normal mb-0">Persönliche Daten</div>
                   </li>
                   <li class="d-none" data-step-target="step6">
-                    <div class="subtitle-sm fw-normal mb-0">Personal Information</div>
+                    <div class="subtitle-sm fw-normal mb-0">Persönliche Daten</div>
                   </li>
                   <li class="d-none" data-step-target="step7">
-                    <div class="subtitle-sm fw-normal mb-0">Personal Information</div>
+                    <div class="subtitle-sm fw-normal mb-0">Persönliche Daten</div>
                   </li>
                   <li data-step-target="step8">
-                    <div class="subtitle-sm fw-normal mb-0">Contact Information</div>
+                    <div class="subtitle-sm fw-normal mb-0">Persönliche Daten</div>
                   </li>
                   <li data-step-target="step9">
-                    <div class="subtitle-sm fw-normal mb-0">Documentation</div>
+                    <div class="subtitle-sm fw-normal mb-0">US Reiseinformation</div>
                   </li>
                   <li data-step-target="step10">
-                    <div class="subtitle-sm fw-normal mb-0">Legal</div>
+                    <div class="subtitle-sm fw-normal mb-0">Einreisebefragung</div>
                   </li>
-                  <li class="d-none" data-step-target="step11">
-                    <div class="subtitle-sm fw-normal mb-0">Review Application</div>
+                  <li data-step-target="step11">
+                    <div class="subtitle-sm fw-normal mb-0">Zusammenfassung</div>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="col-lg-9 position-relative">
-              <!-- Question sidebar-->
-              <div class="question-sidebar position-absolute rounded-3 top-0 end-0 d-none">
-                <p>Do you have questions?</p>
-                <div class="question-sidebar-person text-center">
-                  <div class="question-sidebar-person-img rounded-circle mb-3"><img src="images/question-person.png" alt="image"></div>
-                  <p class="mb-3">Hello! I’m <strong>Michael Schneider</strong> your personal contact and I’m here to help you!</p>
-                  <p class="mb-2">m.schneider@thailand-pass.de</p>
-                  <p>+49 (0) 40 - 60 77 90 96</p>
-                </div>
-                <button class="close-sidebar position-absolute bg-transparent" type="button">
-                  <svg>
-                    <use xlink:href="images/sprite.svg#off_close"></use>
-                  </svg>
-                </button>
-              </div>
+            <div class="col-lg-6">
               <!-- Step content-->
               <div class="panel bg-white h-100 position-relative">
-                <div class="step-content pb-5">
+                <div class="step-content mb-5 pb-5">
                   <form action="#">
                     <!-- User Identification-->
                     <div class="step-tab-panel" data-step="step1">
-                      <div class="subtitle-lg mb-3">User Identification</div>
-                      <p class="mb-3 fs-16">Please enter your email below, so you can save the application, continue it later or see its status.</p>
+                      <div class="wrap-title">
+                        <div class="subtitle-lg mb-0 text-white">Okey, lass uns starten</div>
+                      </div>
+                      <p class="mb-3 fs-16">Als erstes benötigen wir Deine Emailadresse, so können wir Deinen Antrag speichern und Dir später zuordnen. Du kannst Deinen Antrag jederzeit pausieren und später fortsetzen</p>
+                      <hr class="hr light">
+                      <p class="my-5">Bitte gib Deine Email ein </p>
                       <div class="row mb-5">
                         <div class="col-lg-6">
                           <div class="mb-3">
                             <label class="form-label">Email</label>
-                            <input class="form-control shadow-none" type="email" name="email">
+                            <input class="form-control shadow-none" type="email" name="email" id="validate-email">
                           </div>
                         </div>
                       </div>
-                      <div class="subtitle-sm fw-normal">Validation needed</div>
-                      <p class="fs-16 mb-3">We sent an email with a validation code to john.doe@gmail.com</p>
-                      <div class="mb-3">
-                        <label class="form-label">Validation Code</label>
-                        <input class="form-control shadow-none w-25" type="email">
-                      </div>
-                      <p class="fs-16">Didn’t get the code? <a href="#" class="gradient-text text-decoration-none">Resend</a></p>
                     </div>
-                    <!-- Travelers-->
+                    <!-- Step 2-->
                     <div class="step-tab-panel" data-step="step2">
+                      <div class="wrap-title">
+                        <div class="subtitle-lg mb-0 text-white">Antragsteller</div>
+                      </div>
+                      <p class="mb-3 fs-16">Jetzt benötigen wir die Daten des (Haupt)Anstragstellers. Dieser muss nicht zwangsläufig auch verreisen, ist uns gegenüber aber der Ansprechpartner für eventuelle Rückfragen.</p>
+                      <hr class="hr light">
+                      <div class="row mt-5">
+                        <div class="col">
+                          <div class="mb-3">
+                            <label class="form-label">Vorname</label>
+                            <input class="form-control shadow-none" type="text" name="name">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="mb-3">
+                            <label class="form-label">Nachname</label>
+                            <input class="form-control shadow-none" type="text" name="last-name">
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="mb-3">
+                            <label class="form-label">Straße, Hausnummer</label>
+                            <input class="form-control shadow-none" type="text" name="address">
+                          </div>
+                        </div>
+                      </div>
                       <div class="row">
-                        <div class="col-lg-6">
-                          <div class="subtitle-lg mb-4">Travelers</div>
-                          <p class="mb-4">No travelers selected, please select at least one from the list to continue.</p>
-                          <div class="subtitle-lg mb-4">Travelers</div>
-                          <p class="mb-4">No travelers available, please create at least one traveler to continue.</p>
-                          <button class="btn btn-primary shadow-none border-0 fs-6 mb-4" type="button" data-bs-toggle="modal" data-bs-target="#newTravelerModal">Create Traveler</button>
-                          <div class="subtitle-lg mb-4">Travelers</div>
-                          <div class="d-flex align-items-center traveler-item">
-                            <p class="mb-0">John Smith Doe -  Traveler 1</p><a class="remove-btn ms-auto" href="#" data-bs-toggle="modal" data-bs-target="#removeTravelerModal">
-                              <svg>
-                                <use xlink:href="images/sprite.svg#delete"></use>
-                              </svg></a>
-                          </div>
-                          <div class="d-flex align-items-center traveler-item">
-                            <p class="mb-0">Kate Terry Doe -  Traveler 2</p><a class="remove-btn ms-auto" href="#" data-bs-toggle="modal" data-bs-target="#removeTravelerModal">
-                              <svg>
-                                <use xlink:href="images/sprite.svg#delete"></use>
-                              </svg></a>
-                          </div>
-                        </div>
-                        <div class="col-lg-4 offset-xl-2">
-                          <div class="d-flex align-items-center px-1">
-                            <div class="subtitle-sm fw-normal mb-0">Add travelers</div><a class="gradient-text text-decoration-none fs-16 ms-auto" href="#" data-bs-toggle="modal" data-bs-target="#newTravelerModal">New Traveler</a>
-                          </div>
-                          <hr class="hr">
+                        <div class="col">
                           <div class="mb-3">
-                            <label class="custom-checkbox-btn" for="traveler-1">
-                              <input type="checkbox" name="traveler-name" id="traveler-1"><span class="d-inline-block"></span>John Smith Doe
-                            </label>
+                            <label class="form-label">PLZ</label>
+                            <input class="form-control shadow-none" type="text" name="plz">
                           </div>
+                        </div>
+                        <div class="col">
                           <div class="mb-3">
-                            <label class="custom-checkbox-btn" for="traveler-2">
-                              <input type="checkbox" name="traveler-name" id="traveler-2"><span class="d-inline-block"></span>Kate Terry Doe
-                            </label>
+                            <label class="form-label">Stadt</label>
+                            <input class="form-control shadow-none" type="text" name="stadt">
                           </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
                           <div class="mb-3">
-                            <label class="custom-checkbox-btn" for="traveler-3">
-                              <input type="checkbox" name="traveler-name" id="traveler-3"><span class="d-inline-block"></span>Frank Terry Smith Doe
-                            </label>
-                          </div>
-                          <button class="btn btn-outline-primary shadow-none"><span>Add travelers</span></button>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Personal Information-->
-                    <div class="step-tab-panel" data-step="step3">
-                      <div class="subtitle-lg">Personal Information</div>
-                      <div class="progress rounded-pill mt-4">
-                        <div class="progress-bar rounded-pill bg-gradient" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <div class="traveler-info mt-5">
-                        <div class="subtitle-md mb-0">John Smith Doe - Traveler 1</div>
-                      </div>
-                      <div class="d-flex mt-4">
-                        <div class="me-3 mw-100px w-100">
-                          <label class="form-label">Title</label>
-                          <div class="dropdown dropdown-select">
-                            <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownTitle1" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Mr</span></button>
-                            <ul class="dropdown-menu w-100" aria-labelledby="dropdownTitle1">
-                              <li><a class="dropdown-item" href="#">Mr</a></li>
-                              <li><a class="dropdown-item" href="#">Ms</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="mb-3 mw-130px w-100">
-                          <label class="form-label">Gender</label>
-                          <div class="dropdown dropdown-select">
-                            <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownMale1" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Male</span></button>
-                            <ul class="dropdown-menu w-100" aria-labelledby="dropdownMale1">
-                              <li><a class="dropdown-item" href="#">Male</a></li>
-                              <li><a class="dropdown-item" href="#">Female</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="traveler-info mt-5">
-                        <div class="subtitle-md mb-0">Kate Terry Doe - Traveler 2</div>
-                      </div>
-                      <div class="d-flex mt-4">
-                        <div class="me-3 mw-100px w-100">
-                          <label class="form-label">Title</label>
-                          <div class="dropdown dropdown-select">
-                            <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownTitle2" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Mr</span></button>
-                            <ul class="dropdown-menu w-100" aria-labelledby="dropdownTitle2">
-                              <li><a class="dropdown-item" href="#">Mr</a></li>
-                              <li><a class="dropdown-item" href="#">Ms</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="me-3 mw-130px w-100">
-                          <label class="form-label">Gender</label>
-                          <div class="dropdown dropdown-select">
-                            <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownMale2" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Male</span></button>
-                            <ul class="dropdown-menu w-100" aria-labelledby="dropdownMale2">
-                              <li><a class="dropdown-item" href="#">Male</a></li>
-                              <li><a class="dropdown-item" href="#">Female</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Personal information #2-->
-                    <div class="step-tab-panel" data-step="step4">
-                      <div class="subtitle-lg">Personal Information</div>
-                      <div class="progress rounded-pill mt-4">
-                        <div class="progress-bar rounded-pill bg-gradient" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <div class="traveler-info mt-5">
-                        <div class="subtitle-md mb-0">John Smith Doe - Traveler 1</div>
-                      </div>
-                      <div class="mt-4 mw-500px w-100">
-                        <div class="row">
-                          <div class="col">
-                            <div class="mb-3">
-                              <label class="form-label">First Name</label>
-                              <input class="form-control shadow-none" type="text" name="name" value="John">
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="mb-3">
-                              <label class="form-label">Last Name</label>
-                              <input class="form-control shadow-none" type="text" name="last-name" value="Doe">
+                            <label class="form-label">Land</label>
+                            <div class="dropdown dropdown-select">
+                              <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountry" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span></span></button>
+                              <ul class="dropdown-menu w-100" aria-labelledby="dropdownCountry">
+                                <li><a class="dropdown-item" href="#">Thailand</a></li>
+                                <li><a class="dropdown-item" href="#">USA</a></li>
+                                <li><a class="dropdown-item" href="#">Zambia</a></li>
+                              </ul>
                             </div>
                           </div>
                         </div>
                         <div class="col">
                           <div class="mb-3">
-                            <label class="form-label">Full Name</label>
-                            <input class="form-control shadow-none" type="text" name="full-name" value="John Smith Doe">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="traveler-info mt-5">
-                        <div class="subtitle-md mb-0">Kate Terry Doe - Traveler 2</div>
-                      </div>
-                      <div class="mt-4 mw-500px w-100">
-                        <div class="row">
-                          <div class="col">
-                            <div class="mb-3">
-                              <label class="form-label">First Name</label>
-                              <input class="form-control shadow-none" type="text" name="name" value="Kate">
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="mb-3">
-                              <label class="form-label">Last Name</label>
-                              <input class="form-control shadow-none" type="text" name="last-name" value="Doe">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="mb-3">
-                            <label class="form-label">Full Name</label>
-                            <input class="form-control shadow-none" type="text" name="full-name" value="Kate Terry Doe">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Personal information #3-->
-                    <div class="step-tab-panel" data-step="step5">
-                      <div class="subtitle-lg">Personal Information</div>
-                      <div class="progress rounded-pill mt-4">
-                        <div class="progress-bar rounded-pill bg-gradient" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <div class="traveler-info mt-5">
-                        <div class="subtitle-md mb-0">John Smith Doe - Traveler 1</div>
-                      </div>
-                      <div class="mt-4 mw-500px w-100">
-                        <div class="row">
-                          <div class="col">
-                            <div class="mb-3">
-                              <label class="form-label">Marital Status</label>
-                              <div class="dropdown dropdown-select">
-                                <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownMarried1" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Married</span></button>
-                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownMarried1">
-                                  <li><a class="dropdown-item" href="#">Married</a></li>
-                                  <li><a class="dropdown-item" href="#">Not married</a></li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col"></div>
-                        </div>
-                      </div>
-                      <div class="traveler-info mt-5">
-                        <div class="subtitle-md mb-0">Kate Terry Doe - Traveler 2</div>
-                      </div>
-                      <div class="mt-4 mw-500px w-100">
-                        <div class="row">
-                          <div class="col">
-                            <div class="mb-3">
-                              <label class="form-label">Marital Status</label>
-                              <div class="dropdown dropdown-select">
-                                <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownMarried2" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Married</span></button>
-                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownMarried2">
-                                  <li><a class="dropdown-item" href="#">Married</a></li>
-                                  <li><a class="dropdown-item" href="#">Not married</a></li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Personal information #4-->
-                    <div class="step-tab-panel" data-step="step6">
-                      <div class="subtitle-lg">Personal Information</div>
-                      <div class="progress rounded-pill mt-4">
-                        <div class="progress-bar rounded-pill bg-gradient" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <div class="traveler-info mt-5">
-                        <div class="subtitle-md mb-0">John Smith Doe - Traveler 1</div>
-                      </div>
-                      <div class="mt-4">
-                        <div class="row">
-                          <div class="col">
-                            <div class="mb-3">
-                              <label class="form-label">Country of birth</label>
-                              <div class="dropdown dropdown-select">
-                                <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountryBirth1" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="images/flags/germany.png" alt="flag"><span class="ms-3">Germany</span></button>
-                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownCountryBirth1">
-                                  <li><a class="dropdown-item" href="images/flags/germany.png"><img src="images/flags/germany.png" alt="flag"><span class="ms-3">Germany</span></a></li>
-                                  <li><a class="dropdown-item" href="images/flags/united-states-of-america.png"><img src="images/flags/united-states-of-america.png" alt="flag"><span class="ms-3">USA</span></a></li>
-                                  <li><a class="dropdown-item" href="images/flags/india.png"><img src="images/flags/india.png" alt="flag"><span class="ms-3">India</span></a></li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <label class="form-label">City of birth</label>
-                            <input class="form-control shadow-none" type="text" name="city">
-                          </div>
-                          <div class="col">
-                            <label class="form-label">Date of birth</label>
-                            <input class="datepicker form-control shadow-none" type="text" placeholder="dd - mm - yyyy">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="traveler-info mt-5">
-                        <div class="subtitle-md mb-0">Kate Terry Doe - Traveler 2</div>
-                      </div>
-                      <div class="mt-4">
-                        <div class="row">
-                          <div class="col">
-                            <div class="mb-3">
-                              <label class="form-label">Country of birth</label>
-                              <div class="dropdown dropdown-select">
-                                <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountryBirth2" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="images/flags/germany.png" alt="flag"><span class="ms-3">Germany</span></button>
-                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownCountryBirth2">
-                                  <li><a class="dropdown-item" href="images/flags/germany.png"><img src="images/flags/germany.png" alt="flag"><span class="ms-3">Germany</span></a></li>
-                                  <li><a class="dropdown-item" href="images/flags/united-states-of-america.png"><img src="images/flags/united-states-of-america.png" alt="flag"><span class="ms-3">USA</span></a></li>
-                                  <li><a class="dropdown-item" href="images/flags/india.png"><img src="images/flags/india.png" alt="flag"><span class="ms-3">India</span></a></li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <label class="form-label">City of birth</label>
-                            <input class="form-control shadow-none" type="text" name="city">
-                          </div>
-                          <div class="col">
-                            <label class="form-label">Date of birth</label>
-                            <input class="datepicker form-control shadow-none" type="text" placeholder="dd - mm - yyyy">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Personal Information #5-->
-                    <div class="step-tab-panel" data-step="step7">
-                      <div class="subtitle-lg">Personal Information</div>
-                      <div class="progress rounded-pill mt-4">
-                        <div class="progress-bar rounded-pill bg-gradient" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <div class="traveler-info mt-5">
-                        <div class="subtitle-md mb-0">John Smith Doe - Traveler 1</div>
-                      </div>
-                      <div class="mt-4 mw-500px">
-                        <div class="row">
-                          <div class="col-5">
-                            <label class="form-label">Nationality</label>
-                            <div class="dropdown dropdown-select">
-                              <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownNationality1" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="images/flags/germany.png" alt="flag"><span class="ms-3">Germany</span></button>
-                              <ul class="dropdown-menu w-100" aria-labelledby="dropdownNationality1">
-                                <li><a class="dropdown-item" href="images/flags/germany.png"><img src="images/flags/germany.png" alt="flag"><span class="ms-3">Germany</span></a></li>
-                                <li><a class="dropdown-item" href="images/flags/united-states-of-america.png"><img src="images/flags/united-states-of-america.png" alt="flag"><span class="ms-3">USA</span></a></li>
-                                <li><a class="dropdown-item" href="images/flags/india.png"><img src="images/flags/india.png" alt="flag"><span class="ms-3">India</span></a></li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <label class="form-label d-block">Do you have any other nationality?</label>
-                            <label class="radio-btn-like-button" for="nationality-yes-1">
-                              <input type="radio" name="nationality-1" value="yes" id="nationality-yes-1"><span class="btn btn-outline-dark btn-lg d-flex align-items-center shadow-none fs-6 me-3 px-4">Yes</span>
-                            </label>
-                            <label class="radio-btn-like-button" for="nationality-no-1">
-                              <input type="radio" name="nationality-1" value="no" id="nationality-no-1"><span class="btn btn-outline-dark btn-lg d-flex align-items-center shadow-none fs-6 me-3 px-4">No</span>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="traveler-info mt-5">
-                        <div class="subtitle-md mb-0">Kate Terry Doe - Traveler 2</div>
-                      </div>
-                      <div class="mt-4 mw-500px">
-                        <div class="row">
-                          <div class="col-5">
-                            <label class="form-label">Nationality</label>
-                            <div class="dropdown dropdown-select">
-                              <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownNationality2" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="images/flags/germany.png" alt="flag"><span class="ms-3">Germany</span></button>
-                              <ul class="dropdown-menu w-100" aria-labelledby="dropdownNationality2">
-                                <li><a class="dropdown-item" href="images/flags/germany.png"><img src="images/flags/germany.png" alt="flag"><span class="ms-3">Germany</span></a></li>
-                                <li><a class="dropdown-item" href="images/flags/united-states-of-america.png"><img src="images/flags/united-states-of-america.png" alt="flag"><span class="ms-3">USA</span></a></li>
-                                <li><a class="dropdown-item" href="images/flags/india.png"><img src="images/flags/india.png" alt="flag"><span class="ms-3">India</span></a></li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <label class="form-label">Do you have any other nationality?</label>
-                            <label class="radio-btn-like-button" for="nationality-yes-2">
-                              <input type="radio" name="nationality-2" value="yes" id="nationality-yes-2"><span class="btn btn-outline-dark btn-lg d-flex align-items-center shadow-none fs-6 me-3 px-4">Yes</span>
-                            </label>
-                            <label class="radio-btn-like-button" for="nationality-no-2">
-                              <input type="radio" name="nationality-2" value="no" id="nationality-no-2"><span class="btn btn-outline-dark btn-lg d-flex align-items-center shadow-none fs-6 me-3 px-4">No</span>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Contact Information-->
-                    <div class="step-tab-panel" data-step="step8">
-                      <div class="subtitle-lg">Contact Information</div>
-                      <div class="traveler-info mt-5">
-                        <div class="subtitle-md mb-0">John Smith Doe - Traveler 1</div>
-                      </div>
-                      <div class="mt-4 mw-500px">
-                        <div class="row">
-                          <div class="col">
-                            <label class="form-label">Email</label>
-                            <input class="form-control shadow-none" type="text" name="email">
-                          </div>
-                          <div class="col">
-                            <label class="form-label">Phone number</label>
+                            <label class="form-label">Telefonnummer</label>
                             <input class="phone form-control shadow-none" type="tel" name="phone">
                           </div>
                         </div>
                       </div>
                     </div>
-                    <!-- Documentation-->
-                    <div class="step-tab-panel" data-step="step9">
-                      <div class="subtitle-lg">Documentation</div>
-                      <div class="traveler-info mt-5">
-                        <div class="subtitle-md mb-0">John Smith Doe - Traveler 1</div>
+                    <!-- Travelers-->
+                    <div class="step-tab-panel" data-step="step3">
+                      <div class="wrap-title">
+                        <div class="subtitle-lg mb-0 text-white">Reiseteilnehmer</div>
                       </div>
-                      <div class="mt-4 mw-500px">
+                      <p class="mb-3 fs-16">Auf dieser Seite wählen Sie alle Teilnehmer Ihrer Reise auf für die ein ESTA Antrag gestellt werden soll. So müssen Sie nicht für jeden (Mit)Reisenden einen eigenen Antrag absenden.</p>
+                      <p class="mb-3 fs-16">Wir haben bereits einen ersten Reisenden anhand Ihrer Angaben auf der vorherigen Seite angelegt. Sie können nun weitere Reisende hinzufügen oder die Angaben vervollständigen.</p>
+                      <hr class="hr light">
+                      <p class="mb-3 fs-16">Bisher keine Reiseteilnehmer angelegt, bitte lege mindestens einen Reisenden an um fortzufahren</p>
+                      <div class="text-center my-5">
+                        <button class="btn btn-primary border-0 shadow-none fw-normal" type="button" data-bs-toggle="modal" data-bs-target="#newTravelerModal">Reiseteilnehmer anlegen</button>
+                      </div>
+                      <div class="traveler-wrap mb-5 d-none">
+                        <div class="text-end my-4">
+                          <p class="fs-18">Reiseteilnehmer anlegen</p>
+                        </div>
+                        <p>Bitte wähle einen oder mehrere Reiseteilnehmer aus um fortzufahren</p>
+                        <div class="d-flex align-items-center justify-content-between">
+                          <div>
+                            <label class="custom-checkbox-btn" for="traveler-1">
+                              <input type="checkbox" name="traveler-name" id="traveler-1"><span class="d-inline-block"></span>John Smith Doe
+                            </label>
+                          </div>
+                          <div class="ms-auto"><a class="remove-btn d-inline-block me-2" href="#" data-bs-toggle="modal" data-bs-target="#newTravelerModal"><img src="images/edit-icon.svg" alt="edit-icon"></a><a class="remove-btn d-inline-block" href="#" data-bs-toggle="modal" data-bs-target="#removeTravelerModal">
+                              <svg>
+                                <use xlink:href="images/sprite.svg#delete"></use>
+                              </svg></a></div>
+                        </div>
+                      </div>
+                      <!--button(type='button').btn.btn-secondary.btn-lg.shadow-none.me-3.px-4.fs-6 Kein Reiseteilnehmer ausgewählt-->
+                    </div>
+                    <!-- Personal Information-->
+                    <div class="step-tab-panel" data-step="step4">
+                      <div class="wrap-title">
+                        <div class="subtitle-lg mb-0 text-white">Persönliche Daten</div>
+                      </div>
+                      <p class="mb-3 fs-16">Die US Behörden verlangen diverse persönliche Informationen von jedem Antragsteller. Die Daten müssen für jeden Reiseteilnehmer einzeln angegeben werden. Wir haben die Eingabe anhand der Namen Deiner Reiseteilnehmer gruppiert.</p>
+                      <div class="progress rounded-pill mt-4">
+                        <div class="progress-bar rounded-pill bg-gradient" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <div class="traveler-info mt-3">
+                        <div class="subtitle-md mb-0">John Dou - Reiseteilnehmer 1</div>
+                      </div>
+                      <div class="row my-5">
+                        <div class="col">
+                          <label class="form-label">Geburtsdatum</label>
+                          <input class="datepicker form-control shadow-none" type="text" placeholder="dd.mm.yyyy">
+                        </div>
+                        <div class="col">
+                          <label class="form-label">Geburtsort</label>
+                          <input class="form-control shadow-none" type="text" placeholder="Geburtsort">
+                        </div>
+                        <div class="col-12 mt-3">
+                          <label class="form-label">Geburtsland <span class="text-danger">*</span></label>
+                          <div class="dropdown dropdown-select">
+                            <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountry" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Deutschland</span></button>
+                            <ul class="dropdown-menu w-100" aria-labelledby="dropdownCountry">
+                              <li><a class="dropdown-item" href="#">Deutschland</a></li>
+                              <li><a class="dropdown-item" href="#">USA</a></li>
+                              <li><a class="dropdown-item" href="#">Zambia</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="mb-3 fs-16 fw-bolder">Künstlername</p>
+                      <p class="mb-3">Verwendest Du einen Künstlernamen ?</p>
+                      <div class="additional-radio-btn">
+                        <label class="custom-radio-btn me-3" for="ja1">
+                          <input type="radio" name="name1" value="ja" id="ja1"><span class="d-inline-block rounded-circle"></span>Ja
+                        </label>
+                        <label class="custom-radio-btn me-3" for="nein1">
+                          <input type="radio" name="name1" value="nein" checked id="nein1"><span class="d-inline-block rounded-circle"></span>Nein
+                        </label>
+                      </div>
+                      <div class="row my-3 additional-input d-none">
+                        <div class="col-6">
+                          <label class="form-label fw-bolder">Wie lautet Dein Künstlername ?</label>
+                          <input class="form-control shadow-none" type="text">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Personal information #2-->
+                    <div class="step-tab-panel" data-step="step5">
+                      <div class="wrap-title">
+                        <div class="subtitle-lg mb-0 text-white">Persönliche Daten</div>
+                      </div>
+                      <p class="mb-3 fs-16">Die US Behörden verlangen diverse persönliche Informationen von jedem Antragsteller. Die Daten müssen für jeden Reiseteilnehmer einzeln angegeben werden. Wir haben die Eingabe anhand der Namen Deiner Reiseteilnehmer gruppiert.</p>
+                      <div class="progress rounded-pill mt-4">
+                        <div class="progress-bar rounded-pill bg-gradient" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <div class="traveler-info mt-3">
+                        <div class="subtitle-md mb-0">John Dou - Reiseteilnehmer 1</div>
+                      </div>
+                      <p class="fw-bolder fs-16 mb-3 mt-4">Daten der Eltern</p>
+                      <p>Die US Behörden verlangen Angaben zu den Namen Deiner Eltern</p>
+                      <div class="mt-4">
+                        <p class="fw-bolder">Elternteil 1</p>
                         <div class="row">
                           <div class="col">
-                            <label class="form-label">Travel document number</label>
-                            <input class="form-control shadow-none" type="text" placeholder="HT854749">
+                            <div class="mb-3">
+                              <label class="form-label fw-bolder">Vorname</label>
+                              <input class="form-control shadow-none" type="text" name="name">
+                            </div>
                           </div>
                           <div class="col">
-                            <label class="form-label">Place of Issue</label>
+                            <div class="mb-3">
+                              <label class="form-label fw-bolder">Nachname</label>
+                              <input class="form-control shadow-none" type="text" name="last-name">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-4">
+                        <p class="fw-bolder">Elternteil 2</p>
+                        <div class="row">
+                          <div class="col">
+                            <div class="mb-3">
+                              <label class="form-label fw-bolder">Vorname</label>
+                              <input class="form-control shadow-none" type="text" name="name">
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="mb-3">
+                              <label class="form-label fw-bolder">Nachname</label>
+                              <input class="form-control shadow-none" type="text" name="last-name">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Personal information #3-->
+                    <div class="step-tab-panel" data-step="step6">
+                      <div class="wrap-title">
+                        <div class="subtitle-lg mb-0 text-white">Persönliche Daten</div>
+                      </div>
+                      <p class="mb-3 fs-16">Die US Behörden verlangen diverse persönliche Informationen von jedem Antragsteller. Die Daten müssen für jeden Reiseteilnehmer einzeln angegeben werden. Wir haben die Eingabe anhand der Namen Deiner Reiseteilnehmer gruppiert.</p>
+                      <div class="progress rounded-pill mt-4">
+                        <div class="progress-bar rounded-pill bg-gradient" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <div class="traveler-info mt-3">
+                        <div class="subtitle-md mb-0">John Dou - Reiseteilnehmer 1</div>
+                      </div>
+                      <p class="my-4">Die notwendigen Angaben für ESTA unterscheiden sich je nach Staatsangehörigkeit. Wir brauchen daher ein paar Angaben zu deiner Nationalität und eventueller weiterer Staatsbürgerschaften</p>
+                      <div class="mt-4">
+                        <p class="fw-bolder">Ausstellungsland Reisepass</p>
+                        <p class="mb-3">In welchem Land wurde dein Reisepasses ausgestellt ?</p>
+                        <div class="row">
+                          <div class="col-6">
+                            <div class="dropdown dropdown-select">
+                              <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountry" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Deutschland</span></button>
+                              <ul class="dropdown-menu w-100" aria-labelledby="dropdownCountry">
+                                <li><a class="dropdown-item" href="#">Deutschland</a></li>
+                                <li><a class="dropdown-item" href="#">USA</a></li>
+                                <li><a class="dropdown-item" href="#">Zambia</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-5">
+                        <p class="fw-bolder">Weitere Staatsbürgerschaften</p>
+                        <p class="mb-3">Hast Du eine weitere Staatsangehörigkeit ?</p>
+                        <div class="additional-radio-btn">
+                          <label class="custom-radio-btn me-3" for="ja2">
+                            <input type="radio" name="2" value="ja" checked id="ja2"><span class="d-inline-block rounded-circle"></span>Ja
+                          </label>
+                          <label class="custom-radio-btn me-3" for="nein2">
+                            <input type="radio" name="2" value="nein" id="nein2"><span class="d-inline-block rounded-circle"></span>Nein
+                          </label>
+                        </div>
+                        <div class="row additional-input">
+                          <div class="col-6">
+                            <p class="fw-bolder">Bitte auswählen</p>
+                            <div class="dropdown dropdown-select">
+                              <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountry" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Deutschland</span></button>
+                              <ul class="dropdown-menu w-100" aria-labelledby="dropdownCountry">
+                                <li><a class="dropdown-item" href="#">Deutschland</a></li>
+                                <li><a class="dropdown-item" href="#">USA</a></li>
+                                <li><a class="dropdown-item" href="#">Zambia</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="my-5">
+                        <p class="fw-bolder">Weitere Pässe oder Ausweise</p>
+                        <p class="mb-3">Wurde jemals ein Reisepass oder Personalausweis eines anderen Landes für Dich ausgestellt</p>
+                        <div class="additional-radio-btn">
+                          <label class="custom-radio-btn me-3" for="ja3">
+                            <input type="radio" name="3" value="ja" checked id="ja3"><span class="d-inline-block rounded-circle"></span>Ja
+                          </label>
+                          <label class="custom-radio-btn me-3" for="nein3">
+                            <input type="radio" name="3" value="nein" id="nein3"><span class="d-inline-block rounded-circle"></span>Nein
+                          </label>
+                        </div>
+                        <div class="row additional-input">
+                          <div class="col-6">
+                            <p class="fw-bolder">Bitte auswählen</p>
+                            <div class="dropdown dropdown-select">
+                              <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountry" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Deutschland</span></button>
+                              <ul class="dropdown-menu w-100" aria-labelledby="dropdownCountry">
+                                <li><a class="dropdown-item" href="#">Deutschland</a></li>
+                                <li><a class="dropdown-item" href="#">USA</a></li>
+                                <li><a class="dropdown-item" href="#">Zambia</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Personal information #4-->
+                    <div class="step-tab-panel" data-step="step7">
+                      <div class="wrap-title">
+                        <div class="subtitle-lg mb-0 text-white">Persönliche Daten</div>
+                      </div>
+                      <p class="mb-3 fs-16">Die US Behörden verlangen diverse persönliche Informationen von jedem Antragsteller. Die Daten müssen für jeden Reiseteilnehmer einzeln angegeben werden. Wir haben die Eingabe anhand der Namen Deiner Reiseteilnehmer gruppiert.</p>
+                      <div class="progress rounded-pill mt-4">
+                        <div class="progress-bar rounded-pill bg-gradient" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <div class="traveler-info mt-3">
+                        <div class="subtitle-md mb-0">John Dou - Reiseteilnehmer 1</div>
+                      </div>
+                      <p class="mt-4">Wir benötigen nun verschiedene Angaben aus deinem Reisepass</p>
+                      <div class="row">
+                        <div class="col">
+                          <div class="mb-3">
+                            <label class="form-label fw-bolder">Reisepassnummer</label>
+                            <input class="form-control shadow-none" type="text">
+                            <div class="text-danger">Die Reisepassnummer findest du in der rechten oberen Ecke deines Passes</div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="mb-3">
+                            <label class="form-label fw-bolder">Gültig bis</label>
+                            <input class="datepicker form-control shadow-none" type="text" placeholder="dd.mm.yyyy">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-4">
+                        <div class="col">
+                          <div class="mb-3">
+                            <label class="form-label fw-bolder">Ausstellungsdatum</label>
+                            <input class="datepicker form-control shadow-none" type="text" placeholder="dd.mm.yyyy">
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="mb-3">
+                            <label class="form-label fw-bolder">Ausstellungsort</label>
                             <input class="form-control shadow-none" type="text">
                           </div>
                         </div>
-                        <div class="row mt-4">
-                          <div class="col">
-                            <label class="form-label">Date of Issue</label>
-                            <input class="datepicker form-control shadow-none" type="text" placeholder="dd - mm - yyyy ">
-                          </div>
-                          <div class="col">
-                            <label class="form-label">Date of Expiry </label>
-                            <input class="datepicker form-control shadow-none" type="text" placeholder="dd - mm - yyyy ">
-                          </div>
-                        </div>
-                        <div class="row mt-4">
-                          <div class="col">
-                            <div class="form-group files">
-                              <label for="upload-file-1">
-                                <svg>
-                                  <use xlink:href="images/sprite.svg#icon-file-upload"></use>
-                                </svg>Drag and drop or <strong>browse</strong> files
-                              </label>
-                              <input class="form-control shadow-none" type="file" multiple="" id="upload-file-1"><span></span>
-                            </div>
-                            <div class="file-upload-list">
-                              <div class="item-file d-none">
-                                <div class="d-flex align-items-center">
-                                  <svg>
-                                    <use xlink:href="images/sprite.svg#icon-file-item"></use>
-                                  </svg>
-                                  <div class="w-100">
-                                    <div class="file-name">IMG_342.jpg</div>
-                                    <div class="progress rounded-pill">
-                                      <div class="progress-bar rounded-pill bg-gradient" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                  </div>
-                                </div>
+                      </div>
+                      <p class="my-4">Bitte Vorder- und Rückseite Deines Passes hier hochladen. Wenn Du derzeit kein Foto deines Passes hast, kannst Du es uns auch später senden</p>
+                      <p class="mb-2 fw-bold">Upload Pass</p>
+                      <div class="form-group files mb-4">
+                        <label for="upload-file"><img src="images/upload-file-icon.png" alt="upload-file-icon">
+                          <p class="mb-0">Datei hierher ziehen oder Datei öffnen <br> Unterstützt JPEG, JPG, PNG, PDF</p>
+                        </label>
+                        <input class="form-control shadow-none" type="file" multiple="" id="upload-file"><span></span>
+                      </div>
+                      <div class="file-upload-list">
+                        <div class="item-file d-none">
+                          <div class="d-flex align-items-center">
+                            <svg>
+                              <use xlink:href="images/sprite.svg#icon-file-item"></use>
+                            </svg>
+                            <div class="w-100">
+                              <div class="file-name">IMG_342.jpg</div>
+                              <div class="progress rounded-pill">
+                                <div class="progress-bar rounded-pill bg-gradient" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
+                    <!-- Personal Information #5-->
+                    <div class="step-tab-panel" data-step="step8">
+                      <div class="wrap-title">
+                        <div class="subtitle-lg mb-0 text-white">Persönliche Daten</div>
+                      </div>
+                      <p class="mb-3 fs-16">Die US Behörden verlangen diverse persönliche Informationen von jedem Antragsteller. Die Daten müssen für jeden Reiseteilnehmer einzeln angegeben werden. Wir haben die Eingabe anhand der Namen Deiner Reiseteilnehmer gruppiert.</p>
+                      <div class="progress rounded-pill mt-4">
+                        <div class="progress-bar rounded-pill bg-gradient" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <div class="traveler-info mt-3">
+                        <div class="subtitle-md mb-0">John Dou - Reiseteilnehmer 1</div>
+                      </div>
+                      <p class="mt-4 fs-bolder">Arbeitgeber</p>
+                      <p>Die US Behörden verlangen Angaben zu deinem aktuellen oder früheren Arbeitgeber</p>
+                      <div class="row">
+                        <div class="col-6 mb-3">
+                          <label class="form-label fw-bolder">Name aktueller oder letzter Arbeitgeber</label>
+                          <input class="form-control shadow-none" type="text">
+                        </div>
+                        <div class="col-12 mb-3">
+                          <label class="form-label fw-bolder">Strasse + Hausnummer</label>
+                          <input class="form-control shadow-none" type="text">
+                        </div>
+                        <div class="col mb-3">
+                          <label class="form-label fw-bolder">PLZ</label>
+                          <input class="form-control shadow-none" type="text">
+                        </div>
+                        <div class="col mb-3">
+                          <label class="form-label fw-bolder">Ort</label>
+                          <input class="form-control shadow-none" type="text">
+                        </div>
+                        <div class="col-12 mb-3">
+                          <label class="form-label fw-bolder">Land</label>
+                          <div class="dropdown dropdown-select">
+                            <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountry" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Deutschland</span></button>
+                            <ul class="dropdown-menu w-100" aria-labelledby="dropdownCountry">
+                              <li><a class="dropdown-item" href="#">Deutschland</a></li>
+                              <li><a class="dropdown-item" href="#">USA</a></li>
+                              <li><a class="dropdown-item" href="#">Zambia</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col-6 mb-3">
+                          <label class="form-label fw-bolder">Telefon</label>
+                          <input class="phone form-control shadow-none" type="tel" name="phone">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Contact Information-->
+                    <div class="step-tab-panel" data-step="step9">
+                      <div class="wrap-title">
+                        <div class="subtitle-lg mb-0 text-white">US Reiseinformationen</div>
+                      </div>
+                      <p class="mt-3 mb-5">Die US Behörden verlangen Angaben zum Zweck Deiner Reise und deinem Aufenthaltsort in den USA</p>
+                      <p class="mb-3 fw-bold">Transit / Durchreise</p>
+                      <p class="mb-3 fw-bolder">Erfolgt Deine Reise in die USA im Transit in ein anderes Land?</p>
+                      <label class="custom-radio-btn me-3" for="ja4">
+                        <input type="radio" name="4" checked id="ja4"><span class="d-inline-block rounded-circle"></span>Ja
+                      </label>
+                      <label class="custom-radio-btn me-3" for="nein4">
+                        <input type="radio" name="4" id="nein4"><span class="d-inline-block rounded-circle"></span>Nein
+                      </label>
+                      <div class="row my-3">
+                        <div class="col-6">
+                          <label class="form-label fw-bolder">Bitte auswählen</label>
+                          <div class="dropdown dropdown-select">
+                            <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountry" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Deutschland</span></button>
+                            <ul class="dropdown-menu w-100" aria-labelledby="dropdownCountry">
+                              <li><a class="dropdown-item" href="#">Deutschland</a></li>
+                              <li><a class="dropdown-item" href="#">USA</a></li>
+                              <li><a class="dropdown-item" href="#">Zambia</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="mb-3 fw-bold">US Kontaktinfo</p>
+                      <p class="mb-3">Unabhängig von Deinem Aufenthaltsort in den USA verlangen die die Behörden die Angabe eines Kontaktes in den USA. Dies kann auch dein Aufenthaltsort (z.B. Hotel) in den USA sein. Möglich ist auch die Angabe der Daten von Freunden & Verwandten</p>
+                      <div class="row">
+                        <div class="col mb-3">
+                          <label class="form-label fw-bolder">Adresse</label>
+                          <input class="form-control shadow-none" type="text">
+                        </div>
+                        <div class="col mb-3">
+                          <label class="form-label fw-bolder">Stadt</label>
+                          <input class="form-control shadow-none" type="text">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col mb-3">
+                          <label class="form-label fw-bolder">Bundesstaat</label>
+                          <div class="dropdown dropdown-select">
+                            <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountry" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Texas</span></button>
+                            <ul class="dropdown-menu w-100" aria-labelledby="dropdownCountry">
+                              <li><a class="dropdown-item" href="#">Deutschland</a></li>
+                              <li><a class="dropdown-item" href="#">USA</a></li>
+                              <li><a class="dropdown-item" href="#">Zambia</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col mb-3">
+                          <label class="form-label fw-bolder">Telefon</label>
+                          <input class="phone form-control shadow-none" type="tel" name="phone">
+                        </div>
+                      </div>
+                      <p class="fw-bold mb-3">Aufenthaltsort in den USA</p>
+                      <p>Bitte gib deinen geplanten Aufenthaltsort in den USA ein, dies kann ein Hotel, ein Ferienhaus oder auch die Adresse von Freunden und Bekannten sein. Hast Du mehrere Aufenthaltsorte geplant gib den ersten nach Deiner Ankunft ein</p>
+                      <p class="mb-3 fw-bolder">Ist Dein Aufenthaltsort in den USA der gleiche wie die oben angegebene Adresse Deines Kontakts in den USA ?</p>
+                      <label class="custom-radio-btn me-3" for="ja5">
+                        <input type="radio" name="5" checked id="ja5"><span class="d-inline-block rounded-circle"></span>Ja
+                      </label>
+                      <label class="custom-radio-btn me-3" for="nein5">
+                        <input type="radio" name="5" id="nein5"><span class="d-inline-block rounded-circle"></span>Nein
+                      </label>
+                      <p class="fw-bold mb-3">Notfallkontakt</p>
+                      <p>Die Behörden verlangen die Angabe eines Notfallkontaktes innerhalb oder außerhalb der USA</p>
+                      <div class="row">
+                        <div class="col mb-3">
+                          <label class="form-label fw-bolder">Name</label>
+                          <input class="form-control shadow-none" type="text">
+                        </div>
+                        <div class="col mb-3">
+                          <label class="form-label fw-bolder">Vorname</label>
+                          <input class="form-control shadow-none" type="text">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col mb-3">
+                          <label class="form-label fw-bolder">Email</label>
+                          <input class="form-control shadow-none" type="text">
+                        </div>
+                        <div class="col mb-3">
+                          <label class="form-label fw-bolder">Telefon</label>
+                          <input class="phone form-control shadow-none" type="tel" name="phone">
+                        </div>
+                      </div>
+                    </div>
                     <!-- Legal-->
                     <div class="step-tab-panel" data-step="step10">
-                      <div class="subtitle-lg">Legal</div>
-                      <div class="traveler-info mt-5">
-                        <div class="subtitle-md mb-0">John Smith Doe - Traveler 1</div>
+                      <div class="wrap-title">
+                        <div class="subtitle-lg mb-0 text-white">Einreisebefragung</div>
                       </div>
-                      <p class="my-3">Has this traveler ever been arrested or convicted for a crime that harmed another person?</p>
+                      <p>Bitte beantworte nun einige zu Dir bzw. dem Zweck Deiner Reise. Bitte beachte, dass die Beantwortung von einer oder mehrere dieser Fragen mit 'Ja' in der Regel zur Ablehnung Deines Antrags führt</p>
+                      <p class="my-3 fw-bolder">Leidet der Reisende an einer körperlichen oder geistigen Störung, ist er drogenabhängig oder hat er eine der folgenden Krankheiten: Cholera, Diphtherie, Tuberkulose, Pest, Pocken, Gelbfieber, Ebola, Lassa, Marburg, Krim-Kongo, schwere akute Atemwegserkrankungen, die auf andere Menschen übertragen werden können und zum Tod führen?</p>
                       <label class="custom-radio-btn me-3" for="q1-l1">
-                        <input type="radio" name="q1" id="q1-l1"><span class="d-inline-block rounded-circle"></span>yes
+                        <input type="radio" name="q1" checked id="q1-l1"><span class="d-inline-block rounded-circle"></span>Ja
                       </label>
                       <label class="custom-radio-btn me-3" for="q1-l2">
-                        <input type="radio" name="q1" checked id="q1-l2"><span class="d-inline-block rounded-circle"></span>no
+                        <input type="radio" name="q1" id="q1-l2"><span class="d-inline-block rounded-circle"></span>Nein
                       </label>
-                      <p class="my-3">Are you known by any other name or aliases?<a class="btn btn-link text-decoration-none attention-btn px-2 shadow-none popover-dismiss" tabindex="0" role="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" title="Are you known by any other name or aliases?" data-bs-content="Vivamus magna justo, terdum eu ipsum id, pretium. Morbi felis sapien, aliquet et convallis.">
-                          <svg>
-                            <use xlink:href="images/sprite.svg#info_circle"></use>
-                          </svg></a></p>
+                      <p class="my-3 fw-bolder">Wurde dieser Reisende jemals wegen einer Straftat verhaftet oder verurteilt, die eine andere Person oder eine staatliche Behörde geschädigt hat?</p>
                       <label class="custom-radio-btn me-3" for="q2-l1">
-                        <input type="radio" name="q2" id="q2-l1"><span class="d-inline-block rounded-circle"></span>yes
+                        <input type="radio" name="q2" checked id="q2-l1"><span class="d-inline-block rounded-circle"></span>Ja
                       </label>
                       <label class="custom-radio-btn me-3" for="q2-l2">
-                        <input type="radio" name="q2" checked id="q2-l2"><span class="d-inline-block rounded-circle"></span>no
+                        <input type="radio" name="q2" id="q2-l2"><span class="d-inline-block rounded-circle"></span>Nein
                       </label>
-                      <p class="my-3">Has this traveler ever been arrested or convicted for a crime that harmed another person?</p>
+                      <p class="my-3 fw-bolder">Hat dieser Reisende jemals gegen ein Gesetz verstoßen, das den Besitz, den Konsum oder die Verteilung von verbotenen Drogen betrifft?</p>
                       <label class="custom-radio-btn me-3" for="q3-l1">
-                        <input type="radio" name="q3" id="q3-l1"><span class="d-inline-block rounded-circle"></span>yes
+                        <input type="radio" name="q3" checked id="q3-l1"><span class="d-inline-block rounded-circle"></span>Ja
                       </label>
                       <label class="custom-radio-btn me-3" for="q3-l2">
-                        <input type="radio" name="q3" checked id="q3-l2"><span class="d-inline-block rounded-circle"></span>no
+                        <input type="radio" name="q3" id="q3-l2"><span class="d-inline-block rounded-circle"></span>Nein
                       </label>
-                      <p class="my-3">Has this traveler ever been arrested or convicted for a crime that harmed another person?</p>
+                      <p class="my-3 fw-bolder">Versucht dieser Reisende, sich an terroristischen, spionagebezogenen, sabotagebezogenen oder völkermörderischen Aktivitäten zu beteiligen oder zu beteiligen?</p>
                       <label class="custom-radio-btn me-3" for="q4-l1">
-                        <input type="radio" name="q4" id="q4-l1"><span class="d-inline-block rounded-circle"></span>yes
+                        <input type="radio" name="q4" checked id="q4-l1"><span class="d-inline-block rounded-circle"></span>Ja
                       </label>
                       <label class="custom-radio-btn me-3" for="q4-l2">
-                        <input type="radio" name="q4" checked id="q4-l2"><span class="d-inline-block rounded-circle"></span>no
+                        <input type="radio" name="q4" id="q4-l2"><span class="d-inline-block rounded-circle"></span>Nein
                       </label>
-                      <div class="traveler-info mt-5">
-                        <div class="subtitle-md mb-0">Kate Terry Doe - Traveler 2</div>
-                      </div>
-                      <p class="my-3">Has this traveler ever been arrested or convicted for a crime that harmed another person?</p>
-                      <label class="custom-radio-btn me-3" for="q1-2-l1">
-                        <input type="radio" name="q1-2" id="q1-2-l1"><span class="d-inline-block rounded-circle"></span>yes
+                      <p class="my-3 fw-bolder">Hat dieser Reisende jemals für sich oder andere einen Betrug begangen, um ein Visum oder eine Einreise in die Vereinigten Staaten zu erhalten?</p>
+                      <label class="custom-radio-btn me-3" for="q5-l1">
+                        <input type="radio" name="q5" checked id="q5-l1"><span class="d-inline-block rounded-circle"></span>Ja
                       </label>
-                      <label class="custom-radio-btn me-3" for="q1-2-l2">
-                        <input type="radio" name="q1-2" checked id="q1-2-l2"><span class="d-inline-block rounded-circle"></span>no
+                      <label class="custom-radio-btn me-3" for="q5-l2">
+                        <input type="radio" name="q5" id="q5-l2"><span class="d-inline-block rounded-circle"></span>Nein
                       </label>
-                      <p class="my-3">Are you known by any other name or aliases?<a class="btn btn-link text-decoration-none attention-btn px-2 shadow-none popover-dismiss" tabindex="0" role="button" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" title="Are you known by any other name or aliases?" data-bs-content="Vivamus magna justo, terdum eu ipsum id, pretium. Morbi felis sapien, aliquet et convallis.">
-                          <svg>
-                            <use xlink:href="images/sprite.svg#info_circle"></use>
-                          </svg></a></p>
-                      <label class="custom-radio-btn me-3" for="q2-2-l1">
-                        <input type="radio" name="q2-2" id="q2-2-l1"><span class="d-inline-block rounded-circle"></span>yes
+                      <p class="my-3 fw-bolder">Ist dieser Reisende auf der Suche nach einem Arbeitsplatz in den Vereinigten Staaten oder hat er jemals illegal in den Vereinigten Staaten gearbeitet?</p>
+                      <label class="custom-radio-btn me-3" for="q6-l1">
+                        <input type="radio" name="q6" checked id="q6-l1"><span class="d-inline-block rounded-circle"></span>Ja
                       </label>
-                      <label class="custom-radio-btn me-3" for="q2-2-l2">
-                        <input type="radio" name="q2-2" checked id="q2-2-l2"><span class="d-inline-block rounded-circle"></span>no
+                      <label class="custom-radio-btn me-3" for="q6-l2">
+                        <input type="radio" name="q6" id="q6-l2"><span class="d-inline-block rounded-circle"></span>Nein
                       </label>
-                      <p class="my-3">Has this traveler ever been arrested or convicted for a crime that harmed another person?</p>
-                      <label class="custom-radio-btn me-3" for="q3-2-l1">
-                        <input type="radio" name="q3-2" id="q3-2-l1"><span class="d-inline-block rounded-circle"></span>yes
+                      <p class="my-3 fw-bolder">Wurde für den aktuellen oder früheren Reisepass dieses Reisenden ein US-Visum verweigert oder wurde ihm an einem der Einreisehäfen die Einreise in die USA verweigert?</p>
+                      <label class="custom-radio-btn me-3" for="q7-l1">
+                        <input type="radio" name="q7" checked id="q7-l1"><span class="d-inline-block rounded-circle"></span>Ja
                       </label>
-                      <label class="custom-radio-btn me-3" for="q3-2-l2">
-                        <input type="radio" name="q3-2" checked id="q3-2-l2"><span class="d-inline-block rounded-circle"></span>no
+                      <label class="custom-radio-btn me-3" for="q7-l2">
+                        <input type="radio" name="q7" id="q7-l2"><span class="d-inline-block rounded-circle"></span>Nein
                       </label>
-                      <p class="my-3">Has this traveler ever been arrested or convicted for a crime that harmed another person?</p>
-                      <label class="custom-radio-btn me-3" for="q4-2-l1">
-                        <input type="radio" name="q4-2" id="q4-2-l1"><span class="d-inline-block rounded-circle"></span>yes
+                      <p class="my-3 fw-bolder">Hat sich dieser Reisende jemals länger als die von der Regierung zugestandene Einreisezeit in den Vereinigten Staaten aufgehalten?</p>
+                      <label class="custom-radio-btn me-3" for="q8-l1">
+                        <input type="radio" name="q8" checked id="q8-l1"><span class="d-inline-block rounded-circle"></span>Ja
                       </label>
-                      <label class="custom-radio-btn me-3" for="q4-2-l2">
-                        <input type="radio" name="q4-2" checked id="q4-2-l2"><span class="d-inline-block rounded-circle"></span>no
+                      <label class="custom-radio-btn me-3" for="q8-l2">
+                        <input type="radio" name="q8" id="q8-l2"><span class="d-inline-block rounded-circle"></span>Nein
+                      </label>
+                      <p class="my-3 fw-bolder">Ist dieser Reisende seit dem 1. März 2011 jemals in den Iran, Irak, Libyen, Nordkorea, Somalia, Sudan, Syrien oder Jemen gereist oder hat sich dort aufgehalten?</p>
+                      <label class="custom-radio-btn me-3" for="q9-l1">
+                        <input type="radio" name="q9" checked id="q9-l1"><span class="d-inline-block rounded-circle"></span>Ja
+                      </label>
+                      <label class="custom-radio-btn me-3" for="q9-l2">
+                        <input type="radio" name="q9" id="q9-l2"><span class="d-inline-block rounded-circle"></span>Nein
                       </label>
                     </div>
                     <!-- Review Application-->
                     <div class="step-tab-panel" data-step="step11">
-                      <div class="subtitle-lg">Review Application</div>
-                      <div class="traveler-info mt-5">
-                        <div class="subtitle-md mb-0">John Smith Doe - Traveler 1</div>
+                      <div class="wrap-title">
+                        <div class="subtitle-lg mb-0 text-white">Fragen zur Zulässigkeit</div>
                       </div>
-                      <div class="my-3 d-flex">
-                        <div class="subtitle-sm fw-normal">Personal Information</div><a class="edit-traveler gradient-text text-decoration-none fs-16 ms-auto" href="#">edit</a>
+                      <p>Wir haben nun alle Angaben die wir benötigen. Bitte prüfe diese Zusammenfassung nochmal auf Richtigkeit, bei Fehler kannst Du durch einen Klick auf der linken Seite jederzeit zum gewünschten Schritt zurück springen. Wenn alles korrekt ist kannst Du weiter gehen</p>
+                      <hr class="hr light">
+                      <div class="subtitle-md mt-5 mb-0">John Dou - Reiseteilnehmer 1</div>
+                      <div class="mt-3 d-flex">
+                        <div class="subtitle-sm fw-normal">Persönliche Informationen</div><a class="edit-traveler gradient-text text-decoration-none fs-16 ms-auto" href="#">Bearbeiten</a>
                       </div>
-                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">Title</span><span>Mr</span></div>
-                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">Gender</span><span>Male</span></div>
-                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">First name</span><span>John</span></div>
-                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">Last name</span><span>Doe</span></div>
+                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">Titel</span><span>Mrs</span></div>
+                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">Geschlecht</span><span>Weiblich</span></div>
+                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">Vorname</span><span>John</span></div>
+                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">Nachname</span><span>Dou</span></div>
                       <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">Full name</span><span>John Smith Doe</span></div>
-                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">Country at birth</span><span>Germany</span></div>
-                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">City of birth</span><span>Berlin</span></div>
-                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">Date of birth</span><span>10 may 1980</span></div>
-                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">Marital status</span><span>Married</span></div>
+                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">Geburtsland</span><span>Germany</span></div>
+                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">Geburtsort</span><span>1</span></div>
+                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">Geburtsdatum</span><span>10 may 1980</span></div>
+                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">Ehestand</span><span></span></div>
+                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">Staatsangehörigkeit</span><span></span></div>
+                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">Hast Du eine weitere Nationalität ?</span><span>No</span></div>
+                      <div class="mt-3 d-flex">
+                        <div class="subtitle-sm fw-normal">Persönliche Informationen</div><a class="edit-traveler gradient-text text-decoration-none fs-16 ms-auto" href="#">Bearbeiten</a>
+                      </div>
+                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">Email</span><span></span></div>
+                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">Telefonnummer</span><span></span></div>
+                      <div class="mt-3 d-flex">
+                        <div class="subtitle-sm fw-normal">Dokumentation</div><a class="edit-traveler gradient-text text-decoration-none fs-16 ms-auto" href="#">Bearbeiten</a>
+                      </div>
+                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">Reisepassnummer </span><span>a</span></div>
+                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">[Reisepass] Ort der Ausstellung </span><span>w</span></div>
+                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">[Reisepass] Datum der Ausstellung</span><span>3.2.2021</span></div>
+                      <div class="d-flex align-items-center traveler-item fs-16"><span class="w-50">[Reisepass] Ablaufdatum </span><span>3.3.2029</span></div>
                     </div>
                   </form>
                 </div>
-                <div class="step-footer bottom-0 position-absolute start-0 text-end w-100">
-                  <button class="step-btn btn btn-outline-primary btn-lg shadow-none me-3 px-4 fs-6 d-none" data-step-action="prev"><span>Previous</span></button>
-                  <button class="step-btn btn btn-primary btn-lg shadow-none border-0 px-5 fs-6" data-step-action="next">Next</button>
-                  <button class="step-btn btn btn-primary btn-lg shadow-none border-0 px-5 fs-6" data-step-action="finish">Confirm Application</button>
+                <div class="step-footer app-nav bottom-0 position-absolute start-0 text-end w-100">
+                  <button class="step-btn btn btn-outline-primary btn-lg shadow-none me-3 px-4 fs-6 d-none" data-step-action="prev"><span>Zurück</span></button>
+                  <button class="step-btn btn btn-primary btn-lg shadow-none border-0 px-5 fs-6 disabled" data-step-action="next">Weiter</button>
+                  <button class="step-btn btn btn-primary btn-lg shadow-none border-0 px-5 fs-6" data-step-action="finish">Weiter</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <!-- Question sidebar-->
+              <div class="question-sidebar text-center">
+                <div class="subtitle-sm text-white">Sie haben Fragen?</div>
+                <div class="question-sidebar-person">
+                  <div class="question-sidebar-person-img rounded-circle mb-3"><img src="images/question-person.png" alt="image"></div>
+                  <p class="mb-3 text-white fs-6">Hallo! Mein Name ist Michael Schneider. Ich bin ihr persönlicher Ansprechpartner und helfe Ihnen gerne.</p>
+                  <p class="mb-2 text-white fs-6">m.schneider@thailand-pass.de</p>
+                  <p class="text-white fs-6">+49 (0) 40 - 60 77 90 96</p>
                 </div>
               </div>
             </div>
@@ -786,18 +849,40 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header border-bottom-0">
-            <h5 class="modal-title fw-bold" id="exampleModalLabel">Validation</h5>
+            <h5 class="modal-title fw-bold subtitle-lg mb-0" id="exampleModalLabel">Email Verifizierung</h5>
             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <form action="#">
             <div class="modal-body">
-              <p>Please enter the validation code we sent to the email john.doe@gmail.com</p>
-              <label class="form-label">Validation Code</label>
-              <input class="form-control shadow-none" type="text">
+              <p class="mb-3">Wir werden eine Email mit einem 4-stelligen Code an <b>john.doe@gmail.com</b> senden. </p>
+              <p class="mb-3">Du musst diesen Code auf der nächsten Seite eingeben.</p>
+              <p class="mb-0">Wenn Deine Emailadresse korrekt ist, klicke auf <b>Code anfordern</b>.</p>
+              <p>Wenn Deine Emailadresse nicht korrekt ist, klicke auf <b>Email ändern</b> um diese zu ändern</p>
             </div>
             <div class="modal-footer border-top-0 justify-content-between">
-              <button class="btn btn-primary btn-lg border-0 shadow-none m-0" type="submti">Verify</button>
-              <p>Didn’t get the code? <a href="#" class="gradient-text text-decoration-none">Resend</a></p>
+              <button class="btn btn-outline-primary btn-lg shadow-none m-0" type="button" data-bs-dismiss="modal"><span>Email ändern</span></button>
+              <button class="btn btn-primary btn-lg border-0 shadow-none m-0" type="button" data-bs-toggle="modal" data-bs-target="#codeModal" data-bs-dismiss="modal">Code anfordern</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Code modal-->
+    <div class="modal fade" id="codeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title fw-bold subtitle-lg mb-0" id="exampleModalLabel">Code eingeben</h5>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form action="#">
+            <div class="modal-body">
+              <p class="mb-3">Bitte gib den 4-stelligen Code ein den du gerade per Email erhalten hast</p>
+            </div>
+            <div class="modal-footer border-top-0 justify-content-between">
+              <button class="btn btn-outline-primary btn-lg shadow-none w-30 px-0" type="button" data-bs-dismiss="modal"><span>Abbrechen</span></button>
+              <button class="btn btn-primary btn-lg border-0 shadow-none m-0 w-30 px-0" type="button">Erneut senden</button>
+              <button class="btn btn-primary btn-lg border-0 shadow-none m-0 w-30 px-0" type="button">Fortsetzen</button>
             </div>
           </form>
         </div>
@@ -849,28 +934,36 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header border-bottom-0">
-            <h5 class="modal-title fw-bold" id="exampleModalLabel">Change Visa</h5>
+            <h5 class="modal-title fw-bold" id="exampleModalLabel">Land / Visa ändern</h5>
             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <form action="#">
             <div class="modal-body">
               <div class="mb-3">
-                <label class="form-label">Select travel country</label>
+                <label class="form-label">Wohin möchten Sie verreisen</label>
                 <div class="dropdown dropdown-select">
-                  <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountry" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span></span></button>
+                  <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountry" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Bitte auswählen</span></button>
                   <ul class="dropdown-menu w-100" aria-labelledby="dropdownCountry">
-                    <li>
-                      <input class="form-control search-input shadow-none" type="text" placeholder="Search Country">
-                    </li>
                     <li><a class="dropdown-item" href="#">Thailand</a></li>
                     <li><a class="dropdown-item" href="#">USA</a></li>
                     <li><a class="dropdown-item" href="#">Zambia</a></li>
                   </ul>
                 </div>
               </div>
+              <div class="mb-3">
+                <label class="form-label">Wählen Sie den Visatyp</label>
+                <div class="dropdown dropdown-select">
+                  <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownVisaType" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Bitte auswählen</span></button>
+                  <ul class="dropdown-menu w-100" aria-labelledby="dropdownVisaType">
+                    <li><a class="dropdown-item" href="#">Visa Exempted (B-1)</a></li>
+                    <li><a class="dropdown-item" href="#">Tourist / Transit (General) (B-2-1)</a></li>
+                    <li><a class="dropdown-item" href="#">Short-Term General (C-3-1)</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div class="modal-footer border-top-0 justify-content-between">
-              <button class="btn btn-primary btn-lg border-0 shadow-none m-0" type="submit">Change</button>
+              <button class="btn btn-primary btn-lg border-0 shadow-none m-0" type="submit">Bestätigen</button>
             </div>
           </form>
         </div>
@@ -881,51 +974,109 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header border-bottom-0">
-            <h5 class="modal-title fw-bold" id="exampleModalLabel">New Traveler</h5>
+            <h5 class="modal-title subtitle-lg fw-bolder mt-4" id="exampleModalLabel">Reiseteilnehmer</h5>
             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <form class="step-app" action="#">
+          <form class="step-app" action="#" id="demo">
             <div class="modal-body">
               <ul class="step-steps horizontal-steps mb-4 p-0 align-items-center d-flex justify-content-center mt-0">
                 <li class="mb-0" data-step-target="step-personal">
-                  <div class="subtitle-sm fw-normal mb-0">Personal Information</div>
+                  <div class="subtitle-sm fw-normal mb-0">Persönliche Daten</div>
                 </li>
                 <li class="mb-0" data-step-target="step-passport">
-                  <div class="subtitle-sm fw-normal mb-0">Passport Information</div>
+                  <div class="subtitle-sm fw-normal mb-0">Passdaten</div>
                 </li>
               </ul>
               <div class="step-content">
                 <form action="#">
                   <div class="step-tab-panel" data-step="step-personal">
-                    <div class="subtitle-sm fw-normal mb-3">Personal Information</div>
+                    <div class="subtitle-sm fw-normal mb-3">Persönliche Informationen</div>
                     <div class="mb-3">
-                      <label class="form-label">Gender</label>
-                      <div class="dropdown dropdown-select w-25">
-                        <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownMale" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Male</span></button>
-                        <ul class="dropdown-menu w-100" aria-labelledby="dropdownMale">
-                          <li><a class="dropdown-item" href="#">Male</a></li>
-                          <li><a class="dropdown-item" href="#">Female</a></li>
-                        </ul>
+                      <div class="row">
+                        <div class="col">
+                          <label class="form-label">Vorname</label>
+                          <input class="form-control shadow-none" type="text" name="name" placeholder="John">
+                        </div>
+                        <div class="col">
+                          <label class="form-label">Nachname</label>
+                          <input class="form-control shadow-none" type="text" placeholder="Doe">
+                        </div>
                       </div>
                     </div>
                     <div class="mb-3">
-                      <label class="form-label">First Name</label>
-                      <input class="form-control shadow-none" type="text" name="name" placeholder="John">
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label">Surname</label>
-                      <input class="form-control shadow-none" type="text" placeholder="Doe">
+                      <div class="row">
+                        <div class="col-6">
+                          <label class="form-label">Geschlecht</label>
+                          <div class="dropdown dropdown-select">
+                            <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownMale" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Male</span></button>
+                            <ul class="dropdown-menu w-100" aria-labelledby="dropdownMale">
+                              <li><a class="dropdown-item" href="#">Male</a></li>
+                              <li><a class="dropdown-item" href="#">Female</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div class="mb-3">
                       <div class="row">
                         <div class="col">
-                          <label class="form-label">Country of birth</label>
+                          <label class="form-label">Staatsbürgerschaft</label>
                           <div class="dropdown dropdown-select">
-                            <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountryBirth" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="images/flags/germany.png" alt="flag"><span class="ms-3">Germany</span></button>
+                            <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountryInfo" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span></span></button>
+                            <ul class="dropdown-menu w-100" aria-labelledby="dropdownCountryInfo">
+                              <li><a class="dropdown-item" href="#">USA</a></li>
+                              <li><a class="dropdown-item" href="#">Germany</a></li>
+                              <li><a class="dropdown-item" href="#">India</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <label class="form-label">Geburtsdatum</label>
+                          <div class="row">
+                            <div class="col-4 pe-0">
+                              <div class="dropdown dropdown-select arrow-move">
+                                <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownDateDay" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tag</span></button>
+                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownDateDay">
+                                  <li><a class="dropdown-item" href="#">1</a></li>
+                                  <li><a class="dropdown-item" href="#">2</a></li>
+                                  <li><a class="dropdown-item" href="#">3</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-4 pe-0">
+                              <div class="dropdown dropdown-select arrow-move">
+                                <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownDateMonth" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Monat</span></button>
+                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownDateMonth">
+                                  <li><a class="dropdown-item" href="#">January</a></li>
+                                  <li><a class="dropdown-item" href="#">February</a></li>
+                                  <li><a class="dropdown-item" href="#">March</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-4">
+                              <div class="dropdown dropdown-select arrow-move">
+                                <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownDateYear" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Jahr</span></button>
+                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownDateYear">
+                                  <li><a class="dropdown-item" href="#">2000</a></li>
+                                  <li><a class="dropdown-item" href="#">2001</a></li>
+                                  <li><a class="dropdown-item" href="#">2002</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <div class="row">
+                        <div class="col">
+                          <label class="form-label">Geburtsland</label>
+                          <div class="dropdown dropdown-select">
+                            <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountryBirth" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span></span></button>
                             <ul class="dropdown-menu w-100" aria-labelledby="dropdownCountryBirth">
-                              <li><a class="dropdown-item" href="images/flags/germany.png"><img src="images/flags/germany.png" alt="flag"><span class="ms-3">Germany</span></a></li>
-                              <li><a class="dropdown-item" href="images/flags/united-states-of-america.png"><img src="images/flags/united-states-of-america.png" alt="flag"><span class="ms-3">USA</span></a></li>
-                              <li><a class="dropdown-item" href="images/flags/india.png"><img src="images/flags/india.png" alt="flag"><span class="ms-3">India</span></a></li>
+                              <li><a class="dropdown-item" href="#">Germany</a></li>
+                              <li><a class="dropdown-item" href="#">USA</a></li>
+                              <li><a class="dropdown-item" href="#">India</a></li>
                             </ul>
                           </div>
                         </div>
@@ -937,53 +1088,98 @@
                     </div>
                   </div>
                   <div class="step-tab-panel" data-step="step-passport">
-                    <div class="subtitle-sm fw-normal mb-3">Passport Information</div>
+                    <div class="subtitle-sm fw-normal mb-3">Passdaten</div>
                     <div class="mb-3">
                       <div class="row">
                         <div class="col">
-                          <label class="form-label">Citizenship</label>
-                          <div class="dropdown dropdown-select">
-                            <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCitizenship" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="images/flags/germany.png" alt="flag"><span class="ms-3">Germany</span></button>
-                            <ul class="dropdown-menu w-100" aria-labelledby="dropdownCitizenship">
-                              <li><a class="dropdown-item" href="images/flags/germany.png"><img src="images/flags/germany.png" alt="flag"><span class="ms-3">Germany</span></a></li>
-                              <li><a class="dropdown-item" href="images/flags/united-states-of-america.png"><img src="images/flags/united-states-of-america.png" alt="flag"><span class="ms-3">USA</span></a></li>
-                              <li><a class="dropdown-item" href="images/flags/india.png"><img src="images/flags/india.png" alt="flag"><span class="ms-3">India</span></a></li>
-                            </ul>
+                          <label class="form-label">Nummer des Reisepass [<span class="text-danger">?</span>]</label>
+                          <input class="form-control shadow-none" type="text" placeholder="Berlin">
+                        </div>
+                        <div class="col">
+                          <label class="form-label">Datum der Ausstellung [<span class="text-danger">?</span>]</label>
+                          <div class="row">
+                            <div class="col-4 pe-0">
+                              <div class="dropdown dropdown-select arrow-move">
+                                <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownDateDay2" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tag</span></button>
+                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownDateDay2">
+                                  <li><a class="dropdown-item" href="#">1</a></li>
+                                  <li><a class="dropdown-item" href="#">2</a></li>
+                                  <li><a class="dropdown-item" href="#">3</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-4 pe-0">
+                              <div class="dropdown dropdown-select arrow-move">
+                                <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownDateMonth2" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Monat</span></button>
+                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownDateMonth2">
+                                  <li><a class="dropdown-item" href="#">January</a></li>
+                                  <li><a class="dropdown-item" href="#">February</a></li>
+                                  <li><a class="dropdown-item" href="#">March</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-4">
+                              <div class="dropdown dropdown-select arrow-move">
+                                <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownDateYear2" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Jahr</span></button>
+                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownDateYear2">
+                                  <li><a class="dropdown-item" href="#">2000</a></li>
+                                  <li><a class="dropdown-item" href="#">2001</a></li>
+                                  <li><a class="dropdown-item" href="#">2002</a></li>
+                                </ul>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div class="col"></div>
                       </div>
                     </div>
                     <div class="mb-3">
                       <div class="row">
                         <div class="col">
-                          <label class="form-label">Passport Number</label>
-                          <input class="form-control shadow-none" type="text" placeholder="HT854749">
+                          <label class="form-label">Ort der Ausstellung [<span class="text-danger">?</span>]</label>
+                          <input class="form-control shadow-none" type="text">
                         </div>
                         <div class="col">
-                          <label class="form-label">Place of Issue</label>
-                          <input class="form-control shadow-none" type="text" placeholder="Germany">
+                          <label class="form-label">Ablaufdatum [<span class="text-danger">?</span>]</label>
+                          <div class="row">
+                            <div class="col-4 pe-0">
+                              <div class="dropdown dropdown-select arrow-move">
+                                <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownDateDay3" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tag</span></button>
+                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownDateDay3">
+                                  <li><a class="dropdown-item" href="#">1</a></li>
+                                  <li><a class="dropdown-item" href="#">2</a></li>
+                                  <li><a class="dropdown-item" href="#">3</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-4 pe-0">
+                              <div class="dropdown dropdown-select arrow-move">
+                                <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownDateMonth3" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Monat</span></button>
+                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownDateMonth3">
+                                  <li><a class="dropdown-item" href="#">January</a></li>
+                                  <li><a class="dropdown-item" href="#">February</a></li>
+                                  <li><a class="dropdown-item" href="#">March</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-4">
+                              <div class="dropdown dropdown-select arrow-move">
+                                <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownDateYear3" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Jahr</span></button>
+                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownDateYear3">
+                                  <li><a class="dropdown-item" href="#">2000</a></li>
+                                  <li><a class="dropdown-item" href="#">2001</a></li>
+                                  <li><a class="dropdown-item" href="#">2002</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="mb-3">
-                      <div class="row">
-                        <div class="col">
-                          <label class="form-label">Date of Issue</label>
-                          <input class="datepicker form-control shadow-none" type="text">
-                        </div>
-                        <div class="col">
-                          <label class="form-label">Date of Expiry </label>
-                          <input class="datepicker form-control shadow-none" type="text">
-                        </div>
-                      </div>
-                    </div>
+                    <p class="mb-3">Bitte Vorder- und Rückseite Deines Passes hier hochladen. Wenn Du derzeit kein Foto deines Passes hast, kannst Du jetzt eines aufnehmen oder es uns später senden [<span class="text-danger">?</span>]</p>
                     <div class="mb-3">
                       <div class="form-group files">
-                        <label for="upload-file">
-                          <svg>
-                            <use xlink:href="images/sprite.svg#icon-file-upload"></use>
-                          </svg>Upload Passport
+                        <label for="upload-file"><img src="images/upload-file-icon.png" alt="upload-file-icon">
+                          <p class="mb-0">Datei hierher ziehen oder Datei öffnen <br> Unterstützt JPEG, JPG, PNG, PDF</p>
                         </label>
                         <input class="form-control shadow-none" type="file" multiple="" id="upload-file"><span></span>
                       </div>
@@ -1006,6 +1202,12 @@
                   </div>
                 </form>
               </div>
+              <div class="step-footer mt-5">
+                <button class="btn btn-outline-primary btn-lg shadow-none me-3 px-4 fs-6" type="button" data-bs-dismiss="modal"><span>Abbrechen</span></button>
+                <button class="step-btn btn btn-outline-primary btn-lg shadow-none me-3 px-4 fs-6" data-step-action="prev"><span>Zurück</span></button>
+                <button class="step-btn btn btn-primary btn-lg shadow-none border-0 px-5 fs-6" data-step-action="next">Weiter</button>
+                <button class="step-btn btn btn-primary btn-lg shadow-none border-0 px-5 fs-6" data-step-action="finish">Anlegen</button>
+              </div>
             </div>
           </form>
         </div>
@@ -1016,15 +1218,15 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header border-bottom-0">
-            <h5 class="modal-title fw-bold" id="exampleModalLabel">Remove Traveler</h5>
+            <h5 class="modal-title fw-bold" id="exampleModalLabel">Reisenden entfernen</h5>
             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p class="fs-16">Are you sure you want to remove Kate Terry Doe from your list travelers?</p>
+            <p class="fs-16">Sind Sie sich sicher, dass Sie das entfernen wollen John Dou von Ihrer Liste Reisende?</p>
           </div>
           <div class="modal-footer border-top-0 justify-content-between flex-nowrap">
-            <button class="btn btn-outline-primary btn-lg shadow-none m-0 w-50 me-2" type="button" data-bs-dismiss="modal"><span>Cancel</span></button>
-            <button class="btn btn-primary btn-lg border-0 shadow-none m-0 w-50 ms-2" type="button">Remove</button>
+            <button class="btn btn-outline-primary btn-lg shadow-none m-0 w-50 me-2" type="button" data-bs-dismiss="modal"><span>Nein, nicht entfernen</span></button>
+            <button class="btn btn-primary btn-lg border-0 shadow-none m-0 w-50 ms-2" type="button">Ja, entfernen</button>
           </div>
         </div>
       </div>
@@ -1034,15 +1236,35 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header border-bottom-0">
-            <h5 class="modal-title fw-bold" id="exampleModalLabel">Cancel Application</h5>
+            <h5 class="modal-title fw-bold" id="exampleModalLabel">Allgemeine Hinweise</h5>
             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p class="fs-16">Are you sure you want to cancel your application? All your process will be deleted.</p>
+            <p class="fs-16">Bist Du sicher, dass Du den Antrag abbrechen möchtest? Deine Eingaben gehen unter Umständen verloren.</p>
           </div>
           <div class="modal-footer border-top-0 justify-content-between flex-nowrap">
-            <button class="btn btn-outline-primary btn-lg shadow-none m-0 w-50 me-2" type="button"><span>Don’t cancel</span></button>
-            <button class="btn btn-primary btn-lg border-0 shadow-none m-0 w-50 ms-2" type="button" data-bs-dismiss="modal">Cancel Application</button>
+            <button class="btn btn-outline-primary btn-lg shadow-none m-0 w-50 me-2 px-0" type="button"><span>Nein, nicht abbrechen</span></button>
+            <button class="btn btn-primary btn-lg border-0 shadow-none m-0 w-50 ms-2 px-0" type="button" data-bs-dismiss="modal">Ja, ich möchte abbrechen</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Success App Modal-->
+    <div class="modal fade" id="successAppModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content position-relative">
+          <div class="modal-header border-bottom-0 p-0 position-absolute top-0">
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center p-0">
+            <div class="bg-gradient p-5"><img src="images/success-icon.png" alt="success-icon">
+              <div class="subtitle-sm text-white">Dein Antrag wurde erfolgreich übermittelt</div>
+              <p class="text-white">Wir werden uns mit Dir in Verbindung setzen, wenn wir weitere Fragen haben. Sobald dein Antrag genehmigt ist, erhälst Du eine Nachricht von uns. Du kannst den aktuellen Status auch jederzeit in Deinem Kundenbereich überprüfen</p>
+            </div>
+            <p class="fs-5 fw-bolder mt-3">Kundenbereich</p>
+            <p class="text-danger">Kundenbereich</p>
+            <p class="fs-5 fw-bolder mt-5">Antragsnummer</p>
+            <p>38099284</p>
           </div>
         </div>
       </div>

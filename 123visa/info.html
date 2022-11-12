@@ -83,21 +83,22 @@
       <section class="bg-thin-grey py-3 min-vh-100">
         <div class="container custom-container">
           <div class="row">
-            <div class="col-lg-3 ps-0">
+            <div class="col-lg-3">
               <div class="panel bg-white h-100">
                 <div class="d-flex">
                   <div class="panel-flag"><img src="images/USA-flag.jpg" alt="USA"></div>
                   <div class="panel-header">
-                    <div class="subtitle-md">USA - ESTA Application</div>
-                    <p>Non Immigrant Longterm Visa A-O</p><a class="text-decoration-none gradient-text edit-btn" href="#" data-bs-toggle="modal" data-bs-target="#changeVisaModal"><img src="images/icon-edit.svg" alt="icon-edit">Change Country/Visa</a>
+                    <div class="subtitle-lg fw-bolder">USA - ESTA Antrag</div>
+                    <p class="text-center">Visa Waiver Program</p>
+                    <div class="text-center"><a class="text-decoration-none gradient-text edit-btn" href="#" data-bs-toggle="modal" data-bs-target="#changeVisaModal"><img src="images/icon-edit.svg" alt="icon-edit">Land / Visa ändern</a></div>
                   </div>
                 </div>
                 <hr class="hr light">
                 <form class="mt-4" action=""> 
                   <div class="mb-4">
-                    <label class="form-label">Type of Visa</label>
+                    <label class="form-label">Wählen Sie den Visatyp</label>
                     <div class="dropdown dropdown-select">
-                      <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="typeVisa" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>ESTA Application</span></button>
+                      <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="typeVisa" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>USA - ESTA</span></button>
                       <ul class="dropdown-menu w-100" aria-labelledby="typeVisa">
                         <li><a class="dropdown-item" href="#">Visa Exempted (B-1)</a></li>
                         <li><a class="dropdown-item" href="#">Tourist / Transit (General) (B-2-1)</a></li>
@@ -106,53 +107,129 @@
                     </div>
                   </div>
                   <div class="mb-4">
-                    <div class="subtitle-sm fw-normal">Processing Time</div>
+                    <div class="subtitle-sm fw-normal font-Lato">Bearbeitungszeit</div>
                     <label class="custom-radio-btn" for="normal">
-                      <input type="radio" name="time" id="normal"><span class="d-inline-block rounded-circle"></span>normal (3 working days)
+                      <input type="radio" name="time" id="normal"><span class="d-inline-block rounded-circle"></span>normal (3 Werktage)
                     </label>
                     <label class="custom-radio-btn" for="urgent">
-                      <input type="radio" name="time" id="urgent"><span class="d-inline-block rounded-circle"></span>urgent (1 working day)
+                      <input type="radio" name="time" id="urgent"><span class="d-inline-block rounded-circle"></span>express (1 Werktag)
                     </label>
                   </div>
                   <hr class="hr light">
                   <div class="mb-3">
-                    <div class="subtitle-md mb-3">99€ per Person</div>
-                    <div class="input-group mb-3">
-                      <input class="form-control shadow-none" type="text" placeholder="Promo Code" aria-label="Promo Code" aria-describedby="button-add-code">
-                      <button class="btn btn-primary border-0" id="button-add-code" type="button">Add</button>
+                    <div class="subtitle-sm mb-3 font-Lato fw-normal">Preis 49€ pro Person</div>
+                    <div class="input-group mb-3 promo-code">
+                      <input class="form-control shadow-none" type="text" placeholder="Gutschein Code" aria-label="Gutschein Code" aria-describedby="button-add-code">
+                      <button class="btn btn-primary border-0 p-0" id="button-add-code" type="button"><img src="images/icon-rocket.svg" alt="icon-rocket"></button>
                     </div>
                   </div>
-                  <p>Included services</p>
+                  <p class="fs-18 font-Lato">Included services</p>
                   <ul class="panel-services-list m-0 p-0">
-                    <li>Final price including all Embassy fees</li>
-                    <li>Easy processing in German</li>
-                    <li>100% online without visiting an Embassy</li>
-                    <li>No Risk - Payment only after receiving the visa</li>
+                    <li>Gesamtpeis beinhaltet bereits alle Botschaftsgebühren</li>
+                    <li>Einfache Abwicklung auf Deutsch</li>
+                    <li>100% online ohne nervige Botschaftsbesuche</li>
+                    <li>KEIN RISIKO - Zahlung erst nach Erhalt deines Visums</li>
                   </ul>
                 </form>
               </div>
             </div>
-            <div class="col-lg-9">
+            <div class="col-lg-6">
               <div class="panel bg-white h-100">
-                <div class="subtitle-md mb-3">General information on entry with ESTA Visa</div>
-                <p class="mb-3">What is ESTA?</p>
-                <p class="mb-3 fs-16">Since 2008, travelers from Visa Waiver Program (VWP) countries are required to apply for an ESTA online before boarding a flight or ship bound for the United States. Passengers who have not registered for the ESTA risk being denied a flight.</p>
-                <p class="mb-3">What is checked?</p>
-                <p class="mb-5 fs-16">The Electronic Travel Authorization System (ESTA) is a process used to assess the vulnerability of visitors to the United States to determine if they pose a risk to homeland security or law enforcement. The system checks law enforcement databases.</p>
-                <div class="subtitle-md mb-3">Visa regulations</div>
-                <p class="mb-3 fs-16">To apply for your ESTA USA we need the following documents</p>
+                <div class="subtitle-md mb-3">Generelle Informationen zur ESTA Einreise</div>
+                <p class="mb-3 subtitle-sm fw-normal">Was ist ESTA ?</p>
+                <p class="mb-3 fs-16">Seit 2008 müssen Reisende aus Ländern, die am Programm für visumfreies Reisen (Visa Waiver Program, VWP) teilnehmen, ein ESTA online beantragen, bevor sie einen Flug oder ein Schiff in die Vereinigten Staaten besteigen. Passagiere, die sich nicht für das ESTA registriert haben, riskieren, dass ihnen der Flug verweigert wird.</p>
+                <p class="mb-3 subtitle-sm fw-normal">Was wird überprüft?</p>
+                <p class="mb-5 fs-16">Das elektronische Reisegenehmigungssystem (ESTA) ist ein Verfahren, mit dem das Risiko von Besuchern in den Vereinigten Staaten bewertet wird, um festzustellen, ob sie ein Risiko für die innere Sicherheit oder die Strafverfolgung darstellen. Das System überprüft Datenbanken der Strafverfolgungsbehörden.</p>
+                <div class="subtitle-md mb-3">Visa Regularien</div>
+                <p class="mb-3 fs-16">Diese Dokumente brauchst Du für deinen ESTA Antrag</p>
                 <ul class="benefits-list small mb-5 p-0">
-                  <li class="border-0"><span class="fs-16 fw-bolder">Photo of your passport (1x passport photo in colour)</span></li>
-                  <li class="border-0"><span class="fs-16 fw-bolder">Must be valid for at least 6 months after leaving the USA</span></li>
+                  <li class="border-0"><span class="fs-16 fw-bolder">Foto deines Passes (in Farbe)</span></li>
+                  <li class="border-0"><span class="fs-16 fw-bolder">Muss noch mindestens 6 Monate nach Deiner Rückreise aus den USA gültig sein</span></li>
                 </ul>
-                <p class="mb-3">Changes from May 02, 2022</p>
-                <p class="mb-5 fs-16">Beginning May 2, 2022, electronic ESTA authorization will also replace the I-94W form entry.</p><a class="btn btn-primary border-0 px-5 py-3 h-auto shadow-none" href="user-identification.html">Start Process</a>
+                <p class="mb-3 fs-18 fw-bolder">Änderungen ab 02. Mai 2022</p>
+                <p class="mb-5 fs-16">Ab dem 2. Mai 2022 wird die elektronische ESTA-Genehmigung auch das Einreiseformular I-94W ersetzen.</p><a class="btn btn-primary border-0 px-5 py-3 h-auto shadow-none fw-normal" href="user-identification.html">Antrag Starten</a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <!-- Question sidebar-->
+              <div class="question-sidebar text-center">
+                <div class="subtitle-sm text-white">Sie haben Fragen?</div>
+                <div class="question-sidebar-person">
+                  <div class="question-sidebar-person-img rounded-circle mb-3"><img src="images/question-person.png" alt="image"></div>
+                  <p class="mb-3 text-white fs-6">Hallo! Mein Name ist Michael Schneider. Ich bin ihr persönlicher Ansprechpartner und helfe Ihnen gerne.</p>
+                  <p class="mb-2 text-white fs-6">m.schneider@thailand-pass.de</p>
+                  <p class="text-white fs-6">+49 (0) 40 - 60 77 90 96</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+    <!-- Footer-->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="footer-logo mb-3"><img src="images/logo.svg" alt="footer-logo"></div>
+            <div class="social-links align-items-center d-flex"> <a class="text-decoration-none me-1" href="#">
+                <svg>
+                  <use xlink:href="images/sprite.svg#facebook"></use>
+                </svg></a><a class="text-decoration-none" href="#">
+                <svg>
+                  <use xlink:href="images/sprite.svg#instagram"></use>
+                </svg></a></div>
+            <div class="header-info mt-4">
+              <p class="mb-2">
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-phone"></use>
+                </svg>+49 (0) 40 - 60 77 90 96
+              </p>
+              <p class="mb-0">
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-calendar"></use>
+                </svg>Montag bis Freitag <br> 09:00 bis 18:00
+              </p>
+            </div>
+          </div>
+          <div class="col-md-2 offset-lg-1">
+            <div class="list-title">Rechtliches</div>
+            <ul class="m-0 p-0 list-links">
+              <li><a href="imprint.html">Impessung</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="data-protection.html">Datenschutz</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <div class="list-title">Kontakt</div>
+            <ul class="m-0 p-0 list-links">
+              <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <div class="list-title">Beliebte Reiseziele</div>
+            <ul class="m-0 p-0 list-links d-flex flex-wrap">
+              <li class="me-4"><a href="#">Thailand</a></li>
+              <li class="me-4"><a href="#">USA</a></li>
+              <li class="me-4"><a href="#">Kanada</a></li>
+              <li class="me-4"><a href="#">Australien</a></li>
+              <li class="me-4"><a href="#">Russland</a></li>
+              <li class="me-4"><a href="#">Indien</a></li>
+              <li class="me-4"><a href="#">China</a></li>
+              <li class="me-4"><a href="#">Singapur</a></li>
+              <li class="me-4"><a href="#">Kuba</a></li>
+              <li class="me-4"><a href="#">Ägypten</a></li>
+              <li class="me-4"><a href="#">Kapverden</a></li>
+            </ul>
+          </div>
+          <div class="col-12 mt-5">
+            <div class="copyright">
+              <p class="mb-0">© Visa, 2022 - All rights reserved</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- Modal window-->
     <!-- Login modal-->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -179,18 +256,40 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header border-bottom-0">
-            <h5 class="modal-title fw-bold" id="exampleModalLabel">Validation</h5>
+            <h5 class="modal-title fw-bold subtitle-lg mb-0" id="exampleModalLabel">Email Verifizierung</h5>
             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <form action="#">
             <div class="modal-body">
-              <p>Please enter the validation code we sent to the email john.doe@gmail.com</p>
-              <label class="form-label">Validation Code</label>
-              <input class="form-control shadow-none" type="text">
+              <p class="mb-3">Wir werden eine Email mit einem 4-stelligen Code an <b>john.doe@gmail.com</b> senden. </p>
+              <p class="mb-3">Du musst diesen Code auf der nächsten Seite eingeben.</p>
+              <p class="mb-0">Wenn Deine Emailadresse korrekt ist, klicke auf <b>Code anfordern</b>.</p>
+              <p>Wenn Deine Emailadresse nicht korrekt ist, klicke auf <b>Email ändern</b> um diese zu ändern</p>
             </div>
             <div class="modal-footer border-top-0 justify-content-between">
-              <button class="btn btn-primary btn-lg border-0 shadow-none m-0" type="submti">Verify</button>
-              <p>Didn’t get the code? <a href="#" class="gradient-text text-decoration-none">Resend</a></p>
+              <button class="btn btn-outline-primary btn-lg shadow-none m-0" type="button" data-bs-dismiss="modal"><span>Email ändern</span></button>
+              <button class="btn btn-primary btn-lg border-0 shadow-none m-0" type="button" data-bs-toggle="modal" data-bs-target="#codeModal" data-bs-dismiss="modal">Code anfordern</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Code modal-->
+    <div class="modal fade" id="codeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title fw-bold subtitle-lg mb-0" id="exampleModalLabel">Code eingeben</h5>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form action="#">
+            <div class="modal-body">
+              <p class="mb-3">Bitte gib den 4-stelligen Code ein den du gerade per Email erhalten hast</p>
+            </div>
+            <div class="modal-footer border-top-0 justify-content-between">
+              <button class="btn btn-outline-primary btn-lg shadow-none w-30 px-0" type="button" data-bs-dismiss="modal"><span>Abbrechen</span></button>
+              <button class="btn btn-primary btn-lg border-0 shadow-none m-0 w-30 px-0" type="button">Erneut senden</button>
+              <button class="btn btn-primary btn-lg border-0 shadow-none m-0 w-30 px-0" type="button">Fortsetzen</button>
             </div>
           </form>
         </div>
@@ -242,28 +341,36 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header border-bottom-0">
-            <h5 class="modal-title fw-bold" id="exampleModalLabel">Change Visa</h5>
+            <h5 class="modal-title fw-bold" id="exampleModalLabel">Land / Visa ändern</h5>
             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <form action="#">
             <div class="modal-body">
               <div class="mb-3">
-                <label class="form-label">Select travel country</label>
+                <label class="form-label">Wohin möchten Sie verreisen</label>
                 <div class="dropdown dropdown-select">
-                  <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountry" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span></span></button>
+                  <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountry" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Bitte auswählen</span></button>
                   <ul class="dropdown-menu w-100" aria-labelledby="dropdownCountry">
-                    <li>
-                      <input class="form-control search-input shadow-none" type="text" placeholder="Search Country">
-                    </li>
                     <li><a class="dropdown-item" href="#">Thailand</a></li>
                     <li><a class="dropdown-item" href="#">USA</a></li>
                     <li><a class="dropdown-item" href="#">Zambia</a></li>
                   </ul>
                 </div>
               </div>
+              <div class="mb-3">
+                <label class="form-label">Wählen Sie den Visatyp</label>
+                <div class="dropdown dropdown-select">
+                  <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownVisaType" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Bitte auswählen</span></button>
+                  <ul class="dropdown-menu w-100" aria-labelledby="dropdownVisaType">
+                    <li><a class="dropdown-item" href="#">Visa Exempted (B-1)</a></li>
+                    <li><a class="dropdown-item" href="#">Tourist / Transit (General) (B-2-1)</a></li>
+                    <li><a class="dropdown-item" href="#">Short-Term General (C-3-1)</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div class="modal-footer border-top-0 justify-content-between">
-              <button class="btn btn-primary btn-lg border-0 shadow-none m-0" type="submit">Change</button>
+              <button class="btn btn-primary btn-lg border-0 shadow-none m-0" type="submit">Bestätigen</button>
             </div>
           </form>
         </div>
@@ -274,51 +381,109 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header border-bottom-0">
-            <h5 class="modal-title fw-bold" id="exampleModalLabel">New Traveler</h5>
+            <h5 class="modal-title subtitle-lg fw-bolder mt-4" id="exampleModalLabel">Reiseteilnehmer</h5>
             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <form class="step-app" action="#">
+          <form class="step-app" action="#" id="demo">
             <div class="modal-body">
               <ul class="step-steps horizontal-steps mb-4 p-0 align-items-center d-flex justify-content-center mt-0">
                 <li class="mb-0" data-step-target="step-personal">
-                  <div class="subtitle-sm fw-normal mb-0">Personal Information</div>
+                  <div class="subtitle-sm fw-normal mb-0">Persönliche Daten</div>
                 </li>
                 <li class="mb-0" data-step-target="step-passport">
-                  <div class="subtitle-sm fw-normal mb-0">Passport Information</div>
+                  <div class="subtitle-sm fw-normal mb-0">Passdaten</div>
                 </li>
               </ul>
               <div class="step-content">
                 <form action="#">
                   <div class="step-tab-panel" data-step="step-personal">
-                    <div class="subtitle-sm fw-normal mb-3">Personal Information</div>
+                    <div class="subtitle-sm fw-normal mb-3">Persönliche Informationen</div>
                     <div class="mb-3">
-                      <label class="form-label">Gender</label>
-                      <div class="dropdown dropdown-select w-25">
-                        <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownMale" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Male</span></button>
-                        <ul class="dropdown-menu w-100" aria-labelledby="dropdownMale">
-                          <li><a class="dropdown-item" href="#">Male</a></li>
-                          <li><a class="dropdown-item" href="#">Female</a></li>
-                        </ul>
+                      <div class="row">
+                        <div class="col">
+                          <label class="form-label">Vorname</label>
+                          <input class="form-control shadow-none" type="text" name="name" placeholder="John">
+                        </div>
+                        <div class="col">
+                          <label class="form-label">Nachname</label>
+                          <input class="form-control shadow-none" type="text" placeholder="Doe">
+                        </div>
                       </div>
                     </div>
                     <div class="mb-3">
-                      <label class="form-label">First Name</label>
-                      <input class="form-control shadow-none" type="text" name="name" placeholder="John">
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label">Surname</label>
-                      <input class="form-control shadow-none" type="text" placeholder="Doe">
+                      <div class="row">
+                        <div class="col-6">
+                          <label class="form-label">Geschlecht</label>
+                          <div class="dropdown dropdown-select">
+                            <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownMale" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Male</span></button>
+                            <ul class="dropdown-menu w-100" aria-labelledby="dropdownMale">
+                              <li><a class="dropdown-item" href="#">Male</a></li>
+                              <li><a class="dropdown-item" href="#">Female</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div class="mb-3">
                       <div class="row">
                         <div class="col">
-                          <label class="form-label">Country of birth</label>
+                          <label class="form-label">Staatsbürgerschaft</label>
                           <div class="dropdown dropdown-select">
-                            <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountryBirth" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="images/flags/germany.png" alt="flag"><span class="ms-3">Germany</span></button>
+                            <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountryInfo" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span></span></button>
+                            <ul class="dropdown-menu w-100" aria-labelledby="dropdownCountryInfo">
+                              <li><a class="dropdown-item" href="#">USA</a></li>
+                              <li><a class="dropdown-item" href="#">Germany</a></li>
+                              <li><a class="dropdown-item" href="#">India</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <label class="form-label">Geburtsdatum</label>
+                          <div class="row">
+                            <div class="col-4 pe-0">
+                              <div class="dropdown dropdown-select arrow-move">
+                                <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownDateDay" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tag</span></button>
+                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownDateDay">
+                                  <li><a class="dropdown-item" href="#">1</a></li>
+                                  <li><a class="dropdown-item" href="#">2</a></li>
+                                  <li><a class="dropdown-item" href="#">3</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-4 pe-0">
+                              <div class="dropdown dropdown-select arrow-move">
+                                <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownDateMonth" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Monat</span></button>
+                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownDateMonth">
+                                  <li><a class="dropdown-item" href="#">January</a></li>
+                                  <li><a class="dropdown-item" href="#">February</a></li>
+                                  <li><a class="dropdown-item" href="#">March</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-4">
+                              <div class="dropdown dropdown-select arrow-move">
+                                <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownDateYear" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Jahr</span></button>
+                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownDateYear">
+                                  <li><a class="dropdown-item" href="#">2000</a></li>
+                                  <li><a class="dropdown-item" href="#">2001</a></li>
+                                  <li><a class="dropdown-item" href="#">2002</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <div class="row">
+                        <div class="col">
+                          <label class="form-label">Geburtsland</label>
+                          <div class="dropdown dropdown-select">
+                            <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountryBirth" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span></span></button>
                             <ul class="dropdown-menu w-100" aria-labelledby="dropdownCountryBirth">
-                              <li><a class="dropdown-item" href="images/flags/germany.png"><img src="images/flags/germany.png" alt="flag"><span class="ms-3">Germany</span></a></li>
-                              <li><a class="dropdown-item" href="images/flags/united-states-of-america.png"><img src="images/flags/united-states-of-america.png" alt="flag"><span class="ms-3">USA</span></a></li>
-                              <li><a class="dropdown-item" href="images/flags/india.png"><img src="images/flags/india.png" alt="flag"><span class="ms-3">India</span></a></li>
+                              <li><a class="dropdown-item" href="#">Germany</a></li>
+                              <li><a class="dropdown-item" href="#">USA</a></li>
+                              <li><a class="dropdown-item" href="#">India</a></li>
                             </ul>
                           </div>
                         </div>
@@ -330,53 +495,98 @@
                     </div>
                   </div>
                   <div class="step-tab-panel" data-step="step-passport">
-                    <div class="subtitle-sm fw-normal mb-3">Passport Information</div>
+                    <div class="subtitle-sm fw-normal mb-3">Passdaten</div>
                     <div class="mb-3">
                       <div class="row">
                         <div class="col">
-                          <label class="form-label">Citizenship</label>
-                          <div class="dropdown dropdown-select">
-                            <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCitizenship" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="images/flags/germany.png" alt="flag"><span class="ms-3">Germany</span></button>
-                            <ul class="dropdown-menu w-100" aria-labelledby="dropdownCitizenship">
-                              <li><a class="dropdown-item" href="images/flags/germany.png"><img src="images/flags/germany.png" alt="flag"><span class="ms-3">Germany</span></a></li>
-                              <li><a class="dropdown-item" href="images/flags/united-states-of-america.png"><img src="images/flags/united-states-of-america.png" alt="flag"><span class="ms-3">USA</span></a></li>
-                              <li><a class="dropdown-item" href="images/flags/india.png"><img src="images/flags/india.png" alt="flag"><span class="ms-3">India</span></a></li>
-                            </ul>
+                          <label class="form-label">Nummer des Reisepass [<span class="text-danger">?</span>]</label>
+                          <input class="form-control shadow-none" type="text" placeholder="Berlin">
+                        </div>
+                        <div class="col">
+                          <label class="form-label">Datum der Ausstellung [<span class="text-danger">?</span>]</label>
+                          <div class="row">
+                            <div class="col-4 pe-0">
+                              <div class="dropdown dropdown-select arrow-move">
+                                <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownDateDay2" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tag</span></button>
+                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownDateDay2">
+                                  <li><a class="dropdown-item" href="#">1</a></li>
+                                  <li><a class="dropdown-item" href="#">2</a></li>
+                                  <li><a class="dropdown-item" href="#">3</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-4 pe-0">
+                              <div class="dropdown dropdown-select arrow-move">
+                                <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownDateMonth2" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Monat</span></button>
+                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownDateMonth2">
+                                  <li><a class="dropdown-item" href="#">January</a></li>
+                                  <li><a class="dropdown-item" href="#">February</a></li>
+                                  <li><a class="dropdown-item" href="#">March</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-4">
+                              <div class="dropdown dropdown-select arrow-move">
+                                <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownDateYear2" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Jahr</span></button>
+                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownDateYear2">
+                                  <li><a class="dropdown-item" href="#">2000</a></li>
+                                  <li><a class="dropdown-item" href="#">2001</a></li>
+                                  <li><a class="dropdown-item" href="#">2002</a></li>
+                                </ul>
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        <div class="col"></div>
                       </div>
                     </div>
                     <div class="mb-3">
                       <div class="row">
                         <div class="col">
-                          <label class="form-label">Passport Number</label>
-                          <input class="form-control shadow-none" type="text" placeholder="HT854749">
+                          <label class="form-label">Ort der Ausstellung [<span class="text-danger">?</span>]</label>
+                          <input class="form-control shadow-none" type="text">
                         </div>
                         <div class="col">
-                          <label class="form-label">Place of Issue</label>
-                          <input class="form-control shadow-none" type="text" placeholder="Germany">
+                          <label class="form-label">Ablaufdatum [<span class="text-danger">?</span>]</label>
+                          <div class="row">
+                            <div class="col-4 pe-0">
+                              <div class="dropdown dropdown-select arrow-move">
+                                <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownDateDay3" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Tag</span></button>
+                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownDateDay3">
+                                  <li><a class="dropdown-item" href="#">1</a></li>
+                                  <li><a class="dropdown-item" href="#">2</a></li>
+                                  <li><a class="dropdown-item" href="#">3</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-4 pe-0">
+                              <div class="dropdown dropdown-select arrow-move">
+                                <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownDateMonth3" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Monat</span></button>
+                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownDateMonth3">
+                                  <li><a class="dropdown-item" href="#">January</a></li>
+                                  <li><a class="dropdown-item" href="#">February</a></li>
+                                  <li><a class="dropdown-item" href="#">March</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-4">
+                              <div class="dropdown dropdown-select arrow-move">
+                                <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownDateYear3" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Jahr</span></button>
+                                <ul class="dropdown-menu w-100" aria-labelledby="dropdownDateYear3">
+                                  <li><a class="dropdown-item" href="#">2000</a></li>
+                                  <li><a class="dropdown-item" href="#">2001</a></li>
+                                  <li><a class="dropdown-item" href="#">2002</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="mb-3">
-                      <div class="row">
-                        <div class="col">
-                          <label class="form-label">Date of Issue</label>
-                          <input class="datepicker form-control shadow-none" type="text">
-                        </div>
-                        <div class="col">
-                          <label class="form-label">Date of Expiry </label>
-                          <input class="datepicker form-control shadow-none" type="text">
-                        </div>
-                      </div>
-                    </div>
+                    <p class="mb-3">Bitte Vorder- und Rückseite Deines Passes hier hochladen. Wenn Du derzeit kein Foto deines Passes hast, kannst Du jetzt eines aufnehmen oder es uns später senden [<span class="text-danger">?</span>]</p>
                     <div class="mb-3">
                       <div class="form-group files">
-                        <label for="upload-file">
-                          <svg>
-                            <use xlink:href="images/sprite.svg#icon-file-upload"></use>
-                          </svg>Upload Passport
+                        <label for="upload-file"><img src="images/upload-file-icon.png" alt="upload-file-icon">
+                          <p class="mb-0">Datei hierher ziehen oder Datei öffnen <br> Unterstützt JPEG, JPG, PNG, PDF</p>
                         </label>
                         <input class="form-control shadow-none" type="file" multiple="" id="upload-file"><span></span>
                       </div>
@@ -399,6 +609,12 @@
                   </div>
                 </form>
               </div>
+              <div class="step-footer mt-5">
+                <button class="btn btn-outline-primary btn-lg shadow-none me-3 px-4 fs-6" type="button" data-bs-dismiss="modal"><span>Abbrechen</span></button>
+                <button class="step-btn btn btn-outline-primary btn-lg shadow-none me-3 px-4 fs-6" data-step-action="prev"><span>Zurück</span></button>
+                <button class="step-btn btn btn-primary btn-lg shadow-none border-0 px-5 fs-6" data-step-action="next">Weiter</button>
+                <button class="step-btn btn btn-primary btn-lg shadow-none border-0 px-5 fs-6" data-step-action="finish">Anlegen</button>
+              </div>
             </div>
           </form>
         </div>
@@ -409,15 +625,15 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header border-bottom-0">
-            <h5 class="modal-title fw-bold" id="exampleModalLabel">Remove Traveler</h5>
+            <h5 class="modal-title fw-bold" id="exampleModalLabel">Reisenden entfernen</h5>
             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p class="fs-16">Are you sure you want to remove Kate Terry Doe from your list travelers?</p>
+            <p class="fs-16">Sind Sie sich sicher, dass Sie das entfernen wollen John Dou von Ihrer Liste Reisende?</p>
           </div>
           <div class="modal-footer border-top-0 justify-content-between flex-nowrap">
-            <button class="btn btn-outline-primary btn-lg shadow-none m-0 w-50 me-2" type="button" data-bs-dismiss="modal"><span>Cancel</span></button>
-            <button class="btn btn-primary btn-lg border-0 shadow-none m-0 w-50 ms-2" type="button">Remove</button>
+            <button class="btn btn-outline-primary btn-lg shadow-none m-0 w-50 me-2" type="button" data-bs-dismiss="modal"><span>Nein, nicht entfernen</span></button>
+            <button class="btn btn-primary btn-lg border-0 shadow-none m-0 w-50 ms-2" type="button">Ja, entfernen</button>
           </div>
         </div>
       </div>
@@ -427,15 +643,35 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header border-bottom-0">
-            <h5 class="modal-title fw-bold" id="exampleModalLabel">Cancel Application</h5>
+            <h5 class="modal-title fw-bold" id="exampleModalLabel">Allgemeine Hinweise</h5>
             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p class="fs-16">Are you sure you want to cancel your application? All your process will be deleted.</p>
+            <p class="fs-16">Bist Du sicher, dass Du den Antrag abbrechen möchtest? Deine Eingaben gehen unter Umständen verloren.</p>
           </div>
           <div class="modal-footer border-top-0 justify-content-between flex-nowrap">
-            <button class="btn btn-outline-primary btn-lg shadow-none m-0 w-50 me-2" type="button"><span>Don’t cancel</span></button>
-            <button class="btn btn-primary btn-lg border-0 shadow-none m-0 w-50 ms-2" type="button" data-bs-dismiss="modal">Cancel Application</button>
+            <button class="btn btn-outline-primary btn-lg shadow-none m-0 w-50 me-2 px-0" type="button"><span>Nein, nicht abbrechen</span></button>
+            <button class="btn btn-primary btn-lg border-0 shadow-none m-0 w-50 ms-2 px-0" type="button" data-bs-dismiss="modal">Ja, ich möchte abbrechen</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Success App Modal-->
+    <div class="modal fade" id="successAppModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content position-relative">
+          <div class="modal-header border-bottom-0 p-0 position-absolute top-0">
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center p-0">
+            <div class="bg-gradient p-5"><img src="images/success-icon.png" alt="success-icon">
+              <div class="subtitle-sm text-white">Dein Antrag wurde erfolgreich übermittelt</div>
+              <p class="text-white">Wir werden uns mit Dir in Verbindung setzen, wenn wir weitere Fragen haben. Sobald dein Antrag genehmigt ist, erhälst Du eine Nachricht von uns. Du kannst den aktuellen Status auch jederzeit in Deinem Kundenbereich überprüfen</p>
+            </div>
+            <p class="fs-5 fw-bolder mt-3">Kundenbereich</p>
+            <p class="text-danger">Kundenbereich</p>
+            <p class="fs-5 fw-bolder mt-5">Antragsnummer</p>
+            <p>38099284</p>
           </div>
         </div>
       </div>
