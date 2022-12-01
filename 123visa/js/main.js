@@ -159,6 +159,14 @@ $(function () {
     $('.app-nav button').on('click', function (e) {
       var idx = steps_api.getStepIndex()+1;
 
+      // Mobile title of step
+      var mobileStepTitle = $('#mobile-step-title');
+      mobileStepTitle.find('span').text($('#app-form .step-steps li.active div').text());
+
+      if ( idx >= 2 ) {
+        mobileStepTitle.find('span').addClass('gradient-text'); // .gradient-text just add primary color to title of step
+      }
+
       // Show Email validate modal
       if ( $(this).data('step-action') == 'next' && idx <= 2 ) {
         e.preventDefault();

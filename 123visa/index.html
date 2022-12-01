@@ -22,8 +22,8 @@
   <header>
     <div class="container">
       <nav class="navbar navbar-expand-lg p-0">
-        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-        <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="logo"></a></div>
+        <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="logo"></a></div><a class="btn btn-primary btn-sm border-0 shadow-none d-inline-block d-lg-none ms-auto" href="#">Antrag starten</a>
+        <button class="navbar-toggler ms-5" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
         <div class="collapse navbar-collapse" id="nav">
           <ul class="navbar-nav align-items-lg-center mx-auto">
             <li class="nav-item mb-0"><a class="active nav-link" href="index.html">Start</a></li>
@@ -31,21 +31,21 @@
               <!-- Dropdown menu-->
               <div class="dropdown-menu custom rounded-0 border-0 w-100 start-0">
                 <div class="row mx-0">
-                  <div class="col-md-2">
+                  <div class="col-lg-2">
                     <p>Africa</p>
                     <ul class="m-0 p-0">
                       <li><a class="dropdown-item w-auto p-0" href="country-info.html"><img src="images/flags/cape-verde.png" alt="Cape Verde">Cape Verde</a></li>
                       <li><a class="dropdown-item w-auto p-0" href="country-info.html"><img src="images/flags/egypt.png" alt="Egypt">Egypt</a></li>
                     </ul>
                   </div>
-                  <div class="col-md-2">
+                  <div class="col-lg-2">
                     <p>America</p>
                     <ul class="m-0 p-0">
                       <li><a class="dropdown-item w-auto p-0" href="country-info.html"><img src="images/flags/canada.png" alt="Canada">Canada</a></li>
                       <li><a class="dropdown-item w-auto p-0" href="country-info.html"><img src="images/flags/united-states-of-america.png" alt="USA">USA</a></li>
                     </ul>
                   </div>
-                  <div class="col-md-2">
+                  <div class="col-lg-2">
                     <p>Asia</p>
                     <ul class="m-0 p-0">
                       <li><a class="dropdown-item w-auto p-0" href="country-info.html"><img src="images/flags/south-korea.png" alt="South Korea">South Korea</a></li>
@@ -54,7 +54,7 @@
                       <li><a class="dropdown-item w-auto p-0" href="country-info.html"><img src="images/flags/thailand.png" alt="Thailand">Thailand</a></li>
                     </ul>
                   </div>
-                  <div class="col-md-2">
+                  <div class="col-lg-2">
                     <p>Europa</p>
                     <ul class="m-0 p-0">
                       <li><a class="dropdown-item w-auto p-0" href="country-info.html"><img src="images/flags/germany.png" alt="Germany">Germany</a></li>
@@ -67,12 +67,12 @@
             <li class="nav-item mb-0"><a class="nav-link" href="travel-agency.html">FAQ</a></li>
             <li class="nav-item mb-0"><a class="nav-link" href="#">Für Reisebüros</a></li>
           </ul>
-          <ul class="navbar-nav align-items-lg-center">
+          <ul class="navbar-nav align-items-lg-center mt-5 mt-lg-0">
             <li class="nav-item mb-0 border-0 me-3"><a class="nav-link fw-normal" href="#">
                 <svg>
                   <use xlink:href="images/sprite.svg#icon-user"></use>
                 </svg>Login</a></li>
-            <li class="nav-item mb-0"><a class="btn btn-primary border-0 shadow-none" href="#">Antrag starten</a></li>
+            <li class="nav-item mb-0 d-none d-lg-block"><a class="btn btn-primary border-0 shadow-none" href="#">Antrag starten</a></li>
           </ul>
         </div>
       </nav>
@@ -84,10 +84,10 @@
     <section class="hero-section">
       <div class="container">
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-xl-5 col-md-8">
             <div class="title mb-4"><span>Wir machen Visa einfach !</span></div>
             <div class="subtitle-sm">Jetzt Visa und Einreisegnehmigung einfach online beantragen.</div>
-            <form class="mt-5 me-5 pe-5" action="#">
+            <form class="mt-5 me-lg-5 pe-lg-5" action="#">
               <div class="mb-3">
                 <label class="form-label">Wohin möchten Sie verreisen</label>
                 <div class="dropdown dropdown-select">
@@ -115,22 +115,22 @@
               </div>
               <div class="line position-relative mb-4 mx-3"><span class="bg-white position-absolute start-50 top-50 translate-middle">ODER</span></div>
             </form>
-            <div class="text-center me-5 pe-5 mb-3">
+            <div class="text-center me-lg-5 pe-lg-5 mb-3">
               <button class="btn btn-link text-decoration-none text-dark p-0 shadow-none" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Bestehenden Antrag fortsetzen </button>
             </div>
           </div>
-          <div class="col-md-5 offset-xl-1">
-            <div class="mockup-phone position-relative text-center">
+          <div class="col-xl-5 offset-xl-1 col-md-4 d-flex align-items-end">
+            <div class="mockup-phone text-center">
               <div class="mockup-phone-badge rounded-circle text-white d-flex justify-content-center align-items-center">
                 <div class="subtitle-sm text-white mb-0 px-3">Online beantragen</div>
-              </div><img src="images/mockup-phone.png" alt="mockup-phone">
+              </div><img class="d-none d-lg-block" src="images/mockup-phone.png" alt="mockup-phone">
             </div>
           </div>
         </div>
       </div>
       <!-- Fixed chat button-->
       <div class="chat-button position-fixed top-50"><a class="d-block text-decoration-none" href="#">
-          <div class="chat-button-text"><img src="images/chat-button-text.png" alt="Hi, we are here! 👋"></div>
+          <div class="chat-button-text d-none d-lg-block"><img src="images/chat-button-text.png" alt="Hi, we are here! 👋"></div>
           <div class="chat-button-circle rounded-circle bg-gradient d-flex align-items-center justify-content-center">
             <svg>
               <use xlink:href="images/sprite.svg#icon-chat"></use>
@@ -138,32 +138,32 @@
           </div></a></div>
     </section>
     <section class="bg-light-grey mb-5 py-5">
-      <div class="container my-5">
+      <div class="container my-sm-5">
         <div class="row">
           <div class="col-xl-3 col-lg-6">
             <div class="features-item">
-              <div class="text-center mb-4"><img src="images/feature-icon-1.svg" alt="features-icon"></div>
+              <div class="text-lg-center mb-4"><img src="images/feature-icon-1.svg" alt="features-icon"></div>
               <div class="subtitle-md mb-3">Geführter und intiuitver Prozess auf Deutsch</div>
               <p>Schluss mit Anträgen auf Englisch oder in fremden Sprachen. Unser Antragssystemauf Deutsch führt Dich ganz einfach durch den Visaantrag. Wir sorgen dafür das Du alles verstehst.</p>
             </div>
           </div>
           <div class="col-xl-3 col-lg-6">
             <div class="features-item">
-              <div class="text-center mb-4"><img src="images/feature-icon-2.svg" alt="features-icon"></div>
+              <div class="text-lg-center mb-4"><img src="images/feature-icon-2.svg" alt="features-icon"></div>
               <div class="subtitle-md mb-3">Dokumente und Nachweise</div>
               <p>Für den Antrag werden verschiedene Dokumente und Nachweise benötigt, die alle in einem bestimmten Dateiformat vorliegen müssen. Sie schicken uns Ihre Unterlagen einfach so, wie sie sind, und wir kümmern uns um das richtige Format.</p>
             </div>
           </div>
           <div class="col-xl-3 col-lg-6">
             <div class="features-item">
-              <div class="text-center mb-4"><img src="images/feature-icon-3.svg" alt="features-icon"></div>
+              <div class="text-lg-center mb-4"><img src="images/feature-icon-3.svg" alt="features-icon"></div>
               <div class="subtitle-md mb-3">Alles einfach einfach</div>
               <p>Schluss mit Anträgen auf Englisch oder in fremden Sprachen. Unser Antragssystemauf Deutsch führt Dich ganz einfach durch den Visaantrag. Wir sorgen dafür das Du alles verstehst.</p>
             </div>
           </div>
           <div class="col-xl-3 col-lg-6">
             <div class="features-item">
-              <div class="text-center mb-4"><img src="images/feature-icon-4.svg" alt="features-icon"></div>
+              <div class="text-lg-center mb-4"><img src="images/feature-icon-4.svg" alt="features-icon"></div>
               <div class="subtitle-md mb-3">Erfolgsgarantie ohne Risiko</div>
               <p>Schluss mit Anträgen auf Englisch oder in fremden Sprachen. Unser Antragssystemauf Deutsch führt Dich ganz einfach durch den Visaantrag. Wir sorgen dafür das Du alles verstehst.</p>
             </div>
@@ -172,15 +172,15 @@
       </div>
     </section>
     <section class="my-5 py-3" id="how-it-work">
-      <div class="container my-5">
+      <div class="container my-sm-5">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-lg-4 col-md-6">
             <h2>So funktioniert 123VISA</h2>
             <div class="subtitle-sm fw-normal">In nur 4 einfachen Schritten beantragst Du dein Visum: einfach, sicher und smart</div>
           </div>
-          <div class="col-md-6 offset-xl-2">
-            <div class="d-flex">
-              <div class="progress-list-bar me-4 w-20">
+          <div class="col-md-6 offset-lg-2">
+            <div class="d-flex mt-4 mt-md-0">
+              <div class="progress-list-bar me-md-4 w-20">
                 <div class="vertical-progress">
                   <div class="vertical-progress-bar"></div>
                 </div>
@@ -208,17 +208,17 @@
         </div>
       </div>
     </section>
-    <section class="bg-light-grey my-5 py-5">
+    <section class="bg-light-grey my-5 py-5 d-none d-md-block">
       <div class="container">
         <h2 class="text-center d-flex align-items-center justify-content-center"><img class="me-2" src="images/logo.svg" alt="logo">in Zahlen</h2>
         <div class="row mt-5">
-          <div class="col-md-3 offset-xl-1">
+          <div class="col-md-3 offset-md-1">
             <div class="text-center">
               <div class="number-title">30</div>
               <p class="fs-6">Verschiedene Visaarten</p>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 px-0">
             <div class="text-center border-start border-end">
               <div class="number-title"><span class="gradient-text">80.000</span></div>
               <p class="fs-6">Verarbeite Dokumente jedes Jahr</p>
@@ -234,7 +234,7 @@
       </div>
     </section>
     <section class="my-5 py-3">
-      <div class="container my-5">
+      <div class="container my-sm-5">
         <div class="row">
           <div class="col-md-5">
             <h2>Warum wir <br> die Nummer 1 sind</h2>
@@ -298,7 +298,7 @@
       </div>
     </section>
     <section class="my-5 py-3">
-      <div class="container my-5">
+      <div class="container my-sm-5">
         <div class="row">
           <div class="col-md-5">
             <h2>FAQ</h2>
@@ -356,7 +356,7 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-lg-3 col-md-4">
           <div class="footer-logo mb-3"><img src="images/logo.svg" alt="footer-logo"></div>
           <div class="social-links align-items-center d-flex"> <a class="text-decoration-none me-1" href="#">
               <svg>
@@ -365,20 +365,20 @@
               <svg>
                 <use xlink:href="images/sprite.svg#instagram"></use>
               </svg></a></div>
-          <div class="header-info mt-4">
-            <p class="mb-2">
+          <div class="header-info my-4">
+            <p class="mb-2 d-block">
               <svg>
                 <use xlink:href="images/sprite.svg#icon-phone"></use>
               </svg>+49 (0) 40 - 60 77 90 96
             </p>
-            <p class="mb-0">
+            <p class="mb-0 d-block">
               <svg>
                 <use xlink:href="images/sprite.svg#icon-calendar"></use>
               </svg>Montag bis Freitag <br> 09:00 bis 18:00
             </p>
           </div>
         </div>
-        <div class="col-md-2 offset-lg-1">
+        <div class="col-lg-2 offset-lg-1 col-md-4 col-6">
           <div class="list-title">Rechtliches</div>
           <ul class="m-0 p-0 list-links">
             <li><a href="imprint.html">Impessung</a></li>
@@ -386,13 +386,13 @@
             <li><a href="data-protection.html">Datenschutz</a></li>
           </ul>
         </div>
-        <div class="col-md-2">
+        <div class="col-lg-2 col-md-4 col-6">
           <div class="list-title">Kontakt</div>
           <ul class="m-0 p-0 list-links">
             <li><a href="contact.html">Kontakt</a></li>
           </ul>
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-4 d-none d-md-block">
           <div class="list-title">Beliebte Reiseziele</div>
           <ul class="m-0 p-0 list-links d-flex flex-wrap">
             <li class="me-4"><a href="#">Thailand</a></li>
@@ -409,7 +409,7 @@
           </ul>
         </div>
         <div class="col-12 mt-5">
-          <div class="copyright">
+          <div class="copyright text-center text-md-start">
             <p class="mb-0">© Visa, 2022 - All rights reserved</p>
           </div>
         </div>
@@ -586,11 +586,11 @@
                   <div class="subtitle-sm fw-normal mb-3">Persönliche Informationen</div>
                   <div class="mb-3">
                     <div class="row">
-                      <div class="col">
+                      <div class="col-sm-6">
                         <label class="form-label">Vorname</label>
                         <input class="form-control shadow-none" type="text" name="name" placeholder="John">
                       </div>
-                      <div class="col">
+                      <div class="col-sm-6">
                         <label class="form-label">Nachname</label>
                         <input class="form-control shadow-none" type="text" placeholder="Doe">
                       </div>
@@ -598,7 +598,7 @@
                   </div>
                   <div class="mb-3">
                     <div class="row">
-                      <div class="col-6">
+                      <div class="col-sm-6">
                         <label class="form-label">Geschlecht</label>
                         <div class="dropdown dropdown-select">
                           <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownMale" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Male</span></button>
@@ -612,7 +612,7 @@
                   </div>
                   <div class="mb-3">
                     <div class="row">
-                      <div class="col">
+                      <div class="col-sm-6">
                         <label class="form-label">Staatsbürgerschaft</label>
                         <div class="dropdown dropdown-select">
                           <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountryInfo" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span></span></button>
@@ -623,7 +623,7 @@
                           </ul>
                         </div>
                       </div>
-                      <div class="col">
+                      <div class="col-sm-6">
                         <label class="form-label">Geburtsdatum</label>
                         <div class="row">
                           <div class="col-4 pe-0">
@@ -662,7 +662,7 @@
                   </div>
                   <div class="mb-3">
                     <div class="row">
-                      <div class="col">
+                      <div class="col-sm-6">
                         <label class="form-label">Geburtsland</label>
                         <div class="dropdown dropdown-select">
                           <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountryBirth" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span></span></button>
@@ -673,7 +673,7 @@
                           </ul>
                         </div>
                       </div>
-                      <div class="col">
+                      <div class="col-sm-6">
                         <label class="form-label">City of birth</label>
                         <input class="form-control shadow-none" type="text" placeholder="Berlin">
                       </div>
@@ -684,11 +684,11 @@
                   <div class="subtitle-sm fw-normal mb-3">Passdaten</div>
                   <div class="mb-3">
                     <div class="row">
-                      <div class="col">
+                      <div class="col-sm-6">
                         <label class="form-label">Nummer des Reisepass [<span class="text-danger">?</span>]</label>
                         <input class="form-control shadow-none" type="text" placeholder="Berlin">
                       </div>
-                      <div class="col">
+                      <div class="col-sm-6">
                         <label class="form-label">Datum der Ausstellung [<span class="text-danger">?</span>]</label>
                         <div class="row">
                           <div class="col-4 pe-0">
@@ -727,11 +727,11 @@
                   </div>
                   <div class="mb-3">
                     <div class="row">
-                      <div class="col">
+                      <div class="col-sm-6">
                         <label class="form-label">Ort der Ausstellung [<span class="text-danger">?</span>]</label>
                         <input class="form-control shadow-none" type="text">
                       </div>
-                      <div class="col">
+                      <div class="col-sm-6">
                         <label class="form-label">Ablaufdatum [<span class="text-danger">?</span>]</label>
                         <div class="row">
                           <div class="col-4 pe-0">
@@ -799,7 +799,7 @@
               <button class="btn btn-outline-primary btn-lg shadow-none me-3 px-4 fs-6" type="button" data-bs-dismiss="modal"><span>Abbrechen</span></button>
               <button class="step-btn btn btn-outline-primary btn-lg shadow-none me-3 px-4 fs-6" data-step-action="prev"><span>Zurück</span></button>
               <button class="step-btn btn btn-primary btn-lg shadow-none border-0 px-5 fs-6" data-step-action="next">Weiter</button>
-              <button class="step-btn btn btn-primary btn-lg shadow-none border-0 px-5 fs-6" data-step-action="finish">Anlegen</button>
+              <button class="step-btn btn btn-primary btn-lg shadow-none border-0 px-5 fs-6 mt-4 mt-md-0" data-step-action="finish">Anlegen</button>
             </div>
           </div>
         </form>

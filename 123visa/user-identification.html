@@ -22,8 +22,8 @@
     <header>
       <div class="container">
         <nav class="navbar navbar-expand-lg p-0">
-          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-          <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="logo"></a></div>
+          <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="logo"></a></div><a class="btn btn-primary btn-sm border-0 shadow-none d-inline-block d-lg-none ms-auto" href="#">Antrag starten</a>
+          <button class="navbar-toggler ms-5" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
           <div class="collapse navbar-collapse" id="nav">
             <ul class="navbar-nav align-items-lg-center mx-auto">
               <li class="nav-item mb-0"><a class="nav-link" href="index.html">Start</a></li>
@@ -31,21 +31,21 @@
                 <!-- Dropdown menu-->
                 <div class="dropdown-menu custom rounded-0 border-0 w-100 start-0">
                   <div class="row mx-0">
-                    <div class="col-md-2">
+                    <div class="col-lg-2">
                       <p>Africa</p>
                       <ul class="m-0 p-0">
                         <li><a class="dropdown-item w-auto p-0" href="country-info.html"><img src="images/flags/cape-verde.png" alt="Cape Verde">Cape Verde</a></li>
                         <li><a class="dropdown-item w-auto p-0" href="country-info.html"><img src="images/flags/egypt.png" alt="Egypt">Egypt</a></li>
                       </ul>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-lg-2">
                       <p>America</p>
                       <ul class="m-0 p-0">
                         <li><a class="dropdown-item w-auto p-0" href="country-info.html"><img src="images/flags/canada.png" alt="Canada">Canada</a></li>
                         <li><a class="dropdown-item w-auto p-0" href="country-info.html"><img src="images/flags/united-states-of-america.png" alt="USA">USA</a></li>
                       </ul>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-lg-2">
                       <p>Asia</p>
                       <ul class="m-0 p-0">
                         <li><a class="dropdown-item w-auto p-0" href="country-info.html"><img src="images/flags/south-korea.png" alt="South Korea">South Korea</a></li>
@@ -54,7 +54,7 @@
                         <li><a class="dropdown-item w-auto p-0" href="country-info.html"><img src="images/flags/thailand.png" alt="Thailand">Thailand</a></li>
                       </ul>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-lg-2">
                       <p>Europa</p>
                       <ul class="m-0 p-0">
                         <li><a class="dropdown-item w-auto p-0" href="country-info.html"><img src="images/flags/germany.png" alt="Germany">Germany</a></li>
@@ -67,12 +67,12 @@
               <li class="nav-item mb-0"><a class="nav-link" href="travel-agency.html">FAQ</a></li>
               <li class="nav-item mb-0"><a class="nav-link" href="#">Für Reisebüros</a></li>
             </ul>
-            <ul class="navbar-nav align-items-lg-center">
+            <ul class="navbar-nav align-items-lg-center mt-5 mt-lg-0">
               <li class="nav-item mb-0 border-0 me-3"><a class="nav-link fw-normal" href="#">
                   <svg>
                     <use xlink:href="images/sprite.svg#icon-user"></use>
                   </svg>Login</a></li>
-              <li class="nav-item mb-0"><a class="btn btn-primary border-0 shadow-none" href="#">Antrag starten</a></li>
+              <li class="nav-item mb-0 d-none d-lg-block"><a class="btn btn-primary border-0 shadow-none" href="#">Antrag starten</a></li>
             </ul>
           </div>
         </nav>
@@ -148,9 +148,9 @@
       <section class="bg-thin-grey py-3 min-vh-100 step-app" id="app-form">
         <div class="container custom-container">
           <div class="row">
-            <div class="col-lg-3 ps-0">
-              <div class="panel bg-white h-100">
-                <div class="d-flex">
+            <div class="col-lg-3 ps-lg-0">
+              <div class="panel bg-white h-100 bg-transparent-lg pb-0 pb-lg-4">
+                <div class="d-flex w-100 justify-content-center justify-content-lg-start">
                   <div class="panel-flag"><img src="images/USA-flag.jpg" alt="USA"></div>
                   <div class="panel-header">
                     <div class="subtitle-lg fw-bolder">USA - ESTA Antrag</div>
@@ -194,6 +194,7 @@
                     <div class="subtitle-sm fw-normal mb-0">Zusammenfassung</div>
                   </li>
                 </ul>
+                <div class="bg-white text-center pb-3 d-block d-lg-none" id="mobile-step-title"><span class="fs-16">Antragsteller</span></div>
               </div>
             </div>
             <div class="col-lg-6">
@@ -203,7 +204,7 @@
                   <form action="#">
                     <!-- User Identification-->
                     <div class="step-tab-panel" data-step="step1">
-                      <div class="wrap-title">
+                      <div class="wrap-title d-none d-lg-block">
                         <div class="subtitle-lg mb-0 text-white">Okey, lass uns starten</div>
                       </div>
                       <p class="mb-3 fs-16">Als erstes benötigen wir Deine Emailadresse, so können wir Deinen Antrag speichern und Dir später zuordnen. Du kannst Deinen Antrag jederzeit pausieren und später fortsetzen</p>
@@ -220,19 +221,19 @@
                     </div>
                     <!-- Step 2-->
                     <div class="step-tab-panel" data-step="step2">
-                      <div class="wrap-title">
+                      <div class="wrap-title d-none d-lg-block">
                         <div class="subtitle-lg mb-0 text-white">Antragsteller</div>
                       </div>
                       <p class="mb-3 fs-16">Jetzt benötigen wir die Daten des (Haupt)Anstragstellers. Dieser muss nicht zwangsläufig auch verreisen, ist uns gegenüber aber der Ansprechpartner für eventuelle Rückfragen.</p>
                       <hr class="hr light">
                       <div class="row mt-5">
-                        <div class="col">
+                        <div class="col-sm-6">
                           <div class="mb-3">
                             <label class="form-label">Vorname</label>
                             <input class="form-control shadow-none" type="text" name="name">
                           </div>
                         </div>
-                        <div class="col">
+                        <div class="col-sm-6">
                           <div class="mb-3">
                             <label class="form-label">Nachname</label>
                             <input class="form-control shadow-none" type="text" name="last-name">
@@ -246,13 +247,13 @@
                         </div>
                       </div>
                       <div class="row">
-                        <div class="col">
+                        <div class="col-sm-6">
                           <div class="mb-3">
                             <label class="form-label">PLZ</label>
                             <input class="form-control shadow-none" type="text" name="plz">
                           </div>
                         </div>
-                        <div class="col">
+                        <div class="col-sm-6">
                           <div class="mb-3">
                             <label class="form-label">Stadt</label>
                             <input class="form-control shadow-none" type="text" name="stadt">
@@ -260,7 +261,7 @@
                         </div>
                       </div>
                       <div class="row">
-                        <div class="col">
+                        <div class="col-sm-6">
                           <div class="mb-3">
                             <label class="form-label">Land</label>
                             <div class="dropdown dropdown-select">
@@ -273,7 +274,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="col">
+                        <div class="col-sm-6">
                           <div class="mb-3">
                             <label class="form-label">Telefonnummer</label>
                             <input class="phone form-control shadow-none" type="tel" name="phone">
@@ -283,7 +284,7 @@
                     </div>
                     <!-- Travelers-->
                     <div class="step-tab-panel" data-step="step3">
-                      <div class="wrap-title">
+                      <div class="wrap-title d-none d-lg-block">
                         <div class="subtitle-lg mb-0 text-white">Reiseteilnehmer</div>
                       </div>
                       <p class="mb-3 fs-16">Auf dieser Seite wählen Sie alle Teilnehmer Ihrer Reise auf für die ein ESTA Antrag gestellt werden soll. So müssen Sie nicht für jeden (Mit)Reisenden einen eigenen Antrag absenden.</p>
@@ -310,11 +311,10 @@
                               </svg></a></div>
                         </div>
                       </div>
-                      <!--button(type='button').btn.btn-secondary.btn-lg.shadow-none.me-3.px-4.fs-6 Kein Reiseteilnehmer ausgewählt-->
                     </div>
                     <!-- Personal Information-->
                     <div class="step-tab-panel" data-step="step4">
-                      <div class="wrap-title">
+                      <div class="wrap-title d-none d-lg-block">
                         <div class="subtitle-lg mb-0 text-white">Persönliche Daten</div>
                       </div>
                       <p class="mb-3 fs-16">Die US Behörden verlangen diverse persönliche Informationen von jedem Antragsteller. Die Daten müssen für jeden Reiseteilnehmer einzeln angegeben werden. Wir haben die Eingabe anhand der Namen Deiner Reiseteilnehmer gruppiert.</p>
@@ -325,11 +325,11 @@
                         <div class="subtitle-md mb-0">John Dou - Reiseteilnehmer 1</div>
                       </div>
                       <div class="row my-5">
-                        <div class="col">
+                        <div class="col-sm-6">
                           <label class="form-label">Geburtsdatum</label>
                           <input class="datepicker form-control shadow-none" type="text" placeholder="dd.mm.yyyy">
                         </div>
-                        <div class="col">
+                        <div class="col-sm-6">
                           <label class="form-label">Geburtsort</label>
                           <input class="form-control shadow-none" type="text" placeholder="Geburtsort">
                         </div>
@@ -356,7 +356,7 @@
                         </label>
                       </div>
                       <div class="row my-3 additional-input d-none">
-                        <div class="col-6">
+                        <div class="col-sm-6">
                           <label class="form-label fw-bolder">Wie lautet Dein Künstlername ?</label>
                           <input class="form-control shadow-none" type="text">
                         </div>
@@ -364,7 +364,7 @@
                     </div>
                     <!-- Personal information #2-->
                     <div class="step-tab-panel" data-step="step5">
-                      <div class="wrap-title">
+                      <div class="wrap-title d-none d-lg-block">
                         <div class="subtitle-lg mb-0 text-white">Persönliche Daten</div>
                       </div>
                       <p class="mb-3 fs-16">Die US Behörden verlangen diverse persönliche Informationen von jedem Antragsteller. Die Daten müssen für jeden Reiseteilnehmer einzeln angegeben werden. Wir haben die Eingabe anhand der Namen Deiner Reiseteilnehmer gruppiert.</p>
@@ -379,13 +379,13 @@
                       <div class="mt-4">
                         <p class="fw-bolder">Elternteil 1</p>
                         <div class="row">
-                          <div class="col">
+                          <div class="col-sm-6">
                             <div class="mb-3">
                               <label class="form-label fw-bolder">Vorname</label>
                               <input class="form-control shadow-none" type="text" name="name">
                             </div>
                           </div>
-                          <div class="col">
+                          <div class="col-sm-6">
                             <div class="mb-3">
                               <label class="form-label fw-bolder">Nachname</label>
                               <input class="form-control shadow-none" type="text" name="last-name">
@@ -396,13 +396,13 @@
                       <div class="mt-4">
                         <p class="fw-bolder">Elternteil 2</p>
                         <div class="row">
-                          <div class="col">
+                          <div class="col-sm-6">
                             <div class="mb-3">
                               <label class="form-label fw-bolder">Vorname</label>
                               <input class="form-control shadow-none" type="text" name="name">
                             </div>
                           </div>
-                          <div class="col">
+                          <div class="col-sm-6">
                             <div class="mb-3">
                               <label class="form-label fw-bolder">Nachname</label>
                               <input class="form-control shadow-none" type="text" name="last-name">
@@ -413,7 +413,7 @@
                     </div>
                     <!-- Personal information #3-->
                     <div class="step-tab-panel" data-step="step6">
-                      <div class="wrap-title">
+                      <div class="wrap-title d-none d-lg-block">
                         <div class="subtitle-lg mb-0 text-white">Persönliche Daten</div>
                       </div>
                       <p class="mb-3 fs-16">Die US Behörden verlangen diverse persönliche Informationen von jedem Antragsteller. Die Daten müssen für jeden Reiseteilnehmer einzeln angegeben werden. Wir haben die Eingabe anhand der Namen Deiner Reiseteilnehmer gruppiert.</p>
@@ -428,7 +428,7 @@
                         <p class="fw-bolder">Ausstellungsland Reisepass</p>
                         <p class="mb-3">In welchem Land wurde dein Reisepasses ausgestellt ?</p>
                         <div class="row">
-                          <div class="col-6">
+                          <div class="col-sm-6">
                             <div class="dropdown dropdown-select">
                               <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountry" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Deutschland</span></button>
                               <ul class="dropdown-menu w-100" aria-labelledby="dropdownCountry">
@@ -452,7 +452,7 @@
                           </label>
                         </div>
                         <div class="row additional-input">
-                          <div class="col-6">
+                          <div class="col-sm-6">
                             <p class="fw-bolder">Bitte auswählen</p>
                             <div class="dropdown dropdown-select">
                               <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountry" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Deutschland</span></button>
@@ -477,7 +477,7 @@
                           </label>
                         </div>
                         <div class="row additional-input">
-                          <div class="col-6">
+                          <div class="col-sm-6">
                             <p class="fw-bolder">Bitte auswählen</p>
                             <div class="dropdown dropdown-select">
                               <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountry" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Deutschland</span></button>
@@ -493,7 +493,7 @@
                     </div>
                     <!-- Personal information #4-->
                     <div class="step-tab-panel" data-step="step7">
-                      <div class="wrap-title">
+                      <div class="wrap-title d-none d-lg-block">
                         <div class="subtitle-lg mb-0 text-white">Persönliche Daten</div>
                       </div>
                       <p class="mb-3 fs-16">Die US Behörden verlangen diverse persönliche Informationen von jedem Antragsteller. Die Daten müssen für jeden Reiseteilnehmer einzeln angegeben werden. Wir haben die Eingabe anhand der Namen Deiner Reiseteilnehmer gruppiert.</p>
@@ -505,14 +505,14 @@
                       </div>
                       <p class="mt-4">Wir benötigen nun verschiedene Angaben aus deinem Reisepass</p>
                       <div class="row">
-                        <div class="col">
+                        <div class="col-sm-6">
                           <div class="mb-3">
                             <label class="form-label fw-bolder">Reisepassnummer</label>
                             <input class="form-control shadow-none" type="text">
                             <div class="text-danger">Die Reisepassnummer findest du in der rechten oberen Ecke deines Passes</div>
                           </div>
                         </div>
-                        <div class="col">
+                        <div class="col-sm-6">
                           <div class="mb-3">
                             <label class="form-label fw-bolder">Gültig bis</label>
                             <input class="datepicker form-control shadow-none" type="text" placeholder="dd.mm.yyyy">
@@ -520,13 +520,13 @@
                         </div>
                       </div>
                       <div class="row mt-4">
-                        <div class="col">
+                        <div class="col-sm-6">
                           <div class="mb-3">
                             <label class="form-label fw-bolder">Ausstellungsdatum</label>
                             <input class="datepicker form-control shadow-none" type="text" placeholder="dd.mm.yyyy">
                           </div>
                         </div>
-                        <div class="col">
+                        <div class="col-sm-6">
                           <div class="mb-3">
                             <label class="form-label fw-bolder">Ausstellungsort</label>
                             <input class="form-control shadow-none" type="text">
@@ -559,7 +559,7 @@
                     </div>
                     <!-- Personal Information #5-->
                     <div class="step-tab-panel" data-step="step8">
-                      <div class="wrap-title">
+                      <div class="wrap-title d-none d-lg-block">
                         <div class="subtitle-lg mb-0 text-white">Persönliche Daten</div>
                       </div>
                       <p class="mb-3 fs-16">Die US Behörden verlangen diverse persönliche Informationen von jedem Antragsteller. Die Daten müssen für jeden Reiseteilnehmer einzeln angegeben werden. Wir haben die Eingabe anhand der Namen Deiner Reiseteilnehmer gruppiert.</p>
@@ -572,7 +572,7 @@
                       <p class="mt-4 fs-bolder">Arbeitgeber</p>
                       <p>Die US Behörden verlangen Angaben zu deinem aktuellen oder früheren Arbeitgeber</p>
                       <div class="row">
-                        <div class="col-6 mb-3">
+                        <div class="col-sm-6 mb-3">
                           <label class="form-label fw-bolder">Name aktueller oder letzter Arbeitgeber</label>
                           <input class="form-control shadow-none" type="text">
                         </div>
@@ -580,11 +580,11 @@
                           <label class="form-label fw-bolder">Strasse + Hausnummer</label>
                           <input class="form-control shadow-none" type="text">
                         </div>
-                        <div class="col mb-3">
+                        <div class="col-sm-6 mb-3">
                           <label class="form-label fw-bolder">PLZ</label>
                           <input class="form-control shadow-none" type="text">
                         </div>
-                        <div class="col mb-3">
+                        <div class="col-sm-6 mb-3">
                           <label class="form-label fw-bolder">Ort</label>
                           <input class="form-control shadow-none" type="text">
                         </div>
@@ -599,7 +599,7 @@
                             </ul>
                           </div>
                         </div>
-                        <div class="col-6 mb-3">
+                        <div class="col-sm-6 mb-3">
                           <label class="form-label fw-bolder">Telefon</label>
                           <input class="phone form-control shadow-none" type="tel" name="phone">
                         </div>
@@ -607,7 +607,7 @@
                     </div>
                     <!-- Contact Information-->
                     <div class="step-tab-panel" data-step="step9">
-                      <div class="wrap-title">
+                      <div class="wrap-title d-none d-lg-block">
                         <div class="subtitle-lg mb-0 text-white">US Reiseinformationen</div>
                       </div>
                       <p class="mt-3 mb-5">Die US Behörden verlangen Angaben zum Zweck Deiner Reise und deinem Aufenthaltsort in den USA</p>
@@ -620,7 +620,7 @@
                         <input type="radio" name="4" id="nein4"><span class="d-inline-block rounded-circle"></span>Nein
                       </label>
                       <div class="row my-3">
-                        <div class="col-6">
+                        <div class="col-sm-6">
                           <label class="form-label fw-bolder">Bitte auswählen</label>
                           <div class="dropdown dropdown-select">
                             <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountry" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Deutschland</span></button>
@@ -635,17 +635,17 @@
                       <p class="mb-3 fw-bold">US Kontaktinfo</p>
                       <p class="mb-3">Unabhängig von Deinem Aufenthaltsort in den USA verlangen die die Behörden die Angabe eines Kontaktes in den USA. Dies kann auch dein Aufenthaltsort (z.B. Hotel) in den USA sein. Möglich ist auch die Angabe der Daten von Freunden & Verwandten</p>
                       <div class="row">
-                        <div class="col mb-3">
+                        <div class="col-sm-6 mb-3">
                           <label class="form-label fw-bolder">Adresse</label>
                           <input class="form-control shadow-none" type="text">
                         </div>
-                        <div class="col mb-3">
+                        <div class="col-sm-6 mb-3">
                           <label class="form-label fw-bolder">Stadt</label>
                           <input class="form-control shadow-none" type="text">
                         </div>
                       </div>
                       <div class="row">
-                        <div class="col mb-3">
+                        <div class="col-sm-6 mb-3">
                           <label class="form-label fw-bolder">Bundesstaat</label>
                           <div class="dropdown dropdown-select">
                             <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountry" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Texas</span></button>
@@ -656,7 +656,7 @@
                             </ul>
                           </div>
                         </div>
-                        <div class="col mb-3">
+                        <div class="col-sm-6 mb-3">
                           <label class="form-label fw-bolder">Telefon</label>
                           <input class="phone form-control shadow-none" type="tel" name="phone">
                         </div>
@@ -673,21 +673,21 @@
                       <p class="fw-bold mb-3">Notfallkontakt</p>
                       <p>Die Behörden verlangen die Angabe eines Notfallkontaktes innerhalb oder außerhalb der USA</p>
                       <div class="row">
-                        <div class="col mb-3">
+                        <div class="col-sm-6 mb-3">
                           <label class="form-label fw-bolder">Name</label>
                           <input class="form-control shadow-none" type="text">
                         </div>
-                        <div class="col mb-3">
+                        <div class="col-sm-6 mb-3">
                           <label class="form-label fw-bolder">Vorname</label>
                           <input class="form-control shadow-none" type="text">
                         </div>
                       </div>
                       <div class="row">
-                        <div class="col mb-3">
+                        <div class="col-sm-6 mb-3">
                           <label class="form-label fw-bolder">Email</label>
                           <input class="form-control shadow-none" type="text">
                         </div>
-                        <div class="col mb-3">
+                        <div class="col-sm-6 mb-3">
                           <label class="form-label fw-bolder">Telefon</label>
                           <input class="phone form-control shadow-none" type="tel" name="phone">
                         </div>
@@ -695,7 +695,7 @@
                     </div>
                     <!-- Legal-->
                     <div class="step-tab-panel" data-step="step10">
-                      <div class="wrap-title">
+                      <div class="wrap-title d-none d-lg-block">
                         <div class="subtitle-lg mb-0 text-white">Einreisebefragung</div>
                       </div>
                       <p>Bitte beantworte nun einige zu Dir bzw. dem Zweck Deiner Reise. Bitte beachte, dass die Beantwortung von einer oder mehrere dieser Fragen mit 'Ja' in der Regel zur Ablehnung Deines Antrags führt</p>
@@ -765,7 +765,7 @@
                     </div>
                     <!-- Review Application-->
                     <div class="step-tab-panel" data-step="step11">
-                      <div class="wrap-title">
+                      <div class="wrap-title d-none d-lg-block">
                         <div class="subtitle-lg mb-0 text-white">Fragen zur Zulässigkeit</div>
                       </div>
                       <p>Wir haben nun alle Angaben die wir benötigen. Bitte prüfe diese Zusammenfassung nochmal auf Richtigkeit, bei Fehler kannst Du durch einen Klick auf der linken Seite jederzeit zum gewünschten Schritt zurück springen. Wenn alles korrekt ist kannst Du weiter gehen</p>
@@ -809,7 +809,7 @@
             </div>
             <div class="col-lg-3">
               <!-- Question sidebar-->
-              <div class="question-sidebar text-center">
+              <div class="question-sidebar text-center d-none d-lg-block">
                 <div class="subtitle-sm text-white">Sie haben Fragen?</div>
                 <div class="question-sidebar-person">
                   <div class="question-sidebar-person-img rounded-circle mb-3"><img src="images/question-person.png" alt="image"></div>
@@ -993,11 +993,11 @@
                     <div class="subtitle-sm fw-normal mb-3">Persönliche Informationen</div>
                     <div class="mb-3">
                       <div class="row">
-                        <div class="col">
+                        <div class="col-sm-6">
                           <label class="form-label">Vorname</label>
                           <input class="form-control shadow-none" type="text" name="name" placeholder="John">
                         </div>
-                        <div class="col">
+                        <div class="col-sm-6">
                           <label class="form-label">Nachname</label>
                           <input class="form-control shadow-none" type="text" placeholder="Doe">
                         </div>
@@ -1005,7 +1005,7 @@
                     </div>
                     <div class="mb-3">
                       <div class="row">
-                        <div class="col-6">
+                        <div class="col-sm-6">
                           <label class="form-label">Geschlecht</label>
                           <div class="dropdown dropdown-select">
                             <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownMale" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Male</span></button>
@@ -1019,7 +1019,7 @@
                     </div>
                     <div class="mb-3">
                       <div class="row">
-                        <div class="col">
+                        <div class="col-sm-6">
                           <label class="form-label">Staatsbürgerschaft</label>
                           <div class="dropdown dropdown-select">
                             <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountryInfo" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span></span></button>
@@ -1030,7 +1030,7 @@
                             </ul>
                           </div>
                         </div>
-                        <div class="col">
+                        <div class="col-sm-6">
                           <label class="form-label">Geburtsdatum</label>
                           <div class="row">
                             <div class="col-4 pe-0">
@@ -1069,7 +1069,7 @@
                     </div>
                     <div class="mb-3">
                       <div class="row">
-                        <div class="col">
+                        <div class="col-sm-6">
                           <label class="form-label">Geburtsland</label>
                           <div class="dropdown dropdown-select">
                             <button class="btn btn-light btn-lg dropdown-toggle text-start w-100 shadow-none" id="dropdownCountryBirth" type="button" data-bs-toggle="dropdown" aria-expanded="false"><span></span></button>
@@ -1080,7 +1080,7 @@
                             </ul>
                           </div>
                         </div>
-                        <div class="col">
+                        <div class="col-sm-6">
                           <label class="form-label">City of birth</label>
                           <input class="form-control shadow-none" type="text" placeholder="Berlin">
                         </div>
@@ -1091,11 +1091,11 @@
                     <div class="subtitle-sm fw-normal mb-3">Passdaten</div>
                     <div class="mb-3">
                       <div class="row">
-                        <div class="col">
+                        <div class="col-sm-6">
                           <label class="form-label">Nummer des Reisepass [<span class="text-danger">?</span>]</label>
                           <input class="form-control shadow-none" type="text" placeholder="Berlin">
                         </div>
-                        <div class="col">
+                        <div class="col-sm-6">
                           <label class="form-label">Datum der Ausstellung [<span class="text-danger">?</span>]</label>
                           <div class="row">
                             <div class="col-4 pe-0">
@@ -1134,11 +1134,11 @@
                     </div>
                     <div class="mb-3">
                       <div class="row">
-                        <div class="col">
+                        <div class="col-sm-6">
                           <label class="form-label">Ort der Ausstellung [<span class="text-danger">?</span>]</label>
                           <input class="form-control shadow-none" type="text">
                         </div>
-                        <div class="col">
+                        <div class="col-sm-6">
                           <label class="form-label">Ablaufdatum [<span class="text-danger">?</span>]</label>
                           <div class="row">
                             <div class="col-4 pe-0">
@@ -1206,7 +1206,7 @@
                 <button class="btn btn-outline-primary btn-lg shadow-none me-3 px-4 fs-6" type="button" data-bs-dismiss="modal"><span>Abbrechen</span></button>
                 <button class="step-btn btn btn-outline-primary btn-lg shadow-none me-3 px-4 fs-6" data-step-action="prev"><span>Zurück</span></button>
                 <button class="step-btn btn btn-primary btn-lg shadow-none border-0 px-5 fs-6" data-step-action="next">Weiter</button>
-                <button class="step-btn btn btn-primary btn-lg shadow-none border-0 px-5 fs-6" data-step-action="finish">Anlegen</button>
+                <button class="step-btn btn btn-primary btn-lg shadow-none border-0 px-5 fs-6 mt-4 mt-md-0" data-step-action="finish">Anlegen</button>
               </div>
             </div>
           </form>
