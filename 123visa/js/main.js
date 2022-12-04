@@ -192,6 +192,11 @@ $(function () {
       steps_api.setStepIndex(2);
 		});
 
+    // Dashboard mobile nav
+    $('aside .navbar-toggler').on('click' , function(){
+      $(this).closest('aside').toggleClass('open');
+    });
+
     // Datepicker
     $('.datepicker').datepicker({
       format: 'dd MM yyyy',
@@ -221,13 +226,6 @@ $(function () {
     var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
     var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
       return new bootstrap.Popover(popoverTriggerEl)
-    });
-
-    // Table
-    var $table = $('#table')
-    
-    $table.bootstrapTable('refreshOptions' , {
-      classes: 'table-striped table table-bordered'
     });
 
 });
