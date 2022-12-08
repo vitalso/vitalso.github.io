@@ -267,7 +267,7 @@ header .logo img {
   color: #105FAD;
 }
 .navbar-expand-lg .navbar-nav a.nav-link:hover, .navbar-expand-lg .navbar-nav a.nav-link.active {
-  color: #fff;
+  color: #22A7CF;
 }
 .navbar-expand-lg .navbar-nav a.nav-link.btn {
   padding: 3px 22px;
@@ -276,7 +276,8 @@ header .logo img {
   min-width: auto;
 }
 .navbar-expand-lg .navbar-nav a.nav-link.btn:hover, .navbar-expand-lg .navbar-nav a.nav-link.btn:active {
-  color: #22A7CF;
+  color: #fff;
+  background: #105FAD;
 }
 .navbar-expand-lg .navbar-toggler {
   width: 20px;
@@ -839,18 +840,6 @@ ul.list-marker li {
   background: url(../images/list-marker.svg) left center no-repeat;
 }
 
-.about-group-cover {
-  max-width: 50%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.about-group-cover img {
-  height: 100%;
-  object-fit: cover;
-}
-
 @media screen and (max-width: 1200px) {
   .who-is .suit-main, .suit-main .suit-main {
     right: -20%;
@@ -867,11 +856,6 @@ ul.list-marker li {
   }
   .index-intro .suit-main {
     right: -20%;
-  }
-  .about-group-cover {
-    position: relative;
-    max-width: 100%;
-    text-align: center;
   }
 }
 @media screen and (max-width: 767px) {
