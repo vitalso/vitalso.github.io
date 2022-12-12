@@ -5,19 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/dist/css/style.css">
 </head>
 <body>
     <div id="open-chat" class="w-20 h-20 rounded-full shadow-lg bg-slate-200 fixed right-5 bottom-5 cursor-pointer flex flex-col justify-center items-center">
-        <svg id="loading-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 stroke-slate-700 hidden animate-spin">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
-          </svg>          
-        <svg id="chat-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 stroke-slate-700">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 stroke-slate-700">
             <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
         </svg>
     </div>
 
     <div id="chat-box" class="rounded-lg bg-white shadow-md fixed right-5 top-5 bottom-36 w-80 overflow-scroll hidden">
+        <!-- Chat media -->
+        <div id="chat-media" class="rounded-lg shadow-md fixed top-5 right-80 w-[50%] min-h-[350px] h-full max-h-[500px] bg-white mr-10 overflow-hidden hidden">
+            <button id="close-media" class="absolute top-5 right-5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>                      
+            </button>
+        </div>
+        <!-- End chat media -->
+
         <!-- Header of chat box -->
         <div class="bg-indigo-100 p-4">
             <div class="flex gap-3 items-center">
@@ -40,11 +47,18 @@
         <!-- End Header of chat box -->
 
         <!-- Content chat box -->
-        <div class="px-4 py-8 overflow-auto min-h-[50vh]">
-            <div class="chat-list">
+        <div id="chat-content" class="px-4 py-8 h-full min-h-[50vh]">
+            <div class="chat-list h-full">
+                <div id="chat-loading" class="flex flex-column items-center justify-center h-full">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 fill-slate-400 animate-spin">
+                        <path opacity="0.2" fill-rule="evenodd" clip-rule="evenodd" d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/>
+                        <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z"/>
+                    </svg>
+                </div>
+
                 <form id="codeForm" class="hidden">
                     <input type="text" placeholder="Please enter your code" class="border rounded-sm h-10 w-full mb-5 pl-3">
-                    <button class="w-full py-3 text-white bg-green-400 rounded-lg font-bold">Enter code</button>
+                    <button class="w-full py-3 text-white bg-green-500 rounded-lg font-bold">Enter code</button>
                 </form>
 
                 <div class="chat-item hidden">
@@ -53,12 +67,12 @@
                     </div>
 
                     <div class="chat-answer py-4">
-                        <form id="chat-form flex flex-col-reverse">
-                            <div class="mb-3">
+                        <form id="chat-form" class="flex flex-col-reverse">
+                            <!--<div class="mb-3">
                                 <input type="radio" name="question" id="other" value="other" checked="checked">
                                 <label for="other">Other</label>
                                 <input type="text" placeholder="Please type answer here" class="d-block w-full rounded-sm h-10 pl-4 border-indigo-300 border">
-                            </div>
+                            </div>-->
                         </form>
                         <!--<div class="mb-3">
                             <input type="radio" name="radio" id="1" checked>
@@ -75,7 +89,7 @@
                             <label for="3">Answer 3</label>
                         </div>-->
                     </div>
-                    <button id="sendAnswer" class="w-full py-3 text-white bg-green-400 rounded-lg font-bold">Send</button>
+                    <button id="sendAnswer" class="w-full py-3 text-white bg-green-500 rounded-lg font-bold">Send</button>
                 </div>
 
             </div>
@@ -84,9 +98,9 @@
     </div>
 
     <!-- jQuery -->
-    <script src="js/jquery-3.6.1.min.js"></script>
-    <script src="js/js.cookie.js"></script>
-    <script src="js/main.js"></script>
+    <script src="/dist/js/jquery-3.6.1.min.js"></script>
+    <script src="/dist/js/js.cookie.js"></script>
+    <script src="/dist/js/main.js"></script>
 
 </body>
 </html>
