@@ -188,21 +188,42 @@ $(function () {
                     chatMedia.find('#serverVid').remove();
                 }
 
+                // Check if we have URL
+                if ( result.url !== '' ) {
+                    var serverUrl = result.url;
+                    
+                    if ( !$('#serverUrl').length ) {
+                        chatMedia.append("<div id='serverUrl' class='h-full'><iframe width='100%' height='100%' src='' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe></div>");
+                    }
+
+                    chatMedia.find('#serverUrl iframe').attr('src' , serverUrl);
+                    
+                    chatMedia.removeClass('hidden');
+                } else {
+                    chatMedia.find('#serverUrl').remove();
+                }
+
                 // Remove element with media
-                if ( result.serverPic == '' && result.serverVid == '' ) {
+                if ( result.serverPic == '' && result.serverVid == '' && result.url == '' ) {
                     chatMedia.addClass('hidden');
                 }
                 
                 // Clear the form
                 $('.chat-answer form').html('');
+
+                if ( resp == null ) {
+                    console.log('null')
+                } else {
                 
-                for (i=0; i < resp.length; i++){
-                    console.log(i, resp[i]);
-                    if ( resp[i] == 'PLAYEND' ) {
-                        $('.chat-answer form').prepend("<div class='mb-3'><input type='radio' name='question' id="+i+" value="+resp[i]+"><label for="+i+"> CONTINUE</label></div>");
-                    } else {
-                        $('.chat-answer form').prepend("<div class='mb-3'><input type='radio' name='question' id="+i+" value="+resp[i]+"><label for="+i+"> "+resp[i]+"</label></div>");
+                    for (i=0; i < resp.length; i++){
+                        console.log(i, resp[i]);
+                        if ( resp[i] == 'PLAYEND' ) {
+                            $('.chat-answer form').prepend("<div class='mb-3'><input type='radio' name='question' id="+i+" value="+resp[i]+"><label for="+i+"> CONTINUE</label></div>");
+                        } else {
+                            $('.chat-answer form').prepend("<div class='mb-3'><input type='radio' name='question' id="+i+" value="+resp[i]+"><label for="+i+"> "+resp[i]+"</label></div>");
+                        }
                     }
+
                 }
                 
                 //console.log(heard , respID);
