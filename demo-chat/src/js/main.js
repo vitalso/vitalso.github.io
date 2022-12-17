@@ -4,7 +4,7 @@ $(function () {
     var serverSay = $('#serverSay');
     var chatBox = $('#chat-box');
     var codeForm = $('#codeForm');
-    //var formAnswer = $('#chat-form');
+    var formAnswer = $('#chat-form');
     var chatMedia = $('#chat-media');
 
     //var clientCode = '4RXPDLJPDI';
@@ -41,17 +41,29 @@ $(function () {
 
     $('#open-chat').on('click' , function(){
 
+        $(this).addClass('hidden');
         chatBox.removeClass('hidden');
         
     });
 
     $('#close-chat').on('click' , function(){
         chatBox.addClass('hidden');
+        $('#open-chat').removeClass('hidden');
         Cookies.remove('deviceCode', { sameSite: 'strict' });
     });
 
     $('#close-media').on('click' , function(){
         chatMedia.addClass('hidden');
+    });
+
+    $('#openResponse input').on('input' , function(){
+        if ( $(this).val().length > 1 ) {
+            $(this).next('button').removeClass('hidden');
+            $(this).next('button').attr('data-value' , $(this).val());
+        } else {
+            $(this).next('button').addClass('hidden');
+            $(this).next('button').attr('data-value' , '');
+        }
     });
 
     function getInfo(url) {
@@ -82,7 +94,12 @@ $(function () {
                 Cookies.set('lastDialogID', result.dialogID , { sameSite: 'strict' });
 
                 screenText.text(result.screenText);
-                serverSay.text(result.serverSays);
+                if ( result.serverSays !== '' ) {
+                    serverSay.closest('div').removeClass('hidden');
+                    serverSay.text(result.serverSays);
+                } else {
+                    serverSay.closest('div').addClass('hidden');
+                }
 
                 if ( result.serverPic !== '' ) {
                     var serverImage = result.serverPic;
@@ -101,14 +118,45 @@ $(function () {
 
                 }
 
-                //var template = JSON.parse(result.screenJSN);
-                //console.log(result.screenJSN);
+                //var template = $.parseJSON('https://stepsforward.com.au/buddylink/2/assets/apl/apl_imageNoText.json');
 
                 var resp = result.expect_resp_arr;
                 for (i=0; i < resp.length; i++){
                     console.log(i, resp[i]);
-                    $('.chat-answer form').prepend("<div class='mb-3'><input type='radio' name='question' id="+i+" value="+resp[i]+"><label for="+i+"> "+resp[i]+"</label></div>");
+                    //$('#chat-form').prepend("<div class='mb-3'><input type='radio' name='question' id="+i+" value="+resp[i]+"><label for="+i+"> "+resp[i]+"</label></div>");
+                    formAnswer.append("<div class='mb-3'><button data-value="+resp[i]+" data-id="+i+" class='w-full py-3 text-slate-700 bg-slate-300 rounded-lg font-bold hover:bg-slate-200 active:bg-slate-600 active:text-white transition-all capitalize'>"+resp[i]+"</button></div>")
                 }
+
+                var template = result.apl_arr;
+
+                switch (result.screenJSN) { 
+                    case 'apl_imageNoText.json':
+                        var templateTitle = template.datasources.imageTemplateData.properties.title;
+                        var templateUrl = template.datasources.imageTemplateData.properties.logoUrl;
+                        break;
+                    case 'apl_screentext_1.json':
+                        var templateTitle = template.datasources.longTextTemplateData.properties.title;
+                        var templateUrl = template.datasources.longTextTemplateData.properties.logoUrl;
+                        break;
+                    case 'apl_movie2.json':
+                        var templateTitle = template.datasources.data20.title;
+                        var templateUrl = template.datasources.data20.logoUrl;
+                        break;
+                    default:
+                        var templateTitle = template.datasources.imageTemplateData.properties.title;
+                        var templateUrl = template.datasources.imageTemplateData.properties.logoUrl;
+                }
+
+                if ( !$('#screenLogo').length ) {
+                    $('#chat-header').append("<div id='screenLogo' class='w-10 h-10 rounded-lg bg-white'><img src='' alt='logo'></div>");
+                }
+                $('#chat-header').find('#screenLogo img').attr('src' , templateUrl);
+
+                if ( !$('#screenTitle').length ) {
+                    $('#chat-header').append("<h5 id='screenTitle' class='text-base font-bold'></h5>");
+                }
+                $('#chat-header').find('#screenTitle').text(templateTitle);
+
             },
             error: function () {
                 console.log("error");
@@ -122,14 +170,17 @@ $(function () {
         alert(value);
     });*/
 
-    $('#sendAnswer').on('click' , function(){
+    $(document).on('click' , '#chat-form button , #openResponse button' , function(){
 
-        var value = $('input[name="question"]').filter(':checked').val();
-        var valueID = $('input[name="question"]').filter(':checked').attr('id');
+        //var value = $('input[name="question"]').filter(':checked').val();
+        //var valueID = $('input[name="question"]').filter(':checked').attr('id');
+
+        var value = $(this).attr('data-value');
+        var valueID = $(this).attr('data-id');
         console.log(value , valueID);
 
         //var urlPOST = 'https://stepsforward.com.au/buddylink/2/control/interactions.php?action=getinfo&web=Y&stamp=1663119408&lastDialogID=26&event=CustomerIntent&ShouldEndSession=false&heard='+value+'&respID='+valueID+'&deviceCode=4RXPDLJPDI&rego=Y&node=node18';
-        var urlPOST = 'https://stepsforward.com.au/buddylink/2/control/interactions.php?action=getinfo&stamp=1670535819&turn=0&lastDialogID=39&state=1&event=AMAZON.YesIntent&ShouldEndSession=false&requestType=Amazon&deviceCode='+deviceCode+'&rego=Y&node=node1&heard='+value+'';
+        var urlPOST = 'https://stepsforward.com.au/buddylink/2/control/interactions.php?action=getinfo&stamp=1670535819&turn=0&lastDialogID=39&state=1&event=AMAZON.YesIntent&ShouldEndSession=false&requestType=Amazon&deviceCode='+deviceCode+'&rego=Y&node=node1&heard='+value+'&respID='+valueID+'';
 
         $.ajax({
             url: urlPOST,
@@ -140,17 +191,24 @@ $(function () {
                 $('.chat-item').addClass('hidden');
                 $('#chat-loading').removeClass('hidden');
             },
-            //data: formAnswer.serialize(),
             success: function (result) {
 
                 $('.chat-item').removeClass('hidden');
                 $('#chat-loading').addClass('hidden');
 
-                console.log(Cookies.get());
+                $('#openResponse input').val('');
+                $('#openResponse input').next('button').addClass('hidden');
 
-                console.log(result);
+                //console.log(Cookies.get());
+
                 screenText.text(result.screenText);
-                serverSay.text(result.serverSays);
+                if ( result.serverSays !== '' ) {
+                    serverSay.closest('div').removeClass('hidden');
+                    serverSay.text(result.serverSays);
+                } else {
+                    serverSay.closest('div').addClass('hidden');
+                }
+                
                 var resp = result.expect_resp_arr;
 
                 // Check if answer have the image
@@ -209,7 +267,7 @@ $(function () {
                 }
                 
                 // Clear the form
-                $('.chat-answer form').html('');
+                formAnswer.html('');
 
                 if ( resp == null ) {
                     console.log('null')
@@ -218,13 +276,45 @@ $(function () {
                     for (i=0; i < resp.length; i++){
                         console.log(i, resp[i]);
                         if ( resp[i] == 'PLAYEND' ) {
-                            $('.chat-answer form').prepend("<div class='mb-3'><input type='radio' name='question' id="+i+" value="+resp[i]+"><label for="+i+"> CONTINUE</label></div>");
+                            formAnswer.append("<div class='mb-3'><button data-value="+resp[i]+" data-id="+i+" class='w-full py-3 text-slate-700 bg-slate-300 rounded-lg font-bold hover:bg-slate-200 active:bg-slate-600 active:text-white transition-all capitalize'>CONTINUE</button></div>")
                         } else {
-                            $('.chat-answer form').prepend("<div class='mb-3'><input type='radio' name='question' id="+i+" value="+resp[i]+"><label for="+i+"> "+resp[i]+"</label></div>");
+                            formAnswer.append("<div class='mb-3'><button data-value="+resp[i]+" data-id="+i+" class='w-full py-3 text-slate-700 bg-slate-300 rounded-lg font-bold hover:bg-slate-200 active:bg-slate-600 active:text-white transition-all capitalize'>"+resp[i]+"</button></div>")
                         }
                     }
 
                 }
+
+                console.log(result);
+
+                var template = result.apl_arr;
+
+                switch (result.screenJSN) { 
+                    case 'apl_imageNoText.json':
+                        var templateTitle = template.datasources.imageTemplateData.properties.title;
+                        var templateUrl = template.datasources.imageTemplateData.properties.logoUrl;
+                        break;
+                    case 'apl_screentext_1.json':
+                        var templateTitle = template.datasources.longTextTemplateData.properties.title;
+                        var templateUrl = template.datasources.longTextTemplateData.properties.logoUrl;
+                        break;
+                    case 'apl_movie2.json':
+                        var templateTitle = template.datasources.data20.title;
+                        var templateUrl = template.datasources.data20.logoUrl;
+                        break;
+                    default:
+                        var templateTitle = template.datasources.imageTemplateData.properties.title;
+                        var templateUrl = template.datasources.imageTemplateData.properties.logoUrl;
+                }
+
+                if ( !$('#screenLogo').length ) {
+                    $('#chat-header').append("<div id='screenLogo' class='w-10 h-10 rounded-lg bg-white'><img src='' alt='logo'></div>");
+                }
+                $('#chat-header').find('#screenLogo img').attr('src' , templateUrl);
+
+                if ( !$('#screenTitle').length ) {
+                    $('#chat-header').append("<h5 id='screenTitle' class='text-base font-bold'></h5>");
+                }
+                $('#chat-header').find('#screenTitle').text(templateTitle);
                 
                 //console.log(heard , respID);
                 

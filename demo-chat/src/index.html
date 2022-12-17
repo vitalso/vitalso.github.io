@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
     <div id="open-chat" class="w-20 h-20 rounded-full shadow-lg bg-slate-200 fixed right-5 bottom-5 cursor-pointer flex flex-col justify-center items-center">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 stroke-slate-700">
             <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
@@ -20,7 +21,7 @@
             <button id="close-media" class="absolute top-5 right-5">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>                      
+                </svg>
             </button>
         </div>
         <!-- End chat media -->
@@ -28,19 +29,16 @@
         <!-- Header of chat box -->
         <div class="bg-indigo-100 p-4">
             <div class="flex gap-3 items-center">
-                <!--<div class="w-10 h-10 rounded-full bg-white"></div>-->
-                <div>
-                    <h5 id="screenText" class="text-base font-bold"></h5>
-                </div>
+                <div id="chat-header" class="flex items-center gap-3"></div>
                 <button class="ml-auto">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
-                    </svg>                      
+                    </svg>
                 </button>
                 <button id="close-chat">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>                      
+                    </svg>
                 </button>
             </div>
         </div>
@@ -58,7 +56,7 @@
 
                 <form id="codeForm" class="hidden">
                     <input type="text" placeholder="Please enter your code" class="border rounded-sm h-10 w-full mb-5 pl-3">
-                    <button class="w-full py-3 text-white bg-green-500 rounded-lg font-bold">Enter code</button>
+                    <button class="w-full py-3 text-white bg-green-500 rounded-lg font-bold capitalize">Enter code</button>
                 </form>
 
                 <div class="chat-item hidden">
@@ -67,29 +65,12 @@
                     </div>
 
                     <div class="chat-answer py-4">
-                        <form id="chat-form" class="flex flex-col-reverse">
-                            <!--<div class="mb-3">
-                                <input type="radio" name="question" id="other" value="other" checked="checked">
-                                <label for="other">Other</label>
-                                <input type="text" placeholder="Please type answer here" class="d-block w-full rounded-sm h-10 pl-4 border-indigo-300 border">
-                            </div>-->
-                        </form>
-                        <!--<div class="mb-3">
-                            <input type="radio" name="radio" id="1" checked>
-                            <label for="1">Answer 1</label>
+                        <div id="chat-form" class="flex flex-col-reverse"></div>
+                        <div id="openResponse" class="mb-3">
+                            <input type="text" placeholder="You can type answer here" class="d-block w-full rounded-lg h-12 pl-4 mb-3 border-slate-300 border outline-none">
+                            <button id="sendAnswer" data-value="" data-id="100" class="w-full py-3 text-white bg-green-500 rounded-lg font-bold hidden">Send</button>
                         </div>
-
-                        <div class="mb-3">
-                            <input type="radio" name="radio" id="2">
-                            <label for="2">Answer 2</label>
-                        </div>
-
-                        <div class="mb-3">
-                            <input type="radio" name="radio" id="3">
-                            <label for="3">Answer 3</label>
-                        </div>-->
                     </div>
-                    <button id="sendAnswer" class="w-full py-3 text-white bg-green-500 rounded-lg font-bold">Send</button>
                 </div>
 
             </div>
