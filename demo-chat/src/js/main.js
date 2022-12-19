@@ -9,6 +9,14 @@ $(function () {
 
     //var clientCode = '4RXPDLJPDI';
     //var cliendCode = '00XPDLJPDI';
+
+    if (navigator.cookieEnabled) {
+        $('#cookie-popup p').text('This website uses cookies to ensure you get the best experience on our website');
+        //alert("ON");
+    } else {
+        $('#cookie-popup p').text('Please enabled cookie in setting your browser to ensure you get the best experience on our website')
+    }
+
     var deviceCode = Cookies.get('deviceCode');
     var url = 'https://stepsforward.com.au/buddylink/2/control/interactions.php?action=getinfo&deviceCode='+deviceCode+'&event=Launch&requestType=LaunchRequest&turn=0';
 
@@ -164,16 +172,7 @@ $(function () {
         });
     };
 
-    /*$('input[type="radio"]').on('change' , function(){
-        var value = $(this).filter(':checked').val();
-        //console.log(value);
-        alert(value);
-    });*/
-
     $(document).on('click' , '#chat-form button , #openResponse button' , function(){
-
-        //var value = $('input[name="question"]').filter(':checked').val();
-        //var valueID = $('input[name="question"]').filter(':checked').attr('id');
 
         var value = $(this).attr('data-value');
         var valueID = $(this).attr('data-id');
@@ -326,5 +325,9 @@ $(function () {
     });
 
     Cookies.remove('deviceCode' , { sameSite: 'strict' });
+
+    $('#cookie-popup button').on('click' , function(){
+        $(this).closest('#cookie-popup').addClass('hidden');
+    });
 
 });
