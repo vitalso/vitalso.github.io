@@ -21,15 +21,28 @@
   <body>
     <!-- Header start-->
     <header>
-      <div class="container-fluid">
+      <div class="container-fluid px-lg-4">
         <nav class="navbar navbar-expand-lg p-0">
           <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="logo"></a></div>
           <button class="navbar-toggler ms-5" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
           <ul class="navbar-nav align-items-lg-center ms-auto">
-            <li class="nav-item mb-0 border-0 me-3"><a class="nav-link fw-normal" href="#">
-                <svg>
-                  <use xlink:href="images/sprite.svg#icon-user"></use>
-                </svg>John Doe</a></li>
+            <li class="nav-item mb-0 border-0">
+              <!--a(href="#").nav-link.fw-normal
+              svg
+              	use(xlink:href="images/sprite.svg#icon-user")
+              |John Doe
+              -->
+              <div class="dropdown nav-link">
+                <button class="bg-transparent text-start shadow-none" id="dropdownAdminUser" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#icon-user"></use>
+                  </svg>John Doe
+                </button>
+                <ul class="dropdown-menu start-50 translate-middle-x" aria-labelledby="dropdownAdminUser">
+                  <li class="p-0"><a class="dropdown-item p-0 fs-6" href="#">Log out</a></li>
+                </ul>
+              </div>
+            </li>
           </ul>
         </nav>
       </div>
@@ -37,8 +50,15 @@
     <!-- Main page start-->
     <main>
       <section class="py-5">
-        <div class="container-fluid">
-          <div class="subtitle-xl mb-5">Thailand Pass</div>
+        <div class="container-fluid px-lg-4">
+          <div class="dropdown mb-5 d-inline-block">
+            <button class="bg-transparent dropdown-toggle text-start subtitle-xl shadow-none" id="dropdownChangePass" type="button" data-bs-toggle="dropdown" aria-expanded="false">Thailand Pass</button>
+            <ul class="dropdown-menu w-100" aria-labelledby="dropdownChangePass">
+              <li class="p-0 border-0"><a class="dropdown-item" href="#">Thailand</a></li>
+              <li class="p-0 border-0"><a class="dropdown-item" href="#">USA</a></li>
+              <li class="p-0 border-0"><a class="dropdown-item" href="#">Zambia</a></li>
+            </ul>
+          </div>
           <ul class="nav nav-pills mb-3 dashboard-nav" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
               <button class="nav-link py-0 border-0 active" id="home-tab" data-bs-toggle="pill" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
@@ -392,7 +412,7 @@
                     <td>02 April 2022</td>
                     <td>3</td>
                     <td>1</td>
-                    <td><span class="badge rounded-pill bg-warning">On Hold</span></td>
+                    <td><span class="badge rounded-pill bg-warning px-3">On Hold</span></td>
                   </tr>
                   <tr>
                     <td></td>
@@ -401,7 +421,7 @@
                     <td>02 April 2022</td>
                     <td>3</td>
                     <td>1</td>
-                    <td><span class="badge rounded-pill bg-warning">On Hold</span></td>
+                    <td><span class="badge rounded-pill bg-warning px-3">On Hold</span></td>
                   </tr>
                   <tr>
                     <td></td>
@@ -410,7 +430,7 @@
                     <td>02 April 2022</td>
                     <td>3</td>
                     <td>1</td>
-                    <td><span class="badge rounded-pill bg-warning">On Hold</span></td>
+                    <td><span class="badge rounded-pill bg-warning px-3">On Hold</span></td>
                   </tr>
                   <tr>
                     <td></td>
@@ -419,7 +439,7 @@
                     <td>02 April 2022</td>
                     <td>3</td>
                     <td>1</td>
-                    <td><span class="badge rounded-pill bg-warning">On Hold</span></td>
+                    <td><span class="badge rounded-pill bg-warning px-3">On Hold</span></td>
                   </tr>
                   <tr>
                     <td></td>
@@ -428,7 +448,7 @@
                     <td>02 April 2022</td>
                     <td>3</td>
                     <td>1</td>
-                    <td><span class="badge rounded-pill bg-warning">On Hold</span></td>
+                    <td><span class="badge rounded-pill bg-warning px-3">On Hold</span></td>
                   </tr>
                   <tr>
                     <td></td>
@@ -437,7 +457,7 @@
                     <td>02 April 2022</td>
                     <td>3</td>
                     <td>1</td>
-                    <td><span class="badge rounded-pill bg-warning">On Hold</span></td>
+                    <td><span class="badge rounded-pill bg-warning px-3">On Hold</span></td>
                   </tr>
                   <tr>
                     <td></td>
@@ -446,7 +466,7 @@
                     <td>02 April 2022</td>
                     <td>3</td>
                     <td>1</td>
-                    <td><span class="badge rounded-pill bg-warning">On Hold</span></td>
+                    <td><span class="badge rounded-pill bg-warning px-3">On Hold</span></td>
                   </tr>
                   <tr>
                     <td></td>
@@ -455,7 +475,7 @@
                     <td>02 April 2022</td>
                     <td>3</td>
                     <td>1</td>
-                    <td><span class="badge rounded-pill bg-warning">On Hold</span></td>
+                    <td><span class="badge rounded-pill bg-warning px-3">On Hold</span></td>
                   </tr>
                   <tr>
                     <td></td>
@@ -464,7 +484,7 @@
                     <td>02 April 2022</td>
                     <td>3</td>
                     <td>1</td>
-                    <td><span class="badge rounded-pill bg-warning">On Hold</span></td>
+                    <td><span class="badge rounded-pill bg-warning px-3">On Hold</span></td>
                   </tr>
                   <tr>
                     <td></td>
@@ -473,7 +493,7 @@
                     <td>02 April 2022</td>
                     <td>3</td>
                     <td>1</td>
-                    <td><span class="badge rounded-pill bg-warning">On Hold</span></td>
+                    <td><span class="badge rounded-pill bg-warning px-3">On Hold</span></td>
                   </tr>
                   <tr>
                     <td></td>
@@ -482,7 +502,7 @@
                     <td>02 April 2022</td>
                     <td>3</td>
                     <td>1</td>
-                    <td><span class="badge rounded-pill bg-warning">On Hold</span></td>
+                    <td><span class="badge rounded-pill bg-warning px-3">On Hold</span></td>
                   </tr>
                   <tr>
                     <td></td>
@@ -491,7 +511,7 @@
                     <td>02 April 2022</td>
                     <td>3</td>
                     <td>1</td>
-                    <td><span class="badge rounded-pill bg-warning">On Hold</span></td>
+                    <td><span class="badge rounded-pill bg-warning px-3">On Hold</span></td>
                   </tr>
                 </tbody>
               </table>
