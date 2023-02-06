@@ -314,7 +314,7 @@ header .navbar-toggler[aria-expanded=true] svg.icon-close {
   padding: 0;
 }
 .navbar .navbar-nav .nav-link:hover {
-  color: #fff;
+  color: #D3DE4E;
 }
 .navbar .navbar-nav .nav-btn {
   color: #FDF9ED;
@@ -324,6 +324,7 @@ header .navbar-toggler[aria-expanded=true] svg.icon-close {
 }
 .navbar .navbar-nav .nav-btn:hover {
   background: #D3DE4E;
+  color: #fff;
 }
 
 @media screen and (max-width: 992px) {
