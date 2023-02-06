@@ -10,8 +10,8 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon"><!-- Bootstrap 5 styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!--link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous")--><!-- Slick slider -->
-    <!--link(rel="stylesheet", href="css/slick-theme.css")-->
-    <!--link(rel="stylesheet", href="css/slick.css")--><!-- Magnific popup -->
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css"><!-- Magnific popup -->
     <!--link(rel="stylesheet", href="css/magnific-popup.css")--><!-- AOS style -->
     <!--link(rel="stylesheet" , href="css/aos.css")--><!-- Template file style -->
     <link rel="stylesheet" href="css/style.css">
@@ -108,9 +108,10 @@
       </section>
       <!-- Products-->
       <section class="products bg-primary-green text-white pt-100 bg-bottom-waves white">
-        <div class="container">
+        <div class="container position-relative">
           <h3 class="text-center text-white text-uppercase">Einfach nachhaltig gärtnern</h3>
           <div class="subtitle text-accent-green text-center mb-85">Für ein gutes Gewissen</div>
+          <!-- BIO image side--><img class="bio-image position-absolute" src="images/bio-image.svg" alt="BIO image">
           <div class="row mb-100">
             <div class="col-lg-8 offset-lg-2 text-center">
               <p class="ls-1 mb-32">Möchtest du nachhaltig und umweltbewusst gärtnern? Willst du eine wirklich natürliche Bio-Erde in deinem Beet verwenden?</p>
@@ -251,13 +252,11 @@
         </div>
       </section>
       <!-- Full-screen image with text section-->
-      <section class="full-screen-section bg-img-full-section-1 text-center text-white with-gradient-overlay with-waves">
-        <div class="container position-relative z-index-1">
+      <section class="full-screen-section bg-img-full-section-1 text-center text-white position-relative">
+        <div class="container">
           <h2 class="text-uppercase">Blumenerde schadet unserer Umwelt.</h2>
           <div class="subtitle text-accent-green">Hättest du es gewusst?</div>
         </div>
-        <div class="full-screen-waves top"></div>
-        <div class="full-screen-waves bottom"></div>
         <!-- side image--><img class="full-side-img" src="images/full-side-img.png" alt="full-side-img">
       </section>
       <section class="mb-140 pt-100 text-center text-primary-green">
@@ -290,8 +289,8 @@
         </div><img class="img-with-special-form position-absolute top-50 translate-middle-y end-0" src="images/image-with-special-form.png" alt="img-with-special-form">
       </section>
       <!-- Full-screen image with text section-->
-      <section class="full-screen-section bg-img-full-section-2 text-white with-gradient-overlay with-waves overflow-hidden">
-        <div class="container position-relative z-index-1">
+      <section class="full-screen-section bg-img-full-section-2 text-white">
+        <div class="container">
           <div class="row">
             <div class="col-lg-7">
               <h3 class="text-uppercase">Die meisten Erden enthalten tierische Abfallprodukte</h3>
@@ -307,9 +306,8 @@
             </div>
           </div>
         </div>
-        <div class="green-waves bottom"></div>
       </section>
-      <section class="with-waves bg-green-light text-center position-relative">
+      <section class="full-screen-section bg-img-full-section-3 text-center position-relative">
         <div class="container">
           <div class="row justify-content-center pt-100 pb-100">
             <div class="col-lg-8">
@@ -320,26 +318,318 @@
                 </svg></a>
             </div>
           </div>
-        </div><img class="position-absolute start-0 z-index-2" src="images/green-side-img.png" alt="green-side-img">
+        </div><img class="position-absolute start-0 bottom-0 z-index-2" src="images/green-side-img.png" alt="green-side-img">
       </section>
-      <section class="circle-section position-relative overflow-hidden">
+      <!-- Circle section-->
+      <section class="circle-section position-relative" id="circle-section">
         <div class="container">
           <div class="text-center">
             <h3 class="text-uppercase text-primary-green">Wie die zero! hergestellt wird </h3>
             <div class="subtitle text-accent-green mb-32">So entsteht die nachhaltige Erde</div>
           </div>
+          <div class="wrap-circle">
+            <!-- border animation-->
+            <div class="wrap-circle-item">
+              <div class="wrap-circle-bar"></div>
+            </div>
+            <!-- slider-->
+            <div class="circle-slider h-100 position-relative z-index-1 d-flex flex-column h-100 justify-content-center">
+              <div class="text-center text-primary-green">
+                <div class="subtitle text-accent-green">Schritt 1</div>
+                <h4 class="text-uppercase">FORSCHUNG & ENTWICKLUNG</h4>
+                <p class="fs-22">Die richtige Mischung machts. Wir haben die perfekten Zuschlagstoffe gefunden und mischen diese jetzt zusammen. Natürlich werden nur nachwachsende Rohstoffe verwendet, die wir fair und regional beziehen können.</p>
+              </div>
+              <div class="text-center text-primary-green">
+                <div class="subtitle text-accent-green">Schritt 2</div>
+                <h4 class="text-uppercase">PRODUKTION</h4>
+                <p class="fs-22">Die richtige Mischung machts. Wir haben die perfekten Zuschlagstoffe gefunden und mischen diese jetzt zusammen. Natürlich werden nur nachwachsende Rohstoffe verwendet, die wir fair und regional beziehen können.</p>
+              </div>
+              <div class="text-center text-primary-green">
+                <div class="subtitle text-accent-green">Schritt 3</div>
+                <h4 class="text-uppercase">ABFÜLLUNG</h4>
+                <p class="fs-22">Die frisch gemischten zero! Erden werden jetzt abgefüllt. Auch über die Verpackung haben wir uns dabei jede Menge Gedanken gemacht. Es gibt die zero! in der Verpackung aus 80 % Altplastik und teilweise sogar im kompostierbaren Papierbeutel.</p>
+              </div>
+              <div class="text-center text-primary-green">
+                <div class="subtitle text-accent-green">Schritt 4</div>
+                <h4 class="text-uppercase">ANBAU UND FEEDBACK</h4>
+                <p class="fs-22">Eine Sache fehlt noch. Zuerst wird die zero! jetzt an Baumärkte und Gartencenter ausgeliefert. Doch für uns ist hier noch nicht Schluss. Wir stehen ständig im Kontakt mit Händlern und Kunden wie dir. Mit dem gesammelten Feedback beginnt der Kreislauf wieder von Neuem.</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="green-waves top"></div>
+      </section>
+      <!-- Full-screen image with text section-->
+      <section class="full-screen-section bg-img-full-section-4 text-center text-white position-relative">
+        <div class="container">
+          <h2 class="text-uppercase">HALLO WIR SIND EUFLOR</h2>
+          <div class="subtitle text-accent-green">Über uns</div>
+        </div>
+      </section>
+      <!-- Section with text and side image-->
+      <section class="pt-150 text-primary-green position-relative text-center bg-bottom-waves">
+        <div class="container position-relative z-index-1">
+          <div class="row justify-content-center pb-150">
+            <div class="col-lg-10">
+              <h1 class="text-uppercase mb-32">Wir machen schon seit <br> 20 Jahren Erde.</h1>
+              <p class="fs-32 mb-42">Doch in den letzten Jahren haben wir begonnen, einiges zu verändern. Gemeinsam mit unserem Schwesterunternehmen <b class="text-orange-3">Stender Substrate</b> werden wirstark in das Thema Nachhaltigkeit investieren.</p>
+              <p class="fs-32">Dabei beginnt natürlich alles bei unserem Produkt: der Erde.</p>
+            </div>
+          </div>
+        </div><img class="position-absolute start-10 bottom-10 translate-middle-y z-index-2" src="images/Tomatenkarren.png" alt="Tomatenkarren">
+      </section>
+      <!-- Section Mission-->
+      <section class="bg-primary-green text-white pt-100 bg-bottom-waves white position-relative">
+        <div class="container">
+          <h3 class="text-center text-white text-uppercase">Auf dem Weg zur nachhaltigen Erde</h3>
+          <div class="subtitle text-accent-green text-center mb-85">Mission torffrei 2025</div>
+          <div class="row mb-100">
+            <div class="col-lg-8 offset-lg-2 text-center">
+              <p class="ls-1 mb-52">Wir wollen, dass du deine Blumen, Pflanzen und dein Gemüse nachhaltig anpflanzen kannst. Dafür müssen wir etwas verändern.</p>
+              <h3 class="lh-56 ls-08 mb-52">Mit der zero! sind wir den ersten Schritt gegangen. Doch damit sind wir noch nicht am Ziel.</h3>
+              <p class="ls-1 mb-52">Auch wir haben noch Erden im Sortiment, die wir verbessern müssen.</p>
+              <h3 class="lh-56 ls-08 mb-52">Deshalb sind wir auf einer Mission: <span class="d-block text-primary-green">Der Mission torffrei 2025.</span></h3>
+              <h5>Bist du auch dabei?</h5>
+            </div>
+          </div>
+        </div>
+        <div class="container position-relative">
+          <div class="row pt-150 pb-150">
+            <div class="col-lg-6">
+              <div class="timeline-item pe-lg-5 pb-120">
+                <div class="subtitle text-accent-green">2019</div>
+                <h3 class="text-uppercase mb-32">Wir haben ein groSßes Ziel</h3>
+                <p class="ls-1">So geht es nicht weiter. Wir wollen unsere Produkte und überhaupt unser gesamtes Unternehmen auf einen langfristigen Nachhaltigkeitskurs bringen.</p>
+              </div>
+            </div>
+            <div class="col-lg-6 offset-lg-6">
+              <div class="timeline-item ps-lg-5">
+                <div class="subtitle text-accent-green">2020</div>
+                <h3 class="text-uppercase mb-32">Planung und Umsetzung der zero!</h3>
+                <p class="ls-1">Wir entwickeln eine der ersten torffreien und veganen Erden für den deutschen Markt. Nachhaltigkeit ist oberste Priorität.</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="timeline-item pe-lg-5">
+                <div class="subtitle text-accent-green">2021</div>
+                <h3 class="text-uppercase mb-32">LAUNCH der zero!</h3>
+                <p class="ls-1">Du kannst ab sofort nachhaltig gärtnern. Mit der zero! hast du dafür die perfekte Erde zur Verfügung.</p>
+              </div>
+            </div>
+            <div class="col-lg-6 offset-lg-6">
+              <div class="timeline-item ps-lg-5">
+                <div class="subtitle text-accent-green">2023</div>
+                <h3 class="text-uppercase mb-32">Die zero! 2.0 wird gelauncht</h3>
+                <p class="ls-1">Wir hören noch nicht auf. Angespornt durch erste Erfolge machen wir die zero! noch besser und überführen weitere Produkte ins zero! Sortiment.</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="timeline-item pe-lg-5">
+                <div class="subtitle text-accent-green">2025</div>
+                <h3 class="text-uppercase mb-32">Hier wollen wir hin</h3>
+                <p class="ls-1">Alle EUFLOR Produkte sind nachhaltig. Kein Torf, keine Schlachtabfälle, Regionalität im Fokus, ökologisch und fair. Dafür treten wir jeden Tag an.</p>
+              </div>
+            </div>
+            <div class="col-lg-6 offset-lg-6">
+              <div class="timeline-item ps-lg-5">
+                <div class="subtitle text-accent-green">2025+</div>
+                <h3 class="text-uppercase mb-32">ES gibt noch mehr zu tun</h3>
+                <p class="ls-1">Natürlich sind nachhaltige Produkte nur ein Zwischenziel. Es gibt genug zu tun und wir wollen weiter daran arbeiten, unseren Planetenein kleines bisschen besser zu machen.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Timeline--><img class="timeline-image position-absolute start-50 translate-middle-x" src="images/timeline-img.svg" alt="timeline">
+        </div>
+        <!-- Side image--><img class="position-absolute end-0 me-lg-5 bottom-5 z-index-1" src="images/Mann-Stecklinge.png" alt="Mann-Stecklinge">
+      </section>
+      <!-- Section-->
+      <section class="pt-150 pb-150">
+        <div class="container">
+          <h3 class="text-center text-primary-green text-uppercase">Das sind alle deine zero! Vorteile</h3>
+          <div class="subtitle text-accent-green text-center pb-150">Auf einen Blick</div>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card-item text-primary-green">
+                <div class="d-flex align-items-center">
+                  <div class="card-item-icon"><img src="images/card-icon/Sun.svg" alt="sun"></div>
+                  <div class="ms-3">
+                    <h5 class="text-uppercase mb-3">100 % nachwachsende Rohstoffe</h5>
+                    <p class="mb-0">Verbessert deinen ökologischen Fußabdruck.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card-item text-primary-green">
+                <div class="d-flex align-items-center">
+                  <div class="card-item-icon"><img src="images/card-icon/Roots.svg" alt="roots"></div>
+                  <div class="ms-3">
+                    <h5 class="text-uppercase mb-3">Wichtige Nährstoffe</h5>
+                    <p class="mb-0">So wachsen starke Pflanzen mit robusten Wurzeln.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card-item text-primary-green">
+                <div class="d-flex align-items-center">
+                  <div class="card-item-icon"><img src="images/card-icon/Seeds.svg" alt="seeds"></div>
+                  <div class="ms-3">
+                    <h5 class="text-uppercase mb-3">Nachhaltige Verpackungslösungen</h5>
+                    <p class="mb-0">Verpackung zu 80 % aus Altplastik, teilweise sogar kompostierbar.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card-item text-primary-green">
+                <div class="d-flex align-items-center">
+                  <div class="card-item-icon"><img src="images/card-icon/Rain.svg" alt="rain"></div>
+                  <div class="ms-3">
+                    <h5 class="text-uppercase mb-3">Bio-Naturdünger</h5>
+                    <p class="mb-0">Organisch & rein natürlich vorgedüngt.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card-item text-primary-green">
+                <div class="d-flex align-items-center">
+                  <div class="card-item-icon"><img src="images/card-icon/Watering-Can.svg" alt="Watering-Can"></div>
+                  <div class="ms-3">
+                    <h5 class="text-uppercase mb-3">Starker Wasserspeicher</h5>
+                    <p class="mb-0">Deine Pflanzen sind immer bestens versorgt.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card-item text-primary-green">
+                <div class="d-flex align-items-center">
+                  <div class="card-item-icon"><img src="images/card-icon/Soil.svg" alt="Soil"></div>
+                  <div class="ms-3">
+                    <h5 class="text-uppercase mb-3">Lockere und dabei stabile Struktur</h5>
+                    <p class="mb-0">Gute Boden-Durchlüftung. Weniger Schimmel.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card-item text-primary-green">
+                <div class="d-flex align-items-center">
+                  <div class="card-item-icon"><img src="images/card-icon/Temperature.svg" alt="Temperature"></div>
+                  <div class="ms-3">
+                    <h5 class="text-uppercase mb-3">0,0 % Torf</h5>
+                    <p class="mb-0">Maximal CO₂-reduziert.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card-item text-primary-green">
+                <div class="d-flex align-items-center">
+                  <div class="card-item-icon"><img src="images/card-icon/High Flower.svg" alt="High Flower"></div>
+                  <div class="ms-3">
+                    <h5 class="text-uppercase mb-3">100%  BIO & VEGAN</h5>
+                    <p class="mb-0">Natürlich – ohne tierische Zusatzstoffe.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card-item text-primary-green">
+                <div class="d-flex align-items-center">
+                  <div class="card-item-icon"><img src="images/card-icon/ic-agriculture-gardening-tractor.svg" alt="ic-agriculture-gardening-tractor"></div>
+                  <div class="ms-3">
+                    <h5 class="text-uppercase mb-3">FAIR & REGIONAL</h5>
+                    <p class="mb-0">Kurze Transportwege.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="full-screen-section bg-img-full-section-5 pb-150">
+        <div class="container">
+          <div class="row align-items-center pt-350 pb-150">
+            <div class="col-lg-7">
+              <h3 class="text-uppercase text-primary-green">Die umweltfreundliche Erde für die besten Ergebnisse</h3>
+              <div class="subtitle text-white mb-32">Lieber nachhaltig gärtnern</div>
+              <ul class="mb-32 text-primary-green list-styled">
+                <li>Gib deinen Pflanzen eine natürliche Umgebung zum Wachsen.</li>
+                <li>Verzichte auf Schlachtabfälle in deinem Gemüsebeet.Verwende stattdessen unsere organisch vorgedüngte zero! Erde.</li>
+                <li>Mach die Welt mit uns ein kleines bisschen besser,indem du mithilfst, den Torfabbau zu reduzieren.</li>
+              </ul><a class="btn btn-primary px-5 py-2 rounded-pill border-0" href="#">Jetzt die zero! direkt online bestellen
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-arrow-right"></use>
+                </svg></a>
+            </div>
+            <div class="col-lg-5"><img src="images/product-group.png" alt="product-group"></div>
+          </div>
+        </div>
       </section>
     </main>
     <!-- Footer-->
-    <!--include partials/footer.pug-->
+    <footer class="position-relative">
+      <div class="container position-relative z-index-1">
+        <div class="row align-items-center pb-200">
+          <div class="col-lg-4">
+            <h3 class="text-white mb-52">KONTAKT AUFNEHMEN</h3><a class="btn btn-primary px-5 py-2 rounded-pill border-0" href="#">Zum Kontaktformular
+              <svg>
+                <use xlink:href="images/sprite.svg#icon-arrow-right"></use>
+              </svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="container container-footer"> 
+        <div class="row">
+          <div class="col-lg-5">
+            <ul class="nav align-items-center justify-content-between">
+              <li class="nav-item"><a class="nav-link" href="#">Datenschutz</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Impressum</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">§15 VerpackG</a></li>
+            </ul>
+            <p class="copyright">© 2023 EUFLOR GmbH</p>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-email mx-auto">
+              <p>Verpasse nichts mehr!</p>
+              <form class="position-relative" action="#">
+                <input type="text" placeholder="E-Mail Adresse">
+                <button type="submit">Los</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <ul class="nav social-nav">
+              <li class="nav-item ms-auto"><a class="nav-link social-link" href="#">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#fb"></use>
+                  </svg></a></li>
+              <li class="nav-item"><a class="nav-link social-link" href="#">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#is"></use>
+                  </svg></a></li>
+              <li class="nav-item"><a class="nav-link social-link" href="#">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#tw"></use>
+                  </svg></a></li>
+              <li class="nav-item"><a class="nav-link social-link" href="#">
+                  <svg>
+                    <use xlink:href="images/sprite.svg#li"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Footer side image--><img class="footer-image position-absolute bottom-50 end-5 z-index-1" src="images/footer-image.png" alt="footer-image">
+    </footer>
     <!-- Script-->
     <!-- jQuery-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!--script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' , integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' , crossorigin='anonymous')-->
     <!-- Slick slider-->
-    <!--script(src="js/slick.min.js") -->
+    <script src="js/slick.min.js"> </script>
     <!-- Magnific popup-->
     <!--script(src="js/jquery.magnific-popup.min.js") -->
     <!-- AOS script for scroll effect-->
