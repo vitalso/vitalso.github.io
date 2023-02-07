@@ -11,14 +11,15 @@ $(function () {
     infinite: false,
     arrows: false,
     dots: false,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1
   });
 
-  section.on('mousewheel DOMMouseScroll wheel' , function(e){
+  slider.on('mousewheel DOMMouseScroll wheel' , function(e){
     let deltaY = e.originalEvent.deltaY;
-    //e.preventDefault();
-    //e.stopPropagation();
+    e.preventDefault();
+    e.stopPropagation();
 
     clearTimeout(blockTimeout);
     blockTimeout = setTimeout(function(){
@@ -30,8 +31,8 @@ $(function () {
       blocked = true;
       prevDeltaY = deltaY;
 
-      e.preventDefault();
-      e.stopPropagation();
+      //e.preventDefault();
+      //e.stopPropagation();
 
       if (deltaY > 0) {
         slider.slick('slickNext');
@@ -49,6 +50,20 @@ $(function () {
 
     }
 
+  });
+
+  slider.on('afterChange', function(event, slick, currentSlide) {
+    if (slick.$slides.length-1 == currentSlide) {
+      console.log("Last slide");
+      $('html , body').animate({
+        scrollTop: $("#section-after-circle").offset().top
+      }, 300);
+    }
   })
+
+  // AOS scroll animation
+  AOS.init({
+    once: true
+  });
 
 });

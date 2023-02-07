@@ -2,8 +2,8 @@
 <footer class="position-relative">
   <div class="container position-relative z-index-1">
     <div class="row align-items-center pb-200">
-      <div class="col-lg-4">
-        <h3 class="text-white mb-52">KONTAKT AUFNEHMEN</h3><a class="btn btn-primary px-5 py-2 rounded-pill border-0" href="#">Zum Kontaktformular
+      <div class="col-lg-4 d-none d-lg-block">
+        <h3 class="text-white mb-52">KONTAKT AUFNEHMEN</h3><a class="btn btn-primary px-xl-5 px-4 py-2 rounded-pill border-0" href="#">Zum Kontaktformular
           <svg>
             <use xlink:href="images/sprite.svg#icon-arrow-right"></use>
           </svg></a>
@@ -13,14 +13,16 @@
   <div class="container container-footer"> 
     <div class="row">
       <div class="col-lg-5">
-        <ul class="nav align-items-center justify-content-between">
-          <li class="nav-item"><a class="nav-link" href="#">Datenschutz</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Impressum</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">§15 VerpackG</a></li>
-        </ul>
-        <p class="copyright">© 2023 EUFLOR GmbH</p>
+        <div class="d-flex flex-column-reverse flex-lg-column">
+          <ul class="nav align-items-center justify-content-between">
+            <li class="nav-item"><a class="nav-link" href="impressum.html">Datenschutz</a></li>
+            <li class="nav-item"><a class="nav-link" href="impressum.html">Impressum</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">§15 VerpackG</a></li>
+          </ul>
+          <p class="copyright">© 2023 EUFLOR GmbH</p>
+        </div>
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-4 d-none d-lg-block">
         <div class="footer-email mx-auto">
           <p>Verpasse nichts mehr!</p>
           <form class="position-relative" action="#">
@@ -30,26 +32,37 @@
         </div>
       </div>
       <div class="col-lg-3">
-        <ul class="nav social-nav">
-          <li class="nav-item ms-auto"><a class="nav-link social-link" href="#">
-              <svg>
-                <use xlink:href="images/sprite.svg#fb"></use>
-              </svg></a></li>
-          <li class="nav-item"><a class="nav-link social-link" href="#">
-              <svg>
-                <use xlink:href="images/sprite.svg#is"></use>
-              </svg></a></li>
-          <li class="nav-item"><a class="nav-link social-link" href="#">
-              <svg>
-                <use xlink:href="images/sprite.svg#tw"></use>
-              </svg></a></li>
-          <li class="nav-item"><a class="nav-link social-link" href="#">
-              <svg>
-                <use xlink:href="images/sprite.svg#li"></use>
-              </svg></a></li>
-        </ul>
+        <div class="d-flex align-items-center"><a class="language d-block d-lg-none" href="#">
+            <svg>
+              <use xlink:href="images/sprite.svg#icon-globe"></use>
+            </svg><span>English (UK)</span></a>
+          <ul class="nav social-nav ms-auto">
+            <li class="nav-item ms-auto"><a class="nav-link social-link" href="#">
+                <svg>
+                  <use xlink:href="images/sprite.svg#fb"></use>
+                </svg></a></li>
+            <li class="nav-item"><a class="nav-link social-link" href="#">
+                <svg>
+                  <use xlink:href="images/sprite.svg#is"></use>
+                </svg></a></li>
+            <li class="nav-item"><a class="nav-link social-link" href="#">
+                <svg>
+                  <use xlink:href="images/sprite.svg#tw"></use>
+                </svg></a></li>
+            <li class="nav-item"><a class="nav-link social-link" href="#">
+                <svg>
+                  <use xlink:href="images/sprite.svg#li"></use>
+                </svg></a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
   <!-- Footer side image--><img class="footer-image position-absolute bottom-50 end-5 z-index-1" src="images/footer-image.png" alt="footer-image"/>
+  <!-- Scroll up-->
+  <button class="scroll-up d-block d-lg-none">
+    <svg>
+      <use xlink:href="images/sprite.svg#arrow-up"></use>
+    </svg>
+  </button>
 </footer>
