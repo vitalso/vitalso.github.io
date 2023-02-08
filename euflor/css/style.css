@@ -771,6 +771,37 @@ form textarea {
   background-repeat: no-repeat;
 }
 
+.top-wave-line {
+  top: 18%;
+}
+.top-wave-line img {
+  animation: topWave 5s linear infinite;
+}
+
+.bottom-wave-line {
+  bottom: 18%;
+}
+.bottom-wave-line img {
+  animation: topWave 7s linear infinite;
+}
+
+@keyframes topWave {
+  from {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.1) rotate(-2deg);
+  }
+  50% {
+    transform: scale(1) rotate(1deg);
+  }
+  75% {
+    transform: scale(1.1) rotate(3deg);
+  }
+  to {
+    transform: scale(1) rotate(1deg);
+  }
+}
 @media screen and (max-width: 992px) {
   .bg-bottom-waves.white::after {
     display: none;
@@ -1156,23 +1187,29 @@ form textarea {
 }
 .full-screen-waves.top {
   top: 0;
-  background: url(../images/top-full-screen-waves.svg) center top/cover no-repeat;
+  background: url(../images/top-full-screen-waves.svg) left top/cover no-repeat;
   transform: scale(-1);
+  /*&:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 375px;
+      bottom: 70%;
+      left: 0;
+      background: url(../images/top-wave-line.svg) center/cover no-repeat;
+      transform: scale(-1);
+  }*/
 }
-.full-screen-waves.top:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 375px;
-  bottom: 70%;
-  left: 0;
-  background: url(../images/top-wave-line.svg) center/cover no-repeat;
-  transform: scale(-1);
+.full-screen-waves.top.green {
+  background: url(../images/top-green-wave.svg) left top/cover no-repeat;
+  transform: none;
+  margin-top: -400px;
 }
 .full-screen-waves.bottom {
   bottom: 0;
-  background: url(../images/bottom-full-screen-waves.svg) no-repeat;
+  background: url(../images/bottom-full-screen-waves.svg) center bottom/cover no-repeat;
   transform: scale(-1);
+  height: 410px;
 }
 
 @media screen and (max-width: 992px) {
@@ -1505,7 +1542,7 @@ html {
   position: absolute;
   right: 5%;
   bottom: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 .img-with-special-form {
