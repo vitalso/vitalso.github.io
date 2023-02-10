@@ -61,6 +61,17 @@ $(function () {
     }
   })
 
+  // Card slider
+  $('.card-slider').slick({
+    infinite: false,
+    arrows: true,
+    dots: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    variableWidth: true
+  });
+
   // AOS scroll animation
   AOS.init({
     once: true

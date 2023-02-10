@@ -21,15 +21,23 @@
 }
 
 .fw-bold {
-  font-weight: 600 !important;
+  font-weight: 700 !important;
 }
 
 .fw-medium {
   font-weight: 500;
 }
 
+.font-Roboto {
+  font-family: "Roboto" !important;
+}
+
 .mw-60 {
   max-width: 60%;
+}
+
+.custom-mw {
+  max-width: 1860px;
 }
 
 .fs-24 {
@@ -89,9 +97,15 @@
 .mt-150 {
   margin-top: 150px;
 }
+.mt_150 {
+  margin-top: -150px;
+}
+.mt_300 {
+  margin-top: -300px;
+}
 
 .mb-32 {
-  margin-bottom: 32px;
+  margin-bottom: 32px !important;
 }
 .mb-42 {
   margin-bottom: 42px;
@@ -107,6 +121,10 @@
 }
 .mb-140 {
   margin-bottom: 140px;
+}
+
+.ml_5 {
+  margin-left: -5%;
 }
 
 @media screen and (max-width: 768px) {
@@ -744,6 +762,17 @@ form textarea {
   padding-top: 15px;
   resize: none;
 }
+form.calc-form {
+  display: flex;
+  gap: 10px;
+}
+form.calc-form input {
+  border: 1px solid rgba(12, 12, 11, 0.23);
+}
+form.calc-form button {
+  border-radius: 16px;
+  min-width: 320px;
+}
 
 .bg-bottom-waves {
   padding-bottom: 750px;
@@ -836,9 +865,17 @@ form textarea {
 .hero-section-image {
   padding-top: 450px;
   min-height: 1200px;
-  background-image: url(../images/bg-hero-B2B.png);
+  background-image: url(../images/bg-hero-B2B.jpg);
   background-repeat: no-repeat;
   background-position: center top;
+  background-size: cover;
+}
+.hero-section-image.hochbeet-hero {
+  background-image: url(../images/hochbeet-hero.jpg);
+  background-position: center 45%;
+}
+.hero-section-image.hochbeet-hero h1 {
+  line-height: 75px;
 }
 .hero-section h1 {
   line-height: 46px;
@@ -859,6 +896,18 @@ form textarea {
 }
 .hero-section .subtitle {
   margin-bottom: 25px;
+}
+.hero-section.with-overlay {
+  position: relative;
+}
+.hero-section.with-overlay:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 }
 
 .fixed-btn {
@@ -900,6 +949,9 @@ form textarea {
     min-height: 100vh;
     height: 100vh;
     background-size: cover;
+  }
+  .hero-section.hero-section-image .full-screen-waves {
+    height: 150px;
   }
   .hero-section h1 span::after {
     display: none;
@@ -1015,6 +1067,23 @@ form textarea {
 }
 .products-item:hover {
   transform: scale(1.03) translateY(-10px);
+}
+.products-item.with-overflow-image {
+  margin-top: 80px;
+  padding-bottom: 36px;
+  padding-left: 36px;
+  padding-right: 36px;
+  color: #fff;
+}
+.products-item.with-overflow-image .products-item-img {
+  min-height: auto;
+  max-height: 290px;
+}
+.products-item.with-overflow-image .products-item-img img {
+  position: relative;
+  top: 0;
+  max-width: 350px;
+  transform: translate(-50%, -30%);
 }
 .products-item-large {
   max-width: 367px;
@@ -1150,6 +1219,19 @@ form textarea {
   background-position-y: top !important;
 }
 
+.bg-img-full-section-6 {
+  min-height: 1700px;
+  background-image: url(../images/bg-full-screen-6.jpg);
+  background-position-y: top !important;
+}
+
+.bg-green-with-tree {
+  height: auto !important;
+  background-image: url(../images/bg-green-with-tree.png);
+  background-position: center 10% !important;
+  background-size: 150% !important;
+}
+
 .with-gradient-overlay {
   position: relative;
 }
@@ -1189,16 +1271,6 @@ form textarea {
   top: 0;
   background: url(../images/top-full-screen-waves.svg) left top/cover no-repeat;
   transform: scale(-1);
-  /*&:after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 375px;
-      bottom: 70%;
-      left: 0;
-      background: url(../images/top-wave-line.svg) center/cover no-repeat;
-      transform: scale(-1);
-  }*/
 }
 .full-screen-waves.top.green {
   background: url(../images/top-green-wave.svg) left top/cover no-repeat;
@@ -1328,6 +1400,7 @@ form textarea {
   border: 1px solid #3F8158;
   border-radius: 18px;
   box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+  transition: all 0.3s ease;
 }
 .card-item-icon {
   flex: 0 0 auto;
@@ -1352,6 +1425,90 @@ form textarea {
 .card-item-green p {
   font-size: 24px;
   line-height: 28px;
+}
+.card-item.large {
+  padding: 48px 48px 32px 48px;
+  color: #3F8158;
+}
+.card-item:hover {
+  background: #CAE2C9;
+}
+.card-item:hover .subtitle {
+  color: #fff;
+}
+.card-item.only-with-image {
+  position: relative;
+  max-width: 434px;
+  height: auto;
+  box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+  border-radius: 12px;
+  padding: 0;
+  overflow: hidden;
+}
+.card-item.only-with-image .card-item-icon img {
+  width: 100%;
+  max-height: 373px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+.card-item.only-with-image .card-item-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  left: 48px;
+  bottom: 48px;
+  position: absolute;
+  color: #fff;
+}
+.card-item.only-with-image:hover .card-item-icon img {
+  transform: scale(1.1);
+}
+.card-item.only-image {
+  max-width: 230px;
+  height: 320px;
+  background: rgba(63, 129, 88, 0.1);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 64px;
+  margin-bottom: 0;
+}
+.card-item-count {
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+  top: -24px;
+  right: -24px;
+  text-align: center;
+  line-height: 48px;
+}
+
+.card-slider {
+  margin-top: 110px;
+  margin-bottom: 200px;
+}
+.card-slider .card-item.large {
+  height: 715px;
+  max-width: 644px;
+  margin-right: 45px;
+}
+.card-slider .slick-prev, .card-slider .slick-next {
+  top: auto;
+  bottom: -116px;
+  width: 48px;
+  height: 48px;
+  background: url(../images/arrow.svg) center/cover no-repeat;
+  z-index: 2;
+}
+.card-slider .slick-prev.slick-disabled, .card-slider .slick-next.slick-disabled {
+  opacity: 0.5;
+}
+.card-slider .slick-prev {
+  left: 0;
+  transform: rotate(180deg) translateY(24px);
+}
+.card-slider .slick-next {
+  right: auto;
+  left: 64px;
 }
 
 .team {
@@ -1488,6 +1645,10 @@ html {
   z-index: 2;
 }
 
+.start_8 {
+  left: -8%;
+}
+
 .start-10 {
   left: 10%;
 }
@@ -1530,6 +1691,10 @@ html {
 
 .bg-green-light {
   background: #CAE2C9;
+}
+
+.bg-accent-green {
+  background: #D3DE4E;
 }
 
 .flower-side-img {

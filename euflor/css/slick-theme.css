@@ -89,7 +89,7 @@
 .slick-prev:before
 {
     content: '';
-    background: url(../images/banner-arrow.svg) no-repeat;
+    /*background: url(../images/banner-arrow.svg) no-repeat;*/
     transform: rotate(180deg);
 }
 [dir='rtl'] .slick-prev:before
@@ -109,7 +109,7 @@
 .slick-next:before
 {
     content: '';
-    background: url(../images/banner-arrow.svg) no-repeat;
+    /*background: url(../images/banner-arrow.svg) no-repeat;*/
 }
 [dir='rtl'] .slick-next:before
 {
