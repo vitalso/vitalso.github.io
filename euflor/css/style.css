@@ -127,6 +127,10 @@
   margin-left: -5%;
 }
 
+.gap-64 {
+  gap: 64px 0;
+}
+
 @media screen and (max-width: 768px) {
   .mb-140 {
     margin-bottom: 32px;
@@ -877,6 +881,16 @@ form.calc-form button {
 .hero-section-image.hochbeet-hero h1 {
   line-height: 75px;
 }
+.hero-section-image.ratgeber-hero {
+  background-image: url(../images/ratgeber-hero.jpg);
+  background-position: center 45%;
+  /*.full-screen-waves.bottom {
+      background: url(../images/ratgeber-hero-wave.svg) center bottom/cover no-repeat;
+  }*/
+}
+.hero-section-image.ratgeber-hero h1 {
+  line-height: 75px;
+}
 .hero-section h1 {
   line-height: 46px;
 }
@@ -1481,6 +1495,9 @@ form.calc-form button {
   text-align: center;
   line-height: 48px;
 }
+.card-item.lg-padding {
+  padding: 32px;
+}
 
 .card-slider {
   margin-top: 110px;
@@ -1490,6 +1507,9 @@ form.calc-form button {
   height: 715px;
   max-width: 644px;
   margin-right: 45px;
+}
+.card-slider .card-item.large.small-height {
+  height: 392px;
 }
 .card-slider .slick-prev, .card-slider .slick-next {
   top: auto;
@@ -1663,6 +1683,10 @@ html {
 
 .bottom-5 {
   bottom: 5%;
+}
+
+.bottom_15 {
+  bottom: -15%;
 }
 
 .text-primary-green {
