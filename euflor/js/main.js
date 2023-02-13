@@ -54,11 +54,17 @@ $(function () {
 
   slider.on('afterChange', function(event, slick, currentSlide) {
     if (slick.$slides.length-1 == currentSlide) {
-      console.log("Last slide");
       $('html , body').animate({
         scrollTop: $("#section-after-circle").offset().top
       }, 300);
     }
+
+    if (currentSlide == 0) {
+      $('html , body').animate({
+        scrollTop: $("#section-before-circle").offset().top
+      }, 300);
+    }
+
   })
 
   // Card slider
