@@ -11,12 +11,13 @@ $(function () {
     infinite: false,
     arrows: false,
     dots: false,
-    speed: 1000,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    fade: true,
+    cssEase: 'linear'
   });
 
-  slider.on('mousewheel DOMMouseScroll wheel' , function(e){
+  section.on('mousewheel DOMMouseScroll wheel' , function(e){
     let deltaY = e.originalEvent.deltaY;
     e.preventDefault();
     e.stopPropagation();
