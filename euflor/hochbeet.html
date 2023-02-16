@@ -146,10 +146,40 @@
               <p class="mb-0">Wenn du Grünabfälle wie zum Beispiel Grasschnitt zur Verfügung hast, dann kannst du diese mit in deinem Beet als optionale Schicht hinzufügen.</p>
             </div>
             <div class="card-item large mb-0 d-flex">
-              <div class="card-item-icon"><img src="images/card-icon/gardening-hedge-shear.svg" alt="gardening-rake"></div>
+              <div class="card-item-icon"><img src="images/card-icon/gardening-fertiliser.svg" alt="gardening-fertiliser"></div>
               <div class="subtitle text-accent-green">Schritt 4</div>
-              <h4 class="text-uppercase text-primary-green">OPTIONALER GRÜNSCHNITT</h4>
-              <p class="mb-0">Wenn du Grünabfälle wie zum Beispiel Grasschnitt zur Verfügung hast, dann kannst du diese mit in deinem Beet als optionale Schicht hinzufügen.</p>
+              <h4 class="text-uppercase text-primary-green">KOMPOSTSCHICHT</h4>
+              <p class="mb-0">Über die Holzhackschnitzel kommt die Kompostschicht. Diese Schicht sorgt für eine gute Nährstoffversorgung und ist mitverantwortlich für mehr Wärme im Beet. Deine Kompostschicht sollte ebenfalls ca. ein Drittel des Hochbeets füllen.</p>
+            </div>
+            <div class="card-item large mb-0 d-flex">
+              <div class="card-item-icon"><img src="images/card-icon/gardening-fertiliser.svg" alt="gardening-fertiliser"></div>
+              <div class="subtitle text-accent-green">Schritt 5</div>
+              <h4 class="text-uppercase text-primary-green">HOCHBEETSCHICHT</h4>
+              <p class="mb-0">Über die Holzhackschnitzel kommt die Kompostschicht. Diese Schicht sorgt für eine gute Nährstoffversorgung und ist mitverantwortlich für mehr Wärme im Beet. Deine Kompostschicht sollte ebenfalls ca. ein Drittel des Hochbeets füllen.</p>
+            </div>
+            <div class="card-item large mb-0 d-flex">
+              <div class="card-item-icon"><img src="images/card-icon/gardening-plant-care.svg" alt="gardening-plant-care"></div>
+              <div class="subtitle text-accent-green">Schritt 6</div>
+              <h4 class="text-uppercase text-primary-green">BEPFLANZUNG</h4>
+              <p class="mb-0">Dein Hochbeet ist für das Bepflanzen bereit. Setz nun die Pflanze in dein Hochbeet ein. Achte darauf, dass alle Wurzeln gut mit Erde bedeckt sind und drück die Erde vorsichtig fest.</p>
+            </div>
+            <div class="card-item large mb-0 d-flex">
+              <div class="card-item-icon"><img src="images/card-icon/gardening-seeding.svg" alt="gardening-seeding"></div>
+              <div class="subtitle text-accent-green">Schritt 7</div>
+              <h4 class="text-uppercase text-primary-green">NACHDÜNGEN</h4>
+              <p class="mb-0">Deine Pflanzen sind sicher im Boden. Jetzt kannst du die letzte Schicht aufbringen. Der zero! Erdbeer- und Gemüsemulch ist eine natürliche Schutzschicht für dein Hochbeet. Achte darauf, ihn gut zu verteilen, sodass der Boden ca. 3 cm bedeckt ist.</p>
+            </div>
+            <div class="card-item large mb-0 d-flex">
+              <div class="card-item-icon"><img src="images/card-icon/gardening-spray.svg" alt="gardening-spray"></div>
+              <div class="subtitle text-accent-green">Schritt 8</div>
+              <h4 class="text-uppercase text-primary-green">ANGIESSEN</h4>
+              <p class="mb-0">Jetzt solltest du deine Pflanzen noch gut wässern.</p>
+            </div>
+            <div class="card-item large mb-0 d-flex">
+              <div class="card-item-icon"><img src="images/card-icon/gardening-fertiliser.svg" alt="gardening-fertiliser"></div>
+              <div class="subtitle text-accent-green">Schritt 9</div>
+              <h4 class="text-uppercase text-primary-green">NACHDÜNGEN</h4>
+              <p class="mb-0">Deine Pflanzen sind vorgedüngt. Du brauchst dir also die ersten 10 bis 12 Wochen keine Gedanken um die Düngung deiner Pflanzen zu machen. Nach ca. 12 Wochen kannst du mit dem Nachdüngen beginnen. Wir empfehlen dir dazu den EUFLOR Bio Dünger.</p>
             </div>
           </div>
         </div>
@@ -183,7 +213,7 @@
         </div>
         <div class="offset-md-1 pt-100 w-100vw custom-mw">
           <div class="title text-primary-green text-uppercase mb-42">Gemüse & BEEREN</div>
-          <div class="row">
+          <div class="row card-small-slider">
             <div class="col-lg-3">
               <div class="card-item only-with-image">
                 <div class="card-item-icon"><img src="images/fruits/image-1.jpg" alt="Lauch"></div>
@@ -211,7 +241,7 @@
           </div>
         </div>
         <div class="pt-150 w-100vw custom-mw ml_5">
-          <div class="row">
+          <div class="row right-slider" dir="rtl">
             <div class="col-lg-3">
               <div class="card-item only-with-image">
                 <div class="card-item-icon"><img src="images/fruits/image-5.jpg" alt="KOHLRABI"></div>
@@ -240,7 +270,7 @@
         </div>
         <div class="offset-md-1 pt-150 w-100vw custom-mw">
           <div class="title text-primary-green text-uppercase mb-42">KRäuter</div>
-          <div class="row">
+          <div class="row card-small-slider">
             <div class="col-lg-3">
               <div class="card-item only-with-image">
                 <div class="card-item-icon"><img src="images/fruits/image-9.jpg" alt="Kresse"></div>
@@ -275,66 +305,60 @@
           <div class="row justify-content-center pt-100">
             <div class="col-lg-10">
               <form class="calc-form mb-52" action="#">
-                <input type="text" placeholder="Höhe in m">
-                <input type="text" placeholder="Breite in m">
-                <input type="text" placeholder="Länge in m">
+                <input type="number" name="height" placeholder="Höhe in m" step=".01">
+                <input type="number" name="width" placeholder="Breite in m" step=".01">
+                <input type="number" name="long" placeholder="Länge in m" step=".01">
                 <button class="btn btn-primary text-center border-0" type="submit">Kalkulieren</button>
               </form>
             </div>
           </div>
-          <h5 class="text-center text-primary-green fw-normal mb-52">Du benötigst <strong>15 Säcke</strong> für insgesamt <strong>24m3 Fläche</strong>.</h5>
+          <h5 class="text-center text-primary-green fw-normal mb-52 calc-result d-none">Du benötigst <strong><span id="bags">15</span> Säcke</strong> für insgesamt <strong><span id="liter">24</span>m3 Fläche</strong>.</h5>
           <div class="row justify-content-center pb-200">
             <div class="col-lg-10 px-0">
-              <div class="row">
+              <div class="row justify-content-center">
                 <div class="col-lg-3">
-                  <div class="card-item only-image p-0 position-relative">
+                  <div class="bags-item card-item only-image p-0 position-relative d-none">
                     <div class="card-item-icon"><img src="images/products/Zero_Hochbeet-1.png" alt="Zero_Hochbeet"></div>
-                    <div class="card-item-count rounded-pill position-absolute text-primary-green bg-accent-green">4x</div>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="card-item only-image p-0 position-relative">
-                    <div class="card-item-icon"><img src="images/products/Zero_Hochbeet-1.png" alt="Zero_Hochbeet"></div>
-                    <div class="card-item-count rounded-pill position-absolute text-primary-green bg-accent-green">2x</div>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="card-item only-image p-0 position-relative">
-                    <div class="card-item-icon"><img src="images/products/Zero_Hochbeet-1.png" alt="Zero_Hochbeet"></div>
-                    <div class="card-item-count rounded-pill position-absolute text-primary-green bg-accent-green">2x</div>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="card-item only-image p-0 position-relative">
-                    <div class="card-item-icon"><img src="images/products/Zero_Hochbeet-1.png" alt="Zero_Hochbeet"></div>
-                    <div class="card-item-count rounded-pill position-absolute text-primary-green bg-accent-green">2x</div>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="card-item only-image p-0 position-relative">
-                    <div class="card-item-icon"><img src="images/products/Zero_Hochbeet-1.png" alt="Zero_Hochbeet"></div>
-                    <div class="card-item-count rounded-pill position-absolute text-primary-green bg-accent-green">2x</div>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="card-item only-image p-0 position-relative">
-                    <div class="card-item-icon"><img src="images/products/Zero_Hochbeet-1.png" alt="Zero_Hochbeet"></div>
-                    <div class="card-item-count rounded-pill position-absolute text-primary-green bg-accent-green">1x</div>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="card-item only-image p-0 position-relative">
-                    <div class="card-item-icon"><img src="images/products/Zero_Hochbeet-1.png" alt="Zero_Hochbeet"></div>
-                    <div class="card-item-count rounded-pill position-absolute text-primary-green bg-accent-green">1x</div>
-                  </div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="card-item only-image p-0 position-relative">
-                    <div class="card-item-icon"><img src="images/products/Zero_Hochbeet-1.png" alt="Zero_Hochbeet"></div>
-                    <div class="card-item-count rounded-pill position-absolute text-primary-green bg-accent-green">1x</div>
+                    <div class="card-item-count rounded-pill position-absolute text-primary-green bg-accent-green"><span class="show-bags">4</span>x</div>
                   </div>
                 </div>
               </div>
+              <!--	.col-lg-3
+              	.card-item.only-image.p-0.position-relative
+              		.card-item-icon: img(src="images/products/Zero_Hochbeet-1.png", alt="Zero_Hochbeet")
+              		.card-item-count.rounded-pill.position-absolute.text-primary-green.bg-accent-green 2x
+              
+              .col-lg-3
+              	.card-item.only-image.p-0.position-relative
+              		.card-item-icon: img(src="images/products/Zero_Hochbeet-1.png", alt="Zero_Hochbeet")
+              		.card-item-count.rounded-pill.position-absolute.text-primary-green.bg-accent-green 2x
+              
+              .col-lg-3
+              	.card-item.only-image.p-0.position-relative
+              		.card-item-icon: img(src="images/products/Zero_Hochbeet-1.png", alt="Zero_Hochbeet")
+              		.card-item-count.rounded-pill.position-absolute.text-primary-green.bg-accent-green 2x
+              
+              .col-lg-3
+              	.card-item.only-image.p-0.position-relative
+              		.card-item-icon: img(src="images/products/Zero_Hochbeet-1.png", alt="Zero_Hochbeet")
+              		.card-item-count.rounded-pill.position-absolute.text-primary-green.bg-accent-green 2x
+              
+              .col-lg-3
+              	.card-item.only-image.p-0.position-relative
+              		.card-item-icon: img(src="images/products/Zero_Hochbeet-1.png", alt="Zero_Hochbeet")
+              		.card-item-count.rounded-pill.position-absolute.text-primary-green.bg-accent-green 1x
+              
+              .col-lg-3
+              	.card-item.only-image.p-0.position-relative
+              		.card-item-icon: img(src="images/products/Zero_Hochbeet-1.png", alt="Zero_Hochbeet")
+              		.card-item-count.rounded-pill.position-absolute.text-primary-green.bg-accent-green 1x
+              
+              .col-lg-3
+              	.card-item.only-image.p-0.position-relative
+              		.card-item-icon: img(src="images/products/Zero_Hochbeet-1.png", alt="Zero_Hochbeet")
+              		.card-item-count.rounded-pill.position-absolute.text-primary-green.bg-accent-green 1x
+              
+              -->
             </div>
           </div>
         </div>
