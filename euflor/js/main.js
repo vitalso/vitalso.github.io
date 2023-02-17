@@ -111,9 +111,12 @@ $(function () {
   // Calculate function
   var numberResult = $('.calc-result');
   var bagsItem = $('.bags-item');
-  var showBags = $('.show-bags');
+  var showProduct_3 = $('.show-bags-product-3');
+  var showProduct_2 = $('.show-bags-product-2');
+  var showProduct_1 = $('.show-bags-product-1');
+  var showProduct_4 = $('.show-bags-product-4');
   var bags = numberResult.find('#bags');
-  var liter = numberResult.find('#liter');
+  var squareInfo = numberResult.find('#square');
 
   $('.calc-form').on('submit' , function(e){
     e.preventDefault();
@@ -125,12 +128,20 @@ $(function () {
 
     if ( height.length !== 0 || width.length !== 0 || long.length !== 0 ) {
       var square = height*width*long;
-      var bagsResult = parseInt(square*5.33+1); // 5.33 it's count of bugs for one square meter
-      var literResult = parseFloat(square*0.32); // 0.32 it's count of liters for one square meter
+      var bagsResult_3 = parseInt(square*5.33+1); // 5.33 it's count of bugs for one square meter
+      var bagsResult_2 = parseInt(square*8); // 8 it's count of bugs for one square meter
+      var bagsResult_1 = parseInt(square*5.33+1); // 5.33 it's count of bugs for one square meter
+      var bagsResult_4 = parseInt(square*1); // 1 it's count of bugs for one square meter
+      
+      //var squareResult = parseFloat(square*0.32); // 0.32 it's count of squares for one square meter
 
-      bags.text(bagsResult);
-      liter.text(literResult);
-      showBags.text(bagsResult);
+      bags.text(bagsResult_1 + bagsResult_2 + bagsResult_3 + bagsResult_4);
+      squareInfo.text(square);
+      showProduct_3.text(bagsResult_3);
+      showProduct_2.text(bagsResult_2);
+      showProduct_1.text(bagsResult_1);
+      showProduct_4.text(bagsResult_4);
+      
       numberResult.removeClass('d-none');
       bagsItem.removeClass('d-none');
 
