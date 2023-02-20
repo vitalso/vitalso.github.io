@@ -131,9 +131,23 @@
   gap: 64px 0;
 }
 
+@media screen and (max-width: 992px) {
+  .sm-pt-0 {
+    padding-top: 0;
+  }
+  .sm-mt-0 {
+    margin-top: 0;
+  }
+}
 @media screen and (max-width: 768px) {
   .mb-140 {
     margin-bottom: 32px;
+  }
+  .pb-350 {
+    padding-bottom: 150px;
+  }
+  .custom-mw {
+    padding-left: 15px;
   }
 }
 h1, h2 {
@@ -333,7 +347,7 @@ header .navbar-toggler svg {
 }
 @media screen and (max-width: 768px) {
   header {
-    margin-top: 0;
+    margin-top: 15px;
   }
   .logo img {
     max-width: 133px;
@@ -375,6 +389,12 @@ header .navbar-toggler svg {
   padding: 12px 40px;
 }
 
+@media screen and (max-width: 768px) {
+  button h5 {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
 footer {
   padding-top: 20px;
   padding-bottom: 200px;
@@ -786,6 +806,11 @@ form.calc-form button {
   min-width: 320px;
 }
 
+@media screen and (max-width: 992px) {
+  form.calc-form {
+    flex-direction: column;
+  }
+}
 .bg-bottom-waves {
   padding-bottom: 750px;
   background-image: url(../images/bg-bottom-waves.svg);
@@ -807,7 +832,7 @@ form.calc-form button {
   bottom: 0;
   padding: 22vh 50vw;
   background-image: url(../images/bg-bottom-waves-white.svg);
-  background-position: center 101%;
+  background-position: center 105%;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -841,6 +866,11 @@ form.calc-form button {
   }
   to {
     transform: scale(1) rotate(1deg);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .bg-bottom-waves {
+    padding-bottom: 450px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -892,9 +922,6 @@ form.calc-form button {
 .hero-section-image.ratgeber-hero {
   background-image: url(../images/ratgeber-hero.jpg);
   background-position: center 45%;
-  /*.full-screen-waves.bottom {
-      background: url(../images/ratgeber-hero-wave.svg) center bottom/cover no-repeat;
-  }*/
 }
 .hero-section-image.ratgeber-hero h1 {
   line-height: 75px;
@@ -974,6 +1001,12 @@ form.calc-form button {
   }
   .hero-section.hero-section-image .full-screen-waves {
     height: 150px;
+  }
+  .hero-section.hero-section-image.hochbeet-hero h1, .hero-section.hero-section-image.ratgeber-hero h1 {
+    line-height: 46px;
+  }
+  .hero-section.hero-section-image.hochbeet-hero h1 br, .hero-section.hero-section-image.ratgeber-hero h1 br {
+    display: none;
   }
   .hero-section h1 span::after {
     display: none;
@@ -1198,6 +1231,12 @@ form.calc-form button {
     margin-left: auto;
     margin-right: auto;
   }
+  .products-item.with-overflow-image {
+    max-width: 100%;
+  }
+  .products-item.with-overflow-image h4 {
+    font-size: 28px;
+  }
   .bio-image {
     top: 10%;
   }
@@ -1306,10 +1345,42 @@ form.calc-form button {
   height: 410px;
 }
 
+@media screen and (max-width: 1200px) {
+  .bg-green-with-tree {
+    background-size: 190% !important;
+  }
+}
 @media screen and (max-width: 992px) {
   .full-screen-section.bg-img-full-section-1 {
     min-height: 100vh;
     margin-top: -150px;
+  }
+  .full-screen-section.bg-img-full-section-6 {
+    min-height: 100vh;
+  }
+  .bg-green-with-tree {
+    padding-bottom: 200px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .full-screen-section.bg-img-full-section-1 .full-screen-waves.top {
+    background: url(../images/mobile-green-wave.svg) center bottom/cover no-repeat;
+    transform: scale(1);
+  }
+  .full-screen-waves.top, .full-screen-waves.bottom {
+    height: 200px;
+  }
+  .bg-green-with-tree {
+    background-size: 290% !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .bg-green-with-tree {
+    padding-bottom: 100px;
+    background-size: 400% !important;
+  }
+  .bg-green-with-tree .pt-350 {
+    padding-top: 150px;
   }
 }
 .circle-section {
@@ -1545,6 +1616,26 @@ form.calc-form button {
   margin-right: 12px;
 }
 
+@media screen and (max-width: 768px) {
+  .card-slider {
+    padding-left: 25px;
+  }
+  .card-slider .slick-prev {
+    left: 20px;
+  }
+  .card-slider .slick-next {
+    left: 84px;
+  }
+  .card-slider .slick-slide {
+    margin-right: 12px;
+  }
+  .card-slider .card-item.large {
+    max-width: 100%;
+  }
+  .card-small-slider {
+    padding-left: 15px;
+  }
+}
 .team {
   padding: 110px 0;
   border-top: 1px dashed rgba(250, 248, 246, 0.4);

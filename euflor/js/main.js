@@ -77,7 +77,15 @@ $(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     variableWidth: true,
-    adaptiveHeight: true
+    adaptiveHeight: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          variableWidth: false
+        }
+      }
+    ]
   });
 
   // Card small slider
