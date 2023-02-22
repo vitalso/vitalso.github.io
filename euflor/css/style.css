@@ -150,6 +150,14 @@
     padding-left: 15px;
   }
 }
+@media screen and (max-width: 576px) {
+  section.pb-150 {
+    padding-bottom: 50px;
+  }
+  section .card-item h5 {
+    font-size: 20px;
+  }
+}
 h1, h2 {
   font-size: 64px;
   letter-spacing: -1px;
@@ -247,8 +255,12 @@ p {
   }
   p, .fs-24 {
     font-size: 16px;
-    line-height: 26px;
-    letter-spacing: 0.04;
+    letter-spacing: 0.04px;
+  }
+}
+@media screen and (max-width: 576px) {
+  h3 span {
+    background-position: center center;
   }
 }
 header {
@@ -390,6 +402,13 @@ header .navbar-toggler svg {
 }
 
 @media screen and (max-width: 768px) {
+  .btn {
+    font-size: 16px;
+  }
+  .btn.btn-lg {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   button h5 {
     font-size: 16px;
     font-weight: 400;
@@ -873,11 +892,6 @@ form.calc-form button {
     padding-bottom: 450px;
   }
 }
-@media screen and (max-width: 992px) {
-  .bg-bottom-waves.white::after {
-    display: none;
-  }
-}
 @media screen and (max-width: 768px) {
   .bg-bottom-waves {
     padding-bottom: 80vw;
@@ -1355,20 +1369,28 @@ form.calc-form button {
     min-height: 100vh;
     margin-top: -150px;
   }
-  .full-screen-section.bg-img-full-section-6 {
+  .full-screen-section.bg-img-full-section-6, .full-screen-section.bg-img-full-section-4 {
     min-height: 100vh;
+  }
+  .full-screen-section.bg-img-full-section-5 .pt-350 {
+    padding-top: 280px;
+  }
+  .full-screen-section.bg-img-full-section-5.pb-200, .full-screen-section.bg-img-full-section-5 .pb-150 {
+    padding-bottom: 50px;
   }
   .bg-green-with-tree {
     padding-bottom: 200px;
   }
+  .full-screen-waves.top, .full-screen-waves.bottom {
+    height: 200px;
+  }
+  .full-screen-waves.top.green {
+    margin-top: -200px;
+  }
 }
 @media screen and (max-width: 768px) {
   .full-screen-section.bg-img-full-section-1 .full-screen-waves.top {
-    background: url(../images/mobile-green-wave.svg) center bottom/cover no-repeat;
-    transform: scale(1);
-  }
-  .full-screen-waves.top, .full-screen-waves.bottom {
-    height: 200px;
+    background-position: center top;
   }
   .bg-green-with-tree {
     background-size: 290% !important;
@@ -1471,6 +1493,38 @@ form.calc-form button {
   padding-right: 15%;
 }
 
+@media screen and (max-width: 992px) {
+  .wrap-circle {
+    width: 690px;
+    height: 690px;
+    transform: scale(0.7);
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrap-circle {
+    width: 510px;
+    height: 510px;
+    transform: scale(1);
+  }
+  .wrap-circle-item {
+    width: calc(100% - 44px);
+    height: calc(100% - 44px);
+    margin: 22px;
+  }
+  .wrap-circle .slick-slide {
+    transform: scale(0.7);
+  }
+}
+@media screen and (max-width: 576px) {
+  .wrap-circle {
+    width: 340px;
+    height: 340px;
+    margin-bottom: 50px;
+  }
+  .wrap-circle .slick-slide h4 + p {
+    display: none;
+  }
+}
 .timeline-item {
   padding-bottom: 60px;
 }
