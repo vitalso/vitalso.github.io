@@ -188,3 +188,22 @@
     }
     
 }
+
+@media screen and (max-width: 768px) {
+
+    .modal-full-screen .modal-close {
+        width: 34px;
+        height: 34px;
+        top: 50px;
+        right: 40px;
+    }
+
+    .modal-full-screen .modal-logo {
+        max-width: 167px;
+    }
+
+    .modal-full-screen .modal-form {
+        padding: 32px 22px;
+    }
+    
+}
