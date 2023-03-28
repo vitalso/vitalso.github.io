@@ -191,6 +191,10 @@
 
 @media screen and (max-width: 768px) {
 
+    .modal-full-screen .modal-content {
+        background-size: 1000%;
+    }
+
     .modal-full-screen .modal-close {
         width: 34px;
         height: 34px;
