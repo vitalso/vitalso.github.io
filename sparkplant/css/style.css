@@ -93,11 +93,6 @@ html {
   --color-torquoise: #44FFD9;
   --border-purple: #684EAA;
   --border-grey: 11, 19, 36;
-  --media-laptop: 1200px;
-  --media-tablet: 992px;
-  --media-mobile: 768px;
-  --media-sm: 576px;
-  --media-xs: 480px;
 }
 
 .fw-semibold {
@@ -171,6 +166,19 @@ html {
     transform: translateY(0);
   }
 }
+@media screen and (max-width: 576px) {
+  .sm-w-full {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .sm-gap-0 {
+    gap: 0;
+  }
+  .sm-transform-none {
+    transform: none !important;
+  }
+}
 h1, h2, h3, h4, h5 {
   line-height: 100%;
 }
@@ -227,6 +235,24 @@ p.text-xs {
   font-weight: 700;
 }
 
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 80px;
+  }
+  h2 {
+    font-size: 64px;
+  }
+  h3 {
+    font-size: 56px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  p.text-sm {
+    font-size: 16px;
+  }
+}
 .btn {
   border-radius: 80px;
   font-weight: 700;
@@ -313,21 +339,39 @@ p.text-xs {
   padding: 100px 80px 40px 80px;
 }
 
-button[data-bs-dismiss] {
+button[data-bs-dismiss]:not(.btn-menu) {
   top: 30px;
   right: 45px;
   z-index: 1;
 }
-button[data-bs-dismiss] svg {
+button[data-bs-dismiss]:not(.btn-menu) svg {
   width: 24px;
   height: 24px;
 }
 
+@media screen and (max-width: 768px) {
+  #menuModal.modal .modal-body {
+    padding-top: 60px;
+  }
+  #contactModal .modal-body {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  button[data-bs-dismiss]:not(.btn-menu) {
+    right: 15px;
+  }
+}
 .panel {
   padding: 60px 80px;
   border-radius: 80px;
 }
 
+@media screen and (max-width: 992px) {
+  .panel {
+    padding: 55px 30px;
+    border-radius: 40px;
+  }
+}
 input, textarea {
   height: 51px;
   padding: 15px;
@@ -357,10 +401,23 @@ header {
   position: absolute;
   width: 100%;
 }
-header .logo img {
+
+.logo img {
   max-width: 210px;
 }
 
+.btn-menu {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 576px) {
+  .logo img {
+    max-width: 134px;
+  }
+  .btn-menu {
+    font-size: 18px;
+  }
+}
 footer {
   padding-top: 130px;
   padding-bottom: 50px;
@@ -407,10 +464,37 @@ footer {
   fill: var(--color-black);
 }
 
+@media screen and (max-width: 992px) {
+  .nav-list {
+    margin-top: 50px;
+  }
+  .nav-list a {
+    font-size: 56px;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer {
+    padding-top: 80px;
+  }
+  footer .pt-140 {
+    padding-top: 90px;
+  }
+  .social-nav {
+    margin-bottom: 50px;
+  }
+  .social-nav a {
+    width: 40px;
+    height: 40px;
+  }
+  .social-nav a svg {
+    width: 20px;
+    height: 20px;
+  }
+}
 .hero-section {
   padding-top: 212px;
   padding-bottom: 75px;
-  background: url(../images/hero-bg.png) right top no-repeat;
+  background: url(../images/hero-bg.png) right top/contain no-repeat;
 }
 .hero-section .scroll-to {
   position: absolute;
@@ -424,6 +508,16 @@ footer {
   animation: scrollTo 1.5s linear infinite;
 }
 
+@media screen and (max-width: 576px) {
+  .hero-section {
+    padding-top: 150px;
+  }
+  .hero-section .scroll-to {
+    margin-top: 60px;
+    position: relative;
+    text-align: center;
+  }
+}
 .who-we-are {
   margin-top: 67px;
   margin-bottom: 160px;
@@ -469,8 +563,13 @@ footer {
   object-fit: cover;
 }
 
+@media screen and (max-width: 992px) {
+  .our-capital {
+    padding: 80px 0;
+  }
+}
 .better-way {
-  height: 860px;
+  min-height: 860px;
   padding-top: 130px;
   padding-bottom: 80px;
   background: url(../images/better-way-bg.png) center top/cover no-repeat;
@@ -478,4 +577,10 @@ footer {
 
 .transform-text {
   transform: translate(-100px, -80px);
+}
+
+@media screen and (max-width: 992px) {
+  .better-way {
+    min-height: 0;
+  }
 }
