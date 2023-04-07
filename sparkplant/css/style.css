@@ -84,12 +84,15 @@ html {
   --color-black: #000;
   --color-dark-grey: #555555;
   --color-grey: #999999;
+  --color-grey-secondary: #B1B1B1;
   --color-white: #fff;
+  --color-placeholder: #BEBEBE;
   --color-pink: #EB5757;
   --color-purple: #8E7AFF;
   --color-blue: #44D2FF;
   --color-torquoise: #44FFD9;
   --border-purple: #684EAA;
+  --border-grey: 11, 19, 36;
   --media-laptop: 1200px;
   --media-tablet: 992px;
   --media-mobile: 768px;
@@ -111,6 +114,14 @@ html {
 
 .text-grey {
   color: var(--color-grey);
+}
+
+.text-grey-secondary {
+  color: var(--color-grey-secondary);
+}
+
+.gap-24 {
+  gap: 24px;
 }
 
 .gap-70 {
@@ -206,6 +217,10 @@ p {
 p.text-sm {
   font-size: 20px;
 }
+p.text-xs {
+  font-size: 18px;
+  line-height: 22px;
+}
 
 .italic {
   font-style: italic;
@@ -231,6 +246,9 @@ p.text-sm {
 .btn-primary:hover {
   background: var(--color-white);
   color: var(--color-black);
+}
+.btn-primary.border-transparent:hover {
+  border-color: var(--color-purple);
 }
 .btn-with-border {
   padding: 0 0 4px 0;
@@ -276,6 +294,9 @@ p.text-sm {
 .btn-link:hover:after {
   opacity: 1;
 }
+.btn.border-transparent {
+  border-color: transparent;
+}
 
 #menuModal.modal .modal-header {
   padding: 30px 0;
@@ -285,9 +306,49 @@ p.text-sm {
   padding-bottom: 50px;
 }
 
+#contactModal .modal-content {
+  border-radius: 16px;
+}
+#contactModal .modal-body {
+  padding: 100px 80px 40px 80px;
+}
+
+button[data-bs-dismiss] {
+  top: 30px;
+  right: 45px;
+  z-index: 1;
+}
+button[data-bs-dismiss] svg {
+  width: 24px;
+  height: 24px;
+}
+
 .panel {
   padding: 60px 80px;
   border-radius: 80px;
+}
+
+input, textarea {
+  height: 51px;
+  padding: 15px;
+  font-size: 17px;
+  border-radius: 12px;
+  border: 1.5px solid rgba(var(--border-grey), 0.07);
+  transition: all 0.3s ease;
+}
+input::placeholder, textarea::placeholder {
+  color: var(--color-placeholder);
+}
+input:hover::placeholder, textarea:hover::placeholder {
+  color: var(--color-grey);
+}
+input:focus, textarea:focus {
+  border-color: var(--color-purple);
+}
+
+textarea {
+  height: 132px;
+  resize: none;
 }
 
 header {
