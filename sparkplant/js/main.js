@@ -1,5 +1,17 @@
 $(function () {
 
+    // Scroll to anchor
+    $('.nav-list a').on('click' , function(e){
+        e.preventDefault();
+
+        // close menu modal if click on link in menu
+        $('#menuModal').modal('hide');
+
+        var target = $(this).attr('href');
+        $('html , body').animate({scrollTop: $(target).offset().top} , 300); // scroll to anchor
+
+    });
+
     // AOS scroll animation
     AOS.init({
         once: true
