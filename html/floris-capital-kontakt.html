@@ -184,13 +184,13 @@
 							</div>
 							<div class="col-md-6">
 								<div class="col-padding">
-									<div class="quick-contact-widget form-widget">
+									<div class="quick-contact-widget form-widget d-none" data-alert-type="inline">
 
 										<h3 class="text-capitalize ls-1 fw-normal">Kontaktformular</h3>
 
 										<div class="form-result"></div>
 
-										<form action="include/process-form.php" method="post" class="quick-contact-form mb-0">
+										<form id="template-contactform" action="include/form.php" method="post" class="quick-contact-form mb-0">
 
 											<div class="form-process">
 												<div class="css3-spinner">
@@ -238,6 +238,56 @@
 
 										</form>
 
+									</div>
+
+									<div class="form-widget">
+										<div class="form-result"></div>
+
+										<form class="row" id="template-contactform" action="include/form.php" method="post">
+
+											<div class="form-process"></div>
+
+											<div class="form-group">
+												<input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="form-control required" placeholder="Vor-und Nachname" />
+											</div>
+
+											<div class="form-group">
+												<input type="text" id="template-contactform-branche" name="template-contactform-branche" value="" class="required form-control" placeholder="Branche" />
+											</div>
+
+											<div class="form-group">
+												<input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email form-control" placeholder="Email" />
+											</div>
+
+											<div class="form-group">
+												<input type="phone" id="template-contactform-phone" name="template-contactform-phone" value="" class="required form-control" placeholder="Telefonnummer" />
+											</div>
+
+											<div class="form-group">
+												<textarea class="required form-control" id="template-contactform-message" name="template-contactform-message" rows="6" cols="30" placeholder="Ihre Nachricht"></textarea>
+											</div>
+
+											<div class="col-12 d-none">
+												<input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="form-control" />
+											</div>
+
+											<div class="form-group">
+												<label class="form-check-label" for="template-contactform-check">
+													<input class="required form-check-input" type="checkbox" name="template-contactform-check" value="" id="template-contactform-check">
+													Ich habe die <a target="_blank" href="floris-capital-datenschutz.html">Datenschutzerklärung</a> gelesen.
+												</label>
+											</div>
+
+											<div class="col-12">
+												<button class="button button-3d nomargin" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit" disabled="true">Send Message</button>
+											</div>
+
+											<!-- Form Settings -->
+
+											<input type="hidden" name="prefix" value="template-contactform-">
+											<input type="hidden" name="subject" value="Message from Contact Form">
+
+										</form>
 									</div>
 								</div>
 							</div>

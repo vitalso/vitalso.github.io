@@ -1,14 +1,14 @@
 $(function () {
 
-  $('#quick-contact-form-datenschutz').change(function(){
+  $('#template-contactform-check').change(function(){
     if ($(this).prop('checked')) {
-      $('#quick-contact-form-submit').attr('disabled' , false);
+      $('#template-contactform-submit').attr('disabled' , false);
     } else {
-      $('#quick-contact-form-submit').attr('disabled' , true);
+      $('#template-contactform-submit').attr('disabled' , true);
     }
   });
 
-  $("form").submit(function (e) {
+  /*$("form").submit(function (e) {
     e.preventDefault();
 
     var formData = {
@@ -26,6 +26,9 @@ $(function () {
       type: "POST",
       url: actionUrl,
       data: formData,
+      beforeSend: function() {
+        console.log(formData);
+      },
       success: function(data)
       {
         alert(data); // show response from the php script.
@@ -36,6 +39,6 @@ $(function () {
       },
     });
 
-  });
+  });*/
 
 })
