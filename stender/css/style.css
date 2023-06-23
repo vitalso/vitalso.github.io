@@ -1344,6 +1344,14 @@ header .navbar-toggler[aria-expanded=true] svg.icon-close {
 .magazin-grid.index-grid .blog-item.square-item .blog-item-desc a {
   font-size: 16px;
 }
+.magazin-grid.index-grid .row > div:nth-child(1) .blog-item {
+  border-top-left-radius: 12px;
+  overflow: hidden;
+}
+.magazin-grid.index-grid .row > div:nth-child(2) .blog-item {
+  border-top-right-radius: 12px;
+  overflow: hidden;
+}
 .magazin-grid.index-grid .row > div:nth-child(3) .blog-item, .magazin-grid.index-grid .row > div:nth-child(4) .blog-item, .magazin-grid.index-grid .row > div:nth-child(5) .blog-item {
   border-bottom: none;
 }
@@ -1477,6 +1485,21 @@ header .navbar-toggler[aria-expanded=true] svg.icon-close {
   }
   .article-info-section-title {
     font-size: 16px;
+  }
+  .magazin-grid .blog-item {
+    min-height: 270px;
+  }
+  .magazin-grid .blog-item .blog-cover-link {
+    height: 270px;
+  }
+  .magazin-grid .blog-item .blog-item-desc {
+    bottom: 36px;
+  }
+  .magazin-grid.index-grid .row > div:nth-child(1) .blog-item {
+    border-top-right-radius: 12px;
+  }
+  .magazin-grid.index-grid .row > div:nth-child(2) .blog-item {
+    border-top-right-radius: 0;
   }
 }
 .btn {
