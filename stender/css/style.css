@@ -1291,7 +1291,6 @@ header .navbar-toggler[aria-expanded=true] svg.icon-close {
   bottom: 40px;
 }
 .magazin-grid .blog-cover-link {
-  max-height: 640px;
   height: 100%;
   border-radius: 0;
 }
