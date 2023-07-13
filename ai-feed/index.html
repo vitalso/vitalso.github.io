@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed list</title>
+    <!-- Connect to TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Inter"', 'sans-serif']
+                    },
+                    colors: {
+                        'default-color': '#1D2939',
+                        'default-background': '#F9FAFB',
+                        'blue-50': '#EFF4FF',
+                        'blue-200': '#B2CCFF',
+                        'blue-500': '#2970FF',
+                        'gray-100': '#F2F4F7',
+                        'gray-200': '#EAECF0',
+                        'gray-400': '#98A2B3',
+                        'gray-500': '#667085',
+                        'success-400': '#32D583',
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .hide-scrollbar {
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+            }
+
+            .hide-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-default-background text-default-color">
+
+    <div class="container mx-auto px-3 pt-[21px] pb-[54px]">
+        <h3 class="text-2xl font-semibold">Discover</h3>
+
+        <div class="my-[18px] flex gap-2 flex-nowrap overflow-x-auto hide-scrollbar">
+            <!-- Active button -->
+            <button class="py-2 px-3 rounded-md bg-blue-500 text-white font-semibold text-sm transition-all hover:bg-blue-500 hover:text-white">Popular</button>
+
+            <!-- Defaul buttons -->
+            <button class="py-2 px-3 rounded-md text-gray-400 font-semibold text-sm whitespace-nowrap transition-all hover:bg-blue-500 hover:text-white">Tech</button>
+            <button class="py-2 px-3 rounded-md text-gray-400 font-semibold text-sm whitespace-nowrap transition-all hover:bg-blue-500 hover:text-white">Health</button>
+            <button class="py-2 px-3 rounded-md text-gray-400 font-semibold text-sm whitespace-nowrap transition-all hover:bg-blue-500 hover:text-white">Cyber Security</button>
+            <button class="py-2 px-3 rounded-md text-gray-400 font-semibold text-sm whitespace-nowrap transition-all hover:bg-blue-500 hover:text-white">Marketing</button>
+            <button class="py-2 px-3 rounded-md text-gray-400 font-semibold text-sm whitespace-nowrap transition-all hover:bg-blue-500 hover:text-white">Design</button>
+        </div>
+
+        <!-- Filter -->
+        <div class="mb-3 text-xs flex">
+            <span class="text-gray-400">Sort by</span>
+
+            <div class="ml-[4px] flex items-center gap-[4px]">
+                <span class="text-gray-500 font-medium">Last updated</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="chevron-down">
+                        <path id="Icon" d="M4 6L8 10L12 6" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                </svg>                    
+            </div>
+        </div>
+
+        <!-- Card -->
+        <div class="mb-4 p-4 rounded-2xl border border-gray-200 bg-white">
+            <div class="flex items-center text-xs mb-[7px]">
+                <div class="flex items-center gap-[4px]">
+                    <div class="w-[18px] h-[18px] overflow-hidden rounded-full">
+                        <img src="assets/avatar.png" alt="avatar">
+                    </div>
+                    <span class="text-gray-500">John Smith</span>
+                </div>
+    
+                <div class="border border-blue-200 ml-auto p-[3px] pl-[8px] rounded-[25px] flex items-center gap-[4px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <g clip-path="url(#clip0_2_31258)">
+                          <path d="M5.3335 9.99967H10.6668M10.0002 5.99967H10.0068M6.00016 5.99967H6.00683M14.6668 7.99967C14.6668 11.6816 11.6821 14.6663 8.00016 14.6663C4.31826 14.6663 1.3335 11.6816 1.3335 7.99967C1.3335 4.31778 4.31826 1.33301 8.00016 1.33301C11.6821 1.33301 14.6668 4.31778 14.6668 7.99967ZM10.3335 5.99967C10.3335 6.18377 10.1843 6.33301 10.0002 6.33301C9.81607 6.33301 9.66683 6.18377 9.66683 5.99967C9.66683 5.81558 9.81607 5.66634 10.0002 5.66634C10.1843 5.66634 10.3335 5.81558 10.3335 5.99967ZM6.3335 5.99967C6.3335 6.18377 6.18426 6.33301 6.00016 6.33301C5.81607 6.33301 5.66683 6.18377 5.66683 5.99967C5.66683 5.81558 5.81607 5.66634 6.00016 5.66634C6.18426 5.66634 6.3335 5.81558 6.3335 5.99967Z" stroke="#2970FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_2_31258">
+                            <rect width="16" height="16" fill="white"/>
+                          </clipPath>
+                        </defs>
+                    </svg>
+                    <span class="text-blue-500 font-medium">Interest</span>
+                    <span class="px-2 bg-blue-50 text-blue-500 font-medium rounded-[16px]">112</span>
+                </div>
+
+                <button class="ml-[4px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M9.99984 10.833C10.4601 10.833 10.8332 10.4599 10.8332 9.99967C10.8332 9.53944 10.4601 9.16634 9.99984 9.16634C9.5396 9.16634 9.1665 9.53944 9.1665 9.99967C9.1665 10.4599 9.5396 10.833 9.99984 10.833Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.99984 4.99967C10.4601 4.99967 10.8332 4.62658 10.8332 4.16634C10.8332 3.7061 10.4601 3.33301 9.99984 3.33301C9.5396 3.33301 9.1665 3.7061 9.1665 4.16634C9.1665 4.62658 9.5396 4.99967 9.99984 4.99967Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.99984 16.6663C10.4601 16.6663 10.8332 16.2932 10.8332 15.833C10.8332 15.3728 10.4601 14.9997 9.99984 14.9997C9.5396 14.9997 9.1665 15.3728 9.1665 15.833C9.1665 16.2932 9.5396 16.6663 9.99984 16.6663Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <h3 class="text-lg font-semibold mb-[4px]">Science News</h3>
+            <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi...</p>
+
+            <div class="pt-[8px] flex items-center gap-[4px] mb-4">
+                <span class="text-[10px] px-2 py-[2px] bg-gray-100 text-gray-500 rounded-2xl">Filter</span>
+                <span class="text-[10px] px-2 py-[2px] bg-gray-100 text-gray-500 rounded-2xl">Transform</span>
+                <span class="text-[10px] px-2 py-[2px] bg-gray-100 text-gray-500 rounded-2xl">Summary</span>
+            </div>
+
+            <div class="flex items-center gap-[4px] text-xs">
+                <div class="flex items-center gap-[4px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M9.33317 7.33301H5.33317M6.6665 9.99967H5.33317M10.6665 4.66634H5.33317M13.3332 4.53301V11.4663C13.3332 12.5864 13.3332 13.1465 13.1152 13.5743C12.9234 13.9506 12.6175 14.2566 12.2412 14.4484C11.8133 14.6663 11.2533 14.6663 10.1332 14.6663H5.8665C4.7464 14.6663 4.18635 14.6663 3.75852 14.4484C3.3822 14.2566 3.07624 13.9506 2.88449 13.5743C2.6665 13.1465 2.6665 12.5864 2.6665 11.4663V4.53301C2.6665 3.4129 2.6665 2.85285 2.88449 2.42503C3.07624 2.0487 3.3822 1.74274 3.75852 1.55099C4.18635 1.33301 4.7464 1.33301 5.8665 1.33301H10.1332C11.2533 1.33301 11.8133 1.33301 12.2412 1.55099C12.6175 1.74274 12.9234 2.0487 13.1152 2.42503C13.3332 2.85285 13.3332 3.4129 13.3332 4.53301Z" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="text-gray-500 font-medium">20</span>
+                </div>
+
+                <div class="flex items-center gap-[4px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8.00016 12.6663V3.33301M8.00016 3.33301L3.3335 7.99967M8.00016 3.33301L12.6668 7.99967" stroke="#32D583" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="text-gray-500 font-medium text-success-400">2 new</span>
+                </div>
+
+                <span class="text-gray-400 ml-auto">updated 1 day ago</span>
+            </div>
+        </div>
+        <!-- End card -->
+
+        <!-- Card -->
+        <div class="mb-4 p-4 rounded-2xl border border-gray-200 bg-white">
+            <div class="flex items-center text-xs mb-[7px]">
+                <div class="flex items-center gap-[4px]">
+                    <div class="w-[18px] h-[18px] overflow-hidden rounded-full">
+                        <img src="assets/avatar.png" alt="avatar">
+                    </div>
+                    <span class="text-gray-500">John Smith</span>
+                </div>
+    
+                <div class="border border-blue-200 ml-auto p-[3px] pl-[8px] rounded-[25px] flex items-center gap-[4px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <g clip-path="url(#clip0_2_31258)">
+                          <path d="M5.3335 9.99967H10.6668M10.0002 5.99967H10.0068M6.00016 5.99967H6.00683M14.6668 7.99967C14.6668 11.6816 11.6821 14.6663 8.00016 14.6663C4.31826 14.6663 1.3335 11.6816 1.3335 7.99967C1.3335 4.31778 4.31826 1.33301 8.00016 1.33301C11.6821 1.33301 14.6668 4.31778 14.6668 7.99967ZM10.3335 5.99967C10.3335 6.18377 10.1843 6.33301 10.0002 6.33301C9.81607 6.33301 9.66683 6.18377 9.66683 5.99967C9.66683 5.81558 9.81607 5.66634 10.0002 5.66634C10.1843 5.66634 10.3335 5.81558 10.3335 5.99967ZM6.3335 5.99967C6.3335 6.18377 6.18426 6.33301 6.00016 6.33301C5.81607 6.33301 5.66683 6.18377 5.66683 5.99967C5.66683 5.81558 5.81607 5.66634 6.00016 5.66634C6.18426 5.66634 6.3335 5.81558 6.3335 5.99967Z" stroke="#2970FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_2_31258">
+                            <rect width="16" height="16" fill="white"/>
+                          </clipPath>
+                        </defs>
+                    </svg>
+                    <span class="text-blue-500 font-medium">Interest</span>
+                    <span class="px-2 bg-blue-50 text-blue-500 font-medium rounded-[16px]">112</span>
+                </div>
+
+                <button class="ml-[4px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M9.99984 10.833C10.4601 10.833 10.8332 10.4599 10.8332 9.99967C10.8332 9.53944 10.4601 9.16634 9.99984 9.16634C9.5396 9.16634 9.1665 9.53944 9.1665 9.99967C9.1665 10.4599 9.5396 10.833 9.99984 10.833Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.99984 4.99967C10.4601 4.99967 10.8332 4.62658 10.8332 4.16634C10.8332 3.7061 10.4601 3.33301 9.99984 3.33301C9.5396 3.33301 9.1665 3.7061 9.1665 4.16634C9.1665 4.62658 9.5396 4.99967 9.99984 4.99967Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.99984 16.6663C10.4601 16.6663 10.8332 16.2932 10.8332 15.833C10.8332 15.3728 10.4601 14.9997 9.99984 14.9997C9.5396 14.9997 9.1665 15.3728 9.1665 15.833C9.1665 16.2932 9.5396 16.6663 9.99984 16.6663Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <h3 class="text-lg font-semibold mb-[4px]">Science News</h3>
+            <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi...</p>
+
+            <div class="pt-[8px] flex items-center gap-[4px] mb-4">
+                <span class="text-[10px] px-2 py-[2px] bg-gray-100 text-gray-500 rounded-2xl">Filter</span>
+                <span class="text-[10px] px-2 py-[2px] bg-gray-100 text-gray-500 rounded-2xl">Transform</span>
+                <span class="text-[10px] px-2 py-[2px] bg-gray-100 text-gray-500 rounded-2xl">Summary</span>
+            </div>
+
+            <div class="flex items-center gap-[4px] text-xs ">
+                <div class="flex items-center gap-[4px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M9.33317 7.33301H5.33317M6.6665 9.99967H5.33317M10.6665 4.66634H5.33317M13.3332 4.53301V11.4663C13.3332 12.5864 13.3332 13.1465 13.1152 13.5743C12.9234 13.9506 12.6175 14.2566 12.2412 14.4484C11.8133 14.6663 11.2533 14.6663 10.1332 14.6663H5.8665C4.7464 14.6663 4.18635 14.6663 3.75852 14.4484C3.3822 14.2566 3.07624 13.9506 2.88449 13.5743C2.6665 13.1465 2.6665 12.5864 2.6665 11.4663V4.53301C2.6665 3.4129 2.6665 2.85285 2.88449 2.42503C3.07624 2.0487 3.3822 1.74274 3.75852 1.55099C4.18635 1.33301 4.7464 1.33301 5.8665 1.33301H10.1332C11.2533 1.33301 11.8133 1.33301 12.2412 1.55099C12.6175 1.74274 12.9234 2.0487 13.1152 2.42503C13.3332 2.85285 13.3332 3.4129 13.3332 4.53301Z" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="text-gray-500 font-medium">20</span>
+                </div>
+
+                <div class="flex items-center gap-[4px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8.00016 12.6663V3.33301M8.00016 3.33301L3.3335 7.99967M8.00016 3.33301L12.6668 7.99967" stroke="#32D583" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="text-gray-500 font-medium text-success-400">2 new</span>
+                </div>
+
+                <span class="text-gray-400 ml-auto">updated 1 day ago</span>
+            </div>
+        </div>
+        <!-- End card -->
+
+        <!-- Card -->
+        <div class="mb-4 p-4 rounded-2xl border border-gray-200 bg-white">
+            <div class="flex items-center text-xs mb-[7px]">
+                <div class="flex items-center gap-[4px]">
+                    <div class="w-[18px] h-[18px] overflow-hidden rounded-full">
+                        <img src="assets/avatar.png" alt="avatar">
+                    </div>
+                    <span class="text-gray-500">John Smith</span>
+                </div>
+    
+                <div class="border border-blue-200 ml-auto p-[3px] pl-[8px] rounded-[25px] flex items-center gap-[4px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <g clip-path="url(#clip0_2_31258)">
+                          <path d="M5.3335 9.99967H10.6668M10.0002 5.99967H10.0068M6.00016 5.99967H6.00683M14.6668 7.99967C14.6668 11.6816 11.6821 14.6663 8.00016 14.6663C4.31826 14.6663 1.3335 11.6816 1.3335 7.99967C1.3335 4.31778 4.31826 1.33301 8.00016 1.33301C11.6821 1.33301 14.6668 4.31778 14.6668 7.99967ZM10.3335 5.99967C10.3335 6.18377 10.1843 6.33301 10.0002 6.33301C9.81607 6.33301 9.66683 6.18377 9.66683 5.99967C9.66683 5.81558 9.81607 5.66634 10.0002 5.66634C10.1843 5.66634 10.3335 5.81558 10.3335 5.99967ZM6.3335 5.99967C6.3335 6.18377 6.18426 6.33301 6.00016 6.33301C5.81607 6.33301 5.66683 6.18377 5.66683 5.99967C5.66683 5.81558 5.81607 5.66634 6.00016 5.66634C6.18426 5.66634 6.3335 5.81558 6.3335 5.99967Z" stroke="#2970FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_2_31258">
+                            <rect width="16" height="16" fill="white"/>
+                          </clipPath>
+                        </defs>
+                    </svg>
+                    <span class="text-blue-500 font-medium">Interest</span>
+                    <span class="px-2 bg-blue-50 text-blue-500 font-medium rounded-[16px]">112</span>
+                </div>
+
+                <button class="ml-[4px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M9.99984 10.833C10.4601 10.833 10.8332 10.4599 10.8332 9.99967C10.8332 9.53944 10.4601 9.16634 9.99984 9.16634C9.5396 9.16634 9.1665 9.53944 9.1665 9.99967C9.1665 10.4599 9.5396 10.833 9.99984 10.833Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.99984 4.99967C10.4601 4.99967 10.8332 4.62658 10.8332 4.16634C10.8332 3.7061 10.4601 3.33301 9.99984 3.33301C9.5396 3.33301 9.1665 3.7061 9.1665 4.16634C9.1665 4.62658 9.5396 4.99967 9.99984 4.99967Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.99984 16.6663C10.4601 16.6663 10.8332 16.2932 10.8332 15.833C10.8332 15.3728 10.4601 14.9997 9.99984 14.9997C9.5396 14.9997 9.1665 15.3728 9.1665 15.833C9.1665 16.2932 9.5396 16.6663 9.99984 16.6663Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <h3 class="text-lg font-semibold mb-[4px]">Science News</h3>
+            <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi...</p>
+
+            <div class="pt-[8px] flex items-center gap-[4px] mb-4">
+                <span class="text-[10px] px-2 py-[2px] bg-gray-100 text-gray-500 rounded-2xl">Filter</span>
+                <span class="text-[10px] px-2 py-[2px] bg-gray-100 text-gray-500 rounded-2xl">Transform</span>
+                <span class="text-[10px] px-2 py-[2px] bg-gray-100 text-gray-500 rounded-2xl">Summary</span>
+            </div>
+
+            <div class="flex items-center gap-[4px] text-xs ">
+                <div class="flex items-center gap-[4px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M9.33317 7.33301H5.33317M6.6665 9.99967H5.33317M10.6665 4.66634H5.33317M13.3332 4.53301V11.4663C13.3332 12.5864 13.3332 13.1465 13.1152 13.5743C12.9234 13.9506 12.6175 14.2566 12.2412 14.4484C11.8133 14.6663 11.2533 14.6663 10.1332 14.6663H5.8665C4.7464 14.6663 4.18635 14.6663 3.75852 14.4484C3.3822 14.2566 3.07624 13.9506 2.88449 13.5743C2.6665 13.1465 2.6665 12.5864 2.6665 11.4663V4.53301C2.6665 3.4129 2.6665 2.85285 2.88449 2.42503C3.07624 2.0487 3.3822 1.74274 3.75852 1.55099C4.18635 1.33301 4.7464 1.33301 5.8665 1.33301H10.1332C11.2533 1.33301 11.8133 1.33301 12.2412 1.55099C12.6175 1.74274 12.9234 2.0487 13.1152 2.42503C13.3332 2.85285 13.3332 3.4129 13.3332 4.53301Z" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="text-gray-500 font-medium">20</span>
+                </div>
+
+                <div class="flex items-center gap-[4px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8.00016 12.6663V3.33301M8.00016 3.33301L3.3335 7.99967M8.00016 3.33301L12.6668 7.99967" stroke="#32D583" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="text-gray-500 font-medium text-success-400">2 new</span>
+                </div>
+
+                <span class="text-gray-400 ml-auto">updated 1 day ago</span>
+            </div>
+        </div>
+        <!-- End card -->
+
+    </div>
+
+    <!-- Fixed bottom bar -->
+    <div class="w-full bottom-0 fixed p-4 bg-white border-t border-t-gray-200 flex items-center justify-between">
+        <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" class="fill-gray-400 hover:fill-blue-500">
+                <g clip-path="url(#a)">
+                    <path d="M11.544 8.871H9.377v2.165h2.167V8.87ZM6.665 9.1H4.958v1.705h1.707V9.101ZM16.16 9.1h-1.706v1.705h1.706V9.101ZM6.665 4.34H4.958v1.705h1.707V4.341ZM6.426 0h-1.23v1.228h1.23V0ZM1.73 4.58H.5v1.228h1.23V4.58ZM1.73 14.09H.5v1.229h1.23V14.09ZM20.5 14.09h-1.229v1.229h1.23V14.09ZM15.922 18.773h-1.23V20h1.23v-1.227ZM6.426 18.773h-1.23V20h1.23v-1.227ZM15.922 0h-1.23v1.228h1.23V0ZM20.5 4.58h-1.229v1.228h1.23V4.58ZM16.16 4.34h-1.706v1.705h1.706V4.341ZM11.314 4.34H9.607v1.705h1.707V4.341ZM6.665 13.852H4.958v1.704h1.707v-1.704ZM16.16 13.852h-1.706v1.704h1.706v-1.704ZM11.314 13.852H9.607v1.704h1.707v-1.704Z"/><path d="M5.99 5.059H1.092v.27H5.99v-.27Z"/><path d="M10.751 5.059H5.854v.27h4.897v-.27Z"/><path d="M15.514 5.059h-4.897v.27h4.896v-.27ZM10.82 9.751H5.923v.406h4.897v-.406Z"/><path d="M15.58 9.751h-4.896v.406h4.897v-.406ZM20.277 5.059h-4.898v.27h4.898v-.27ZM5.99 14.57H1.092v.27H5.99v-.27Z"/><path d="M10.751 14.57H5.854v.27h4.897v-.27Z"/><path d="M15.514 14.57h-4.897v.27h4.896v-.27Z"/><path d="M20.277 14.57h-4.898v.27h4.898v-.27ZM6.406 19.453H1.047v-4.98h.136v4.845h5.223v.135Z"/><path d="M19.953 19.453h-5.051v-.135h4.915v-4.845h.136v4.98ZM19.953 5.44h-.136V.681h-4.7V.547h4.835v4.892ZM1.183 5.713h-.136V.547H5.81v.135H1.183v5.031Z"/><path d="M5.948.77h-.271v5.126h.27V.771ZM15.443.77h-.271v5.126h.27V.771Z"/><path d="M15.443 4.963h-.271v5.126h.27V4.963Z"/><path d="M15.443 9.156h-.271v5.126h.27V9.156Z"/><path d="M15.443 14.09h-.271v5.127h.27V14.09ZM5.96 5.331h-.271v5.126h.27V5.33Z"/><path d="M5.948 9.892h-.271v5.125h.27V9.892Z"/><path d="M5.948 14.452h-.271v5.126h.27v-5.126ZM15.3.49l-.191.192 4.769 4.763.191-.191L15.301.49Z"/><path d="m1.488 14.618-.192.192 4.77 4.763.19-.191-4.768-4.764ZM6.063 10.049l-.288.287 4.77 4.763.287-.287-4.77-4.763Z"/><path d="m10.545 14.621-.191.191 4.768 4.764.192-.191-4.769-4.764ZM1.33 5.416l-.192.191 4.769 4.764.192-.191-4.77-4.764ZM10.675 5.268l-.287.287 4.768 4.763.288-.287-4.769-4.763Z"/><path d="m15.157 9.838-.192.191 4.77 4.764.19-.192-4.768-4.763ZM5.942.636 5.75.827l4.77 4.764.19-.192L5.943.636Z"/><path d="m15.246 9.807-4.773 4.76.287.287 4.773-4.76-.287-.287Z"/><path d="m19.822 5.33-4.77 4.763.192.191 4.77-4.763-.192-.192ZM10.607 14.533l-4.77 4.764.192.191 4.77-4.763-.192-.192ZM10.459 5.2 5.686 9.96l.287.287 4.773-4.759-.287-.287Z"/><path d="m15.034.722-4.768 4.763.191.192L15.226.913l-.192-.191ZM5.82 9.927 1.05 14.69l.192.192 4.77-4.764-.192-.191ZM5.706.499.816 5.384l.191.191L5.897.69 5.706.5ZM19.922 14.609l-4.79 4.785.192.19 4.79-4.784-.192-.191Z"/>
+                    <path d="M10.664 5.194h-.407v9.872h.407V5.194Z"/>
+                </g>
+                <defs><clipPath id="a"><path fill="#fff" d="M.5 0h20v20H.5z"/></clipPath></defs>
+            </svg>
+        </a>
+        
+        <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none" class="transition-all stroke-blue-500 hover:stroke-blue-500">
+                <path d="M12.8332 10.083H7.33317M9.1665 13.7497H7.33317M14.6665 6.41634H7.33317M18.3332 6.23301V15.7663C18.3332 17.3065 18.3332 18.0766 18.0334 18.6648C17.7698 19.1823 17.3491 19.603 16.8316 19.8666C16.2434 20.1663 15.4733 20.1663 13.9332 20.1663H8.0665C6.52636 20.1663 5.75629 20.1663 5.16803 19.8666C4.65058 19.603 4.22989 19.1823 3.96624 18.6648C3.6665 18.0766 3.6665 17.3065 3.6665 15.7663V6.23301C3.6665 4.69286 3.6665 3.92279 3.96624 3.33453C4.22989 2.81709 4.65058 2.39639 5.16803 2.13274C5.75629 1.83301 6.52636 1.83301 8.0665 1.83301H13.9332C15.4733 1.83301 16.2434 1.83301 16.8316 2.13274C17.3491 2.39639 17.7698 2.81709 18.0334 3.33453C18.3332 3.92279 18.3332 4.69286 18.3332 6.23301Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        
+        <a href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none" class="transition-all stroke-gray-400 hover:stroke-blue-500">
+                <path d="M4.5835 7.15C4.5835 5.60986 4.5835 4.83978 4.88323 4.25153C5.14688 3.73408 5.56758 3.31338 6.08502 3.04973C6.67328 2.75 7.44335 2.75 8.9835 2.75H13.0168C14.557 2.75 15.327 2.75 15.9153 3.04973C16.4327 3.31338 16.8534 3.73408 17.1171 4.25153C17.4168 4.83978 17.4168 5.60986 17.4168 7.15V19.25L11.0002 15.5833L4.5835 19.25V7.15Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+    </div>
+
+</body>
+</html>
