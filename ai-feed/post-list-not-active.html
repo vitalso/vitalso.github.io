@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post list</title>
+    <title>Post list not active</title>
     <!-- Connect to TailwindCSS -->
     <link href="dist/output.css" rel="stylesheet">
+    <!-- Flowbite -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
 </head>
-<body class="bg-white text-default-color dark:bg-dark-bg">
+<body class="bg-default-background text-default-color">
 
     <div class="container mx-auto px-3">
         <!-- Back button -->
-        <div class="py-[9px] sticky top-0 bg-white">
+        <div class="py-[9px]">
             <a href="index.html" class="font-medium text-blue-500 text-sm flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="stroke-blue-500">
                     <path d="M20 12H4M4 12L10 18M4 12L10 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -28,31 +30,31 @@
                     <div class="w-[18px] h-[18px] overflow-hidden rounded-full">
                         <img src="assets/avatar.png" alt="avatar">
                     </div>
-                    <span class="text-gray-500 dark:text-gray-200">John Smith</span>
+                    <span class="text-gray-500">John Smith</span>
                 </div>
                 <span>・</span>
-                <div class="flex items-center gap-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" class="stroke-gray-500 dark:stroke-gray-200">
-                        <path d="M9.33317 7.33301H5.33317M6.6665 9.99967H5.33317M10.6665 4.66634H5.33317M13.3332 4.53301V11.4663C13.3332 12.5864 13.3332 13.1465 13.1152 13.5743C12.9234 13.9506 12.6175 14.2566 12.2412 14.4484C11.8133 14.6663 11.2533 14.6663 10.1332 14.6663H5.8665C4.7464 14.6663 4.18635 14.6663 3.75852 14.4484C3.3822 14.2566 3.07624 13.9506 2.88449 13.5743C2.6665 13.1465 2.6665 12.5864 2.6665 11.4663V4.53301C2.6665 3.4129 2.6665 2.85285 2.88449 2.42503C3.07624 2.0487 3.3822 1.74274 3.75852 1.55099C4.18635 1.33301 4.7464 1.33301 5.8665 1.33301H10.1332C11.2533 1.33301 11.8133 1.33301 12.2412 1.55099C12.6175 1.74274 12.9234 2.0487 13.1152 2.42503C13.3332 2.85285 13.3332 3.4129 13.3332 4.53301Z" stroke-linecap="round" stroke-linejoin="round"/>
+                <div class="flex items-center gap-[4px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M9.33317 7.33301H5.33317M6.6665 9.99967H5.33317M10.6665 4.66634H5.33317M13.3332 4.53301V11.4663C13.3332 12.5864 13.3332 13.1465 13.1152 13.5743C12.9234 13.9506 12.6175 14.2566 12.2412 14.4484C11.8133 14.6663 11.2533 14.6663 10.1332 14.6663H5.8665C4.7464 14.6663 4.18635 14.6663 3.75852 14.4484C3.3822 14.2566 3.07624 13.9506 2.88449 13.5743C2.6665 13.1465 2.6665 12.5864 2.6665 11.4663V4.53301C2.6665 3.4129 2.6665 2.85285 2.88449 2.42503C3.07624 2.0487 3.3822 1.74274 3.75852 1.55099C4.18635 1.33301 4.7464 1.33301 5.8665 1.33301H10.1332C11.2533 1.33301 11.8133 1.33301 12.2412 1.55099C12.6175 1.74274 12.9234 2.0487 13.1152 2.42503C13.3332 2.85285 13.3332 3.4129 13.3332 4.53301Z" stroke="#667085" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <span class="text-gray-500 font-medium dark:text-gray-200">20</span>
+                    <span class="text-gray-500 font-medium">20</span>
                 </div>
 
-                <button class="bg-blue-500 p-1 pl-2 rounded-[27px] flex items-center gap-2 text-white ml-auto dark:border-blue-800 dark:bg-transparent dark:border">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" class="stroke-white dark:stroke-blue-500">
-                        <g clip-path="url(#clip0_204_38194)">
-                          <path d="M9 6V12M6 9H12M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <button class="border border-blue-500 p-1 pl-2 rounded-[27px] flex items-center gap-2 text-white ml-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <g clip-path="url(#clip0_204_38221)">
+                          <path d="M5.625 9L7.875 11.25L12.375 6.75M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke="#2970FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </g>
                         <defs>
-                          <clipPath id="clip0_204_38194">
+                          <clipPath id="clip0_204_38221">
                             <rect width="18" height="18" fill="white"/>
                           </clipPath>
                         </defs>
                     </svg>
-                    <span class="px-2 bg-blue-400 font-medium rounded-2xl dark:text-blue-100 dark:bg-blue-500/20">112</span>
+                    <span class="px-2 bg-blue-50 font-medium text-xs text-blue-500 rounded-2xl">112</span>
                 </button>
 
-                <button class="ml-1 sticky top-0 right-0" data-dropdown-toggle="dropdown">
+                <button class="ml-1" data-dropdown-toggle="dropdown">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M9.99984 10.833C10.4601 10.833 10.8332 10.4599 10.8332 9.99967C10.8332 9.53944 10.4601 9.16634 9.99984 9.16634C9.5396 9.16634 9.1665 9.53944 9.1665 9.99967C9.1665 10.4599 9.5396 10.833 9.99984 10.833Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M9.99984 4.99967C10.4601 4.99967 10.8332 4.62658 10.8332 4.16634C10.8332 3.7061 10.4601 3.33301 9.99984 3.33301C9.5396 3.33301 9.1665 3.7061 9.1665 4.16634C9.1665 4.62658 9.5396 4.99967 9.99984 4.99967Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -90,44 +92,30 @@
 
             </div>
 
-            <h2 class="text-2xl font-semibold mb-2 dark:text-gray-25">Science News</h2>
+            <h2 class="text-2xl font-semibold mb-2">Science News</h2>
 
-            <p class="text-sm text-gray-500 dark:text-gray-200">Lorem ipsum dolor sit amet, consectetur adipiscing exercitation ullamco laboris nisi ut aliquip ex ea Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+            <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing exercitation ullamco laboris nisi ut aliquip ex ea Lorem ipsum dolor sit amet, consectetur adipiscing</p>
 
             <div class="pt-2 flex items-center gap-1 mb-3">
-                <span class="text-[10px] px-2 py-[2px] bg-gray-100 text-gray-500 rounded-2xl dark:text-gray-200 dark:bg-gray-800">Filter</span>
-                <span class="text-[10px] px-2 py-[2px] bg-gray-100 text-gray-500 rounded-2xl dark:text-gray-200 dark:bg-gray-800">Transform</span>
-                <span class="text-[10px] px-2 py-[2px] bg-gray-100 text-gray-500 rounded-2xl dark:text-gray-200 dark:bg-gray-800">Summary</span>
+                <span class="text-[10px] px-2 py-[2px] bg-gray-100 text-gray-500 rounded-2xl">Filter</span>
+                <span class="text-[10px] px-2 py-[2px] bg-gray-100 text-gray-500 rounded-2xl">Transform</span>
+                <span class="text-[10px] px-2 py-[2px] bg-gray-100 text-gray-500 rounded-2xl">Summary</span>
             </div>
 
         </div>
         <!-- End post detail -->
 
         <!-- Divider -->
-        <div class="border-t border-t-gray-200 mt-[18px] dark:border-t-gray-700"></div>
-
-        <!-- Toggle mode -->
-        <div class="sticky w-full top-10 left-0 z-10 py-4 bg-white dark:bg-gray-800">
-            <div class="bg-gray-50 border border-gray-100 flex gap-2 p-1 rounded-lg dark:bg-gray-900/50 dark:border-gray-900">
-                <button class="w-1/2 py-1 rounded-md text-gray-600 text-xs bg-white font-semibold shadow-sm transition-all dark:bg-gray-700 dark:text-gray-50">Original</button>
-                <button class="w-1/2 py-1 rounded-md text-gray-600 text-xs font-semibold flex items-center justify-center gap-[6px] transition-all hover:bg-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.55574 0H2.81793V0.253956H0.254453V2.74584H0V3.48265H0.377676L2.67506 5.77692V6.34644L0.566442 8.45221H0V9.18902H0.254453V11.7427H2.81793V12.0001H3.55574V11.5774L5.80673 9.33197H6.23449L8.5157 11.6127V12.0001H9.25351V11.7427H11.7454V9.18902H12V8.45221H11.4727L9.39632 6.37868V5.74505L11.6644 3.48265H12V2.74584H11.7457V0.253956H9.25351V0H8.5157V0.513675L6.42576 2.60316H5.61569L3.55574 0.545999V0ZM0.845045 8.65276L3.01889 6.48185L3.01898 8.30953H2.67506V8.65276H0.845045ZM6.56127 2.94673H8.37249V2.60316H8.71675V0.791715L6.56127 2.94673ZM5.46374 9.19561V8.99153H3.69889V9.33197H3.35776V11.2633H3.39093L5.46374 9.19561ZM11.2622 3.4053L9.20298 5.4594H9.05553V3.62561H9.39632V3.2855H11.2622V3.4053ZM3.35776 0.827064L5.46374 2.93019V2.94673H3.69889V2.60316H3.35776V0.827064ZM9.05553 6.51713V8.30953H9.39632V8.65276H11.194L9.05553 6.51713ZM2.83654 5.4594H3.02578V3.62561H2.67506V3.2855H0.737808V3.36351L2.83654 5.4594ZM8.64536 11.2633L6.48757 9.10595V8.99153H8.37249V9.33197H8.71675V11.2633H8.64536ZM3.01898 9.33197V11.0691L0.938627 8.99153H2.67506V9.33197H3.01898ZM2.81793 11.5168V11.3471L0.656951 9.18902H0.480304V11.5168H2.81793ZM3.35776 8.30953H3.69889V8.65276H5.31463L3.35776 6.70075V8.30953ZM6.72464 8.65276L8.71675 6.6656V8.30953H8.37249V8.65276H6.72464ZM5.63861 8.01892V6.62152H5.32733V6.31113H3.92657L5.63861 8.01892ZM6.31616 8.10321L8.1127 6.31113H6.62743V6.62152H6.31616V8.10321ZM5.63861 5.32318V4.10506L4.10802 5.63358H5.32733V5.32318H5.63861ZM6.31616 5.32318H6.62743V5.63358H7.93107L6.31616 4.02086V5.32318ZM5.46374 3.32215L3.36456 5.41848V3.62561H3.69889V3.2855H5.46374V3.32215ZM8.37249 3.2855H6.53867L8.71551 5.4594H8.71675V3.62561H8.37249V3.2855ZM11.2622 9.03068L9.05553 11.2344V9.33197H9.39632V8.99153H11.2622V9.03068ZM9.25351 11.5168V11.5154L11.5195 9.25245V11.5168H9.25351ZM9.05553 0.821009V2.60316H9.39632V2.94673H11.1817L9.05553 0.821009ZM11.4599 2.74584H11.5198V0.479807H9.25351V0.539895L11.4599 2.74584ZM3.01898 0.759156V2.60316H2.67506V2.94673H0.828447L3.01898 0.759156ZM0.550184 2.74584H0.480304V0.479807H2.81793V0.481159L0.550184 2.74584Z" fill="#667085"/>
-                    </svg>
-                    AI
-                </button>
-            </div>
-        </div>
-        <!-- End toogle mode -->
+        <div class="border-t border-t-gray-200 my-[18px]"></div>
 
         <!-- Post with image -->
-        <div class="pb-3 border-b border-b-gray-200 mb-3 dark:border-b-gray-700">
+        <div class="pb-3 border-b border-b-gray-200 mb-3">
             <a href="#" class="rounded-[10px] overflow-hidden block">
                 <img src="assets/post-cover.png" alt="image" class="w-full object-cover md:h-44">
             </a>
 
             <p class="mt-2 mb-[4px] text-xs text-gray-400 flex items-center">
-                <span class="inline-block w-[14px] h-[14px] rounded-full bg-[#d9d9d9] mr-1"></span>
+                <span class="inline-block w-[14px] h-[14px] rounded-full bg-[#d9d9d9] mr-[4px]"></span>
                 source1.com
                 <span>・</span>
                 Laura Sanders
@@ -135,19 +123,19 @@
                 1 day ago
             </p>
 
-            <a href="post-summary.html"><h3 class="text-md text-gray-700 font-semibold mb-3 dark:text-gray-25">Neuroscientists use brain scans to decode people’s thoughts</h3></a>
+            <a href="post-summary.html"><h3 class="text-md text-gray-700 font-semibold mb-3">Neuroscientists use brain scans to decode people’s thoughts</h3></a>
 
             <div class="flex items-center text-xs">
                 <!-- Info about post -->
                 <div class="flex items-center">
-                    <div class="flex items-center gap-1">
+                    <div class="flex items-center gap-[4px]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
                             <path d="M4.66667 6.60417H8M4.66667 8.9375H10M4.66667 12.9375V14.4945C4.66667 14.8497 4.66667 15.0273 4.73949 15.1186C4.80282 15.1979 4.89885 15.2441 5.00036 15.244C5.11708 15.2438 5.25578 15.1329 5.53317 14.911L7.12348 13.6387C7.44834 13.3788 7.61078 13.2489 7.79166 13.1565C7.95213 13.0745 8.12295 13.0146 8.29948 12.9783C8.49845 12.9375 8.70646 12.9375 9.1225 12.9375H10.8C11.9201 12.9375 12.4802 12.9375 12.908 12.7195C13.2843 12.5278 13.5903 12.2218 13.782 11.8455C14 11.4177 14 10.8576 14 9.7375V6.1375C14 5.01739 14 4.45734 13.782 4.02952C13.5903 3.65319 13.2843 3.34723 12.908 3.15549C12.4802 2.9375 11.9201 2.9375 10.8 2.9375H5.2C4.0799 2.9375 3.51984 2.9375 3.09202 3.15549C2.71569 3.34723 2.40973 3.65319 2.21799 4.02952C2 4.45734 2 5.01739 2 6.1375V10.2708C2 10.8908 2 11.2008 2.06815 11.4551C2.25308 12.1453 2.79218 12.6844 3.48236 12.8694C3.7367 12.9375 4.04669 12.9375 4.66667 12.9375Z" stroke="#98A2B3" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                         <span class="text-gray-400 font-medium">Discussion</span>
                     </div>
                     <span>・</span>
-                    <div class="flex items-center gap-1">
+                    <div class="flex items-center gap-[4px]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
                             <path d="M10 5.60417H12.9333C13.3067 5.60417 13.4934 5.60417 13.636 5.67683C13.7614 5.74074 13.8634 5.84273 13.9273 5.96817C14 6.11078 14 6.29747 14 6.67083V13.8708C14 14.2442 14 14.4309 13.9273 14.5735C13.8634 14.6989 13.7614 14.8009 13.636 14.8648C13.4934 14.9375 13.3067 14.9375 12.9333 14.9375H10M10 14.9375H6M10 14.9375L10 4.00417C10 3.6308 10 3.44411 9.92734 3.30151C9.86342 3.17607 9.76143 3.07408 9.63599 3.01016C9.49339 2.9375 9.3067 2.9375 8.93333 2.9375L7.06667 2.9375C6.6933 2.9375 6.50661 2.9375 6.36401 3.01016C6.23856 3.07408 6.13658 3.17606 6.07266 3.30151C6 3.44411 6 3.6308 6 4.00417V14.9375M6 8.27083H3.06667C2.6933 8.27083 2.50661 8.27083 2.36401 8.3435C2.23856 8.40741 2.13658 8.5094 2.07266 8.63484C2 8.77745 2 8.96413 2 9.3375V13.8708C2 14.2442 2 14.4309 2.07266 14.5735C2.13658 14.6989 2.23856 14.8009 2.36401 14.8648C2.50661 14.9375 2.6933 14.9375 3.06667 14.9375H6" stroke="#98A2B3" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
@@ -194,7 +182,7 @@
         <!-- End post with image -->
 
         <!-- Post without image -->
-        <div class="pb-3 border-b border-b-gray-200 mb-3 dark:border-b-gray-700">
+        <div class="pb-3 border-b border-b-gray-200 mb-3">
 
             <p class="mt-2 mb-[4px] text-xs text-gray-400 flex items-center">
                 <span class="inline-block w-[14px] h-[14px] rounded-full bg-[#d9d9d9] mr-[4px]"></span>
@@ -205,7 +193,7 @@
                 1 day ago
             </p>
 
-            <a href="post-summary.html"><h3 class="text-md text-gray-700 font-semibold mb-3 dark:text-gray-25">Neuroscientists use brain scans to decode people’s thoughts</h3></a>
+            <a href="post-summary.html"><h3 class="text-md text-gray-700 font-semibold mb-3">Neuroscientists use brain scans to decode people’s thoughts</h3></a>
 
             <div class="flex items-center text-xs">
                 <!-- Info about post -->
@@ -264,7 +252,7 @@
         <!-- End post without image -->
 
         <!-- Post without image -->
-        <div class="pb-3 border-b border-b-gray-200 mb-3 dark:border-b-gray-700">
+        <div class="pb-3 border-b border-b-gray-200 mb-3">
 
             <p class="mt-2 mb-[4px] text-xs text-gray-400 flex items-center">
                 <span class="inline-block w-[14px] h-[14px] rounded-full bg-[#d9d9d9] mr-[4px]"></span>
@@ -275,7 +263,7 @@
                 1 day ago
             </p>
 
-            <a href="post-summary.html"><h3 class="text-md text-gray-700 font-semibold mb-3 dark:text-gray-25">Neuroscientists use brain scans to decode people’s thoughts</h3></a>
+            <a href="post-summary.html"><h3 class="text-md text-gray-700 font-semibold mb-3">Neuroscientists use brain scans to decode people’s thoughts</h3></a>
 
             <div class="flex items-center text-xs">
                 <!-- Info about post -->
@@ -334,7 +322,7 @@
         <!-- End post without image -->
 
         <!-- Post without image -->
-        <div class="pb-3 border-b border-b-gray-200 mb-3 dark:border-b-gray-700">
+        <div class="pb-3 border-b border-b-gray-200 mb-3">
 
             <p class="mt-2 mb-[4px] text-xs text-gray-400 flex items-center">
                 <span class="inline-block w-[14px] h-[14px] rounded-full bg-[#d9d9d9] mr-[4px]"></span>
@@ -345,7 +333,7 @@
                 1 day ago
             </p>
 
-            <a href="post-summary.html"><h3 class="text-md text-gray-700 font-semibold mb-3 dark:text-gray-25">Neuroscientists use brain scans to decode people’s thoughts</h3></a>
+            <a href="post-summary.html"><h3 class="text-md text-gray-700 font-semibold mb-3">Neuroscientists use brain scans to decode people’s thoughts</h3></a>
 
             <div class="flex items-center text-xs">
                 <!-- Info about post -->

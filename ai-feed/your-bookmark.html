@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your bookmark</title>
     <!-- Connect to TailwindCSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="tailwind.config.js"></script>
+    <link href="dist/output.css" rel="stylesheet">
+    <!-- Flowbite -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
 </head>
-<body class="bg-default-background text-default-color">
+<body class="bg-default-background text-default-color dark:bg-dark-bg">
 
     <div class="container mx-auto px-3 pt-[18px] pb-[54px]">
         <!-- Page title -->
-        <h2 class="text-2xl font-semibold mb-6">Your Bookmark</h2>
+        <h2 class="text-2xl font-semibold mb-6 dark:text-gray-25">Your Bookmark</h2>
 
         <!-- Post with image -->
-        <div class="pb-3 border-b border-b-gray-200 mb-3">
+        <div class="pb-3 border-b border-b-gray-200 mb-3 dark:border-b-gray-700">
             <a href="#" class="rounded-[10px] overflow-hidden block">
                 <img src="assets/post-cover.png" alt="image" class="w-full object-cover md:h-44">
             </a>
@@ -30,7 +30,7 @@
                 1 day ago
             </p>
 
-            <a href="post-summary.html"><h3 class="text-md text-gray-700 font-semibold mb-3">Neuroscientists use brain scans to decode people’s thoughts</h3></a>
+            <a href="post-summary.html"><h3 class="text-md text-gray-700 font-semibold mb-3 dark:text-gray-25">Neuroscientists use brain scans to decode people’s thoughts</h3></a>
 
             <div class="flex items-center text-xs">
                 <!-- Info about post -->
@@ -76,7 +76,7 @@
                         </svg>
                     </button>
     
-                    <div id="dropdown-1" class="z-10 hidden border border-gray-200 bg-white absolute flex flex-col rounded-md">
+                    <div id="dropdown-1" class="z-10 hidden border border-gray-200 bg-white absolute rounded-md">
                         <ul>
                             <li class="py-2 px-3"><a href="#">Option 1</a></li>
                             <li class="py-2 px-3"><a href="#">Option 2</a></li>
@@ -89,7 +89,7 @@
         <!-- End post with image -->
 
         <!-- Post without image -->
-        <div class="pb-3 border-b border-b-gray-200 mb-3">
+        <div class="pb-3 border-b border-b-gray-200 mb-3 dark:border-b-gray-700">
 
             <p class="mt-3 mb-1 text-xs text-gray-400 flex items-center">
                 <span class="inline-block w-[14px] h-[14px] rounded-full bg-[#d9d9d9] mr-[4px]"></span>
@@ -100,7 +100,7 @@
                 1 day ago
             </p>
 
-            <a href="post-summary.html"><h3 class="text-md text-gray-700 font-semibold mb-3">Neuroscientists use brain scans to decode people’s thoughts</h3></a>
+            <a href="post-summary.html"><h3 class="text-md text-gray-700 font-semibold mb-3 dark:text-gray-25">Neuroscientists use brain scans to decode people’s thoughts</h3></a>
 
             <div class="flex items-center text-xs">
                 <!-- Info about post -->
@@ -146,7 +146,7 @@
                         </svg>
                     </button>
     
-                    <div id="dropdown-1" class="z-10 hidden border border-gray-200 bg-white absolute flex flex-col rounded-md">
+                    <div id="dropdown-1" class="z-10 hidden border border-gray-200 bg-white absolute rounded-md">
                         <ul>
                             <li class="py-2 px-3"><a href="#">Option 1</a></li>
                             <li class="py-2 px-3"><a href="#">Option 2</a></li>
@@ -159,7 +159,7 @@
         <!-- End post without image -->
 
         <!-- Post without image -->
-        <div class="pb-3 border-b border-b-gray-200 mb-3">
+        <div class="pb-3 border-b border-b-gray-200 mb-3 dark:border-b-gray-700">
 
             <p class="mt-3 mb-1 text-xs text-gray-400 flex items-center">
                 <span class="inline-block w-[14px] h-[14px] rounded-full bg-[#d9d9d9] mr-[4px]"></span>
@@ -170,7 +170,7 @@
                 1 day ago
             </p>
 
-            <a href="post-summary.html"><h3 class="text-md text-gray-700 font-semibold mb-3">Neuroscientists use brain scans to decode people’s thoughts</h3></a>
+            <a href="post-summary.html"><h3 class="text-md text-gray-700 font-semibold mb-3 dark:text-gray-25">Neuroscientists use brain scans to decode people’s thoughts</h3></a>
 
             <div class="flex items-center text-xs">
                 <!-- Info about post -->
@@ -216,7 +216,7 @@
                         </svg>
                     </button>
     
-                    <div id="dropdown-1" class="z-10 hidden border border-gray-200 bg-white absolute flex flex-col rounded-md">
+                    <div id="dropdown-1" class="z-10 hidden border border-gray-200 bg-white absolute rounded-md">
                         <ul>
                             <li class="py-2 px-3"><a href="#">Option 1</a></li>
                             <li class="py-2 px-3"><a href="#">Option 2</a></li>
@@ -286,7 +286,7 @@
                         </svg>
                     </button>
     
-                    <div id="dropdown-1" class="z-10 hidden border border-gray-200 bg-white absolute flex flex-col rounded-md">
+                    <div id="dropdown-1" class="z-10 hidden border border-gray-200 bg-white absolute rounded-md">
                         <ul>
                             <li class="py-2 px-3"><a href="#">Option 1</a></li>
                             <li class="py-2 px-3"><a href="#">Option 2</a></li>
@@ -301,14 +301,14 @@
     </div>
 
     <!-- Fixed bottom bar -->
-    <div class="w-full bottom-0 fixed p-4 bg-white border-t border-t-gray-200 flex items-center justify-between gap-[26px]">
-        <a href="#" class="px-[22px]">
+    <div class="w-full bottom-0 fixed p-4 bg-white border-t border-t-gray-200 flex items-center justify-between gap-[26px] dark:bg-gray-900 dark:border-t-gray-800">
+        <a href="index.html" class="px-[22px]">
             <svg xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 22" fill="none" class="transition-all stroke-gray-400 hover:stroke-blue-500">
                 <path d="M7.97005 15.5835H15.3034M10.7363 2.53385L4.51916 7.36938C4.10357 7.69262 3.89578 7.85423 3.74608 8.05663C3.61347 8.23592 3.51469 8.4379 3.45458 8.65265C3.38672 8.89508 3.38672 9.15832 3.38672 9.68481V16.3168C3.38672 17.3436 3.38672 17.857 3.58654 18.2492C3.76231 18.5941 4.04277 18.8746 4.38774 19.0503C4.77991 19.2502 5.29329 19.2502 6.32005 19.2502H16.9534C17.9801 19.2502 18.4935 19.2502 18.8857 19.0503C19.2307 18.8746 19.5111 18.5941 19.6869 18.2492C19.8867 17.857 19.8867 17.3436 19.8867 16.3168V9.68481C19.8867 9.15832 19.8867 8.89508 19.8189 8.65265C19.7588 8.4379 19.66 8.23592 19.5274 8.05663C19.3777 7.85423 19.1699 7.69262 18.7543 7.36938L12.5372 2.53385C12.2151 2.28337 12.0541 2.15813 11.8763 2.10998C11.7194 2.06751 11.554 2.06751 11.3972 2.10998C11.2193 2.15813 11.0583 2.28337 10.7363 2.53385Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </a>
         
-        <a href="index.html" class="px-[22px]">
+        <a href="your-favorites.html" class="px-[22px]">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none" class="transition-all stroke-gray-400 hover:stroke-blue-500">
                 <path d="M12.8332 10.083H7.33317M9.1665 13.7497H7.33317M14.6665 6.41634H7.33317M18.3332 6.23301V15.7663C18.3332 17.3065 18.3332 18.0766 18.0334 18.6648C17.7698 19.1823 17.3491 19.603 16.8316 19.8666C16.2434 20.1663 15.4733 20.1663 13.9332 20.1663H8.0665C6.52636 20.1663 5.75629 20.1663 5.16803 19.8666C4.65058 19.603 4.22989 19.1823 3.96624 18.6648C3.6665 18.0766 3.6665 17.3065 3.6665 15.7663V6.23301C3.6665 4.69286 3.6665 3.92279 3.96624 3.33453C4.22989 2.81709 4.65058 2.39639 5.16803 2.13274C5.75629 1.83301 6.52636 1.83301 8.0665 1.83301H13.9332C15.4733 1.83301 16.2434 1.83301 16.8316 2.13274C17.3491 2.39639 17.7698 2.81709 18.0334 3.33453C18.3332 3.92279 18.3332 4.69286 18.3332 6.23301Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -321,7 +321,10 @@
         </a>
     </div>
 
+    <!-- Flowbite -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+    <!-- Toogle for dakr/light mode -->
+    <script src="themeToggle.js"></script>
 
 </body>
 </html>
