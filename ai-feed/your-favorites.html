@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your favorites</title>
     <!-- Connect to TailwindCSS -->
-    <link href="./dist/output.css" rel="stylesheet">
+    <link href="dist/output.css" rel="stylesheet">
 </head>
 <body class="bg-default-background text-default-color pb-3 dark:bg-dark-bg">
 
@@ -25,7 +25,7 @@
                 </nav>
 
                 <!-- Dark/Light toggle -->
-                <button id="theme-toggle" class="p-1 gap-1 flex items-center border border-gray-200 rounded-md ml-auto dark:border-gray-700">
+                <button id="theme-toggle" class="p-1 gap-1 flex items-center border border-gray-200 rounded-md ml-auto outline-0 shadow-none focus:outline-0 focus:shadow-none dark:border-gray-700">
                     <span class="px-[21px] py-[3px] rounded bg-blue-50 dark:bg-transparent">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" class="stroke-blue-500 dark:stroke-gray-400">
                             <g clip-path="url(#clip0_215_29718)">
@@ -60,7 +60,7 @@
         <!-- Page title -->
         <h2 class="text-2xl font-semibold mb-[18px] flex items-center dark:text-gray-25">
             Your Favorites
-
+            
             <a href="setting.html" class="px-2 py-[5px] ml-auto">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none" class="transition-all stroke-gray-400 hover:stroke-blue-500">
                     <path d="M8.61196 17.7565L9.1477 18.9614C9.30696 19.3201 9.56687 19.6249 9.89591 19.8387C10.2249 20.0526 10.609 20.1664 11.0014 20.1663C11.3938 20.1664 11.7779 20.0526 12.1069 19.8387C12.4359 19.6249 12.6958 19.3201 12.8551 18.9614L13.3908 17.7565C13.5816 17.329 13.9024 16.9725 14.3075 16.738C14.7152 16.5028 15.1869 16.4026 15.655 16.4518L16.9658 16.5913C17.356 16.6326 17.7498 16.5598 18.0995 16.3817C18.4491 16.2037 18.7396 15.928 18.9357 15.5881C19.132 15.2484 19.2255 14.8591 19.2049 14.4673C19.1843 14.0755 19.0504 13.6982 18.8196 13.381L18.0434 12.3146C17.7671 11.932 17.6194 11.4716 17.6218 10.9997C17.6217 10.529 17.7707 10.0705 18.0475 9.68986L18.8236 8.62347C19.0545 8.30628 19.1884 7.9289 19.209 7.53712C19.2296 7.14534 19.1361 6.756 18.9397 6.41634C18.7437 6.07647 18.4532 5.80079 18.1036 5.62272C17.7539 5.44464 17.3601 5.37183 16.9699 5.4131L15.6591 5.55264C15.191 5.6018 14.7193 5.50162 14.3116 5.26643C13.9056 5.03057 13.5847 4.67225 13.3949 4.24282L12.8551 3.03792C12.6958 2.67925 12.4359 2.3745 12.1069 2.16062C11.7779 1.94675 11.3938 1.83294 11.0014 1.83301C10.609 1.83294 10.2249 1.94675 9.89591 2.16062C9.56687 2.3745 9.30696 2.67925 9.1477 3.03792L8.61196 4.24282C8.42214 4.67225 8.10126 5.03057 7.69529 5.26643C7.28757 5.50162 6.81591 5.6018 6.34779 5.55264L5.03288 5.4131C4.64269 5.37183 4.2489 5.44464 3.89926 5.62272C3.54962 5.80079 3.25915 6.07647 3.06307 6.41634C2.86674 6.756 2.7732 7.14534 2.79382 7.53712C2.81443 7.9289 2.9483 8.30628 3.17918 8.62347L3.95529 9.68986C4.23207 10.0705 4.38112 10.529 4.38103 10.9997C4.38112 11.4703 4.23207 11.9289 3.95529 12.3095L3.17918 13.3759C2.9483 13.6931 2.81443 14.0704 2.79382 14.4622C2.7732 14.854 2.86674 15.2433 3.06307 15.583C3.25934 15.9227 3.54985 16.1982 3.89944 16.3763C4.24902 16.5543 4.64272 16.6273 5.03288 16.5862L6.34372 16.4467C6.81183 16.3975 7.2835 16.4977 7.69122 16.7329C8.0987 16.9681 8.42108 17.3265 8.61196 17.7565Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -79,27 +79,27 @@
                     <g id="chevron-down">
                         <path id="Icon" d="M4 6L8 10L12 6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </g>
-                </svg>
+                </svg>                    
             </button>
 
-            <div id="filter-dropdown" class="z-10 hidden border border-gray-200 bg-white absolute py-3 rounded-xl shadow-md">
+            <div id="filter-dropdown" class="z-10 hidden border border-gray-200 bg-white absolute py-3 rounded-xl shadow-md dark:bg-dark-bg dark:border-gray-700">
                 <ul class="flex flex-col gap-3 w-40">
                     <li>
                         <button class="flex gap-1 items-center justify-between px-3 w-full">
-                            <span class="text-blue-500 font-medium text-sm">Popularity</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="#2970FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <span class="text-blue-500 font-medium text-sm dark:text-gray-200">Popularity</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" class="stroke-blue-500 dark:stroke-gray-200">
+                                <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
                     </li>
                     <li>
                         <button class="flex gap-1 items-center justify-between px-3 w-full">
-                            <span class="text-gray-500 font-medium text-sm">Most active</span>
+                            <span class="text-gray-500 font-medium text-sm dark:text-gray-200">Most active</span>
                         </button>
                     </li>
                     <li>
                         <button class="flex gap-1 items-center justify-between px-3 w-full">
-                            <span class="text-gray-500 font-medium text-sm">Last updated</span>
+                            <span class="text-gray-500 font-medium text-sm dark:text-gray-200">Last updated</span>
                         </button>
                     </li>
                 </ul>
@@ -117,7 +117,7 @@
                             </div>
                             <span class="text-gray-500 dark:text-gray-200">John Smith</span>
                         </div>
-
+            
                         <div class="border border-blue-200 ml-auto p-1 rounded-[25px] flex items-center gap-1 dark:border-blue-800">
                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
                                 <g clip-path="url(#clip0_1_22483)">
@@ -140,21 +140,21 @@
                             </svg>
                         </button>
 
-                        <div id="dropdown" class="z-10 hidden border border-gray-200 bg-white absolute py-3 rounded-xl shadow-md">
+                        <div id="dropdown" class="z-10 hidden border border-gray-200 bg-white absolute py-3 rounded-xl shadow-md dark:bg-dark-bg dark:border-gray-700">
                             <ul class="flex flex-col gap-3 w-32">
                                 <li>
                                     <button class="flex gap-1 items-center px-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                            <path d="M15.5935 9.45565C15.7766 9.29872 15.8682 9.22025 15.9017 9.12687C15.9311 9.04492 15.9311 8.95527 15.9017 8.87332C15.8682 8.77995 15.7766 8.70148 15.5935 8.54454L9.24047 3.09908C8.9253 2.82893 8.76772 2.69385 8.6343 2.69055C8.51835 2.68767 8.40759 2.73861 8.33432 2.82852C8.25 2.93197 8.25 3.13952 8.25 3.55463V6.77607C6.64899 7.05616 5.1837 7.86741 4.09478 9.0855C2.90762 10.4135 2.25093 12.1321 2.25 13.9133V14.3723C3.03701 13.4242 4.01963 12.6575 5.13057 12.1245C6.11002 11.6547 7.16881 11.3763 8.25 11.303V14.4456C8.25 14.8607 8.25 15.0682 8.33432 15.1717C8.40759 15.2616 8.51835 15.3125 8.6343 15.3096C8.76772 15.3063 8.9253 15.1713 9.24047 14.9011L15.5935 9.45565Z" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" class="stroke-gray-500 dark:stroke-gray-200">
+                                            <path d="M15.5935 9.45565C15.7766 9.29872 15.8682 9.22025 15.9017 9.12687C15.9311 9.04492 15.9311 8.95527 15.9017 8.87332C15.8682 8.77995 15.7766 8.70148 15.5935 8.54454L9.24047 3.09908C8.9253 2.82893 8.76772 2.69385 8.6343 2.69055C8.51835 2.68767 8.40759 2.73861 8.33432 2.82852C8.25 2.93197 8.25 3.13952 8.25 3.55463V6.77607C6.64899 7.05616 5.1837 7.86741 4.09478 9.0855C2.90762 10.4135 2.25093 12.1321 2.25 13.9133V14.3723C3.03701 13.4242 4.01963 12.6575 5.13057 12.1245C6.11002 11.6547 7.16881 11.3763 8.25 11.303V14.4456C8.25 14.8607 8.25 15.0682 8.33432 15.1717C8.40759 15.2616 8.51835 15.3125 8.6343 15.3096C8.76772 15.3063 8.9253 15.1713 9.24047 14.9011L15.5935 9.45565Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span class="text-gray-500 font-medium text-sm">Share</span>
+                                        <span class="text-gray-500 font-medium text-sm dark:text-gray-200">Share</span>
                                     </button>
                                 </li>
                                 <li>
                                     <button class="flex gap-1 items-center px-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" class="stroke-gray-500 dark:stroke-gray-200">
                                             <g clip-path="url(#clip0_211_29264)">
-                                            <path d="M9 12V9M9 6H9.0075M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9 12V9M9 6H9.0075M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                             </g>
                                             <defs>
                                             <clipPath id="clip0_211_29264">
@@ -162,7 +162,7 @@
                                             </clipPath>
                                             </defs>
                                         </svg>
-                                        <span class="text-gray-500 font-medium text-sm">About</span>
+                                        <span class="text-gray-500 font-medium text-sm dark:text-gray-200">About</span>
                                     </button>
                                 </li>
                             </ul>
@@ -207,7 +207,7 @@
                             </div>
                             <span class="text-gray-500 dark:text-gray-200">John Smith</span>
                         </div>
-
+            
                         <div class="border border-blue-200 ml-auto p-1 rounded-[25px] flex items-center gap-1 dark:border-blue-800">
                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
                                 <g clip-path="url(#clip0_1_22483)">
@@ -222,7 +222,7 @@
                             <span class="px-2 bg-blue-50 text-blue-500 font-medium rounded-2xl dark:text-blue-100 dark:bg-blue-500/20">112</span>
                         </div>
 
-                        <button class="ml-1" data-dropdown-toggle="dropdown">
+                        <button class="ml-1" data-dropdown-toggle="dropdown-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M9.99984 10.833C10.4601 10.833 10.8332 10.4599 10.8332 9.99967C10.8332 9.53944 10.4601 9.16634 9.99984 9.16634C9.5396 9.16634 9.1665 9.53944 9.1665 9.99967C9.1665 10.4599 9.5396 10.833 9.99984 10.833Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M9.99984 4.99967C10.4601 4.99967 10.8332 4.62658 10.8332 4.16634C10.8332 3.7061 10.4601 3.33301 9.99984 3.33301C9.5396 3.33301 9.1665 3.7061 9.1665 4.16634C9.1665 4.62658 9.5396 4.99967 9.99984 4.99967Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -230,21 +230,21 @@
                             </svg>
                         </button>
 
-                        <div id="dropdown" class="z-10 hidden border border-gray-200 bg-white absolute py-3 rounded-xl shadow-md">
+                        <div id="dropdown-2" class="z-10 hidden border border-gray-200 bg-white absolute py-3 rounded-xl shadow-md dark:bg-dark-bg dark:border-gray-700">
                             <ul class="flex flex-col gap-3 w-32">
                                 <li>
                                     <button class="flex gap-1 items-center px-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                            <path d="M15.5935 9.45565C15.7766 9.29872 15.8682 9.22025 15.9017 9.12687C15.9311 9.04492 15.9311 8.95527 15.9017 8.87332C15.8682 8.77995 15.7766 8.70148 15.5935 8.54454L9.24047 3.09908C8.9253 2.82893 8.76772 2.69385 8.6343 2.69055C8.51835 2.68767 8.40759 2.73861 8.33432 2.82852C8.25 2.93197 8.25 3.13952 8.25 3.55463V6.77607C6.64899 7.05616 5.1837 7.86741 4.09478 9.0855C2.90762 10.4135 2.25093 12.1321 2.25 13.9133V14.3723C3.03701 13.4242 4.01963 12.6575 5.13057 12.1245C6.11002 11.6547 7.16881 11.3763 8.25 11.303V14.4456C8.25 14.8607 8.25 15.0682 8.33432 15.1717C8.40759 15.2616 8.51835 15.3125 8.6343 15.3096C8.76772 15.3063 8.9253 15.1713 9.24047 14.9011L15.5935 9.45565Z" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" class="stroke-gray-500 dark:stroke-gray-200">
+                                            <path d="M15.5935 9.45565C15.7766 9.29872 15.8682 9.22025 15.9017 9.12687C15.9311 9.04492 15.9311 8.95527 15.9017 8.87332C15.8682 8.77995 15.7766 8.70148 15.5935 8.54454L9.24047 3.09908C8.9253 2.82893 8.76772 2.69385 8.6343 2.69055C8.51835 2.68767 8.40759 2.73861 8.33432 2.82852C8.25 2.93197 8.25 3.13952 8.25 3.55463V6.77607C6.64899 7.05616 5.1837 7.86741 4.09478 9.0855C2.90762 10.4135 2.25093 12.1321 2.25 13.9133V14.3723C3.03701 13.4242 4.01963 12.6575 5.13057 12.1245C6.11002 11.6547 7.16881 11.3763 8.25 11.303V14.4456C8.25 14.8607 8.25 15.0682 8.33432 15.1717C8.40759 15.2616 8.51835 15.3125 8.6343 15.3096C8.76772 15.3063 8.9253 15.1713 9.24047 14.9011L15.5935 9.45565Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span class="text-gray-500 font-medium text-sm">Share</span>
+                                        <span class="text-gray-500 font-medium text-sm dark:text-gray-200">Share</span>
                                     </button>
                                 </li>
                                 <li>
                                     <button class="flex gap-1 items-center px-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" class="stroke-gray-500 dark:stroke-gray-200">
                                             <g clip-path="url(#clip0_211_29264)">
-                                            <path d="M9 12V9M9 6H9.0075M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9 12V9M9 6H9.0075M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                             </g>
                                             <defs>
                                             <clipPath id="clip0_211_29264">
@@ -252,7 +252,7 @@
                                             </clipPath>
                                             </defs>
                                         </svg>
-                                        <span class="text-gray-500 font-medium text-sm">About</span>
+                                        <span class="text-gray-500 font-medium text-sm dark:text-gray-200">About</span>
                                     </button>
                                 </li>
                             </ul>
@@ -297,7 +297,7 @@
                             </div>
                             <span class="text-gray-500 dark:text-gray-200">John Smith</span>
                         </div>
-
+            
                         <div class="border border-blue-200 ml-auto p-1 rounded-[25px] flex items-center gap-1 dark:border-blue-800">
                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
                                 <g clip-path="url(#clip0_1_22483)">
@@ -312,7 +312,7 @@
                             <span class="px-2 bg-blue-50 text-blue-500 font-medium rounded-2xl dark:text-blue-100 dark:bg-blue-500/20">112</span>
                         </div>
 
-                        <button class="ml-1" data-dropdown-toggle="dropdown">
+                        <button class="ml-1" data-dropdown-toggle="dropdown-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M9.99984 10.833C10.4601 10.833 10.8332 10.4599 10.8332 9.99967C10.8332 9.53944 10.4601 9.16634 9.99984 9.16634C9.5396 9.16634 9.1665 9.53944 9.1665 9.99967C9.1665 10.4599 9.5396 10.833 9.99984 10.833Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M9.99984 4.99967C10.4601 4.99967 10.8332 4.62658 10.8332 4.16634C10.8332 3.7061 10.4601 3.33301 9.99984 3.33301C9.5396 3.33301 9.1665 3.7061 9.1665 4.16634C9.1665 4.62658 9.5396 4.99967 9.99984 4.99967Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -320,21 +320,21 @@
                             </svg>
                         </button>
 
-                        <div id="dropdown" class="z-10 hidden border border-gray-200 bg-white absolute py-3 rounded-xl shadow-md">
+                        <div id="dropdown-3" class="z-10 hidden border border-gray-200 bg-white absolute py-3 rounded-xl shadow-md dark:bg-dark-bg dark:border-gray-700">
                             <ul class="flex flex-col gap-3 w-32">
                                 <li>
                                     <button class="flex gap-1 items-center px-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                            <path d="M15.5935 9.45565C15.7766 9.29872 15.8682 9.22025 15.9017 9.12687C15.9311 9.04492 15.9311 8.95527 15.9017 8.87332C15.8682 8.77995 15.7766 8.70148 15.5935 8.54454L9.24047 3.09908C8.9253 2.82893 8.76772 2.69385 8.6343 2.69055C8.51835 2.68767 8.40759 2.73861 8.33432 2.82852C8.25 2.93197 8.25 3.13952 8.25 3.55463V6.77607C6.64899 7.05616 5.1837 7.86741 4.09478 9.0855C2.90762 10.4135 2.25093 12.1321 2.25 13.9133V14.3723C3.03701 13.4242 4.01963 12.6575 5.13057 12.1245C6.11002 11.6547 7.16881 11.3763 8.25 11.303V14.4456C8.25 14.8607 8.25 15.0682 8.33432 15.1717C8.40759 15.2616 8.51835 15.3125 8.6343 15.3096C8.76772 15.3063 8.9253 15.1713 9.24047 14.9011L15.5935 9.45565Z" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" class="stroke-gray-500 dark:stroke-gray-200">
+                                            <path d="M15.5935 9.45565C15.7766 9.29872 15.8682 9.22025 15.9017 9.12687C15.9311 9.04492 15.9311 8.95527 15.9017 8.87332C15.8682 8.77995 15.7766 8.70148 15.5935 8.54454L9.24047 3.09908C8.9253 2.82893 8.76772 2.69385 8.6343 2.69055C8.51835 2.68767 8.40759 2.73861 8.33432 2.82852C8.25 2.93197 8.25 3.13952 8.25 3.55463V6.77607C6.64899 7.05616 5.1837 7.86741 4.09478 9.0855C2.90762 10.4135 2.25093 12.1321 2.25 13.9133V14.3723C3.03701 13.4242 4.01963 12.6575 5.13057 12.1245C6.11002 11.6547 7.16881 11.3763 8.25 11.303V14.4456C8.25 14.8607 8.25 15.0682 8.33432 15.1717C8.40759 15.2616 8.51835 15.3125 8.6343 15.3096C8.76772 15.3063 8.9253 15.1713 9.24047 14.9011L15.5935 9.45565Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span class="text-gray-500 font-medium text-sm">Share</span>
+                                        <span class="text-gray-500 font-medium text-sm dark:text-gray-200">Share</span>
                                     </button>
                                 </li>
                                 <li>
                                     <button class="flex gap-1 items-center px-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" class="stroke-gray-500 dark:stroke-gray-200">
                                             <g clip-path="url(#clip0_211_29264)">
-                                            <path d="M9 12V9M9 6H9.0075M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9 12V9M9 6H9.0075M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                             </g>
                                             <defs>
                                             <clipPath id="clip0_211_29264">
@@ -342,7 +342,7 @@
                                             </clipPath>
                                             </defs>
                                         </svg>
-                                        <span class="text-gray-500 font-medium text-sm">About</span>
+                                        <span class="text-gray-500 font-medium text-sm dark:text-gray-200">About</span>
                                     </button>
                                 </li>
                             </ul>
@@ -387,7 +387,7 @@
                             </div>
                             <span class="text-gray-500 dark:text-gray-200">John Smith</span>
                         </div>
-
+            
                         <div class="border border-blue-200 ml-auto p-1 rounded-[25px] flex items-center gap-1 dark:border-blue-800">
                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
                                 <g clip-path="url(#clip0_1_22483)">
@@ -402,7 +402,7 @@
                             <span class="px-2 bg-blue-50 text-blue-500 font-medium rounded-2xl dark:text-blue-100 dark:bg-blue-500/20">112</span>
                         </div>
 
-                        <button class="ml-1" data-dropdown-toggle="dropdown">
+                        <button class="ml-1" data-dropdown-toggle="dropdown-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M9.99984 10.833C10.4601 10.833 10.8332 10.4599 10.8332 9.99967C10.8332 9.53944 10.4601 9.16634 9.99984 9.16634C9.5396 9.16634 9.1665 9.53944 9.1665 9.99967C9.1665 10.4599 9.5396 10.833 9.99984 10.833Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M9.99984 4.99967C10.4601 4.99967 10.8332 4.62658 10.8332 4.16634C10.8332 3.7061 10.4601 3.33301 9.99984 3.33301C9.5396 3.33301 9.1665 3.7061 9.1665 4.16634C9.1665 4.62658 9.5396 4.99967 9.99984 4.99967Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -410,21 +410,21 @@
                             </svg>
                         </button>
 
-                        <div id="dropdown" class="z-10 hidden border border-gray-200 bg-white absolute py-3 rounded-xl shadow-md">
+                        <div id="dropdown-4" class="z-10 hidden border border-gray-200 bg-white absolute py-3 rounded-xl shadow-md dark:bg-dark-bg dark:border-gray-700">
                             <ul class="flex flex-col gap-3 w-32">
                                 <li>
                                     <button class="flex gap-1 items-center px-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                            <path d="M15.5935 9.45565C15.7766 9.29872 15.8682 9.22025 15.9017 9.12687C15.9311 9.04492 15.9311 8.95527 15.9017 8.87332C15.8682 8.77995 15.7766 8.70148 15.5935 8.54454L9.24047 3.09908C8.9253 2.82893 8.76772 2.69385 8.6343 2.69055C8.51835 2.68767 8.40759 2.73861 8.33432 2.82852C8.25 2.93197 8.25 3.13952 8.25 3.55463V6.77607C6.64899 7.05616 5.1837 7.86741 4.09478 9.0855C2.90762 10.4135 2.25093 12.1321 2.25 13.9133V14.3723C3.03701 13.4242 4.01963 12.6575 5.13057 12.1245C6.11002 11.6547 7.16881 11.3763 8.25 11.303V14.4456C8.25 14.8607 8.25 15.0682 8.33432 15.1717C8.40759 15.2616 8.51835 15.3125 8.6343 15.3096C8.76772 15.3063 8.9253 15.1713 9.24047 14.9011L15.5935 9.45565Z" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" class="stroke-gray-500 dark:stroke-gray-200">
+                                            <path d="M15.5935 9.45565C15.7766 9.29872 15.8682 9.22025 15.9017 9.12687C15.9311 9.04492 15.9311 8.95527 15.9017 8.87332C15.8682 8.77995 15.7766 8.70148 15.5935 8.54454L9.24047 3.09908C8.9253 2.82893 8.76772 2.69385 8.6343 2.69055C8.51835 2.68767 8.40759 2.73861 8.33432 2.82852C8.25 2.93197 8.25 3.13952 8.25 3.55463V6.77607C6.64899 7.05616 5.1837 7.86741 4.09478 9.0855C2.90762 10.4135 2.25093 12.1321 2.25 13.9133V14.3723C3.03701 13.4242 4.01963 12.6575 5.13057 12.1245C6.11002 11.6547 7.16881 11.3763 8.25 11.303V14.4456C8.25 14.8607 8.25 15.0682 8.33432 15.1717C8.40759 15.2616 8.51835 15.3125 8.6343 15.3096C8.76772 15.3063 8.9253 15.1713 9.24047 14.9011L15.5935 9.45565Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span class="text-gray-500 font-medium text-sm">Share</span>
+                                        <span class="text-gray-500 font-medium text-sm dark:text-gray-200">Share</span>
                                     </button>
                                 </li>
                                 <li>
                                     <button class="flex gap-1 items-center px-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" class="stroke-gray-500 dark:stroke-gray-200">
                                             <g clip-path="url(#clip0_211_29264)">
-                                            <path d="M9 12V9M9 6H9.0075M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9 12V9M9 6H9.0075M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                             </g>
                                             <defs>
                                             <clipPath id="clip0_211_29264">
@@ -432,7 +432,7 @@
                                             </clipPath>
                                             </defs>
                                         </svg>
-                                        <span class="text-gray-500 font-medium text-sm">About</span>
+                                        <span class="text-gray-500 font-medium text-sm dark:text-gray-200">About</span>
                                     </button>
                                 </li>
                             </ul>
@@ -477,7 +477,7 @@
                             </div>
                             <span class="text-gray-500 dark:text-gray-200">John Smith</span>
                         </div>
-
+            
                         <div class="border border-blue-200 ml-auto p-1 rounded-[25px] flex items-center gap-1 dark:border-blue-800">
                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
                                 <g clip-path="url(#clip0_1_22483)">
@@ -492,7 +492,7 @@
                             <span class="px-2 bg-blue-50 text-blue-500 font-medium rounded-2xl dark:text-blue-100 dark:bg-blue-500/20">112</span>
                         </div>
 
-                        <button class="ml-1" data-dropdown-toggle="dropdown">
+                        <button class="ml-1" data-dropdown-toggle="dropdown-5">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M9.99984 10.833C10.4601 10.833 10.8332 10.4599 10.8332 9.99967C10.8332 9.53944 10.4601 9.16634 9.99984 9.16634C9.5396 9.16634 9.1665 9.53944 9.1665 9.99967C9.1665 10.4599 9.5396 10.833 9.99984 10.833Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M9.99984 4.99967C10.4601 4.99967 10.8332 4.62658 10.8332 4.16634C10.8332 3.7061 10.4601 3.33301 9.99984 3.33301C9.5396 3.33301 9.1665 3.7061 9.1665 4.16634C9.1665 4.62658 9.5396 4.99967 9.99984 4.99967Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -500,21 +500,21 @@
                             </svg>
                         </button>
 
-                        <div id="dropdown" class="z-10 hidden border border-gray-200 bg-white absolute py-3 rounded-xl shadow-md">
+                        <div id="dropdown-5" class="z-10 hidden border border-gray-200 bg-white absolute py-3 rounded-xl shadow-md dark:bg-dark-bg dark:border-gray-700">
                             <ul class="flex flex-col gap-3 w-32">
                                 <li>
                                     <button class="flex gap-1 items-center px-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                            <path d="M15.5935 9.45565C15.7766 9.29872 15.8682 9.22025 15.9017 9.12687C15.9311 9.04492 15.9311 8.95527 15.9017 8.87332C15.8682 8.77995 15.7766 8.70148 15.5935 8.54454L9.24047 3.09908C8.9253 2.82893 8.76772 2.69385 8.6343 2.69055C8.51835 2.68767 8.40759 2.73861 8.33432 2.82852C8.25 2.93197 8.25 3.13952 8.25 3.55463V6.77607C6.64899 7.05616 5.1837 7.86741 4.09478 9.0855C2.90762 10.4135 2.25093 12.1321 2.25 13.9133V14.3723C3.03701 13.4242 4.01963 12.6575 5.13057 12.1245C6.11002 11.6547 7.16881 11.3763 8.25 11.303V14.4456C8.25 14.8607 8.25 15.0682 8.33432 15.1717C8.40759 15.2616 8.51835 15.3125 8.6343 15.3096C8.76772 15.3063 8.9253 15.1713 9.24047 14.9011L15.5935 9.45565Z" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" class="stroke-gray-500 dark:stroke-gray-200">
+                                            <path d="M15.5935 9.45565C15.7766 9.29872 15.8682 9.22025 15.9017 9.12687C15.9311 9.04492 15.9311 8.95527 15.9017 8.87332C15.8682 8.77995 15.7766 8.70148 15.5935 8.54454L9.24047 3.09908C8.9253 2.82893 8.76772 2.69385 8.6343 2.69055C8.51835 2.68767 8.40759 2.73861 8.33432 2.82852C8.25 2.93197 8.25 3.13952 8.25 3.55463V6.77607C6.64899 7.05616 5.1837 7.86741 4.09478 9.0855C2.90762 10.4135 2.25093 12.1321 2.25 13.9133V14.3723C3.03701 13.4242 4.01963 12.6575 5.13057 12.1245C6.11002 11.6547 7.16881 11.3763 8.25 11.303V14.4456C8.25 14.8607 8.25 15.0682 8.33432 15.1717C8.40759 15.2616 8.51835 15.3125 8.6343 15.3096C8.76772 15.3063 8.9253 15.1713 9.24047 14.9011L15.5935 9.45565Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span class="text-gray-500 font-medium text-sm">Share</span>
+                                        <span class="text-gray-500 font-medium text-sm dark:text-gray-200">Share</span>
                                     </button>
                                 </li>
                                 <li>
                                     <button class="flex gap-1 items-center px-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" class="stroke-gray-500 dark:stroke-gray-200">
                                             <g clip-path="url(#clip0_211_29264)">
-                                            <path d="M9 12V9M9 6H9.0075M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9 12V9M9 6H9.0075M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                             </g>
                                             <defs>
                                             <clipPath id="clip0_211_29264">
@@ -522,7 +522,7 @@
                                             </clipPath>
                                             </defs>
                                         </svg>
-                                        <span class="text-gray-500 font-medium text-sm">About</span>
+                                        <span class="text-gray-500 font-medium text-sm dark:text-gray-200">About</span>
                                     </button>
                                 </li>
                             </ul>
@@ -567,7 +567,7 @@
                             </div>
                             <span class="text-gray-500 dark:text-gray-200">John Smith</span>
                         </div>
-
+            
                         <div class="border border-blue-200 ml-auto p-1 rounded-[25px] flex items-center gap-1 dark:border-blue-800">
                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
                                 <g clip-path="url(#clip0_1_22483)">
@@ -582,7 +582,7 @@
                             <span class="px-2 bg-blue-50 text-blue-500 font-medium rounded-2xl dark:text-blue-100 dark:bg-blue-500/20">112</span>
                         </div>
 
-                        <button class="ml-1" data-dropdown-toggle="dropdown">
+                        <button class="ml-1" data-dropdown-toggle="dropdown-6">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M9.99984 10.833C10.4601 10.833 10.8332 10.4599 10.8332 9.99967C10.8332 9.53944 10.4601 9.16634 9.99984 9.16634C9.5396 9.16634 9.1665 9.53944 9.1665 9.99967C9.1665 10.4599 9.5396 10.833 9.99984 10.833Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M9.99984 4.99967C10.4601 4.99967 10.8332 4.62658 10.8332 4.16634C10.8332 3.7061 10.4601 3.33301 9.99984 3.33301C9.5396 3.33301 9.1665 3.7061 9.1665 4.16634C9.1665 4.62658 9.5396 4.99967 9.99984 4.99967Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -590,21 +590,21 @@
                             </svg>
                         </button>
 
-                        <div id="dropdown" class="z-10 hidden border border-gray-200 bg-white absolute py-3 rounded-xl shadow-md">
+                        <div id="dropdown-6" class="z-10 hidden border border-gray-200 bg-white absolute py-3 rounded-xl shadow-md dark:bg-dark-bg dark:border-gray-700">
                             <ul class="flex flex-col gap-3 w-32">
                                 <li>
                                     <button class="flex gap-1 items-center px-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                            <path d="M15.5935 9.45565C15.7766 9.29872 15.8682 9.22025 15.9017 9.12687C15.9311 9.04492 15.9311 8.95527 15.9017 8.87332C15.8682 8.77995 15.7766 8.70148 15.5935 8.54454L9.24047 3.09908C8.9253 2.82893 8.76772 2.69385 8.6343 2.69055C8.51835 2.68767 8.40759 2.73861 8.33432 2.82852C8.25 2.93197 8.25 3.13952 8.25 3.55463V6.77607C6.64899 7.05616 5.1837 7.86741 4.09478 9.0855C2.90762 10.4135 2.25093 12.1321 2.25 13.9133V14.3723C3.03701 13.4242 4.01963 12.6575 5.13057 12.1245C6.11002 11.6547 7.16881 11.3763 8.25 11.303V14.4456C8.25 14.8607 8.25 15.0682 8.33432 15.1717C8.40759 15.2616 8.51835 15.3125 8.6343 15.3096C8.76772 15.3063 8.9253 15.1713 9.24047 14.9011L15.5935 9.45565Z" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" class="stroke-gray-500 dark:stroke-gray-200">
+                                            <path d="M15.5935 9.45565C15.7766 9.29872 15.8682 9.22025 15.9017 9.12687C15.9311 9.04492 15.9311 8.95527 15.9017 8.87332C15.8682 8.77995 15.7766 8.70148 15.5935 8.54454L9.24047 3.09908C8.9253 2.82893 8.76772 2.69385 8.6343 2.69055C8.51835 2.68767 8.40759 2.73861 8.33432 2.82852C8.25 2.93197 8.25 3.13952 8.25 3.55463V6.77607C6.64899 7.05616 5.1837 7.86741 4.09478 9.0855C2.90762 10.4135 2.25093 12.1321 2.25 13.9133V14.3723C3.03701 13.4242 4.01963 12.6575 5.13057 12.1245C6.11002 11.6547 7.16881 11.3763 8.25 11.303V14.4456C8.25 14.8607 8.25 15.0682 8.33432 15.1717C8.40759 15.2616 8.51835 15.3125 8.6343 15.3096C8.76772 15.3063 8.9253 15.1713 9.24047 14.9011L15.5935 9.45565Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span class="text-gray-500 font-medium text-sm">Share</span>
+                                        <span class="text-gray-500 font-medium text-sm dark:text-gray-200">Share</span>
                                     </button>
                                 </li>
                                 <li>
                                     <button class="flex gap-1 items-center px-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" class="stroke-gray-500 dark:stroke-gray-200">
                                             <g clip-path="url(#clip0_211_29264)">
-                                            <path d="M9 12V9M9 6H9.0075M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9 12V9M9 6H9.0075M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                             </g>
                                             <defs>
                                             <clipPath id="clip0_211_29264">
@@ -612,7 +612,7 @@
                                             </clipPath>
                                             </defs>
                                         </svg>
-                                        <span class="text-gray-500 font-medium text-sm">About</span>
+                                        <span class="text-gray-500 font-medium text-sm dark:text-gray-200">About</span>
                                     </button>
                                 </li>
                             </ul>
@@ -657,7 +657,7 @@
                             </div>
                             <span class="text-gray-500 dark:text-gray-200">John Smith</span>
                         </div>
-
+            
                         <div class="border border-blue-200 ml-auto p-1 rounded-[25px] flex items-center gap-1 dark:border-blue-800">
                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
                                 <g clip-path="url(#clip0_1_22483)">
@@ -672,7 +672,7 @@
                             <span class="px-2 bg-blue-50 text-blue-500 font-medium rounded-2xl dark:text-blue-100 dark:bg-blue-500/20">112</span>
                         </div>
 
-                        <button class="ml-1" data-dropdown-toggle="dropdown">
+                        <button class="ml-1" data-dropdown-toggle="dropdown-7">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M9.99984 10.833C10.4601 10.833 10.8332 10.4599 10.8332 9.99967C10.8332 9.53944 10.4601 9.16634 9.99984 9.16634C9.5396 9.16634 9.1665 9.53944 9.1665 9.99967C9.1665 10.4599 9.5396 10.833 9.99984 10.833Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M9.99984 4.99967C10.4601 4.99967 10.8332 4.62658 10.8332 4.16634C10.8332 3.7061 10.4601 3.33301 9.99984 3.33301C9.5396 3.33301 9.1665 3.7061 9.1665 4.16634C9.1665 4.62658 9.5396 4.99967 9.99984 4.99967Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -680,21 +680,21 @@
                             </svg>
                         </button>
 
-                        <div id="dropdown" class="z-10 hidden border border-gray-200 bg-white absolute py-3 rounded-xl shadow-md">
+                        <div id="dropdown-7" class="z-10 hidden border border-gray-200 bg-white absolute py-3 rounded-xl shadow-md dark:bg-dark-bg dark:border-gray-700">
                             <ul class="flex flex-col gap-3 w-32">
                                 <li>
                                     <button class="flex gap-1 items-center px-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                            <path d="M15.5935 9.45565C15.7766 9.29872 15.8682 9.22025 15.9017 9.12687C15.9311 9.04492 15.9311 8.95527 15.9017 8.87332C15.8682 8.77995 15.7766 8.70148 15.5935 8.54454L9.24047 3.09908C8.9253 2.82893 8.76772 2.69385 8.6343 2.69055C8.51835 2.68767 8.40759 2.73861 8.33432 2.82852C8.25 2.93197 8.25 3.13952 8.25 3.55463V6.77607C6.64899 7.05616 5.1837 7.86741 4.09478 9.0855C2.90762 10.4135 2.25093 12.1321 2.25 13.9133V14.3723C3.03701 13.4242 4.01963 12.6575 5.13057 12.1245C6.11002 11.6547 7.16881 11.3763 8.25 11.303V14.4456C8.25 14.8607 8.25 15.0682 8.33432 15.1717C8.40759 15.2616 8.51835 15.3125 8.6343 15.3096C8.76772 15.3063 8.9253 15.1713 9.24047 14.9011L15.5935 9.45565Z" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" class="stroke-gray-500 dark:stroke-gray-200">
+                                            <path d="M15.5935 9.45565C15.7766 9.29872 15.8682 9.22025 15.9017 9.12687C15.9311 9.04492 15.9311 8.95527 15.9017 8.87332C15.8682 8.77995 15.7766 8.70148 15.5935 8.54454L9.24047 3.09908C8.9253 2.82893 8.76772 2.69385 8.6343 2.69055C8.51835 2.68767 8.40759 2.73861 8.33432 2.82852C8.25 2.93197 8.25 3.13952 8.25 3.55463V6.77607C6.64899 7.05616 5.1837 7.86741 4.09478 9.0855C2.90762 10.4135 2.25093 12.1321 2.25 13.9133V14.3723C3.03701 13.4242 4.01963 12.6575 5.13057 12.1245C6.11002 11.6547 7.16881 11.3763 8.25 11.303V14.4456C8.25 14.8607 8.25 15.0682 8.33432 15.1717C8.40759 15.2616 8.51835 15.3125 8.6343 15.3096C8.76772 15.3063 8.9253 15.1713 9.24047 14.9011L15.5935 9.45565Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                        <span class="text-gray-500 font-medium text-sm">Share</span>
+                                        <span class="text-gray-500 font-medium text-sm dark:text-gray-200">Share</span>
                                     </button>
                                 </li>
                                 <li>
                                     <button class="flex gap-1 items-center px-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" class="stroke-gray-500 dark:stroke-gray-200">
                                             <g clip-path="url(#clip0_211_29264)">
-                                            <path d="M9 12V9M9 6H9.0075M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke="#667085" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9 12V9M9 6H9.0075M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                             </g>
                                             <defs>
                                             <clipPath id="clip0_211_29264">
@@ -702,7 +702,7 @@
                                             </clipPath>
                                             </defs>
                                         </svg>
-                                        <span class="text-gray-500 font-medium text-sm">About</span>
+                                        <span class="text-gray-500 font-medium text-sm dark:text-gray-200">About</span>
                                     </button>
                                 </li>
                             </ul>
@@ -815,7 +815,7 @@
                                     <path d="M9.99984 16.6663C10.4601 16.6663 10.8332 16.2932 10.8332 15.833C10.8332 15.3728 10.4601 14.9997 9.99984 14.9997C9.5396 14.9997 9.1665 15.3728 9.1665 15.833C9.1665 16.2932 9.5396 16.6663 9.99984 16.6663Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </button>
-
+            
                             <div id="dropdown-1" class="z-10 hidden border border-gray-200 bg-white absolute rounded-md">
                                 <ul>
                                     <li class="py-2 px-3"><a href="#">Option 1</a></li>
@@ -885,7 +885,7 @@
                                     <path d="M9.99984 16.6663C10.4601 16.6663 10.8332 16.2932 10.8332 15.833C10.8332 15.3728 10.4601 14.9997 9.99984 14.9997C9.5396 14.9997 9.1665 15.3728 9.1665 15.833C9.1665 16.2932 9.5396 16.6663 9.99984 16.6663Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </button>
-
+            
                             <div id="dropdown-1" class="z-10 hidden border border-gray-200 bg-white absolute rounded-md">
                                 <ul>
                                     <li class="py-2 px-3"><a href="#">Option 1</a></li>
@@ -959,7 +959,7 @@
                                     <path d="M9.99984 16.6663C10.4601 16.6663 10.8332 16.2932 10.8332 15.833C10.8332 15.3728 10.4601 14.9997 9.99984 14.9997C9.5396 14.9997 9.1665 15.3728 9.1665 15.833C9.1665 16.2932 9.5396 16.6663 9.99984 16.6663Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </button>
-
+            
                             <div id="dropdown-1" class="z-10 hidden border border-gray-200 bg-white absolute rounded-md">
                                 <ul>
                                     <li class="py-2 px-3"><a href="#">Option 1</a></li>
@@ -1033,7 +1033,7 @@
                                     <path d="M9.99984 16.6663C10.4601 16.6663 10.8332 16.2932 10.8332 15.833C10.8332 15.3728 10.4601 14.9997 9.99984 14.9997C9.5396 14.9997 9.1665 15.3728 9.1665 15.833C9.1665 16.2932 9.5396 16.6663 9.99984 16.6663Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </button>
-
+            
                             <div id="dropdown-1" class="z-10 hidden border border-gray-200 bg-white absolute rounded-md">
                                 <ul>
                                     <li class="py-2 px-3"><a href="#">Option 1</a></li>
@@ -1107,7 +1107,7 @@
                                     <path d="M9.99984 16.6663C10.4601 16.6663 10.8332 16.2932 10.8332 15.833C10.8332 15.3728 10.4601 14.9997 9.99984 14.9997C9.5396 14.9997 9.1665 15.3728 9.1665 15.833C9.1665 16.2932 9.5396 16.6663 9.99984 16.6663Z" stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </button>
-
+            
                             <div id="dropdown-1" class="z-10 hidden border border-gray-200 bg-white absolute rounded-md">
                                 <ul>
                                     <li class="py-2 px-3"><a href="#">Option 1</a></li>
@@ -1135,19 +1135,19 @@
                         </svg>
                         View Source
                     </button>
-
+        
                     <p class="text-base text-gray-600 mb-4 dark:text-gray-100">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo massa. Eu dolor aliquet risus gravida nunc at feugiat consequat purus. Non massa enim vitae duis mattis. Vel in ultricies vel fringilla.</p>
-
+        
                     <div class="mb-4 py-6 px-5 rounded-2xl bg-default-background dark:bg-[#101828]/50">
                         <h4 class="text-gray-900 font-semibold text-lg mb-4 dark:text-gray-25">Key Points</h4>
-
+        
                         <ul class="list-decimal list-outside pl-5 text-base text-gray-600 dark:text-gray-25">
                             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper mattis lorem </li>
                             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper mattis lorem </li>
                             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper mattis lorem </li>
                         </ul>
                     </div>
-
+        
                     <h4 class="text-gray-900 font-semibold text-lg mb-4 dark:text-gray-25">Discussion</h4>
                     <p class="text-base text-gray-600 mb-2 dark:text-gray-25">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper mattis lorem non. Ultrices praesent amet ipsum justo massa. Eu dolor aliquet risus gravida nunc at feugiat consequat purus. Non massa enim vitae duis mattis. Vel in ultricies vel fringilla.</p>
                     <p class="text-gray-400 text-xs">updated 1 day ago</p>
@@ -1165,13 +1165,13 @@
                 <path d="M7.97005 15.5835H15.3034M10.7363 2.53385L4.51916 7.36938C4.10357 7.69262 3.89578 7.85423 3.74608 8.05663C3.61347 8.23592 3.51469 8.4379 3.45458 8.65265C3.38672 8.89508 3.38672 9.15832 3.38672 9.68481V16.3168C3.38672 17.3436 3.38672 17.857 3.58654 18.2492C3.76231 18.5941 4.04277 18.8746 4.38774 19.0503C4.77991 19.2502 5.29329 19.2502 6.32005 19.2502H16.9534C17.9801 19.2502 18.4935 19.2502 18.8857 19.0503C19.2307 18.8746 19.5111 18.5941 19.6869 18.2492C19.8867 17.857 19.8867 17.3436 19.8867 16.3168V9.68481C19.8867 9.15832 19.8867 8.89508 19.8189 8.65265C19.7588 8.4379 19.66 8.23592 19.5274 8.05663C19.3777 7.85423 19.1699 7.69262 18.7543 7.36938L12.5372 2.53385C12.2151 2.28337 12.0541 2.15813 11.8763 2.10998C11.7194 2.06751 11.554 2.06751 11.3972 2.10998C11.2193 2.15813 11.0583 2.28337 10.7363 2.53385Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </a>
-
+        
         <a href="index.html" class="px-[22px]">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none" class="transition-all stroke-gray-400 hover:stroke-blue-500">
                 <path d="M12.8332 10.083H7.33317M9.1665 13.7497H7.33317M14.6665 6.41634H7.33317M18.3332 6.23301V15.7663C18.3332 17.3065 18.3332 18.0766 18.0334 18.6648C17.7698 19.1823 17.3491 19.603 16.8316 19.8666C16.2434 20.1663 15.4733 20.1663 13.9332 20.1663H8.0665C6.52636 20.1663 5.75629 20.1663 5.16803 19.8666C4.65058 19.603 4.22989 19.1823 3.96624 18.6648C3.6665 18.0766 3.6665 17.3065 3.6665 15.7663V6.23301C3.6665 4.69286 3.6665 3.92279 3.96624 3.33453C4.22989 2.81709 4.65058 2.39639 5.16803 2.13274C5.75629 1.83301 6.52636 1.83301 8.0665 1.83301H13.9332C15.4733 1.83301 16.2434 1.83301 16.8316 2.13274C17.3491 2.39639 17.7698 2.81709 18.0334 3.33453C18.3332 3.92279 18.3332 4.69286 18.3332 6.23301Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </a>
-
+        
         <a href="your-bookmark.html" class="px-[22px]">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none" class="transition-all stroke-gray-400 hover:stroke-blue-500">
                 <path d="M4.5835 7.15C4.5835 5.60986 4.5835 4.83978 4.88323 4.25153C5.14688 3.73408 5.56758 3.31338 6.08502 3.04973C6.67328 2.75 7.44335 2.75 8.9835 2.75H13.0168C14.557 2.75 15.327 2.75 15.9153 3.04973C16.4327 3.31338 16.8534 3.73408 17.1171 4.25153C17.4168 4.83978 17.4168 5.60986 17.4168 7.15V19.25L11.0002 15.5833L4.5835 19.25V7.15Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1182,7 +1182,7 @@
     <!-- Flowbite -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
     <!-- Toogle for dakr/light mode -->
-    <script src="./themeToggle.js"></script>
+    <script src="themeToggle.js"></script>
 
 </body>
 </html>
