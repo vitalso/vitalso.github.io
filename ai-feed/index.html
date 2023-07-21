@@ -29,11 +29,22 @@
         </div>
 
         <!-- Filter -->
-        <div class="mb-3 text-xs flex">
+        <div
+            class="mb-3 text-xs flex relative"
+            x-data="{filter: 'Last updated' , open: false , active: false}"
+        >
             <span class="text-gray-400">Sort by</span>
 
-            <button class="ml-1 flex items-center gap-1" data-dropdown-toggle="filter-dropdown">
-                <span class="text-gray-500 font-medium dark:text-gray-200">Last updated</span>
+            <button class="ml-1 flex items-center gap-1">
+                <span 
+                    class="text-gray-500 font-medium dark:text-gray-200" 
+                    x-text="filter"
+                    @click="open = ! open"
+                    @click.outside="open = false"
+                >
+                    Last updated
+                </span>
+                
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-gray-500 dark:stroke-gray-200">
                     <g id="chevron-down">
                         <path id="Icon" d="M4 6L8 10L12 6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -41,22 +52,76 @@
                 </svg>                    
             </button>
 
-            <div id="filter-dropdown" class="z-10 hidden border border-gray-200 bg-white absolute py-3 rounded-xl shadow-md dark:bg-dark-bg dark:border-gray-700">
+            <div
+                class="z-10 border border-gray-200 invisible bg-white absolute top-4 py-3 rounded-xl shadow-md dark:bg-dark-bg dark:border-gray-700"
+                :class="{'invisible': ! open, 'visible': open }"
+                x-show="open"
+                x-data="{
+                    popularity: false,
+                    mostactive: false,
+                    lastupdated: true
+                }"
+            >
                 <ul class="flex flex-col gap-3 w-40">
                     <li>
-                        <button class="flex gap-1 items-center justify-between px-3 w-full">
-                            <span class="text-gray-500 font-medium text-sm dark:text-gray-200">Popularity</span>
+                        <button
+                            class="flex gap-1 items-center justify-between px-3 w-full"
+                            @click="
+                                filter='Popularity' , 
+                                open = ! open
+                                popularity = true ,
+                                mostactive = false ,
+                                lastupdated = false "
+                        >
+                            <span
+                                class="text-gray-500 font-medium text-sm dark:text-gray-200"
+                                :class="{'text-gray-500 ': ! popularity, 'text-blue-500 ': popularity }"
+                            >
+                                Popularity
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" class="stroke-blue-500 dark:stroke-gray-200" x-show="popularity">
+                                <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </button>
                     </li>
                     <li>
-                        <button class="flex gap-1 items-center justify-between px-3 w-full">
-                            <span class="text-gray-500 font-medium text-sm dark:text-gray-200">Most active</span>
+                        <button
+                            class="flex gap-1 items-center justify-between px-3 w-full"
+                            @click="
+                                filter='Most active' ,
+                                open = ! open ,
+                                popularity = false ,
+                                mostactive = true ,
+                                lastupdated = false "
+                        >
+                            <span
+                                class="text-gray-500 font-medium text-sm dark:text-gray-200"
+                                :class="{'text-gray-500 ': ! mostactive, 'text-blue-500 ': mostactive }"
+                            >
+                                Most active
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" class="stroke-blue-500 dark:stroke-gray-200" x-show="mostactive">
+                                <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </button>
                     </li>
                     <li>
-                        <button class="flex gap-1 items-center justify-between px-3 w-full">
-                            <span class="text-blue-500 font-medium text-sm dark:text-gray-200">Last updated</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" class="stroke-blue-500 dark:stroke-gray-200">
+                        <button
+                            class="flex gap-1 items-center justify-between px-3 w-full"
+                            @click="
+                                filter='Last updated' ,
+                                open = ! open ,
+                                popularity = false
+                                mostactive = false ,
+                                lastupdated = true"
+                        >
+                            <span
+                                class="font-medium text-sm dark:text-gray-200"
+                                :class="{'text-gray-500 ': ! lastupdated, 'text-blue-500 ': lastupdated }"
+                            >
+                                Last updated
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" class="stroke-blue-500 dark:stroke-gray-200" x-show="lastupdated">
                                 <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
@@ -64,6 +129,7 @@
                 </ul>
             </div>
         </div>
+        <!-- End filter -->
 
         <!-- Card -->
         <div x-intersect="$el.classList.add('opacity-100')" class="mb-4 p-4 rounded-2xl border border-gray-200 bg-white opacity-0 duration-1000 delay-100 dark:bg-gray-800 dark:border-gray-700">
@@ -76,13 +142,13 @@
                 </div>
     
                 <div class="border border-blue-200 ml-auto p-1 rounded-[25px] flex items-center gap-1 dark:border-blue-800">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
-                        <g clip-path="url(#clip0_1_22483)">
-                          <path d="M5.0568 8.62223L7.0568 10.6222L11.0568 6.62223M14.7235 8.62223C14.7235 12.3041 11.7387 15.2889 8.0568 15.2889C4.37491 15.2889 1.39014 12.3041 1.39014 8.62223C1.39014 4.94033 4.37491 1.95557 8.0568 1.95557C11.7387 1.95557 14.7235 4.94033 14.7235 8.62223Z" stroke="#2970FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <g clip-path="url(#clip0_258_5587)">
+                          <path d="M8.00016 5.33301V10.6663M5.3335 7.99967H10.6668M14.6668 7.99967C14.6668 11.6816 11.6821 14.6663 8.00016 14.6663C4.31826 14.6663 1.3335 11.6816 1.3335 7.99967C1.3335 4.31778 4.31826 1.33301 8.00016 1.33301C11.6821 1.33301 14.6668 4.31778 14.6668 7.99967Z" stroke="#2970FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </g>
                         <defs>
-                          <clipPath id="clip0_1_22483">
-                            <rect width="16" height="16" fill="white" transform="translate(0.0566406 0.62207)"/>
+                          <clipPath id="clip0_258_5587">
+                            <rect width="16" height="16" fill="white"/>
                           </clipPath>
                         </defs>
                     </svg>
@@ -166,13 +232,13 @@
                 </div>
     
                 <div class="border border-blue-200 ml-auto p-1 rounded-[25px] flex items-center gap-1 dark:border-blue-800">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
-                        <g clip-path="url(#clip0_1_22483)">
-                          <path d="M5.0568 8.62223L7.0568 10.6222L11.0568 6.62223M14.7235 8.62223C14.7235 12.3041 11.7387 15.2889 8.0568 15.2889C4.37491 15.2889 1.39014 12.3041 1.39014 8.62223C1.39014 4.94033 4.37491 1.95557 8.0568 1.95557C11.7387 1.95557 14.7235 4.94033 14.7235 8.62223Z" stroke="#2970FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <g clip-path="url(#clip0_258_5587)">
+                          <path d="M8.00016 5.33301V10.6663M5.3335 7.99967H10.6668M14.6668 7.99967C14.6668 11.6816 11.6821 14.6663 8.00016 14.6663C4.31826 14.6663 1.3335 11.6816 1.3335 7.99967C1.3335 4.31778 4.31826 1.33301 8.00016 1.33301C11.6821 1.33301 14.6668 4.31778 14.6668 7.99967Z" stroke="#2970FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </g>
                         <defs>
-                          <clipPath id="clip0_1_22483">
-                            <rect width="16" height="16" fill="white" transform="translate(0.0566406 0.62207)"/>
+                          <clipPath id="clip0_258_5587">
+                            <rect width="16" height="16" fill="white"/>
                           </clipPath>
                         </defs>
                     </svg>
@@ -256,13 +322,13 @@
                 </div>
     
                 <div class="border border-blue-200 ml-auto p-1 rounded-[25px] flex items-center gap-1 dark:border-blue-800">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
-                        <g clip-path="url(#clip0_1_22483)">
-                          <path d="M5.0568 8.62223L7.0568 10.6222L11.0568 6.62223M14.7235 8.62223C14.7235 12.3041 11.7387 15.2889 8.0568 15.2889C4.37491 15.2889 1.39014 12.3041 1.39014 8.62223C1.39014 4.94033 4.37491 1.95557 8.0568 1.95557C11.7387 1.95557 14.7235 4.94033 14.7235 8.62223Z" stroke="#2970FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <g clip-path="url(#clip0_258_5587)">
+                          <path d="M8.00016 5.33301V10.6663M5.3335 7.99967H10.6668M14.6668 7.99967C14.6668 11.6816 11.6821 14.6663 8.00016 14.6663C4.31826 14.6663 1.3335 11.6816 1.3335 7.99967C1.3335 4.31778 4.31826 1.33301 8.00016 1.33301C11.6821 1.33301 14.6668 4.31778 14.6668 7.99967Z" stroke="#2970FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </g>
                         <defs>
-                          <clipPath id="clip0_1_22483">
-                            <rect width="16" height="16" fill="white" transform="translate(0.0566406 0.62207)"/>
+                          <clipPath id="clip0_258_5587">
+                            <rect width="16" height="16" fill="white"/>
                           </clipPath>
                         </defs>
                     </svg>
@@ -346,13 +412,13 @@
                 </div>
     
                 <div class="border border-blue-200 ml-auto p-1 rounded-[25px] flex items-center gap-1 dark:border-blue-800">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
-                        <g clip-path="url(#clip0_1_22483)">
-                          <path d="M5.0568 8.62223L7.0568 10.6222L11.0568 6.62223M14.7235 8.62223C14.7235 12.3041 11.7387 15.2889 8.0568 15.2889C4.37491 15.2889 1.39014 12.3041 1.39014 8.62223C1.39014 4.94033 4.37491 1.95557 8.0568 1.95557C11.7387 1.95557 14.7235 4.94033 14.7235 8.62223Z" stroke="#2970FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <g clip-path="url(#clip0_258_5587)">
+                          <path d="M8.00016 5.33301V10.6663M5.3335 7.99967H10.6668M14.6668 7.99967C14.6668 11.6816 11.6821 14.6663 8.00016 14.6663C4.31826 14.6663 1.3335 11.6816 1.3335 7.99967C1.3335 4.31778 4.31826 1.33301 8.00016 1.33301C11.6821 1.33301 14.6668 4.31778 14.6668 7.99967Z" stroke="#2970FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </g>
                         <defs>
-                          <clipPath id="clip0_1_22483">
-                            <rect width="16" height="16" fill="white" transform="translate(0.0566406 0.62207)"/>
+                          <clipPath id="clip0_258_5587">
+                            <rect width="16" height="16" fill="white"/>
                           </clipPath>
                         </defs>
                     </svg>

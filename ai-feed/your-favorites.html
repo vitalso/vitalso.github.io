@@ -6,6 +6,10 @@
     <title>Your favorites</title>
     <!-- Connect to TailwindCSS -->
     <link href="dist/output.css" rel="stylesheet">
+    <!-- Alpine Plugins -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>    
+    <!-- Alpine Core -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body class="bg-default-background text-default-color pb-3 dark:bg-dark-bg">
 
@@ -70,11 +74,22 @@
         </h2>
 
         <!-- Filter -->
-        <div class="mb-3 text-xs flex">
+        <div
+            class="mb-3 text-xs flex relative"
+            x-data="{filter: 'Popularity' , open: false , active: false}"
+        >
             <span class="text-gray-400">Sort by</span>
 
-            <button class="ml-1 flex items-center gap-1" data-dropdown-toggle="filter-dropdown">
-                <span class="text-gray-500 font-medium dark:text-gray-200">Popularity</span>
+            <button class="ml-1 flex items-center gap-1">
+                <span 
+                    class="text-gray-500 font-medium dark:text-gray-200" 
+                    x-text="filter"
+                    @click="open = ! open"
+                    @click.outside="open = false"
+                >
+                    Popularity
+                </span>
+                
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="stroke-gray-500 dark:stroke-gray-200">
                     <g id="chevron-down">
                         <path id="Icon" d="M4 6L8 10L12 6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -82,29 +97,84 @@
                 </svg>                    
             </button>
 
-            <div id="filter-dropdown" class="z-10 hidden border border-gray-200 bg-white absolute py-3 rounded-xl shadow-md dark:bg-dark-bg dark:border-gray-700">
+            <div
+                class="z-10 border invisible border-gray-200 bg-white absolute top-4 py-3 rounded-xl shadow-md dark:bg-dark-bg dark:border-gray-700"
+                :class="{'invisible': ! open, 'visible': open }"
+                x-show="open"
+                x-data="{
+                    popularity: true,
+                    mostactive: false,
+                    lastupdated: false
+                }"
+            >
                 <ul class="flex flex-col gap-3 w-40">
                     <li>
-                        <button class="flex gap-1 items-center justify-between px-3 w-full">
-                            <span class="text-blue-500 font-medium text-sm dark:text-gray-200">Popularity</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" class="stroke-blue-500 dark:stroke-gray-200">
+                        <button
+                            class="flex gap-1 items-center justify-between px-3 w-full"
+                            @click="
+                                filter='Popularity' , 
+                                open = ! open
+                                popularity = true ,
+                                mostactive = false ,
+                                lastupdated = false "
+                        >
+                            <span
+                                class="text-gray-500 font-medium text-sm dark:text-gray-200"
+                                :class="{'text-gray-500 ': ! popularity, 'text-blue-500 ': popularity }"
+                            >
+                                Popularity
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" class="stroke-blue-500 dark:stroke-gray-200" x-show="popularity">
                                 <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
                     </li>
                     <li>
-                        <button class="flex gap-1 items-center justify-between px-3 w-full">
-                            <span class="text-gray-500 font-medium text-sm dark:text-gray-200">Most active</span>
+                        <button
+                            class="flex gap-1 items-center justify-between px-3 w-full"
+                            @click="
+                                filter='Most active' ,
+                                open = ! open ,
+                                popularity = false ,
+                                mostactive = true ,
+                                lastupdated = false "
+                        >
+                            <span
+                                class="text-gray-500 font-medium text-sm dark:text-gray-200"
+                                :class="{'text-gray-500 ': ! mostactive, 'text-blue-500 ': mostactive }"
+                            >
+                                Most active
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" class="stroke-blue-500 dark:stroke-gray-200" x-show="mostactive">
+                                <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </button>
                     </li>
                     <li>
-                        <button class="flex gap-1 items-center justify-between px-3 w-full">
-                            <span class="text-gray-500 font-medium text-sm dark:text-gray-200">Last updated</span>
+                        <button
+                            class="flex gap-1 items-center justify-between px-3 w-full"
+                            @click="
+                                filter='Last updated' ,
+                                open = ! open ,
+                                popularity = false
+                                mostactive = false ,
+                                lastupdated = true"
+                        >
+                            <span
+                                class="font-medium text-sm dark:text-gray-200"
+                                :class="{'text-gray-500 ': ! lastupdated, 'text-blue-500 ': lastupdated }"
+                            >
+                                Last updated
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" class="stroke-blue-500 dark:stroke-gray-200" x-show="lastupdated">
+                                <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                         </button>
                     </li>
                 </ul>
             </div>
         </div>
+        <!-- End filter -->
 
         <div class="grid grid-cols-1 gap-3 md:grid-cols-3">
             <div class="h-screen overflow-y-auto">
@@ -742,10 +812,21 @@
             <div class="rounded-2xl p-4 pt-0 bg-white dark:bg-gray-800 h-screen overflow-y-auto relative">
 
                 <!-- Toggle mode -->
-                <div class="sticky w-full top-0 left-0 bg-white z-10 p-4 dark:bg-gray-800 hidden md:block">
+                <div class="sticky w-full top-0 left-0 z-10 py-4 bg-white dark:bg-gray-800 hidden md:block" x-data="{ active: false }">
                     <div class="bg-gray-50 border border-gray-100 flex gap-2 p-1 rounded-lg dark:bg-gray-900/50 dark:border-gray-900">
-                        <button class="w-1/2 py-1 rounded-md text-gray-600 text-xs bg-white font-semibold shadow-sm transition-all dark:bg-gray-700 dark:text-gray-50">Original</button>
-                        <button class="w-1/2 py-1 rounded-md text-gray-600 text-xs font-semibold flex items-center justify-center gap-[6px] transition-all hover:bg-white">
+                        <button
+                            class="w-1/2 py-1 rounded-md text-gray-600 text-xs bg-white font-semibold transition-all dark:bg-gray-700 dark:text-gray-50"
+                            :class="{'bg-white shadow-sm': ! active, 'bg-transparent shadow-none dark:bg-transparent dark:text-gray-600': active }"
+                            @click.away="active = ! active"
+                        >
+                            Original
+                        </button>
+                        
+                        <button
+                            class="w-1/2 py-1 rounded-md text-gray-600 text-xs font-semibold flex items-center justify-center gap-[6px] transition-all hover:bg-white"
+                            :class="{'bg-transparent shadow-none': ! active, 'bg-white shadow-sm dark:bg-gray-700 dark:text-gray-50': active }"
+                            @click.away="active = ! active"
+                        >
                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M3.55574 0H2.81793V0.253956H0.254453V2.74584H0V3.48265H0.377676L2.67506 5.77692V6.34644L0.566442 8.45221H0V9.18902H0.254453V11.7427H2.81793V12.0001H3.55574V11.5774L5.80673 9.33197H6.23449L8.5157 11.6127V12.0001H9.25351V11.7427H11.7454V9.18902H12V8.45221H11.4727L9.39632 6.37868V5.74505L11.6644 3.48265H12V2.74584H11.7457V0.253956H9.25351V0H8.5157V0.513675L6.42576 2.60316H5.61569L3.55574 0.545999V0ZM0.845045 8.65276L3.01889 6.48185L3.01898 8.30953H2.67506V8.65276H0.845045ZM6.56127 2.94673H8.37249V2.60316H8.71675V0.791715L6.56127 2.94673ZM5.46374 9.19561V8.99153H3.69889V9.33197H3.35776V11.2633H3.39093L5.46374 9.19561ZM11.2622 3.4053L9.20298 5.4594H9.05553V3.62561H9.39632V3.2855H11.2622V3.4053ZM3.35776 0.827064L5.46374 2.93019V2.94673H3.69889V2.60316H3.35776V0.827064ZM9.05553 6.51713V8.30953H9.39632V8.65276H11.194L9.05553 6.51713ZM2.83654 5.4594H3.02578V3.62561H2.67506V3.2855H0.737808V3.36351L2.83654 5.4594ZM8.64536 11.2633L6.48757 9.10595V8.99153H8.37249V9.33197H8.71675V11.2633H8.64536ZM3.01898 9.33197V11.0691L0.938627 8.99153H2.67506V9.33197H3.01898ZM2.81793 11.5168V11.3471L0.656951 9.18902H0.480304V11.5168H2.81793ZM3.35776 8.30953H3.69889V8.65276H5.31463L3.35776 6.70075V8.30953ZM6.72464 8.65276L8.71675 6.6656V8.30953H8.37249V8.65276H6.72464ZM5.63861 8.01892V6.62152H5.32733V6.31113H3.92657L5.63861 8.01892ZM6.31616 8.10321L8.1127 6.31113H6.62743V6.62152H6.31616V8.10321ZM5.63861 5.32318V4.10506L4.10802 5.63358H5.32733V5.32318H5.63861ZM6.31616 5.32318H6.62743V5.63358H7.93107L6.31616 4.02086V5.32318ZM5.46374 3.32215L3.36456 5.41848V3.62561H3.69889V3.2855H5.46374V3.32215ZM8.37249 3.2855H6.53867L8.71551 5.4594H8.71675V3.62561H8.37249V3.2855ZM11.2622 9.03068L9.05553 11.2344V9.33197H9.39632V8.99153H11.2622V9.03068ZM9.25351 11.5168V11.5154L11.5195 9.25245V11.5168H9.25351ZM9.05553 0.821009V2.60316H9.39632V2.94673H11.1817L9.05553 0.821009ZM11.4599 2.74584H11.5198V0.479807H9.25351V0.539895L11.4599 2.74584ZM3.01898 0.759156V2.60316H2.67506V2.94673H0.828447L3.01898 0.759156ZM0.550184 2.74584H0.480304V0.479807H2.81793V0.481159L0.550184 2.74584Z" fill="#667085"/>
                             </svg>
