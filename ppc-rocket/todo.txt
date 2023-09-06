@@ -1,0 +1,157 @@
+sign-up.html
+-> review box does not match the content, e.g the first review
+-> "Privacy Policy" and "Terms and Conditions" there should be a modal showing a dummy legal text
+
+sign-up-account.html
+-> add a table like in the screenshot.
+-> the logo should be in the center of the page
+
+Footer Area
+-> the waves are still not very smooth. Any idea to improve?
+
+
+Please replace the Images with....
+
+Icons:
+
+A designer has created new Icons. Please decide if you want them to integrate as png or svg file.
+
+Please also change the class names
+
+Page: /index.html
+
+replace: url(../img/main-img/icons/icon-mail.png)
+with: Enter Your E-mail_grey.png
+
+../img/main-img/icons/icon-circle-arrow.png
+with:
+
+../img/main-img/icons/icon-circle-arrow.png
+pointer_left_circle_grey.png
+pointer_right_circle_grey.png
+
+
+Better PPC Performance Starts Here
+
+img/main-img/icons/service-icon-1.png
+with: Lighten Your Load.png
+
+img/main-img/icons/service-icon-2.png
+with: Deepen Your Knowledge.png
+
+img/main-img/icons/service-icon-3.png
+with: Visualize Your Success.png
+
+img/main-img/icons/service-icon-4.png
+with: Reduse Wasted Ad Spend.svg
+
+Top Features:
+
+class="ti-list"
+with: Compehencive Account.png
+
+class="ti-world"
+Landing Page Crawler.png
+
+class="ti-layout-tab-window"
+Quality Score Tracker.png
+
+class="ti-bar-chart"
+Account Activity Report.png
+
+class="ti-settings"
+Ad Group Optimizer.png
+
+Reviews
+
+img/main-img/testimonials-icon.png
+with: Client Testimonials.png
+
+footer-email the email icon
+with: Contact us_letter_blue.png
+
+footer icon phone /img/main-img/icons/icon-phone.png
+with: Phone_our office_white.png
+
+About us about-us.html
+replace the made in bavaria flag with
+Flag_4.svg
+
+star icons in the reviews img/main-img/icons/icon-star.png
+with: Star_yellow.png
+
+in the reviews section img/main-img/icons/icon-blockquote-small.png
+with: Client Testimonials_grey.svg
+
+url(../img/main-img/icons/icon-blockquote.png) no-repeat
+with: Client Testimonials_grey.svg
+
+
+affiliate-page.html
+ti-user
+with: Encourage Your Clients_2.svg
+
+class="ti-money"
+with: Earn Commission.svg
+
+ti-credit-card
+with: Get Paid_1.svg
+
+
+article-page.html
+
+Share with functionality:
+Can you recommend a plugin or add the functionality that users can share the article on the respective social networks, please?
+
+blog.html
+
+I created this page and added some dummy articles. Could you check the footer, there is still a blue background
+
+contact-us.html
+src="img/main-img/icons/contact-icon-1.png"
+with: Need Help_1.svg
+
+img/main-img/icons/contact-icon-2.png
+with: Want a Demo.svg
+
+img/main-img/icons/contact-icon-3.png
+with: Looking for a Custom Solution.svg
+
+url(../img/main-img/icons/icon-adress.png) left center no-repeat
+with: Geotag_our office.png
+
+url(../img/main-img/icons/icon-phone.png) left center no-repeat
+with: Phone_our office_pink.svg
+
+url(../img/main-img/icons/icon-email.png) left center no-repeat
+with: Contact us_letter_blue.svg
+
+paid-traffic.html and paid-traffic-2.html
+
+
+ti-stats-up
+with: Auditing & Analytics_white.svg and Auditing & Analytics_black.svg
+
+ti-settings
+wtth: Automation.svg
+
+ti-file
+with: Reporting.svg
+
+ti-notepad
+with: Optimizing.svg
+
+ti-dashboard
+with: Gain Deep Insights .svg
+
+ti-receipt
+with: Focus Less on Management.svg
+
+ti-layers
+with: Leverage an Intuitive.svg
+
+paid-traffic-2.html
+replace bavarian flag
+with: Flag_4.svg
+
+sign-up.html
