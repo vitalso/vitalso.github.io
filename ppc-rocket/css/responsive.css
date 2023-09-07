@@ -1967,7 +1967,7 @@
         max-width: 100%;
     }
     .footer_area_four .footer_top{
-        padding-top: 40px;
+        padding-top: 0;
         padding-bottom: 40px;
     }
     .company_widget .f_subscribe{
@@ -3752,6 +3752,10 @@
     }*/
     .sec_pad,.prototype_service_info{
         padding: 70px 0px;
+    }
+
+    .sec_pad.blog_area_two {
+        padding: 30px 0;
     }
     .sec_title.mb_70{
         margin-bottom: 50px
@@ -6386,6 +6390,7 @@
 
     .footer_bottom .f_menu li:nth-child(4n+4) {
         margin-left: 0px;
+        margin-top: 10px;
     }
     
 }
@@ -6727,6 +6732,22 @@
 
     .crop-logo {
         height: auto;
+    }
+
+    .card-demo {
+        margin-bottom: 80px;
+    }
+
+    .f_size_36 {
+        font-size: 32px;
+    }
+
+    .free-trial .f_size_16 {
+        line-height: 24px;
+    }
+
+    .blog_area_two h4 {
+        font-size: 20px;
     }
 
 }
