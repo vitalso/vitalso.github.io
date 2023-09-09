@@ -6720,6 +6720,25 @@
         overflow-x: hidden;
     }
 
+    .blog_breadcrumb_area .breadcrumb_content_two ol {
+        line-height: 1.3;
+        margin-bottom: 30px;
+    }
+
+    .blog_breadcrumb_area {
+        background-position: center 25%;
+        background-size: 50%;
+    }
+
+    .blog-list-features {
+        margin-left: 20px;
+        line-height: 21px;
+    }
+
+    .blog_single_info blockquote {
+        padding-left: 5px;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -6775,6 +6794,10 @@
     .list-style-check li {
         font-size: 17px;
         line-height: 21px;
+    }
+
+    .blog_breadcrumb_area {
+        background-size: 100%;
     }
     
 }
