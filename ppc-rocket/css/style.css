@@ -2575,13 +2575,13 @@ a, .btn, button {
 .agency_content {
   position: relative;
   z-index: 3; }
-  .agency_content h2 {
-    font-size: 60px;
-    line-height: 73px;
+  .agency_content h2 , h2 , h2.f_size_50 , h2.f_size_48 {
+    font-size: 36px;
+    line-height: 42px;
     color: #000000; }
-  .agency_content p {
-    font-size: 20px;
-    line-height: 30px; }
+  .agency_content p , p.f_size_20.l_height40 , .p_service_item p , p.f_size_20.l_height30 {
+    font-size: 17px;
+    line-height: 21px; }
 
 .form-free-trial .form-input {
   position: relative; }
@@ -4263,13 +4263,12 @@ ol.breadcrumb-list {
   .agency_featured_item .agency_featured_content {
     position: relative; }
     .agency_featured_item .agency_featured_content h3 {
-      font: 700 50px/64px "Work Sans", sans-serif;
+      font: 700 30px/35px "Work Sans", sans-serif;
       color: #000000;
       margin: 20px 0; }
     .agency_featured_item .agency_featured_content p {
-      font-size: 20px;
-      line-height: 33px;
-      font-weight: 500;
+      font-size: 17px;
+      line-height: 21px;
       color: #000000; }
       .agency_featured_item .agency_featured_content p.featured-title {
         font-family: "Work Sans", sans-serif;
@@ -4280,7 +4279,7 @@ ol.breadcrumb-list {
         font-weight: 700; }
     .agency_featured_item .agency_featured_content .top-list-features {
       max-width: 90%;
-      font-size: 20px; }
+      font-size: 17px; }
       .agency_featured_item .agency_featured_content .top-list-features li {
         margin-bottom: 20px; }
     .agency_featured_item .agency_featured_content .icon {
@@ -5339,7 +5338,7 @@ ol.breadcrumb-list {
     margin-bottom: 15px;
     color: #000000; }
   .p_service_item p {
-    font-size: 18px;
+    font-size: 17px;
     color: #000000; }
 
 .symbols-pulse {
@@ -11512,6 +11511,10 @@ p {
           color: #1C84C6; }
     .blog_area_two .contents-list a {
       color: #000000; }
+    
+      .blog_area_two .contents-list a:hover {
+        color: #1C84C6;
+      }
 
 .blog_list_item_two {
   position: relative; }
@@ -22130,7 +22133,7 @@ footer .btn-trial {
   display: flex;
   flex-direction: column;
   position: absolute;
-  right: 25%;
+  right: 3%;
   top: 0; }
   .to-top span {
     display: inline-block; }
@@ -22274,6 +22277,18 @@ footer .f-logo img {
   margin-bottom: 0; }
 
 @media screen and (max-width: 768px) {
+  .agency_content p , p.f_size_20.l_height40 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .agency_content h2 {
+    font-size: 30px;
+    line-height: 34px;
+  }
+  h2 {
+    font-size: 28px;
+    line-height: 30px;
+  }
   .top-features {
     background: url(../img/main-img/tab-bg.png) center 90%/80% no-repeat; }
   .top-feature-tab {
@@ -22823,9 +22838,6 @@ footer .f-logo img {
     bottom: 0; } }
 
 @media screen and (max-width: 768px) {
-  .agency_content p {
-    font-size: 17px;
-    line-height: 25px; }
   .form-free-trial.mt_60 {
     margin-top: 30px; }
   .agency_banner_btn, .agency_banner_btn_two, .p_service_item p {
@@ -23276,8 +23288,15 @@ footer .curved {
   .blog_breadcrumb_area {
     background-image: url(../img/main-img/bg-article-intro.png);
     background-repeat: no-repeat;
-    background-position: 88% center;
+    background-position: 65vw center;
   }
+
+.blog-accordion {
+  position: sticky;
+  top: 105px;
+  z-index: 9;
+  background: #fff;
+}
 
 .blog-accordion .contents-list {
   display: none;
@@ -23316,4 +23335,9 @@ footer .curved {
 
 .footer_area .curved {
   top: -17px;
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 35px;
 }

@@ -5,6 +5,10 @@
     .erp_banner_area_two .animation_img{
         margin-top: -320px;
     }
+
+    .blog_breadcrumb_area {
+        background-position: 60vw center;
+    }
 }
 @media(max-width:1650px){
     .about_content{
