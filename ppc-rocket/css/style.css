@@ -21464,7 +21464,7 @@ a .h_head:hover {
   color: #23c7c9; }
 
 .footer_area_four .footer_bottom a:hover {
-  color: #5e2ced; }
+  color: #fff; }
 
 /*======= footer_area_five css ========*/
 .footer_area_five .footer_top .f_widget.about-widget .f_list li a:hover {
@@ -21559,7 +21559,7 @@ a .h_head:hover {
       left: 0;
       transition: all 0.2s linear; }
     .error_footer .f_menu li a:hover {
-      color: #5e2ced; }
+      color: #fff; }
       .error_footer .f_menu li a:hover:before {
         width: 100%; }
   .error_footer .f_menu li + li:before {
@@ -23348,4 +23348,8 @@ footer .curved {
 h3 {
   font-size: 30px;
   line-height: 35px;
+}
+
+.blog-sidebar {
+  max-width: 370px;
 }

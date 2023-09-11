@@ -6743,6 +6743,14 @@
         padding-left: 5px;
     }
 
+    .f_widget.about-widget .f_list {
+        padding-left: 30%;
+    }
+
+    .blog-sidebar {
+        max-width: 100%;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -6785,10 +6793,6 @@
 
     .agency_featured_item .agency_featured_content .top-list-features li {
         background-position: 0 5px;
-    }
-
-    .f_widget.about-widget .f_list {
-        padding-left: 30%;
     }
 
     .blog-list-features li {
