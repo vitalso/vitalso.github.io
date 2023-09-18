@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width , initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Contact</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="dist/output.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Header start-->
+    <header class="bg-black py-4">
+      <div class="container px-3 flex items-center">
+        <a href="index.html"><img src="assets/images/logo.svg" alt="logo"></a>
+
+        <nav id="navbar" class="hidden w-full py-3 lg:py-0 lg:w-auto lg:block absolute left-0 px-3 lg:px-0 lg:left-auto lg:relative top-[72px] bg-black z-[11] lg:top-auto">
+          <ul class="flex-col lg:flex-row flex items-start lg:items-center gap-4 xl:gap-9 lg:ml-12">
+            <li><a href="#" class="text-white text-base font-bold leading-5 transition-all hover:text-secondary-red">Strona Główna</a></li>
+            <li><a href="#" class="text-white text-base font-bold leading-5 transition-all hover:text-secondary-red">O nas</a></li>
+            <li class="relative">
+              <a href="#" class="text-white text-base font-bold leading-5 transition-all hover:text-secondary-red">Oferta</a>
+              <span class="text-white bg-secondary-red rounded-[5px] text-[10px] font-bold h-[15px] px-1 absolute -top-4 -end-4">NEW!</span>
+            </li>
+            <li><a href="#" class="text-white text-base font-bold leading-5 transition-all hover:text-secondary-red">Klienci</a></li>
+            <li><a href="#" class="text-white text-base font-bold leading-5 transition-all hover:text-secondary-red">Galeria</a></li>
+            <li><a href="#" class="text-white text-base font-bold leading-5 transition-all hover:text-secondary-red">Kontakt</a></li>
+          </ul>
+        </nav>
+
+        <div class="ml-auto flex items-center gap-4">
+
+          <button id="dropdownDefaultButton"
+            data-dropdown-toggle="dropdown" 
+            type="button"
+            class="text-white text-base leading-4 gap-1.5 flex items-center px-5 py-2.5 font-gilroy"
+          >
+            Polski
+
+            <img src="assets/images/flag-pl.svg" alt="flag-pl">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="5" viewBox="0 0 9 5" fill="none" class="fill-white">
+              <g clip-path="url(#clip0_32_4304)">
+                <path d="M5.26789 4.63159L8.31003 0.933475C8.45062 0.762689 8.52502 0.59061 8.52502 0.447579C8.52502 0.171055 8.25835 0 7.81197 0L1.23704 0C0.791179 0 0.525024 0.17084 0.525024 0.446716C0.525024 0.589963 0.599496 0.759294 0.740474 0.930457L3.78254 4.6303C3.9785 4.86823 4.24219 5 4.52538 5C4.80837 5.00005 5.072 4.8698 5.26789 4.63159Z"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_32_4304">
+                  <rect width="5" height="8" fill="white" transform="matrix(0 1 -1 0 8.52502 0)"/>
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+          
+          <!-- Dropdown menu -->
+          <div id="dropdown" class="z-20 absolute hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+            <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">English</a>
+              </li>
+            </ul>
+          </div>
+
+          <button class="hidden sm:block uppercase font-button text-white font-bold text-[13px] leading-5 tracking-wider px-3 py-2.5 relative group/btn">
+            <span class="block absolute bg-gray-secondary w-8 h-8 top-0 left-0 transition-all group-hover/btn:w-full group-hover/btn:h-full group-hover/btn:bg-secondary-red"></span>
+            <span class="relative z-10">skontaktuj się</span>
+          </button>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button data-collapse-toggle="navbar" type="button" class="inline-flex items-center ml-3 p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:shadow-none dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+        </button>
+
+      </div>
+    </header>
+
+    <main class="overflow-x-hidden">
+
+      <!-- Intro -->
+      <section class="bg-black text-white relative pb-14 lg:pb-16 xl:pb-0 overflow-x-hidden">
+
+        <div class="container flex flex-col md:flex-row md:items-center xl:items-start justify-between xl:justify-start px-3">
+
+          <div class="pt-8 xl:pt-32 pb-8 md:pb-20 xl:pb-40 max-w-xl z-10">
+            <p class="mb-4 text-base text-gray font-medium leading-9">/ Formularz kontaktowy</p>
+
+            <p class="text-primary-red leading-6 mb-4 font-bold text-xl sm:text-2xl tracking-[10px]">SKONTAKTUJ SIĘ</p>
+            
+            <h2 class="font-medium text-4xl sm:text-[72px] leading-9 sm:leading-[72px] font-display mb-4">Potrzebujesz pomocy?</h2>
+            
+            <p class="text-base sm:text-lg leading-6 sm:leading-8 text-gray mb-4">Rozumiejąc, że życie niesie ze sobą wiele wyzwań, jesteśmy gotowi Ci pomóc w każdym momencie. Nasza misja to zapewnić wsparcie i rozwiązywać Twoje problemy. Jeśli masz pytania, potrzebujesz porady lub wsparcia, jesteśmy dostępni, aby Ci pomóc.</p>
+          </div>
+
+          <div class="md:max-w-lg text-center xl:ml-6 2xl:ml-auto md:pt-14 relative z-10">
+            <img src="assets/images/contact-us.svg" alt="contact" class="hidden lg:block">
+
+          </div>
+
+          <img src="assets/images/coctail_3.svg" alt="image" class="hidden lg:block absolute -bottom-28 xl:bottom-0 right-3 2xl:right-20 z-[1]">
+
+        </div>
+
+        <!-- Bootom text line -->
+        <div class="bg-dark absolute w-full bottom-0 left-0 py-2 z-10">
+          <div class="container px-3">
+            <div class="flex items-center text-[13px] font-button font-bold uppercase leading-5 text-gray gap-2.5">
+              <span class="whitespace-nowrap">FOTOBUDKA DOBRZEPSTRYKNIĘCI</span>
+              <span class="whitespace-nowrap">BAR DOBRZEPSTRYKNIĘCI</span>
+              <span class="whitespace-nowrap">CIĘŻKI DYM DOBRZEPSTRYKNIĘCI</span>
+              <span class="whitespace-nowrap">KSIĘGA GOŚCI DOBRZEPSTRYKNIĘCI</span>
+              <span class="whitespace-nowrap">PROFESJONALNI ANIMATORZY DOBRZEPSTRYKNIĘCI</span>
+            </div>
+          </div>
+        </div>
+
+        <img src="assets/images/lemon-single.svg" alt="image" class="absolute hidden sm:block bottom-8 xl:bottom-20 left-[60%]">
+      </section>
+
+      <section class="pt-12 relative before:block before:w-1/2 before:h-full before:bg-light-gray before:right-0 before:top-0 before:absolute before:z-0">
+        <div class="container px-3  z-10 relative">
+
+            <p class="text-primary-red leading-6 mb-6 font-bold text-xl sm:text-2xl tracking-[10px] text-center">SKONTAKTUJ SIĘ</p>
+            <h3 class="font-medium text-4xl mb-6 sm:text-[72px] leading-9 sm:leading-[72px] font-display text-center">ZADZWOŃ</h3>
+
+            <div class="flex flex-col sm:items-center lg:flex-row gap-8 justify-center pb-20">
+                <div class="flex gap-6">
+                    <div class="bg-secondary-red w-[30px] h-[30px] rounded-full flex justify-center items-center flex-col text-white text-base">1</div>
+
+                    <div class="text-black">
+                        <h4 class="text-2xl sm:text-[32px] leading-8 font-bold mb-2">Paweł Gajcy</h4>
+                        <p class="text-base font-bold">Właściciel</p>
+                        <a href="tel:+48789253987" class="text-3xl sm:text-5xl font-medium sm:leading-[72px] font-display transition-all hover:text-secondary-red">+48 789 253 987</a>
+                        
+                        <button class="hidden sm:block uppercase font-button text-gray-secondary font-bold text-[13px] leading-5 tracking-wider px-14 py-2.5 relative group/btn">
+                            <span class="block absolute bg-gray-secondary w-8 h-8 top-0 left-0 transition-all group-hover/btn:w-full group-hover/btn:h-full group-hover/btn:bg-secondary-red"></span>
+                            <span class="relative z-10">ZADZWOŃ</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex gap-6">
+                    <div class="bg-secondary-red w-[30px] h-[30px] rounded-full flex justify-center items-center flex-col text-white text-base">2</div>
+
+                    <div class="text-black">
+                        <h4 class="text-2xl sm:text-[32px] leading-8 font-bold mb-2">Paweł Gajcy</h4>
+                        <p class="text-base font-bold">Właściciel</p>
+                        <a href="tel:+48789253987" class="text-3xl sm:text-5xl font-medium leading-[72px] font-display transition-all hover:text-secondary-red">+48 789 253 987</a>
+                        
+                        <button class="hidden sm:block uppercase font-button text-gray-secondary font-bold text-[13px] leading-5 tracking-wider px-14 py-2.5 relative group/btn">
+                            <span class="block absolute bg-gray-secondary w-8 h-8 top-0 left-0 transition-all group-hover/btn:w-full group-hover/btn:h-full group-hover/btn:bg-secondary-red"></span>
+                            <span class="relative z-10">ZADZWOŃ</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <img src="assets/images/phone.svg" alt="phone" class="absolute hidden sm:block bottom-0 -left-14 xl:left-0">
+
+        <div class="bg-secondary-red py-2.5 text-center absolute bottom-0 w-full">
+            <div class="container px-3">
+              <p class="text-white leading-6 font-bold text-xl sm:text-2xl">LUB</p>
+            </div>
+        </div>
+      </section>
+
+      <section class="py-8 relative">
+        <div class="container px-3">
+          
+          <div class="lg:w-2/3 mb-4">
+            <p class="text-primary-red leading-6 mb-4 font-bold text-xl sm:text-2xl tracking-[10px]">ZAPYTAJ O OFERTE</p>
+            <h3 class="font-medium text-4xl mb-4 sm:text-[72px] leading-9 sm:leading-[72px] font-display">FORMULARZ KONTAKTOWY</h3>
+
+            <p class="text-base sm:text-lg text-gray leading-6 sm:leading-9 lg:w-3/4">Wypełnij nasz prosty formularz kontaktowy, a my postaramy się odpowiedzieć na Twoje pytania i prośby tak szybko, jak to możliwe. Czekamy na Twój kontakt! Nasz zespół jest również gotowy, aby pomóc Ci w stworzeniu najlepszej oferty dostosowanej do Twoich potrzeb.</p>
+          </div>
+
+          <form action="#" class="flex flex-col items-start gap-4 max-w-5xl">
+            <p class="text-dark text-base font-bold">WIADOMOŚĆ OD</p>
+
+            <label class="relative inline-flex items-center cursor-pointer bg-[#E7E7E7] rounded-full w-full xs:w-[380px] font-button leading-[30px]">
+              <input type="checkbox" value="" class="sr-only peer" id="switch">
+              <div class="w-full flex p-1 justify-between peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-1 after:left-1 after:bg-secondary-red after:rounded-[200px] after:h-10 after:w-1/2 xs:after:w-[186px] after:transition-all">
+                <span class="w-full h-10 rounded-full xs:px-5 p-1 z-10 relative flex gap-2 whitespace-nowrap justify-center items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none" class="fill-white">
+                    <path d="M8.50109 8.3084C10.7868 8.3084 12.6553 6.43993 12.6553 4.1542C12.6553 1.86847 10.7868 0 8.50109 0C6.21536 0 4.34692 1.86847 4.34692 4.1542C4.34692 6.43993 6.2154 8.3084 8.50109 8.3084Z"/>
+                    <path d="M15.6304 11.6281C15.5215 11.356 15.3764 11.1021 15.2132 10.8662C14.3787 9.63266 13.0907 8.81634 11.6395 8.61679C11.4581 8.59866 11.2585 8.63491 11.1134 8.74377C10.3515 9.30613 9.44448 9.59637 8.50114 9.59637C7.55781 9.59637 6.6508 9.30613 5.88889 8.74377C5.74375 8.63491 5.5442 8.5805 5.36281 8.61679C3.91156 8.81634 2.60545 9.63266 1.78913 10.8662C1.62587 11.1021 1.48073 11.3742 1.37191 11.6281C1.3175 11.737 1.33562 11.864 1.39003 11.9728C1.53517 12.2268 1.71656 12.4808 1.87982 12.6985C2.13378 13.0431 2.4059 13.3515 2.7143 13.6418C2.96826 13.8957 3.2585 14.1315 3.54878 14.3674C4.98187 15.4377 6.70524 16 8.48302 16C10.2608 16 11.9842 15.4377 13.4173 14.3674C13.7075 14.1497 13.9977 13.8957 14.2517 13.6418C14.542 13.3515 14.8322 13.0431 15.0862 12.6985C15.2676 12.4626 15.4309 12.2268 15.576 11.9728C15.6667 11.864 15.6848 11.737 15.6304 11.6281Z"/>
+                  </svg>
+                  Osoba prywatna
+                </span>
+
+                <span class="w-full h-10 rounded-full xs:px-5 p-1 z-10 relative flex gap-2 justify-center items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none" class="fill-dark">
+                    <g clip-path="url(#clip0_55_6990)">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6096 -1.75C10.7688 -1.7476 10.9256 -1.6988 11.0592 -1.6052C11.2728 -1.4556 11.4 -1.2108 11.4 -0.95V16.65C11.4 17.0884 11.0472 17.4444 10.6104 17.45H10.6H1.8C1.3584 17.45 1 17.0916 1 16.65C1 16.65 1 6.7564 1 3.3708C1 2.3612 1.6312 1.4604 2.58 1.1148C4.916 0.266 10.3264 -1.702 10.3264 -1.702C10.4112 -1.7324 10.4984 -1.7484 10.5856 -1.75H10.5976H10.6096ZM13 4.8084L15.5456 5.8988C16.428 6.2772 17 7.1452 17 8.1052V16.65C17 17.0916 16.6416 17.45 16.2 17.45H12.8632C12.952 17.1996 13 16.9308 13 16.65V4.8084ZM7.4104 11.85C7.8472 11.8444 8.2 11.4884 8.2 11.05C8.2 10.6084 7.8416 10.25 7.4 10.25H5C4.5584 10.25 4.2 10.6084 4.2 11.05C4.2 11.4916 4.5584 11.85 5 11.85H7.4H7.4104ZM7.4104 8.65C7.8472 8.6444 8.2 8.2884 8.2 7.85C8.2 7.4084 7.8416 7.05 7.4 7.05H5C4.5584 7.05 4.2 7.4084 4.2 7.85C4.2 8.2916 4.5584 8.65 5 8.65H7.4H7.4104ZM7.4104 5.45C7.8472 5.4444 8.2 5.0884 8.2 4.65C8.2 4.2084 7.8416 3.85 7.4 3.85H5C4.5584 3.85 4.2 4.2084 4.2 4.65C4.2 5.0916 4.5584 5.45 5 5.45H7.4H7.4104Z"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_55_6990">
+                        <rect width="16" height="16" transform="translate(0.5)"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  Firma
+                </span>
+              </div>
+            </label>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-9 w-full">
+
+              <div>
+                <p class="text-dark text-base font-bold mb-4">DANE PODSTAWOWE</p>
+                
+                <div class="flex gap-4">
+                  <div class="w-1/2">
+                    <div class="relative">
+                      <input type="text" class="h-11 bg-input-bg rounded-[10px] pl-[14px] text-base text-black w-full outline-none" required>
+                      <p class="text-dark absolute left-[14px] top-1/2 -translate-y-1/2">Imie<span class="text-primary-red">*</span></p>
+                    </div>
+
+                  </div>
+
+                  <div class="w-1/2">
+                    <div class="relative">
+                      <input type="text" class="h-11 bg-input-bg rounded-[10px] pl-[14px] text-base text-dark w-full outline-none" required>
+                      <p class="text-dark absolute left-[14px] top-1/2 -translate-y-1/2">Nazwisko<span class="text-primary-red">*</span></p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div>
+                <p class="text-dark text-base font-bold mb-4">DANE KONTAKTOWE</p>
+                
+                <div class="flex gap-4">
+                  <div class="w-1/2">
+                    <div class="relative">
+                      <input type="text" class="h-11 bg-input-bg rounded-[10px] pl-[14px] text-base text-dark w-full outline-none" required>
+                      <p class="text-dark absolute left-[14px] top-1/2 -translate-y-1/2">E-mail<span class="text-primary-red">*</span></p>
+                    </div>
+                  </div>
+
+                  <div class="w-1/2">
+                    <div class="relative">
+                      <input type="text" class="h-11 bg-input-bg rounded-[10px] pl-[14px] text-base text-dark w-full outline-none" required>
+                      <p class="text-dark absolute left-[14px] top-1/2 -translate-y-1/2">Telefon kontaktowy<span class="text-primary-red">*</span></p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div>
+              <p class="text-dark text-base font-bold mb-4">ZAPYTANIE O ATRAKCJE</p>
+
+              <div class="flex flex-wrap gap-4">
+                <!-- Checked radio -->
+                <label class="cursor-pointer">
+                  <input type="radio" name="service" value="" class="sr-only" checked>
+                  <span class="rounded-[10px] border px-3.5 h-11 flex gap-3.5 items-center text-base font-semibold leading-9 bg-input-bg border-input-bg">
+                    <div class="w-3 h-3 rounded-full border border-dark relative after:absolute after:w-1.5 after:h-1.5 after:rounded-full after:bg-secondary-red after:top-[2px] after:left-[2px] after:opacity-0"></div>
+                    <span class="text-dark">Fotobudka</span>
+                  </span>
+                </label>
+
+                <!-- Default radio -->
+                <label class="cursor-pointer">
+                  <input type="radio" name="service" value="" class="sr-only">
+                  <span class="rounded-[10px] border px-3.5 h-11 flex gap-3.5 items-center text-base font-semibold leading-9 bg-input-bg border-input-bg">
+                    <div class="w-3 h-3 rounded-full border border-dark relative after:absolute after:w-1.5 after:h-1.5 after:rounded-full after:bg-secondary-red after:top-[2px] after:left-[2px] after:opacity-0"></div>
+                    <span class="text-dark">Fotolustro</span>
+                  </span>
+                </label>
+
+                <!-- Default radio -->
+                <label class="cursor-pointer">
+                  <input type="radio" name="service" value="" class="sr-only">
+                  <span class="rounded-[10px] border px-3.5 h-11 flex gap-3.5 items-center text-base font-semibold leading-9 bg-input-bg border-input-bg">
+                    <div class="w-3 h-3 rounded-full border border-dark relative after:absolute after:w-1.5 after:h-1.5 after:rounded-full after:bg-secondary-red after:top-[2px] after:left-[2px] after:opacity-0"></div>
+                    <span class="text-dark">Fotobudka 360</span>
+                  </span>
+                </label>
+
+                <!-- Default radio -->
+                <label class="cursor-pointer">
+                  <input type="radio" name="service" value="" class="sr-only">
+                  <span class="rounded-[10px] border px-3.5 h-11 flex gap-3.5 items-center text-base font-semibold leading-9 bg-input-bg border-input-bg">
+                    <div class="w-3 h-3 rounded-full border border-dark relative after:absolute after:w-1.5 after:h-1.5 after:rounded-full after:bg-secondary-red after:top-[2px] after:left-[2px] after:opacity-0"></div>
+                    <span class="text-dark">Drinkbar</span>
+                  </span>
+                </label>
+
+                <!-- Default radio -->
+                <label class="cursor-pointer">
+                  <input type="radio" name="service" value="" class="sr-only">
+                  <span class="rounded-[10px] border px-3.5 h-11 flex gap-3.5 items-center text-base font-semibold leading-9 bg-input-bg border-input-bg">
+                    <div class="w-3 h-3 rounded-full border border-dark relative after:absolute after:w-1.5 after:h-1.5 after:rounded-full after:bg-secondary-red after:top-[2px] after:left-[2px] after:opacity-0"></div>
+                    <span class="text-dark">Ciężki dym</span>
+                  </span>
+                </label>
+
+                <!-- Default radio -->
+                <label class="cursor-pointer">
+                  <input type="radio" name="service" value="" class="sr-only">
+                  <span class="rounded-[10px] border px-3.5 h-11 flex gap-3.5 items-center text-base font-semibold leading-9 bg-input-bg border-input-bg">
+                    <div class="w-3 h-3 rounded-full border border-dark relative after:absolute after:w-1.5 after:h-1.5 after:rounded-full after:bg-secondary-red after:top-[2px] after:left-[2px] after:opacity-0"></div>
+                    <span class="text-dark">Napis miłość</span>
+                  </span>
+                </label>
+
+                <!-- Default radio -->
+                <label class="cursor-pointer">
+                  <input type="radio" name="service" value="" class="sr-only">
+                  <span class="rounded-[10px] border px-3.5 h-11 flex gap-3.5 items-center text-base font-semibold leading-9 bg-input-bg border-input-bg">
+                    <div class="w-3 h-3 rounded-full border border-dark relative after:absolute after:w-1.5 after:h-1.5 after:rounded-full after:bg-secondary-red after:top-[2px] after:left-[2px] after:opacity-0"></div>
+                    <span class="text-dark">Konfetti</span>
+                  </span>
+                </label>
+
+                <!-- Default radio -->
+                <label class="cursor-pointer">
+                  <input type="radio" name="service" value="" class="sr-only">
+                  <span class="rounded-[10px] border px-3.5 h-11 flex gap-3.5 items-center text-base font-semibold leading-9 bg-input-bg border-input-bg">
+                    <div class="w-3 h-3 rounded-full border border-dark relative after:absolute after:w-1.5 after:h-1.5 after:rounded-full after:bg-secondary-red after:top-[2px] after:left-[2px] after:opacity-0"></div>
+                    <span class="text-dark">Banki mydlane</span>
+                  </span>
+                </label>
+
+                <!-- Default radio -->
+                <label class="cursor-pointer">
+                  <input type="radio" name="service" value="" class="sr-only">
+                  <span class="rounded-[10px] border px-3.5 h-11 flex gap-3.5 items-center text-base font-semibold leading-9 bg-input-bg border-input-bg">
+                    <div class="w-3 h-3 rounded-full border border-dark relative after:absolute after:w-1.5 after:h-1.5 after:rounded-full after:bg-secondary-red after:top-[2px] after:left-[2px] after:opacity-0"></div>
+                    <span class="text-dark">Fontanny iskier</span>
+                  </span>
+                </label>
+
+                <!-- Default radio -->
+                <label class="cursor-pointer">
+                  <input type="radio" name="service" value="" class="sr-only">
+                  <span class="rounded-[10px] border px-3.5 h-11 flex gap-3.5 items-center text-base font-semibold leading-9 bg-input-bg border-input-bg">
+                    <div class="w-3 h-3 rounded-full border border-dark relative after:absolute after:w-1.5 after:h-1.5 after:rounded-full after:bg-secondary-red after:top-[2px] after:left-[2px] after:opacity-0"></div>
+                    <span class="text-dark">Miny dymne</span>
+                  </span>
+                </label>
+
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-9 w-full">
+
+              <div>
+                <p class="text-dark text-base font-bold mb-4">LOKALIZACJA</p>
+                
+                <div class="flex gap-4">
+                  <div class="w-1/2">
+                    <div class="relative">
+                      <input type="text" class="h-11 bg-input-bg rounded-[10px] pl-[14px] text-base text-black w-full outline-none" required>
+                      <p class="text-dark absolute left-[14px] top-1/2 -translate-y-1/2">Miasto<span class="text-primary-red">*</span></p>
+                    </div>
+
+                  </div>
+
+                  <div class="w-1/2">
+                    <div class="relative">
+                      <input type="text" class="h-11 bg-input-bg rounded-[10px] pl-[14px] text-base text-dark w-full outline-none" required>
+                      <p class="text-dark absolute left-[14px] top-1/2 -translate-y-1/2">Kod pocztowy<span class="text-primary-red">*</span></p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div>
+                <p class="text-dark text-base font-bold mb-4">LICZBA OSÓB NA UROCZYSTOŚCI</p>
+                
+                <div class="flex gap-4">
+                  <div class="w-1/2">
+                    <div class="relative">
+                      <input type="text" class="h-11 bg-input-bg rounded-[10px] pl-[14px] text-base text-dark w-full outline-none" required>
+                      <p class="text-dark absolute left-[14px] top-1/2 -translate-y-1/2">Liczba osób<span class="text-primary-red">*</span></p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="w-full">
+              <p class="text-dark text-base font-bold mb-4">DODATKOWA WIADOMOŚĆ</p>
+              <div class="relative">
+                <textarea class="h-40 bg-input-bg rounded-[10px] pl-[14px] pt-4 text-base text-dark w-full outline-none" required></textarea>
+                <p class="text-dark absolute left-[14px] top-4">Wiadomość<span class="text-primary-red">*</span></p>
+              </div>
+            </div>
+
+            <p class="px-2.5 text-[#9E9E9E] text-xs">This site is protected by reCAPTCHA <br> and the Google Privacy Policy and Terms of Serviceapply.</p>
+            <p class="px-5 text-sm"><sup class="text-secondary-red">*</sup> - required fields</p>
+
+            <button type="submit" class="rounded-full text-lg font-semibold text-white bg-dark py-4 px-11 transition-all hover:bg-secondary-red">Wyślij wiadomość</button>
+          
+          </form>
+
+        </div>
+
+        <div class="hidden xl:block absolute top-1/2 -rotate-90 overflow-hidden h-32 -right-[340px] font-section text-[256px] leading-[256px] text-[#151515]">kontakt</div>
+
+        <!-- Top side image -->
+        <img src="assets/images/curved-line.svg" alt="image" class="hidden xl:block absolute top-0 -scale-y-100 right-0 z-[1]">
+
+      </section>
+
+      <section class="py-10 text-center text-dark">
+        <div class="container px-3">
+          <p class="font-bold text-base tracking-[6px]">ZNAJDŹ NAS RÓWNIEŻ NA</p>
+            <div class="flex justify-center items-center gap-1 sm:gap-9 mt-2">
+              <a href="#" class="transition-all hover:-translate-y-1">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="mx-auto">
+                  <g clip-path="url(#clip0_55_5515)">
+                    <path d="M10.4287 15.9499C10.3345 15.9499 8.35838 15.9505 7.44698 15.9496C6.97778 15.9493 6.81038 15.7807 6.81038 15.3085C6.80978 14.0956 6.80948 12.8827 6.81038 11.6698C6.81068 11.2036 6.98768 11.0257 7.45088 11.0254C8.36228 11.0248 10.3276 11.0251 10.4287 11.0251C10.4287 10.942 10.4284 9.19088 10.4287 8.38448C10.4293 7.19228 10.642 6.05108 11.2477 5.00619C11.8678 3.93669 12.7702 3.20409 13.9267 2.78049C14.6674 2.50899 15.4363 2.40069 16.2223 2.40009C17.2057 2.39949 18.1891 2.40039 19.1728 2.40219C19.5955 2.40279 19.783 2.58969 19.7839 3.01539C19.7857 4.15629 19.7857 5.29719 19.7839 6.43778C19.7833 6.86798 19.6036 7.04078 19.1713 7.04558C18.3652 7.05428 17.5585 7.04888 16.7533 7.08128C15.94 7.08128 15.5122 7.47848 15.5122 8.32028C15.4927 9.21068 15.5041 10.102 15.5041 11.0248C15.5803 11.0248 17.8948 11.0245 18.9766 11.0248C19.468 11.0248 19.636 11.1937 19.636 11.6878C19.636 12.8941 19.6357 14.1007 19.6348 15.307C19.6345 15.7939 19.4767 15.9493 18.9823 15.9496C17.9005 15.9502 15.595 15.9499 15.4942 15.9499V25.7134C15.4942 26.2339 15.3304 26.3998 14.8168 26.3998C13.5646 26.3998 12.3121 26.4001 11.0599 26.3998C10.606 26.3998 10.429 26.2234 10.429 25.7695C10.4287 22.5898 10.4287 16.0615 10.4287 15.9499Z" fill="black"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_55_5515">
+                      <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <span class="font-dsans text-xs sm:text-base text-[#181818] leading-6 mt-2 inline-block">/dobrzepstryknieci</span>
+
+              </a>
+
+              <a href="#" class="transition-all hover:-translate-y-1">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="mx-auto">
+                  <path d="M22.515 6.01831C21.1453 6.01831 19.8815 5.56456 18.8667 4.79909C17.7028 3.92159 16.8665 2.6344 16.5712 1.15081C16.4981 0.784248 16.4587 0.405967 16.455 0.0183105H12.5423V10.7096L12.5376 16.5657C12.5376 18.1313 11.5181 19.4588 10.1048 19.9257C9.69465 20.0611 9.25168 20.1253 8.79043 20.1C8.20168 20.0677 7.64996 19.89 7.17043 19.6032C6.14996 18.9928 5.45809 17.8857 5.43934 16.6191C5.40981 14.6396 7.01012 13.0257 8.98824 13.0257C9.37871 13.0257 9.75371 13.0894 10.1048 13.2052V10.283V9.23253C9.73449 9.17769 9.35762 9.14909 8.97652 9.14909C6.81137 9.14909 4.78637 10.0491 3.33887 11.6705C2.2448 12.8958 1.58855 14.4591 1.4873 16.0983C1.35465 18.2517 2.14262 20.2988 3.67074 21.8091C3.89527 22.0308 4.13105 22.2366 4.37762 22.4264C5.68777 23.4347 7.28949 23.9813 8.97652 23.9813C9.35762 23.9813 9.73449 23.9532 10.1048 23.8983C11.6807 23.6649 13.1348 22.9435 14.2823 21.8091C15.6923 20.4155 16.4714 18.5653 16.4798 16.5961L16.4597 7.85112C17.1323 8.37003 17.8678 8.7994 18.6572 9.13269C19.8848 9.65065 21.1865 9.91315 22.5262 9.91269V7.07159V6.01737C22.5272 6.01831 22.5159 6.01831 22.515 6.01831Z" fill="black"/>
+                </svg>
+
+                <span class="font-dsans text-xs sm:text-base text-[#181818] leading-6 mt-2 inline-block">/dobrze.pstryknieci</span>
+
+              </a>
+
+              <a href="#" class="transition-all hover:-translate-y-1">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="mx-auto">
+                  <g clip-path="url(#clip0_55_5521)">
+                    <path d="M23.9765 7.04917C23.9203 5.7752 23.714 4.89936 23.4186 4.14044C23.1139 3.33485 22.645 2.61362 22.0308 2.01405C21.4306 1.40515 20.7039 0.93201 19.9069 0.632317C19.1428 0.337199 18.2707 0.131184 16.9955 0.0750145C15.7108 0.0140881 15.3029 0 12.0445 0C8.78601 0 8.37815 0.0140881 7.09818 0.0702575C5.82297 0.126427 4.94627 0.332625 4.18678 0.62756C3.38023 0.93201 2.65829 1.40039 2.05813 2.01405C1.44864 2.61362 0.975219 3.33961 0.67505 4.13586C0.379644 4.89936 0.173427 5.77045 0.117202 7.04441C0.0562161 8.32789 0.0421143 8.73535 0.0421143 11.9906C0.0421143 15.2459 0.0562161 15.6533 0.11244 16.9321C0.168665 18.206 0.375065 19.0819 0.670472 19.8408C0.975219 20.6464 1.44864 21.3676 2.05813 21.9672C2.65829 22.5761 3.38499 23.0492 4.18202 23.3489C4.94627 23.644 5.81821 23.85 7.0936 23.9062C8.37339 23.9626 8.78143 23.9765 12.0399 23.9765C15.2983 23.9765 15.7062 23.9626 16.9862 23.9062C18.2614 23.85 19.1381 23.644 19.8976 23.3489C21.5105 22.7259 22.7857 21.452 23.4093 19.8408C23.7045 19.0773 23.9109 18.206 23.9671 16.9321C24.0234 15.6533 24.0375 15.2459 24.0375 11.9906C24.0375 8.73535 24.0327 8.32789 23.9765 7.04917ZM21.8152 16.8384C21.7636 18.0093 21.5667 18.6417 21.4026 19.0632C20.9993 20.1077 20.1695 20.9367 19.124 21.3396C18.702 21.5035 18.0645 21.7002 16.897 21.7516C15.6311 21.808 15.2514 21.8219 12.0492 21.8219C8.847 21.8219 8.46258 21.808 7.20129 21.7516C6.02918 21.7002 5.39625 21.5035 4.97429 21.3396C4.45399 21.1475 3.98038 20.8431 3.59597 20.4449C3.19745 20.0561 2.89271 19.5878 2.70041 19.068C2.53631 18.6464 2.33944 18.0093 2.28798 16.8431C2.23157 15.5785 2.21765 15.199 2.21765 11.9999C2.21765 8.80085 2.23157 8.41681 2.28798 7.15693C2.33944 5.98597 2.53631 5.35366 2.70041 4.93211C2.89271 4.41213 3.19745 3.93918 3.60073 3.55496C3.98972 3.15683 4.45857 2.85238 4.97905 2.66045C5.40101 2.49652 6.03871 2.29983 7.20605 2.24824C8.47192 2.19207 8.85176 2.17798 12.0538 2.17798C15.2608 2.17798 15.6404 2.19207 16.9017 2.24824C18.0738 2.29983 18.7068 2.49652 19.1287 2.66045C19.649 2.85238 20.1226 3.15683 20.507 3.55496C20.9056 3.94375 21.2103 4.41213 21.4026 4.93211C21.5667 5.35366 21.7636 5.99055 21.8152 7.15693C21.8715 8.42157 21.8856 8.80085 21.8856 11.9999C21.8856 15.199 21.8715 15.5737 21.8152 16.8384Z" fill="black"/>
+                    <path d="M12.0445 5.83142C8.64086 5.83142 5.87927 8.59013 5.87927 11.9907C5.87927 15.3912 8.64086 18.1499 12.0445 18.1499C15.4484 18.1499 18.2098 15.3912 18.2098 11.9907C18.2098 8.59013 15.4484 5.83142 12.0445 5.83142ZM12.0445 15.986C9.83641 15.986 8.04528 14.1968 8.04528 11.9907C8.04528 9.7845 9.83641 7.99532 12.0445 7.99532C14.2529 7.99532 16.0438 9.7845 16.0438 11.9907C16.0438 14.1968 14.2529 15.986 12.0445 15.986Z" fill="black"/>
+                    <path d="M19.8931 5.5878C19.8931 6.38186 19.2486 7.0257 18.4536 7.0257C17.6588 7.0257 17.0143 6.38186 17.0143 5.5878C17.0143 4.79356 17.6588 4.1499 18.4536 4.1499C19.2486 4.1499 19.8931 4.79356 19.8931 5.5878Z" fill="black"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_55_5521">
+                      <rect width="24" height="23.9765" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <span class="font-dsans text-xs sm:text-base text-[#181818] leading-6 mt-2 inline-block">/dobrze.pstryknieci</span>
+
+              </a>
+              
+            </div>
+        </div>
+      </section>
+
+      <!-- Instagram -->
+      <section>
+        <div class="container">
+
+          <div class="py-6 text-center relative">
+            <p class="text-black sm:leading-6 font-bold text-xl sm:text-2xl tracking-[10px]">OBSERWUJ NAS NA INSTAGRAMIE</p>
+
+            <img src="assets/images/instagram-arrow.svg" alt="arrow" class="hidden lg:block absolute left-10 -top-2/3">
+
+            <img src="assets/images/instagram-arrow.svg" alt="arrow" class="hidden lg:block absolute right-10 -top-2/3 -scale-x-100">
+          </div>
+
+        </div>
+
+        <!-- Instagram feed -->
+        <div class="h-80 flex">
+          <img src="assets/images/instagram.png" alt="instagram" class="w-full md:w-1/2 h-full grayscale object-cover">
+          <img src="assets/images/instagram.png" alt="instagram" class="w-1/2 h-full grayscale object-cover hidden md:block">
+        </div>
+
+      </section>
+      
+    </main>
+
+    <!-- Footer-->
+    <footer class="bg-[#181818] py-10 md:py-20 text-white text-base leading-5">
+      <div class="container px-3">
+        <a href="index.html" class="inline-block"><img src="assets/images/logo.svg" alt="logo"></a>
+
+        <div class="my-6 mx-2.5 h-px bg-[#282828]"></div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-2.5 mb-8">
+          <div>
+            <p class="font-gilroy mb-2">Kontakt</p>
+
+            <div class="my-6 py-2 flex flex-col gap-4">
+              <a href="mailto: kontakt@dobrzepstryknieci.pl" class="inline-block transition-all hover:text-secondary-red font-dsans">kontakt@dobrzepstryknieci.pl</a>
+              <a href="tel:+48508392600" class="inline-block font-display text-4xl font-bold transition-all hover:text-secondary-red">+48 508 392 600</a>
+            </div>
+
+            <p class="font-bold text-sm tracking-[6px]">SPRAWDŹ NAS</p>
+            <div class="flex items-center gap-9 mt-6">
+              <a href="#"><span class="icon--fb w-6 h-6 block transition-all hover:-translate-y-1"></span></a>
+              <a href="#"><span class="icon--tt w-6 h-6 block transition-all hover:-translate-y-1"></span></a>
+              <a href="#"><span class="icon--inst w-6 h-6 block transition-all hover:-translate-y-1"></span></a>
+            </div>
+
+          </div>
+
+          <div>
+            <p class="font-gilroy mb-2">Strona Główna</p>
+
+            <ul class="py-2 flex flex-col gap-4 font-dsans">
+              <li><a href="#" class="transition-all hover:text-secondary-red">O nas</a></li>
+              <li><a href="#" class="transition-all hover:text-secondary-red">Oferta</a></li>
+              <li><a href="#" class="transition-all hover:text-secondary-red">Galeria</a></li>
+              <li><a href="#" class="transition-all hover:text-secondary-red">Kontakt</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="font-gilroy mb-2">Usługi</p>
+
+            <div class="flex justify-between">
+              <ul class="py-2 flex flex-col gap-4 font-dsans">
+                <li><a href="#" class="transition-all hover:text-secondary-red">Fotobudka</a></li>
+                <li><a href="#" class="transition-all hover:text-secondary-red">Fotolustro</a></li>
+                <li><a href="#" class="transition-all hover:text-secondary-red">Bar mobilny</a></li>
+                <li><a href="#" class="transition-all hover:text-secondary-red">Ciężki dym</a></li>
+              </ul>
+
+              <ul class="py-2 flex flex-col gap-4 font-dsans">
+                <li><a href="#" class="transition-all hover:text-secondary-red">Fontana iskier</a></li>
+                <li><a href="#" class="transition-all hover:text-secondary-red">Napis miłość</a></li>
+                <li><a href="#" class="transition-all hover:text-secondary-red">Bańki mydlane</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="sm:ml-auto">
+            <img src="assets/images/messenger-footer.svg" alt="messenger-footer">
+
+            <p class="my-2 font-display leading-9 text-4xl font-medium">MASZ PYTANIE? <br> NAPISZ DO NAS</p>
+
+            <button
+                class="uppercase font-button text-white font-bold text-[13px] leading-5 tracking-wider px-6 py-2.5 flex gap-2 items-center relative group/btn"
+              >
+                <span class="block absolute bg-gray-secondary w-8 h-8 top-0 left-0 transition-all group-hover/btn:w-full group-hover/btn:h-full group-hover/btn:bg-secondary-red"></span>
+                <span class="relative z-10">MASSANGER</span>
+                <span class="inline-block ml-2 w-3 h-3 icon--messenger z-10"></span>
+              </button>
+          </div>
+
+        </div>
+
+        <p class="text-base font-dsans text-center my-2.5">© 2023 reccly.pl - All Rights Reserved.</p>
+        <p class="font-dsans text-sm leading-6 text-gray text-center">Województwo Dolnośląskie dobrzepstryknięci · Województwo Kujawsko-Pomorskie dobrzepstryknięci · Województwo Lubelskie dobrzepstryknięci · Województwo Lubuskie dobrzepstryknięci · Województwo Łódzkie dobrzepstryknięci · Województwo Małopolskie dobrzepstryknięci · Województwo Mazowieckie dobrzepstryknięci · Województwo Opolskie dobrzepstryknięci · Województwo Podkarpackie dobrzepstryknięci · Województwo Podlaskie dobrzepstryknięci · Województwo Pomorskie dobrzepstryknięci · Województwo Śląskie dobrzepstryknięci · Województwo Świętokrzyskie dobrzepstryknięci · Województwo Warmińsko-Mazurskie dobrzepstryknięci · Województwo Wielkopolskie dobrzepstryknięci · Województwo Zachodniopomorskie dobrzepstryknięci</p>
+
+      </div>
+    </footer>
+
+    <!-- Flowbite -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  </body>
+</html>
