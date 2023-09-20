@@ -6785,6 +6785,10 @@
         margin-bottom: 32px;
     }
 
+    .cta-img {
+        max-width: 100%;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -6810,6 +6814,10 @@
 
     .blog_breadcrumb_area {
         background-size: 100%;
+    }
+
+    .cta-new {
+        padding: 16px;
     }
     
 }
