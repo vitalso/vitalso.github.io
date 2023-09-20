@@ -6781,6 +6781,10 @@
         font-size: 20px;
     }
 
+    .blog_grid_info .blog_list_item {
+        margin-bottom: 32px;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -6815,6 +6819,18 @@
     .price-nav-mobile a {
         padding-left: 5px;
         padding-right: 5px;
+    }
+
+    .curved {
+        height: 40px;
+    }
+
+    .curved.bottom {
+        bottom: -40px;
+    }
+
+    .curved.top {
+        top: -40px;
     }
     
 }
