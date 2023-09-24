@@ -2385,4 +2385,43 @@
         $(this).closest('div').toggleClass('open');
     });
 
+    // Show more features
+    $('.show__more button').on('click' , function(){
+        $(this).closest('div').prev('.row').find('.col-md-6').slice(4).find('.features__inner').toggleClass('hidden');
+        //$('.features__inner.hidden').toggleClass('hidden');
+
+        $(this).text(function(i, text){
+            return text === "Show More" ? "Hide" : "Show More";
+        })
+    });
+
+    // Feature overview
+    $('.f_overview--slider').slick({
+        autoplay: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: false,
+        dots: true,
+        arrows: true,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        prevArrow: '<button type="button" class="prev-arrow"><i class="ti-angle-left"></i></button>',
+        nextArrow: '<button type="button" class="next-arrow"><i class="ti-angle-right"></i></button>',
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                  slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 1,
+                  arrows: false,
+                }
+            },
+        ],
+    });
+
 })(jQuery);
