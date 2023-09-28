@@ -682,11 +682,11 @@
         padding-bottom: 10px;
     }
     .menu{
-        padding: 10px 20px;
+        padding: 10px 0;
         background: #fff;
         max-width: 960px;
         margin: 0 auto 30px auto;
-        gap: 10px;
+        gap: 28px;
     }
     .menu_one .navbar-collapse {
         margin-left: -20px;
@@ -703,10 +703,11 @@
         width: 100%;
         top: -22px;
         left: 0;
-        padding-top: 70px;
+        padding: 120px 50px 30px 50px;
     }
     .menu > .nav-item{
         margin-right: 0;
+        padding: 0;
     }
     .header_area .navbar-brand,.menu_toggle{
         transition: all 0.2s linear;
@@ -720,6 +721,7 @@
     }
     .menu > .nav-item > .nav-link{
         display: inline-block;
+        font-size: 24px;
     }
 
     .s_service_item{
@@ -2319,9 +2321,6 @@
         display: inline-block;
         margin-bottom: 15px;
     }
-    .header_area a.menu_cus,.header_area .btn_get.ml-0{
-        margin-left: 20px !important;
-    }
     .header_area .menu_five .menu_custfive {
         border-color: #3d64f4;
         color: #3d64f4;
@@ -3654,12 +3653,12 @@
 @media (max-width:767px){
 
     .menu{
-        padding: 10px 13px;
+        padding: 10px 0;
     }
 
     .header_area a.menu_cus,.header_area .btn_get.ml-0{
-        margin-left: 13px !important;
-        max-width: 240px;
+        max-width: 100%;
+        margin-left: 0 !important;
         padding-left: 14px;
         padding-right: 14px;
     }

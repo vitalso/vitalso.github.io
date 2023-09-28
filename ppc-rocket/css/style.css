@@ -1381,6 +1381,10 @@ a, .btn, button {
 .menu_four .menu_toggle .hamburger-cross span {
   background: #000; }
 
+.menu_four .menu_toggle .hamburger-cross span {
+  background: #ff1818;
+}
+
 .menu_four .event_btn {
   border-color: #af8a90;
   background: transparent;
@@ -1526,7 +1530,8 @@ a, .btn, button {
   position: relative;
   cursor: pointer;
   display: block;
-  background: #fff; }
+  background: #fff;
+  transform: scale(0.7) }
   .menu_toggle .hamburger {
     position: absolute;
     height: 100%;
@@ -1538,7 +1543,7 @@ a, .btn, button {
       position: relative;
       top: 0;
       left: 0;
-      margin: 4px 0;
+      margin: 7px 0;
       display: block;
       background: #1c83c6;
       -webkit-transition: 0.2s ease-in-out;
@@ -23438,7 +23443,8 @@ h3 {
 }
 
 .f_overview img {
-  max-width: 267px; 
+  max-width: 267px;
+  box-shadow: 0px 12px 20px rgba(7, 0, 58, 0.08);
 }
 
 .f_overview h3 {
@@ -23463,6 +23469,7 @@ h3 {
 .f_overview .feature-lg-image {
   display: inline-block;
   transition: all 0.3s ease;
+  cursor: url('../img/main-img/zoom-hover.svg'), auto;
 }
 
 .f_overview .feature-lg-image:hover {
@@ -23505,7 +23512,12 @@ h3 {
   line-height: 42px;
   color: #fff;
   transform: none;
+  transition: all 0.3s ease;
 }
+
+  .f_overview--slider .prev-arrow:hover , .f_overview--slider .next-arrow:hover {
+    background: #1C84C6;
+  }
 
 .f_overview--slider .prev-arrow.slick-disabled , .f_overview--slider .next-arrow.slick-disabled {
   background: #e8e8e8;
@@ -23527,6 +23539,11 @@ h3 {
 .features__inner h3 {
   line-height: 20px;
 }
+
+  .features__inner h3 a , .f_overview h3 a {
+    color: #000;
+    text-decoration: none;
+  }
 
 .features__inner p {
   line-height: 18px;
@@ -23591,12 +23608,31 @@ h3 {
     font-weight: 500;
     cursor: pointer;
     line-height: 15px;
+    transition: all 0.3s ease;
   }
 
     .show__more button:hover {
       background: #FF1818;
       color: #fff;
     }
+
+.additional-mobile-menu {
+  padding: 40px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  border-top: 1px solid #E8E8E8;
+  margin: 0 0 40px 0;
+  list-style-type: none;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  .additional-mobile-menu a {
+    font-size: 18px;
+    color: #000;
+  }
 
 @media (max-width: 768px) {
 
