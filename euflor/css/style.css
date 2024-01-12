@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Mansalva&family=Roboto:wght@400;500;600;700&family=Inter:wght@400;700&family=Outfit:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mansalva&family=Roboto:wght@400;500;600;700&family=Inter:wght@400;500;700&family=Outfit:wght@300;400;500;600&display=swap");
 .w-100vw {
   width: 100vw;
 }
@@ -60,9 +60,31 @@
   border: 1px solid #F0F0F0;
 }
 
+.border-secondary {
+  border-color: #23212C !important;
+}
+
+.fs-14 {
+  font-size: 14px !important;
+}
+
+.fs-16 {
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.fs-20 {
+  font-size: 20px;
+  line-height: 140%;
+}
+
 .fs-24 {
   font-size: 24px;
   line-height: 28px;
+}
+
+.fs-28 {
+  font-size: 28px;
 }
 
 .fs-30 {
@@ -181,6 +203,12 @@
   }
   .custom-mw {
     padding-left: 15px;
+  }
+  .sm-pt-250 {
+    padding-top: 250px;
+  }
+  .sm-pt-0 {
+    padding-top: 0;
   }
 }
 @media screen and (max-width: 576px) {
@@ -479,6 +507,9 @@ header .navbar-toggler svg {
 }
 .btn.btn-primary:hover {
   background: #3F8158;
+}
+.btn.btn-primary.hover-white:hover {
+  background: #fff;
 }
 .btn.btn-lg {
   padding: 12px 40px;
@@ -1161,6 +1192,9 @@ form.calc-form button {
   .hero-section h1 span::after {
     display: none;
   }
+  .hero-section .fs-24 {
+    line-height: 20px;
+  }
   .fixed-btn {
     width: 40px;
   }
@@ -1446,6 +1480,12 @@ form.calc-form button {
   background-position-y: top !important;
 }
 
+.bg-img-full-section-7 {
+  min-height: 1700px;
+  background-image: url(../images/bg-full-screen-7.png);
+  background-position: center top;
+}
+
 .bg-green-with-tree {
   height: auto !important;
   background-image: url(../images/bg-green-with-tree.png);
@@ -1490,7 +1530,7 @@ form.calc-form button {
 }
 .full-screen-waves.top {
   top: 0;
-  height: 240px;
+  height: 260px;
   background: url(../images/top-full-screen-waves.svg) left top/cover no-repeat;
   transform: scale(1, -1);
 }
@@ -1524,6 +1564,19 @@ form.calc-form button {
   height: 250px;
   transform: scale(1);
   background: url(../images/new-bottom-wave.svg) left top/cover no-repeat;
+}
+
+.bg-torffrei {
+  background-image: url(../images/bg-full-screen-torffrei.png);
+  background-repeat: no-repeat;
+  min-height: 2084px;
+  background-size: cover;
+  background-position: center top;
+}
+@media screen and (max-width: 768px) {
+  .bg-torffrei .pt-350 {
+    padding-top: 200px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -1844,6 +1897,19 @@ form.calc-form button {
   right: auto;
   left: 64px;
 }
+.card-slider.light-green .card-item.large.small-height {
+  max-height: 392px;
+  min-height: 392px;
+}
+@media screen and (max-width: 768px) {
+  .card-slider.light-green .card-item.large.small-height {
+    max-height: none;
+    padding: 20px;
+  }
+}
+.card-slider.light-green .slick-prev, .card-slider.light-green .slick-next {
+  background: url(../images/arrow-light-green.svg) center/cover no-repeat;
+}
 
 .card-small-slider .slick-slide, .right-slider .slick-slide {
   margin-right: 12px;
@@ -2066,6 +2132,10 @@ html {
   z-index: 2;
 }
 
+.start-1 {
+  left: 1vw;
+}
+
 .start_8 {
   left: -8%;
 }
@@ -2100,6 +2170,10 @@ html {
 
 .bottom_40 {
   bottom: -40%;
+}
+
+.bottom-30 {
+  bottom: 30%;
 }
 
 .text-primary-green {
@@ -2146,6 +2220,10 @@ html {
   background: #D3DE4E;
 }
 
+.bg-primary {
+  background: #FDF9ED !important;
+}
+
 .flower-side-img {
   position: absolute;
   left: -23%;
@@ -2174,6 +2252,63 @@ html {
 
 .custom-transform {
   transform: translateY(70%);
+}
+
+.border-green-light {
+  border: 1px solid #CAE2C9;
+}
+
+.w-140 {
+  width: 140px;
+}
+
+.opacity-80 {
+  opacity: 0.8;
+}
+
+.fill-primary-green {
+  fill: #3F8158 !important;
+}
+
+.mt_280 {
+  margin-top: -280px;
+}
+
+#accordionWhy .accordion-button::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+#accordionWhy .accordion-button:not(.collapsed)::after {
+  background-image: url(/images/u_minus-circle.svg);
+}
+#accordionWhy .accordion-button.collapsed::after {
+  background-image: url(/images/u_plus-circle.svg);
+}
+
+#accordionQuestion .accordion-item {
+  border-bottom: 1px solid #A1CEA6;
+}
+#accordionQuestion .accordion-header, #accordionQuestion .accordion-collapse {
+  padding-right: 50px;
+}
+#accordionQuestion .accordion-button {
+  font-size: 26px;
+}
+#accordionQuestion .accordion-button:after {
+  position: absolute;
+  right: -50px;
+  background-image: url(/images/arrow-green.svg);
+}
+#accordionQuestion .accordion-button:not(.collapsed)::after {
+  transform: rotate(0);
+}
+#accordionQuestion .accordion-button.collapsed::after {
+  transform: rotate(180deg);
+}
+#accordionQuestion .accordion-collapse {
+  padding-top: 12px;
 }
 
 @media screen and (max-width: 992px) {

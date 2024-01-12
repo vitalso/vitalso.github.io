@@ -150,6 +150,12 @@ $(function () {
     stackWrap.bind('mousewheel DOMMouseScroll wheel' , handleScroll);
   });
 
+  // Close all opened item in accordion
+  $('.close-all').on('click', function (e) {
+    e.preventDefault();
+    $(this).closest('div').next('.accordion').find('.collapse').collapse('hide');
+  });
+
   // Card small slider
   $('.card-small-slider').slick({
     infinite: true,
