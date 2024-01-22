@@ -1,5 +1,9 @@
 $(function () {
 
+    // Tooltip
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
     // Show tracking in header on scroll
     var position = $('.hero-section').offset().top;
     var headerTracking = $('.header-tracking');
