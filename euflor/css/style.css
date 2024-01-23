@@ -1812,6 +1812,12 @@ form.calc-form button {
 .card-item:hover .subtitle {
   color: #fff;
 }
+.card-item.no-hover:hover {
+  background: #FDF9ED;
+}
+.card-item.no-hover:hover .subtitle {
+  color: #D3DE4E;
+}
 .card-item.only-with-image {
   position: relative;
   width: 434px;

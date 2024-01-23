@@ -104,13 +104,16 @@ $(function () {
   });
 
   // On before slide change
-  $('.slider-card').on('afterChange', function(event, slick, currentSlide, nextSlide){
-    $('.slick-current img').each(function() {
+  $('.slider-card').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    $('.slider-card .slick-slide').eq(nextSlide).find('img').each(function() {
       $('#card-with-slider').css('background' , $(this).data('bg'));
-    });    
+    });
+
+    console.log(nextSlide);
   });
 
   // Stack card scrolling
+  var stackSection = $('.stack-section');
   var stackWrap = $('.stack-card');
   var cardIndex = 0;
 
@@ -135,19 +138,19 @@ $(function () {
       }
 
       if ( stackWrap.find('div:nth-child(4)').hasClass('show-card') ) {
-        stackWrap.unbind('mousewheel DOMMouseScroll wheel');
+        stackSection.unbind('mousewheel DOMMouseScroll wheel');
       }
 
     }
 
   };
 
-  stackWrap.bind('mousewheel DOMMouseScroll wheel' , handleScroll);
+  stackSection.bind('mousewheel DOMMouseScroll wheel' , handleScroll);
 
   $('#restart-stack').on('click' , function(){
     stackWrap.find('div.bg-white').removeClass('hide-card show-card');
     cardIndex = 0;
-    stackWrap.bind('mousewheel DOMMouseScroll wheel' , handleScroll);
+    stackSection.bind('mousewheel DOMMouseScroll wheel' , handleScroll);
   });
 
   // Close all opened item in accordion
