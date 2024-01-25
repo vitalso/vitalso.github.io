@@ -9,7 +9,7 @@ $(function () {
     var headerTracking = $('.header-tracking');
 
     if ( element.length && headerTracking.length ) {
-        var position = element.offset().top;
+        var position = element.offset().top + element.height();
 
         $(window).on('scroll' , function(){
 

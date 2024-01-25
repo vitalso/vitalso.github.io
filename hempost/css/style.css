@@ -344,8 +344,10 @@ header .navbar-toggler[aria-expanded=true] .navbar-toggler-icon svg:last-child {
 }
 .navbar-expand-md .navbar-nav .nav-link.active, .navbar-expand-md .navbar-nav .nav-link:hover, .navbar-expand-lg .navbar-nav .nav-link.active, .navbar-expand-lg .navbar-nav .nav-link:hover {
   color: #FEC220;
-  font-weight: 600;
   text-decoration: underline;
+}
+.navbar-expand-md .navbar-nav .nav-link.active, .navbar-expand-lg .navbar-nav .nav-link.active {
+  font-weight: 600;
 }
 
 @media screen and (max-width: 992px) {
@@ -386,7 +388,6 @@ header .navbar-toggler[aria-expanded=true] .navbar-toggler-icon svg:last-child {
     position: absolute;
     left: 12px;
     right: 86px;
-    display: block !important;
   }
   .header-tracking.tracking-form form {
     gap: 0;
