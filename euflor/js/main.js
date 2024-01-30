@@ -108,14 +108,15 @@ $(function () {
     $('.slider-card .slick-slide').eq(nextSlide).find('img').each(function() {
       $('#card-with-slider').css('background' , $(this).data('bg'));
     });
-
-    //console.log(nextSlide);
   });
 
   // Stack card scrolling
   var stackSection = $('.stack-section');
   var stackWrap = $('.stack-card');
   var cardIndex = 0;
+
+  var stackPosition = stackSection.offset().top - 70; // 70 just a number for correct position
+  var stackHeight = stackPosition + stackSection.outerHeight();
 
   var handleScroll = function(e){
     let deltaY = e.originalEvent.deltaY;
@@ -126,7 +127,6 @@ $(function () {
     blockTimeout = setTimeout(function(){
       blocked = false;
     }, 50);
-
     
     if (deltaY > 0 && deltaY > prevDeltaY || deltaY < 0 && deltaY < prevDeltaY || !blocked) {
       blocked = true;
@@ -145,15 +145,24 @@ $(function () {
 
   };
 
-  stackSection.bind('mousewheel DOMMouseScroll wheel' , handleScroll);
+  $(window).on('scroll' , function() {
+
+    if ( $(window).scrollTop() > stackPosition && $(window).scrollTop() < stackHeight ) {
+      stackSection.bind('mousewheel DOMMouseScroll wheel' , handleScroll);
+    } else {
+      stackSection.unbind('mousewheel DOMMouseScroll wheel');
+    }
+
+  });
+
+  //stackSection.bind('mousewheel DOMMouseScroll wheel' , handleScroll);
 
   // Toogle on click
   stackWrap.find('.stack-slide').on('click' , function(e){
     e.preventDefault();
 
-    if ( !stackWrap.find('.stack-slide:nth-child(4)').hasClass('show-card') ) {
-      $(this).addClass('hide-card').next('.stack-slide').addClass('show-card');
-      cardIndex++;
+    if ( $(this).index() > 0 && !stackWrap.find('.stack-slide:nth-child(4)').hasClass('show-card') ) {
+      stackWrap.find('.stack-slide').slice(0 , $(this).index()).addClass('hide-card').next('.stack-slide').addClass('show-card');
     } else {
       return false;
     }
@@ -168,6 +177,7 @@ $(function () {
   // Restart slides
   $('#restart-stack').on('click' , function(e){
     e.stopPropagation();
+    $(window).scrollTop(stackPosition);
     stackWrap.find('.stack-slide').removeClass('hide-card show-card');
     cardIndex = 0;
     stackSection.bind('mousewheel DOMMouseScroll wheel' , handleScroll);
