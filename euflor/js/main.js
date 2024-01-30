@@ -109,7 +109,7 @@ $(function () {
       $('#card-with-slider').css('background' , $(this).data('bg'));
     });
 
-    console.log(nextSlide);
+    //console.log(nextSlide);
   });
 
   // Stack card scrolling
@@ -147,8 +147,23 @@ $(function () {
 
   stackSection.bind('mousewheel DOMMouseScroll wheel' , handleScroll);
 
-  $('#restart-stack').on('click' , function(){
-    stackWrap.find('div.bg-white').removeClass('hide-card show-card');
+  // Toogle on click
+  stackWrap.find('.stack-slide').on('click' , function(e){
+    e.preventDefault();
+
+    if ( !stackWrap.find('.stack-slide:nth-child(4)').hasClass('show-card') ) {
+      $(this).addClass('hide-card').next('.stack-slide').addClass('show-card');
+      cardIndex++;
+    } else {
+      return false;
+    }
+
+  });
+
+  // Restart slides
+  $('#restart-stack').on('click' , function(e){
+    e.stopPropagation();
+    stackWrap.find('.stack-slide').removeClass('hide-card show-card');
     cardIndex = 0;
     stackSection.bind('mousewheel DOMMouseScroll wheel' , handleScroll);
   });
