@@ -160,6 +160,11 @@ $(function () {
 
   });
 
+  // Ignore toggle slide when open lightbox
+  stackWrap.find('a[data-toggle="lightbox"]').on('click' , function(e){
+    e.stopPropagation();
+  });
+
   // Restart slides
   $('#restart-stack').on('click' , function(e){
     e.stopPropagation();
