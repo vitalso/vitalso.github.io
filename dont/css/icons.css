@@ -1,0 +1,20 @@
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+}
+
+    .icon-drop {
+        background-image: url(../images/icons/iconamoon_arrow-down-2-light.svg);
+    }
+
+    .icon-required {
+        background-image: url(../images/icons/icon-required.svg);
+        width: 10px;
+        height: 10px;
+    }
+
+    .icon-scroll-down {
+        background-image: url(../images/icons/lets-icons_arrow-top-light.svg)
+    }

@@ -1,0 +1,379 @@
+@import url('normalize.css');
+@import url('fonts.css');
+@import url('base.css');
+@import url('icons.css');
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	border: none;
+}
+
+a {
+	-webkit-transition: all .3s ease-in-out;
+	   -moz-transition: all .3s ease-in-out;
+	    -ms-transition: all .3s ease-in-out;
+	     -o-transition: all .3s ease-in-out;
+	        transition: all .3s ease-in-out;
+}
+a:hover , a:active , a:focus {
+	text-decoration: none;
+}
+a:focus , input:focus , textarea:focus {
+	outline: none;
+}
+
+:root {
+    --main-bg-color: #F8F2EC;
+    --dot-bg-color: #cecac6;
+    --main-text-color: #000000;
+    --dark-bg-color: #000000;
+    --white-text-color: #fff;
+    --main-blue-color: #0197FF;
+    --bg-gray-color: #F8F8F8;
+    --primary-smile-color: #E0F2FF;
+    --smile-icon-color: #0197FF;
+    --yellow-color: #FFCE1F;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    /*background-image: url(../images/bg-dots.png);*/
+    background-image: radial-gradient(var(--dot-bg-color) 5%, transparent 0);
+    background-size: 35px 35px;
+    font-family: 'FixelTextRegular';
+    height: 100%;
+}
+
+.container {
+    max-width: 1392px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+header {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+    nav a {
+        font-size: 16px;
+        text-decoration: none;
+        color: var(--main-text-color);
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        top: 20px;
+        transform: translateX(-50%);
+    }
+
+.btn {
+    background-color: var(--dark-bg-color);
+    color: var(--white-text-color);
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'FixelTextMedium';
+}
+
+.language-btn {
+    padding: 8px 16px;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'FixelTextMedium';
+    background-color: transparent;
+    cursor: pointer;
+    gap: 4px;
+}
+
+section {
+    height: 100vh;
+    /*min-height: 100vh;*/
+}
+
+    section.not-full-height {
+        height: auto;
+    }
+
+h1 {
+    font-size: 96px;
+    line-height: 90px;
+    letter-spacing: -4%;
+    font-family: 'FixelDisplayMedium';
+}
+
+    h1 span {
+        display: block;
+    }
+
+    .custom-align {
+        padding-bottom: 10%;
+    }
+
+    .custom-align span:nth-child(1) {
+        margin-left: 10%;
+    }
+
+    .custom-align span:nth-child(2) , .custom-align span:nth-child(3) {
+        margin-left: 30%;
+    }
+
+    .notation {
+        max-width: 450px;
+        line-height: 26px;
+        bottom: 28%;
+        left: 20%;
+    }
+
+        .notation .icon {
+            flex: 0 0 auto;
+            margin-top: 5px;
+        }
+
+    .scroll-down {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 32px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .round-btn-order {
+        width: 172px;
+        height: 172px;
+        font-size: 20px;
+        line-height: 32px;
+        color: var(--white-text-color);
+        background-color: var(--dark-bg-color);
+        cursor: pointer;
+        bottom: 20%;
+        right: 10%;
+    }
+
+    .smile {
+        bottom: 0;
+    }
+
+        .smile svg {
+            fill: var(--primary-smile-color);
+            transition: all .3s ease;
+        }
+
+            .smile svg path:not(:first-child) {
+                fill: var(--smile-icon-color);
+            }
+
+        .smiles-left .smile:nth-child(1) {
+            left: 26%;
+        }
+
+            .smiles-left .smile:nth-child(1):hover svg {
+                fill: var(--dark-bg-color);
+            }
+
+        .smiles-left .smile:nth-child(2) {
+            left: 16%;
+            transform: rotate(-35deg);
+        }
+            
+            .smiles-left .smile:nth-child(2):hover svg {
+                fill: var(--main-blue-color);
+            }
+
+            .smiles-left .smile:nth-child(2):hover svg path:not(:first-child) {
+                fill: var(--yellow-color);
+            }
+
+        .smiles-left .smile:nth-child(3) {
+            left: 8%;
+            transform: rotate(65deg);
+        }
+
+            .smiles-left .smile:nth-child(3):hover svg {
+                fill: var(--yellow-color);
+            }
+
+        .smiles-left .smile:nth-child(4) {
+            left: 0;
+            transform: rotate(-115deg);
+        }
+
+            .smiles-left .smile:nth-child(4):hover svg {
+                fill: var(--dark-bg-color);
+            }
+
+        .smiles-left .smile:nth-child(5) {
+            left: 4%;
+            bottom: 120px;
+        }
+
+            .smiles-left .smile:nth-child(5):hover svg {
+                fill: var(--main-blue-color);
+            }
+
+            .smiles-left .smile:nth-child(5):hover svg path:not(:first-child) {
+                fill: var(--yellow-color);
+            }
+
+        .smiles-right .smile:nth-child(1) {
+            right: 29%;
+            transform: rotate(95deg);
+        }
+
+            .smiles-right .smile:nth-child(1):hover svg {
+                fill: var(--main-blue-color);
+            }
+
+            .smiles-right .smile:nth-child(1):hover svg path:not(:first-child) {
+                fill: var(--yellow-color);
+            }
+
+        .smiles-right .smile:nth-child(2) {
+            right: 8%;
+            transform: rotate(-35deg);
+        }
+
+            .smiles-right .smile:nth-child(2):hover svg {
+                fill: var(--dark-bg-color);
+            }
+
+        .smiles-right .smile:nth-child(3) {
+            right: 0;
+        }
+
+            .smiles-right .smile:nth-child(3):hover svg {
+                fill: var(--yellow-color);
+            }
+
+        .smiles-right .smile:nth-child(4) {
+            right: 4%;
+            bottom: 120px;
+            transform: rotate(-105deg);
+        }
+
+            .smiles-right .smile:nth-child(4):hover svg {
+                fill: var(--main-blue-color);
+            }
+
+            .smiles-right .smile:nth-child(4):hover svg path:not(:first-child) {
+                fill: var(--primary-smile-color);
+            }
+
+.section-title {
+    max-width: 610px;
+    font-family: 'FixelDisplayMedium';
+    font-size: 88px;
+    line-height: 110%;
+    bottom: 50%;
+    margin-left: 40px;
+}
+
+    .section-title .underline {
+        position: relative;
+    }
+
+        .section-title .underline:after {
+            content: "";
+            position: absolute;
+            width: 321px;
+            height: 14px;
+            background-image: url(../images/underline.svg);
+            bottom: -15px;
+            left: 3px;
+        }
+
+.section-text {
+    margin-left: auto;
+    padding-right: 40px;
+    max-width: 560px;
+    /*transform: translateY(50%);*/
+}
+
+    .text-lg {
+        font-family: 'FixelDisplayRegular';
+        font-size: 32px;
+        line-height: 140%;
+    }
+
+/*.dayli-section {
+    padding-top: 120px;
+}*/
+
+    .dayli-section-title {
+        font-family: 'FixelDisplayMedium';
+        font-size: 40px;
+        line-height: 110%;
+    }
+
+    .dayli-circle {
+        width: 1800px;
+        height: 1800px;
+        margin-top: 40px;
+        padding: 30px;
+        background-color: var(--white-text-color);
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+        .dayli-item {
+            font-family: 'FixelDisplayRegular';
+            background-color: var(--bg-gray-color);
+            width: 283px;
+            height: 283px;
+            color: var(--dark-bg-color);
+            font-size: 32px;
+            text-align: center;
+        }
+
+        .dayli-row {
+            gap: 15px;
+        }
+
+        .dayli-item.xl-item {
+            background-color: #E0F2FF;
+            width: 342px;
+            height: 342px;
+            font-size: 40px;
+            color: var(--main-blue-color);
+            transform: rotate(-13deg);
+        }
+
+        .dayli-item.sm-item {
+            font-size: 24px;
+            width: 244px;
+            height: 244px;
+        }
+
+        .dayli-item.xs-item {
+            font-size: 24px;
+            width: 218px;
+            height: 218px;
+        }

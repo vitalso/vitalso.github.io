@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'FixelTextBlack';
+    src: url('../fonts/FixelTextBlack.eot');
+    src: url('../fonts/FixelTextBlack.eot') format('embedded-opentype'),
+         url('../fonts/FixelTextBlack.woff2') format('woff2'),
+         url('../fonts/FixelTextBlack.woff') format('woff'),
+         url('../fonts/FixelTextBlack.ttf') format('truetype'),
+         url('../fonts/FixelTextBlack.svg#FixelTextBlack') format('svg');
+}
+
+@font-face {
+    font-family: 'FixelTextBold';
+    src: url('../fonts/FixelTextBold.eot');
+    src: url('../fonts/FixelTextBold.eot') format('embedded-opentype'),
+         url('../fonts/FixelTextBold.woff2') format('woff2'),
+         url('../fonts/FixelTextBold.woff') format('woff'),
+         url('../fonts/FixelTextBold.ttf') format('truetype'),
+         url('../fonts/FixelTextBold.svg#FixelTextBold') format('svg');
+}
+
+@font-face {
+    font-family: 'FixelTextMedium';
+    src: url('../fonts/FixelTextMedium.eot');
+    src: url('../fonts/FixelTextMedium.eot') format('embedded-opentype'),
+         url('../fonts/FixelTextMedium.woff2') format('woff2'),
+         url('../fonts/FixelTextMedium.woff') format('woff'),
+         url('../fonts/FixelTextMedium.ttf') format('truetype'),
+         url('../fonts/FixelTextMedium.svg#FixelTextMedium') format('svg');
+}
+
+@font-face {
+    font-family: 'FixelTextRegular';
+    src: url('../fonts/FixelTextRegular.eot');
+    src: url('../fonts/FixelTextRegular.eot') format('embedded-opentype'),
+         url('../fonts/FixelTextRegular.woff2') format('woff2'),
+         url('../fonts/FixelTextRegular.woff') format('woff'),
+         url('../fonts/FixelTextRegular.ttf') format('truetype'),
+         url('../fonts/FixelTextRegular.svg#FixelTextRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'FixelDisplayMedium';
+    src: url('../fonts/FixelDisplayMedium.eot');
+    src: url('../fonts/FixelDisplayMedium.eot') format('embedded-opentype'),
+         url('../fonts/FixelDisplayMedium.woff2') format('woff2'),
+         url('../fonts/FixelDisplayMedium.woff') format('woff'),
+         url('../fonts/FixelDisplayMedium.ttf') format('truetype'),
+         url('../fonts/FixelDisplayMedium.svg#FixelDisplayMedium') format('svg');
+}
+
+@font-face {
+    font-family: 'FixelDisplayRegular';
+    src: url('../fonts/FixelDisplayRegular.eot');
+    src: url('../fonts/FixelDisplayRegular.eot') format('embedded-opentype'),
+         url('../fonts/FixelDisplayRegular.woff2') format('woff2'),
+         url('../fonts/FixelDisplayRegular.woff') format('woff'),
+         url('../fonts/FixelDisplayRegular.ttf') format('truetype'),
+         url('../fonts/FixelDisplayRegular.svg#FixelDisplayRegular') format('svg');
+}
