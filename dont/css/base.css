@@ -1,5 +1,5 @@
 .d-flex {
-    display: flex;
+    display: flex !important;
 }
 
 .gap-8 {
@@ -8,6 +8,10 @@
 
 .gap-16 {
     gap: 16px;
+}
+
+.gap-24 {
+    gap: 24px;
 }
 
 .gap-32 {
@@ -28,6 +32,14 @@
 
 .justify-center {
     justify-content: center;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+.justify-start {
+    justify-content: start;
 }
 
 .flex-column {
@@ -69,4 +81,12 @@
 
 .opacity-30 {
     opacity: 30%;
+}
+
+.bg-white {
+    background-color: var(--white-text-color);
+}
+
+.opacity-0 {
+    opacity: 0;
 }
