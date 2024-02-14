@@ -720,6 +720,10 @@ h1 {
             background-color: var(--white-text-color);
         }
 
+            .note-text p + .note-btn {
+                margin-top: 100px;
+            }
+
     .note-image {
         display: block;
     }
