@@ -64,6 +64,11 @@ body {
     background-size: 35px 35px;
     font-family: 'FixelTextRegular';
     height: 100%;
+    background-attachment: fixed;
+}
+
+main {
+    padding-bottom: 650px;
 }
 
 .container {
@@ -133,6 +138,8 @@ header {
 section {
     height: 100vh;
     /*min-height: 100vh;*/
+    position: relative;
+    z-index: 2;
 }
 
     section.not-full-height {
@@ -309,7 +316,7 @@ h1 {
     font-family: 'FixelDisplayMedium';
     font-size: 88px;
     line-height: 110%;
-    bottom: 50%;
+    bottom: 45%;
     margin-left: 40px;
 }
 
@@ -332,6 +339,7 @@ h1 {
     padding-right: 40px;
     max-width: 560px;
     /*transform: translateY(50%);*/
+    margin-top: 35%;
 }
 
     .text-lg {
@@ -427,8 +435,10 @@ h1 {
 
 .card-section-cover {
     z-index: 2;
-    position: relative;
-    bottom: 150px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    /*bottom: calc((100vh - 496px) / 2);*/
 }
 
 .card-section-cover img {
@@ -436,7 +446,7 @@ h1 {
 }
 
 .card-wrap {
-    transform: translateX(105vw);
+    transform: translateX(145%);
 }
 
 .card-item {
@@ -501,13 +511,22 @@ h1 {
 }
 
 .cover-note-blank {
+    width: 450px;
     height: 641px;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 0;
 }
 
+    /*.cover-note-blank img:first-child {
+        height: 641px;
+    }*/
+
     .cover-note-blank img:first-child {
+        height: 641px;
         z-index: 2;
     }
 
@@ -521,7 +540,7 @@ h1 {
         }*/
 
         .cover-note-blank img {
-            height: 641px;
+            height: 541px;
             object-fit: cover;
         }
 
@@ -549,7 +568,7 @@ h1 {
 
         .notation-1 {
             left: 15%;
-            top: 20%;
+            top: 5%;
         }
 
         .notation-1:after {
@@ -569,7 +588,7 @@ h1 {
         .note-blank-btn {
             position: absolute;
             width: 100%;
-            bottom: 40px;
+            bottom: 120px;
         }
 
 .cover-note-index {
@@ -885,6 +904,11 @@ h1 {
 .contact {
     padding-top: 80px;
     padding-bottom: 155px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 0;
 }
 
     .contact-wrap {
