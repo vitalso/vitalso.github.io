@@ -1,0 +1,46 @@
+// Import your SCSS dependencies
+@import '../variables'; // Import your variable definitions
+@import '../_mixins'; // Import your mixins
+
+.main-container {
+    .main-content {
+        .consumption-table {
+            box-shadow: 0 0 8.5px 0px rgba(0, 0, 0, 0.25);
+
+            width: 100%;
+            max-width: 914px;
+            border-collapse: collapse;
+
+            th {
+                height: 45px;
+                background-color: $blue-color;
+                color: white;
+            }
+
+            th,
+            td {
+                border: 1px solid $grey-color;
+                text-align: center;
+                vertical-align: middle;
+            }
+
+            th:first-child,
+            td:first-child {
+                width: 60px;
+            }
+
+            th:nth-child(2),
+            td:nth-child(2) {
+                width: 150px;
+            }
+
+            tbody tr {
+                height: 60px;
+            }
+
+            tbody tr:nth-child(even) td {
+                background-color: #f1f1f1;
+            }
+        }
+    }
+}

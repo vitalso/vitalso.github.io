@@ -1,0 +1,195 @@
+// Import your SCSS dependencies
+@import '../variables'; // Import your variable definitions
+@import '../_mixins'; // Import your mixins
+
+.navbar-container {
+    height: $menubar-height;
+    background-color: $blue-color;
+    width: 100%;
+    padding: 0 $middle-padding;
+    transition: 0.3s;
+
+    @media screen and (max-width: $screen-sm-min) {
+        padding: 0 $small-padding;
+    }
+
+    // Navbar Logo
+    .navbar-logo {
+        img {
+            width: 172px;
+        }
+    }
+
+    // Avatar Wrapper
+    .avatar-wrapper {
+        cursor: pointer;
+        position: relative;
+
+        #account-menu-button {
+            span {
+                @media screen and (max-width: $screen-sm-min) {
+                    display: none;
+                }
+            }
+        }
+
+        // Account Menu
+        .account-menu {
+            width: 310px;
+            right: -$middle-padding;
+            top: 70px;
+            z-index: 1000;
+
+            @media screen and (max-width: $screen-sm-min) {
+                right: -$small-padding;
+            }
+
+            // Menu Items
+            .menu-item {
+                background-color: white;
+                border: 1px solid $grey-color;
+                border-top: none;
+                height: 80px;
+                display: flex;
+                align-items: center;
+
+                span {
+                    color: $text-color;
+                }
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    margin: 0 20px;
+                }
+            }
+        }
+
+        img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 4px solid white;
+        }
+
+        span {
+            font-size: 20px;
+            font-weight: 400;
+            margin-left: 12px;
+            color: white;
+        }
+    }
+}
+
+.main-container {
+    min-height: calc(100vh - 80px);
+    position: relative;
+
+    // Menubar Wrapper
+    .menubar-wrapper {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        z-index: 1002;
+
+        width: $menubar-width;
+        min-width: $menubar-width;
+        background-color: #f1f1f1;
+        transition: 0.3s;
+
+        @media screen and (max-width: $screen-md-min) {
+            left: -$menubar-width;
+        }
+
+        &.active {
+            
+            @media screen and (max-width: $screen-md-min) {
+                left: 0;
+            }
+        }
+
+        // Menubar
+        .menubar {
+
+            // Menu Items
+            .menu-item {
+                background-color: white;
+                border-right: 1px solid $grey-color;
+                border-bottom: 1px solid $grey-color;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                padding: 0 50px;
+                cursor: pointer;
+
+                &.selected {
+                    border-left: 10px solid rgba($color: #5085c4, $alpha: 0.745);
+
+                    span {
+                        margin-left: -10px;
+                    }
+                }
+
+                &.sub-menu {
+                    background-color: #d5d3d3;
+                }
+            }
+        }
+    }
+
+    // Main Content
+    .main-content {
+        min-height: 640px;
+        margin-left: $menubar-width;
+        transition: 0.3s;
+        padding: $middle-padding;
+
+        @media screen and (max-width: $screen-sm-min) {
+            padding: $small-padding;
+        }
+
+        @media screen and (max-width: $screen-md-min) {
+            margin-left: 0;
+        }
+
+        // Form Wrapper
+        .form-wrapper {
+            width: 100%;
+            padding: 20px;
+            box-shadow: 0 0 8.5px 0px rgba(0, 0, 0, 0.25);
+
+            // Title
+            .title {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+
+            form {
+                flex-grow: 1;
+
+                span {
+                    font-size: 12px;
+                }
+
+                select,
+                input,
+                textarea {
+                    border: 1px solid $grey-color;
+                    background-color: #f1f1f1;
+                    height: 40px;
+                    padding: 0 10px;
+                }
+
+                textarea {
+                    padding: 10px;
+                }
+
+                button {
+                    width: 203px;
+                    height: 62px;
+                }
+            }
+        }
+    }
+}

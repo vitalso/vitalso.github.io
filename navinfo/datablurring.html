@@ -1,0 +1,210 @@
+<!--https://github.com/jedzza/navinforeactfrontend-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta information -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Page title -->
+  <title>Data blurring</title>
+  <!-- Link to Bootstrap CSS -->
+  <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+  <link rel="stylesheet" href="src/plugins/bootstrap.min.css">
+  <link rel="stylesheet" href="src/plugins/fontawesome-free-6.0.0-beta3-web/css/all.min.css">
+  <!-- Link to custom main stylesheet -->
+  <link rel="stylesheet" href="src/styles/datablurring.css">
+</head>
+
+<body>
+
+  <div class="navbar-container d-flex align-items-center">
+    <div class="navbar-logo" id="navbar-logo">
+      <img src="src/images/logo-white.png" alt="logo-image" />
+    </div>
+    <div class="avatar-wrapper ms-auto">
+      <div id="account-menu-button">
+        <img src="src/images/avatar.png" />
+        <span>Firstname Lastname</span>
+      </div>
+      <div class="account-menu position-absolute d-none" id="account-menu">
+        <a href="accountsetting.html">
+          <div class="menu-item">
+            <img src="src/images/avatar.png" />
+            <span>Account & settings</span>
+          </div>
+        </a>
+        <a href="login.html">
+          <div class="menu-item">
+            <img src="src/images/logout.png" />
+            <span>Log out</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="main-container d-flex">
+    <div class="menubar-wrapper" id="menubar-wrapper">
+      <div class="menubar" id="menubar">
+        <a href="datablurring.html">
+          <div class="menu-item selected"><span>Data blurring</span></div>
+        </a>
+        <a href="consumption.html">
+          <div class="menu-item"><span>Consumption history</span></div>
+        </a>
+        <a href="planupgrade.html">
+          <div class="menu-item"><span>Plan upgrade</span></div>
+        </a>
+        <div class="menu-item" id="help-menu">
+          <span>Help & Support</span>
+          <i class="fas fa-chevron-down ms-auto"></i>
+        </div>
+        <div id="help-sub-menu" class="d-none">
+          <a href="faq.html">
+            <div class="menu-item sub-menu"><span>FAQ</span></div>
+          </a>
+          <a href="contactus.html">
+            <div class="menu-item sub-menu"><span>Contact us</span></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="main-content d-flex justify-content-center w-100">
+      <div class="d-flex flex-column mt-auto mb-auto w-100 custom-container align-items-start">
+
+        <div class="amount">Remaining credit: 1200 TK</div>
+
+        <div class="up-down-tab-wrapper d-flex w-100">
+          <div class="up-button selected" id="up-button"><a href="#">Upload</a></div>
+          <div class="down-button" id="down-button"><a href="#">Download</a></div>
+        </div>
+
+        <div id="upload-wrapper" class="w-100">
+          <div class="upload-content d-flex mt-4 mb-4">
+
+            <div class="mx-auto w-50">
+              <div class="card">
+                <label for="uploadFiles" class="align-items-center d-flex flex-column justify-content-center cursor-pointer">
+                  <input type="file" id="uploadFiles" class="d-none">
+                  <div><img src="src/images/browser-upload.png" alt="browser upload image" /></div>
+                  <span>Browser upload</span>
+                </label>
+              </div>
+  
+              <div class="card">
+                <div><img src="src/images/file-transfer-protocol.png" alt="file transfer protocol image" /></div>
+                <span>File transfer protocol</span>
+              </div>
+            </div>
+
+            <div class="like-card w-50">
+              <p class="p-3">Files on cue for anonymization</p>
+
+              <div class="table">
+                <div class="table-heading d-flex justify-content-between">
+                  <div class="table-cell">Filename</div>
+                  <div class="table-cell">Format</div>
+                  <div class="table-cell">Size</div>
+                  <div class="table-cell">Action</div>
+                </div>
+
+                <div class="table-body d-flex flex-column">
+                  <div class="table-row d-flex justify-content-between">
+                    <div class="table-cell text-start"><span class="ps-3">Imagename1</span></div>
+                    <div class="table-cell">JPG/PNG</div>
+                    <div class="table-cell">5.5 MB</div>
+                    <div class="table-cell">
+                      <a href="#"><i class="fa-regular fa-trash-can"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="table-row d-flex justify-content-between">
+                    <div class="table-cell text-start"><span class="ps-3">Imagename2</span></div>
+                    <div class="table-cell">JPG/PNG</div>
+                    <div class="table-cell">5.5 MB</div>
+                    <div class="table-cell">
+                      <a href="#"><i class="fa-regular fa-trash-can"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-end px-3">
+                <button type="button" class="btn-sm">Anonymize</button>
+              </div>
+
+            </div>
+          
+          </div>
+
+        </div>
+
+        <div class="d-none w-100" id="download-wrapper">
+
+          <div class="table mt-5 like-card">
+            <div class="table-heading d-flex justify-content-between">
+              <div class="table-cell">Timestamp</div>
+              <div class="table-cell">Filename</div>
+              <div class="table-cell">Status</div>
+              <div class="table-cell">Tokens used</div>
+              <div class="table-cell">Remaining time</div>
+              <div class="table-cell">Action</div>
+            </div>
+
+            <div class="table-body d-flex flex-column">
+
+              <!-- Row item -->
+              <div class="table-row d-flex justify-content-between">
+                <div class="table-cell text-start ps-3 d-flex align-items-center">
+                  <input type="checkbox">
+                  <span class="ps-3">15/01/2024 - 15:40</span>
+                </div>
+                <div class="table-cell text-start"><span class="ps-3">Imagename1</span></div>
+                <div class="table-cell">
+                  <button type="buttom" class="btn-success btn-md">Completed</button>
+                </div>
+                <div class="table-cell"></div>
+                <div class="table-cell"></div>
+                <div class="table-cell d-flex justify-content-center gap-4">
+                  <a href="#"><i class="fa-solid fa-download"></i></a>
+                  <a href="#"><i class="fa-regular fa-trash-can"></i></a>
+                </div>
+              </div>
+              <!-- End row item -->
+
+              <!-- Row item -->
+              <div class="table-row d-flex justify-content-between">
+                <div class="table-cell text-start ps-3 d-flex align-items-center">
+                  <input type="checkbox">
+                  <span class="ps-3">15/01/2024 - 15:40</span>
+                </div>
+                <div class="table-cell text-start"><span class="ps-3">Imagename2</span></div>
+                <div class="table-cell">
+                  <button type="buttom" class="btn-success btn-md">Completed</button>
+                </div>
+                <div class="table-cell"></div>
+                <div class="table-cell"></div>
+                <div class="table-cell d-flex justify-content-center gap-4">
+                  <a href="#"><i class="fa-solid fa-download"></i></a>
+                  <a href="#"><i class="fa-regular fa-trash-can"></i></a>
+                </div>
+              </div>
+              <!-- End row item -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JavaScript -->
+  <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+  <script src="src/plugins/bootstrap.bundle.min.js"></script>
+  <script src="src/javascript/index.js"></script>
+</body>
+
+</html>

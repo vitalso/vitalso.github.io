@@ -1,0 +1,58 @@
+// Import your SCSS dependencies
+@import '../variables'; // Import your variable definitions
+@import '../_mixins';   // Import your mixins
+
+.main-container {
+    .main-content {
+        // Card Wrapper
+        .card-wrapper {
+            padding: 0 30px;
+            flex-wrap: wrap;
+
+            // Card
+            .card {
+
+                // Trial Card
+                &.trial {
+                    border-color: #919a9f;
+
+                    // Placeholder Wrapper
+                    .placeholder-wrapper {
+                        width: 270px;
+                        height: 50px;
+                        margin-top: 30px;
+                        background-color: #f1f1f1;
+                    }
+                }
+
+                // Pro Card
+                &.pro {
+                    border-color: #5085c4;
+                }
+
+                // Enterprise Card
+                &.enterprise {
+                    border-color: #004ea0;
+                }
+
+                > div {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+                    > div {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+
+                // Button
+                button {
+                    width: 203px;
+                    height: 62px;
+                }
+            }
+        }
+    }
+}

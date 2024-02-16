@@ -1,0 +1,213 @@
+// Import Variables
+@import '_variables';
+
+// Import Fonts
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+// Typography
+// -----------------------------------------------------------
+body {
+    font-family: $font-family;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: $font-family;
+    word-break: break-all;
+}
+
+// Headings
+// -----------------------------------------------------------
+h3 {
+    font-size: 50px;
+    font-weight: 600;
+
+    @media screen and (max-width: 420px) {
+        font-size: 40px;
+        width: inherit;
+    }
+}
+
+h4 {
+    font-size: 30px;
+    font-weight: 400;
+
+    @media screen and (max-width: 420px) {
+        font-size: 24px;
+        width: inherit;
+    }
+}
+
+// Paragraph
+// -----------------------------------------------------------
+p {
+    font-size: 20px;
+
+    @media screen and (max-width: 420px) {
+        font-size: 16px;
+        width: inherit;
+    }
+}
+
+// Global Styles
+// -----------------------------------------------------------
+body {
+    margin: 0;
+    padding: 0;
+}
+
+// Links
+// -----------------------------------------------------------
+a {
+    color: $primary-color;
+    text-decoration: none;
+    text-align: center;
+    color: $text-color;
+
+    &.original {
+        text-decoration: underline;
+        color: #5085c4;
+    }
+}
+
+// Buttons
+// -----------------------------------------------------------
+button {
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background-color: $blue-color;
+    color: white;
+    
+    &:hover {
+        background-color: #5085c4;
+    }
+
+    &.disabled {
+        background-color: #919a9f;
+    }
+
+    &.btn-secondary {
+        background-color: $primary-color;
+    }
+
+    &.btn-sm {
+        padding: 0 13px;
+    }
+
+    &.btn-md {
+        padding: 2px 21px;
+        border-radius: 5px;
+    }
+
+    &.btn-success {
+        background-color: $green-color;
+        color: #fff;
+    }
+}
+
+// Form Elements
+// -----------------------------------------------------------
+select, textarea, input:not([type="checkbox"]) {
+    background-color: #f1f1f1;
+    border: none;
+    width: 100%;
+    outline: none;
+}
+
+// Utility Styles
+// -----------------------------------------------------------
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-custom {
+    padding: 0;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+// Card Component
+// -----------------------------------------------------------
+.card {
+    margin: 20px;
+    width: 360px;
+    //height: 460px;
+    min-height: 150px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px #0000001A;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: none;
+
+    &:not(:last-child) {
+        margin-bottom: 90px;
+    }
+    
+    @media screen and (max-width: $screen-sm-min) {
+        width: 320px;
+    }
+}
+
+.like-card {
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px #0000001A;
+    background-color: white;
+}
+
+// Custon container
+.custom-container {
+    max-width: 1108px;
+}
+
+.table {
+    &-heading > div {
+        font-size: 15px;
+        line-height: 20px;
+        color: $grey-color;
+        position: relative;
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+
+        &:not(:last-child):after {
+            content: "";
+            width: 1px;
+            height: 21px;
+            background-color: $grey-color;
+            position: absolute;
+            right: 0;
+            top: 7px;
+        }
+
+    }
+
+    &-cell {
+        font-size: 12px;
+        line-height: 16px;
+        width: 100%;
+        text-align: center;
+        padding-top: 4px !important;
+        padding-bottom: 4px !important;
+    }
+
+    &-cell-checkbox {
+        width: 40px;
+    }
+
+    &-body {
+        padding-top: 10px;
+        background-color: #F7F7F7;
+        gap: 10px;
+        min-height: calc(10 * 25px);
+    }
+}

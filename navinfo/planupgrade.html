@@ -1,0 +1,108 @@
+<!--https://github.com/jedzza/navinforeactfrontend-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta information -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Page title -->
+  <title>Plan upgrade</title>
+  <!-- Link to Bootstrap CSS -->
+  <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+  <link rel="stylesheet" href="src/plugins/bootstrap.min.css">
+  <link rel="stylesheet" href="src/plugins/fontawesome-free-6.0.0-beta3-web/css/all.min.css">
+  <!-- Link to custom main stylesheet -->
+  <link rel="stylesheet" href="src/styles/planupgrade.css">
+</head>
+
+<body>
+
+  <div class="navbar-container d-flex align-items-center">
+    <div class="navbar-logo" id="navbar-logo">
+      <img src="src/images/logo-white.png" alt="logo-image" />
+    </div>
+    <div class="avatar-wrapper ms-auto">
+      <div id="account-menu-button">
+        <img src="src/images/avatar.png" />
+        <span>Firstname Lastname</span>
+      </div>
+      <div class="account-menu position-absolute d-none" id="account-menu">
+        <a href="accountsetting.html">
+          <div class="menu-item">
+            <img src="src/images/avatar.png" />
+            <span>Account & settings</span>
+          </div>
+        </a>
+        <a href="login.html">
+          <div class="menu-item">
+            <img src="src/images/logout.png" />
+            <span>Log out</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="main-container d-flex">
+    <div class="menubar-wrapper" id="menubar-wrapper">
+      <div class="menubar" id="menubar">
+        <a href="datablurring.html">
+          <div class="menu-item"><span>Data blurring</span></div>
+        </a>
+        <a href="consumption.html">
+          <div class="menu-item"><span>Consumption history</span></div>
+        </a>
+        <a href="planupgrade.html">
+          <div class="menu-item selected"><span>Plan upgrade</span></div>
+        </a>
+        <div class="menu-item" id="help-menu">
+          <span>Help & Support</span>
+          <i class="fas fa-chevron-down ms-auto"></i>
+        </div>
+        <div id="help-sub-menu" class="d-none">
+          <a href="faq.html">
+            <div class="menu-item sub-menu"><span>FAQ</span></div>
+          </a>
+          <a href="contactus.html">
+            <div class="menu-item sub-menu"><span>Contact us</span></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="main-content d-flex justify-content-center w-100">
+      <div class="card-wrapper d-flex w-100 align-items-center justify-content-center">
+        <div class="card trial">
+          <div class="d-flex">
+            <div><span>Trial</span></div>
+            <div class="w-100">
+              <div class="placeholder-wrapper d-flex justify-content-center align-items-center">
+                <span>Current Plan</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card pro">
+          <div class="d-flex">
+            <div><span>Pro</span></div>
+            <div class="mt-auto"><button>Upgrade</button></div>
+          </div>
+        </div>
+        <div class="card enterprise">
+          <div class="d-flex">
+            <div><span>Enterprise</span></div>
+            <div class="mt-auto"><button>Contact us</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JavaScript -->
+  <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+  <script src="src/plugins/bootstrap.bundle.min.js"></script>
+  <script src="src/javascript/index.js"></script>
+</body>
+
+</html>

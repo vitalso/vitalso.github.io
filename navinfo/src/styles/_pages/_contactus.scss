@@ -1,0 +1,11 @@
+// Import your SCSS dependencies
+@import '../variables';
+@import '../_mixins';
+
+
+.main-container {
+
+    textarea {
+        height: 100px;
+    }
+}

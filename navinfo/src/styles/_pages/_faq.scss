@@ -1,0 +1,62 @@
+// Import your SCSS dependencies
+@import '../variables'; // Import your variable definitions
+@import '../_mixins'; // Import your mixins
+
+.main-container {
+    .main-content {
+
+        word-break: break-all;
+
+        // FAQ Wrapper
+        .faq-wrapper {
+            width: 100%;
+
+            // Title
+            .title {
+                margin: 0 0 40px 20px;
+
+                @media screen and (max-width: $screen-sm-min) {
+                    margin-left: 0;
+                }
+            }
+
+            // FAQ Group
+            .group {
+
+                // Header
+                .header {
+                    padding: 10px 30px;
+                    color: white;
+                    background-color: $blue-color;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                // FAQ Item
+                .item {
+                    padding: 0 30px;
+                    box-shadow: 0 0 8.5px 0 rgba(0, 0, 0, 0.25);
+                    margin-top: 6px;
+
+                    // FAQ Question
+                    .question {
+                        padding: 12px 0;
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+
+                        span {
+                            margin-right: 10px;
+                        }
+                    }
+
+                    // FAQ Answer
+                    .answer {
+                        padding: 12px 0;
+                    }
+                }
+            }
+        }
+    }
+}
