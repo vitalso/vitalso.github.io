@@ -166,7 +166,7 @@ h1 {
     }
 
     .custom-align span:nth-child(2) , .custom-align span:nth-child(3) {
-        margin-left: 30%;
+        margin-left: 28%;
     }
 
     .notation {
@@ -198,8 +198,8 @@ h1 {
         color: var(--white-text-color);
         background-color: var(--dark-bg-color);
         cursor: pointer;
-        bottom: 20%;
-        right: 10%;
+        bottom: 18%;
+        right: 17%;
     }
 
     .smile {
@@ -316,8 +316,7 @@ h1 {
     font-family: 'FixelDisplayMedium';
     font-size: 88px;
     line-height: 110%;
-    bottom: 45%;
-    margin-left: 40px;
+    bottom: 40%;
 }
 
     .underline {
@@ -339,7 +338,7 @@ h1 {
     padding-right: 40px;
     max-width: 560px;
     /*transform: translateY(50%);*/
-    margin-top: 35%;
+    margin-top: 40%;
 }
 
     .text-lg {
@@ -588,7 +587,13 @@ h1 {
         .note-blank-btn {
             position: absolute;
             width: 100%;
-            bottom: 120px;
+            bottom: 180px;
+        }
+
+        @media screen and (max-width: 1280px) and (max-height: 768px) {
+            .note-blank-btn {
+                bottom: 60px;
+            }
         }
 
 .cover-note-index {
@@ -950,4 +955,13 @@ h1 {
 footer {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+/* Media query */
+@media screen and (max-width: 1390px) {
+
+    .flower-slider , .photo-owners-wrap {
+        margin-left: 50px;
+    }
+    
 }

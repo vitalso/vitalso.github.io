@@ -141,18 +141,17 @@ timeline2
     targets: '#section-description .section-title',
     keyframes: [
         {translateY: -150 },
-        {translateY: -150 , delay: 100},
-        {translateY: -300},
-        {translateY: -1000 , opacity: 0},
+        {translateY: -150 },
+        {translateY: -150 },
+        {translateY: -700 , opacity: 0},
     ],
-    //duration: 1000,
 }, 0)
 .add({
     targets: '#section-description .section-text',
     keyframes: [
-        { translateY: -300 },
-        { translateY: -600 , delay: 100 },
-        { translateY: -1200 },
+        { translateY: -200 , delay: 150 },
+        { translateY: -600 },
+        { translateY: -1100 },
         { translateY: -1600 , opacity: 0 },
     ],
     //duration: 1000
@@ -160,8 +159,8 @@ timeline2
 
 var scene2 = new ScrollMagic.Scene({
     triggerElement: "#section-description",
-    offset: 400,
-    duration: 1000
+    offset: 405,
+    duration: 2000
 })
 .on("progress", function (event) {
     timeline2.seek(timeline2.duration * event.progress);
@@ -225,7 +224,7 @@ timeline3
         duration: 800,
         easing: 'easeInOutSine'
     },
-    translateY: [600, -50],
+    translateY: [600, -60],
     translateX: [0, -70]
 }, 900)
 .add({
@@ -235,7 +234,7 @@ timeline3
         duration: 800,
         easing: 'easeInOutSine'
     },
-    translateY: [600, 0],
+    translateY: [600, -10],
     translateX: [0, 100]
 }, 1200)
 .add({
@@ -265,13 +264,13 @@ timeline3
         duration: 800,
         easing: 'easeInOutSine'
     },
-    translateY: [600, -120],
-    translateX: [0, '-425%']
+    translateY: [600, -140],
+    translateX: [0, '-420%']
 }, 2100)
 
 var scene3 = new ScrollMagic.Scene({
     triggerElement: ".dayli-section",
-    offset: 400,
+    offset: 350,
     duration: 2000,
 })
 .on("progress", function (event) {
@@ -305,10 +304,10 @@ timeline4
 .add({
     targets: '.card-section .card-1',
     keyframes: [
-        {translateX: -300 , translateY: -100 , rotate: -4 },
-        {translateX: -500 , translateY: -150 , rotate: -8 },
-        {translateX: -1000 , translateY: -200 , rotate: -12 },
-        {translateX: -1600 , rotate: -6 },
+        {translateX: -300 , translateY: -30 , rotate: -4 },
+        {translateX: -500 , translateY: -60 , rotate: -8 },
+        {translateX: -1050 , translateY: -90 , rotate: -12 },
+        {translateX: -1740 , rotate: -6 },
         {translateX: -2600 , rotate: -3 , delay: 200 },
         {translateX: -3000 , rotate: 0 },
     ],
@@ -316,10 +315,10 @@ timeline4
 .add({
     targets: '.card-section .card-2',
     keyframes: [
-        {translateX: -150 , translateY: -100 , rotate: -1 },
-        {translateX: -550 , translateY: -50 , rotate: -3 },
-        {translateX: -1100 , translateY: -70 , rotate: -5 },
-        {translateX: -1700 , rotate: -3 },
+        {translateX: -150 , translateY: -30 , rotate: -1 },
+        {translateX: -550 , translateY: -20 , rotate: -3 },
+        {translateX: -1150 , translateY: -40 , rotate: -5 },
+        {translateX: -1840 , rotate: -3 },
         {translateX: -2800 , rotate: -1 , delay: 200 },
         {translateX: -3400 , rotate: 0 },
     ],
@@ -327,10 +326,10 @@ timeline4
 .add({
     targets: '.card-section .card-3',
     keyframes: [
-        {translateX: -200 , translateY: -100 , rotate: -2 },
-        {translateX: -600 , translateY: -150 , rotate: -5 },
-        {translateX: -1200 , translateY: -200 , rotate: -8 },
-        {translateX: -1800 , rotate: -3 },
+        {translateX: -200 , translateY: -30 , rotate: -2 },
+        {translateX: -600 , translateY: -60 , rotate: -5 },
+        {translateX: -1250 , translateY: -90 , rotate: -8 },
+        {translateX: -1940 , rotate: -3 },
         {translateX: -2900 , rotate: -1 , delay: 200 },
         {translateX: -3900 , rotate: 0 },
     ],
@@ -338,29 +337,29 @@ timeline4
 .add({
     targets: '.card-section .card-4',
     keyframes: [
-        {translateX: -400 , translateY: -100 , rotate: 1 },
-        {translateX: -900 , translateY: -50 , rotate: 3 },
-        {translateX: -1500 , translateY: -70 , rotate: 5 },
-        {translateX: -1900 , translateY: -90 , rotate: 4 },
-        {translateX: -3000 , translateY: -120 , rotate: 3 , delay: 200 },
+        {translateX: -400 , translateY: -30 , rotate: 1 },
+        {translateX: -900 , translateY: -20 , rotate: 3 },
+        {translateX: -1550 , translateY: -40 , rotate: 5 },
+        {translateX: -2040 , translateY: -60 , rotate: 4 },
+        {translateX: -3000 , translateY: -90 , rotate: 3 , delay: 200 },
         {translateX: -4000 , rotate: 0 },
     ],
 }, 0)
 .add({
     targets: '.card-section .card-5',
     keyframes: [
-        {translateX: -500 , translateY: -100 , rotate: -4 },
-        {translateX: -1000 , translateY: -150 , rotate: -8 },
-        {translateX: -1600 , translateY: -170 , rotate: -15 },
-        {translateX: -2000 , translateY: -190 , rotate: -11 },
-        {translateX: -3300 , translateY: -120 , rotate: -3 , delay: 200 },
+        {translateX: -500 , translateY: -30 , rotate: -4 },
+        {translateX: -1000 , translateY: -60 , rotate: -8 },
+        {translateX: -1650 , translateY: -90 , rotate: -15 },
+        {translateX: -2140 , translateY: -120 , rotate: -11 },
+        {translateX: -3350 , translateY: -150 , rotate: -3 , delay: 200 },
         {translateX: -4300 , rotate: 0 },
     ],
 }, 0)
 
 var scene4 = new ScrollMagic.Scene({
     triggerElement: ".card-section",
-    offset: 400,
+    offset: 390,
     duration: 3000,
 })
 .on("progress", function (event) {
@@ -398,11 +397,11 @@ timeline5
         { scale: 0 , opacity: 0 },
         //{ translateY: 0} ,
         { duration: 1, delay: 400, scale: 1 , opacity: 1 , translateX: '-50%' },
-        { delay: 1000 , duration: 1000, translateY: 100 , translateX: '-25%' , width: '3970px'},
+        { delay: 1000 , duration: 1000, translateY: 150 , translateX: '-25%' , width: '3950px'},
         //{ delay: 1000 , width: '4700px'},
         { delay: 300 , translateX: '-75%' },
-        { delay: 900 , translateX: '-95%' },
-        { delay: 1400  , translateY: 0} ,
+        { delay: 1400 , translateX: '-95%' },
+        { delay: 1000  , translateY: 0} ,
         //{ delay: 500 , translateX: '-100%' },
         //{ delay: 500 , translateY: '-100%' },
         //{ delay: 500 , translateY: -958 , translateX: 0 , width: '450px' },
@@ -419,27 +418,27 @@ timeline5
 .add({
     targets: '.cover-section .cover-section-text-1',
     //delay: 2000,
-    duration: 2500,
+    duration: 2000,
     keyframes: [
         { opacity: 0 },
         { opacity: 1 },
         { translateY: -100 , opacity: 0 },
     ]
-}, 1500)
+}, 1200)
 .add({
     targets: '.cover-section .cover-section-text-2',
     //delay: 4000,
-    duration: 2000,
+    duration: 4000,
     keyframes: [
         { translateY: -30 },
         { opacity: 0 },
         { opacity: 1 },
         { translateY: -100 , opacity: 0 },
     ]
-}, 2200)
+}, 900)
 .add({
     targets: '.cover-section .quality-paper-image',
-    //delay: 3700,
+    duration: 1000,
     keyframes: [
         { opacity: 0 },
         { opacity: 1 },
@@ -453,9 +452,9 @@ timeline5
         { translateY: -80 },
         { opacity: 0 },
         { opacity: 1 },
-        { delay: 1000 , opacity: 0 },
+        { delay: 500 , opacity: 0 },
     ]
-}, 3800)
+}, 4300)
 .add({
     targets: '.cover-section .cover-note-blank img',
     opacity: 0,
@@ -470,7 +469,7 @@ timeline5
 })
 .add({
     targets: '.cover-section .notation-1',
-    delay: 5300,
+    delay: 5500,
     keyframes: [
         { opacity: 0 },
         { translateY: 10 , opacity: 1 },
@@ -479,7 +478,7 @@ timeline5
 
 .add({
     targets: '.cover-section .notation-2',
-    delay: 5500,
+    delay: 5800,
     keyframes: [
         { opacity: 0 },
         { translateY: 10 , opacity: 1 },
@@ -488,7 +487,7 @@ timeline5
 
 .add({
     targets: '.cover-section .note-blank-btn',
-    delay: 5500,
+    delay: 5800,
     keyframes: [
         { opacity: 0 },
         { translateY: 10 , opacity: 1 },
@@ -498,8 +497,8 @@ timeline5
 
 var scene5 = new ScrollMagic.Scene({
     triggerElement: ".cover-section",
-    offset: 300,
-    duration: 5000,
+    offset: 350,
+    duration: 7000,
 })
 .on("progress", function (event) {
     timeline5.seek(timeline5.duration * event.progress);
@@ -567,24 +566,24 @@ timeline6
 
 .add({
     targets: '.note-for .note-for-cover',
-    translateY: -350,
+    translateY: -250,
     duration: 100,
-}, 500)
+}, 300)
 .add({
     targets: '.note-for .note-horizontal-line',
     width: '100%',
     duration: 100,
-}, 400)
+}, 300)
 .add({
     targets: '.note-for .note-line',
     opacity: [0 , 1],
     duration: 1,
-}, 500)
+}, 400)
 
 var scene6 = new ScrollMagic.Scene({
     triggerElement: ".note-for",
-    offset: 500,
-    duration: 1000,
+    offset: 384,
+    duration: 4000,
 })
 .on("progress", function (event) {
     timeline6.seek(timeline6.duration * event.progress);
@@ -604,21 +603,23 @@ var timeline7 = anime.timeline({
 
 timeline7
 .add({
-    //targets: '.photo-owners',
-    scale: 0.94,
-    opacity: 0.5,
-    borderRadius: 30
-}, 0)
-.add({
     targets: '.contact',
-    opacity: 1,
-    duration: 1,
+    keyframes: [
+        { opacity: 0 },
+        { opacity: 0.3 },
+        { opacity: 0.5 },
+        //{ opacity: 0.7 },
+        { opacity: 1 },
+    ],
+    //opacity: [0, 1],
+    //duration: 3000,
+    //delay: 5000,
 }, 0)
 
 var scene7 = new ScrollMagic.Scene({
     triggerElement: ".photo-owners",
     offset: -300,
-    duration: 100,
+    duration: 1400,
 })
 .on("progress", function (event) {
     timeline7.seek(timeline7.duration * event.progress);
@@ -641,7 +642,7 @@ timeline8
 .add({
     targets: '.photo-owners',
     scale: 0.94,
-    opacity: 0.5,
+    //opacity: 0.5,
     borderRadius: 30
 }, 0)
 
