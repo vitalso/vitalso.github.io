@@ -54,16 +54,25 @@
         <a href="consumption.html">
           <div class="menu-item"><span>Consumption history</span></div>
         </a>
-        <a href="planupgrade.html">
-          <div class="menu-item selected"><span>Plan upgrade</span></div>
-        </a>
+        <div class="menu-item" id="upgrade-menu">
+          <span>Upgrade</span>
+          <i class="fas fa-chevron-up ms-auto"></i>
+        </div>
+        <div id="upgrade-sub-menu">
+          <a href="top-up.html">
+            <div class="menu-item sub-menu"><span>Top-up credit</span></div>
+          </a>
+          <a href="planupgrade.html">
+            <div class="menu-item sub-menu selected"><span>Plans <i>(inactive for now)</i></span></div>
+          </a>
+        </div>
         <div class="menu-item" id="help-menu">
           <span>Help & Support</span>
           <i class="fas fa-chevron-down ms-auto"></i>
         </div>
         <div id="help-sub-menu" class="d-none">
-          <a href="faq.html">
-            <div class="menu-item sub-menu"><span>FAQ</span></div>
+          <a href="info-hub.html">
+            <div class="menu-item sub-menu"><span>Info hub</span></div>
           </a>
           <a href="contactus.html">
             <div class="menu-item sub-menu"><span>Contact us</span></div>
@@ -71,30 +80,56 @@
         </div>
       </div>
     </div>
-    <div class="main-content d-flex justify-content-center w-100">
-      <div class="card-wrapper d-flex w-100 align-items-center justify-content-center">
-        <div class="card trial">
-          <div class="d-flex">
-            <div><span>Trial</span></div>
-            <div class="w-100">
-              <div class="placeholder-wrapper d-flex justify-content-center align-items-center">
-                <span>Current Plan</span>
-              </div>
-            </div>
-          </div>
+    <div class="main-content d-flex align-items-center justify-content-center w-100">
+      <div class="card-wrapper d-flex w-100 gap-5 justify-content-center">
+        
+        <div class="card text-center d-block trial mb-0 mx-0">
+          <p>Trial</p>
+          <p class="mb-4">€1/1GB video <br> €2/1GB image</p>
+          <ul class="m-0 p-0">
+            <li><i class="fa-solid fa-check"></i> Online documentation</li>
+            <li><i class="fa-solid fa-check"></i> Face Precision Blur</li>
+            <li><i class="fa-solid fa-check"></i> Licence Plates Precision Blur</li>
+            <li><i class="fa-solid fa-check"></i> Direct Browser Upload</li>
+          </ul>
         </div>
-        <div class="card pro">
-          <div class="d-flex">
-            <div><span>Pro</span></div>
-            <div class="mt-auto"><button>Upgrade</button></div>
-          </div>
+        
+        <div class="card text-center d-block pro mb-0 mx-0">
+          <p>Pro</p>
+          <p class="mb-4">€1/1GB video <br> €2/1GB image</p>
+          <ul class="m-0 p-0">
+            <li><i class="fa-solid fa-check"></i> Online documentation</li>
+            <li><i class="fa-solid fa-check"></i> Face Precision Blur</li>
+            <li><i class="fa-solid fa-check"></i> Licence Plates Precision Blur</li>
+            <li><i class="fa-solid fa-check"></i> Direct Browser Upload</li>
+            <li><i class="fa-solid fa-check"></i> FTP File Transfer</li>
+            <li><i class="fa-solid fa-check"></i> Support</li>
+            <li><i class="fa-solid fa-check"></i> Face coordinates</li>
+            <li><i class="fa-solid fa-check"></i> License Plates coordinates</li>
+            <li><i class="fa-solid fa-check"></i> Priority Support</li>
+          </ul>
         </div>
-        <div class="card enterprise">
-          <div class="d-flex">
-            <div><span>Enterprise</span></div>
-            <div class="mt-auto"><button>Contact us</button></div>
-          </div>
+        
+        <div class="card text-center flex-column justify-content-between enterprise mb-0 mx-0">
+          <p>Enterprise</p>
+          <ul class="mt-auto mb-1 p-0 w-100">
+            <li><i class="fa-solid fa-check"></i> Online documentation</li>
+            <li><i class="fa-solid fa-check"></i> Face Precision Blur</li>
+            <li><i class="fa-solid fa-check"></i> Licence Plates Precision Blur</li>
+            <li><i class="fa-solid fa-check"></i> Direct Browser Upload</li>
+            <li><i class="fa-solid fa-check"></i> FTP File Transfer</li>
+            <li><i class="fa-solid fa-check"></i> Support</li>
+            <li><i class="fa-solid fa-check"></i> Face coordinates</li>
+            <li><i class="fa-solid fa-check"></i> License Plates coordinates</li>
+            <li><i class="fa-solid fa-check"></i> Priority Support</li>
+            <li><i class="fa-solid fa-check"></i> Custom Model Deployment</li>
+            <li><i class="fa-solid fa-check"></i> Quality Reporting</li>
+            <li><i class="fa-solid fa-check"></i> On-premise capabilities</li>
+            <li><i class="fa-solid fa-check"></i> S3 Bucket Integration</li>
+          </ul>
+          <button class="btn-secondary my-3">Contact us</button>
         </div>
+
       </div>
     </div>
   </div>

@@ -90,6 +90,9 @@ button {
 
     &.btn-secondary {
         background-color: $primary-color;
+        &:hover {
+            background-color: $blue-color;
+        }
     }
 
     &.btn-sm {
@@ -99,6 +102,11 @@ button {
     &.btn-md {
         padding: 2px 21px;
         border-radius: 5px;
+    }
+
+    &.btn-lg {
+        padding: 12px 34px;
+        border-radius: 8px;
     }
 
     &.btn-success {
@@ -163,6 +171,12 @@ select, textarea, input:not([type="checkbox"]) {
     border-radius: 20px;
     box-shadow: 0px 0px 15px #0000001A;
     background-color: white;
+
+    &.small {
+        border-radius: 5px;
+        box-shadow: 0px 0px 6px #00000029;
+    }
+
 }
 
 // Custon container
@@ -178,6 +192,7 @@ select, textarea, input:not([type="checkbox"]) {
         position: relative;
         padding-top: 8px !important;
         padding-bottom: 8px !important;
+        font-weight: 200;
 
         &:not(:last-child):after {
             content: "";

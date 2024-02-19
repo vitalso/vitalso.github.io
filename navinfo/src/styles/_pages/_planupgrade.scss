@@ -11,28 +11,53 @@
 
             // Card
             .card {
+                width: 275px;
+
+                p:first-child {
+                    margin: 25px 0;
+                    & + p {
+                        font-size: 15px;
+                        font-weight: 600;
+                    }
+                }
+
+                ul {
+                    font-size: 12px;
+                    line-height: 15px;
+                    list-style-type: none;
+                    text-align: left;
+
+                    li {
+                        padding: 3px 0 3px 55px;
+                        &:nth-child(2n+1) {
+                            background-color: $bg-grey;
+                        }
+                        i {
+                            color: #00CB10;
+                        }
+                    }
+
+                }
 
                 // Trial Card
                 &.trial {
-                    border-color: #919a9f;
-
-                    // Placeholder Wrapper
-                    .placeholder-wrapper {
-                        width: 270px;
-                        height: 50px;
-                        margin-top: 30px;
-                        background-color: #f1f1f1;
+                    p:first-child {
+                        color: $grey-color;
                     }
                 }
 
                 // Pro Card
                 &.pro {
-                    border-color: #5085c4;
+                    p:first-child {
+                        color: $blue-secondary-color;
+                    }
                 }
 
                 // Enterprise Card
                 &.enterprise {
-                    border-color: #004ea0;
+                    p:first-child {
+                        color: $yellow-color;
+                    }
                 }
 
                 > div {

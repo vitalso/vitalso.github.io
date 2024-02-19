@@ -312,3 +312,11 @@ select, textarea, input:not([type="checkbox"]) {
         .main-container .main-content .form-wrapper form button {
           width: 203px;
           height: 62px; }
+
+.info-hub-wrap {
+  gap: 40px; }
+  .info-hub-wrap a {
+    text-decoration: underline;
+    color: #5085C4; }
+    .info-hub-wrap a:hover {
+      text-decoration: none; }

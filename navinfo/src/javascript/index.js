@@ -30,9 +30,17 @@ const helpMenu = document.getElementById("help-menu");
 const helpSubMenu = document.getElementById("help-sub-menu");
 const helpArrow = helpMenu.querySelector("i");
 
+const upgradeMenu = document.getElementById("upgrade-menu");
+const upgradeSubMenu = document.getElementById("upgrade-sub-menu");
+const upgradeArrow = upgradeMenu.querySelector("i");
+
 // Add a click event listener to the help menu
 helpMenu.addEventListener("click", () => {
     toggleSubMenu(helpMenu, helpSubMenu, helpArrow);
+});
+
+upgradeMenu.addEventListener("click", () => {
+    toggleSubMenu(upgradeMenu, upgradeSubMenu, upgradeArrow);
 });
 
 const accountMenuBtn = document.getElementById("account-menu-button");

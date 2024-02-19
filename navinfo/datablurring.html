@@ -54,16 +54,25 @@
         <a href="consumption.html">
           <div class="menu-item"><span>Consumption history</span></div>
         </a>
-        <a href="planupgrade.html">
-          <div class="menu-item"><span>Plan upgrade</span></div>
-        </a>
+        <div class="menu-item" id="upgrade-menu">
+          <span>Upgrade</span>
+          <i class="fas fa-chevron-down ms-auto"></i>
+        </div>
+        <div id="upgrade-sub-menu" class="d-none">
+          <a href="top-up.html">
+            <div class="menu-item sub-menu"><span>Top-up credit</span></div>
+          </a>
+          <a href="planupgrade.html">
+            <div class="menu-item sub-menu"><span>Plans <i>(inactive for now)</i></span></div>
+          </a>
+        </div>
         <div class="menu-item" id="help-menu">
           <span>Help & Support</span>
           <i class="fas fa-chevron-down ms-auto"></i>
         </div>
         <div id="help-sub-menu" class="d-none">
-          <a href="faq.html">
-            <div class="menu-item sub-menu"><span>FAQ</span></div>
+          <a href="info-hub.html">
+            <div class="menu-item sub-menu"><span>Info hub</span></div>
           </a>
           <a href="contactus.html">
             <div class="menu-item sub-menu"><span>Contact us</span></div>
@@ -93,7 +102,7 @@
                 </label>
               </div>
   
-              <div class="card">
+              <div class="card cursor-pointer" data-bs-toggle="modal" data-bs-target="#fileModal">
                 <div><img src="src/images/file-transfer-protocol.png" alt="file transfer protocol image" /></div>
                 <span>File transfer protocol</span>
               </div>
@@ -198,8 +207,47 @@
 
         </div>
       </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="fileModal" tabindex="-1" aria-labelledby="fileModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content p-4 form-wrapper">
+            <p class="mb-0">FIle transfer protocol</p>
+
+            <form class="d-flex flex-column flex-grow-1">
+              <div class="field">
+                <span>Hostname (server URL, e.g. sftp://sftp.example.com)</span><br />
+                <input type="text" />
+              </div>
+              <div class="field">
+                <span>Port number</span><br />
+                <input type="text" />
+              </div>
+              <div class="field">
+                <span>Username</span><br />
+                <input type="text" />
+              </div>
+              <div class="field">
+                <span>Password</span><br />
+                <input type="password" />
+              </div>
+              <div class="field">
+                <span>File path</span><br />
+                <input type="text" />
+              </div>
+              <div class="button mt-3 text-center">
+                <button type="submit" class="btn-secondary btn-lg">Connect</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
+
+  
 
   <!-- Bootstrap JavaScript -->
   <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->

@@ -152,44 +152,25 @@ select, textarea, input:not([type="checkbox"]) {
   gap: 10px;
   min-height: calc(10 * 25px); }
 
-.main-container .main-content .card-wrapper {
-  padding: 0 30px;
-  flex-wrap: wrap; }
-  .main-container .main-content .card-wrapper .card {
-    width: 275px; }
-    .main-container .main-content .card-wrapper .card p:first-child {
-      margin: 25px 0; }
-      .main-container .main-content .card-wrapper .card p:first-child + p {
-        font-size: 15px;
-        font-weight: 600; }
-    .main-container .main-content .card-wrapper .card ul {
-      font-size: 12px;
-      line-height: 15px;
-      list-style-type: none;
-      text-align: left; }
-      .main-container .main-content .card-wrapper .card ul li {
-        padding: 3px 0 3px 55px; }
-        .main-container .main-content .card-wrapper .card ul li:nth-child(2n+1) {
-          background-color: #F1F1F1; }
-        .main-container .main-content .card-wrapper .card ul li i {
-          color: #00CB10; }
-    .main-container .main-content .card-wrapper .card.trial p:first-child {
-      color: #707070; }
-    .main-container .main-content .card-wrapper .card.pro p:first-child {
-      color: #5085C4; }
-    .main-container .main-content .card-wrapper .card.enterprise p:first-child {
-      color: #f29100; }
-    .main-container .main-content .card-wrapper .card > div {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column; }
-      .main-container .main-content .card-wrapper .card > div > div {
-        display: flex;
-        justify-content: center; }
-    .main-container .main-content .card-wrapper .card button {
-      width: 203px;
-      height: 62px; }
+.top-up-card {
+  max-width: 500px;
+  width: 100%; }
+
+.top-up-form label {
+  font-size: 12px;
+  line-height: 16px;
+  position: absolute;
+  top: 10px;
+  left: 10px; }
+
+.top-up-form input {
+  background: #F1F1F1;
+  border-radius: 5px;
+  width: 100%;
+  height: 55px;
+  padding-left: 10px;
+  font-size: 14px;
+  padding-top: 22px; }
 
 .navbar-container {
   height: 80px;

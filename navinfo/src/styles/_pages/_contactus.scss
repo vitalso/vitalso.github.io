@@ -5,7 +5,14 @@
 
 .main-container {
 
+    #question {
+        max-width: 50%;
+        select {
+            font-size: 12px;
+        }
+    }
+
     textarea {
-        height: 100px;
+        height: 300px !important;
     }
 }

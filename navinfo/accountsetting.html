@@ -54,16 +54,25 @@
         <a href="consumption.html">
           <div class="menu-item"><span>Consumption history</span></div>
         </a>
-        <a href="planupgrade.html">
-          <div class="menu-item"><span>Plan upgrade</span></div>
-        </a>
+        <div class="menu-item" id="upgrade-menu">
+          <span>Upgrade</span>
+          <i class="fas fa-chevron-down ms-auto"></i>
+        </div>
+        <div id="upgrade-sub-menu" class="d-none">
+          <a href="top-up.html">
+            <div class="menu-item sub-menu"><span>Top-up credit</span></div>
+          </a>
+          <a href="planupgrade.html">
+            <div class="menu-item sub-menu"><span>Plans <i>(inactive for now)</i></span></div>
+          </a>
+        </div>
         <div class="menu-item" id="help-menu">
           <span>Help & Support</span>
           <i class="fas fa-chevron-down ms-auto"></i>
         </div>
         <div id="help-sub-menu" class="d-none">
-          <a href="faq.html">
-            <div class="menu-item sub-menu"><span>FAQ</span></div>
+          <a href="info-hub.html">
+            <div class="menu-item sub-menu"><span>Info hub</span></div>
           </a>
           <a href="contactus.html">
             <div class="menu-item sub-menu"><span>Contact us</span></div>
@@ -73,7 +82,7 @@
     </div>
     <div class="main-content d-flex justify-content-center w-100">
       <div class="w-100">
-        <div class="form-wrapper w-100 d-flex flex-column mb-5">
+        <div class="form-wrapper w-100 d-flex flex-column mb-3">
           <div class="title">
             <span>Account Details</span>
           </div>
@@ -111,7 +120,7 @@
             </div>
           </form>
         </div>
-        <div class="form-wrapper w-100 d-flex flex-column mb-5">
+        <div class="form-wrapper w-100 d-flex flex-column mb-3">
           <div class="title">
             <span>Billing Address</span>
           </div>

@@ -1,0 +1,17 @@
+@import '_base';
+@import '_mixins';
+@import '_pages/planupgrade';
+@import '_pages/skeleton';
+
+.info-hub-wrap {
+    gap: 40px;
+
+    a {
+        text-decoration: underline;
+        color: $blue-secondary-color;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+}
