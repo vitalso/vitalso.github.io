@@ -48,10 +48,10 @@ button {
   outline: none;
   border: none;
   border-radius: 8px;
-  background-color: #004EA0;
+  background-color: #5085C4;
   color: white; }
   button:hover {
-    background-color: #5085c4; }
+    background-color: #004EA0; }
   button.disabled {
     background-color: #919a9f; }
   button.btn-secondary {

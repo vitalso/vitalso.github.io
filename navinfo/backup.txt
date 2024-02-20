@@ -1,4 +1,0 @@
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass src/styles/accountsetting.scss src/styles/accountsetting.css && node-sass src/styles/consumption.scss src/styles/consumption.css && node-sass src/styles/contactus.scss src/styles/contactus.css && node-sass src/styles/datablurring.scss src/styles/datablurring.css && node-sass src/styles/faq.scss src/styles/faq.css && node-sass src/styles/planupgrade.scss src/styles/planupgrade.css"
-  },

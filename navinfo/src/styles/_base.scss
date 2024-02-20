@@ -77,11 +77,11 @@ button {
     outline: none;
     border: none;
     border-radius: 8px;
-    background-color: $blue-color;
+    background-color: $primary-color;
     color: white;
     
     &:hover {
-        background-color: #5085c4;
+        background-color: $blue-color;
     }
 
     &.disabled {

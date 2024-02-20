@@ -22,7 +22,7 @@
                 }
 
                 &.selected {
-                    border-bottom: 2px solid $blue-color;
+                    border-bottom: 4px solid $blue-color;
                 }
             }
 
@@ -36,6 +36,7 @@
         // Upload Content
         .upload-content {
             flex-wrap: wrap;
+            padding-top: 110px;
 
             .card {
 
@@ -49,61 +50,9 @@
 
         // Download Content
         .download-content {
-            .download-container {
-                width: 100%;
-                max-width: 914px;
-                filter: drop-shadow(0 0 8.5px rgba(0, 0, 0, 0.25));
-                background-color: #ffffff;
-                display: flex;
-                flex-direction: column;
-
-                .part {
-                    flex: 1;
-                    display: flex;
-                    word-break: break-all;
-
-                    &:not(:last-child) {
-                        border-bottom: 1px solid $grey-color;
-                    }
-
-                    &:nth-child(even) {
-                        background-color: #f1f1f1;
-                    }
-
-                    div {
-                        display: flex;
-                        align-items: center;
-                        padding: 35px;
-                    }
-
-                    >div:nth-child(1) {
-                        width: 225px;
-                        min-width: 225px;
-                        border-right: 1px solid $grey-color;
-
-                        @media screen and (max-width: $screen-sm-min) {
-                            width: 50%;
-                            min-width: 50%;
-                        }
-                    }
-
-                    >div:nth-child(2) {
-                        flex-grow: 1;
-                        @media screen and (max-width: $screen-sm-min) {
-                            flex-grow: 1;
-                        }
-                    }
-                }
-            }
+            padding-top: 110px;
         }
 
-        // Download Button Content
-        .download-button-content {
-            button {
-                width: 203px;
-                height: 62px;
-            }
-        }
     }
 }
 
