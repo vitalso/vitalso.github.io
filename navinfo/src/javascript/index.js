@@ -96,3 +96,15 @@ if (faqWrapper != null && faqWrapper != undefined) {
         });
     });
 }
+
+// Toggle mobile menu
+const menuBtn = document.getElementById("toggleNav");
+const menuBar = document.getElementById("menubar-wrapper");
+
+menuBtn.addEventListener("click", () => {
+    if (menuBar.classList.contains("active")) {
+        menuBar.classList.remove("active");
+    } else {
+        menuBar.classList.add("active");
+    }
+});
