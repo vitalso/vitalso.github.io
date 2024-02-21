@@ -46,9 +46,15 @@ upgradeMenu.addEventListener("click", () => {
 const accountMenuBtn = document.getElementById("account-menu-button");
 const accountMenu = document.getElementById("account-menu");
 
+// Menu
+const menuBar = document.getElementById("menubar-wrapper");
+
 // Add a click event listener to the account menu button
 accountMenuBtn.addEventListener("click", () => {
     accountMenu.classList.toggle("d-none");
+
+    // Hide mobile menu
+    menuBar.classList.remove("active");
 });
 
 // Check if the upButton exists before attaching event listeners
@@ -99,12 +105,7 @@ if (faqWrapper != null && faqWrapper != undefined) {
 
 // Toggle mobile menu
 const menuBtn = document.getElementById("toggleNav");
-const menuBar = document.getElementById("menubar-wrapper");
 
 menuBtn.addEventListener("click", () => {
-    if (menuBar.classList.contains("active")) {
-        menuBar.classList.remove("active");
-    } else {
-        menuBar.classList.add("active");
-    }
+    menuBar.classList.toggle("active");
 });
