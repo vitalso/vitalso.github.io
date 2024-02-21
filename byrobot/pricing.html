@@ -29,8 +29,8 @@
               <li class="nav-item"><a class="nav-link" href="customers.html">Kunder</a></li>
               <li class="nav-item"><a class="nav-link" href="pricing.html">Priser</a></li>
               <li class="nav-item"><a class="nav-link" href="blog.html">Blogg</a></li>
-              <li class="nav-item ms-auto"><a class="nav-link btn btn-outline btn-sm" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Logga in</a></li>
-              <li class="nav-item"><a class="nav-link btn btn-primary btn-sm" href="#">Börja skriva</a></li>
+              <li class="nav-item ms-auto"><a class="btn btn-outline btn-sm" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Logga in</a></li>
+              <li class="nav-item"><a class="btn btn-primary btn-sm" href="#">Börja skriva</a></li>
             </ul>
           </div>
         </div>
@@ -48,18 +48,19 @@
                   <input type="range" id="priceSlider" min="1" max="10000" value="500"><span class="priceValue">500</span>
                 </div>
               </form>
-              <p class="border-bottom d-flex justify-content-between pb-3 mb-5"><span>Handwritten notes or letters in an envelope</span><span class="resultPrice"><b>26.9</b> kr</span></p>
+              <p class="border-bottom d-flex justify-content-between pb-3 mb-5"><span>Handwritten notes or letters in an envelope</span><span class="resultPrice flex-shrink-0"><b>26.9</b> <span>kr</span></span></p>
+              <p class="border-bottom d-flex justify-content-between pb-3 mb-5"><span>Handwritten postcards</span><span class="handWritted flex-shrink-0"><b>9.9</b> <span>kr</span></span></p>
               <div class="info border-bottom pb-1 position-relative" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                 <h2 class="mb-3">Stamps</h2>
                 <p>Charged at standard domestic and international rates</p><i class="bi bi-plus fs-3 position-absolute end-0 top-0"></i><i class="bi bi-dash fs-3 position-absolute end-0 top-0"></i>
               </div>
               <div class="collapse" id="collapseExample">
-                <p class="d-flex justify-content-between align-items-center py-3 border-bottom"><span>USA first class stamp</span><span>6.8 kr</span></p>
-                <p class="d-flex justify-content-between align-items-center py-3 border-bottom"><span>UK first class stamp</span><span>15.3 kr</span></p>
-                <p class="d-flex justify-content-between align-items-center py-3 border-bottom"><span>UK second class stamp</span><span>9.2 kr</span></p>
-                <p class="d-flex justify-content-between align-items-center py-3 border-bottom"><span>CA first class stamp</span><span>6.8 kr</span></p>
-                <p class="d-flex justify-content-between align-items-center py-3 border-bottom"><span>European stamp</span><span>28.4 kr</span></p>
-                <p class="d-flex justify-content-between align-items-center py-3 border-bottom"><span>Rest of the World stamp</span><span>15 kr</span></p>
+                <p class="d-flex justify-content-between align-items-center py-3 border-bottom"><span>USA first class stamp</span><span class="stamp1">6.8 kr</span></p>
+                <p class="d-flex justify-content-between align-items-center py-3 border-bottom"><span>UK first class stamp</span><span class="stamp2">15.3 kr</span></p>
+                <p class="d-flex justify-content-between align-items-center py-3 border-bottom"><span>UK second class stamp</span><span class="stamp3">9.2 kr</span></p>
+                <p class="d-flex justify-content-between align-items-center py-3 border-bottom"><span>CA first class stamp</span><span class="stamp4">6.8 kr</span></p>
+                <p class="d-flex justify-content-between align-items-center py-3 border-bottom"><span>European stamp</span><span class="stamp5">28.4 kr</span></p>
+                <p class="d-flex justify-content-between align-items-center py-3 border-bottom"><span>Rest of the World stamp</span><span class="stamp6">15 kr</span></p>
               </div>
               <div class="my-5 d-md-flex justify-content-between align-items-center py-3 border-bottom gap-5">
                 <div>
@@ -71,11 +72,23 @@
           </div>
         </div>
       </section>
+      <!-- Currency widget-->
+      <div class="currency-widget">
+        <button class="currency-btn" type="button" data-currency="USD">$</button>
+        <button class="currency-btn" type="button" data-currency="GBP">£</button>
+        <button class="currency-btn" type="button" data-currency="EUR">€</button>
+      </div>
     </main>
     <footer class="text-center text-md-start">
       <div class="container">
-        <div class="row mb-5">
-          <div class="col-12"><a class="logo z-1" href="/"><img src="images/logo.svg" alt="logo"></a></div>
+        <div class="row mb-md-5 mb-3">
+          <div class="col-md-6"><a class="logo z-1" href="/"><img src="images/logo.svg" alt="logo"></a></div>
+          <div class="col-md-6">
+            <form class="subscribe-form mt-3 mt-md-0" action="#">
+              <input class="ms-md-auto" type="email" name="email" placeholder="Your work email">
+              <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+          </div>
         </div>
         <div class="row">
           <div class="col-md-3">
@@ -115,32 +128,33 @@
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-          <div class="modal-header border-0">
+          <div class="modal-header border-0 align-items-start">
+            <p class="text-center px-4">Tack för ditt intresse för våra tjänster. Vi hanterar alla nya registreringar manuellt och kommer att svara på din förfrågan så snart som möjligt, vanligtvis inom 3 arbetsdagar. Vänligen fyll i formuläret nedan för att komma igång.</p>
             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <form action="#">
               <div class="mb-3">
-                <label class="form-label" for="CompanyName">Company name</label>
-                <input class="form-control" type="text" id="CompanyName" placeholder="Company name">
+                <label class="form-label" for="CompanyName">Företagsnamn:</label>
+                <input class="form-control" type="text" id="CompanyName" placeholder="Företagsnamn">
               </div>
               <div class="mb-3">
-                <label class="form-label" for="ContactPerson">Contact person</label>
-                <input class="form-control" type="text" id="ContactPerson" placeholder="Contact person">
+                <label class="form-label" for="ContactPerson">Kontaktperson:</label>
+                <input class="form-control" type="text" id="ContactPerson" placeholder="Kontaktperson">
               </div>
               <div class="mb-3">
-                <label class="form-label" for="Phone">Phone</label>
-                <input class="form-control" type="phone" id="Phone" placeholder="Phone">
+                <label class="form-label" for="Phone">Telefon:</label>
+                <input class="form-control" type="phone" id="Phone" placeholder="Telefon">
               </div>
               <div class="mb-3">
-                <label class="form-label" for="Email">Email</label>
-                <input class="form-control" type="email" id="Email" placeholder="Email">
+                <label class="form-label" for="Email">E-post:</label>
+                <input class="form-control" type="email" id="Email" placeholder="E-post">
               </div>
               <div class="mb-3">
-                <label class="form-label" for="Volume">Estimated volume to be sent</label>
-                <input class="form-control" type="text" id="Volume" placeholder="Estimated volume to be sent">
+                <label class="form-label" for="Volume">Uppskattad volym som ska skickas:</label>
+                <input class="form-control" type="text" id="Volume" placeholder="Uppskattad volym som ska skickas">
               </div>
-              <button class="btn btn-primary w-100" type="submit">Submit</button>
+              <button class="btn btn-primary w-100" type="submit">Skicka</button>
             </form>
           </div>
         </div>

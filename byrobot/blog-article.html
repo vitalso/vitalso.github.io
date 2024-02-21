@@ -29,8 +29,8 @@
               <li class="nav-item"><a class="nav-link" href="customers.html">Kunder</a></li>
               <li class="nav-item"><a class="nav-link" href="pricing.html">Priser</a></li>
               <li class="nav-item"><a class="nav-link" href="blog.html">Blogg</a></li>
-              <li class="nav-item ms-auto"><a class="nav-link btn btn-outline btn-sm" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Logga in</a></li>
-              <li class="nav-item"><a class="nav-link btn btn-primary btn-sm" href="#">Börja skriva</a></li>
+              <li class="nav-item ms-auto"><a class="btn btn-outline btn-sm" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Logga in</a></li>
+              <li class="nav-item"><a class="btn btn-primary btn-sm" href="#">Börja skriva</a></li>
             </ul>
           </div>
         </div>
@@ -98,8 +98,14 @@
     </main>
     <footer class="text-center text-md-start">
       <div class="container">
-        <div class="row mb-5">
-          <div class="col-12"><a class="logo z-1" href="/"><img src="images/logo.svg" alt="logo"></a></div>
+        <div class="row mb-md-5 mb-3">
+          <div class="col-md-6"><a class="logo z-1" href="/"><img src="images/logo.svg" alt="logo"></a></div>
+          <div class="col-md-6">
+            <form class="subscribe-form mt-3 mt-md-0" action="#">
+              <input class="ms-md-auto" type="email" name="email" placeholder="Your work email">
+              <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+          </div>
         </div>
         <div class="row">
           <div class="col-md-3">
