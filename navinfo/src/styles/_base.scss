@@ -79,6 +79,7 @@ button {
     border-radius: 8px;
     background-color: $primary-color;
     color: white;
+    font-weight: 300;
     
     &:hover {
         background-color: $blue-color;
@@ -96,7 +97,7 @@ button {
     }
 
     &.btn-sm {
-        padding: 0 13px;
+        padding: 0 25px;
     }
 
     &.btn-md {

@@ -49,7 +49,8 @@ button {
   border: none;
   border-radius: 8px;
   background-color: #5085C4;
-  color: white; }
+  color: white;
+  font-weight: 300; }
   button:hover {
     background-color: #004EA0; }
   button.disabled {
@@ -59,7 +60,7 @@ button {
     button.btn-secondary:hover {
       background-color: #004EA0; }
   button.btn-sm {
-    padding: 0 13px; }
+    padding: 0 25px; }
   button.btn-md {
     padding: 2px 21px;
     border-radius: 5px; }
@@ -276,8 +277,7 @@ select, textarea, input:not([type="checkbox"]) {
       border-radius: 20px; }
       .main-container .main-content .form-wrapper .title {
         font-size: 20px;
-        font-weight: 600;
-        margin-bottom: 10px; }
+        font-weight: 600; }
       .main-container .main-content .form-wrapper form {
         flex-grow: 1; }
         .main-container .main-content .form-wrapper form span {
