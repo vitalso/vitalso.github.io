@@ -97,6 +97,11 @@ form {
 
                 &:not(:last-child) {
                     margin-bottom: 8px;
+
+                    @media screen and (max-width: $screen-sm-min) {
+                        margin-top: 18px;
+                    }            
+
                 }
 
             }

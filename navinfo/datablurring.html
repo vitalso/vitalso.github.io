@@ -21,6 +21,10 @@
 <body>
 
   <div class="navbar-container d-flex align-items-center">
+
+    <!-- Mobile button for menu -->
+    <button type="button" id="toggleNav" class="me-4 d-block d-lg-none"><i class="fa-solid fa-bars"></i></button>
+
     <div class="navbar-logo" id="navbar-logo">
       <img src="src/images/logo-white.png" alt="logo-image" />
     </div>
@@ -81,7 +85,7 @@
       </div>
     </div>
     <div class="main-content d-flex justify-content-center w-100">
-      <div class="d-flex flex-column mt-auto mb-auto w-100 custom-container align-items-start">
+      <div class="d-flex flex-column mt-md-auto mb-auto w-100 custom-container align-items-start">
 
         <div class="amount">Remaining credit: 1200 TK</div>
 
@@ -91,9 +95,9 @@
         </div>
 
         <div id="upload-wrapper" class="w-100">
-          <div class="upload-content d-flex mb-4">
+          <div class="upload-content d-flex flex-column flex-xl-row mb-4">
 
-            <div class="mx-auto w-50">
+            <div class="mx-auto w-50 w-lg-full">
               <div class="card">
                 <label for="uploadFiles" class="align-items-center d-flex flex-column justify-content-center cursor-pointer">
                   <input type="file" id="uploadFiles" class="d-none">
@@ -108,7 +112,7 @@
               </div>
             </div>
 
-            <div class="like-card w-50">
+            <div class="like-card mx-auto w-50 w-lg-full">
               <p class="p-3">Files on cue for anonymization</p>
 
               <div class="table">
@@ -121,7 +125,7 @@
 
                 <div class="table-body d-flex flex-column">
                   <div class="table-row d-flex justify-content-between">
-                    <div class="table-cell text-start"><span class="ps-3">Imagename1</span></div>
+                    <div class="table-cell text-start"><span class="ps-sm-3">Imagename1</span></div>
                     <div class="table-cell">JPG/PNG</div>
                     <div class="table-cell">5.5 MB</div>
                     <div class="table-cell">
@@ -130,7 +134,7 @@
                   </div>
 
                   <div class="table-row d-flex justify-content-between">
-                    <div class="table-cell text-start"><span class="ps-3">Imagename2</span></div>
+                    <div class="table-cell text-start"><span class="ps-sm-3">Imagename2</span></div>
                     <div class="table-cell">JPG/PNG</div>
                     <div class="table-cell">5.5 MB</div>
                     <div class="table-cell">
@@ -140,7 +144,7 @@
                 </div>
               </div>
 
-              <div class="text-end px-3">
+              <div class="text-end px-3 pb-3">
                 <button type="button" class="btn-sm">Anonymize</button>
               </div>
 
@@ -154,57 +158,61 @@
 
           <div class="download-content mb-4">
 
-            <div class="table like-card">
-              <div class="table-heading d-flex justify-content-between">
-                <div class="table-cell">Timestamp</div>
-                <div class="table-cell">Filename</div>
-                <div class="table-cell">Status</div>
-                <div class="table-cell">Tokens used</div>
-                <div class="table-cell">Remaining time</div>
-                <div class="table-cell">Action</div>
+            <div class="wrap-table">
+
+              <div class="table like-card">
+                <div class="table-heading d-flex justify-content-between">
+                  <div class="table-cell">Timestamp</div>
+                  <div class="table-cell">Filename</div>
+                  <div class="table-cell">Status</div>
+                  <div class="table-cell">Tokens used</div>
+                  <div class="table-cell">Remaining time</div>
+                  <div class="table-cell">Action</div>
+                </div>
+
+                <div class="table-body d-flex flex-column">
+
+                  <!-- Row item -->
+                  <div class="table-row d-flex justify-content-between">
+                    <div class="table-cell text-start ps-sm-3 d-flex align-items-center">
+                      <input type="checkbox">
+                      <span class="ps-3">15/01/2024 - 15:40</span>
+                    </div>
+                    <div class="table-cell text-start"><span class="ps-sm-3">Imagename1</span></div>
+                    <div class="table-cell">
+                      <button type="buttom" class="btn-success btn-md">Completed</button>
+                    </div>
+                    <div class="table-cell"></div>
+                    <div class="table-cell"></div>
+                    <div class="table-cell d-flex justify-content-center gap-4">
+                      <a href="#"><i class="fa-solid fa-download"></i></a>
+                      <a href="#"><i class="fa-regular fa-trash-can"></i></a>
+                    </div>
+                  </div>
+                  <!-- End row item -->
+
+                  <!-- Row item -->
+                  <div class="table-row d-flex justify-content-between">
+                    <div class="table-cell text-start ps-sm-3 d-flex align-items-center">
+                      <input type="checkbox">
+                      <span class="ps-3">15/01/2024 - 15:40</span>
+                    </div>
+                    <div class="table-cell text-start"><span class="ps-sm-3">Imagename2</span></div>
+                    <div class="table-cell">
+                      <button type="buttom" class="btn-success btn-md">Completed</button>
+                    </div>
+                    <div class="table-cell"></div>
+                    <div class="table-cell"></div>
+                    <div class="table-cell d-flex justify-content-center gap-4">
+                      <a href="#"><i class="fa-solid fa-download"></i></a>
+                      <a href="#"><i class="fa-regular fa-trash-can"></i></a>
+                    </div>
+                  </div>
+                  <!-- End row item -->
+
+                </div>
               </div>
 
-              <div class="table-body d-flex flex-column">
-
-                <!-- Row item -->
-                <div class="table-row d-flex justify-content-between">
-                  <div class="table-cell text-start ps-3 d-flex align-items-center">
-                    <input type="checkbox">
-                    <span class="ps-3">15/01/2024 - 15:40</span>
-                  </div>
-                  <div class="table-cell text-start"><span class="ps-3">Imagename1</span></div>
-                  <div class="table-cell">
-                    <button type="buttom" class="btn-success btn-md">Completed</button>
-                  </div>
-                  <div class="table-cell"></div>
-                  <div class="table-cell"></div>
-                  <div class="table-cell d-flex justify-content-center gap-4">
-                    <a href="#"><i class="fa-solid fa-download"></i></a>
-                    <a href="#"><i class="fa-regular fa-trash-can"></i></a>
-                  </div>
-                </div>
-                <!-- End row item -->
-
-                <!-- Row item -->
-                <div class="table-row d-flex justify-content-between">
-                  <div class="table-cell text-start ps-3 d-flex align-items-center">
-                    <input type="checkbox">
-                    <span class="ps-3">15/01/2024 - 15:40</span>
-                  </div>
-                  <div class="table-cell text-start"><span class="ps-3">Imagename2</span></div>
-                  <div class="table-cell">
-                    <button type="buttom" class="btn-success btn-md">Completed</button>
-                  </div>
-                  <div class="table-cell"></div>
-                  <div class="table-cell"></div>
-                  <div class="table-cell d-flex justify-content-center gap-4">
-                    <a href="#"><i class="fa-solid fa-download"></i></a>
-                    <a href="#"><i class="fa-regular fa-trash-can"></i></a>
-                  </div>
-                </div>
-                <!-- End row item -->
-
-              </div>
             </div>
 
           </div>

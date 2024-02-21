@@ -21,6 +21,10 @@
 <body>
 
   <div class="navbar-container d-flex align-items-center">
+
+    <!-- Mobile button for menu -->
+    <button type="button" id="toggleNav" class="me-4 d-block d-lg-none"><i class="fa-solid fa-bars"></i></button>
+
     <div class="navbar-logo" id="navbar-logo">
       <img src="src/images/logo-white.png" alt="logo-image" />
     </div>
@@ -81,48 +85,52 @@
       </div>
     </div>
     <div class="main-content d-flex justify-content-center w-100">
-      <div class=" w-100">
+      <div class="w-100">
 
         <p><strong>Consumption history</strong></p>
+
+        <div class="wrap-table">
         
-        <div class="table consumption-table like-card mx-auto">
-          
-          <div class="table-heading d-flex justify-content-between">
-            <div class="table-cell text-start">Date</div>
-            <div class="table-cell text-start">Invoice</div>
-            <div class="table-cell">Action</div>
-          </div>
-
-          <div class="table-body d-flex flex-column">
-            <!-- Row item -->
-            <div class="table-row d-flex justify-content-between">
-              <div class="table-cell text-start ps-3 d-flex align-items-center">
-                <input type="checkbox">
-                <span class="ps-2">15/01/2024 - 15:40</span>
-              </div>
-              <div class="table-cell text-start"><span class="ps-3">#20240001example</span></div>
-              <div class="table-cell d-flex justify-content-center gap-4">
-                <a href="#"><i class="fa-solid fa-download"></i></a>
-              </div>
+          <div class="table consumption-table like-card mx-auto">
+            
+            <div class="table-heading d-flex justify-content-between">
+              <div class="table-cell text-start">Date</div>
+              <div class="table-cell text-start">Invoice</div>
+              <div class="table-cell">Action</div>
             </div>
-            <!-- End row item -->
 
-            <!-- Row item -->
-            <div class="table-row d-flex justify-content-between">
-              <div class="table-cell text-start ps-3 d-flex align-items-center">
-                <input type="checkbox">
-                <span class="ps-2">15/01/2024 - 15:40</span>
+            <div class="table-body d-flex flex-column">
+              <!-- Row item -->
+              <div class="table-row d-flex justify-content-between">
+                <div class="table-cell text-start ps-3 d-flex align-items-center">
+                  <input type="checkbox">
+                  <span class="ps-2">15/01/2024 - 15:40</span>
+                </div>
+                <div class="table-cell text-start"><span class="ps-3">#20240001example</span></div>
+                <div class="table-cell d-flex justify-content-center gap-4">
+                  <a href="#"><i class="fa-solid fa-download"></i></a>
+                </div>
               </div>
-              <div class="table-cell text-start"><span class="ps-3">#20240002example</span></div>
-              <div class="table-cell d-flex justify-content-center gap-4">
-                <a href="#"><i class="fa-solid fa-download"></i></a>
+              <!-- End row item -->
+
+              <!-- Row item -->
+              <div class="table-row d-flex justify-content-between">
+                <div class="table-cell text-start ps-3 d-flex align-items-center">
+                  <input type="checkbox">
+                  <span class="ps-2">15/01/2024 - 15:40</span>
+                </div>
+                <div class="table-cell text-start"><span class="ps-3">#20240002example</span></div>
+                <div class="table-cell d-flex justify-content-center gap-4">
+                  <a href="#"><i class="fa-solid fa-download"></i></a>
+                </div>
               </div>
+              <!-- End row item -->
+
             </div>
-            <!-- End row item -->
+
+            <div class="py-3"></div>
 
           </div>
-
-          <div class="py-3"></div>
 
         </div>
 

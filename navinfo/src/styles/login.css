@@ -87,6 +87,10 @@ select, textarea, input:not([type="checkbox"]) {
 .cursor-pointer {
   cursor: pointer; }
 
+@media screen and (max-width: 1200px) {
+  .w-lg-full {
+    width: 100% !important; } }
+
 .card {
   margin: 20px;
   width: 360px;
@@ -103,6 +107,9 @@ select, textarea, input:not([type="checkbox"]) {
   border: none; }
   .card:not(:last-child) {
     margin-bottom: 90px; }
+    @media screen and (max-width: 1200px) {
+      .card:not(:last-child) {
+        margin-bottom: 24px; } }
   @media screen and (max-width: 600px) {
     .card {
       width: 320px; } }
@@ -117,6 +124,13 @@ select, textarea, input:not([type="checkbox"]) {
 
 .custom-container {
   max-width: 1108px; }
+
+.wrap-table {
+  padding: 7px;
+  overflow-x: auto; }
+  @media screen and (max-width: 768px) {
+    .wrap-table .table {
+      min-width: 180vw; } }
 
 .table-heading > div {
   font-size: 15px;
@@ -224,6 +238,10 @@ form button {
         .login-page .login-panel .login-form-forgot p:not(:last-child),
         .login-page .register-panel .login-form-forgot p:not(:last-child) {
           margin-bottom: 8px; }
+          @media screen and (max-width: 600px) {
+            .login-page .login-panel .login-form-forgot p:not(:last-child),
+            .login-page .register-panel .login-form-forgot p:not(:last-child) {
+              margin-top: 18px; } }
     .login-page .login-panel .input-form-header,
     .login-page .register-panel .input-form-header {
       position: relative;

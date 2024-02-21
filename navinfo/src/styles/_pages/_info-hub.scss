@@ -1,4 +1,16 @@
-@import '_base';
-@import '_mixins';
-@import '_pages/planupgrade';
-@import '_pages/skeleton';
+// Import your SCSS dependencies
+@import '../variables'; // Import your variable definitions
+@import '../_mixins'; // Import your mixins
+
+.info-hub-wrap {
+    gap: 40px;
+
+    a {
+        text-decoration: underline;
+        color: $primary-color;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+}

@@ -140,6 +140,14 @@ select, textarea, input:not([type="checkbox"]) {
     cursor: pointer;
 }
 
+@media screen and (max-width: $screen-lg) {
+ 
+    .w-lg-full {
+        width: 100% !important;
+    }
+
+}
+
 // Card Component
 // -----------------------------------------------------------
 .card {
@@ -160,6 +168,13 @@ select, textarea, input:not([type="checkbox"]) {
 
     &:not(:last-child) {
         margin-bottom: 90px;
+
+        @media screen and (max-width: $screen-lg) {
+ 
+            margin-bottom: 24px;
+        
+        }
+
     }
     
     @media screen and (max-width: $screen-sm-min) {
@@ -182,6 +197,18 @@ select, textarea, input:not([type="checkbox"]) {
 // Custon container
 .custom-container {
     max-width: 1108px;
+}
+
+.wrap-table {
+    padding: 7px;
+    overflow-x: auto;
+
+    @media screen and (max-width: $screen-md) {
+        .table {
+            min-width: 180vw;
+        }
+    }
+
 }
 
 .table {

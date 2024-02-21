@@ -87,6 +87,10 @@ select, textarea, input:not([type="checkbox"]) {
 .cursor-pointer {
   cursor: pointer; }
 
+@media screen and (max-width: 1200px) {
+  .w-lg-full {
+    width: 100% !important; } }
+
 .card {
   margin: 20px;
   width: 360px;
@@ -103,6 +107,9 @@ select, textarea, input:not([type="checkbox"]) {
   border: none; }
   .card:not(:last-child) {
     margin-bottom: 90px; }
+    @media screen and (max-width: 1200px) {
+      .card:not(:last-child) {
+        margin-bottom: 24px; } }
   @media screen and (max-width: 600px) {
     .card {
       width: 320px; } }
@@ -117,6 +124,13 @@ select, textarea, input:not([type="checkbox"]) {
 
 .custom-container {
   max-width: 1108px; }
+
+.wrap-table {
+  padding: 7px;
+  overflow-x: auto; }
+  @media screen and (max-width: 768px) {
+    .wrap-table .table {
+      min-width: 180vw; } }
 
 .table-heading > div {
   font-size: 15px;
@@ -158,7 +172,7 @@ select, textarea, input:not([type="checkbox"]) {
   width: 100%;
   padding: 0 50px;
   transition: 0.3s; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 991px) {
     .navbar-container {
       padding: 0 20px; } }
   .navbar-container .navbar-logo img {
@@ -213,12 +227,20 @@ select, textarea, input:not([type="checkbox"]) {
     min-width: 316px;
     background-color: #f1f1f1;
     transition: 0.3s; }
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 991px) {
       .main-container .menubar-wrapper {
         left: -316px; } }
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 991px) {
       .main-container .menubar-wrapper.active {
-        left: 0; } }
+        left: 0; }
+        .main-container .menubar-wrapper.active:after {
+          content: "";
+          position: absolute;
+          width: 100vw;
+          height: 100%;
+          right: -100vw;
+          top: 0;
+          background: rgba(0, 0, 0, 0.5); } }
     .main-container .menubar-wrapper .menubar .menu-item {
       background-color: white;
       border-right: 1px solid #707070;
@@ -241,10 +263,10 @@ select, textarea, input:not([type="checkbox"]) {
     margin-left: 316px;
     transition: 0.3s;
     padding: 50px; }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 991px) {
       .main-container .main-content {
         padding: 20px; } }
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 991px) {
       .main-container .main-content {
         margin-left: 0; } }
     .main-container .main-content .form-wrapper {

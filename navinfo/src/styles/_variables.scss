@@ -26,7 +26,9 @@ $green-color: #2FC129;
 // Text Color
 $text-color: rgb(33, 37, 41); // Default text color
 
-$screen-md-min: 1000px;
+$screen-lg: 1200px;
+$screen-md-min: 991px;
+$screen-md: 768px;
 $screen-sm-min: 600px;
 
 $middle-padding: 50px;

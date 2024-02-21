@@ -9,7 +9,7 @@
     padding: 0 $middle-padding;
     transition: 0.3s;
 
-    @media screen and (max-width: $screen-sm-min) {
+    @media screen and (max-width: $screen-md-min) {
         padding: 0 $small-padding;
     }
 
@@ -105,7 +105,19 @@
             
             @media screen and (max-width: $screen-md-min) {
                 left: 0;
+
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    width: 100vw;
+                    height: 100%;
+                    right: -100vw;
+                    top: 0;
+                    background: rgba(0, 0, 0, .5);
+                }
             }
+
         }
 
         // Menubar
@@ -149,7 +161,7 @@
         transition: 0.3s;
         padding: $middle-padding;
 
-        @media screen and (max-width: $screen-sm-min) {
+        @media screen and (max-width: $screen-md-min) {
             padding: $small-padding;
         }
 

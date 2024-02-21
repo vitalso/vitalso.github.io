@@ -8,6 +8,10 @@
             margin-top: 120px;
             max-width: 80%;
 
+            @media screen and (max-width: $screen-md-min) {
+                margin-top: 0;
+            }
+
             .table-heading , .table-body {
                 .table-cell {
                     &:first-child {

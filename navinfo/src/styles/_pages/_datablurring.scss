@@ -38,6 +38,10 @@
             flex-wrap: wrap;
             padding-top: 110px;
 
+            @media screen and (max-width: $screen-lg) {
+                padding-top: 30px;
+            }
+
             .card {
 
                 img {
@@ -51,6 +55,10 @@
         // Download Content
         .download-content {
             padding-top: 110px;
+
+            @media screen and (max-width: $screen-lg) {
+                padding-top: 30px;
+            }
         }
 
     }
@@ -66,4 +74,9 @@
     line-height: 27px;
     font-weight: 600;
     margin-left: 50%;
+
+    @media screen and (max-width: $screen-md) {
+        margin-left: 0;
+    }
+
 }
