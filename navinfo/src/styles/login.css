@@ -56,9 +56,9 @@ button {
   button.disabled {
     background-color: #919a9f; }
   button.btn-secondary {
-    background-color: #5085C4; }
+    background-color: #004EA0; }
     button.btn-secondary:hover {
-      background-color: #004EA0; }
+      background-color: #5085C4; }
   button.btn-sm {
     padding: 0 25px; }
   button.btn-md {
@@ -227,6 +227,21 @@ form button {
       .login-page .login-panel a:hover,
       .login-page .register-panel a:hover {
         text-decoration: none; }
+      .login-page .login-panel a.button,
+      .login-page .register-panel a.button {
+        border-radius: 8px;
+        background-color: #5085C4;
+        color: white;
+        font-weight: 300;
+        display: inline-block;
+        padding: 18px 32px;
+        font-size: 20px;
+        line-height: 27px;
+        text-decoration: none;
+        min-width: 203px; }
+        .login-page .login-panel a.button:hover,
+        .login-page .register-panel a.button:hover {
+          background-color: #004EA0; }
     .login-page .login-panel .login-form-forgot,
     .login-page .register-panel .login-form-forgot {
       margin: -15px 0px 20px 12px;
@@ -311,7 +326,11 @@ form button {
   width: 100%; }
 
 .register-caption .card {
-  width: 275px; }
+  width: 275px;
+  min-height: 514px; }
+  @media screen and (max-width: 768px) {
+    .register-caption .card {
+      min-height: 400px; } }
   .register-caption .card p:first-child {
     margin: 25px 0;
     font-weight: 600; }

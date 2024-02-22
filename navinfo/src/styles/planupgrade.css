@@ -56,9 +56,9 @@ button {
   button.disabled {
     background-color: #919a9f; }
   button.btn-secondary {
-    background-color: #5085C4; }
+    background-color: #004EA0; }
     button.btn-secondary:hover {
-      background-color: #004EA0; }
+      background-color: #5085C4; }
   button.btn-sm {
     padding: 0 25px; }
   button.btn-md {
@@ -172,7 +172,10 @@ select, textarea, input:not([type="checkbox"]) {
   flex-wrap: wrap; }
   .main-container .main-content .card-wrapper .card {
     width: 275px;
-    min-height: 400px; }
+    min-height: 514px; }
+    @media screen and (max-width: 768px) {
+      .main-container .main-content .card-wrapper .card {
+        min-height: auto; } }
     .main-container .main-content .card-wrapper .card p:first-child {
       margin: 25px 0;
       font-weight: 600; }

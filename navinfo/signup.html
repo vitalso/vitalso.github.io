@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta information -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Page title -->
+  <title>Register Page</title>
+  <!-- Link to Bootstrap CSS -->
+  <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+  <link rel="stylesheet" href="src/plugins/bootstrap.min.css">
+  <link rel="stylesheet" href="src/plugins/fontawesome-free-6.0.0-beta3-web/css/all.min.css">
+  <!-- Link to custom main stylesheet -->
+  <link rel="stylesheet" href="src/styles/login.css">
+</head>
+
+<body>
+  <!-- Background image for the login page -->
+  <img src="src/images/login-background.png" class="login-background" />
+
+  <div class="register-container flex-center mx-auto">
+    <!-- Login page content -->
+    <div class="login-page m-0 py-4 w-100">
+      <!-- Login caption section -->
+      <div class="flex-center w-100">
+
+        <!-- Register caption -->
+        <div class="register-caption w-100 d-none d-xxl-block">
+          <div class="d-flex justify-content-around">
+
+             <div class="card text-center d-block trial mb-0 mx-0">
+              <p>Trial</p>
+              <p class="mb-4">€1/1GB video <br> €2/1GB image</p>
+              <ul class="m-0 p-0">
+                <li><i class="fa-solid fa-check"></i> Online documentation</li>
+                <li><i class="fa-solid fa-check"></i> Face Precision Blur</li>
+                <li><i class="fa-solid fa-check"></i> Licence Plates Precision Blur</li>
+                <li><i class="fa-solid fa-check"></i> Direct Browser Upload</li>
+              </ul>
+            </div>
+            
+            <div class="card text-center d-block pro mb-0 mx-0">
+              <p>Premium</p>
+              <p class="mb-4">€1/1GB video <br> €2/1GB image</p>
+              <ul class="m-0 p-0">
+                <li><i class="fa-solid fa-check"></i> Online documentation</li>
+                <li><i class="fa-solid fa-check"></i> Face Precision Blur</li>
+                <li><i class="fa-solid fa-check"></i> Licence Plates Precision Blur</li>
+                <li><i class="fa-solid fa-check"></i> Direct Browser Upload</li>
+                <li><i class="fa-solid fa-check"></i> FTP File Transfer</li>
+                <li><i class="fa-solid fa-check"></i> Support</li>
+                <li><i class="fa-solid fa-check"></i> Face coordinates</li>
+                <li><i class="fa-solid fa-check"></i> License Plates coordinates</li>
+                <li><i class="fa-solid fa-check"></i> Priority Support</li>
+              </ul>
+            </div>
+            
+            <div class="card text-center flex-column justify-content-between enterprise mb-0 mx-0">
+              <p>Enterprise</p>
+              <ul class="mt-auto mb-1 p-0 w-100">
+                <li><i class="fa-solid fa-check"></i> Online documentation</li>
+                <li><i class="fa-solid fa-check"></i> Face Precision Blur</li>
+                <li><i class="fa-solid fa-check"></i> Licence Plates Precision Blur</li>
+                <li><i class="fa-solid fa-check"></i> Direct Browser Upload</li>
+                <li><i class="fa-solid fa-check"></i> FTP File Transfer</li>
+                <li><i class="fa-solid fa-check"></i> Support</li>
+                <li><i class="fa-solid fa-check"></i> Face coordinates</li>
+                <li><i class="fa-solid fa-check"></i> License Plates coordinates</li>
+                <li><i class="fa-solid fa-check"></i> Priority Support</li>
+                <li><i class="fa-solid fa-check"></i> Custom Model Deployment</li>
+                <li><i class="fa-solid fa-check"></i> Quality Reporting</li>
+                <li><i class="fa-solid fa-check"></i> On-premise capabilities</li>
+                <li><i class="fa-solid fa-check"></i> S3 Bucket Integration</li>
+              </ul>
+              <button class="my-3">Contact us</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Login and registration panels -->
+      <div class="flex-center">
+
+        <!-- Registration panel (initially hidden) -->
+        <div class="register-panel">
+          <div class="w-100 text-center">
+            <div class="input-form-header">
+              <!-- Back button and logo -->
+              <a href="#"><img src="src/images/back.png" /></a>
+              <img src="src/images/logo.png" />
+            </div>
+            <!-- Registration form -->
+            <form class="input-form">
+              <!-- Form fields -->
+              <div><span>Work E-mail *</span><input type="email" name="email" /></div>
+              <div><span>Password *</span><input type="password" name="password" /></div>
+              <div><span>Confirm Password *</span><input type="password" name="confirm_password" /></div>
+              <div><span>First Name *</span><input type="text" name="first_name" /></div>
+              <div><span>Last Name *</span><input type="text" name="last_name" /></div>
+              <div><span>Company *</span><input type="text" name="company" /></div>
+              <div><span>Job Title *</span><input type="text" name="job_title" /></div>
+              <div><span>Country *</span><input type="text" name="country" /></div>
+              <div><span>Phone Number *</span><input type="text" name="phone_number" /></div>
+              <div class="login-form-forgot">
+                <input type="checkbox" /><span>I have read the <a href="#">Terms & Conditions</a> and the <a
+                    href="#">Data Processing Agreement</a> *</span>
+                <p>* Required fields</p>
+                <p class="text-center">By creating an account, you agree to be subscribed to our marketing email list. You can unsubscribe at any time.</p>
+              </div>
+              <div><button>Create account</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JavaScript -->
+  <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+  <script src="src/plugins/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

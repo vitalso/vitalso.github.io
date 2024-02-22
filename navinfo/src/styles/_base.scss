@@ -90,9 +90,9 @@ button {
     }
 
     &.btn-secondary {
-        background-color: $primary-color;
+        background-color: $blue-color;
         &:hover {
-            background-color: $blue-color;
+            background-color: $primary-color;
         }
     }
 

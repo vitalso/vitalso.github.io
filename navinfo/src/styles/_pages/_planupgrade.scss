@@ -12,7 +12,11 @@
             // Card
             .card {
                 width: 275px;
-                min-height: 400px;
+                min-height: 514px;
+
+                @media screen and (max-width: $screen-md) {
+                    min-height: auto;
+                }
 
                 p:first-child {
                     margin: 25px 0;

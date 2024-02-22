@@ -84,6 +84,24 @@ form {
             &:hover {
                 text-decoration: none;
             }
+
+            &.button {
+                border-radius: 8px;
+                background-color: $primary-color;
+                color: white;
+                font-weight: 300;
+                display: inline-block;
+                padding: 18px 32px;
+                font-size: 20px;
+                line-height: 27px;
+                text-decoration: none;
+                min-width: 203px;
+
+                &:hover {
+                    background-color: $blue-color;
+                }
+
+            }
         }
 
         .login-form-forgot {
@@ -222,6 +240,11 @@ form {
     // Card
     .card {
         width: 275px;
+        min-height: 514px;
+
+        @media screen and (max-width: $screen-md) {
+            min-height: 400px;
+        }
 
         p:first-child {
             margin: 25px 0;
