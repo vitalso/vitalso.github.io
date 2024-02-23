@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
     
@@ -14,20 +15,31 @@
         <div class="container">
             <div class="d-flex items-center justify-between">
 
-                <nav>
+                <button type="button" class="btn btn-outline btn-outline-dark btn-menu d-md-flex items-center z-index-2">
+                    <span class="icon-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+
+                    <span>Меню</span>
+                </button>
+
+                <nav class="d-md-none">
                     <ul class="d-flex gap-32">
                         <li><a href="#">Про нас</a></li>
                         <li><a href="#">Блог</a></li>
                         <li><a href="#">Відгуки</a></li>
+                        <li class="d-md-block"><button type="button" class="language-btn d-flex">УКР <span class="icon icon-drop"></span></button></li>
                     </ul>
                 </nav>
 
                 <a href="/" class="logo"><img src="images/logo.svg" alt="logo"></a>
 
                 <div class="d-flex gap-16 items-center">
-                    <button type="button" class="language-btn d-flex">УКР <span class="icon icon-drop"></span></button>
+                    <button type="button" class="language-btn d-flex d-sm-none">УКР <span class="icon icon-drop"></span></button>
 
-                    <a href="#" class="btn">Замовити</a>
+                    <a href="#" class="btn z-index-2">Замовити</a>
                 </div>
 
             </div>
@@ -56,7 +68,7 @@
 
                 <button type="button" class="round-btn-order rounded-full d-flex justify-center items-center position-absolute">Замовити</button>
 
-                <div class="scroll-down d-flex gap-8 flex-column justify-center items-center text-center">
+                <div class="scroll-down d-flex gap-8 flex-column justify-center items-center text-center d-md-none">
                     <span>Скроль, щоб <br> дізнатися більше</span>
                     <span class="icon icon-scroll-down"></span>
                 </div>
@@ -156,9 +168,9 @@
         <section id="section-description">
             <div class="container position-relative">
 
-                <div class="d-flex gap-80">
+                <div class="d-flex flex-md-column gap-80">
 
-                    <div class="section-title position-absolute">
+                    <div class="section-title position-absolute position-md-relative">
                         Без дат і календарів, але з <span class="text-blue underline">сенсом</span>
                     </div>
 
@@ -252,7 +264,8 @@
             </div>
         </section>
 
-        <section class="cover-section">
+        <!-- Show only on desktop -->
+        <section class="cover-section d-xs-none">
 
             <div class="subtitle cover-section-text-1 position-absolute text-center opacity-0">Близько 20 сторінок практичних психологічних технік, <br> створених разом з психологинею Вікторією Смірновою</div>
             <div class="subtitle cover-section-text-2 position-absolute text-center opacity-0">Достатньо місця для будь-яких нотаток та записів, <br> які зможеш датувати як заманеться</div>
@@ -284,6 +297,73 @@
                 <a href="#" class="btn btn-xl btn-outline">Як садити квітку?</a>
             </div>
 
+        </section>
+
+        <!-- Show on mobile -->
+        <!-- Screen - 1 -->
+        <section class="d-xs-block">
+            <div class="d-flex h-full items-center justify-center card-section-cover">
+                <img src="images/note-cover.png" alt="image">
+            </div>
+        </section>
+
+        <!-- Screen - 2 -->
+        <section class="d-xs-block">
+            <div class="d-flex h-full items-center justify-center card-section-cover">
+                <img src="images/note-blank/note-blank.png" alt="image">
+            </div>
+        </section>
+
+        <!-- Screen - 3 -->
+        <section class="d-xs-block mobile-cover-section">
+            <div class="d-flex items-center h-full flex-column justify-around">
+                <div class="subtitle text-center">Близько 20 сторінок практичних психологічних технік, <br> створених разом з психологинею Вікторією Смірновою</div>
+
+                <div class="d-flex items-center mobile-cover">
+                    <img src="images/note-blank/note-blank.png" alt="image">
+                    <img src="images/note-blank/blank-1.png" alt="image">
+                    <img src="images/note-blank/blank-2.png" alt="image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Screen - 4 -->
+        <section class="d-xs-block mobile-cover-section">
+            <div class="d-flex items-center h-full flex-column justify-around">
+                <div class="subtitle text-center">Достатньо місця для будь-яких нотаток та записів, <br> які зможеш датувати як заманеться</div>
+
+                <div class="d-flex items-center mobile-cover">
+                    <img src="images/note-blank/blank-5.png" alt="image">
+                    <img src="images/note-blank/blank-6.png" alt="image">
+                    <img src="images/note-blank/blank-7.png" alt="image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Screen - 5 -->
+        <section class="d-xs-block mobile-cover-section">
+            <div class="d-flex items-center h-full flex-column justify-around">
+                <div class="subtitle text-center">У цьому блокноті <br> зростаєш не лише ти, <br> а й квіти</div>
+
+                <div class="d-flex items-center mobile-cover">
+                    <img src="images/note-blank/blank-9.png" alt="image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Screen - 6 -->
+        <section class="d-xs-block mobile-cover-section">
+            <div class="d-flex items-center h-full flex-column justify-around gap-24">
+                <div class="subtitle text-center">Остання сторінка блокноту - це <br> папір, засіяний насінням квітів, <br> який проростає</div>
+
+                <div class="d-flex items-center mobile-cover">
+                    <img src="images/note-blank/blank-9.png" alt="image">
+                </div>
+
+                <div class="subtitle text-center">Без шкоди природі, адже <br> листівка виготовлена з <br> переробленого паперу</div>
+                
+                <a href="#" class="btn btn-xl btn-outline">Як садити квітку?</a>
+            </div>
         </section>
 
         <section class="flower-section not-full-height overflow-hidden">
@@ -519,7 +599,7 @@
             <div class="container">
 
                 <div class="d-flex contact-wrap">
-                    <div class="title">Турбота про себе <br> на кожній сторінці <br> Don’t Block Note</div>
+                    <div class="title">Турбота про себе <br class="d-sm-none"> на кожній сторінці <br class="d-sm-none"> Don’t Block Note</div>
 
                     <div class="contact-form">
                         <p>Залишайте дані, <br> щоб сформувати замовлення</p>
@@ -553,7 +633,7 @@
         <div class="container">
             <div class="d-flex items-center justify-between">
 
-                <nav>
+                <nav class="d-sm-none">
                     <ul class="d-flex gap-32">
                         <li><a href="#">Про нас</a></li>
                         <li><a href="#">Блог</a></li>
@@ -564,7 +644,7 @@
                 <a href="/" class="logo"><img src="images/logo.svg" alt="logo"></a>
 
                 
-                <button type="button" class="language-btn d-flex">УКР <span class="icon icon-drop"></span></button>
+                <button type="button" class="language-btn d-flex d-md-none">УКР <span class="icon icon-drop"></span></button>
 
             </div>
         </div>
@@ -581,6 +661,9 @@
     <!-- Slick slider -->
     <script src="js/slick.min.js"></script>
     <script src="js/slider.js"></script>
+
+    <!-- Menu -->
+    <script src="js/menu.js"></script>
 
 </body>
 </html>

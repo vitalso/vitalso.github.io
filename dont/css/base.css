@@ -38,6 +38,10 @@
     justify-content: end;
 }
 
+.justify-around {
+    justify-content: space-around;
+}
+
 .justify-start {
     justify-content: start;
 }
@@ -89,4 +93,8 @@
 
 .opacity-0 {
     opacity: 0;
+}
+
+.z-index-2 {
+    z-index: 2;
 }
