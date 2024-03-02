@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <!-- Google Fonts - Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Style file -->
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full py-3 px-8">
+        <div class="flex-center">
+            <a href="index.html" class="text-gray-900 font-semibold text-xl">Kids Zone logo</a>
+
+            <div class="ml-auto flex-center gap-4">
+                <!-- User -->
+                <div class="bg-base-white rounded-[77px] py-2 px-2.5 base-font flex-center gap-2">
+                    <div class="w-8 h-8 rounded-full overflow-hidden"><img src="./images/avatar.png" alt="image"></div>
+                    Buddy
+                    <span><img src="./images/icons/chevron-down.svg" alt=""></span>
+                </div>
+
+                <div class="text-main-dark base-font">
+                    <a href="#" class="text-main-dark">Log in</a>
+                    <span>/</span>
+                    <a href="#" class="text-main-dark">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="bg-gray-50 w-[282px] py-6 px-4 fixed left-0 top-[72px] border-r border-base-dark border-opacity-10 flex flex-col gap-6 overflow-y-auto">
+
+        <!-- Skeleton animation -->
+        <div class="flex flex-col gap-6 mt-6 animate-pulse">
+            <div class="h-5 rounded-3xl bg-skeleton"></div>
+            <div class="h-5 rounded-3xl bg-skeleton"></div>
+            <div class="h-5 rounded-3xl bg-skeleton"></div>
+            <div class="w-3/4 h-5 rounded-3xl bg-skeleton"></div>
+            <div class="w-1/2 h-5 rounded-3xl bg-skeleton"></div>
+        </div>
+
+        <!-- New chat -->
+        <div class="fixed left-0 bottom-0 pt-5 pb-11 px-8 w-[281px] bg-gray-50">
+            <button type="button" class="border border-brand-400 text-center w-full base-font text-brand-400 py-3 px-12 rounded-3xl flex-center gap-2">
+                <img src="./images/icons/plus.svg" alt="icon">
+                New chat
+            </button>
+        </div>
+    </aside>
+
+    <main class="h-screen pl-[282px] pt-[72px]">
+
+        <div class="flex flex-col justify-center items-center h-full text-center">
+                
+            <!-- Loading -->
+            <div class="relative mb-6 flex justify-center">
+                <img src="./images/loading-image.svg" alt="image">
+
+                <div class="absolute bottom-5 animate-bounce">
+                    <img src="./images/loading-icon.svg" alt="image">
+                </div>
+            </div>
+
+            <p class="text-gray-400 text-base">Hitching a ride on a UFO...</p>
+        </div>
+
+    </main>
+
+</body>
+</html>

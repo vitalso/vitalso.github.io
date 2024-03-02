@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .flex-center {
+    @apply flex items-center;
+  }
+
+  .base-font {
+    @apply font-semibold text-base;
+  }
+}
+
+header {
+  background: linear-gradient(278deg, rgba(190, 255, 231, 0.5) 0%, rgba(255, 225, 138, 0.5) 22.79%, rgba(242, 188, 255, 0.5) 64.5%, rgba(110, 95, 237, 0.5) 100%);
+}
+
+aside {
+  height: calc(100% - 72px);
+}
+
+.form-chat {
+  box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.06), 0 1px 3px 0 rgba(16, 24, 40, 0.1);
+}

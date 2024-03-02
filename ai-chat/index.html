@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <!-- Google Fonts - Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Style file -->
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full py-3 px-8">
+        <div class="flex-center">
+            <a href="index.html" class="text-gray-900 font-semibold text-xl">Kids Zone logo</a>
+
+            <div class="ml-auto flex-center gap-4">
+                <!-- User -->
+                <div class="bg-base-white rounded-[77px] py-2 px-2.5 base-font flex-center gap-2">
+                    <div class="w-8 h-8 rounded-full overflow-hidden"><img src="./images/avatar.png" alt="image"></div>
+                    Buddy
+                    <span><img src="./images/icons/chevron-down.svg" alt=""></span>
+                </div>
+
+                <div class="text-main-dark base-font">
+                    <a href="#" class="text-main-dark">Log in</a>
+                    <span>/</span>
+                    <a href="#" class="text-main-dark">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="bg-gray-50 w-[282px] py-6 px-4 fixed left-0 top-[72px] border-r border-base-dark border-opacity-10 flex flex-col gap-6 overflow-y-auto">
+        <div>
+            <p class="px-4 py-1.5 font-semibold text-sm text-gray-400">Today</p>
+            <ul class="mt-1">
+                <li><a href="loading.html" class="block px-4 py-3 rounded-lg base-font text-gray-600 transition-all hover:bg-gray-200"">Bedtime Story</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <p class="px-4 py-1.5 font-semibold text-sm text-gray-400">Yesterday</p>
+            <ul class="mt-1">
+                <li><a href="loading.html" class="block px-4 py-3 rounded-lg base-font text-gray-600 transition-all hover:bg-gray-200">Bedtime Story</a></li>
+                <li><a href="loading.html" class="block px-4 py-3 rounded-lg base-font text-gray-600 transition-all hover:bg-gray-200">Bedtime Story</a></li>
+                <li><a href="loading.html" class="block px-4 py-3 rounded-lg base-font text-gray-600 transition-all hover:bg-gray-200">Bedtime Story</a></li>
+                <li><a href="loading.html" class="block px-4 py-3 rounded-lg base-font text-gray-600 transition-all hover:bg-gray-200">Bedtime Story</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <p class="px-4 py-1.5 font-semibold text-sm text-gray-400">Prvious 7 days</p>
+            <ul class="mt-1">
+                <li><a href="loading.html" class="block px-4 py-3 rounded-lg base-font text-gray-600 transition-all hover:bg-gray-200">Bedtime Story</a></li>
+                <li><a href="loading.html" class="block px-4 py-3 rounded-lg base-font text-gray-600 transition-all hover:bg-gray-200">Bedtime Story</a></li>
+                <li><a href="loading.html" class="block px-4 py-3 rounded-lg base-font text-gray-600 transition-all hover:bg-gray-200">Bedtime Story</a></li>
+                <li><a href="loading.html" class="block px-4 py-3 rounded-lg base-font text-gray-600 transition-all hover:bg-gray-200">Bedtime Story</a></li>
+            </ul>
+        </div>
+
+        <!-- New chat -->
+        <div class="fixed left-0 bottom-0 pt-5 pb-11 px-8 w-[281px] bg-gray-50">
+            <button type="button" class="border border-brand-400 text-center w-full base-font text-brand-400 py-3 px-12 rounded-3xl flex-center gap-2">
+                <img src="./images/icons/plus.svg" alt="icon">
+                New chat
+            </button>
+        </div>
+    </aside>
+
+    <main class="h-screen pl-[282px] pt-[72px]">
+
+        <div class="flex flex-col justify-center items-center h-full">
+            <div class="max-w-[920px]">
+                <h3 class="text-center text-4xl font-semibold text-gray-800">How can I help you today?</h3>
+
+                <div class="mt-20 flex gap-10">
+                    <div class="w-1/3">
+                        <div class="text-center py-2 mb-4">
+                            <img src="./images/icons/message-chat-square.svg" alt="icon" class="mx-auto">
+                            <h6 class="font-semibold text-xl text-gray-800 mt-2">Examples</h6>
+                        </div>
+
+                        <div class="flex flex-col gap-4">
+                            <div class="bg-base-light rounded-lg py-2 px-3 text-gray-600 text-sm">"Explain quantum computing insimple terms"</div>
+                            <div class="bg-base-light rounded-lg py-2 px-3 text-gray-600 text-sm">"Got any creative ideas for a 10year old's birthday?"</div>
+                            <div class="bg-base-light rounded-lg py-2 px-3 text-gray-600 text-sm">"How do I make an HTTP requestin Javascript?"</div>
+                        </div>
+                    </div>
+
+                    <div class="w-1/3">
+                        <div class="text-center py-2 mb-4">
+                            <img src="./images/icons/star-06.svg" alt="icon" class="mx-auto">
+                            <h6 class="font-semibold text-xl text-gray-800 mt-2">Capabilities</h6>
+                        </div>
+
+                        <div class="flex flex-col gap-4">
+                            <div class="bg-base-light rounded-lg py-2 px-3 text-gray-600 text-sm">Remembers what user saidearlier in the conversation.</div>
+                            <div class="bg-base-light rounded-lg py-2 px-3 text-gray-600 text-sm">Allows user to provide follow-up corrections.</div>
+                            <div class="bg-base-light rounded-lg py-2 px-3 text-gray-600 text-sm">Trained to decline inappropriate requests.</div>
+                        </div>
+                    </div>
+
+                    <div class="w-1/3">
+                        <div class="text-center py-2 mb-4">
+                            <img src="./images/icons/alert-triangle.svg" alt="icon" class="mx-auto">
+                            <h6 class="font-semibold text-xl text-gray-800 mt-2">Limitations</h6>
+                        </div>
+
+                        <div class="flex flex-col gap-4">
+                            <div class="bg-base-light rounded-lg py-2 px-3 text-gray-600 text-sm">May occasionally generate incorrect information.</div>
+                            <div class="bg-base-light rounded-lg py-2 px-3 text-gray-600 text-sm">May occasionally produce harmful instructions or biased content.</div>
+                            <div class="bg-base-light rounded-lg py-2 px-3 text-gray-600 text-sm">Limited knowledge of world andevents after 2021.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Type field -->
+        <div class="fixed bottom-0 pb-10 px-8 pt-5 bg-base-white z-10 left-[282px] right-0">
+            <form action="#" class="relative form-chat border border-gray-200 rounded-2xl">
+                <!-- Uploaded file -->
+                <div class="p-4">
+                    <div class="w-[180px] h-[180px] rounded-xl overflow-hidden relative">
+                        <img src="./images/image-sky.png" alt="image" class="object-cover">
+
+                        <!-- Delete button -->
+                        <button type="button" class="bg-base-secondary w-8 h-8 rounded-full flex-col flex-center justify-center absolute top-2 right-2">
+                            <img src="./images/icons/trash-01.svg" alt="image">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- File button -->
+                <label for="file" class="block absolute bottom-2.5 left-5">
+                    <input type="file" id="file" class="hidden">
+                    <span class="block p-2 cursor-pointer">
+                        <img src="./images/icons/image-01.svg" alt="image">
+                    </span>
+                </label>
+                
+                <!-- Text field -->
+                <input type="text" class="h-14 w-full rounded-2xl bg-base-white text-gray-800 px-16 pr-5 focus:outline-none placeholder:text-gray-300 text-sm" placeholder="Type message">
+
+                <!-- Send button -->
+                <!-- For activated button just remove 'disabled' attribute -->
+                <button type="button" class="group rounded-lg p-2 bg-brand-400 absolute bottom-2.5 right-5 disabled:bg-gray-100 disabled:cursor-not-allowed" disabled>
+                    <svg width="18" height="16" viewBox="0 0 18 16" xmlns="http://www.w3.org/2000/svg" class="stroke-base-white fill-none group-disabled:stroke-gray-300">
+                        <path d="M7.75036 7.99982H3.16702M3.09648 8.24274L1.15071 14.055C0.997847 14.5116 0.921417 14.7399 0.976267 14.8805C1.0239 15.0026 1.1262 15.0952 1.25244 15.1304C1.3978 15.171 1.61736 15.0722 2.05647 14.8746L15.9827 8.60778C16.4113 8.4149 16.6256 8.31847 16.6918 8.1845C16.7494 8.06811 16.7494 7.93155 16.6918 7.81516C16.6256 7.68119 16.4113 7.58475 15.9827 7.39188L2.05161 1.12293C1.61383 0.925925 1.39493 0.827424 1.24971 0.867831C1.1236 0.902922 1.0213 0.995243 0.973507 1.11711C0.91847 1.25744 0.994084 1.48526 1.14531 1.94088L3.09702 7.8211C3.12299 7.89935 3.13598 7.93848 3.14111 7.9785C3.14565 8.01401 3.14561 8.04996 3.14097 8.08546C3.13574 8.12546 3.12265 8.16455 3.09648 8.24274Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                        
+                </button>
+            </form>
+        </div>
+
+    </main>
+
+</body>
+</html>
