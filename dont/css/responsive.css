@@ -23,6 +23,15 @@
     top: 0;
 }
 
+@media screen and (max-width: 1366px) { 
+
+    .note-for-cover {
+        bottom: -40%;
+        right: 10%;
+    }
+
+}
+
 @media screen and (max-width: 1200px) {
     
     h1.custom-align {
@@ -330,6 +339,10 @@
         padding-bottom: 80px;
     }
 
+    .like-footer {
+        padding-top: 40px;
+    }
+
 }
 
 @media screen and (max-width: 576px) {
@@ -372,6 +385,7 @@
 
     .note-for-cover {
         bottom: -35%;
+        right: 0;
     }
 
     .note-line {

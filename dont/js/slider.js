@@ -8,6 +8,19 @@ $('.flower-slider').slick({
     nextArrow: $('.flower-section-header .btn-next')
 });
 
+if ( $(window).width() > 992 ) {
+
+    $('.flower-slider').on('afterChange', function (event, slick, currentSlide) {
+        
+        if(currentSlide > 1) {
+            $('.flower-section-header').find('.btn-next').addClass('slick-disabled');
+        } else {
+            $('.flower-section-header').find('.btn-next').removeClass('hidden');
+        } 
+    });
+    
+}
+
 // Reviews slider
 $('.reviews-slider').slick({
     dots: false,

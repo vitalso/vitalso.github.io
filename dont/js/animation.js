@@ -388,9 +388,9 @@ function widthChangeCallback(myMediaQuery) {
             {translateX: -500 , translateY: -30 , rotate: -4 },
             {translateX: -1000 , translateY: -60 , rotate: -8 },
             {translateX: -1650 , translateY: -90 , rotate: -15 },
-            {translateX: -2140 , translateY: -120 , rotate: -11 },
-            {translateX: -3350 , translateY: -150 , rotate: -3 , delay: 200 },
-            {translateX: -4300 , rotate: 0 },
+            {translateX: -2190 , translateY: -120 , rotate: -11 },
+            {translateX: -3450 , translateY: -150 , rotate: -3 , delay: 200 },
+            {translateX: -4500 , rotate: 0 },
         ],
     }, 0)
 
@@ -418,7 +418,7 @@ function widthChangeCallback(myMediaQuery) {
         keyframes: [
             {scale: 0.5},
             {rotate: -90 },
-            {delay: 500 , left: 1400},
+            {delay: 500 , left: 1700},
         ]
     }, 0)
     .add({
@@ -427,7 +427,7 @@ function widthChangeCallback(myMediaQuery) {
             { width: '450px' },
             { scale: 0 , opacity: 0 },
             { duration: 1, delay: 400, scale: 1 , opacity: 1 , translateX: '-50%' },
-            { delay: 1000 , duration: 1000, translateY: 150 , translateX: '-25%' , width: '3950px'},
+            { delay: 1000 , duration: 1000, translateY: 160 , translateX: '-25%' , width: '3950px'},
             { delay: 300 , translateX: '-75%' },
             { delay: 1400 , translateX: '-95%' },
             { delay: 1000  , translateY: 0} ,
@@ -486,11 +486,12 @@ function widthChangeCallback(myMediaQuery) {
         targets: '.cover-section .cover-note-blank img:last-child',
         opacity: 1,
         duration: 1,
-        scale: 1.3,
+        scale: 1.1,
+        translateY: -30,
     })
     .add({
         targets: '.cover-section .notation-1',
-        delay: 5500,
+        delay: 5400,
         keyframes: [
             { opacity: 0 },
             { translateY: 10 , opacity: 1 },
@@ -508,7 +509,7 @@ function widthChangeCallback(myMediaQuery) {
 
     .add({
         targets: '.cover-section .note-blank-btn',
-        delay: 5800,
+        delay: 5900,
         keyframes: [
             { opacity: 0 },
             { translateY: 10 , opacity: 1 },
@@ -611,33 +612,8 @@ function widthChangeCallback(myMediaQuery) {
     .setPin(".note-for")
     .addTo(controller);
 
-    console.log('wide');
+    //console.log('wide');
    } else {
-        //document.querySelector("p").textContent = "I am narrower than 599px now.";
-        //console.log('mobile');
-        //anime.remove('.fadeUpOut , #section-description .section-title , #section-description .section-text');
-        /*timeline1.pause();
-        timeline2.pause();
-        timeline3.pause();
-        timeline1.remove();
-        timeline2.remove();
-        timeline3.remove();
-        timeline1 = null;
-        timeline2 = null;
-        timeline3 = null;
-
-        controller.destroy(reset);
-	    controller = null;
-
-        scene1.destroy(reset);
-        scene2.destroy(reset);
-        scene3.destroy(reset);
-
-        scene1 = null;
-        scene2 = null;
-        scene3 = null;
-
-        tween = null;*/
 
         // Card animation
         var timeline4 = anime.timeline({
