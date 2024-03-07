@@ -75,8 +75,10 @@
 
     <main class="h-screen pl-[282px] pt-[72px]">
 
-        <div class="flex flex-col justify-center items-center h-full">
-            <div class="max-w-[920px]">
+        <div class="flex flex-col items-center h-full overflow-y-auto">
+
+            <!-- Empty screen -->
+            <div class="max-w-[766px] mt-auto pt-5">
                 <h3 class="text-center text-4xl font-semibold text-gray-800">How can I help you today?</h3>
 
                 <div class="mt-20 flex gap-10">
@@ -119,46 +121,673 @@
                         </div>
                     </div>
                 </div>
+
             </div>
-        </div>
 
-        <!-- Type field -->
-        <div class="fixed bottom-0 pb-10 px-8 pt-5 bg-base-white z-10 left-[282px] right-0">
-            <form action="#" class="relative form-chat border border-gray-200 rounded-2xl">
-                <!-- Uploaded file -->
-                <div class="p-4">
-                    <div class="w-[180px] h-[180px] rounded-xl overflow-hidden relative">
-                        <img src="./images/image-sky.png" alt="image" class="object-cover">
+            <!-- Chat screen -->
+            <div class="w-full mx-auto my-6 max-w-[766px] flex flex-col gap-6">
 
-                        <!-- Delete button -->
-                        <button type="button" class="bg-base-secondary w-8 h-8 rounded-full flex-col flex-center justify-center absolute top-2 right-2">
-                            <img src="./images/icons/trash-01.svg" alt="image">
-                        </button>
+                <!-- Chat message -->
+                <div class="flex gap-3 group/message">
+                    
+                    <!-- Avatar -->
+                    <div class="w-6 h-6 rounded-full overflow-hidden flex-shrink-0">
+                        <img src="./images/avatar.png" alt="image">
                     </div>
+
+                    <!-- Message -->
+                    <div class="text-gray-800 text-base flex-1">
+                        <p class="font-semibold mb-1">You</p>
+                        <p>Hey Sparky, why is the sky blue?</p>
+
+                        <!-- Bottom bar for edit visible on hover -->
+                        <div class="mt-2 flex-center gap-2 opacity-0 invisible group-hover/message:opacity-100 group-hover/message:visible">
+                            <!-- Edit button -->
+                            <button
+                                class="w-4 h-4 flex-center justify-center group/btn"
+                                data-tooltip-target="tooltip-edit"
+                                data-tooltip-placement="bottom"
+                            >
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-transparent stroke-gray-400 group-hover/btn:stroke-brand-400">
+                                    <g clip-path="url(#clip0_388_3259)">
+                                        <path d="M11.9999 6.66622L9.33319 3.99955M1.6665 14.3329L3.92275 14.0822C4.19841 14.0516 4.33624 14.0362 4.46507 13.9945C4.57936 13.9575 4.68814 13.9053 4.78843 13.8391C4.90147 13.7646 4.99953 13.6665 5.19565 13.4704L13.9999 4.66622C14.7362 3.92984 14.7362 2.73593 13.9999 1.99955C13.2635 1.26317 12.0696 1.26317 11.3332 1.99955L2.52899 10.8037C2.33287 10.9999 2.23481 11.0979 2.16026 11.211C2.09413 11.3113 2.04185 11.42 2.00485 11.5343C1.96314 11.6632 1.94783 11.801 1.9172 12.0766L1.6665 14.3329Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_388_3259">
+                                        <rect width="16" height="16" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>                                
+                            </button>
+
+                            <!-- Tooltip for Edit button -->
+                            <div
+                                id="tooltip-edit"
+                                role="tooltip"
+                                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-bg-dark rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                            >
+                                Edit
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <!-- File button -->
-                <label for="file" class="block absolute bottom-2.5 left-5">
-                    <input type="file" id="file" class="hidden">
-                    <span class="block p-2 cursor-pointer">
-                        <img src="./images/icons/image-01.svg" alt="image">
-                    </span>
-                </label>
-                
-                <!-- Text field -->
-                <input type="text" class="h-14 w-full rounded-2xl bg-base-white text-gray-800 px-16 pr-5 focus:outline-none placeholder:text-gray-300 text-sm" placeholder="Type message">
+                <!-- Chat message -->
+                <div class="flex gap-3">
+                    
+                    <!-- Avatar -->
+                    <div class="w-6 h-6 rounded-full overflow-hidden flex-shrink-0">
+                        <img src="./images/ai-avatar.png" alt="image">
+                    </div>
 
-                <!-- Send button -->
-                <!-- For activated button just remove 'disabled' attribute -->
-                <button type="button" class="group rounded-lg p-2 bg-brand-400 absolute bottom-2.5 right-5 disabled:bg-gray-100 disabled:cursor-not-allowed" disabled>
-                    <svg width="18" height="16" viewBox="0 0 18 16" xmlns="http://www.w3.org/2000/svg" class="stroke-base-white fill-none group-disabled:stroke-gray-300">
-                        <path d="M7.75036 7.99982H3.16702M3.09648 8.24274L1.15071 14.055C0.997847 14.5116 0.921417 14.7399 0.976267 14.8805C1.0239 15.0026 1.1262 15.0952 1.25244 15.1304C1.3978 15.171 1.61736 15.0722 2.05647 14.8746L15.9827 8.60778C16.4113 8.4149 16.6256 8.31847 16.6918 8.1845C16.7494 8.06811 16.7494 7.93155 16.6918 7.81516C16.6256 7.68119 16.4113 7.58475 15.9827 7.39188L2.05161 1.12293C1.61383 0.925925 1.39493 0.827424 1.24971 0.867831C1.1236 0.902922 1.0213 0.995243 0.973507 1.11711C0.91847 1.25744 0.994084 1.48526 1.14531 1.94088L3.09702 7.8211C3.12299 7.89935 3.13598 7.93848 3.14111 7.9785C3.14565 8.01401 3.14561 8.04996 3.14097 8.08546C3.13574 8.12546 3.12265 8.16455 3.09648 8.24274Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>                        
-                </button>
-            </form>
+                    <!-- Message -->
+                    <div class="text-gray-800 text-base flex-1">
+                        <p class="font-semibold mb-1">Sparky</p>
+                        <p>Hi Alex! The sky looks blue because of something called Rayleigh scattering. When sunlight enters our atmosphere, it meets with air and other tiny particles. This light is made up of many colors, and blue light gets scattered in all directions because it travels as shorter, smaller waves. That's why we see a blue sky most of the time!</p>
+                        
+                        <!-- Bottom bar -->
+                        <div class="mt-2 flex-center gap-2">
+
+                            <!-- Toggle message -->
+                            <div class="flex-center gap-0.5">
+                                <button class="w-[18px] h-[18px] flex-center justify-center">
+                                    <svg width="6" height="11" viewBox="0 0 6 11" xmlns="http://www.w3.org/2000/svg" class="stroke-gray-800 fill-transparent">
+                                        <path d="M5.25 9.68555L0.75 5.18555L5.25 0.685547" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </button>
+    
+                                <p class="text-xs">3 / 3</p>
+    
+                                <button class="w-[18px] h-[18px] flex-center justify-center">
+                                    <svg width="6" height="11" viewBox="0 0 6 11" xmlns="http://www.w3.org/2000/svg" class="stroke-gray-400 fill-transparent rotate-180">
+                                        <path d="M5.25 9.68555L0.75 5.18555L5.25 0.685547" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </button>
+                            </div>
+
+                            <div class="flex-center gap-2">
+                                <!-- Copy button -->
+                                <button
+                                    class="w-4 h-4 flex-center justify-center group/btn"
+                                    data-tooltip-target="tooltip-copy1"
+                                    data-tooltip-placement="bottom"
+                                >
+                                    <svg width="14" height="16" viewBox="0 0 14 16" xmlns="http://www.w3.org/2000/svg" class="fill-transparent stroke-gray-400 group-hover/btn:stroke-brand-400">
+                                        <path d="M9.6665 2.91732C10.2865 2.91732 10.5965 2.91732 10.8508 2.98547C11.541 3.1704 12.0801 3.7095 12.265 4.39968C12.3332 4.65401 12.3332 4.964 12.3332 5.58398V11.7173C12.3332 12.8374 12.3332 13.3975 12.1152 13.8253C11.9234 14.2016 11.6175 14.5076 11.2412 14.6993C10.8133 14.9173 10.2533 14.9173 9.13317 14.9173H4.8665C3.7464 14.9173 3.18635 14.9173 2.75852 14.6993C2.3822 14.5076 2.07624 14.2016 1.88449 13.8253C1.6665 13.3975 1.6665 12.8374 1.6665 11.7173V5.58398C1.6665 4.964 1.6665 4.65401 1.73465 4.39968C1.91959 3.7095 2.45868 3.1704 3.14887 2.98547C3.4032 2.91732 3.71319 2.91732 4.33317 2.91732M5.39984 4.25065H8.59984C8.9732 4.25065 9.15989 4.25065 9.3025 4.17799C9.42794 4.11407 9.52993 4.01209 9.59384 3.88664C9.6665 3.74404 9.6665 3.55735 9.6665 3.18398V2.65065C9.6665 2.27728 9.6665 2.0906 9.59384 1.94799C9.52993 1.82255 9.42794 1.72056 9.3025 1.65665C9.15989 1.58398 8.97321 1.58398 8.59984 1.58398H5.39984C5.02647 1.58398 4.83978 1.58398 4.69718 1.65665C4.57174 1.72056 4.46975 1.82255 4.40583 1.94799C4.33317 2.0906 4.33317 2.27728 4.33317 2.65065V3.18398C4.33317 3.55735 4.33317 3.74404 4.40583 3.88664C4.46975 4.01209 4.57174 4.11407 4.69718 4.17799C4.83978 4.25065 5.02647 4.25065 5.39984 4.25065Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+
+                                <!-- Tooltip for Copy button -->
+                                <div
+                                    id="tooltip-copy1"
+                                    role="tooltip"
+                                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-bg-dark rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                                >
+                                    Copy
+                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                </div>
+
+                                <!-- Regenerate button -->
+                                <button
+                                    class="w-4 h-4 flex-center justify-center group/btn"
+                                    data-tooltip-target="tooltip-regenerate1"
+                                    data-tooltip-placement="bottom"
+                                >
+                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-transparent stroke-gray-400 group-hover/btn:stroke-brand-400">
+                                        <path d="M1.3335 6.91667C1.3335 6.91667 2.67015 5.09548 3.75605 4.00883C4.84196 2.92218 6.34256 2.25 8.00016 2.25C11.3139 2.25 14.0002 4.93629 14.0002 8.25C14.0002 11.5637 11.3139 14.25 8.00016 14.25C5.26477 14.25 2.9569 12.4195 2.23467 9.91667M1.3335 6.91667V2.91667M1.3335 6.91667H5.3335" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+
+                                <!-- Tooltip for Regenerate button -->
+                                <div
+                                    id="tooltip-regenerate1"
+                                    role="tooltip"
+                                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-bg-dark rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                                >
+                                    Regenerate
+                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                </div>
+
+                                <!-- Response button -->
+                                <button
+                                    class="w-4 h-4 flex-center justify-center group/btn"
+                                    data-tooltip-target="tooltip-response1"
+                                    data-tooltip-placement="bottom"
+                                >
+                                    <svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg" class="fill-transparent stroke-gray-400 group-hover/btn:stroke-brand-400">
+                                        <g clip-path="url(#clip0_388_11257)">
+                                            <path d="M11.3335 1.58398V8.91732M14.6669 6.78398V3.71732C14.6669 2.97058 14.6669 2.59721 14.5215 2.312C14.3937 2.06111 14.1897 1.85714 13.9389 1.72931C13.6536 1.58398 13.2803 1.58398 12.5335 1.58398H5.41221C4.43788 1.58398 3.95072 1.58398 3.55725 1.76227C3.21046 1.91941 2.91573 2.17227 2.70769 2.49113C2.47164 2.85291 2.39757 3.33441 2.24942 4.2974L1.9007 6.56407C1.70529 7.83419 1.60759 8.46926 1.79607 8.9634C1.96149 9.39711 2.27263 9.75978 2.67615 9.98923C3.13589 10.2507 3.77842 10.2507 5.06349 10.2507H5.6002C5.97357 10.2507 6.16025 10.2507 6.30286 10.3233C6.4283 10.3872 6.53029 10.4892 6.5942 10.6147C6.66686 10.7573 6.66686 10.9439 6.66686 11.3173V13.2734C6.66686 14.1813 7.40286 14.9173 8.31076 14.9173C8.52731 14.9173 8.72354 14.7898 8.81149 14.5919L11.052 9.55077C11.1539 9.32148 11.2049 9.20684 11.2854 9.12278C11.3566 9.04847 11.444 8.99165 11.5408 8.95678C11.6504 8.91732 11.7758 8.91732 12.0267 8.91732H12.5335C13.2803 8.91732 13.6536 8.91732 13.9389 8.77199C14.1897 8.64416 14.3937 8.44019 14.5215 8.18931C14.6669 7.90409 14.6669 7.53072 14.6669 6.78398Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_388_11257">
+                                            <rect width="16" height="16" fill="white" transform="translate(0 0.25)"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </button>
+
+                                <!-- Tooltip for Response button -->
+                                <div
+                                    id="tooltip-response1"
+                                    role="tooltip"
+                                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-bg-dark rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                                >
+                                    Bad response
+                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Chat message EDIT -->
+                <div class="flex gap-3">
+                    
+                    <!-- Avatar -->
+                    <div class="w-6 h-6 rounded-full overflow-hidden flex-shrink-0">
+                        <img src="./images/avatar.png" alt="image">
+                    </div>
+
+                    <!-- Message -->
+                    <div class="text-gray-800 text-base flex-1">
+                        <p class="font-semibold mb-1">You</p>
+                        <p
+                            contenteditable="true"
+                            class="focus:outline-none"
+                        >
+                            Hey Sparky, why is the sky blue?
+                        </p>
+
+                        <!-- Buttons when message are editing -->
+                        <div class="flex justify-center mt-2 gap-2">
+                            <button type="button" class="py-[9px] px-4 rounded-lg bg-brand-200 text-gray-800 font-semibold text-sm hover:text-base-white">Save & Submit</button>
+                            <button type="button" class="py-[9px] px-4 rounded-lg border border-brand-400 text-brand-400 font-semibold text-sm hover:bg-brand-400 hover:text-base-white">Cancel</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Chat message PAUSE -->
+                <div class="flex gap-3">
+                    
+                    <!-- Avatar -->
+                    <div class="w-6 h-6 rounded-full overflow-hidden flex-shrink-0">
+                        <img src="./images/ai-avatar.png" alt="image">
+                    </div>
+
+                    <!-- Message -->
+                    <div class="text-gray-800 text-base">
+                        <p class="font-semibold mb-1">Sparky</p>
+                        <p>Hi Alex! The sky looks blue because of something called Rayleigh scattering. When sunlight enters our atmosphere, it meets with air and other tiny particles. This light is made up of many colors, and blue light gets scattered in all directions because it travels as shorter, smaller waves. That's why we <span class="inline-block w-4 h-4 align-middle rounded-full bg-brand-400"></span></p>
+                    </div>
+
+                </div>
+
+                <!-- Chat message with BAD RESPONSE -->
+                <div class="flex gap-3">
+                    
+                    <!-- Avatar -->
+                    <div class="w-6 h-6 rounded-full overflow-hidden flex-shrink-0">
+                        <img src="./images/ai-avatar.png" alt="image">
+                    </div>
+
+                    <!-- Message -->
+                    <div class="text-gray-800 text-base flex-1">
+                        <p class="font-semibold mb-1">Sparky</p>
+                        <p>Hi Alex! The sky looks blue because of something called Rayleigh scattering. When sunlight enters our atmosphere, it meets with air and other tiny particles. This light is made up of many colors, and blue light gets scattered in all directions because it travels as shorter, smaller waves. That's why we see a blue sky most of the time!</p>
+                        
+                        <!-- Bottom bar -->
+                        <div class="mt-2 flex-center gap-2">
+
+                            <!-- Toggle message -->
+                            <div class="flex-center gap-0.5">
+                                <button class="w-[18px] h-[18px] flex-center justify-center">
+                                    <svg width="6" height="11" viewBox="0 0 6 11" xmlns="http://www.w3.org/2000/svg" class="stroke-gray-800 fill-transparent">
+                                        <path d="M5.25 9.68555L0.75 5.18555L5.25 0.685547" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </button>
+    
+                                <p class="text-xs">3 / 3</p>
+    
+                                <button class="w-[18px] h-[18px] flex-center justify-center">
+                                    <svg width="6" height="11" viewBox="0 0 6 11" xmlns="http://www.w3.org/2000/svg" class="stroke-gray-400 fill-transparent rotate-180">
+                                        <path d="M5.25 9.68555L0.75 5.18555L5.25 0.685547" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </button>
+                            </div>
+
+                            <div class="flex-center gap-2">
+                                <!-- Copy button -->
+                                <button
+                                    class="w-4 h-4 flex-center justify-center group/btn"
+                                    data-tooltip-target="tooltip-copy"
+                                    data-tooltip-placement="bottom"
+                                >
+                                    <svg width="14" height="16" viewBox="0 0 14 16" xmlns="http://www.w3.org/2000/svg" class="fill-transparent stroke-gray-400 group-hover/btn:stroke-brand-400">
+                                        <path d="M9.6665 2.91732C10.2865 2.91732 10.5965 2.91732 10.8508 2.98547C11.541 3.1704 12.0801 3.7095 12.265 4.39968C12.3332 4.65401 12.3332 4.964 12.3332 5.58398V11.7173C12.3332 12.8374 12.3332 13.3975 12.1152 13.8253C11.9234 14.2016 11.6175 14.5076 11.2412 14.6993C10.8133 14.9173 10.2533 14.9173 9.13317 14.9173H4.8665C3.7464 14.9173 3.18635 14.9173 2.75852 14.6993C2.3822 14.5076 2.07624 14.2016 1.88449 13.8253C1.6665 13.3975 1.6665 12.8374 1.6665 11.7173V5.58398C1.6665 4.964 1.6665 4.65401 1.73465 4.39968C1.91959 3.7095 2.45868 3.1704 3.14887 2.98547C3.4032 2.91732 3.71319 2.91732 4.33317 2.91732M5.39984 4.25065H8.59984C8.9732 4.25065 9.15989 4.25065 9.3025 4.17799C9.42794 4.11407 9.52993 4.01209 9.59384 3.88664C9.6665 3.74404 9.6665 3.55735 9.6665 3.18398V2.65065C9.6665 2.27728 9.6665 2.0906 9.59384 1.94799C9.52993 1.82255 9.42794 1.72056 9.3025 1.65665C9.15989 1.58398 8.97321 1.58398 8.59984 1.58398H5.39984C5.02647 1.58398 4.83978 1.58398 4.69718 1.65665C4.57174 1.72056 4.46975 1.82255 4.40583 1.94799C4.33317 2.0906 4.33317 2.27728 4.33317 2.65065V3.18398C4.33317 3.55735 4.33317 3.74404 4.40583 3.88664C4.46975 4.01209 4.57174 4.11407 4.69718 4.17799C4.83978 4.25065 5.02647 4.25065 5.39984 4.25065Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+
+                                <!-- Tooltip for Copy button -->
+                                <div
+                                    id="tooltip-copy"
+                                    role="tooltip"
+                                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-bg-dark rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                                >
+                                    Copy
+                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                </div>
+
+                                <!-- Regenerate button -->
+                                <button
+                                    class="w-4 h-4 flex-center justify-center group/btn"
+                                    data-tooltip-target="tooltip-regenerate"
+                                    data-tooltip-placement="bottom"
+                                >
+                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-transparent stroke-gray-400 group-hover/btn:stroke-brand-400">
+                                        <path d="M1.3335 6.91667C1.3335 6.91667 2.67015 5.09548 3.75605 4.00883C4.84196 2.92218 6.34256 2.25 8.00016 2.25C11.3139 2.25 14.0002 4.93629 14.0002 8.25C14.0002 11.5637 11.3139 14.25 8.00016 14.25C5.26477 14.25 2.9569 12.4195 2.23467 9.91667M1.3335 6.91667V2.91667M1.3335 6.91667H5.3335" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+
+                                <!-- Tooltip for Regenerate button -->
+                                <div
+                                    id="tooltip-regenerate"
+                                    role="tooltip"
+                                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-bg-dark rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                                >
+                                    Regenerate
+                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                </div>
+
+                                <!-- Response button ACTIVE -->
+                                <button
+                                    class="w-4 h-4 flex-center justify-center group/btn"
+                                    data-tooltip-target="tooltip-response"
+                                    data-tooltip-placement="bottom"
+                                >
+                                    <svg width="15" height="16" viewBox="0 0 15 16" xmlns="http://www.w3.org/2000/svg" class="fill-gray-400 group-hover/btn:fill-brand-400">
+                                        <path d="M9.66699 1.73268C9.66699 1.35931 9.66699 1.17263 9.59433 1.03002C9.53041 0.904581 9.42843 0.802594 9.30299 0.738678C9.16038 0.666016 8.97369 0.666016 8.60033 0.666016H4.38733C3.92151 0.666009 3.53471 0.666004 3.21651 0.690227C2.88426 0.715519 2.57799 0.769755 2.2823 0.903736C1.81992 1.11325 1.42694 1.45039 1.14955 1.87554C0.972169 2.14742 0.871993 2.44188 0.796475 2.76642C0.724145 3.07725 0.665342 3.45952 0.594514 3.91995L0.237447 6.24088C0.143592 6.85088 0.0666535 7.35093 0.039439 7.75907C0.011361 8.18016 0.0297256 8.57307 0.173372 8.94968C0.393939 9.52797 0.80879 10.0115 1.34681 10.3175C1.6972 10.5167 2.08275 10.5946 2.50321 10.6309C2.91074 10.666 3.41667 10.666 4.03383 10.666H4.6004C4.79808 10.666 4.90625 10.6665 4.98398 10.6729L4.99277 10.6737L4.99353 10.6824C4.99988 10.7602 5.0004 10.8683 5.0004 11.066V13.0221C5.0004 14.2982 6.03487 15.3327 7.31096 15.3327C7.79097 15.3327 8.22595 15.05 8.4209 14.6114L10.6614 9.57023C10.7158 9.44793 10.7441 9.38485 10.7674 9.34045L10.7695 9.33653L10.7739 9.33623C10.8239 9.333 10.8931 9.33268 11.0269 9.33268H11.5594C11.9108 9.3327 12.214 9.33271 12.4637 9.31231C12.7273 9.29077 12.9895 9.24323 13.2417 9.1147C13.618 8.92295 13.924 8.61699 14.1157 8.24067C14.2443 7.98841 14.2918 7.72627 14.3134 7.4627C14.3338 7.21299 14.3337 6.90982 14.3337 6.5584V3.44031C14.3337 3.08888 14.3338 2.78571 14.3134 2.536C14.2918 2.27244 14.2443 2.01029 14.1157 1.75804C13.924 1.38171 13.618 1.07575 13.2417 0.884004C12.9895 0.755475 12.7273 0.707931 12.4637 0.686397C12.214 0.665995 11.9109 0.666005 11.5595 0.666016C11.2507 0.666016 11.0003 0.916348 11.0003 1.22515V6.66602C11.0003 7.03421 10.7018 7.33268 10.3337 7.33268C9.96547 7.33268 9.66699 7.03421 9.66699 6.66602V1.73268Z"/>
+                                    </svg>                                        
+                                </button>
+
+                                <!-- Tooltip for Response button -->
+                                <div
+                                    id="tooltip-response"
+                                    role="tooltip"
+                                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-bg-dark rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                                >
+                                    Bad response
+                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bad response -->
+                        <div class="mt-6 p-5 rounded-xl border border-gray-300 text-gray-500 text-base">
+                            <div class="flex-center justify-between mb-5">
+                                <p>Tell us more</p>
+                                
+                                <button type="button" class="w-6 h-6 flex-center justify-center">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" class="fill-none stroke-gray-400">
+                                        <path d="M13 1L1 13M1 1L13 13" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </button>
+                            </div>
+
+                            <div class="flex gap-2.5 flex-wrap">
+                                <button type="button" class="py-2 px-3 rounded-lg border border-gray-300 hover:bg-gray-300 hover:text-base-white">Don’t like the style</button>
+                                <button type="button" class="py-2 px-3 rounded-lg border border-gray-300 hover:bg-gray-300 hover:text-base-white">Not factually correct</button>
+                                <button type="button" class="py-2 px-3 rounded-lg border border-gray-300 hover:bg-gray-300 hover:text-base-white">Didn't fully follow instructions</button>
+                                <button type="button" class="py-2 px-3 rounded-lg border border-gray-300 hover:bg-gray-300 hover:text-base-white">Refused when it shouldn't have</button>
+                                <button type="button" class="py-2 px-3 rounded-lg border border-gray-300 hover:bg-gray-300 hover:text-base-white">Being lazy</button>
+                                <button type="button" class="py-2 px-3 rounded-lg border border-gray-300 hover:bg-gray-300 hover:text-base-white">More...</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Chat message -->
+                <div class="flex gap-3 group/message">
+                    
+                    <!-- Avatar -->
+                    <div class="w-6 h-6 rounded-full overflow-hidden flex-shrink-0">
+                        <img src="./images/avatar.png" alt="image">
+                    </div>
+
+                    <!-- Message -->
+                    <div class="text-gray-800 text-base flex-1">
+                        <p class="font-semibold mb-1">You</p>
+                        <p>create 2 sky photos</p>
+
+                        <!-- Bottom bar for edit visible on hover -->
+                        <div class="mt-2 flex-center gap-2 opacity-0 invisible group-hover/message:opacity-100 group-hover/message:visible">
+                            <!-- Edit button -->
+                            <button
+                                class="w-4 h-4 flex-center justify-center group/btn"
+                                data-tooltip-target="tooltip-edit2"
+                                data-tooltip-placement="bottom"
+                            >
+                                <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="fill-transparent stroke-gray-400 group-hover/btn:stroke-brand-400">
+                                    <path d="M11.9999 6.66622L9.33319 3.99955M1.6665 14.3329L3.92275 14.0822C4.19841 14.0516 4.33624 14.0362 4.46507 13.9945C4.57936 13.9575 4.68814 13.9053 4.78843 13.8391C4.90147 13.7646 4.99953 13.6665 5.19565 13.4704L13.9999 4.66622C14.7362 3.92984 14.7362 2.73593 13.9999 1.99955C13.2635 1.26317 12.0696 1.26317 11.3332 1.99955L2.52899 10.8037C2.33287 10.9999 2.23481 11.0979 2.16026 11.211C2.09413 11.3113 2.04185 11.42 2.00485 11.5343C1.96314 11.6632 1.94783 11.801 1.9172 12.0766L1.6665 14.3329Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                                                
+                            </button>
+
+                            <!-- Tooltip for Edit button -->
+                            <div
+                                id="tooltip-edit2"
+                                role="tooltip"
+                                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-bg-dark rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                            >
+                                Edit
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Chat message -->
+                <div class="flex gap-3">
+                    
+                    <!-- Avatar -->
+                    <div class="w-6 h-6 rounded-full overflow-hidden flex-shrink-0">
+                        <img src="./images/ai-avatar.png" alt="image">
+                    </div>
+
+                    <!-- Message -->
+                    <div class="text-gray-800 text-base">
+                        <p class="font-semibold mb-1">Sparky</p>
+
+                        <figure class="mb-3 relative">
+                            <img src="./images/Photo.png" alt="image" data-modal-target="lightbox-modal" data-modal-toggle="lightbox-modal">
+
+                            <!-- Download button -->
+                            <button type="button" class="bg-base-dark bg-opacity-50 w-6 h-6 flex-center justify-center rounded absolute top-3 left-3 group/btn">
+                                <svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg" class="fill-white group-hover/btn:opacity-50">
+                                    <path d="M8.66683 2.19987C8.66683 1.83168 8.36835 1.5332 8.00016 1.5332C7.63197 1.5332 7.3335 1.83168 7.3335 2.19987V9.92373L4.47157 7.0618C4.21122 6.80145 3.78911 6.80145 3.52876 7.0618C3.26841 7.32215 3.26841 7.74426 3.52876 8.00461L7.52876 12.0046C7.78911 12.265 8.21122 12.265 8.47157 12.0046L12.4716 8.00461C12.7319 7.74426 12.7319 7.32215 12.4716 7.0618C12.2112 6.80145 11.7891 6.80145 11.5288 7.0618L8.66683 9.92373V2.19987Z"/>
+                                    <path d="M1.3335 14.1999C1.3335 13.8317 1.63197 13.5332 2.00016 13.5332H14.0002C14.3684 13.5332 14.6668 13.8317 14.6668 14.1999C14.6668 14.5681 14.3684 14.8665 14.0002 14.8665H2.00016C1.63197 14.8665 1.3335 14.5681 1.3335 14.1999Z"/>
+                                </svg>
+                            </button>
+
+                            <!-- Like button -->
+                            <button type="button" class="bg-base-dark bg-opacity-50 w-6 h-6 flex-center justify-center rounded absolute top-3 right-12 group/btn">
+                                <svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg" class="fill-none stroke-white group-hover/btn:opacity-50">
+                                    <g clip-path="url(#clip0_405_13473)">
+                                        <path d="M4.66647 14.8652L4.66647 7.5319M1.33314 9.66523L1.33313 12.7319C1.33313 13.4786 1.33313 13.852 1.47846 14.1372C1.60629 14.3881 1.81027 14.5921 2.06115 14.7199C2.34636 14.8652 2.71973 14.8652 3.46647 14.8652L10.5878 14.8652C11.5621 14.8652 12.0493 14.8652 12.4427 14.6869C12.7895 14.5298 13.0843 14.277 13.2923 13.9581C13.5284 13.5963 13.6024 13.1148 13.7506 12.1518L14.0993 9.88515C14.2947 8.61503 14.3924 7.97996 14.2039 7.48582C14.0385 7.05211 13.7274 6.68944 13.3239 6.45999C12.8641 6.19857 12.2216 6.19857 10.9365 6.19857L10.3998 6.19857C10.0264 6.19857 9.83975 6.19857 9.69714 6.1259C9.5717 6.06199 9.46971 5.96 9.4058 5.83456C9.33314 5.69195 9.33314 5.50527 9.33314 5.1319L9.33314 3.17579C9.33314 2.2679 8.59714 1.5319 7.68924 1.5319C7.47269 1.5319 7.27646 1.65943 7.18851 1.85732L4.948 6.89845C4.8461 7.12773 4.79515 7.24238 4.71461 7.32644C4.64341 7.40075 4.55599 7.45757 4.45917 7.49244C4.34964 7.5319 4.22418 7.5319 3.97327 7.5319L3.46647 7.5319C2.71973 7.5319 2.34636 7.5319 2.06115 7.67722C1.81027 7.80506 1.60629 8.00903 1.47846 8.25991C1.33314 8.54513 1.33314 8.9185 1.33314 9.66523Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_405_13473">
+                                        <rect width="16" height="16" fill="white" transform="translate(16 16.1992) rotate(-180)"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>
+
+                            <!-- Dislike button -->
+                            <button type="button" class="bg-base-dark bg-opacity-50 w-6 h-6 flex-center justify-center rounded absolute top-3 right-3 group/btn">
+                                <svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg" class="fill-none stroke-white rotate-180 group-hover/btn:opacity-50">
+                                    <g clip-path="url(#clip0_405_13473)">
+                                        <path d="M4.66647 14.8652L4.66647 7.5319M1.33314 9.66523L1.33313 12.7319C1.33313 13.4786 1.33313 13.852 1.47846 14.1372C1.60629 14.3881 1.81027 14.5921 2.06115 14.7199C2.34636 14.8652 2.71973 14.8652 3.46647 14.8652L10.5878 14.8652C11.5621 14.8652 12.0493 14.8652 12.4427 14.6869C12.7895 14.5298 13.0843 14.277 13.2923 13.9581C13.5284 13.5963 13.6024 13.1148 13.7506 12.1518L14.0993 9.88515C14.2947 8.61503 14.3924 7.97996 14.2039 7.48582C14.0385 7.05211 13.7274 6.68944 13.3239 6.45999C12.8641 6.19857 12.2216 6.19857 10.9365 6.19857L10.3998 6.19857C10.0264 6.19857 9.83975 6.19857 9.69714 6.1259C9.5717 6.06199 9.46971 5.96 9.4058 5.83456C9.33314 5.69195 9.33314 5.50527 9.33314 5.1319L9.33314 3.17579C9.33314 2.2679 8.59714 1.5319 7.68924 1.5319C7.47269 1.5319 7.27646 1.65943 7.18851 1.85732L4.948 6.89845C4.8461 7.12773 4.79515 7.24238 4.71461 7.32644C4.64341 7.40075 4.55599 7.45757 4.45917 7.49244C4.34964 7.5319 4.22418 7.5319 3.97327 7.5319L3.46647 7.5319C2.71973 7.5319 2.34636 7.5319 2.06115 7.67722C1.81027 7.80506 1.60629 8.00903 1.47846 8.25991C1.33314 8.54513 1.33314 8.9185 1.33314 9.66523Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_405_13473">
+                                        <rect width="16" height="16" fill="white" transform="translate(16 16.1992) rotate(-180)"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>
+
+                            <!-- Dislike button PRESS -->
+                            <button type="button" class="bg-base-white bg-opacity-80 w-6 h-6 flex-center justify-center rounded absolute top-9 right-3 group/btn">
+                                <svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg" class="fill-none stroke-gray-900 rotate-180 group-hover/btn:opacity-50">
+                                    <g clip-path="url(#clip0_405_13473)">
+                                        <path d="M4.66647 14.8652L4.66647 7.5319M1.33314 9.66523L1.33313 12.7319C1.33313 13.4786 1.33313 13.852 1.47846 14.1372C1.60629 14.3881 1.81027 14.5921 2.06115 14.7199C2.34636 14.8652 2.71973 14.8652 3.46647 14.8652L10.5878 14.8652C11.5621 14.8652 12.0493 14.8652 12.4427 14.6869C12.7895 14.5298 13.0843 14.277 13.2923 13.9581C13.5284 13.5963 13.6024 13.1148 13.7506 12.1518L14.0993 9.88515C14.2947 8.61503 14.3924 7.97996 14.2039 7.48582C14.0385 7.05211 13.7274 6.68944 13.3239 6.45999C12.8641 6.19857 12.2216 6.19857 10.9365 6.19857L10.3998 6.19857C10.0264 6.19857 9.83975 6.19857 9.69714 6.1259C9.5717 6.06199 9.46971 5.96 9.4058 5.83456C9.33314 5.69195 9.33314 5.50527 9.33314 5.1319L9.33314 3.17579C9.33314 2.2679 8.59714 1.5319 7.68924 1.5319C7.47269 1.5319 7.27646 1.65943 7.18851 1.85732L4.948 6.89845C4.8461 7.12773 4.79515 7.24238 4.71461 7.32644C4.64341 7.40075 4.55599 7.45757 4.45917 7.49244C4.34964 7.5319 4.22418 7.5319 3.97327 7.5319L3.46647 7.5319C2.71973 7.5319 2.34636 7.5319 2.06115 7.67722C1.81027 7.80506 1.60629 8.00903 1.47846 8.25991C1.33314 8.54513 1.33314 8.9185 1.33314 9.66523Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_405_13473">
+                                        <rect width="16" height="16" fill="white" transform="translate(16 16.1992) rotate(-180)"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>
+                        </figure>
+
+                        <p>Here are 2 visual representation of a serene sky.</p>
+
+                        <!-- Bottom bar -->
+                        <div class="mt-2 flex-center gap-2">
+
+                            <!-- Toggle message -->
+                            <div class="flex-center gap-0.5">
+                                <button class="w-[18px] h-[18px] flex-center justify-center">
+                                    <svg width="6" height="11" viewBox="0 0 6 11" xmlns="http://www.w3.org/2000/svg" class="stroke-gray-800 fill-transparent">
+                                        <path d="M5.25 9.68555L0.75 5.18555L5.25 0.685547" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </button>
+    
+                                <p class="text-xs">3 / 3</p>
+    
+                                <button class="w-[18px] h-[18px] flex-center justify-center">
+                                    <svg width="6" height="11" viewBox="0 0 6 11" xmlns="http://www.w3.org/2000/svg" class="stroke-gray-400 fill-transparent rotate-180">
+                                        <path d="M5.25 9.68555L0.75 5.18555L5.25 0.685547" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </button>
+                            </div>
+
+                            <div class="flex-center gap-2">
+                                <!-- Copy button -->
+                                <button
+                                    class="w-4 h-4 flex-center justify-center group/btn"
+                                    data-tooltip-target="tooltip-copy2"
+                                    data-tooltip-placement="bottom"
+                                >
+                                    <svg width="14" height="16" viewBox="0 0 14 16" xmlns="http://www.w3.org/2000/svg" class="fill-transparent stroke-gray-400 group-hover/btn:stroke-brand-400">
+                                        <path d="M9.6665 2.91732C10.2865 2.91732 10.5965 2.91732 10.8508 2.98547C11.541 3.1704 12.0801 3.7095 12.265 4.39968C12.3332 4.65401 12.3332 4.964 12.3332 5.58398V11.7173C12.3332 12.8374 12.3332 13.3975 12.1152 13.8253C11.9234 14.2016 11.6175 14.5076 11.2412 14.6993C10.8133 14.9173 10.2533 14.9173 9.13317 14.9173H4.8665C3.7464 14.9173 3.18635 14.9173 2.75852 14.6993C2.3822 14.5076 2.07624 14.2016 1.88449 13.8253C1.6665 13.3975 1.6665 12.8374 1.6665 11.7173V5.58398C1.6665 4.964 1.6665 4.65401 1.73465 4.39968C1.91959 3.7095 2.45868 3.1704 3.14887 2.98547C3.4032 2.91732 3.71319 2.91732 4.33317 2.91732M5.39984 4.25065H8.59984C8.9732 4.25065 9.15989 4.25065 9.3025 4.17799C9.42794 4.11407 9.52993 4.01209 9.59384 3.88664C9.6665 3.74404 9.6665 3.55735 9.6665 3.18398V2.65065C9.6665 2.27728 9.6665 2.0906 9.59384 1.94799C9.52993 1.82255 9.42794 1.72056 9.3025 1.65665C9.15989 1.58398 8.97321 1.58398 8.59984 1.58398H5.39984C5.02647 1.58398 4.83978 1.58398 4.69718 1.65665C4.57174 1.72056 4.46975 1.82255 4.40583 1.94799C4.33317 2.0906 4.33317 2.27728 4.33317 2.65065V3.18398C4.33317 3.55735 4.33317 3.74404 4.40583 3.88664C4.46975 4.01209 4.57174 4.11407 4.69718 4.17799C4.83978 4.25065 5.02647 4.25065 5.39984 4.25065Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+
+                                <!-- Tooltip for Copy button -->
+                                <div
+                                    id="tooltip-copy2"
+                                    role="tooltip"
+                                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-bg-dark rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                                >
+                                    Copy
+                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                </div>
+
+                                <!-- Regenerate button -->
+                                <button
+                                    class="w-4 h-4 flex-center justify-center group/btn"
+                                    data-tooltip-target="tooltip-regenerate2"
+                                    data-tooltip-placement="bottom"
+                                >
+                                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-transparent stroke-gray-400 group-hover/btn:stroke-brand-400">
+                                        <path d="M1.3335 6.91667C1.3335 6.91667 2.67015 5.09548 3.75605 4.00883C4.84196 2.92218 6.34256 2.25 8.00016 2.25C11.3139 2.25 14.0002 4.93629 14.0002 8.25C14.0002 11.5637 11.3139 14.25 8.00016 14.25C5.26477 14.25 2.9569 12.4195 2.23467 9.91667M1.3335 6.91667V2.91667M1.3335 6.91667H5.3335" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+
+                                <!-- Tooltip for Regenerate button -->
+                                <div
+                                    id="tooltip-regenerate2"
+                                    role="tooltip"
+                                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-bg-dark rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                                >
+                                    Regenerate
+                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                </div>
+
+                                <!-- Response button -->
+                                <button
+                                    class="w-4 h-4 flex-center justify-center group/btn"
+                                    data-tooltip-target="tooltip-response2"
+                                    data-tooltip-placement="bottom"
+                                >
+                                    <svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg" class="fill-transparent stroke-gray-400 group-hover/btn:stroke-brand-400">
+                                        <g clip-path="url(#clip0_388_11257)">
+                                            <path d="M11.3335 1.58398V8.91732M14.6669 6.78398V3.71732C14.6669 2.97058 14.6669 2.59721 14.5215 2.312C14.3937 2.06111 14.1897 1.85714 13.9389 1.72931C13.6536 1.58398 13.2803 1.58398 12.5335 1.58398H5.41221C4.43788 1.58398 3.95072 1.58398 3.55725 1.76227C3.21046 1.91941 2.91573 2.17227 2.70769 2.49113C2.47164 2.85291 2.39757 3.33441 2.24942 4.2974L1.9007 6.56407C1.70529 7.83419 1.60759 8.46926 1.79607 8.9634C1.96149 9.39711 2.27263 9.75978 2.67615 9.98923C3.13589 10.2507 3.77842 10.2507 5.06349 10.2507H5.6002C5.97357 10.2507 6.16025 10.2507 6.30286 10.3233C6.4283 10.3872 6.53029 10.4892 6.5942 10.6147C6.66686 10.7573 6.66686 10.9439 6.66686 11.3173V13.2734C6.66686 14.1813 7.40286 14.9173 8.31076 14.9173C8.52731 14.9173 8.72354 14.7898 8.81149 14.5919L11.052 9.55077C11.1539 9.32148 11.2049 9.20684 11.2854 9.12278C11.3566 9.04847 11.444 8.99165 11.5408 8.95678C11.6504 8.91732 11.7758 8.91732 12.0267 8.91732H12.5335C13.2803 8.91732 13.6536 8.91732 13.9389 8.77199C14.1897 8.64416 14.3937 8.44019 14.5215 8.18931C14.6669 7.90409 14.6669 7.53072 14.6669 6.78398Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_388_11257">
+                                            <rect width="16" height="16" fill="white" transform="translate(0 0.25)"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                </button>
+
+                                <!-- Tooltip for Response button -->
+                                <div
+                                    id="tooltip-response2"
+                                    role="tooltip"
+                                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-bg-dark rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                                >
+                                    Bad response
+                                    <div class="tooltip-arrow" data-popper-arrow></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Type field -->
+            <div class="w-full max-w-[766px] mt-auto mb-10 pt-5 bg-base-white">
+                <form action="#" class="relative form-chat border border-gray-200 rounded-2xl block">
+                    <!-- Uploaded file -->
+                    <div class="p-4">
+                        <div class="w-[180px] h-[180px] relative">
+                            <img src="./images/image-sky.png" alt="image" class="object-cover max-w-full max-h-full rounded-xl">
+
+                            <!-- Delete button -->
+                            <button
+                                type="button"
+                                class="bg-base-secondary w-8 h-8 rounded-full flex-col flex-center justify-center absolute top-2 right-2"
+                                data-tooltip-target="tooltip-remove"
+                                data-tooltip-placement="top"
+                            >
+                                <img src="./images/icons/trash-01.svg" alt="image">
+                            </button>
+
+                            <!-- Tooltip for Remove image button -->
+                            <div
+                                id="tooltip-remove"
+                                role="tooltip"
+                                class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-bg-dark rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+                            >
+                                Remove image
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- File button -->
+                    <label for="file" class="block absolute bottom-2 left-5">
+                        <input type="file" id="file" class="hidden">
+                        <span class="block p-2 cursor-pointer">
+                            <img src="./images/icons/image-01.svg" alt="image">
+                        </span>
+                    </label>
+                    
+                    <!-- Text field -->
+                    <!--<input type="text" class="h-14 w-full rounded-2xl bg-base-white text-gray-800 px-16 pr-5 focus:outline-none placeholder:text-gray-300 text-sm" placeholder="Type message">-->
+                    <span
+                        class="w-full block rounded-2xl bg-base-white text-gray-800 my-2 px-16 py-2 resize-none focus:outline-none placeholder:text-gray-300 text-sm"
+                        role="textbox"
+                        contenteditable="true"
+                        placeholder="Type message"
+                    >
+                        Question 1: Why is the sky blue?
+
+                        The sky appears blue to the human eye during the daytime due to a phenomenon called Rayleigh scattering. This occurs when the Earth's atmosphere scatters sunlight in all directions. Blue light is scattered more than other colors because it travels as shorter, smaller waves. This is why we see a blue sky most of the time.
+                        
+                        Question 2: Why is the sky red?
+                        
+                        The sky can appear red, especially during sunrise and sunset, due to the same scattering of light—only in these instances, the sun's light has to pass through more of the Earth's atmosphere due to the angle of the sun relative to the observer. Longer wavelengths of light (reds and oranges) are less scattered by the atmosphere than the shorter blue wavelengths. When the sun is low on the horizon, sunlight passes through more air at a lower angle and more blue light is scattered out of the direct line of sight, leaving the longer red wavelengths to dominate the observed spectrum. Additionally, if there are more particles or pollution in the atmosphere, they can enhance the red color of the sky at these times because they scatter more light.
+                    </span>
+
+                    <!-- Send button -->
+                    <!-- For deactivate button just add 'disabled' attribute -->
+                    <button type="button" class="group rounded-lg p-2 bg-brand-400 absolute bottom-2.5 right-5 disabled:bg-gray-100 disabled:cursor-not-allowed">
+                        <svg width="18" height="16" viewBox="0 0 18 16" xmlns="http://www.w3.org/2000/svg" class="stroke-base-white fill-none group-disabled:stroke-gray-300">
+                            <path d="M7.75036 7.99982H3.16702M3.09648 8.24274L1.15071 14.055C0.997847 14.5116 0.921417 14.7399 0.976267 14.8805C1.0239 15.0026 1.1262 15.0952 1.25244 15.1304C1.3978 15.171 1.61736 15.0722 2.05647 14.8746L15.9827 8.60778C16.4113 8.4149 16.6256 8.31847 16.6918 8.1845C16.7494 8.06811 16.7494 7.93155 16.6918 7.81516C16.6256 7.68119 16.4113 7.58475 15.9827 7.39188L2.05161 1.12293C1.61383 0.925925 1.39493 0.827424 1.24971 0.867831C1.1236 0.902922 1.0213 0.995243 0.973507 1.11711C0.91847 1.25744 0.994084 1.48526 1.14531 1.94088L3.09702 7.8211C3.12299 7.89935 3.13598 7.93848 3.14111 7.9785C3.14565 8.01401 3.14561 8.04996 3.14097 8.08546C3.13574 8.12546 3.12265 8.16455 3.09648 8.24274Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+
+                    <!-- Pause button -->
+                    <button type="button" class="hidden w-9 h-9 group rounded-full p-2 bg-brand-400 absolute bottom-2.5 right-5 disabled:bg-gray-100 disabled:cursor-not-allowed">    
+                        <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" class="fill-base-white">
+                            <g stroke-width="0"></g>
+                            <g stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g>
+                                <path d="M5.92 24.096q0 0.832 0.576 1.408t1.44 0.608h4.032q0.832 0 1.44-0.608t0.576-1.408v-16.16q0-0.832-0.576-1.44t-1.44-0.576h-4.032q-0.832 0-1.44 0.576t-0.576 1.44v16.16zM18.016 24.096q0 0.832 0.608 1.408t1.408 0.608h4.032q0.832 0 1.44-0.608t0.576-1.408v-16.16q0-0.832-0.576-1.44t-1.44-0.576h-4.032q-0.832 0-1.408 0.576t-0.608 1.44v16.16z"></path>
+                            </g>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
         </div>
 
     </main>
+
+    <!-- Lightbox modal -->
+    <div id="lightbox-modal" data-modal-backdrop="bg-base-dark" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="w-full max-w-[1150px] max-h-full">
+
+            <figure>
+                <img src="./images/Photo.png" alt="image">
+            </figure>
+
+            <button
+                type="button"
+                data-modal-hide="lightbox-modal"
+                class="absolute top-6 left-6 bg-base-dark w-8 h-8 flex-center justify-center rounded"
+            >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                
+            </button>
+
+            <div class="flex-center gap-2.5 absolute right-6 top-6">
+
+                <!-- Like button -->
+                <button type="button" class="bg-base-dark w-8 h-8 flex-center justify-center rounded group/btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="fill-none stroke-white group-hover/btn:opacity-50">
+                        <path d="M6.99995 22L6.99995 11M1.99995 14.2L1.99995 18.8C1.99995 19.9201 1.99995 20.4802 2.21793 20.908C2.40968 21.2843 2.71564 21.5903 3.09197 21.782C3.51979 22 4.07984 22 5.19995 22L15.8819 22C17.3434 22 18.0742 22 18.6644 21.7326C19.1845 21.4969 19.6266 21.1176 19.9387 20.6393C20.2928 20.0966 20.4039 19.3744 20.6261 17.9299L21.1492 14.5299C21.4423 12.6247 21.5889 11.6721 21.3061 10.9309C21.058 10.2803 20.5913 9.73631 19.986 9.39213C19.2964 9 18.3326 9 16.405 9L15.5999 9C15.0399 9 14.7599 9 14.546 8.89101C14.3578 8.79513 14.2048 8.64215 14.1089 8.45399C13.9999 8.24008 13.9999 7.96005 13.9999 7.4L13.9999 4.46584C13.9999 3.10399 12.896 2 11.5341 2C11.2093 2 10.9149 2.19129 10.783 2.48812L7.42225 10.0498C7.26939 10.3938 7.19296 10.5657 7.07215 10.6918C6.96536 10.8033 6.83422 10.8885 6.689 10.9408C6.5247 11 6.33652 11 5.96015 11L5.19995 11C4.07984 11 3.51979 11 3.09197 11.218C2.71564 11.4097 2.40968 11.7157 2.21793 12.092C1.99995 12.5198 1.99995 13.0799 1.99995 14.2Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <!-- Dislike button -->
+                <button type="button" class="bg-base-dark w-8 h-8 flex-center justify-center rounded group/btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="fill-none stroke-white rotate-180 group-hover/btn:opacity-50">
+                        <path d="M6.99995 22L6.99995 11M1.99995 14.2L1.99995 18.8C1.99995 19.9201 1.99995 20.4802 2.21793 20.908C2.40968 21.2843 2.71564 21.5903 3.09197 21.782C3.51979 22 4.07984 22 5.19995 22L15.8819 22C17.3434 22 18.0742 22 18.6644 21.7326C19.1845 21.4969 19.6266 21.1176 19.9387 20.6393C20.2928 20.0966 20.4039 19.3744 20.6261 17.9299L21.1492 14.5299C21.4423 12.6247 21.5889 11.6721 21.3061 10.9309C21.058 10.2803 20.5913 9.73631 19.986 9.39213C19.2964 9 18.3326 9 16.405 9L15.5999 9C15.0399 9 14.7599 9 14.546 8.89101C14.3578 8.79513 14.2048 8.64215 14.1089 8.45399C13.9999 8.24008 13.9999 7.96005 13.9999 7.4L13.9999 4.46584C13.9999 3.10399 12.896 2 11.5341 2C11.2093 2 10.9149 2.19129 10.783 2.48812L7.42225 10.0498C7.26939 10.3938 7.19296 10.5657 7.07215 10.6918C6.96536 10.8033 6.83422 10.8885 6.689 10.9408C6.5247 11 6.33652 11 5.96015 11L5.19995 11C4.07984 11 3.51979 11 3.09197 11.218C2.71564 11.4097 2.40968 11.7157 2.21793 12.092C1.99995 12.5198 1.99995 13.0799 1.99995 14.2Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <!-- Download button -->
+                <button type="button" class="bg-base-dark w-8 h-8 flex-center justify-center rounded group/btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="fill-white group-hover/btn:opacity-50">
+                        <path d="M13 3C13 2.44772 12.5523 2 12 2C11.4477 2 11 2.44772 11 3V14.5858L6.70711 10.2929C6.31658 9.90237 5.68342 9.90237 5.29289 10.2929C4.90237 10.6834 4.90237 11.3166 5.29289 11.7071L11.2929 17.7071C11.6834 18.0976 12.3166 18.0976 12.7071 17.7071L18.7071 11.7071C19.0976 11.3166 19.0976 10.6834 18.7071 10.2929C18.3166 9.90237 17.6834 9.90237 17.2929 10.2929L13 14.5858V3Z"/>
+                        <path d="M2 21C2 20.4477 2.44772 20 3 20H21C21.5523 20 22 20.4477 22 21C22 21.5523 21.5523 22 21 22H3C2.44772 22 2 21.5523 2 21Z"/>
+                    </svg>                        
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
 
 </body>
 </html>
