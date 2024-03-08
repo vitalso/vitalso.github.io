@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add profile</title>
+    <!-- Google Fonts - Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Style file -->
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="fixed z-10 top-0 left-0 w-full py-5 md:py-4 px-5 md:px-8 bg-base-secondary border-b border-main-light md:border-0 md:bg-linear-gradient">
+        <div class="flex-center">
+
+            <!-- Desktop elements -->
+            <a href="index.html" class="text-gray-900 font-semibold text-xl">Kids Zone logo</a>
+
+            <div class="bg-brand-400 rounded-full w-10 h-10 flex-center justify-center text-base-white ml-auto">Y</div>
+
+        </div>
+    </header>
+
+    <main class="pt-[72px]">
+
+        <!-- Close button -->
+        <button type="button" class="absolute right-9 top-28 w-12 h-12 flex-center justify-center">
+            <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 1.42822L1 21.4282M1 1.42822L21 21.4282" stroke="#5749CB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>                
+        </button>
+        
+        <div class="mx-auto max-w-[600px] py-12 px-4 md:px-0 flex flex-col gap-8 items-start">
+            <h4 class="text-gray-800 font-bold text-3xl">Add Profile</h4>
+
+            <div class="w-full">
+                <p class="text-gray-700 text-lg font-semibold mb-3.5">Basic Information</p>
+
+                <div class="flex-center gap-3.5">
+                    <!-- Profile photo -->
+                    <div class="w-16 h-16 relative flex-shrink-0">
+                        <div class="overflow-hidden bg-[#F2BCFF] rounded-full">
+                            <img src="images/profile.png" alt="image">
+                        </div>
+                        
+                        <!-- Avatar modal -->
+                        <button
+                            type="button"
+                            class="absolute bottom-0 right-0 w-[26px] h-[26px] rounded-full bg-brand-400 flex-center flex-col justify-center cursor-pointer"
+                            data-modal-target="avatar-modal"
+                            data-modal-toggle="avatar-modal"
+                        >
+                            <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.6625 0.765676C11.7904 -0.106461 10.3763 -0.106463 9.50421 0.765674L8.82665 1.44323C8.59564 1.67424 8.48013 1.78975 8.43686 1.92294C8.39879 2.0401 8.39879 2.1663 8.43686 2.28346C8.48013 2.41665 8.59564 2.53215 8.82665 2.76316L10.665 4.60152C10.896 4.83253 11.0115 4.94804 11.1447 4.99131C11.2619 5.02938 11.3881 5.02938 11.5052 4.99131C11.6384 4.94804 11.7539 4.83253 11.9849 4.60152L12.6625 3.92397C13.5346 3.05183 13.5346 1.63781 12.6625 0.765676Z" fill="white"/>
+                                <path d="M9.84005 6.74641C10.0711 6.5154 10.1866 6.3999 10.2298 6.26671C10.2679 6.14955 10.2679 6.02334 10.2298 5.90619C10.1866 5.77299 10.0711 5.65749 9.84005 5.42648L8.00169 3.58812C7.77068 3.35711 7.65517 3.2416 7.52198 3.19833C7.40482 3.16026 7.27862 3.16026 7.16146 3.19833C7.02827 3.2416 6.91277 3.35711 6.68176 3.58812L1.77143 8.49841C1.62834 8.64127 1.50212 8.76728 1.40339 8.91701C1.31659 9.04864 1.24797 9.1914 1.19941 9.34142C1.14417 9.51204 1.12462 9.68932 1.10245 9.89029L0.878572 11.9054C0.859002 12.0815 0.920554 12.257 1.04586 12.3823C1.17116 12.5076 1.34663 12.5692 1.52276 12.5496L3.53788 12.3257C3.73885 12.3035 3.91612 12.284 4.08674 12.2287C4.23676 12.1802 4.37952 12.1116 4.51115 12.0248C4.66088 11.926 4.78689 11.7998 4.92975 11.6567L9.84005 6.74641Z" fill="white"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <input type="text" placeholder="Profile Name" class="h-11 rounded-md border border-gray-300 px-3.5 py-2.5 text-gray-800 text-base placeholder::text-gray-400 focus:outline-none focus:shadow-none w-full">
+                </div>
+            </div>
+
+            <div class="w-full">
+                <p class="text-gray-700 text-lg font-semibold mb-1">Manage Screen Time</p>
+                <p class="text-sm text-gray-500 mb-3.5">Set a time limit for this profile's usage. After the timer expires, a parent PIN is required to extend access.</p>
+
+                <select class="h-11 rounded-md border border-gray-300 px-3.5 py-2.5 text-gray-800 text-base placeholder::text-gray-400 focus:outline-none focus:shadow-none w-full">
+                    <option selected>1h</option>
+                    <option value="2">2h</option>
+                    <option value="3">3h</option>
+                    <option value="4">4h</option>
+                    <option value="5">5h</option>
+                </select>
+            </div>
+
+            <div class="w-full">
+                <p class="text-gray-700 text-lg font-semibold mb-1">Tailor Your Child's Experience</p>
+                <p class="text-sm text-gray-500 mb-5">Provide your child's age to help us automatically suggest suitable profile settings and content, ensuring a safe and age-appropriate experience.</p>
+                <input type="text" placeholder="Child's Age" class="h-11 rounded-md border border-gray-300 px-3.5 py-2.5 text-gray-800 text-base placeholder::text-gray-400 focus:outline-none focus:shadow-none w-full">
+            </div>
+
+            <div class="w-full flex flex-col sm:flex-row gap-5">
+                <!-- High control -->
+                <label for="hight-control" class="bg-gray-50 border border-transparent p-6 rounded-xl flex-1 text-gray-600 text-sm hover:border-gray-400 cursor-pointer checkbox-wrapper">
+
+                    <div class="flex-center text-gray-800 mb-4">
+                        <p class="subtitle-control">High Control</p>
+
+                        <input type="radio" name="control" id="hight-control" class="appearance-none ml-auto w-5 h-5 border border-gray-400 rounded-md focus:ring-0 focus:ring-transparent checked:bg-brand-400">
+                    </div>
+
+                    <p class="text-[26px] text-gray-800 font-semibold leading-9 title-control">4-11 yrs</p>
+
+                    <div class="bg-gray-300 my-6 h-[1px]"></div>
+
+                    <ul class="flex flex-col gap-3">
+                        <li class="flex gap-2 leading-[22px]">
+                            <svg width="20" height="23" viewBox="0 0 20 23" xmlns="http://www.w3.org/2000/svg" class="fill-gray-300 flex-shrink-0">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.76162 2.14116C9.9197 2.11831 10.0803 2.11831 10.2383 2.14116C10.4205 2.16748 10.5901 2.23153 10.7247 2.28238L10.7607 2.29598L15.3378 4.01224C15.8526 4.20445 16.3047 4.37325 16.6529 4.6801C16.9575 4.94854 17.1921 5.28712 17.3365 5.66657C17.5016 6.10033 17.5009 6.58293 17.5001 7.13246L17.5 11.234C17.5 13.5895 16.2189 15.5534 14.8341 16.996C13.44 18.4484 11.845 19.4742 11.0016 19.9662L10.9674 19.9862C10.8135 20.0766 10.6137 20.1939 10.3494 20.2506C10.1332 20.297 9.86672 20.297 9.65051 20.2506C9.38624 20.1939 9.18646 20.0766 9.03255 19.9862L8.99839 19.9662C8.15497 19.4742 6.55994 18.4484 5.16586 16.996C3.78105 15.5534 2.49998 13.5895 2.49998 11.234L2.49986 7.13247C2.49907 6.58293 2.49837 6.10033 2.66343 5.66657C2.80782 5.28712 3.04245 4.94854 3.34705 4.6801C3.69523 4.37325 4.14735 4.20445 4.66218 4.01224L9.23921 2.29598L9.27528 2.28238C9.40989 2.23153 9.57942 2.16748 9.76162 2.14116ZM13.5059 9.32339C13.8313 8.99795 13.8313 8.47031 13.5059 8.14488C13.1804 7.81944 12.6528 7.81944 12.3274 8.14488L9.16663 11.3056L8.08921 10.2282C7.76378 9.90277 7.23614 9.90277 6.9107 10.2282C6.58527 10.5536 6.58527 11.0813 6.9107 11.4067L8.57737 13.0734C8.90281 13.3988 9.43044 13.3988 9.75588 13.0734L13.5059 9.32339Z" />
+                            </svg>
+                            <span>Blocked mature content</span>
+                        </li>
+
+                        <li class="flex gap-2 leading-[22px]">
+                            <svg width="20" height="23" viewBox="0 0 20 23" xmlns="http://www.w3.org/2000/svg" class="fill-gray-300 flex-shrink-0">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.76162 2.14116C9.9197 2.11831 10.0803 2.11831 10.2383 2.14116C10.4205 2.16748 10.5901 2.23153 10.7247 2.28238L10.7607 2.29598L15.3378 4.01224C15.8526 4.20445 16.3047 4.37325 16.6529 4.6801C16.9575 4.94854 17.1921 5.28712 17.3365 5.66657C17.5016 6.10033 17.5009 6.58293 17.5001 7.13246L17.5 11.234C17.5 13.5895 16.2189 15.5534 14.8341 16.996C13.44 18.4484 11.845 19.4742 11.0016 19.9662L10.9674 19.9862C10.8135 20.0766 10.6137 20.1939 10.3494 20.2506C10.1332 20.297 9.86672 20.297 9.65051 20.2506C9.38624 20.1939 9.18646 20.0766 9.03255 19.9862L8.99839 19.9662C8.15497 19.4742 6.55994 18.4484 5.16586 16.996C3.78105 15.5534 2.49998 13.5895 2.49998 11.234L2.49986 7.13247C2.49907 6.58293 2.49837 6.10033 2.66343 5.66657C2.80782 5.28712 3.04245 4.94854 3.34705 4.6801C3.69523 4.37325 4.14735 4.20445 4.66218 4.01224L9.23921 2.29598L9.27528 2.28238C9.40989 2.23153 9.57942 2.16748 9.76162 2.14116ZM13.5059 9.32339C13.8313 8.99795 13.8313 8.47031 13.5059 8.14488C13.1804 7.81944 12.6528 7.81944 12.3274 8.14488L9.16663 11.3056L8.08921 10.2282C7.76378 9.90277 7.23614 9.90277 6.9107 10.2282C6.58527 10.5536 6.58527 11.0813 6.9107 11.4067L8.57737 13.0734C8.90281 13.3988 9.43044 13.3988 9.75588 13.0734L13.5059 9.32339Z" />
+                            </svg>
+                            <span>Blocked words and phrases related to suicide, self-harm, eating disorders, or other mental health issues in order to direct users to</span>
+                        </li>
+
+                        <li class="flex gap-2 leading-[22px]">
+                            <svg width="20" height="23" viewBox="0 0 20 23" xmlns="http://www.w3.org/2000/svg" class="fill-gray-300 flex-shrink-0">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.76162 2.14116C9.9197 2.11831 10.0803 2.11831 10.2383 2.14116C10.4205 2.16748 10.5901 2.23153 10.7247 2.28238L10.7607 2.29598L15.3378 4.01224C15.8526 4.20445 16.3047 4.37325 16.6529 4.6801C16.9575 4.94854 17.1921 5.28712 17.3365 5.66657C17.5016 6.10033 17.5009 6.58293 17.5001 7.13246L17.5 11.234C17.5 13.5895 16.2189 15.5534 14.8341 16.996C13.44 18.4484 11.845 19.4742 11.0016 19.9662L10.9674 19.9862C10.8135 20.0766 10.6137 20.1939 10.3494 20.2506C10.1332 20.297 9.86672 20.297 9.65051 20.2506C9.38624 20.1939 9.18646 20.0766 9.03255 19.9862L8.99839 19.9662C8.15497 19.4742 6.55994 18.4484 5.16586 16.996C3.78105 15.5534 2.49998 13.5895 2.49998 11.234L2.49986 7.13247C2.49907 6.58293 2.49837 6.10033 2.66343 5.66657C2.80782 5.28712 3.04245 4.94854 3.34705 4.6801C3.69523 4.37325 4.14735 4.20445 4.66218 4.01224L9.23921 2.29598L9.27528 2.28238C9.40989 2.23153 9.57942 2.16748 9.76162 2.14116ZM13.5059 9.32339C13.8313 8.99795 13.8313 8.47031 13.5059 8.14488C13.1804 7.81944 12.6528 7.81944 12.3274 8.14488L9.16663 11.3056L8.08921 10.2282C7.76378 9.90277 7.23614 9.90277 6.9107 10.2282C6.58527 10.5536 6.58527 11.0813 6.9107 11.4067L8.57737 13.0734C8.90281 13.3988 9.43044 13.3988 9.75588 13.0734L13.5059 9.32339Z" />
+                            </svg>
+                            <span>Blocked sensitive topics, bullying, hate speech </span>
+                        </li>
+
+                        <li class="flex gap-2 leading-[22px]">
+                            <svg width="20" height="23" viewBox="0 0 20 23" xmlns="http://www.w3.org/2000/svg" class="fill-gray-300 flex-shrink-0">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.76162 2.14116C9.9197 2.11831 10.0803 2.11831 10.2383 2.14116C10.4205 2.16748 10.5901 2.23153 10.7247 2.28238L10.7607 2.29598L15.3378 4.01224C15.8526 4.20445 16.3047 4.37325 16.6529 4.6801C16.9575 4.94854 17.1921 5.28712 17.3365 5.66657C17.5016 6.10033 17.5009 6.58293 17.5001 7.13246L17.5 11.234C17.5 13.5895 16.2189 15.5534 14.8341 16.996C13.44 18.4484 11.845 19.4742 11.0016 19.9662L10.9674 19.9862C10.8135 20.0766 10.6137 20.1939 10.3494 20.2506C10.1332 20.297 9.86672 20.297 9.65051 20.2506C9.38624 20.1939 9.18646 20.0766 9.03255 19.9862L8.99839 19.9662C8.15497 19.4742 6.55994 18.4484 5.16586 16.996C3.78105 15.5534 2.49998 13.5895 2.49998 11.234L2.49986 7.13247C2.49907 6.58293 2.49837 6.10033 2.66343 5.66657C2.80782 5.28712 3.04245 4.94854 3.34705 4.6801C3.69523 4.37325 4.14735 4.20445 4.66218 4.01224L9.23921 2.29598L9.27528 2.28238C9.40989 2.23153 9.57942 2.16748 9.76162 2.14116ZM13.5059 9.32339C13.8313 8.99795 13.8313 8.47031 13.5059 8.14488C13.1804 7.81944 12.6528 7.81944 12.3274 8.14488L9.16663 11.3056L8.08921 10.2282C7.76378 9.90277 7.23614 9.90277 6.9107 10.2282C6.58527 10.5536 6.58527 11.0813 6.9107 11.4067L8.57737 13.0734C8.90281 13.3988 9.43044 13.3988 9.75588 13.0734L13.5059 9.32339Z" />
+                            </svg>
+                            <span>Mature Content</span>
+                        </li>
+                    </ul>
+
+                </label>
+
+                <!-- Medium control -->
+                <label for="medium-control" class="bg-gray-50 border border-transparent p-6 rounded-xl flex-1 text-gray-600 text-sm hover:border-gray-400 cursor-pointer checkbox-wrapper">
+
+                    <div class="flex-center text-gray-800 mb-4">
+                        <p class="subtitle-control">Medium Control</p>
+
+                        <input type="radio" name="control" checked id="medium-control" class="appearance-none ml-auto w-5 h-5 border border-gray-400 rounded-md focus:ring-0 focus:ring-transparent checked:bg-brand-400">
+                    </div>
+
+                    <p class="text-[26px] text-gray-800 font-semibold leading-9 title-control">12 yrs +</p>
+
+                    <div class="bg-gray-300 my-6 h-[1px]"></div>
+
+                    <ul class="flex flex-col gap-3">
+                        <li class="flex gap-2 leading-[22px]">
+                            <svg width="20" height="23" viewBox="0 0 20 23" xmlns="http://www.w3.org/2000/svg" class="fill-gray-300 flex-shrink-0">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.76162 2.14116C9.9197 2.11831 10.0803 2.11831 10.2383 2.14116C10.4205 2.16748 10.5901 2.23153 10.7247 2.28238L10.7607 2.29598L15.3378 4.01224C15.8526 4.20445 16.3047 4.37325 16.6529 4.6801C16.9575 4.94854 17.1921 5.28712 17.3365 5.66657C17.5016 6.10033 17.5009 6.58293 17.5001 7.13246L17.5 11.234C17.5 13.5895 16.2189 15.5534 14.8341 16.996C13.44 18.4484 11.845 19.4742 11.0016 19.9662L10.9674 19.9862C10.8135 20.0766 10.6137 20.1939 10.3494 20.2506C10.1332 20.297 9.86672 20.297 9.65051 20.2506C9.38624 20.1939 9.18646 20.0766 9.03255 19.9862L8.99839 19.9662C8.15497 19.4742 6.55994 18.4484 5.16586 16.996C3.78105 15.5534 2.49998 13.5895 2.49998 11.234L2.49986 7.13247C2.49907 6.58293 2.49837 6.10033 2.66343 5.66657C2.80782 5.28712 3.04245 4.94854 3.34705 4.6801C3.69523 4.37325 4.14735 4.20445 4.66218 4.01224L9.23921 2.29598L9.27528 2.28238C9.40989 2.23153 9.57942 2.16748 9.76162 2.14116ZM13.5059 9.32339C13.8313 8.99795 13.8313 8.47031 13.5059 8.14488C13.1804 7.81944 12.6528 7.81944 12.3274 8.14488L9.16663 11.3056L8.08921 10.2282C7.76378 9.90277 7.23614 9.90277 6.9107 10.2282C6.58527 10.5536 6.58527 11.0813 6.9107 11.4067L8.57737 13.0734C8.90281 13.3988 9.43044 13.3988 9.75588 13.0734L13.5059 9.32339Z" />
+                            </svg>
+                            <span>Blocked mature content</span>
+                        </li>
+
+                        <li class="flex gap-2 leading-[22px]">
+                            <svg width="20" height="23" viewBox="0 0 20 23" xmlns="http://www.w3.org/2000/svg" class="fill-gray-300 flex-shrink-0">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.76162 2.14116C9.9197 2.11831 10.0803 2.11831 10.2383 2.14116C10.4205 2.16748 10.5901 2.23153 10.7247 2.28238L10.7607 2.29598L15.3378 4.01224C15.8526 4.20445 16.3047 4.37325 16.6529 4.6801C16.9575 4.94854 17.1921 5.28712 17.3365 5.66657C17.5016 6.10033 17.5009 6.58293 17.5001 7.13246L17.5 11.234C17.5 13.5895 16.2189 15.5534 14.8341 16.996C13.44 18.4484 11.845 19.4742 11.0016 19.9662L10.9674 19.9862C10.8135 20.0766 10.6137 20.1939 10.3494 20.2506C10.1332 20.297 9.86672 20.297 9.65051 20.2506C9.38624 20.1939 9.18646 20.0766 9.03255 19.9862L8.99839 19.9662C8.15497 19.4742 6.55994 18.4484 5.16586 16.996C3.78105 15.5534 2.49998 13.5895 2.49998 11.234L2.49986 7.13247C2.49907 6.58293 2.49837 6.10033 2.66343 5.66657C2.80782 5.28712 3.04245 4.94854 3.34705 4.6801C3.69523 4.37325 4.14735 4.20445 4.66218 4.01224L9.23921 2.29598L9.27528 2.28238C9.40989 2.23153 9.57942 2.16748 9.76162 2.14116ZM13.5059 9.32339C13.8313 8.99795 13.8313 8.47031 13.5059 8.14488C13.1804 7.81944 12.6528 7.81944 12.3274 8.14488L9.16663 11.3056L8.08921 10.2282C7.76378 9.90277 7.23614 9.90277 6.9107 10.2282C6.58527 10.5536 6.58527 11.0813 6.9107 11.4067L8.57737 13.0734C8.90281 13.3988 9.43044 13.3988 9.75588 13.0734L13.5059 9.32339Z" />
+                            </svg>
+                            <span>Blocked words and phrases related to suicide, self-harm, eating disorders, or other mental health issues in order to direct users to</span>
+                        </li>
+
+                        <li class="flex gap-2 leading-[22px]">
+                            <svg width="20" height="23" viewBox="0 0 20 23" xmlns="http://www.w3.org/2000/svg" class="fill-gray-300 flex-shrink-0">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.76162 2.14116C9.9197 2.11831 10.0803 2.11831 10.2383 2.14116C10.4205 2.16748 10.5901 2.23153 10.7247 2.28238L10.7607 2.29598L15.3378 4.01224C15.8526 4.20445 16.3047 4.37325 16.6529 4.6801C16.9575 4.94854 17.1921 5.28712 17.3365 5.66657C17.5016 6.10033 17.5009 6.58293 17.5001 7.13246L17.5 11.234C17.5 13.5895 16.2189 15.5534 14.8341 16.996C13.44 18.4484 11.845 19.4742 11.0016 19.9662L10.9674 19.9862C10.8135 20.0766 10.6137 20.1939 10.3494 20.2506C10.1332 20.297 9.86672 20.297 9.65051 20.2506C9.38624 20.1939 9.18646 20.0766 9.03255 19.9862L8.99839 19.9662C8.15497 19.4742 6.55994 18.4484 5.16586 16.996C3.78105 15.5534 2.49998 13.5895 2.49998 11.234L2.49986 7.13247C2.49907 6.58293 2.49837 6.10033 2.66343 5.66657C2.80782 5.28712 3.04245 4.94854 3.34705 4.6801C3.69523 4.37325 4.14735 4.20445 4.66218 4.01224L9.23921 2.29598L9.27528 2.28238C9.40989 2.23153 9.57942 2.16748 9.76162 2.14116ZM13.5059 9.32339C13.8313 8.99795 13.8313 8.47031 13.5059 8.14488C13.1804 7.81944 12.6528 7.81944 12.3274 8.14488L9.16663 11.3056L8.08921 10.2282C7.76378 9.90277 7.23614 9.90277 6.9107 10.2282C6.58527 10.5536 6.58527 11.0813 6.9107 11.4067L8.57737 13.0734C8.90281 13.3988 9.43044 13.3988 9.75588 13.0734L13.5059 9.32339Z" />
+                            </svg>
+                            <span>Blocked sensitive topics, bullying, hate speech </span>
+                        </li>
+
+                        <li class="flex gap-2 leading-[22px]">
+                            <svg width="20" height="23" viewBox="0 0 20 23" xmlns="http://www.w3.org/2000/svg" class="fill-gray-300 flex-shrink-0">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.76162 2.14116C9.9197 2.11831 10.0803 2.11831 10.2383 2.14116C10.4205 2.16748 10.5901 2.23153 10.7247 2.28238L10.7607 2.29598L15.3378 4.01224C15.8526 4.20445 16.3047 4.37325 16.6529 4.6801C16.9575 4.94854 17.1921 5.28712 17.3365 5.66657C17.5016 6.10033 17.5009 6.58293 17.5001 7.13246L17.5 11.234C17.5 13.5895 16.2189 15.5534 14.8341 16.996C13.44 18.4484 11.845 19.4742 11.0016 19.9662L10.9674 19.9862C10.8135 20.0766 10.6137 20.1939 10.3494 20.2506C10.1332 20.297 9.86672 20.297 9.65051 20.2506C9.38624 20.1939 9.18646 20.0766 9.03255 19.9862L8.99839 19.9662C8.15497 19.4742 6.55994 18.4484 5.16586 16.996C3.78105 15.5534 2.49998 13.5895 2.49998 11.234L2.49986 7.13247C2.49907 6.58293 2.49837 6.10033 2.66343 5.66657C2.80782 5.28712 3.04245 4.94854 3.34705 4.6801C3.69523 4.37325 4.14735 4.20445 4.66218 4.01224L9.23921 2.29598L9.27528 2.28238C9.40989 2.23153 9.57942 2.16748 9.76162 2.14116ZM13.5059 9.32339C13.8313 8.99795 13.8313 8.47031 13.5059 8.14488C13.1804 7.81944 12.6528 7.81944 12.3274 8.14488L9.16663 11.3056L8.08921 10.2282C7.76378 9.90277 7.23614 9.90277 6.9107 10.2282C6.58527 10.5536 6.58527 11.0813 6.9107 11.4067L8.57737 13.0734C8.90281 13.3988 9.43044 13.3988 9.75588 13.0734L13.5059 9.32339Z" />
+                            </svg>
+                            <span>Mature Content</span>
+                        </li>
+                    </ul>
+
+                </label>
+
+            </div>
+
+            <button type="button" class="py-3 px-20 rounded-[90px] bg-brand-200 text-gray-800 font-semibold text-base hover:text-base-white">Add</button>
+        </div>
+
+    </main>
+
+    <div id="avatar-modal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="w-full max-w-[700px] p-12 bg-base-white rounded-[40px]">
+            <h3 class="text-gray-800 font-bold text-4xl text-center mb-8">Select Your Avatar</h3>
+
+            <div class="px-12 flex flex-wrap gap-6 mb-8">
+                <div class="w-20 h-20 rounded-full cursor-pointer relative">
+                    <div class="overflow-hidden rounded-full">
+                        <img src="images/profile-images/profile-1.svg" alt="image">
+                    </div>
+                </div>
+
+                <div class="w-20 h-20 rounded-full cursor-pointer relative">
+                    <div class="overflow-hidden rounded-full">
+                        <img src="images/profile-images/profile-2.svg" alt="image">
+                    </div>
+                </div>
+
+                <div class="w-20 h-20 rounded-full cursor-pointer relative">
+                    <div class="overflow-hidden rounded-full">
+                        <img src="images/profile-images/profile-3.svg" alt="image">
+                    </div>
+                </div>
+
+                <div class="w-20 h-20 rounded-full cursor-pointer relative">
+                    <div class="overflow-hidden rounded-full">
+                        <img src="images/profile-images/profile-4.svg" alt="image">
+                    </div>
+                </div>
+
+                <div class="w-20 h-20 rounded-full cursor-pointer relative">
+                    <div class="overflow-hidden rounded-full">
+                        <img src="images/profile-images/profile-5.svg" alt="image">
+                    </div>
+                </div>
+
+                <div class="w-20 h-20 rounded-full cursor-pointer relative">
+                    <div class="overflow-hidden rounded-full">
+                        <img src="images/profile-images/profile-6.svg" alt="image">
+                    </div>
+                </div>
+
+                <div class="w-20 h-20 rounded-full cursor-pointer relative">
+                    <div class="overflow-hidden rounded-full">
+                        <img src="images/profile-images/profile-7.svg" alt="image">
+                    </div>
+                </div>
+
+                <div class="w-20 h-20 rounded-full cursor-pointer relative">
+                    <div class="overflow-hidden rounded-full">
+                        <img src="images/profile-images/profile-8.svg" alt="image">
+                    </div>
+                </div>
+
+                <div class="w-20 h-20 rounded-full cursor-pointer relative">
+                    <div class="overflow-hidden rounded-full">
+                        <img src="images/profile-images/profile-9.svg" alt="image">
+                    </div>
+                </div>
+
+                <div class="w-20 h-20 rounded-full cursor-pointer border-[3px] border-brand-400 relative">
+                    <div class="overflow-hidden rounded-full">
+                        <img src="images/profile.png" alt="image">
+                    </div>
+
+                    <div class="absolute bottom-0 right-0 w-[26px] h-[26px] rounded-full bg-brand-400 flex-center flex-col justify-center cursor-pointer">
+                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.6668 1.73389L4.25016 8.15055L1.3335 5.23389" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                            
+                    </div>
+                </div>
+
+                <div class="w-20 h-20 rounded-full cursor-pointer relative">
+                    <div class="overflow-hidden rounded-full">
+                        <img src="images/profile-images/profile-10.svg" alt="image">
+                    </div>
+                </div>
+
+                <div class="w-20 h-20 rounded-full cursor-pointer relative">
+                    <div class="overflow-hidden rounded-full">
+                        <img src="images/profile-images/profile-11.svg" alt="image">
+                    </div>
+                </div>
+
+                <div class="w-20 h-20 rounded-full cursor-pointer relative">
+                    <div class="overflow-hidden rounded-full">
+                        <img src="images/profile-images/profile-12.svg" alt="image">
+                    </div>
+                </div>
+
+                <div class="w-20 h-20 rounded-full cursor-pointer relative">
+                    <div class="overflow-hidden rounded-full">
+                        <img src="images/profile-images/profile-13.svg" alt="image">
+                    </div>
+                </div>
+
+                <div class="w-20 h-20 rounded-full cursor-pointer relative">
+                    <div class="overflow-hidden rounded-full">
+                        <img src="images/profile-images/profile-14.svg" alt="image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button type="button" class="py-3 px-20 rounded-[90px] bg-brand-200 text-gray-800 font-semibold text-base hover:text-base-white">Save</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="bg-base-dark bg-opacity-70 fixed right-0 top-0 w-full h-full overlay hidden"></div>
+
+    <!-- Flowbite -->
+    <script src="js/flowbite.min.js"></script>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

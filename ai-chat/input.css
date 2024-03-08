@@ -10,6 +10,23 @@
   .base-font {
     @apply font-semibold text-base;
   }
+
+  .checkbox-wrapper:has(input:checked) {
+    @apply border-brand-400 bg-brand-25;
+  }
+
+    .checkbox-wrapper:has(input:checked) .subtitle-control , .checkbox-wrapper:has(input:checked) .title-control {
+      @apply text-brand-400;
+    }
+
+    .checkbox-wrapper input:checked {
+      background-image: url(images/icons/checkbox.svg);
+    }
+
+    .checkbox-wrapper:has(input:checked) svg {
+      @apply fill-brand-400;
+    }
+
 }
 
 .custom-bg {
@@ -30,9 +47,9 @@ aside {
   position: absolute;
 }
 
-div[modal-backdrop] {
+/*div[modal-backdrop] {
   background: rgba(0, 0, 0, 0.9);
-}
+}*/
 
 @media screen and (max-width: 768px) {
 
