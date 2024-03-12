@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.table-with-fixed-columns th , .table-with-fixed-columns td {
+    width: 196px;
+}
+
+    .table-with-fixed-columns th[colspan="1"] , .table-with-fixed-columns th[colspan="1"] + th {
+        width: auto;
+    }
+
+    .table-with-fixed-columns th[colspan="2"] , .table-with-fixed-columns th[rowspan="2"] , .table-with-fixed-columns th[colspan="1"] + th + th , .table-with-fixed-columns th[rowspan="2"] + th , .table-with-fixed-columns th[rowspan="1"] {
+        width: 98px;
+    }
+
+/* Small table */
+.table-with-fixed-columns.small-columns th , .table-with-fixed-columns.small-columns td {
+    width: 94px;
+}
