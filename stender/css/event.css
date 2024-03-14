@@ -300,6 +300,10 @@ h1.text-xl {
   animation: slidein2 1s 1s 1 linear forwards;
 }
 
+.custom-text-column {
+  max-width: 736px;
+}
+
 @keyframes slidein {
   0% {
     opacity: 0;
