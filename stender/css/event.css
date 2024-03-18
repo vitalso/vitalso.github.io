@@ -23,7 +23,7 @@ header.header-event a:hover {
   max-height: none;
   padding-top: 40vh;
   padding-bottom: 40vh;
-  background: url(../images/event-hero.png) center no-repeat;
+  background: url(../images/event-hero.png) center top/cover no-repeat;
   max-height: 1730px;
 }
 .hero-section.event-hero::before {
@@ -328,5 +328,11 @@ h1.text-xl {
   100% {
     transform: translateX(50%) rotate(18deg);
     opacity: 1;
+  }
+}
+@media (min-width: 1400px) and (max-width: 1560px) {
+  .container {
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
