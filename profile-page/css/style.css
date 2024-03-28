@@ -26,6 +26,12 @@ img {
         text-align: right;
     }
 
+.sticker {
+    width: 26px;
+    left: 17px;
+    transform: rotate(-25deg);
+}
+
 @media screen and (max-width: 480px) {
 
     .columns-list {
