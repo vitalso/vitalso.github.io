@@ -2,11 +2,6 @@ img {
     max-width: 100%;
 }
 
-.columns-list {
-    column-count: 2;
-    list-style: decimal;
-}
-
 .list-group picture {
     width: 48px;
     height: 48px;
@@ -22,7 +17,7 @@ img {
     }
 
     .list-group .heading-list span {
-        min-width: 60px;
+        min-width: 90px;
         text-align: right;
     }
 
@@ -30,12 +25,4 @@ img {
     width: 26px;
     left: 17px;
     transform: rotate(-25deg);
-}
-
-@media screen and (max-width: 480px) {
-
-    .columns-list {
-        column-count: 1;
-    }
-
 }
