@@ -1,0 +1,15 @@
+.navbar-toggler {
+    background-color: #ededed;
+    padding: 12px;
+    outline: none;
+    box-shadow: none !important;
+}
+
+    .navbar-toggler .navbar-toggler-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .navbar-toggler[aria-expanded="true"] {
+        background-color: #d0d0d0;
+    }
