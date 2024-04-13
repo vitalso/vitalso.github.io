@@ -104,7 +104,12 @@ header {
         font-size: 14px;
         color: var(--gray);
         font-weight: 500;
+        border: 1px solid transparent;
     }
+
+        header nav .nav-link:hover {
+            border-color: #dde3e4;
+        }
 
     header .navbar-nav {
         padding-right: 140px;
@@ -136,7 +141,7 @@ header {
     gap: 24px;
 }
 
-    .hero-info h3 {
+    .hero-info h3 , .table-title {
         font-size: 20px;
         line-height: 29px;
         letter-spacing: -0.7px;
@@ -373,12 +378,109 @@ footer {
         border: 1px solid var(--border-color);
     }
 
+/* Contact page */
+.contact-card {
+    padding: 28px 20px;
+    border: 1px solid var(--border-color);
+    gap: 19px;
+    min-height: 284px;
+    justify-content: center;
+    text-align: center;
+    max-width: 590px;
+    flex: 1;
+}
+
+    .contact-card a {
+        font-size: 20px;
+        font-family: var(--font-Open-Sans);
+        font-weight: 600;
+    }
+
+/* Catalog page Table */
+.table {
+    border-color: var(--bg-gray);
+    border-spacing: 0 8px;
+    border-collapse: separate;
+}
+
+    .table thead tr th {
+        background-color: var(--bg-gray);
+        font-weight: 600;
+    }
+
+    .table tbody tr th ,
+    .table tbody tr td {
+        border-top: 1px solid var(--bg-gray);
+    }
+
+    .table th,
+    .table td {
+        width: 170px;
+        height: 45px;
+        margin: 5px 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .table tbody tr th {
+        font-weight: 600;
+        height: auto;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+        .table tbody tr td:last-child {
+            background-color: #fae6e8;
+        }
+
+        .table a:hover {
+            color: var(--dark) !important;
+        }
+
+.catalog-info {
+    margin-top: 52px;
+    padding: 38px 27px;
+    border-radius: 6px;
+    box-shadow: 0 42px 72px -23px #75726829;
+    border: 1px solid var(--bg-gray);
+    gap: 24px;
+    text-align: center;
+}
+
+    .catalog-info-icon {
+        max-width: 80px;
+        max-height: 80px;
+    }
+
+.bottom-bar {
+    padding: 10px;
+    background-color: #fae6e8;
+}
+
+    .bottom-bar p {
+        font-size: 11px;
+        line-height: 1.4em;
+        font-family: var(--font-Open-Sans);
+        font-weight: 600;
+        color: var(--dark);
+    }
+
+    .bottom-bar a {
+        flex-shrink: 0;
+    }
+
 .border-bottom {
     border-bottom: 1px solid var(--border-color) !important;
 }
 
 .text-danger {
     color: var(--primary-color) !important;
+}
+
+.text-dark {
+    color: var(--dark) !important;
 }
 
 .title {
@@ -391,6 +493,14 @@ footer {
 
 .gap-30 {
     gap: 30px;
+}
+
+.gap-25 {
+    gap: 25px
+}
+
+.gap-10 {
+    gap: 10px;
 }
 
 .gap-y-30 {
@@ -471,6 +581,42 @@ footer {
             max-width: 100%;
         }
 
+    .catalog-info {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .table {
+        font-size: 12px;
+    }
+
+        .table thead {
+            position: sticky;
+            top: 97px;
+        }
+
+    .catalog-info {
+        padding: 24px 24px 24px 96px;
+        gap: 10px;
+    }
+
+        .catalog-info-icon {
+            max-width: 44px;
+            max-height: 44px;
+            position: absolute;
+            top: 50%;
+            left: 24px;
+            transform: translateY(-50%);
+        }
+
+    footer {
+        padding-bottom: 100px;
+    }
+    
 }
 
 @media screen and (max-width: 576px) {
@@ -517,5 +663,30 @@ footer {
                 max-width: 65px;
                 max-height: 35px;
             }
+
+    .fs-md-20 {
+        font-size: 20px;
+    }
+
+    .fs-md-16 {
+        font-size: 16px;
+        line-height: 1.3em;
+    }
+
+    .fs-md-14 {
+        font-size: 14px;
+    }
+
+    .table.padding-sm-0 th , .table.padding-sm-0 td {
+        padding: 0;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    
+    .table {
+        letter-spacing: -0.4px;
+    }
 
 }
