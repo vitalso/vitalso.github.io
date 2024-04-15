@@ -156,6 +156,7 @@ header {
     left: -120px;
     padding: 24px 32px;
     gap: 24px;
+    color: var(--dark);
 }
 
     .hero-info h3 , .table-title {
