@@ -78,12 +78,18 @@ a:focus , input:focus , textarea:focus {
     }
 }
 
+main {
+    padding-top: 97px; /* 97px = height of header */
+}
+
 /* Header */
 header {
     padding-top: 24px;
     padding-bottom: 24px;
     border-bottom: 1px solid var(--border-color);
-    position: sticky;
+    position: absolute;
+    width: 100%;
+    top: 0;
 }
     
     .logo {
@@ -116,6 +122,15 @@ header {
     header .navbar-nav {
         padding-right: 40px;
     }
+
+    header.fixed {
+        position: fixed;
+        background-color: #fff;
+    }
+
+        header.fixed .navbar-nav {
+            padding-right: 0;
+        }
 
 /* Hero section */
 .hero-section-description {
@@ -504,9 +519,22 @@ footer {
     column-gap: 30px;
 }
 
+@media screen and (min-width: 992px) {
+
+    header.fixed .header-action-btn {
+        display: block !important;
+    }
+    
+}
+
 @media screen and (max-width: 992px) {
 
+    main {
+        padding-top: 0;
+    }
+
     header {
+        position: sticky !important;
         top: 0;
         background-color: #fff;
     }

@@ -14,7 +14,7 @@
 <body>
 
 	<!-- Header -->
-	<header class="z-1">
+	<header id="header" class="z-1">
 		<nav class="navbar navbar-expand-lg p-0">
 			<div class="container">
 			
@@ -28,7 +28,7 @@
 			  	</button>
 			  
 				<div class="collapse navbar-collapse py-4 py-lg-0" id="navbar">
-					<ul class="navbar-nav gap-3 ms-auto">
+					<ul class="navbar-nav gap-3 ms-auto align-items-lg-center">
 						<li class="nav-item">
 							<a class="nav-link" href="index.html">Startseite</a>
 						</li>
@@ -41,8 +41,8 @@
 						<li class="nav-item">
 							<a class="nav-link" href="contact.html">Kontakt</a>
 						</li>
-						<li class="nav-item d-flex d-lg-none">
-							<a href="#" class="btn btn-danger btn-xl d-flex align-items-center">
+						<li class="nav-item d-flex d-lg-none header-action-btn">
+							<a href="#" class="btn btn-danger btn-sm d-flex align-items-center">
 								Jetzt kostenlos prüfen
 								<svg stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 12h12.5m0 0l-6-6m6 6l-6 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 							</a>
@@ -58,14 +58,15 @@
 		<section class="mb-5 pb-3">
             <div class="container">
                 <div class="py-3 py-lg-5">
-                    <h3 class="mb-lg-4 fs-md-20">Bußgeldkatalog Rotlicht</h3>
-                    <p class="mb-0 d-none d-lg-block">Die nachfolgenden Tabellen geben die sog. Regelsätze wieder. Bei besonders groben Verstößen oder <br class="d-none d-md-block"> wenn Sie bereits Voreintragungen haben, können Punkte und Fahrverbot erhöht werden.</p>
+                    <h3 class="mb-lg-4 fs-md-20">Bußgeldkatalog Alkohol & Drogen</h3>
+                    <p class="mb-0 d-none d-lg-block">Die nachfolgenden Tabellen geben die sog. Regelsätze wieder. Bei besonders groben Verstößen oder <br class="d-none d-lg-block"> wenn Sie bereits Voreintragungen haben, können Punkte und Fahrverbot erhöht werden.</p>
                 </div>
 
                 <div class="row flex-column-reverse flex-lg-row">
                     <div class="col-lg-8">
 
-                        <p class="mb-0 d-block d-lg-none fs-md-14 mb-3">Die nachfolgenden Tabellen geben die sog. Regelsätze wieder. Bei besonders groben Verstößen oder <br class="d-none d-md-block"> wenn Sie bereits Voreintragungen haben, können Punkte und Fahrverbot erhöht werden.</p>
+                        <p class="mb-0 d-block d-lg-none fs-md-14 mb-3">Die nachfolgenden Tabellen geben die sog. Regelsätze wieder. Bei besonders groben Verstößen oder wenn Sie bereits Voreintragungen haben, können Punkte und Fahrverbot erhöht werden.</p>
+                        <p class="table-title text-dark mb-0 py-2 fs-md-16">Alkohol am Steuer</p>
 
                         <table class="table padding-sm-0">
                             <thead>
@@ -80,18 +81,8 @@
 
                             <tbody>
                                 <tr>
-                                    <th scope="row" class="text-start">Rote Ampel überfahren</th>
-                                    <td>90 €</td>
-                                    <td class="text-danger">1</td>
-                                    <td class="text-danger">0</td>
-                                    <td>
-                                        <a href="#" class="text-danger">Kostenlos prüfen</a>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <th scope="row" class="text-start">Rote Ampel überfahren die schon länger als 1 Sekunde rot war</th>
-                                    <td>200 €</td>
+                                    <th scope="row" class="text-start">Blutalkoholwert mehr als 0.5 Promille (beim ersten Mal)</th>
+                                    <td>500 €</td>
                                     <td class="text-danger">2 Punkte</td>
                                     <td class="text-danger">1 Monat</td>
                                     <td>
@@ -100,18 +91,55 @@
                                 </tr>
 
                                 <tr>
-                                    <th scope="row" class="text-start">Rote Ampel überfahren + Sachbeschädigung</th>
-                                    <td>200 €</td>
-                                    <td class="text-danger">1 Punkt</td>
-                                    <td class="text-danger">1 Monat</td>
+                                    <th scope="row" class="text-start">Blutalkoholwert mehr als 0.5 Promille (beim zweiten Mal)</th>
+                                    <td>1000 €</td>
+                                    <td class="text-danger">2 Punkte</td>
+                                    <td class="text-danger">2 Monate</td>
                                     <td>
                                         <a href="#" class="text-danger">Kostenlos prüfen</a>
                                     </td>
                                 </tr>
 
+								<tr>
+                                    <th scope="row" class="text-start">Blutalkoholwert mehr als 0.5 Promille (beim dritten Mal oder mehr)</th>
+                                    <td>1500 €</td>
+                                    <td class="text-danger">2 Punkte</td>
+                                    <td class="text-danger">3 Monate</td>
+                                    <td>
+                                        <a href="#" class="text-danger">Kostenlos prüfen</a>
+                                    </td>
+                                </tr>
+
+								<tr>
+                                    <th scope="row" class="text-start">Blutalkoholwert mehr als 1.1 Promille</th>
+                                    <td>ungewiss</td>
+                                    <td class="text-danger">ungewiss</td>
+                                    <td class="text-danger text-start">Führerscheinentzug, Freiheitsstrafe oder Geldstrafe</td>
+                                    <td>
+                                        <a href="#" class="text-danger">Kostenlos prüfen</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+						<p class="table-title text-dark mb-0 py-2 fs-md-16">Drogen am Steuer</p>
+                        <p class="mb-0 d-block d-lg-none fs-md-14 mb-3">Die nachfolgenden Tabellen geben die sog. Regelsätze wieder. Bei besonders groben Verstößen oder wenn Sie bereits Voreintragungen haben, können Punkte und Fahrverbot erhöht werden.</p>
+
+                        <table class="table padding-sm-0">
+                            <thead>
                                 <tr>
-                                    <th scope="row" class="text-start">Rote Ampel überfahren + Gefährdung</th>
-                                    <td>240 €</td>
+                                    <th scope="col">Tatvorwurf</th>
+                                    <th scope="col">Strafe</th>
+                                    <th scope="col">Punkte</th>
+                                    <th scope="col">Fahrverbot</th>
+                                    <th scope="col">Lohnt ein Einspruch?</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="text-start">Führung eines Kraftfahrzeugs / Auto unter Drogen (beim ersten Mal)</th>
+                                    <td>500 €</td>
                                     <td class="text-danger">2 Punkte</td>
                                     <td class="text-danger">1 Monat</td>
                                     <td>
@@ -120,30 +148,20 @@
                                 </tr>
 
                                 <tr>
-                                    <th scope="row" class="text-start">Rote Ampel die schon länger als 1 Sekunde rot war + Gefährdung</th>
-                                    <td>320 €</td>
+                                    <th scope="row" class="text-start">Führung eines Kraftfahrzeugs / Auto unter Drogen (beim zweiten Mal)</th>
+                                    <td>1000 €</td>
                                     <td class="text-danger">2 Punkte</td>
-                                    <td class="text-danger">1 Monat</td>
+                                    <td class="text-danger">3 Monate</td>
                                     <td>
                                         <a href="#" class="text-danger">Kostenlos prüfen</a>
                                     </td>
                                 </tr>
 
-                                <tr>
-                                    <th scope="row" class="text-start">Rote Ampel die schon länger als 1 Sekunde rot war + Sachbeschädigung</th>
-                                    <td>360 €</td>
+								<tr>
+                                    <th scope="row" class="text-start">Führung eines Kraftfahrzeugs / Auto unter Drogen (beim dritten Mal oder mehr)</th>
+                                    <td>1500 €</td>
                                     <td class="text-danger">2 Punkte</td>
-                                    <td class="text-danger">1 Monat</td>
-                                    <td>
-                                        <a href="#" class="text-danger">Kostenlos prüfen</a>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <th scope="row" class="text-start">Rote Ampel (mit Grünpfeil) ohne anhalten mit überfahren</th>
-                                    <td>70 €</td>
-                                    <td class="text-danger">1 Punkt</td>
-                                    <td class="text-danger">0</td>
+                                    <td class="text-danger">3 Monate</td>
                                     <td>
                                         <a href="#" class="text-danger">Kostenlos prüfen</a>
                                     </td>

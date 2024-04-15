@@ -14,7 +14,7 @@
 <body>
 
 	<!-- Header -->
-	<header class="z-1">
+	<header id="header" class="z-1">
 		<nav class="navbar navbar-expand-lg p-0">
 			<div class="container">
 			
@@ -28,7 +28,7 @@
 			  	</button>
 			  
 				<div class="collapse navbar-collapse py-4 py-lg-0" id="navbar">
-					<ul class="navbar-nav gap-3 ms-auto">
+					<ul class="navbar-nav gap-3 ms-auto align-items-lg-center">
 						<li class="nav-item">
 							<a class="nav-link" href="index.html">Startseite</a>
 						</li>
@@ -41,8 +41,8 @@
 						<li class="nav-item">
 							<a class="nav-link" href="contact.html">Kontakt</a>
 						</li>
-						<li class="nav-item d-flex d-lg-none">
-							<a href="#" class="btn btn-danger btn-xl d-flex align-items-center">
+						<li class="nav-item d-flex d-lg-none header-action-btn">
+							<a href="#" class="btn btn-danger btn-sm d-flex align-items-center">
 								Jetzt kostenlos prüfen
 								<svg stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 12h12.5m0 0l-6-6m6 6l-6 6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 							</a>
@@ -58,19 +58,19 @@
 		<section class="mb-5 pb-3">
             <div class="container">
                 <div class="py-3 py-lg-5">
-                    <h3 class="mb-lg-4 fs-md-20">Bußgeldkatalog Geschwindigkeit</h3>
-                    <p class="mb-0 d-none d-lg-block">Die zu erwartende Strafe ist davon abhängig, ob der Verstoß innerhalb oder außerhalb geschlossener Ortschaften erfolgte.</p>
+                    <h3 class="mb-lg-4 fs-md-20">Bußgeldkatalog Überholen</h3>
+                    <p class="mb-0 d-none d-lg-block">Die nachfolgenden Tabellen geben die sog. Regelsätze wieder. Bei besonders groben Verstößen oder <br class="d-none d-lg-block"> wenn Sie bereits Voreintragungen haben, können Punkte und Fahrverbot erhöht werden.</p>
                 </div>
 
                 <div class="row flex-column-reverse flex-lg-row">
                     <div class="col-lg-8">
-                        <p class="table-title text-dark mb-0 py-2 fs-md-16">Geschwindigkeitsüberschreitung innerorts</p>
-                        <p class="mb-4 d-block d-lg-none fs-md-14">Die zu erwartende Strafe ist davon abhängig, ob der Verstoß innerhalb oder außerhalb geschlossener Ortschaften erfolgte.</p>
+                        <p class="mb-0 d-block d-lg-none fs-md-14 mb-3">Die nachfolgenden Tabellen geben die sog. Regelsätze wieder. Bei besonders groben Verstößen oder <br class="d-none d-lg-block"> wenn Sie bereits Voreintragungen haben, können Punkte und Fahrverbot erhöht werden.</p>
+                        <p class="table-title text-dark mb-0 py-2 fs-md-16">Überholen im Überholverbot (innerorts & ausserorts)</p>
 
-                        <table class="table padding-sm-0 nowrap">
+                        <table class="table padding-sm-0">
                             <thead>
                                 <tr>
-                                    <th scope="col">Zu schnell</th>
+                                    <th scope="col">Tatvorwurf</th>
                                     <th scope="col">Strafe</th>
                                     <th scope="col">Punkte</th>
                                     <th scope="col">Fahrverbot</th>
@@ -80,19 +80,9 @@
 
                             <tbody>
                                 <tr>
-                                    <th scope="row">bis 10 km/h</th>
-                                    <td>30 €</td>
-                                    <td class="text-danger">0</td>
-                                    <td class="text-danger">0</td>
-                                    <td>
-                                        <a href="#" class="text-danger">Kostenlos prüfen</a>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <th scope="row">11 -15 km/h</th>
-                                    <td>50 €</td>
-                                    <td class="text-danger">0</td>
+                                    <th scope="row" class="text-start">Überholen im Überholverbot mit mit Behinderung des Gegenverkehrs oder bei unklarer Verkehrslage</th>
+                                    <td>250 €</td>
+                                    <td class="text-danger">2 Punkte</td>
                                     <td class="text-danger">0</td>
                                     <td>
                                         <a href="#" class="text-danger">Kostenlos prüfen</a>
@@ -100,38 +90,8 @@
                                 </tr>
 
                                 <tr>
-                                    <th scope="row">16 -20 km/h</th>
-                                    <td>70 €</td>
-                                    <td class="text-danger">0</td>
-                                    <td class="text-danger">0</td>
-                                    <td>
-                                        <a href="#" class="text-danger">Kostenlos prüfen</a>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <th scope="row">21 -25 km/h</th>
-                                    <td>115 €</td>
-                                    <td class="text-danger">1 Punkt</td>
-                                    <td class="text-danger">0</td>
-                                    <td>
-                                        <a href="#" class="text-danger">Kostenlos prüfen</a>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <th scope="row">26 - 30 km/h</th>
-                                    <td>180 €</td>
-                                    <td class="text-danger">1 Punkt</td>
-                                    <td class="text-danger">(1 Monat)</td>
-                                    <td>
-                                        <a href="#" class="text-danger">Kostenlos prüfen</a>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <th scope="row">31 - 40 km/h</th>
-                                    <td>260 €</td>
+                                    <th scope="row" class="text-start">Überholen im Überholverbot mit Gefährdung oder Sachbeschädigung</th>
+                                    <td>250 €</td>
                                     <td class="text-danger">2 Punkte</td>
                                     <td class="text-danger">1 Monat</td>
                                     <td>
@@ -139,95 +99,18 @@
                                     </td>
                                 </tr>
 
-                                <tr>
-                                    <th scope="row">41 - 50 km/h</th>
-                                    <td>400 €</td>
-                                    <td class="text-danger">2 Punkte</td>
-                                    <td class="text-danger">1 Monat</td>
-                                    <td>
-                                        <a href="#" class="text-danger">Kostenlos prüfen</a>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <th scope="row">51 - 60 km/h</th>
-                                    <td>560 €</td>
-                                    <td class="text-danger">2 Punkte</td>
-                                    <td class="text-danger">2 Monate</td>
-                                    <td>
-                                        <a href="#" class="text-danger">Kostenlos prüfen</a>
-                                    </td>
-                                </tr>
-                                
-                                <tr>
-                                    <th scope="row">61 - 70 km/h</th>
-                                    <td>700 €</td>
-                                    <td class="text-danger">2 Punkte</td>
-                                    <td class="text-danger">3 Monate</td>
-                                    <td>
-                                        <a href="#" class="text-danger">Kostenlos prüfen</a>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <th scope="row">über 70 km/h</th>
-                                    <td>800 €</td>
-                                    <td class="text-danger">2 Punkte</td>
-                                    <td class="text-danger">3 Monate</td>
-                                    <td>
-                                        <a href="#" class="text-danger">Kostenlos prüfen</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <p class="table-title text-dark mb-0 py-4 fs-md-16">Geschwindigkeitsüberschreitung außerorts</p>
-                        <p class="mb-4 d-block d-lg-none fs-md-14">Die zu erwartende Strafe ist davon abhängig, ob der Verstoß innerhalb oder außerhalb geschlossener Ortschaften erfolgte.</p>
-
-                        <table class="table padding-sm-0 nowrap">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Zu schnell</th>
-                                    <th scope="col">Strafe</th>
-                                    <th scope="col">Punkte</th>
-                                    <th scope="col">Fahrverbot</th>
-                                    <th scope="col">Lohnt ein Einspruch?</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <th scope="row">bis 10 km/h</th>
-                                    <td>20 €</td>
-                                    <td class="text-danger">0</td>
+								<tr>
+                                    <th scope="row" class="text-start">Rechts Überholen ausserorts + Sachbeschädigung</th>
+                                    <td>145 €</td>
+                                    <td class="text-danger">1 Punkt</td>
                                     <td class="text-danger">0</td>
                                     <td>
                                         <a href="#" class="text-danger">Kostenlos prüfen</a>
                                     </td>
                                 </tr>
 
-                                <tr>
-                                    <th scope="row">11 -15 km/h</th>
-                                    <td>40 €</td>
-                                    <td class="text-danger">0</td>
-                                    <td class="text-danger">0</td>
-                                    <td>
-                                        <a href="#" class="text-danger">Kostenlos prüfen</a>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <th scope="row">16 -20 km/h</th>
-                                    <td>60 €</td>
-                                    <td class="text-danger">0</td>
-                                    <td class="text-danger">0</td>
-                                    <td>
-                                        <a href="#" class="text-danger">Kostenlos prüfen</a>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <th scope="row">21 -25 km/h</th>
+								<tr>
+                                    <th scope="row" class="text-start">Rechts Überholen ausserorts</th>
                                     <td>100 €</td>
                                     <td class="text-danger">1 Punkt</td>
                                     <td class="text-danger">0</td>
@@ -237,49 +120,171 @@
                                 </tr>
 
                                 <tr>
-                                    <th scope="row">26 - 30 km/h</th>
+                                    <th scope="row" class="text-start">Rechts Überholen innerorts + Sachbeschädigung</th>
+                                    <td>35 €</td>
+                                    <td class="text-danger">0</td>
+                                    <td class="text-danger">0</td>
+                                    <td>
+                                        <a href="#" class="text-danger">Kostenlos prüfen</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row" class="text-start">Rechts Überholen innerorts</th>
+                                    <td>30 €</td>
+                                    <td class="text-danger">0</td>
+                                    <td class="text-danger">0</td>
+                                    <td>
+                                        <a href="#" class="text-danger">Kostenlos prüfen</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row" class="text-start">Beim Überholen Verkehrszeichen nicht beachtet</th>
+                                    <td>150 €</td>
+                                    <td class="text-danger">0</td>
+                                    <td class="text-danger">0</td>
+                                    <td>
+                                        <a href="#" class="text-danger">Kostenlos prüfen</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row" class="text-start">Beim Überholen Verkehrszeichen nicht beachtet mit Gefährdung</th>
+                                    <td>250 €</td>
+                                    <td class="text-danger">2 Punkte</td>
+                                    <td class="text-danger">1 Monat</td>
+                                    <td>
+                                        <a href="#" class="text-danger">Kostenlos prüfen</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row" class="text-start">Beim Überholen Verkehrszeichen nicht beachtet + Sachbeschädigung</th>
+                                    <td>300 €</td>
+                                    <td class="text-danger">2 Punkte</td>
+                                    <td class="text-danger">1 Monat</td>
+                                    <td>
+                                        <a href="#" class="text-danger">Kostenlos prüfen</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row" class="text-start">Überholen und Missachtung der Fahrstreifenbegrenzung oder die vorgeschriebene Fahrtrichtung nicht befolgt</th>
                                     <td>150 €</td>
                                     <td class="text-danger">1 Punkt</td>
-                                    <td class="text-danger">(1 Monat)</td>
+                                    <td class="text-danger">1 Monat</td>
+                                    <td>
+                                        <a href="#" class="text-danger">Kostenlos prüfen</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+						<p class="table-title text-dark mb-0 py-2 fs-md-16">Überholverstoß mit Ausscheren</p>
+
+                        <table class="table padding-sm-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Tatvorwurf</th>
+                                    <th scope="col">Strafe</th>
+                                    <th scope="col">Punkte</th>
+                                    <th scope="col">Fahrverbot</th>
+                                    <th scope="col">Lohnt ein Einspruch?</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="text-start">Überholt und den Sicherheitsabstand zum anderen Fahrzeug nicht eingehalte</th>
+                                    <td>10 €</td>
+                                    <td class="text-danger">0</td>
+                                    <td class="text-danger">0</td>
                                     <td>
                                         <a href="#" class="text-danger">Kostenlos prüfen</a>
                                     </td>
                                 </tr>
 
                                 <tr>
-                                    <th scope="row">31 - 40 km/h</th>
-                                    <td>200 €</td>
+                                    <th scope="row" class="text-start">Überholt und Sicherheitsabstand zum anderen Fahrzeug nicht eingehalten und behinderten andere Verkehrsteilnehmer dadurch</th>
+                                    <td>20 €</td>
+                                    <td class="text-danger">0</td>
+                                    <td class="text-danger">0</td>
+                                    <td>
+                                        <a href="#" class="text-danger">Kostenlos prüfen</a>
+                                    </td>
+                                </tr>
+
+								<tr>
+                                    <th scope="row" class="text-start">Überholt und Sicherheitsabstand zum anderen Fahrzeug nicht eingehalten und gefährdeten andere Verkehrsteilnehmer dadurch</th>
+                                    <td>30 €</td>
+                                    <td class="text-danger">0</td>
+                                    <td class="text-danger">0</td>
+                                    <td>
+                                        <a href="#" class="text-danger">Kostenlos prüfen</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p class="table-title text-dark mb-0 py-2 fs-md-16">Überholverstoß mit Gegenverkehr</p>
+
+                        <table class="table padding-sm-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Tatvorwurf</th>
+                                    <th scope="col">Strafe</th>
+                                    <th scope="col">Punkte</th>
+                                    <th scope="col">Fahrverbot</th>
+                                    <th scope="col">Lohnt ein Einspruch?</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="text-start">Überholt und damit unwissentlich den Gegenverkehr behindert</th>
+                                    <td>100 €</td>
                                     <td class="text-danger">1 Punkt</td>
-                                    <td class="text-danger">1 Monat</td>
+                                    <td class="text-danger">0</td>
                                     <td>
                                         <a href="#" class="text-danger">Kostenlos prüfen</a>
                                     </td>
                                 </tr>
 
                                 <tr>
-                                    <th scope="row">41 - 50 km/h</th>
-                                    <td>320 €</td>
-                                    <td class="text-danger">2 Punkte</td>
-                                    <td class="text-danger">1 Monat</td>
+                                    <th scope="row" class="text-start">Überholt und damit unwissentlich den Gegenverkehr gefährdet</th>
+                                    <td>100 €</td>
+                                    <td class="text-danger">1 Punkt</td>
+                                    <td class="text-danger">0</td>
+                                    <td>
+                                        <a href="#" class="text-danger">Kostenlos prüfen</a>
+                                    </td>
+                                </tr>
+
+								<tr>
+                                    <th scope="row" class="text-start">Überholt und damit unwissentlich einen Unfall verursacht</th>
+                                    <td>145 €</td>
+                                    <td class="text-danger">1 Punkt</td>
+                                    <td class="text-danger">0</td>
                                     <td>
                                         <a href="#" class="text-danger">Kostenlos prüfen</a>
                                     </td>
                                 </tr>
 
                                 <tr>
-                                    <th scope="row">51 - 60 km/h</th>
-                                    <td>480 €</td>
-                                    <td class="text-danger">2 Punkte</td>
-                                    <td class="text-danger">1 Monate</td>
+                                    <th scope="row" class="text-start">Überholt im Überholverbot und damit unwissentlich den Gegenverkehr behindert</th>
+                                    <td>150 €</td>
+                                    <td class="text-danger">1 Punkt</td>
+                                    <td class="text-danger">0</td>
                                     <td>
                                         <a href="#" class="text-danger">Kostenlos prüfen</a>
                                     </td>
                                 </tr>
-                                
+
                                 <tr>
-                                    <th scope="row">61 - 70 km/h</th>
-                                    <td>600 €</td>
-                                    <td class="text-danger">2 Punkte</td>
+                                    <th scope="row" class="text-start">Überholt im Überholverbot und damit unwissentlich den Gegenverkehr gefährdet</th>
+                                    <td>250 €</td>
+                                    <td class="text-danger">1 Punkt</td>
                                     <td class="text-danger">2 Monate</td>
                                     <td>
                                         <a href="#" class="text-danger">Kostenlos prüfen</a>
@@ -287,16 +292,18 @@
                                 </tr>
 
                                 <tr>
-                                    <th scope="row">über 70 km/h</th>
-                                    <td>700 €</td>
+                                    <th scope="row" class="text-start">Überholt im Überholverbot und damit unwissentlich einen Unfall verursacht</th>
+                                    <td>200 €</td>
                                     <td class="text-danger">2 Punkte</td>
-                                    <td class="text-danger">3 Monate</td>
+                                    <td class="text-danger">1 Monat</td>
                                     <td>
                                         <a href="#" class="text-danger">Kostenlos prüfen</a>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
+
+                        
                     </div>
 
                     <div class="col-lg-4">
