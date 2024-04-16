@@ -388,7 +388,7 @@ footer {
 
     .number-item {
         width: 100%;
-        max-width: 326px;
+        max-width: 33.3%;
         padding: 20px;
         gap: 19px;
         border: 1px solid var(--border-color);
@@ -402,7 +402,7 @@ footer {
     min-height: 284px;
     justify-content: center;
     text-align: center;
-    max-width: 590px;
+    max-width: 50%;
     flex: 1;
 }
 
@@ -443,6 +443,7 @@ footer {
         height: auto;
         padding-top: 5px;
         padding-bottom: 5px;
+        text-align: left;
     }
 
         .table tbody tr td:last-child {
@@ -520,6 +521,19 @@ footer {
     column-gap: 30px;
 }
 
+.text-section ul li {
+    margin-bottom: 0;
+    list-style-type: disc;
+}
+
+    .text-section ul p {
+        margin-bottom: 0;
+    }
+
+.text-section a {
+    color: var(--primary-color)
+}
+
 @media screen and (min-width: 992px) {
 
     header.fixed .header-action-btn {
@@ -540,6 +554,10 @@ footer {
         background-color: #fff;
     }
 
+        header nav .nav-link {
+            border-bottom: 1px solid var(--border-color);
+        }
+
     h1 {
         font-size: 24px;
         line-height: 33px;
@@ -548,6 +566,7 @@ footer {
 
     .hero-section-description {
         padding-top: 30px;
+        padding-bottom: 30px;
         gap: 19px;
     }
 
