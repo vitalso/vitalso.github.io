@@ -661,6 +661,10 @@ footer {
     footer {
         padding-bottom: 100px;
     }
+
+    .contact-card {
+        max-width: 100%;
+    }
     
 }
 
