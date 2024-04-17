@@ -727,7 +727,8 @@ footer {
     }
 
     .table.padding-sm-0 th , .table.padding-sm-0 td {
-        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .table.nowrap th {
