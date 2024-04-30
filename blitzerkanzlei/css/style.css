@@ -11,7 +11,7 @@
     --dark: #102226;
     --gray: #5c5c5c;
     --border-color: #e3e3e3;
-    --primary-color: #c1031a;
+    --primary-color: #015386;
     --bg-gray: #ededed;
 }
 
@@ -100,11 +100,7 @@ header {
     }
 
         .logo img {
-            max-width: 43px;
-        }
-
-        .logo span {
-            margin-top: 10px;
+            max-height: 55px;
         }
 
     header nav .nav-link {
@@ -119,18 +115,19 @@ header {
             border-color: #dde3e4;
         }
 
-    header .navbar-nav {
-        padding-right: 40px;
-    }
-
     header.fixed {
         position: fixed;
         background-color: #fff;
     }
 
+    header .navbar-nav {
+        padding-right: 40px;
+    }
+
         header.fixed .navbar-nav {
             padding-right: 0;
         }
+    
 
 /* Hero section */
 .hero-section-description {
@@ -140,14 +137,20 @@ header {
 }
 
 .hero-section-image {
-    max-width: 580px;
+    max-width: 680px;
     background-color: var(--bg-gray);
-    margin-top: -97px; /* 97px - height of header */
-    height: calc(100% + 97px);
+    margin-top: -104px; /* 104px - height of header */
+    height: calc(100% + 104px);
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: end;
 }
+
+    .hero-section-image img {
+        max-height: 400px;
+        object-fit: contain;
+    }
 
 .hero-info {
     box-shadow: 0 42px 72px -23px #75726829;
@@ -193,28 +196,6 @@ header {
             font-size: 15px;
         }
 
-/* Feature item */
-.feature-item {
-    height: 100%;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    border-top: 1px solid var(--border-color);
-    gap: 14px;
-}
-
-    .feature-icon {
-        max-width: 55px;
-        max-height: 55px;
-    }
-
-    .feature-title , .review-from {
-        font-size: 19px;
-        line-height: 29px;
-        letter-spacing: -0.8px;
-        font-weight: 600;
-        color: var(--dark);
-    }
-
 /* CTA section */
 .cta {
     padding-top: 47px;
@@ -234,28 +215,8 @@ header {
         max-width: 352px;
     }
 
-/* Reviews */
-.reviews {
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-
-    .review-item {
-        max-width: 400px;
-        padding: 32px;
-        gap: 32px;
-        border: 1px solid #dce2e4;
-    }
-
-        .review-name {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 1.7px;
-            line-height: 24px;
-            font-weight: 600;
-        }
-
     .separate-line {
+        width: 100%;
         height: 1px;
         background-color: #dce2e4;
     }
@@ -362,10 +323,9 @@ footer {
 
 /* Catalog page */
 .catalog-card {
-    padding: 38px 27px;
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    gap: 24px;
+    padding: 32px;
+    border: 1px solid #dce2e4;
+    gap: 32px;
     margin-bottom: 24px;
     min-height: 323px;
     justify-content: center;
@@ -373,12 +333,23 @@ footer {
 }
 
     .catalog-card-img {
-        max-width: 115px;
-        max-height: 83px;
+        max-width: 85px;
+        height: 85px;
     }
 
-    .catalog-card a {
-        font-size: 16px;
+    .card-name {
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 1.7px;
+        line-height: 24px;
+    }
+
+    .card-title {
+        font-size: 19px;
+        line-height: 29px;
+        letter-spacing: -0.8px;
+        font-weight: 600;
+        color: var(--dark);
     }
 
 /* About us */
@@ -447,7 +418,7 @@ footer {
     }
 
         .table tbody tr td:last-child {
-            background-color: #fae6e8;
+            background-color: #f0f6fa;
         }
 
         .table a:hover {
@@ -471,7 +442,7 @@ footer {
 
 .bottom-bar {
     padding: 10px;
-    background-color: #fae6e8;
+    background-color: #f5f8ff;
 }
 
     .bottom-bar p {
@@ -497,8 +468,8 @@ footer {
     color: var(--dark) !important;
 }
 
-.title {
-    margin-bottom: 64px;
+.text-gray {
+    color: var(--gray);
 }
 
 .gap-40 {
@@ -540,6 +511,14 @@ footer {
         display: block !important;
     }
     
+}
+
+@media screen and (max-width: 1200px) {
+    
+    header .navbar-nav {
+        padding-right: 0;
+    }
+
 }
 
 @media screen and (max-width: 992px) {
@@ -585,50 +564,20 @@ footer {
             max-height: none;
         }
 
-    .hero-info {
-        left: 50%;
-        margin-left: -25%;
-        bottom: 30px;
-    }
-
     h3 {
         font-size: 32px;
         line-height: 40px;
         letter-spacing: -1px;
     }
 
-    .feature-title, .review-from {
-        font-size: 24px;
-        line-height: 29px;
-    }
-
-    .map-description {
-        padding: 70px 20px 30px 20px;
-    }
-
-        .map-description h3 {
-            font-size: 24px;
-        }
-
-    .review-item {
-        margin: 0 auto 40px auto;
-    }
-
     .gap-md-20 {
         gap: 20px;
     }
 
-    .number-section .gap-40 {
-        gap: 25px;
-    }
-
-        .number-item {
-            max-width: 100%;
-        }
-
     .catalog-info {
         margin-top: 0;
         margin-bottom: 30px;
+        text-align: left;
     }
 
 }
@@ -670,22 +619,6 @@ footer {
 
 @media screen and (max-width: 576px) {
 
-    .hero-info {
-        padding: 18px 16px;
-        gap: 12px;
-        left: 3%;
-        right: 3%;
-        margin-left: 0;
-    }
-
-    .reviews {
-        padding-bottom: 0;
-    }
-
-    header .navbar-nav {
-        padding-right: 0;
-    }
-
     .catalog-card {
         padding: 15px;
         min-height: auto;
@@ -694,6 +627,7 @@ footer {
         align-items: start;
         padding-left: 110px;
         position: relative;
+        border-radius: 6px;
     }
 
         .catalog-card p {
@@ -701,16 +635,16 @@ footer {
         }
 
         .catalog-card-img {
-            width: 65px;
-            height: 35px;
+            width: 60px;
+            height: 60px;
             position: absolute;
             left: 15px;
             text-align: center;
         }
 
             .catalog-card-img img {
-                max-width: 65px;
-                max-height: 35px;
+                max-width: 60px;
+                max-height: 60px;
             }
 
     .fs-md-20 {
@@ -734,9 +668,15 @@ footer {
     .table.nowrap th {
         white-space: nowrap;
     }
+    
+    h3 {
+        font-size: 24px;
+    }
 
-    .table thead {
-        top: 87px;
+    .title-img {
+        left: auto;
+        right: 0;
+        transform: none !important;
     }
 
 }
