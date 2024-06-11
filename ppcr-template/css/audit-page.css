@@ -223,6 +223,10 @@
                     transition: all 0.3s ease;
                 }
 
+                .btn-item-detail span[style*="display: none"]  + img {
+                    margin-left: 0 !important;
+                }
+
     .audit-item .audit-item-content {
         display: none;
     }
@@ -231,7 +235,7 @@
             border-top: 1px solid #EBEDEE;
             padding: 26px 18px;
             color: #212529;
-            font-size: 14px;
+            font-size: 13px;
             line-height: 23px;
             font-family: 'Inter' , sans-serif;
         }
@@ -261,7 +265,7 @@
             }
 
                 .audit-item-table table {
-                    font-size: 14px;
+                    font-size: 13px;
                     border: 1px solid #EBEDEE;
                 }
 
@@ -296,7 +300,7 @@
                 border-radius: 7px !important;
                 max-width: 900px;
                 color: #fff;
-                font-size: 14px;
+                font-size: 13px;
             }
 
 /* Modal */
@@ -414,6 +418,10 @@
 
         .audit-filter.nav a , .subfilter.nav a {
             white-space: nowrap;
+        }
+
+        .btn-item-detail span[style*="display: none"] {
+            display: block !important;
         }
 
 }
