@@ -15,6 +15,10 @@
     font-style: normal;
 }
 
+.fs-12 {
+    font-size: 12px;
+}
+
 .fs-16 {
     font-size: 16px;
 }
@@ -96,6 +100,7 @@
         font-size: 12px;
         padding: 10px;
         border-radius: 3px;
+        transition: all 0.3s ease;
     }
 
         .subfilter.nav a:not(.sub-active):hover {
@@ -143,23 +148,41 @@
     }
 
     .audit-item-heading {
-        padding-left: 32px;
+        padding-left: 1.5rem;
         display: flex;
         align-items: center;
     }
 
+        .wrap-item-title {
+            max-width: 530px;
+        }
+
         .item-title {
-            max-width: 400px;
             text-overflow: ellipsis;
             overflow: hidden;
         }
+
+            .item-title span {
+                line-height: 25px;
+            }
 
         .item-tag {
             border-radius: 3px;
             background-color: #E4E6E8;
             padding: 4px 7px;
             font-size: 12px;
+            float: left;
+            color: #212529;
         }
+
+        .item-info-icon {
+            fill: #21C6C8;
+            transition: all 0.3s ease;
+        }
+
+            .item-info-icon:hover {
+                fill: #212529;
+            }
 
         .audit-item-progress {
             width: 185px;
@@ -178,6 +201,7 @@
             position: absolute;
             /* right: 272px; */
             right: 17vw;
+            transition: all 0.3s ease;
         }
 
             .btn-fix-issue:hover {
@@ -293,7 +317,31 @@
     }
 
 /* Responsive styles */
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1500px) {
+
+    .audit-item-progress {
+        right: 26vw;
+    }
+
+    .btn-fix-issue {
+        right: 14vw;
+    }
+
+    .btn-item-detail {
+        padding: 0 33px;
+    }
+
+}
+
+@media screen and (max-width: 1340px) {
+
+    .audit-item .wrap-item-title {
+        max-width: 350px;
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
 
     .audit-item-progress , .btn-fix-issue {
         position: relative;
@@ -311,6 +359,7 @@
         position: absolute;
         right: 0;
         height: 100%;
+        padding: 0 53px;
     }
 
 }
@@ -318,7 +367,7 @@
 @media screen and (max-width: 1080px) {
 
     .audit-item-heading {
-        padding-right: 32px;
+        padding-right: 1.5rem;
     }
 
     .btn-item-detail {
@@ -341,11 +390,10 @@
 
     .audit-item-progress , .btn-fix-issue {
         width: 100%;
-        padding: 0 16px;
         text-align: center;
     }
 
-    .audit-item-heading {
+    .audit-item-heading , .btn-fix-issue  {
         padding: 0 16px;
     }
 
@@ -374,6 +422,11 @@
 
     .audit-item-heading {
         padding: 0 8px;
+    }
+
+    .audit-item .item-tag {
+        display: inline;
+        float: none;
     }
 
 }
