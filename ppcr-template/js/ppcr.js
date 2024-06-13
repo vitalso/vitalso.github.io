@@ -1082,16 +1082,6 @@ $(document).ready(function(){
 		}
 	});
 
-	// Hide button Details text if are too height
-	var $auditItem = $('.audit-item');
-    if ($auditItem.length > 0 && $(window).width() > 1080) {
-		$auditItem.each(function(){
-			if ( $(this).outerHeight() > 71 ) {
-				$(this).find('.btn-item-detail span').hide();
-			}
-		});
-	}
-
 });
 
 // Select plan in modal

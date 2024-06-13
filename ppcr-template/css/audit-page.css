@@ -223,10 +223,6 @@
                     transition: all 0.3s ease;
                 }
 
-                .btn-item-detail span[style*="display: none"]  + img {
-                    margin-left: 0 !important;
-                }
-
     .audit-item .audit-item-content {
         display: none;
     }
@@ -418,10 +414,6 @@
 
         .audit-filter.nav a , .subfilter.nav a {
             white-space: nowrap;
-        }
-
-        .btn-item-detail span[style*="display: none"] {
-            display: block !important;
         }
 
 }
