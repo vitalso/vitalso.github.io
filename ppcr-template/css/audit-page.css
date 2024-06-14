@@ -151,6 +151,7 @@
         padding-left: 1.5rem;
         display: flex;
         align-items: center;
+        min-height: 70px;
     }
 
         .wrap-item-title {
