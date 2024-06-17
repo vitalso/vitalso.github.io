@@ -42,11 +42,12 @@ body, body.modal-open {
 }
 
 .badge-qs {
-	padding: 0;
-	min-width: 35px;
+	padding: 0 4px;
+	min-width: 20px;
 	line-height: inherit;
 	vertical-align: baseline;
-	font-size: 12px;
+	font-size: 14px;
+    line-height: 20px;
 }
 
 .tab-pane>.table-bordered {
@@ -618,7 +619,7 @@ body, body.modal-open {
 }
 
 .google-status-enabled {
-    color: #0a6;
+    color: #21C6C8;
 }
 
 .google-status-na {
@@ -626,7 +627,7 @@ body, body.modal-open {
 }
 
 .label.google-status-enabled {
-	background-color: #0a6;
+	background-color: #21C6C8;
 	color: #fff;
 }
 

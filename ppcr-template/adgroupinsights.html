@@ -23,7 +23,14 @@
 <link href="css/checkbox.css?d6b2e893" rel="stylesheet">
 <link href="css/ppcr.css?d6b2e893" rel="stylesheet">
 <link href="css/ppcr-highcharts.css?d6b2e893" rel="stylesheet">
-    <link href="css/ppcr-tables.css" rel="stylesheet">
+<link href="css/ppcr-tables.css" rel="stylesheet">
+
+<!-- Style file for Audit page -->
+<link rel="stylesheet" href="css/audit-page.css">
+
+<!-- Style file for Ad Group Insights page -->
+<link rel="stylesheet" href="css/ad-group-insight.css">
+
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
@@ -630,7 +637,7 @@
                                     </div>
 			</div>
 			<div class="wrapper wrapper-content">
-				<div class="row" id="adwords-import-progress">
+				<div class="row d-none" id="adwords-import-progress">
 	<div class="col-md-12">
 		<div class="ibox">
 			<div class="ibox-title bg-warning">
@@ -656,7 +663,144 @@
 
 <div class="ppcr-container">
 
-    <div class="row">
+    <div class="row wrapper page-heading audit-head">
+        <div class="col-lg-10 pl-1">
+            <h2 class="text-black font-semibold mt-0 fs-20">Priorities to optimize this Ad Group</h2>
+        </div>
+    </div>
+
+    <!-- Item container -->
+    <div class="d-flex flex-column">
+
+        <!-- Item -->
+        <div class="audit-item bg-white filter-item without-detail">
+            <!-- Item heading -->
+            <div class="audit-item-heading position-relative">
+
+                <!-- Title -->
+                <div class="py-2 d-flex align-items-center">
+                    <!-- Icon -->
+                    <img src="img/icons/error-icon.svg" alt="image" class="item-icon">
+                    
+                    <div class="wrap-item-title pl-4">
+                        <!-- Item tag -->
+                        <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center">
+                            <h3 class="my-0 text-black fs-14 item-title">
+                                <p class="item-tag mr-md-2 mb-2 mb-md-0">Landing Page</p>
+                                
+                                <span>Uncovering Poor Landing Page Experience: </span>
+                                
+                                <button type="button" class="ml-1 p-0 bg-transparent border-0" data-toggle="modal" data-target="#infoModal">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" class="item-info-icon" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 10H11C11 9.44771 10.5523 9 10 9V10ZM10 14H9C9 14.5523 9.44771 15 10 15V14ZM11 15C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13V15ZM9 9C8.44772 9 8 9.44771 8 10C8 10.5523 8.44772 11 9 11V9ZM10 5C9.44771 5 9 5.44772 9 6C9 6.55228 9.44771 7 10 7V5ZM10.01 7C10.5623 7 11.01 6.55228 11.01 6C11.01 5.44772 10.5623 5 10.01 5V7ZM9 10V14H11V10H9ZM10 15H11V13H10V15ZM10 9H9V11H10V9ZM18 10C18 14.4183 14.4183 18 10 18V20C15.5228 20 20 15.5228 20 10H18ZM10 18C5.58172 18 2 14.4183 2 10H0C0 15.5228 4.47715 20 10 20V18ZM2 10C2 5.58172 5.58172 2 10 2V0C4.47715 0 0 4.47715 0 10H2ZM10 2C14.4183 2 18 5.58172 18 10H20C20 4.47715 15.5228 0 10 0V2ZM10 7H10.01V5H10V7Z" />
+                                    </svg>
+                                </button>
+                            </h3>
+                        </div>
+                        <span class="fs-12 d-block mt-2">Quality Score Analysis</span>
+                    </div>
+                </div>
+
+                <!-- Progress -->
+                <div class="text-right audit-item-progress">
+                    <span class="text-danger">76%</span>
+                    <div class="progress progress-small progress-striped m-b-sm">
+                        <div style="width: 76%" class="progress-bar progress-bar-danger"></div>
+                    </div>
+                </div>
+
+                <!-- Fix issue button -->
+                <button type="button" class="btn-fix-issue">Fix issue</button>
+            </div>
+        </div>
+
+        <!-- Item -->
+        <div class="audit-item bg-white filter-item without-detail">
+            <!-- Item heading -->
+            <div class="audit-item-heading position-relative">
+
+                <!-- Title -->
+                <div class="py-2 d-flex align-items-center">
+                    <!-- Icon -->
+                    <img src="img/icons/error-icon.svg" alt="image" class="item-icon">
+                    
+                    <div class="wrap-item-title pl-4">
+                        <!-- Item tag -->
+                        <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center">
+                            <h3 class="my-0 text-black fs-14 item-title">
+                                <p class="item-tag mr-md-2 mb-2 mb-md-0">Landing Page</p>
+                                
+                                <span>Uncovering Poor Landing Page Experience: </span>
+                                
+                                <button type="button" class="ml-1 p-0 bg-transparent border-0" data-toggle="modal" data-target="#infoModal">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" class="item-info-icon" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 10H11C11 9.44771 10.5523 9 10 9V10ZM10 14H9C9 14.5523 9.44771 15 10 15V14ZM11 15C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13V15ZM9 9C8.44772 9 8 9.44771 8 10C8 10.5523 8.44772 11 9 11V9ZM10 5C9.44771 5 9 5.44772 9 6C9 6.55228 9.44771 7 10 7V5ZM10.01 7C10.5623 7 11.01 6.55228 11.01 6C11.01 5.44772 10.5623 5 10.01 5V7ZM9 10V14H11V10H9ZM10 15H11V13H10V15ZM10 9H9V11H10V9ZM18 10C18 14.4183 14.4183 18 10 18V20C15.5228 20 20 15.5228 20 10H18ZM10 18C5.58172 18 2 14.4183 2 10H0C0 15.5228 4.47715 20 10 20V18ZM2 10C2 5.58172 5.58172 2 10 2V0C4.47715 0 0 4.47715 0 10H2ZM10 2C14.4183 2 18 5.58172 18 10H20C20 4.47715 15.5228 0 10 0V2ZM10 7H10.01V5H10V7Z" />
+                                    </svg>
+                                </button>
+                            </h3>
+                        </div>
+                        <span class="fs-12 d-block mt-2">Quality Score Analysis</span>
+                    </div>
+                </div>
+
+                <!-- Progress -->
+                <div class="text-right audit-item-progress">
+                    <span class="text-danger">76%</span>
+                    <div class="progress progress-small progress-striped m-b-sm">
+                        <div style="width: 76%" class="progress-bar progress-bar-danger"></div>
+                    </div>
+                </div>
+
+                <!-- Fix issue button -->
+                <button type="button" class="btn-fix-issue">Fix issue</button>
+            </div>
+        </div>
+
+        <!-- Item -->
+        <div class="audit-item bg-white filter-item without-detail">
+            <!-- Item heading -->
+            <div class="audit-item-heading position-relative">
+
+                <!-- Title -->
+                <div class="py-2 d-flex align-items-center">
+                    <!-- Icon -->
+                    <img src="img/icons/error-icon.svg" alt="image" class="item-icon">
+                    
+                    <div class="wrap-item-title pl-4">
+                        <!-- Item tag -->
+                        <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center">
+                            <h3 class="my-0 text-black fs-14 item-title">
+                                <p class="item-tag mr-md-2 mb-2 mb-md-0">Landing Page</p>
+                                
+                                <span>Uncovering Poor Landing Page Experience: </span>
+                                
+                                <button type="button" class="ml-1 p-0 bg-transparent border-0" data-toggle="modal" data-target="#infoModal">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" class="item-info-icon" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 10H11C11 9.44771 10.5523 9 10 9V10ZM10 14H9C9 14.5523 9.44771 15 10 15V14ZM11 15C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13V15ZM9 9C8.44772 9 8 9.44771 8 10C8 10.5523 8.44772 11 9 11V9ZM10 5C9.44771 5 9 5.44772 9 6C9 6.55228 9.44771 7 10 7V5ZM10.01 7C10.5623 7 11.01 6.55228 11.01 6C11.01 5.44772 10.5623 5 10.01 5V7ZM9 10V14H11V10H9ZM10 15H11V13H10V15ZM10 9H9V11H10V9ZM18 10C18 14.4183 14.4183 18 10 18V20C15.5228 20 20 15.5228 20 10H18ZM10 18C5.58172 18 2 14.4183 2 10H0C0 15.5228 4.47715 20 10 20V18ZM2 10C2 5.58172 5.58172 2 10 2V0C4.47715 0 0 4.47715 0 10H2ZM10 2C14.4183 2 18 5.58172 18 10H20C20 4.47715 15.5228 0 10 0V2ZM10 7H10.01V5H10V7Z" />
+                                    </svg>
+                                </button>
+                            </h3>
+                        </div>
+                        <span class="fs-12 d-block mt-2">Quality Score Analysis</span>
+                    </div>
+                </div>
+
+                <!-- Progress -->
+                <div class="text-right audit-item-progress">
+                    <span class="text-danger">76%</span>
+                    <div class="progress progress-small progress-striped m-b-sm">
+                        <div style="width: 76%" class="progress-bar progress-bar-danger"></div>
+                    </div>
+                </div>
+
+                <!-- Fix issue button -->
+                <button type="button" class="btn-fix-issue">Fix issue</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row d-none">
         <div class="col-lg-12 animated fadeInRight">
             <div class="mail-box-header">
                 <h2>
@@ -842,336 +986,337 @@
             </div>
         </div>
     </div>
-    <div class="row">
 
-                <div class="col-4">
-            <table class="table table-bordered ppcr-tbl-section sticky-header m-t-sm m-b-none top-spender-table qsinsights-table">
-                <thead>
-                <tr>
-                    <th class="text-center ppcr-tbl-section-th-one" colspan="2">Focus Keyword to optimize</th>
-                </tr>
-                </thead>
-                <tbody class="bg-white">
-                <tr>
-                    <td class="text-left">Keyword</td>
-                    <td class="text-center">
-                        <div class="btn-group dropdown-element">
-    <span data-toggle="collapse" class="tooltip-init dropdown-toggle pointer" type="button" data-target="#dropdown-menu-0bfdad7c-3725-4e4c-b64d-32d029b4e079" aria-expanded="false" aria-controls="#dropdown-menu-0bfdad7c-3725-4e4c-b64d-32d029b4e079"
-          title="[crawl optimizer]">
-        <i class="fa fa-fw fa-circle google-status google-status-enabled keyword-status-icon-61593793402-491473424828" title="" data-toggle="tooltip"></i>        [crawl optimizer] <i class="fa fa-caret-down"></i>
-    </span>         <ul id="dropdown-menu-0bfdad7c-3725-4e4c-b64d-32d029b4e079" class="dropdown-menu keyword-action-dropdown" data-ad-group-id="61593793402" data-keyword-id="491473424828">
-        <script type="application/json" class="keyword-data">{"account_id":6912853797,"campaign_id":1587873047,"campaign_name":"crawlOPTIMIZER - neu","ad_group_id":61593793402,"ad_group_name":"Brand COPT","keyword_id":491473424828,"keyword_name":"crawl optimizer","keyword_match_type":"EXACT","keyword_decorated_name":"[crawl optimizer]","campaign_status":"ENABLED","ad_group_status":"ENABLED","keyword_status":"ENABLED","advertising_channel_type":"SEARCH","is_negative":false,"is_brand":false,"aggregated_active":true,"created":"2021-05-12 01:01:07","modified":"2024-06-04 01:14:02","similarity":58.25,"scheduled_keyword_mutation":null}</script>
-        <li><a href="#pauseKeyword" class="external action-enable-keyword active no-action" title="Activate Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-circle google-status google-status-enabled " title="" data-toggle="tooltip"></i> Active</a></li>
-        <li><a href="#enableKeyword" class="external action-pause-keyword " title="Pause Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-pause-circle google-status google-status-paused " title="" data-toggle="tooltip"></i> Pause</a></li>
-        <li role="separator" class="dropdown-divider"></li>
-        <li><a href="#negativeKeyword" class="external action-set-keyword-negative" title="Set keyword as negative" data-toggle="tooltip">Set as Negative Keyword</a></li>
-                    <li role="separator" class="dropdown-divider"></li>
-            <li><a href="https://ads.google.com/aw/ads/new/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402&adTypeId=36" target="_blank" class="external">Create new Ad</a></li>
-                <li role="separator" class="dropdown-divider"></li>
-        <li>
-            <span type="button" data-toggle="collapse" data-target="#collapse-ppcr-0bfdad7c-3725-4e4c-b64d-32d029b4e079" aria-expanded="false" aria-controls="collapse-ppcr-61593793402-491473424828">
-                Show more Details<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
-            </span>
-            <div class="collapse inner-menu-collapse collapse-right" id="collapse-ppcr-0bfdad7c-3725-4e4c-b64d-32d029b4e079">
-                <ul class="dropdown-menu ppcr-dropdown">
-                    <li><a href="quality-score/keyword/61593793402/491473424828" class="external" title="Show Keyword Details" data-toggle="tooltip">Show Keyword Details</a></li>
-                    <li><a href="quality-score/ad-group/61593793402" class="external" data-toggle="tooltip" title="Ad Group: Brand COPT">Show Ad Group Details</a></li>
-                    <li><a href="data-filters/set-filter?filter%5B0%5D%5Bproperty%5D=ad_group_id&amp;filter%5B0%5D%5Boperator%5D=eq&amp;filter%5B0%5D%5Bvalue%5D=61593793402&amp;configPath=DataFilters.Searchterm.list&amp;target=SearchTerm.index" class="">Show Search Terms</a></li>
-                    <li><a href="quality-score/campaign/1587873047" class="external" data-toggle="tooltip" title="Campaign: crawlOPTIMIZER - neu">Show Campaign Details</a></li>
-                    <li><a href="landing-pages/keyword-list/61593793402/491473424828?reset=filter" class="external" title="Show Keyword Landing Pages" data-toggle="tooltip">Show Keyword Landing Pages</a></li>
-                </ul>
-            </div>
-        </li>
-                <li role="separator" class="dropdown-divider"></li>
-        <li>
-            <span type="button" data-toggle="collapse" data-target="#collapse-gads-0bfdad7c-3725-4e4c-b64d-32d029b4e079" aria-expanded="false" aria-controls="collapse-gads-61593793402-491473424828">
-                Links to Google Ads<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
-            </span>
-            <div class="collapse inner-menu-collapse collapse-right" id="collapse-gads-0bfdad7c-3725-4e4c-b64d-32d029b4e079">
-                <ul class="dropdown-menu gads-dropdown">
-                    <li><a href="https://ads.google.com/aw/keywords?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search Keywords</a></li>
-                    <li><a href="https://ads.google.com/aw/keywords/negative?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Negative Search Keywords</a></li>
-                    <li><a href="https://ads.google.com/aw/keywords/searchterms?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search terms</a></li>
-                    <li><a href="https://ads.google.com/aw/ads?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Ads</a></li>
-                    <li><a href="https://ads.google.com/aw/audiences?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Audiences</a></li>
-                    <li><a href="https://ads.google.com/aw/settings/adgroups/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Settings</a></li>
-                    <li><a href="https://ads.google.com/aw/settings/campaign/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047" target="_blank" class="external">Campaign: Settings</a></li>
-                </ul>
-            </div>
-        </li>
-            </ul>
-</div>                    </td>
-                </tr>
-                <tr>
-                    <td class="text-left">Quality Score</td>
-                    <td class="text-center">
-                        <span class="badge badge-qs badge-warning">
-                            6                        </span>
-                    </td>
-                </tr>
-                                    <tr>
+
+    <div class="row mt-2">
+
+        <div class="col-4 pr-md-0">
+            <div class="wrap-table-group">
+                <table class="table table-group m-t-sm m-b-none top-spender-table">
+                    <thead>
+                        <tr>
+                            <th class="table-group-heading bg-white position-relative" colspan="2">
+                                <span class="success-tag"></span>
+                                Focus Keyword to optimize
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="bg-white">
+                    <tr>
+                        <td class="text-left">Keyword</td>
+                        <td>
+                            <div class="btn-group dropdown-element">
+                                <span data-toggle="collapse" class="tooltip-init dropdown-toggle pointer" type="button" data-target="#dropdown-menu-0bfdad7c-3725-4e4c-b64d-32d029b4e079" aria-expanded="false" aria-controls="#dropdown-menu-0bfdad7c-3725-4e4c-b64d-32d029b4e079"
+                                    title="+logfile +analyse">
+                                    <i class="fa fa-fw fa-circle google-status google-status-enabled keyword-status-icon-61593793402-491473424828" title="" data-toggle="tooltip"></i>
+                                    +logfile +analyse 
+                                    <span class="ml-2"><img src="img/icons/arrow-down.svg" alt="image"></span>
+                                </span>
+                                <ul id="dropdown-menu-0bfdad7c-3725-4e4c-b64d-32d029b4e079" class="dropdown-menu keyword-action-dropdown" data-ad-group-id="61593793402" data-keyword-id="491473424828">
+                                    <script type="application/json" class="keyword-data">{"account_id":6912853797,"campaign_id":1587873047,"campaign_name":"crawlOPTIMIZER - neu","ad_group_id":61593793402,"ad_group_name":"Brand COPT","keyword_id":491473424828,"keyword_name":"crawl optimizer","keyword_match_type":"EXACT","keyword_decorated_name":"[crawl optimizer]","campaign_status":"ENABLED","ad_group_status":"ENABLED","keyword_status":"ENABLED","advertising_channel_type":"SEARCH","is_negative":false,"is_brand":false,"aggregated_active":true,"created":"2021-05-12 01:01:07","modified":"2024-06-04 01:14:02","similarity":58.25,"scheduled_keyword_mutation":null}</script>
+                                    <li><a href="#pauseKeyword" class="external action-enable-keyword active no-action" title="Activate Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-circle google-status google-status-enabled " title="" data-toggle="tooltip"></i> Active</a></li>
+                                    <li><a href="#enableKeyword" class="external action-pause-keyword " title="Pause Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-pause-circle google-status google-status-paused " title="" data-toggle="tooltip"></i> Pause</a></li>
+                                    <li role="separator" class="dropdown-divider"></li>
+                                    <li><a href="#negativeKeyword" class="external action-set-keyword-negative" title="Set keyword as negative" data-toggle="tooltip">Set as Negative Keyword</a></li>
+                                    <li role="separator" class="dropdown-divider"></li>
+                                    <li><a href="https://ads.google.com/aw/ads/new/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402&adTypeId=36" target="_blank" class="external">Create new Ad</a></li>
+                                    <li role="separator" class="dropdown-divider"></li>
+                                    <li>
+                                        <span type="button" data-toggle="collapse" data-target="#collapse-ppcr-0bfdad7c-3725-4e4c-b64d-32d029b4e079" aria-expanded="false" aria-controls="collapse-ppcr-61593793402-491473424828">
+                                            Show more Details<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
+                                        </span>
+                                        <div class="collapse inner-menu-collapse collapse-right" id="collapse-ppcr-0bfdad7c-3725-4e4c-b64d-32d029b4e079">
+                                            <ul class="dropdown-menu ppcr-dropdown">
+                                                <li><a href="quality-score/keyword/61593793402/491473424828" class="external" title="Show Keyword Details" data-toggle="tooltip">Show Keyword Details</a></li>
+                                                <li><a href="quality-score/ad-group/61593793402" class="external" data-toggle="tooltip" title="Ad Group: Brand COPT">Show Ad Group Details</a></li>
+                                                <li><a href="data-filters/set-filter?filter%5B0%5D%5Bproperty%5D=ad_group_id&amp;filter%5B0%5D%5Boperator%5D=eq&amp;filter%5B0%5D%5Bvalue%5D=61593793402&amp;configPath=DataFilters.Searchterm.list&amp;target=SearchTerm.index" class="">Show Search Terms</a></li>
+                                                <li><a href="quality-score/campaign/1587873047" class="external" data-toggle="tooltip" title="Campaign: crawlOPTIMIZER - neu">Show Campaign Details</a></li>
+                                                <li><a href="landing-pages/keyword-list/61593793402/491473424828?reset=filter" class="external" title="Show Keyword Landing Pages" data-toggle="tooltip">Show Keyword Landing Pages</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li role="separator" class="dropdown-divider"></li>
+                                    <li>
+                                        <span type="button" data-toggle="collapse" data-target="#collapse-gads-0bfdad7c-3725-4e4c-b64d-32d029b4e079" aria-expanded="false" aria-controls="collapse-gads-61593793402-491473424828">
+                                            Links to Google Ads<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
+                                        </span>
+                                        <div class="collapse inner-menu-collapse collapse-right" id="collapse-gads-0bfdad7c-3725-4e4c-b64d-32d029b4e079">
+                                            <ul class="dropdown-menu gads-dropdown">
+                                                <li><a href="https://ads.google.com/aw/keywords?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search Keywords</a></li>
+                                                <li><a href="https://ads.google.com/aw/keywords/negative?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Negative Search Keywords</a></li>
+                                                <li><a href="https://ads.google.com/aw/keywords/searchterms?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search terms</a></li>
+                                                <li><a href="https://ads.google.com/aw/ads?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Ads</a></li>
+                                                <li><a href="https://ads.google.com/aw/audiences?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Audiences</a></li>
+                                                <li><a href="https://ads.google.com/aw/settings/adgroups/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Settings</a></li>
+                                                <li><a href="https://ads.google.com/aw/settings/campaign/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047" target="_blank" class="external">Campaign: Settings</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">Quality Score</td>
+                        <td>
+                            <span class="badge badge-qs badge-error">
+                                6
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
                         <td class="text-left">Ad Relev.</td>
-                        <td class="text-center">
+                        <td>
                             <div class="action-box">
-                                <i class="fa fa-lg fa-arrow-circle-o-down text-danger"
-                                   data-toggle="tooltip" title="below average"></i>
+                                <span data-toggle="tooltip" title="below average">
+                                    <svg width="10" height="13" viewBox="0 0 10 13" class="fill-success rotate-180" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.6339 8.3839C10.122 7.89577 10.122 7.10429 9.6339 6.61616C9.14578 6.128 8.35427 6.128 7.86615 6.61616L9.6339 8.3839ZM5.00002 11.25L4.11613 12.1339C4.6043 12.622 5.39576 12.622 5.88389 12.1339L5.00002 11.25ZM2.13389 6.61616C1.64573 6.128 0.854279 6.128 0.366114 6.61616C-0.122038 7.10429 -0.122038 7.89577 0.366114 8.3839L2.13389 6.61616ZM6.25002 1.25001C6.25002 0.559652 5.6904 0 5.00002 0C4.30967 0 3.75001 0.559652 3.75001 1.25001H6.25002ZM7.86615 6.61616L4.11613 10.3662L5.88389 12.1339L9.6339 8.3839L7.86615 6.61616ZM5.88389 10.3662L2.13389 6.61616L0.366114 8.3839L4.11613 12.1339L5.88389 10.3662ZM6.25002 11.25V1.25001H3.75001V11.25H6.25002Z"/>
+                                    </svg>
+                                </span>
                             </div>
-                                                    </td>
+                        </td>
                     </tr>
-                                    <tr>
+                    <tr>
                         <td class="text-left">Exp. CTR</td>
-                        <td class="text-center">
+                        <td>
                             <div class="action-box">
-                                <i class="fa fa-lg fa-arrow-circle-o-right text-warning"
-                                   data-toggle="tooltip" title="average"></i>
+                                <span data-toggle="tooltip" title="average">
+                                    <svg width="10" height="13" viewBox="0 0 10 13" class="fill-error" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.6339 8.3839C10.122 7.89577 10.122 7.10429 9.6339 6.61616C9.14578 6.128 8.35427 6.128 7.86615 6.61616L9.6339 8.3839ZM5.00002 11.25L4.11613 12.1339C4.6043 12.622 5.39576 12.622 5.88389 12.1339L5.00002 11.25ZM2.13389 6.61616C1.64573 6.128 0.854279 6.128 0.366114 6.61616C-0.122038 7.10429 -0.122038 7.89577 0.366114 8.3839L2.13389 6.61616ZM6.25002 1.25001C6.25002 0.559652 5.6904 0 5.00002 0C4.30967 0 3.75001 0.559652 3.75001 1.25001H6.25002ZM7.86615 6.61616L4.11613 10.3662L5.88389 12.1339L9.6339 8.3839L7.86615 6.61616ZM5.88389 10.3662L2.13389 6.61616L0.366114 8.3839L4.11613 12.1339L5.88389 10.3662ZM6.25002 11.25V1.25001H3.75001V11.25H6.25002Z"/>
+                                    </svg>
+                                </span>
                             </div>
-                                                    </td>
+                        </td>
                     </tr>
-                                    <tr>
+                    <tr>
                         <td class="text-left">LP Exp.</td>
-                        <td class="text-center">
+                        <td>
                             <div class="action-box">
-                                <i class="fa fa-lg fa-arrow-circle-o-up text-navy"
-                                   data-toggle="tooltip" title="above average"></i>
+                                <span data-toggle="tooltip" title="average">
+                                    <svg width="10" height="13" viewBox="0 0 10 13" class="fill-error" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.6339 8.3839C10.122 7.89577 10.122 7.10429 9.6339 6.61616C9.14578 6.128 8.35427 6.128 7.86615 6.61616L9.6339 8.3839ZM5.00002 11.25L4.11613 12.1339C4.6043 12.622 5.39576 12.622 5.88389 12.1339L5.00002 11.25ZM2.13389 6.61616C1.64573 6.128 0.854279 6.128 0.366114 6.61616C-0.122038 7.10429 -0.122038 7.89577 0.366114 8.3839L2.13389 6.61616ZM6.25002 1.25001C6.25002 0.559652 5.6904 0 5.00002 0C4.30967 0 3.75001 0.559652 3.75001 1.25001H6.25002ZM7.86615 6.61616L4.11613 10.3662L5.88389 12.1339L9.6339 8.3839L7.86615 6.61616ZM5.88389 10.3662L2.13389 6.61616L0.366114 8.3839L4.11613 12.1339L5.88389 10.3662ZM6.25002 11.25V1.25001H3.75001V11.25H6.25002Z"/>
+                                    </svg>
+                                </span>
                             </div>
-                                                    </td>
+                        </td>
                     </tr>
-                                <tr>
-                    <td class="text-left">Focus QS Metrics to optimize</td>
-                    <td class="text-center">
-                                                Expected Click Through Rate                                            </td>
-                </tr>
-                <tr>
-                    <td class="text-left">Impressions, Clicks, and CTR</td>
-                    <td class="text-center">
+                    <tr>
+                        <td class="text-left">Focus QS Metrics to optimize</td>
+                        <td>Expected Click Through Rate</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">Impressions, Clicks, and CTR</td>
+                        <td>
 
-                        2 |
-                        1 |
-                        50.00%                    </td>
-                </tr>
-                <tr>
-                    <td class="text-left">Costs, Conversions, and Conv. Value</td>
-                    <td class="text-center">
-                        €0.57 |
-                        0.0 |
-                        €0.00                    </td>
-                </tr>
-                <tr>
-                    <td class="text-left">CPO, ROI, and MR</td>
-                    <td class="text-center">
-                        -- |
-                        0.00% |
-                        --                    </td>
-                </tr>
-                <tr>
-                    <td class="text-left">Saving Potential Min/Max</td>
-                    <td class="text-center">
-                        €0.08 to
-                        €0.22                    </td>
-                </tr>
-                <!--
-                <tr>
-                    <td colspan="2">Summary of the Keyword analysis:</td>
-                </tr>
-                -->
-                </tbody>
-            </table>
+                            2 |
+                            1 |
+                            50.00%
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">Costs, Conversions, and Conv. Value</td>
+                        <td>
+                            €0.57 |
+                            0.0 |
+                            €0.00
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">CPO, ROI, and MR</td>
+                        <td>
+                            -- |
+                            0.00% |
+                            --
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">Saving Potential Min/Max</td>
+                        <td>
+                            €0.08 to
+                            €0.22
+                        </td>
+                    </tr>
+                    <!--
+                    <tr>
+                        <td colspan="2">Summary of the Keyword analysis:</td>
+                    </tr>
+                    -->
+                    </tbody>
+                </table>
+            </div>
         </div>
         
-        <div class="col-4">
-            <table class="table table-bordered ppcr-tbl-section sticky-header m-t-sm m-b-none top-spender-table qsinsights-table">
-                <thead>
-                <tr>
-                    <th class="text-center ppcr-tbl-section-th-one" colspan="2">Ad Group Structure</th>
-                </tr>
-                </thead>
-                <tbody class="bg-white">
-                <!-- Keyword Row -->
-                <tr>
-                    <td class="text-left">Ad Group</td>
-                    <td class="text-center text-nowrap">
-                        <i class="fa fa-fw fa-circle google-status google-status-enabled keyword-status-icon-61593793402" title="" data-toggle="tooltip"></i>                        <div class="btn-group dropdown-element">
-    <span data-toggle="collapse" class="tooltip-init dropdown-toggle pointer" type="button" data-target="#dropdown-menu-27907903-d7db-4428-8010-19b87b0c0428" aria-expanded="false" aria-controls="#dropdown-menu-27907903-d7db-4428-8010-19b87b0c0428" title="Brand COPT">
-        Brand COPT <i class="fa fa-caret-down"></i>
-    </span>
-    <ul id="dropdown-menu-27907903-d7db-4428-8010-19b87b0c0428" class="dropdown-menu">
-        <li><a href="quality-score/ad-group/61593793402" class="external" data-toggle="tooltip" title="Ad Group: 61593793402">Show Ad Group Details</a></li>
-        <li><a href="quality-score/campaign/1587873047" class="external" data-toggle="tooltip" title="Campaign: Brand COPT">Show Campaign Details</a></li>
-        <li><a href="quality-score/keywords-list?ad_group_id=61593793402" class="external" title="Show Ad Group Keywords" data-toggle="tooltip">Show Ad Group Keywords</a></li>
-        <li><a href="data-filters/set-filter?filter%5B0%5D%5Bproperty%5D=ad_group_id&amp;filter%5B0%5D%5Boperator%5D=eq&amp;filter%5B0%5D%5Bvalue%5D=61593793402&amp;configPath=DataFilters.Searchterm.list&amp;target=SearchTerm.index" class="">Show Search Terms</a></li>
-        <li><a href="landing-pages/ad-group-list/61593793402?reset=filter" class="external" title="Show Ad Group Landing Pages" data-toggle="tooltip">Show Ad Group Landing Pages</a></li>
-                    <li role="separator" class="dropdown-divider"></li>
-            <li>
-                <span type="button" data-toggle="collapse" data-target="#collapse-gads-27907903-d7db-4428-8010-19b87b0c0428" aria-expanded="false" aria-controls="collapse-gads-1587873047-6912853797">
-                    Links to Google Ads<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
-                </span>
-                <div class="collapse inner-menu-collapse collapse-right" id="collapse-gads-27907903-d7db-4428-8010-19b87b0c0428">
-                    <ul class="dropdown-menu gads-dropdown">
-                        <li><a href="https://ads.google.com/aw/keywords?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search Keywords</a></li>
-                        <li><a href="https://ads.google.com/aw/keywords/negative?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Negative Search Keywords</a></li>
-                        <li><a href="https://ads.google.com/aw/keywords/searchterms?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search terms</a></li>
-                        <li><a href="https://ads.google.com/aw/ads?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Ads</a></li>
-                        <li><a href="https://ads.google.com/aw/audiences?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Audiences</a></li>
-                        <li><a href="https://ads.google.com/aw/settings/adgroups/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Settings</a></li>
-                        <li><a href="https://ads.google.com/aw/settings/campaign/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047" target="_blank" class="external">Campaign: Settings</a></li>
-                    </ul>
-                </div>
-            </li>
-            </ul>
-</div>                    </td>
-                </tr>
-                <tr>
-                    <td class="text-left">Quality Score</td>
-                    <td class="text-center">
-                        <span class="badge badge-qs badge-primary">
-                            8                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="text-left">Keywords</td>
-                    <td class="text-center">
-                        9                        <i class="fa fa-check-circle fa-lg fa-fw text-navy" data-toggle="tooltip" title="You have less than 21 Keywords in this Ad Group. Perfect!"></i>                    </td>
-                </tr>
-                <tr>
-                    <td class="text-left">Similarity of Keywords</td>
-                    <td class="text-center">
-                        <div class="d-flex justify-content-center align-items-center">
-                        <div class="pull-left text-warning" style="width:30px;">
-    46%
-</div>
-<div class="pull-left text-center text-warning" style="width:20px;">
-     <i class="fa fa-warning"></i></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="text-left">
-                        Similarity of Search Terms</td>
-                    <td class="text-center">
-                        <div class="d-flex justify-content-center align-items-center">
-                        <div class="pull-left text-warning" style="width:30px;">
-    40%
-</div>
-<div class="pull-left text-center text-warning" style="width:20px;">
-     <i class="fa fa-warning"></i></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="text-left">Ads & Assets</td>
-                    <td class="text-center">
-                        4 | 5                    </td>
-                </tr>
-                <tr>
-                    <td class="text-left">Search Terms (last 90 Days)</td>
-                    <td class="text-center">
-                        7                    </td>
-                </tr>
-                <tr>
-                    <td class="text-left">URLs</td>
-                    <td class="text-center">
-                        3                    </td>
-                </tr>
-                <tr>
-                    <td class="text-left">Duplicate Search Terms</td>
-                    <td class="text-center">
-                        0                     </td>
-                </tr>
-                <tr>
-                    <td class="text-left">Saving Potential Min/Max</td>
-                    <td class="text-center">
-                        €0.08 to
-                        €0.22                    </td>
-                </tr>
-                <!--
-                <tr>
-                    <td colspan="2">Summary of the Ad Group Analysis:</td>
-                </tr>
-                -->
-                </tbody>
-            </table>
+        <div class="col-4 pr-md-0">
+            <div class="wrap-table-group">
+                <table class="table table-group m-t-sm m-b-none top-spender-table">
+                    <thead>
+                    <tr>
+                        <th class="table-group-heading bg-white position-relative"colspan="2">
+                            <span class="success-tag"></span>
+                            Ad Group Structure
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody class="bg-white">
+                    <!-- Keyword Row -->
+                    <tr>
+                        <td class="text-left">Ad Group</td>
+                        <td class="text-nowrap">
+                            <i class="fa fa-fw fa-circle google-status google-status-enabled keyword-status-icon-61593793402" title="" data-toggle="tooltip"></i>
+                            <div class="btn-group dropdown-element">
+                                <span data-toggle="collapse" class="tooltip-init dropdown-toggle pointer" type="button" data-target="#dropdown-menu-27907903-d7db-4428-8010-19b87b0c0428" aria-expanded="false" aria-controls="#dropdown-menu-27907903-d7db-4428-8010-19b87b0c0428" title="SEO Logfile modified">
+                                    SEO Logfile modified
+                                    <span class="ml-2"><img src="img/icons/arrow-down.svg" alt="image"></span>
+                                </span>
+                                <ul id="dropdown-menu-27907903-d7db-4428-8010-19b87b0c0428" class="dropdown-menu">
+                                    <li><a href="quality-score/ad-group/61593793402" class="external" data-toggle="tooltip" title="Ad Group: 61593793402">Show Ad Group Details</a></li>
+                                    <li><a href="quality-score/campaign/1587873047" class="external" data-toggle="tooltip" title="Campaign: Brand COPT">Show Campaign Details</a></li>
+                                    <li><a href="quality-score/keywords-list?ad_group_id=61593793402" class="external" title="Show Ad Group Keywords" data-toggle="tooltip">Show Ad Group Keywords</a></li>
+                                    <li><a href="data-filters/set-filter?filter%5B0%5D%5Bproperty%5D=ad_group_id&amp;filter%5B0%5D%5Boperator%5D=eq&amp;filter%5B0%5D%5Bvalue%5D=61593793402&amp;configPath=DataFilters.Searchterm.list&amp;target=SearchTerm.index" class="">Show Search Terms</a></li>
+                                    <li><a href="landing-pages/ad-group-list/61593793402?reset=filter" class="external" title="Show Ad Group Landing Pages" data-toggle="tooltip">Show Ad Group Landing Pages</a></li>
+                                    <li role="separator" class="dropdown-divider"></li>
+                                    <li>
+                                        <span type="button" data-toggle="collapse" data-target="#collapse-gads-27907903-d7db-4428-8010-19b87b0c0428" aria-expanded="false" aria-controls="collapse-gads-1587873047-6912853797">
+                                            Links to Google Ads<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
+                                        </span>
+                                        <div class="collapse inner-menu-collapse collapse-right" id="collapse-gads-27907903-d7db-4428-8010-19b87b0c0428">
+                                            <ul class="dropdown-menu gads-dropdown">
+                                                <li><a href="https://ads.google.com/aw/keywords?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search Keywords</a></li>
+                                                <li><a href="https://ads.google.com/aw/keywords/negative?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Negative Search Keywords</a></li>
+                                                <li><a href="https://ads.google.com/aw/keywords/searchterms?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search terms</a></li>
+                                                <li><a href="https://ads.google.com/aw/ads?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Ads</a></li>
+                                                <li><a href="https://ads.google.com/aw/audiences?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Audiences</a></li>
+                                                <li><a href="https://ads.google.com/aw/settings/adgroups/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Settings</a></li>
+                                                <li><a href="https://ads.google.com/aw/settings/campaign/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047" target="_blank" class="external">Campaign: Settings</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">Quality Score</td>
+                        <td>
+                            <span class="badge badge-qs badge-error">8</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">Keywords</td>
+                        <td class="text-success">3</tr>
+                    <tr>
+                        <td class="text-left">Similarity of Keywords</td>
+                        <td class="text-warning">70%</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">Similarity of Search Terms</td>
+                        <td class="text-danger">19%</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">Ads & Assets</td>
+                        <td>4 | 5</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">Search Terms (last 90 Days)</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">URLs</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">Duplicate Search Terms</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">Saving Potential Min/Max</td>
+                        <td>€0.08 to €0.22</td>
+                    </tr>
+                    <!--
+                    <tr>
+                        <td colspan="2">Summary of the Ad Group Analysis:</td>
+                    </tr>
+                    -->
+                    </tbody>
+                </table>
+            </div>
         </div>
 
 
         <div class="col-4">
-            <table class="table table-bordered ppcr-tbl-section sticky-header m-t-sm m-b-none top-spender-table qsinsights-table">
-                <thead>
-                <tr>
-                    <th class="text-center ppcr-tbl-section-th-one" colspan="3">Ad Group Performance Analysis</th>
-                </tr>
-                </thead>
-                <tbody class="bg-white">
-                <!-- Keyword Row -->
-                <tr>
-                    <td class="text-left m-t-lg">Costs</td>
-                    <td class="text-center m-t-lg">
-                        €1.35                    </td>
-                    <td rowspan="7 class="align-text-top m-t-lg ppcr-tbl-section-th-border-left-one"><a href="performance/main-kpis?ad_group_id=61593793402&campaign_id=1587873047" target="_blank" data-toggle="tooltip" class="external btn btn-outline-primary btn-sm m-0 waves-effect bg-info text-nowrap" title="Analyse Performance">Analyse <i class="fa fa-caret-right"></i></a></td>
-                </tr>
-                <tr>
-                    <td class="text-left">Impressions, Clicks, and CTR</td>
-                    <td class="text-center">
-                        10 |
-                        2 |
-                        20.00%                    </td>
-                </tr>
-                <tr>
-                    <td class="text-left">Conversions</td>
-                    <td class="text-center">
-                        0.0                    </td>
-                </tr>
-                <tr>
-                    <td class="text-left">Conversion Value</td>
-                    <td class="text-center">
-                        €0.00                    </td>
-                </tr>
-                <tr>
-                    <td class="text-left">CPO</td>
-                    <td class="text-center">
-                        --                    </td>
-                </tr>
-                <tr>
-                    <td class="text-left">ROI</td>
-                    <td class="text-center">
-                        0.00%                    </td>
-                </tr>
-                <tr>
-                    <td class="text-left">MR</td>
-                    <td class="text-center">
-                        --                    </td>
-                </tr>
-                <tr>
-                    <td class="text-left">Keywords without Conv. (Days)</td>
-                    <td class="text-center">
-                        3 (90) |
-                        5 (180) |
-                        3 (365)
-                    </td>
-                    <td>
-                        <a href="data-filters/set-filter?filter%5B0%5D%5Bproperty%5D=ad_group_id&filter%5B0%5D%5Boperator%5D=eq&filter%5B0%5D%5Bvalue%5D=61593793402&filter%5B1%5D%5Bproperty%5D=date_range_1_conversions&filter%5B1%5D%5Boperator%5D=eq&filter%5B1%5D%5Bvalue%5D=0&configPath=DataFilters.NonConvertedKeywords.1&target=NonConvertedKeywords.index&date_range=1" target="_blank" data-toggle="tooltip" class="external btn btn-outline-primary btn-sm m-0 waves-effect bg-info text-nowrap" title="Analyse 0 Conv. Keywords">Analyse <i class="fa fa-caret-right"></i></a>                    </td>
-
-                </tr>
-                <tr>
-                    <td class="text-left">Searchterms without Conv. (Days)</td>
-                    <td class="text-center">
-                        6 (90) | 18 (180 ) | 25 (365)
-                    </td>
-                    <td><a href="data-filters/set-filter?filter%5B0%5D%5Bproperty%5D=ad_group_id&filter%5B0%5D%5Boperator%5D=eq&filter%5B0%5D%5Bvalue%5D=61593793402&filter%5B1%5D%5Bproperty%5D=conversions&filter%5B1%5D%5Boperator%5D=eq&filter%5B1%5D%5Bvalue%5D=0&configPath=DataFilters.Searchterm.list&target=SearchTerm.index&searchterm=1" target="_blank" data-toggle="tooltip" class="external btn btn-outline-primary btn-sm m-0 waves-effect bg-info text-nowrap" title="Analyse 0 Conv. Keywords">Analyse <i class="fa fa-caret-right"></i></a></td>
-                </tr>
-                <tr>
-                    <td class="text-left">Uni-Grams without Conv. (Days)</td>
-                    <td class="text-center">
-                        11 (90)
-                    </td>
-                    <td><a href="data-filters/set-filter?filter%5B0%5D%5Bproperty%5D=ad_group_id&filter%5B0%5D%5Boperator%5D=eq&filter%5B0%5D%5Bvalue%5D=61593793402&filter%5B1%5D%5Bproperty%5D=conversions&filter%5B1%5D%5Boperator%5D=eq&filter%5B1%5D%5Bvalue%5D=0&configPath=DataFilters.NgramAnalyzer.list&target=NgramAnalyzer.index" target="_blank" data-toggle="tooltip" class="external btn btn-outline-primary btn-sm m-0 waves-effect bg-info text-nowrap" title="Analyse 0 Conv. Uni Grams">Analyse <i class="fa fa-caret-right"></i></a></td>
-                </tr>
-                <!--
-                <tr>
-                    <td colspan="2">Summary of the Ad Group Performance:</td>
-                </tr>
-                -->
-                </tbody>
-            </table>
+            <div class="wrap-table-group">
+                <table class="table table-group m-t-sm m-b-none top-spender-table">
+                    <thead>
+                    <tr>
+                        <th class="table-group-heading bg-white position-relative" colspan="2">
+                            <span class="success-tag"></span>
+                            Ad Group Performance Analysis
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody class="bg-white">
+                    <!-- Keyword Row -->
+                    <tr>
+                        <td class="text-left">Costs</td>
+                        <td>€1.35</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">Impressions, Clicks, and CTR</td>
+                        <td>
+                            10 |
+                            2 |
+                            20.00%
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">Conversions</td>
+                        <td>0.0</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">Conversion Value</td>
+                        <td>€0.00</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">CPO</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">ROI</td>
+                        <td>0.00%</td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">MR</td>
+                        <td>-- </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">Keywords without Conv. (Days)</td>
+                        <td>
+                            3 (90) |
+                            5 (180) |
+                            3 (365)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">Searchterms without Conv. (Days)</td>
+                        <td>
+                            6 (90) | 18 (180 ) | 25 (365)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-left">Uni-Grams without Conv. (Days)</td>
+                        <td>
+                            11 (90)
+                        </td>
+                    </tr>
+                    <!--
+                    <tr>
+                        <td colspan="2">Summary of the Ad Group Performance:</td>
+                    </tr>
+                    -->
+                    </tbody>
+                </table>
+            </div>
         </div>
 
 
@@ -1182,268 +1327,268 @@
 
 <span id="url-overview"></span>
 <div class="ppcr-container">
-    <div class="row">
-        <!-- Adjust the width of this column based on the number of records -->
+
+    <div class="row mt-3">
+        <!-- First table always shows -->
         <div class="col-12">
-            <div class="table-responsive">
-                <table class="table table-bordered ppcr-tbl-section sticky-header m-t-sm m-b-none top-spender-table">
-                    <thead>
+            <div class="table-responsive wrap-table-group">
+            <table class="table table-group top-spender-table no-margins">
+                <thead>
                     <tr>
-                        <th class="text-center ppcr-tbl-section-th-one" colspan="12">
+                        <th class="table-group-heading bg-white position-relative" colspan="12">
+                            <span class="success-tag"></span>
                             Ad & Keyword URLs in this Ad Group (3)
                         </th>
                     </tr>
-                    </thead>
-                </table>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <!-- First table always shows -->
-        <div class="col-6">
-            <table class="table table-bordered ppcr-tbl-section sticky-header top-spender-table no-margins">
-                <thead>
-                <tr class="ppcr-tbl-section-columns">
-                    <th data-toggle="tooltip" data-title="Source">Source</th>
-                    <th data-toggle="tooltip" data-title="Url">URL</th>
-                    <th data-toggle="tooltip" data-title="Trend">Trend</th>
-                    <th data-toggle="tooltip" data-title="Structure">Structure</th>
-                    <th data-toggle="tooltip" data-title="Clicks">Clicks</th>
-                    <th data-toggle="tooltip" data-title="Cost">Cost</th>
-                    <th data-toggle="tooltip" data-title="Conversions">Conv.</th>
-                    <th data-toggle="tooltip" data-title="Status Code">Status</th>
-                    <th data-toggle="tooltip" data-title="Redirects">Red.</th>
-                    <th data-toggle="tooltip" data-title="Items">Items</th>
-                </tr>
+                    <tr class="ppcr-tbl-section-columns table-group-heading-bg">
+                        <th data-toggle="tooltip" data-title="Source">Source</th>
+                        <th data-toggle="tooltip" data-title="Url">URL</th>
+                        <th class="text-center" data-toggle="tooltip" data-title="Trend">Trend</th>
+                        <th class="text-center" data-toggle="tooltip" data-title="Structure">Structure</th>
+                        <th class="text-center" data-toggle="tooltip" data-title="Clicks">Clicks</th>
+                        <th class="text-center" data-toggle="tooltip" data-title="Cost">Cost</th>
+                        <th class="text-center" data-toggle="tooltip" data-title="Conversions">Conversions</th>
+                        <th class="text-center" data-toggle="tooltip" data-title="Status Code">Status Code</th>
+                        <th class="text-center" data-toggle="tooltip" data-title="Redirects">Redirects</th>
+                    </tr>
                 </thead>
                 <tbody class="bg-white">
-                                    <tr>
-                        <td class="text-center text-nowrap">2 x Ads</td>
-                        <td class="text-left text-nowrap" data-toggle="tooltip" data-title="https://www.crawlOPTIMIZER.com/"><a href="https://www.crawlOPTIMIZER.com/" target="_blank" style="color:#000000; text-decoration:none"><i class="fa fa-external-link"></i> https://www.crawlOPTIMIZER.com/</a></td>
-                        <td class="text-left"><a href="landing-pages/history/2" target="_blank" data-toggle="tooltip" class="external btn btn-outline-primary btn-sm m-0 waves-effect bg-info text-nowrap" title="Show URL Trend">Trend <i class="fa fa-caret-right"></i></a></td>
-                                                <td class="text-center"><a href="data-filters/set-filter?filter%5B0%5D%5Bproperty%5D=final_url_id&filter%5B0%5D%5Boperator%5D=eq&filter%5B0%5D%5Bvalue%5D=2&configPath=DataFilters.LandingPages.list&target=LandingPages.list.filter" target="_blank" data-toggle="tooltip" class="external btn btn-outline-primary btn-sm m-0 waves-effect bg-info text-nowrap" title="Show URL Structure">Structure <i class="fa fa-caret-right"></i></a></td>
+                    <tr>
+                        <td class="text-nowrap">3 x Ads</td>
+                        <td class="text-nowrap" data-toggle="tooltip" data-title="https://www.crawlOPTIMIZER.com/"><a href="https://www.crawlOPTIMIZER.com/" target="_blank" style="text-decoration:none">https://www.crawlOPTIMIZER.com/</a></td>
+                        <td class="text-center"><a href="landing-pages/history/2" target="_blank" data-toggle="tooltip" class="external btn btn-outline-primary btn-sm m-0 waves-effect bg-info text-nowrap" title="Show URL Trend">Trend</td>
+                        <td class="text-center"><a href="data-filters/set-filter?filter%5B0%5D%5Bproperty%5D=final_url_id&filter%5B0%5D%5Boperator%5D=eq&filter%5B0%5D%5Bvalue%5D=2&configPath=DataFilters.LandingPages.list&target=LandingPages.list.filter" target="_blank" data-toggle="tooltip" class="external btn btn-outline-primary btn-sm m-0 waves-effect bg-info text-nowrap" title="Show URL Structure">Structure</a></td>
                         <td class="text-center">15</td>
                         <td class="text-center">€17.37</td>
                         <td class="text-center">0</td>
-                        <td class="text-center"><a href="quality-score-insights/history/2" class="external"><span class="label http-status-ok">200</span></a></td>
-                        <td class="text-center">--</td>
+                        <td class="text-center"><span class="http-status-ok text-success">200</span></td>
                         <td class="text-center">--</td>
                     </tr>
-                                </tbody>
+                    <tr>
+                        <td class="text-nowrap">Ads</td>
+                        <td class="text-nowrap" data-toggle="tooltip" data-title="https://www.crawloptimizer.com/features/"><a href="https://www.crawloptimizer.com/features/" target="_blank" style="text-decoration:none">https://www.crawloptimizer.com/features/</a></td>
+                        <td class="text-center"><a href="landing-pages/history/2" target="_blank" data-toggle="tooltip" class="external btn btn-outline-primary btn-sm m-0 waves-effect bg-info text-nowrap" title="Show URL Trend">Trend</td>
+                        <td class="text-center"><a href="data-filters/set-filter?filter%5B0%5D%5Bproperty%5D=final_url_id&filter%5B0%5D%5Boperator%5D=eq&filter%5B0%5D%5Bvalue%5D=2&configPath=DataFilters.LandingPages.list&target=LandingPages.list.filter" target="_blank" data-toggle="tooltip" class="external btn btn-outline-primary btn-sm m-0 waves-effect bg-info text-nowrap" title="Show URL Structure">Structure</a></td>
+                        <td class="text-center">15</td>
+                        <td class="text-center">€17.37</td>
+                        <td class="text-center">0</td>
+                        <td class="text-center"><span class="http-status-ok text-success">200</span></td>
+                        <td class="text-center">--</td>
+                    </tr>
+                </tbody>
             </table>
+            </div>
         </div>
-        <!-- Second table only shows if there are records for the second half -->
-                    <div class="col-6">
-                <table class="table table-bordered ppcr-tbl-section sticky-header top-spender-table no-margins">
-                    <thead>
-                    <tr class="ppcr-tbl-section-columns">
-                        <th data-toggle="tooltip" data-title="Source">Source</th>
-                        <th data-toggle="tooltip" data-title="Url">URL</th>
-                        <th data-toggle="tooltip" data-title="Trend">Trend</th>
-                        <th data-toggle="tooltip" data-title="Structure">Structure</th>
-                        <th data-toggle="tooltip" data-title="Clicks">Clicks</th>
-                        <th data-toggle="tooltip" data-title="Cost">Cost</th>
-                        <th data-toggle="tooltip" data-title="Conversions">Conv.</th>
-                        <th data-toggle="tooltip" data-title="Status Code">Status</th>
-                        <th data-toggle="tooltip" data-title="Redirects">Red.</th>
-                        <th data-toggle="tooltip" data-title="Items">Items</th>
-                    </tr>
-                    </thead>
-                    <tbody class="bg-white">
-                                            <tr>
-                            <td class="text-center text-nowrap">Ad</td>
-                            <td class="text-left text-nowrap" data-toggle="tooltip" data-title="https://www.crawloptimizer.com/crawl-budget-optimierung/"><a href="https://www.crawloptimizer.com/crawl-budget-optimierung/" target="_blank" style="color:#000000; text-decoration:none"><i class="fa fa-external-link"></i> https://www.crawloptimizer.com/crawl-...</a></td>
-                            <td class="text-left">
-                                <a href="landing-pages/history/1" target="_blank" data-toggle="tooltip" class="external btn btn-outline-primary btn-sm m-0 waves-effect bg-info text-nowrap" title="Show URL Trend">Trend <i class="fa fa-caret-right"></i></a></td>
-                                                        <td class="text-center"><a href="data-filters/set-filter?filter%5B0%5D%5Bproperty%5D=final_url_id&filter%5B0%5D%5Boperator%5D=eq&filter%5B0%5D%5Bvalue%5D=1&configPath=DataFilters.LandingPages.list&target=LandingPages.list.filter" target="_blank" data-toggle="tooltip" class="external btn btn-outline-primary btn-sm m-0 waves-effect bg-info text-nowrap" title="Show URL Structure">Structure <i class="fa fa-caret-right"></i></a></td>
-                            <td class="text-center">26</td>
-                            <td class="text-center">€29.03</td>
-                            <td class="text-center">0</td>
-                            <td class="text-center"><a href="quality-score-insights/history/1" class="external"><span class="label http-status-ok">200</span></a></td>
-                            <td class="text-center">--</td>
-                            <td class="text-center">--</td>
-                        </tr>
-                                        </tbody>
-                </table>
-            </div>
-            </div>
+    </div>
 </div>
 
 
-
-
-
-
-
-
 <span id="keyword-overview"></span>
-<div class="ppcr-container">
+<div class="ppcr-container mt-3">
     <div class="row">
-                    <div class="col-12">
-                <div class="table-responsive">
-                    <table class="table table-bordered ppcr-tbl-section sticky-header m-t-sm m-b-none top-spender-table">
-                        <thead>
+        <div class="col-md-12">
+            <div class="table-responsive wrap-table-group">
+                <table class="table table-group top-spender-table no-margins">
+                    <thead>
                         <tr>
-                            <th class="text-center ppcr-tbl-section-th-one" colspan="20">Keywords in this Ad Group (9)</th>
+                            <th class="table-group-heading bg-white position-relative" colspan="10">
+                                <span class="success-tag"></span>
+                                Keywords in this Ad Group (9)
+                            </th>
                         </tr>
-                        </thead>
-                    </table>
-                </div>
-            </div>
-            </div>
-    <div class="row">
-                                    <div class="col-md-6">
-                    <div class="table-responsive">
-                        <table class="table table-bordered ppcr-tbl-section sticky-header top-spender-table no-margins">
-                            <thead>
-                            <tr class="ppcr-tbl-section-columns">
-                                <th style="width: 30%" class="text-left">Keyword</th>
-                                <th style="width: 5%" class="text-center ppcr-tbl-section-th-border-left-one">QS</th>
-                                                                    <th style="width: 5%" class="text-center">Ad Relev.</th>
-                                                                    <th style="width: 5%" class="text-center">Exp. CTR</th>
-                                                                    <th style="width: 5%" class="text-center">LP Exp.</th>
-                                                                <th style="width: 10%" class="text-right">Impressions</th>
-                                <th style="width: 10%" class="text-right">Clicks</th>
-                                <th style="width: 10%" class="text-right">Cost</th>
-                                <th style="width: 10%" class="text-right">Conversions</th>
-                                <th style="width: 10%" class="text-right text-nowrap">Conv. Value</th>
-                            </tr>
-                            </thead>
+                        <tr class="ppcr-tbl-section-columns table-group-heading-bg">
+                            <th>Keyword</th>
+                            <th class="text-center">QS</th>
+                            <th class="text-center">Ad Relev.</th>
+                            <th class="text-center">Exp. CTR</th>
+                            <th class="text-center">LP Exp.</th>
+                            <th class="text-center">Impressions</th>
+                            <th class="text-center">Clicks</th>
+                            <th class="text-center">Cost</th>
+                            <th class="text-center">Conversions</th>
+                            <th class="text-center text-nowrap">Conv. Value</th>
+                        </tr>
+                    </thead>
                             <tbody>
-                                                            <tr>
+                                <tr>
                                     <td class="text-left text-nowrap">
                                         <div class="btn-group dropdown-element">
-    <span data-toggle="collapse" class="tooltip-init dropdown-toggle pointer" type="button" data-target="#dropdown-menu-03078aeb-16d8-4d06-b4bd-c86dc4a6084c" aria-expanded="false" aria-controls="#dropdown-menu-03078aeb-16d8-4d06-b4bd-c86dc4a6084c"
-          title="[crawloptimizer]">
-        <i class="fa fa-fw fa-circle google-status google-status-enabled keyword-status-icon-61593793402-491473425028" title="" data-toggle="tooltip"></i>        [crawloptimizer] <i class="fa fa-caret-down"></i>
-    </span>         <ul id="dropdown-menu-03078aeb-16d8-4d06-b4bd-c86dc4a6084c" class="dropdown-menu keyword-action-dropdown" data-ad-group-id="61593793402" data-keyword-id="491473425028">
-        <script type="application/json" class="keyword-data">{"account_id":6912853797,"campaign_id":1587873047,"campaign_name":"crawlOPTIMIZER - neu","ad_group_id":61593793402,"ad_group_name":"Brand COPT","keyword_id":491473425028,"keyword_name":"crawloptimizer","keyword_match_type":"EXACT","keyword_decorated_name":"[crawloptimizer]","campaign_status":"ENABLED","ad_group_status":"ENABLED","keyword_status":"ENABLED","advertising_channel_type":"SEARCH","is_negative":false,"is_brand":false,"aggregated_active":true,"created":"2021-05-12 01:01:07","modified":"2024-06-04 01:14:02","similarity":45.75,"scheduled_keyword_mutation":null}</script>
-        <li><a href="#pauseKeyword" class="external action-enable-keyword active no-action" title="Activate Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-circle google-status google-status-enabled " title="" data-toggle="tooltip"></i> Active</a></li>
-        <li><a href="#enableKeyword" class="external action-pause-keyword " title="Pause Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-pause-circle google-status google-status-paused " title="" data-toggle="tooltip"></i> Pause</a></li>
-        <li role="separator" class="dropdown-divider"></li>
-        <li><a href="#negativeKeyword" class="external action-set-keyword-negative" title="Set keyword as negative" data-toggle="tooltip">Set as Negative Keyword</a></li>
-                    <li role="separator" class="dropdown-divider"></li>
-            <li><a href="https://ads.google.com/aw/ads/new/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402&adTypeId=36" target="_blank" class="external">Create new Ad</a></li>
-                <li role="separator" class="dropdown-divider"></li>
-        <li>
-            <span type="button" data-toggle="collapse" data-target="#collapse-ppcr-03078aeb-16d8-4d06-b4bd-c86dc4a6084c" aria-expanded="false" aria-controls="collapse-ppcr-61593793402-491473425028">
-                Show more Details<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
-            </span>
-            <div class="collapse inner-menu-collapse collapse-right" id="collapse-ppcr-03078aeb-16d8-4d06-b4bd-c86dc4a6084c">
-                <ul class="dropdown-menu ppcr-dropdown">
-                    <li><a href="quality-score/keyword/61593793402/491473425028" class="external" title="Show Keyword Details" data-toggle="tooltip">Show Keyword Details</a></li>
-                    <li><a href="quality-score/ad-group/61593793402" class="external" data-toggle="tooltip" title="Ad Group: Brand COPT">Show Ad Group Details</a></li>
-                    <li><a href="data-filters/set-filter?filter%5B0%5D%5Bproperty%5D=ad_group_id&amp;filter%5B0%5D%5Boperator%5D=eq&amp;filter%5B0%5D%5Bvalue%5D=61593793402&amp;configPath=DataFilters.Searchterm.list&amp;target=SearchTerm.index" class="">Show Search Terms</a></li>
-                    <li><a href="quality-score/campaign/1587873047" class="external" data-toggle="tooltip" title="Campaign: crawlOPTIMIZER - neu">Show Campaign Details</a></li>
-                    <li><a href="landing-pages/keyword-list/61593793402/491473425028?reset=filter" class="external" title="Show Keyword Landing Pages" data-toggle="tooltip">Show Keyword Landing Pages</a></li>
-                </ul>
-            </div>
-        </li>
-                <li role="separator" class="dropdown-divider"></li>
-        <li>
-            <span type="button" data-toggle="collapse" data-target="#collapse-gads-03078aeb-16d8-4d06-b4bd-c86dc4a6084c" aria-expanded="false" aria-controls="collapse-gads-61593793402-491473425028">
-                Links to Google Ads<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
-            </span>
-            <div class="collapse inner-menu-collapse collapse-right" id="collapse-gads-03078aeb-16d8-4d06-b4bd-c86dc4a6084c">
-                <ul class="dropdown-menu gads-dropdown">
-                    <li><a href="https://ads.google.com/aw/keywords?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search Keywords</a></li>
-                    <li><a href="https://ads.google.com/aw/keywords/negative?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Negative Search Keywords</a></li>
-                    <li><a href="https://ads.google.com/aw/keywords/searchterms?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search terms</a></li>
-                    <li><a href="https://ads.google.com/aw/ads?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Ads</a></li>
-                    <li><a href="https://ads.google.com/aw/audiences?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Audiences</a></li>
-                    <li><a href="https://ads.google.com/aw/settings/adgroups/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Settings</a></li>
-                    <li><a href="https://ads.google.com/aw/settings/campaign/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047" target="_blank" class="external">Campaign: Settings</a></li>
-                </ul>
-            </div>
-        </li>
-            </ul>
-</div>                                    </td>
-                                    <td class="text-center text-nowrap ppcr-tbl-section-td-border-left-one"><span class="badge badge-qs badge-primary">10</span></td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg fa-arrow-circle-o-up text-navy" data-toggle="tooltip" title="above average"></i></div>
-                                        </td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg fa-arrow-circle-o-up text-navy" data-toggle="tooltip" title="above average"></i></div>
-                                        </td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg fa-arrow-circle-o-up text-navy" data-toggle="tooltip" title="above average"></i></div>
-                                        </td>
-                                                                        <td class="text-right">4</td>
-                                    <td class="text-right">1</td>
-                                    <td class="text-right">€0.78</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">€0.00</td>
+                                            <span data-toggle="collapse" class="tooltip-init dropdown-toggle pointer" type="button" data-target="#dropdown-menu-03078aeb-16d8-4d06-b4bd-c86dc4a6084c" aria-expanded="false" aria-controls="#dropdown-menu-03078aeb-16d8-4d06-b4bd-c86dc4a6084c" title="[crawloptimizer]">
+                                                <i class="fa fa-fw fa-circle google-status google-status-enabled keyword-status-icon-61593793402-491473425028" title="" data-toggle="tooltip"></i> [crawloptimizer]
+                                                <span class="ml-2"><img src="img/icons/arrow-down.svg" alt="image"></span>
+                                            </span>
+                                            <ul id="dropdown-menu-03078aeb-16d8-4d06-b4bd-c86dc4a6084c" class="dropdown-menu keyword-action-dropdown" data-ad-group-id="61593793402" data-keyword-id="491473425028">
+                                                <script type="application/json" class="keyword-data">{"account_id":6912853797,"campaign_id":1587873047,"campaign_name":"crawlOPTIMIZER - neu","ad_group_id":61593793402,"ad_group_name":"Brand COPT","keyword_id":491473425028,"keyword_name":"crawloptimizer","keyword_match_type":"EXACT","keyword_decorated_name":"[crawloptimizer]","campaign_status":"ENABLED","ad_group_status":"ENABLED","keyword_status":"ENABLED","advertising_channel_type":"SEARCH","is_negative":false,"is_brand":false,"aggregated_active":true,"created":"2021-05-12 01:01:07","modified":"2024-06-04 01:14:02","similarity":45.75,"scheduled_keyword_mutation":null}</script>
+                                                <li><a href="#pauseKeyword" class="external action-enable-keyword active no-action" title="Activate Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-circle google-status google-status-enabled " title="" data-toggle="tooltip"></i> Active</a></li>
+                                                <li><a href="#enableKeyword" class="external action-pause-keyword " title="Pause Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-pause-circle google-status google-status-paused " title="" data-toggle="tooltip"></i> Pause</a></li>
+                                                <li role="separator" class="dropdown-divider"></li>
+                                                <li><a href="#negativeKeyword" class="external action-set-keyword-negative" title="Set keyword as negative" data-toggle="tooltip">Set as Negative Keyword</a></li>
+                                                <li role="separator" class="dropdown-divider"></li>
+                                                <li><a href="https://ads.google.com/aw/ads/new/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402&adTypeId=36" target="_blank" class="external">Create new Ad</a></li>
+                                                <li role="separator" class="dropdown-divider"></li>
+                                                <li>
+                                                    <span type="button" data-toggle="collapse" data-target="#collapse-ppcr-03078aeb-16d8-4d06-b4bd-c86dc4a6084c" aria-expanded="false" aria-controls="collapse-ppcr-61593793402-491473425028">
+                                                        Show more Details<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
+                                                    </span>
+                                                    <div class="collapse inner-menu-collapse collapse-right" id="collapse-ppcr-03078aeb-16d8-4d06-b4bd-c86dc4a6084c">
+                                                        <ul class="dropdown-menu ppcr-dropdown">
+                                                            <li><a href="quality-score/keyword/61593793402/491473425028" class="external" title="Show Keyword Details" data-toggle="tooltip">Show Keyword Details</a></li>
+                                                            <li><a href="quality-score/ad-group/61593793402" class="external" data-toggle="tooltip" title="Ad Group: Brand COPT">Show Ad Group Details</a></li>
+                                                            <li><a href="data-filters/set-filter?filter%5B0%5D%5Bproperty%5D=ad_group_id&amp;filter%5B0%5D%5Boperator%5D=eq&amp;filter%5B0%5D%5Bvalue%5D=61593793402&amp;configPath=DataFilters.Searchterm.list&amp;target=SearchTerm.index" class="">Show Search Terms</a></li>
+                                                            <li><a href="quality-score/campaign/1587873047" class="external" data-toggle="tooltip" title="Campaign: crawlOPTIMIZER - neu">Show Campaign Details</a></li>
+                                                            <li><a href="landing-pages/keyword-list/61593793402/491473425028?reset=filter" class="external" title="Show Keyword Landing Pages" data-toggle="tooltip">Show Keyword Landing Pages</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li role="separator" class="dropdown-divider"></li>
+                                                <li>
+                                                    <span type="button" data-toggle="collapse" data-target="#collapse-gads-03078aeb-16d8-4d06-b4bd-c86dc4a6084c" aria-expanded="false" aria-controls="collapse-gads-61593793402-491473425028">
+                                                        Links to Google Ads<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
+                                                    </span>
+                                                    <div class="collapse inner-menu-collapse collapse-right" id="collapse-gads-03078aeb-16d8-4d06-b4bd-c86dc4a6084c">
+                                                        <ul class="dropdown-menu gads-dropdown">
+                                                            <li><a href="https://ads.google.com/aw/keywords?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search Keywords</a></li>
+                                                            <li><a href="https://ads.google.com/aw/keywords/negative?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Negative Search Keywords</a></li>
+                                                            <li><a href="https://ads.google.com/aw/keywords/searchterms?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search terms</a></li>
+                                                            <li><a href="https://ads.google.com/aw/ads?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Ads</a></li>
+                                                            <li><a href="https://ads.google.com/aw/audiences?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Audiences</a></li>
+                                                            <li><a href="https://ads.google.com/aw/settings/adgroups/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Settings</a></li>
+                                                            <li><a href="https://ads.google.com/aw/settings/campaign/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047" target="_blank" class="external">Campaign: Settings</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td class="text-center text-nowrap ppcr-tbl-section-td-border-left-one">
+                                        <span class="badge badge-qs badge-primary">10</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="action-box">
+                                            <span data-toggle="tooltip" title="above average">
+                                                <svg width="10" height="13" viewBox="0 0 10 13" class="fill-success rotate-180" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9.6339 8.3839C10.122 7.89577 10.122 7.10429 9.6339 6.61616C9.14578 6.128 8.35427 6.128 7.86615 6.61616L9.6339 8.3839ZM5.00002 11.25L4.11613 12.1339C4.6043 12.622 5.39576 12.622 5.88389 12.1339L5.00002 11.25ZM2.13389 6.61616C1.64573 6.128 0.854279 6.128 0.366114 6.61616C-0.122038 7.10429 -0.122038 7.89577 0.366114 8.3839L2.13389 6.61616ZM6.25002 1.25001C6.25002 0.559652 5.6904 0 5.00002 0C4.30967 0 3.75001 0.559652 3.75001 1.25001H6.25002ZM7.86615 6.61616L4.11613 10.3662L5.88389 12.1339L9.6339 8.3839L7.86615 6.61616ZM5.88389 10.3662L2.13389 6.61616L0.366114 8.3839L4.11613 12.1339L5.88389 10.3662ZM6.25002 11.25V1.25001H3.75001V11.25H6.25002Z"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="action-box">
+                                            <span data-toggle="tooltip" title="above average">
+                                                <svg width="10" height="13" viewBox="0 0 10 13" class="fill-success rotate-180" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9.6339 8.3839C10.122 7.89577 10.122 7.10429 9.6339 6.61616C9.14578 6.128 8.35427 6.128 7.86615 6.61616L9.6339 8.3839ZM5.00002 11.25L4.11613 12.1339C4.6043 12.622 5.39576 12.622 5.88389 12.1339L5.00002 11.25ZM2.13389 6.61616C1.64573 6.128 0.854279 6.128 0.366114 6.61616C-0.122038 7.10429 -0.122038 7.89577 0.366114 8.3839L2.13389 6.61616ZM6.25002 1.25001C6.25002 0.559652 5.6904 0 5.00002 0C4.30967 0 3.75001 0.559652 3.75001 1.25001H6.25002ZM7.86615 6.61616L4.11613 10.3662L5.88389 12.1339L9.6339 8.3839L7.86615 6.61616ZM5.88389 10.3662L2.13389 6.61616L0.366114 8.3839L4.11613 12.1339L5.88389 10.3662ZM6.25002 11.25V1.25001H3.75001V11.25H6.25002Z"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="action-box">
+                                            <span data-toggle="tooltip" title="above average">
+                                                <svg width="10" height="13" viewBox="0 0 10 13" class="fill-success rotate-180" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9.6339 8.3839C10.122 7.89577 10.122 7.10429 9.6339 6.61616C9.14578 6.128 8.35427 6.128 7.86615 6.61616L9.6339 8.3839ZM5.00002 11.25L4.11613 12.1339C4.6043 12.622 5.39576 12.622 5.88389 12.1339L5.00002 11.25ZM2.13389 6.61616C1.64573 6.128 0.854279 6.128 0.366114 6.61616C-0.122038 7.10429 -0.122038 7.89577 0.366114 8.3839L2.13389 6.61616ZM6.25002 1.25001C6.25002 0.559652 5.6904 0 5.00002 0C4.30967 0 3.75001 0.559652 3.75001 1.25001H6.25002ZM7.86615 6.61616L4.11613 10.3662L5.88389 12.1339L9.6339 8.3839L7.86615 6.61616ZM5.88389 10.3662L2.13389 6.61616L0.366114 8.3839L4.11613 12.1339L5.88389 10.3662ZM6.25002 11.25V1.25001H3.75001V11.25H6.25002Z"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">€0.78</td>
+                                    <td class="text-center">0</td>
+                                    <td class="text-center">€0.00</td>
                                 </tr>
-                                                            <tr>
+                                <tr>
                                     <td class="text-left text-nowrap">
                                         <div class="btn-group dropdown-element">
-    <span data-toggle="collapse" class="tooltip-init dropdown-toggle pointer" type="button" data-target="#dropdown-menu-b4a8b642-52cd-46c1-8b9a-d6db971c34c8" aria-expanded="false" aria-controls="#dropdown-menu-b4a8b642-52cd-46c1-8b9a-d6db971c34c8"
-          title="[crawl optimizer]">
-        <i class="fa fa-fw fa-circle google-status google-status-enabled keyword-status-icon-61593793402-491473424828" title="" data-toggle="tooltip"></i>        [crawl optimizer] <i class="fa fa-caret-down"></i>
-    </span>         <ul id="dropdown-menu-b4a8b642-52cd-46c1-8b9a-d6db971c34c8" class="dropdown-menu keyword-action-dropdown" data-ad-group-id="61593793402" data-keyword-id="491473424828">
-        <script type="application/json" class="keyword-data">{"account_id":6912853797,"campaign_id":1587873047,"campaign_name":"crawlOPTIMIZER - neu","ad_group_id":61593793402,"ad_group_name":"Brand COPT","keyword_id":491473424828,"keyword_name":"crawl optimizer","keyword_match_type":"EXACT","keyword_decorated_name":"[crawl optimizer]","campaign_status":"ENABLED","ad_group_status":"ENABLED","keyword_status":"ENABLED","advertising_channel_type":"SEARCH","is_negative":false,"is_brand":false,"aggregated_active":true,"created":"2021-05-12 01:01:07","modified":"2024-06-04 01:14:02","similarity":58.25,"scheduled_keyword_mutation":null}</script>
-        <li><a href="#pauseKeyword" class="external action-enable-keyword active no-action" title="Activate Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-circle google-status google-status-enabled " title="" data-toggle="tooltip"></i> Active</a></li>
-        <li><a href="#enableKeyword" class="external action-pause-keyword " title="Pause Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-pause-circle google-status google-status-paused " title="" data-toggle="tooltip"></i> Pause</a></li>
-        <li role="separator" class="dropdown-divider"></li>
-        <li><a href="#negativeKeyword" class="external action-set-keyword-negative" title="Set keyword as negative" data-toggle="tooltip">Set as Negative Keyword</a></li>
-                    <li role="separator" class="dropdown-divider"></li>
-            <li><a href="https://ads.google.com/aw/ads/new/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402&adTypeId=36" target="_blank" class="external">Create new Ad</a></li>
-                <li role="separator" class="dropdown-divider"></li>
-        <li>
-            <span type="button" data-toggle="collapse" data-target="#collapse-ppcr-b4a8b642-52cd-46c1-8b9a-d6db971c34c8" aria-expanded="false" aria-controls="collapse-ppcr-61593793402-491473424828">
-                Show more Details<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
-            </span>
-            <div class="collapse inner-menu-collapse collapse-right" id="collapse-ppcr-b4a8b642-52cd-46c1-8b9a-d6db971c34c8">
-                <ul class="dropdown-menu ppcr-dropdown">
-                    <li><a href="quality-score/keyword/61593793402/491473424828" class="external" title="Show Keyword Details" data-toggle="tooltip">Show Keyword Details</a></li>
-                    <li><a href="quality-score/ad-group/61593793402" class="external" data-toggle="tooltip" title="Ad Group: Brand COPT">Show Ad Group Details</a></li>
-                    <li><a href="data-filters/set-filter?filter%5B0%5D%5Bproperty%5D=ad_group_id&amp;filter%5B0%5D%5Boperator%5D=eq&amp;filter%5B0%5D%5Bvalue%5D=61593793402&amp;configPath=DataFilters.Searchterm.list&amp;target=SearchTerm.index" class="">Show Search Terms</a></li>
-                    <li><a href="quality-score/campaign/1587873047" class="external" data-toggle="tooltip" title="Campaign: crawlOPTIMIZER - neu">Show Campaign Details</a></li>
-                    <li><a href="landing-pages/keyword-list/61593793402/491473424828?reset=filter" class="external" title="Show Keyword Landing Pages" data-toggle="tooltip">Show Keyword Landing Pages</a></li>
-                </ul>
-            </div>
-        </li>
-                <li role="separator" class="dropdown-divider"></li>
-        <li>
-            <span type="button" data-toggle="collapse" data-target="#collapse-gads-b4a8b642-52cd-46c1-8b9a-d6db971c34c8" aria-expanded="false" aria-controls="collapse-gads-61593793402-491473424828">
-                Links to Google Ads<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
-            </span>
-            <div class="collapse inner-menu-collapse collapse-right" id="collapse-gads-b4a8b642-52cd-46c1-8b9a-d6db971c34c8">
-                <ul class="dropdown-menu gads-dropdown">
-                    <li><a href="https://ads.google.com/aw/keywords?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search Keywords</a></li>
-                    <li><a href="https://ads.google.com/aw/keywords/negative?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Negative Search Keywords</a></li>
-                    <li><a href="https://ads.google.com/aw/keywords/searchterms?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search terms</a></li>
-                    <li><a href="https://ads.google.com/aw/ads?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Ads</a></li>
-                    <li><a href="https://ads.google.com/aw/audiences?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Audiences</a></li>
-                    <li><a href="https://ads.google.com/aw/settings/adgroups/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Settings</a></li>
-                    <li><a href="https://ads.google.com/aw/settings/campaign/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047" target="_blank" class="external">Campaign: Settings</a></li>
-                </ul>
-            </div>
-        </li>
-            </ul>
-</div>                                    </td>
-                                    <td class="text-center text-nowrap ppcr-tbl-section-td-border-left-one"><span class="badge badge-qs badge-warning">6</span></td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg fa-arrow-circle-o-down text-danger" data-toggle="tooltip" title="below average"></i></div>
-                                        </td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg fa-arrow-circle-o-right text-warning" data-toggle="tooltip" title="average"></i></div>
-                                        </td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg fa-arrow-circle-o-up text-navy" data-toggle="tooltip" title="above average"></i></div>
-                                        </td>
-                                                                        <td class="text-right">2</td>
-                                    <td class="text-right">1</td>
-                                    <td class="text-right">€0.57</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">€0.00</td>
+                                            <span data-toggle="collapse" class="tooltip-init dropdown-toggle pointer" type="button" data-target="#dropdown-menu-b4a8b642-52cd-46c1-8b9a-d6db971c34c8" aria-expanded="false" aria-controls="#dropdown-menu-b4a8b642-52cd-46c1-8b9a-d6db971c34c8" title="[crawl optimizer]">
+                                                <i class="fa fa-fw fa-circle google-status google-status-enabled keyword-status-icon-61593793402-491473424828" title="" data-toggle="tooltip"></i> [crawl optimizer]
+                                                <span class="ml-2"><img src="img/icons/arrow-down.svg" alt="image"></span>
+                                            </span>
+                                            <ul id="dropdown-menu-b4a8b642-52cd-46c1-8b9a-d6db971c34c8" class="dropdown-menu keyword-action-dropdown" data-ad-group-id="61593793402" data-keyword-id="491473424828">
+                                                <script type="application/json" class="keyword-data">{"account_id":6912853797,"campaign_id":1587873047,"campaign_name":"crawlOPTIMIZER - neu","ad_group_id":61593793402,"ad_group_name":"Brand COPT","keyword_id":491473424828,"keyword_name":"crawl optimizer","keyword_match_type":"EXACT","keyword_decorated_name":"[crawl optimizer]","campaign_status":"ENABLED","ad_group_status":"ENABLED","keyword_status":"ENABLED","advertising_channel_type":"SEARCH","is_negative":false,"is_brand":false,"aggregated_active":true,"created":"2021-05-12 01:01:07","modified":"2024-06-04 01:14:02","similarity":58.25,"scheduled_keyword_mutation":null}</script>
+                                                <li><a href="#pauseKeyword" class="external action-enable-keyword active no-action" title="Activate Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-circle google-status google-status-enabled " title="" data-toggle="tooltip"></i> Active</a></li>
+                                                <li><a href="#enableKeyword" class="external action-pause-keyword " title="Pause Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-pause-circle google-status google-status-paused " title="" data-toggle="tooltip"></i> Pause</a></li>
+                                                <li role="separator" class="dropdown-divider"></li>
+                                                <li><a href="#negativeKeyword" class="external action-set-keyword-negative" title="Set keyword as negative" data-toggle="tooltip">Set as Negative Keyword</a></li>
+                                                <li role="separator" class="dropdown-divider"></li>
+                                                <li><a href="https://ads.google.com/aw/ads/new/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402&adTypeId=36" target="_blank" class="external">Create new Ad</a></li>
+                                                <li role="separator" class="dropdown-divider"></li>
+                                                <li>
+                                                    <span type="button" data-toggle="collapse" data-target="#collapse-ppcr-b4a8b642-52cd-46c1-8b9a-d6db971c34c8" aria-expanded="false" aria-controls="collapse-ppcr-61593793402-491473424828">
+                                                        Show more Details<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
+                                                    </span>
+                                                    <div class="collapse inner-menu-collapse collapse-right" id="collapse-ppcr-b4a8b642-52cd-46c1-8b9a-d6db971c34c8">
+                                                        <ul class="dropdown-menu ppcr-dropdown">
+                                                            <li><a href="quality-score/keyword/61593793402/491473424828" class="external" title="Show Keyword Details" data-toggle="tooltip">Show Keyword Details</a></li>
+                                                            <li><a href="quality-score/ad-group/61593793402" class="external" data-toggle="tooltip" title="Ad Group: Brand COPT">Show Ad Group Details</a></li>
+                                                            <li><a href="data-filters/set-filter?filter%5B0%5D%5Bproperty%5D=ad_group_id&amp;filter%5B0%5D%5Boperator%5D=eq&amp;filter%5B0%5D%5Bvalue%5D=61593793402&amp;configPath=DataFilters.Searchterm.list&amp;target=SearchTerm.index" class="">Show Search Terms</a></li>
+                                                            <li><a href="quality-score/campaign/1587873047" class="external" data-toggle="tooltip" title="Campaign: crawlOPTIMIZER - neu">Show Campaign Details</a></li>
+                                                            <li><a href="landing-pages/keyword-list/61593793402/491473424828?reset=filter" class="external" title="Show Keyword Landing Pages" data-toggle="tooltip">Show Keyword Landing Pages</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li role="separator" class="dropdown-divider"></li>
+                                                <li>
+                                                    <span type="button" data-toggle="collapse" data-target="#collapse-gads-b4a8b642-52cd-46c1-8b9a-d6db971c34c8" aria-expanded="false" aria-controls="collapse-gads-61593793402-491473424828">
+                                                        Links to Google Ads<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
+                                                    </span>
+                                                    <div class="collapse inner-menu-collapse collapse-right" id="collapse-gads-b4a8b642-52cd-46c1-8b9a-d6db971c34c8">
+                                                        <ul class="dropdown-menu gads-dropdown">
+                                                            <li><a href="https://ads.google.com/aw/keywords?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search Keywords</a></li>
+                                                            <li><a href="https://ads.google.com/aw/keywords/negative?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Negative Search Keywords</a></li>
+                                                            <li><a href="https://ads.google.com/aw/keywords/searchterms?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search terms</a></li>
+                                                            <li><a href="https://ads.google.com/aw/ads?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Ads</a></li>
+                                                            <li><a href="https://ads.google.com/aw/audiences?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Audiences</a></li>
+                                                            <li><a href="https://ads.google.com/aw/settings/adgroups/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Settings</a></li>
+                                                            <li><a href="https://ads.google.com/aw/settings/campaign/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047" target="_blank" class="external">Campaign: Settings</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td class="text-center text-nowrap ppcr-tbl-section-td-border-left-one">
+                                        <span class="badge badge-qs badge-warning">6</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="action-box">
+                                            <span data-toggle="tooltip" title="below average">
+                                                <svg width="10" height="13" viewBox="0 0 10 13" class="fill-error" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9.6339 8.3839C10.122 7.89577 10.122 7.10429 9.6339 6.61616C9.14578 6.128 8.35427 6.128 7.86615 6.61616L9.6339 8.3839ZM5.00002 11.25L4.11613 12.1339C4.6043 12.622 5.39576 12.622 5.88389 12.1339L5.00002 11.25ZM2.13389 6.61616C1.64573 6.128 0.854279 6.128 0.366114 6.61616C-0.122038 7.10429 -0.122038 7.89577 0.366114 8.3839L2.13389 6.61616ZM6.25002 1.25001C6.25002 0.559652 5.6904 0 5.00002 0C4.30967 0 3.75001 0.559652 3.75001 1.25001H6.25002ZM7.86615 6.61616L4.11613 10.3662L5.88389 12.1339L9.6339 8.3839L7.86615 6.61616ZM5.88389 10.3662L2.13389 6.61616L0.366114 8.3839L4.11613 12.1339L5.88389 10.3662ZM6.25002 11.25V1.25001H3.75001V11.25H6.25002Z"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="action-box">
+                                            <span data-toggle="tooltip" title="above average">
+                                                <svg width="10" height="13" viewBox="0 0 10 13" class="fill-warning rotate-90" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9.6339 8.3839C10.122 7.89577 10.122 7.10429 9.6339 6.61616C9.14578 6.128 8.35427 6.128 7.86615 6.61616L9.6339 8.3839ZM5.00002 11.25L4.11613 12.1339C4.6043 12.622 5.39576 12.622 5.88389 12.1339L5.00002 11.25ZM2.13389 6.61616C1.64573 6.128 0.854279 6.128 0.366114 6.61616C-0.122038 7.10429 -0.122038 7.89577 0.366114 8.3839L2.13389 6.61616ZM6.25002 1.25001C6.25002 0.559652 5.6904 0 5.00002 0C4.30967 0 3.75001 0.559652 3.75001 1.25001H6.25002ZM7.86615 6.61616L4.11613 10.3662L5.88389 12.1339L9.6339 8.3839L7.86615 6.61616ZM5.88389 10.3662L2.13389 6.61616L0.366114 8.3839L4.11613 12.1339L5.88389 10.3662ZM6.25002 11.25V1.25001H3.75001V11.25H6.25002Z"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="action-box">
+                                            <span data-toggle="tooltip" title="above average">
+                                                <svg width="10" height="13" viewBox="0 0 10 13" class="fill-error" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9.6339 8.3839C10.122 7.89577 10.122 7.10429 9.6339 6.61616C9.14578 6.128 8.35427 6.128 7.86615 6.61616L9.6339 8.3839ZM5.00002 11.25L4.11613 12.1339C4.6043 12.622 5.39576 12.622 5.88389 12.1339L5.00002 11.25ZM2.13389 6.61616C1.64573 6.128 0.854279 6.128 0.366114 6.61616C-0.122038 7.10429 -0.122038 7.89577 0.366114 8.3839L2.13389 6.61616ZM6.25002 1.25001C6.25002 0.559652 5.6904 0 5.00002 0C4.30967 0 3.75001 0.559652 3.75001 1.25001H6.25002ZM7.86615 6.61616L4.11613 10.3662L5.88389 12.1339L9.6339 8.3839L7.86615 6.61616ZM5.88389 10.3662L2.13389 6.61616L0.366114 8.3839L4.11613 12.1339L5.88389 10.3662ZM6.25002 11.25V1.25001H3.75001V11.25H6.25002Z"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">2</td>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center">€0.57</td>
+                                    <td class="text-center">0</td>
+                                    <td class="text-center">€0.00</td>
                                 </tr>
-                                                            <tr>
+                                <tr>
                                     <td class="text-left text-nowrap">
                                         <div class="btn-group dropdown-element">
     <span data-toggle="collapse" class="tooltip-init dropdown-toggle pointer" type="button" data-target="#dropdown-menu-f1feca34-a593-4100-8372-4d8467a63947" aria-expanded="false" aria-controls="#dropdown-menu-f1feca34-a593-4100-8372-4d8467a63947"
           title="[crawl optimiser]">
-        <i class="fa fa-fw fa-circle google-status google-status-enabled keyword-status-icon-61593793402-491473424788" title="" data-toggle="tooltip"></i>        [crawl optimiser] <i class="fa fa-caret-down"></i>
+        <i class="fa fa-fw fa-circle google-status google-status-enabled keyword-status-icon-61593793402-491473424788" title="" data-toggle="tooltip"></i>        [crawl optimiser]
+        <span class="ml-2"><img src="img/icons/arrow-down.svg" alt="image"></span>
     </span>         <ul id="dropdown-menu-f1feca34-a593-4100-8372-4d8467a63947" class="dropdown-menu keyword-action-dropdown" data-ad-group-id="61593793402" data-keyword-id="491473424788">
         <script type="application/json" class="keyword-data">{"account_id":6912853797,"campaign_id":1587873047,"campaign_name":"crawlOPTIMIZER - neu","ad_group_id":61593793402,"ad_group_name":"Brand COPT","keyword_id":491473424788,"keyword_name":"crawl optimiser","keyword_match_type":"EXACT","keyword_decorated_name":"[crawl optimiser]","campaign_status":"ENABLED","ad_group_status":"ENABLED","keyword_status":"ENABLED","advertising_channel_type":"SEARCH","is_negative":false,"is_brand":false,"aggregated_active":true,"created":"2021-05-12 01:01:07","modified":"2024-06-04 01:14:02","similarity":58.25,"scheduled_keyword_mutation":null}</script>
         <li><a href="#pauseKeyword" class="external action-enable-keyword active no-action" title="Activate Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-circle google-status google-status-enabled " title="" data-toggle="tooltip"></i> Active</a></li>
@@ -1496,423 +1641,18 @@
                                                                             <td class="text-center">
                                             <div class="action-box"><i class="fa fa-lg  " data-toggle="tooltip" title="Not specified"></i></div>
                                         </td>
-                                                                        <td class="text-right">0</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">--</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">--</td>
+                                    <td class="text-center">0</td>
+                                    <td class="text-center">0</td>
+                                    <td class="text-center">--</td>
+                                    <td class="text-center">0</td>
+                                    <td class="text-center">--</td>
                                 </tr>
-                                                            <tr>
-                                    <td class="text-left text-nowrap">
-                                        <div class="btn-group dropdown-element">
-    <span data-toggle="collapse" class="tooltip-init dropdown-toggle pointer" type="button" data-target="#dropdown-menu-63693679-d6b5-4919-b425-005070e82721" aria-expanded="false" aria-controls="#dropdown-menu-63693679-d6b5-4919-b425-005070e82721"
-          title="+crawl +optimiser">
-        <i class="fa fa-fw fa-circle google-status google-status-enabled keyword-status-icon-61593793402-567504124734" title="" data-toggle="tooltip"></i>        +crawl +optimiser <i class="fa fa-caret-down"></i>
-    </span>         <ul id="dropdown-menu-63693679-d6b5-4919-b425-005070e82721" class="dropdown-menu keyword-action-dropdown" data-ad-group-id="61593793402" data-keyword-id="567504124734">
-        <script type="application/json" class="keyword-data">{"account_id":6912853797,"campaign_id":1587873047,"campaign_name":"crawlOPTIMIZER - neu","ad_group_id":61593793402,"ad_group_name":"Brand COPT","keyword_id":567504124734,"keyword_name":"+crawl +optimiser","keyword_match_type":"BROAD","keyword_decorated_name":"+crawl +optimiser","campaign_status":"ENABLED","ad_group_status":"ENABLED","keyword_status":"ENABLED","advertising_channel_type":"SEARCH","is_negative":false,"is_brand":false,"aggregated_active":true,"created":"2021-05-12 01:01:07","modified":"2024-06-04 01:14:03","similarity":58.25,"scheduled_keyword_mutation":null}</script>
-        <li><a href="#pauseKeyword" class="external action-enable-keyword active no-action" title="Activate Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-circle google-status google-status-enabled " title="" data-toggle="tooltip"></i> Active</a></li>
-        <li><a href="#enableKeyword" class="external action-pause-keyword " title="Pause Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-pause-circle google-status google-status-paused " title="" data-toggle="tooltip"></i> Pause</a></li>
-        <li role="separator" class="dropdown-divider"></li>
-        <li><a href="#negativeKeyword" class="external action-set-keyword-negative" title="Set keyword as negative" data-toggle="tooltip">Set as Negative Keyword</a></li>
-                    <li role="separator" class="dropdown-divider"></li>
-            <li><a href="https://ads.google.com/aw/ads/new/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402&adTypeId=36" target="_blank" class="external">Create new Ad</a></li>
-                <li role="separator" class="dropdown-divider"></li>
-        <li>
-            <span type="button" data-toggle="collapse" data-target="#collapse-ppcr-63693679-d6b5-4919-b425-005070e82721" aria-expanded="false" aria-controls="collapse-ppcr-61593793402-567504124734">
-                Show more Details<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
-            </span>
-            <div class="collapse inner-menu-collapse collapse-right" id="collapse-ppcr-63693679-d6b5-4919-b425-005070e82721">
-                <ul class="dropdown-menu ppcr-dropdown">
-                    <li><a href="quality-score/keyword/61593793402/567504124734" class="external" title="Show Keyword Details" data-toggle="tooltip">Show Keyword Details</a></li>
-                    <li><a href="quality-score/ad-group/61593793402" class="external" data-toggle="tooltip" title="Ad Group: Brand COPT">Show Ad Group Details</a></li>
-                    <li><a href="data-filters/set-filter?filter%5B0%5D%5Bproperty%5D=ad_group_id&amp;filter%5B0%5D%5Boperator%5D=eq&amp;filter%5B0%5D%5Bvalue%5D=61593793402&amp;configPath=DataFilters.Searchterm.list&amp;target=SearchTerm.index" class="">Show Search Terms</a></li>
-                    <li><a href="quality-score/campaign/1587873047" class="external" data-toggle="tooltip" title="Campaign: crawlOPTIMIZER - neu">Show Campaign Details</a></li>
-                    <li><a href="landing-pages/keyword-list/61593793402/567504124734?reset=filter" class="external" title="Show Keyword Landing Pages" data-toggle="tooltip">Show Keyword Landing Pages</a></li>
-                </ul>
-            </div>
-        </li>
-                <li role="separator" class="dropdown-divider"></li>
-        <li>
-            <span type="button" data-toggle="collapse" data-target="#collapse-gads-63693679-d6b5-4919-b425-005070e82721" aria-expanded="false" aria-controls="collapse-gads-61593793402-567504124734">
-                Links to Google Ads<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
-            </span>
-            <div class="collapse inner-menu-collapse collapse-right" id="collapse-gads-63693679-d6b5-4919-b425-005070e82721">
-                <ul class="dropdown-menu gads-dropdown">
-                    <li><a href="https://ads.google.com/aw/keywords?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search Keywords</a></li>
-                    <li><a href="https://ads.google.com/aw/keywords/negative?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Negative Search Keywords</a></li>
-                    <li><a href="https://ads.google.com/aw/keywords/searchterms?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search terms</a></li>
-                    <li><a href="https://ads.google.com/aw/ads?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Ads</a></li>
-                    <li><a href="https://ads.google.com/aw/audiences?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Audiences</a></li>
-                    <li><a href="https://ads.google.com/aw/settings/adgroups/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Settings</a></li>
-                    <li><a href="https://ads.google.com/aw/settings/campaign/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047" target="_blank" class="external">Campaign: Settings</a></li>
-                </ul>
-            </div>
-        </li>
-            </ul>
-</div>                                    </td>
-                                    <td class="text-center text-nowrap ppcr-tbl-section-td-border-left-one"><span class="badge badge-qs ">0</span></td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg  " data-toggle="tooltip" title="Not specified"></i></div>
-                                        </td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg  " data-toggle="tooltip" title="Not specified"></i></div>
-                                        </td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg  " data-toggle="tooltip" title="Not specified"></i></div>
-                                        </td>
-                                                                        <td class="text-right">0</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">--</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">--</td>
-                                </tr>
-                                                            <tr>
-                                    <td class="text-left text-nowrap">
-                                        <div class="btn-group dropdown-element">
-    <span data-toggle="collapse" class="tooltip-init dropdown-toggle pointer" type="button" data-target="#dropdown-menu-e3889c77-4ca7-463a-b1f0-928dce0a616e" aria-expanded="false" aria-controls="#dropdown-menu-e3889c77-4ca7-463a-b1f0-928dce0a616e"
-          title="[logrunner]">
-        <i class="fa fa-fw fa-circle google-status google-status-enabled keyword-status-icon-61593793402-572968740887" title="" data-toggle="tooltip"></i>        [logrunner] <i class="fa fa-caret-down"></i>
-    </span>         <ul id="dropdown-menu-e3889c77-4ca7-463a-b1f0-928dce0a616e" class="dropdown-menu keyword-action-dropdown" data-ad-group-id="61593793402" data-keyword-id="572968740887">
-        <script type="application/json" class="keyword-data">{"account_id":6912853797,"campaign_id":1587873047,"campaign_name":"crawlOPTIMIZER - neu","ad_group_id":61593793402,"ad_group_name":"Brand COPT","keyword_id":572968740887,"keyword_name":"logrunner","keyword_match_type":"EXACT","keyword_decorated_name":"[logrunner]","campaign_status":"ENABLED","ad_group_status":"ENABLED","keyword_status":"ENABLED","advertising_channel_type":"SEARCH","is_negative":false,"is_brand":false,"aggregated_active":true,"created":"2021-05-12 01:01:07","modified":"2024-06-04 01:14:03","similarity":0,"scheduled_keyword_mutation":null}</script>
-        <li><a href="#pauseKeyword" class="external action-enable-keyword active no-action" title="Activate Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-circle google-status google-status-enabled " title="" data-toggle="tooltip"></i> Active</a></li>
-        <li><a href="#enableKeyword" class="external action-pause-keyword " title="Pause Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-pause-circle google-status google-status-paused " title="" data-toggle="tooltip"></i> Pause</a></li>
-        <li role="separator" class="dropdown-divider"></li>
-        <li><a href="#negativeKeyword" class="external action-set-keyword-negative" title="Set keyword as negative" data-toggle="tooltip">Set as Negative Keyword</a></li>
-                    <li role="separator" class="dropdown-divider"></li>
-            <li><a href="https://ads.google.com/aw/ads/new/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402&adTypeId=36" target="_blank" class="external">Create new Ad</a></li>
-                <li role="separator" class="dropdown-divider"></li>
-        <li>
-            <span type="button" data-toggle="collapse" data-target="#collapse-ppcr-e3889c77-4ca7-463a-b1f0-928dce0a616e" aria-expanded="false" aria-controls="collapse-ppcr-61593793402-572968740887">
-                Show more Details<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
-            </span>
-            <div class="collapse inner-menu-collapse collapse-right" id="collapse-ppcr-e3889c77-4ca7-463a-b1f0-928dce0a616e">
-                <ul class="dropdown-menu ppcr-dropdown">
-                    <li><a href="quality-score/keyword/61593793402/572968740887" class="external" title="Show Keyword Details" data-toggle="tooltip">Show Keyword Details</a></li>
-                    <li><a href="quality-score/ad-group/61593793402" class="external" data-toggle="tooltip" title="Ad Group: Brand COPT">Show Ad Group Details</a></li>
-                    <li><a href="data-filters/set-filter?filter%5B0%5D%5Bproperty%5D=ad_group_id&amp;filter%5B0%5D%5Boperator%5D=eq&amp;filter%5B0%5D%5Bvalue%5D=61593793402&amp;configPath=DataFilters.Searchterm.list&amp;target=SearchTerm.index" class="">Show Search Terms</a></li>
-                    <li><a href="quality-score/campaign/1587873047" class="external" data-toggle="tooltip" title="Campaign: crawlOPTIMIZER - neu">Show Campaign Details</a></li>
-                    <li><a href="landing-pages/keyword-list/61593793402/572968740887?reset=filter" class="external" title="Show Keyword Landing Pages" data-toggle="tooltip">Show Keyword Landing Pages</a></li>
-                </ul>
-            </div>
-        </li>
-                <li role="separator" class="dropdown-divider"></li>
-        <li>
-            <span type="button" data-toggle="collapse" data-target="#collapse-gads-e3889c77-4ca7-463a-b1f0-928dce0a616e" aria-expanded="false" aria-controls="collapse-gads-61593793402-572968740887">
-                Links to Google Ads<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
-            </span>
-            <div class="collapse inner-menu-collapse collapse-right" id="collapse-gads-e3889c77-4ca7-463a-b1f0-928dce0a616e">
-                <ul class="dropdown-menu gads-dropdown">
-                    <li><a href="https://ads.google.com/aw/keywords?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search Keywords</a></li>
-                    <li><a href="https://ads.google.com/aw/keywords/negative?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Negative Search Keywords</a></li>
-                    <li><a href="https://ads.google.com/aw/keywords/searchterms?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search terms</a></li>
-                    <li><a href="https://ads.google.com/aw/ads?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Ads</a></li>
-                    <li><a href="https://ads.google.com/aw/audiences?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Audiences</a></li>
-                    <li><a href="https://ads.google.com/aw/settings/adgroups/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Settings</a></li>
-                    <li><a href="https://ads.google.com/aw/settings/campaign/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047" target="_blank" class="external">Campaign: Settings</a></li>
-                </ul>
-            </div>
-        </li>
-            </ul>
-</div>                                    </td>
-                                    <td class="text-center text-nowrap ppcr-tbl-section-td-border-left-one"><span class="badge badge-qs ">0</span></td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg  " data-toggle="tooltip" title="Not specified"></i></div>
-                                        </td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg  " data-toggle="tooltip" title="Not specified"></i></div>
-                                        </td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg  " data-toggle="tooltip" title="Not specified"></i></div>
-                                        </td>
-                                                                        <td class="text-right">0</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">--</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">--</td>
-                                </tr>
-                                                        </tbody>
+                            </tbody>
                         </table>
-                    </div>
-                </div>
-                            <div class="col-md-6">
-                    <div class="table-responsive">
-                        <table class="table table-bordered ppcr-tbl-section sticky-header top-spender-table no-margins">
-                            <thead>
-                            <tr class="ppcr-tbl-section-columns">
-                                <th style="width: 30%" class="text-left">Keyword</th>
-                                <th style="width: 5%" class="text-center ppcr-tbl-section-th-border-left-one">QS</th>
-                                                                    <th style="width: 5%" class="text-center">Ad Relev.</th>
-                                                                    <th style="width: 5%" class="text-center">Exp. CTR</th>
-                                                                    <th style="width: 5%" class="text-center">LP Exp.</th>
-                                                                <th style="width: 10%" class="text-right">Impressions</th>
-                                <th style="width: 10%" class="text-right">Clicks</th>
-                                <th style="width: 10%" class="text-right">Cost</th>
-                                <th style="width: 10%" class="text-right">Conversions</th>
-                                <th style="width: 10%" class="text-right text-nowrap">Conv. Value</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                                                            <tr>
-                                    <td class="text-left text-nowrap">
-                                        <div class="btn-group dropdown-element">
-    <span data-toggle="collapse" class="tooltip-init dropdown-toggle pointer" type="button" data-target="#dropdown-menu-5b3431b2-bab9-4d55-9725-2eeb28b1e7f3" aria-expanded="false" aria-controls="#dropdown-menu-5b3431b2-bab9-4d55-9725-2eeb28b1e7f3"
-          title="+crawl +optimizer">
-        <i class="fa fa-fw fa-circle google-status google-status-enabled keyword-status-icon-61593793402-533493013390" title="" data-toggle="tooltip"></i>        +crawl +optimizer <i class="fa fa-caret-down"></i>
-    </span>         <ul id="dropdown-menu-5b3431b2-bab9-4d55-9725-2eeb28b1e7f3" class="dropdown-menu keyword-action-dropdown" data-ad-group-id="61593793402" data-keyword-id="533493013390">
-        <script type="application/json" class="keyword-data">{"account_id":6912853797,"campaign_id":1587873047,"campaign_name":"crawlOPTIMIZER - neu","ad_group_id":61593793402,"ad_group_name":"Brand COPT","keyword_id":533493013390,"keyword_name":"+crawl +optimizer","keyword_match_type":"BROAD","keyword_decorated_name":"+crawl +optimizer","campaign_status":"ENABLED","ad_group_status":"ENABLED","keyword_status":"ENABLED","advertising_channel_type":"SEARCH","is_negative":false,"is_brand":false,"aggregated_active":true,"created":"2021-05-12 01:01:07","modified":"2024-06-04 01:14:03","similarity":58.25,"scheduled_keyword_mutation":null}</script>
-        <li><a href="#pauseKeyword" class="external action-enable-keyword active no-action" title="Activate Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-circle google-status google-status-enabled " title="" data-toggle="tooltip"></i> Active</a></li>
-        <li><a href="#enableKeyword" class="external action-pause-keyword " title="Pause Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-pause-circle google-status google-status-paused " title="" data-toggle="tooltip"></i> Pause</a></li>
-        <li role="separator" class="dropdown-divider"></li>
-        <li><a href="#negativeKeyword" class="external action-set-keyword-negative" title="Set keyword as negative" data-toggle="tooltip">Set as Negative Keyword</a></li>
-                    <li role="separator" class="dropdown-divider"></li>
-            <li><a href="https://ads.google.com/aw/ads/new/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402&adTypeId=36" target="_blank" class="external">Create new Ad</a></li>
-                <li role="separator" class="dropdown-divider"></li>
-        <li>
-            <span type="button" data-toggle="collapse" data-target="#collapse-ppcr-5b3431b2-bab9-4d55-9725-2eeb28b1e7f3" aria-expanded="false" aria-controls="collapse-ppcr-61593793402-533493013390">
-                Show more Details<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
-            </span>
-            <div class="collapse inner-menu-collapse collapse-right" id="collapse-ppcr-5b3431b2-bab9-4d55-9725-2eeb28b1e7f3">
-                <ul class="dropdown-menu ppcr-dropdown">
-                    <li><a href="quality-score/keyword/61593793402/533493013390" class="external" title="Show Keyword Details" data-toggle="tooltip">Show Keyword Details</a></li>
-                    <li><a href="quality-score/ad-group/61593793402" class="external" data-toggle="tooltip" title="Ad Group: Brand COPT">Show Ad Group Details</a></li>
-                    <li><a href="data-filters/set-filter?filter%5B0%5D%5Bproperty%5D=ad_group_id&amp;filter%5B0%5D%5Boperator%5D=eq&amp;filter%5B0%5D%5Bvalue%5D=61593793402&amp;configPath=DataFilters.Searchterm.list&amp;target=SearchTerm.index" class="">Show Search Terms</a></li>
-                    <li><a href="quality-score/campaign/1587873047" class="external" data-toggle="tooltip" title="Campaign: crawlOPTIMIZER - neu">Show Campaign Details</a></li>
-                    <li><a href="landing-pages/keyword-list/61593793402/533493013390?reset=filter" class="external" title="Show Keyword Landing Pages" data-toggle="tooltip">Show Keyword Landing Pages</a></li>
-                </ul>
-            </div>
-        </li>
-                <li role="separator" class="dropdown-divider"></li>
-        <li>
-            <span type="button" data-toggle="collapse" data-target="#collapse-gads-5b3431b2-bab9-4d55-9725-2eeb28b1e7f3" aria-expanded="false" aria-controls="collapse-gads-61593793402-533493013390">
-                Links to Google Ads<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
-            </span>
-            <div class="collapse inner-menu-collapse collapse-right" id="collapse-gads-5b3431b2-bab9-4d55-9725-2eeb28b1e7f3">
-                <ul class="dropdown-menu gads-dropdown">
-                    <li><a href="https://ads.google.com/aw/keywords?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search Keywords</a></li>
-                    <li><a href="https://ads.google.com/aw/keywords/negative?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Negative Search Keywords</a></li>
-                    <li><a href="https://ads.google.com/aw/keywords/searchterms?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search terms</a></li>
-                    <li><a href="https://ads.google.com/aw/ads?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Ads</a></li>
-                    <li><a href="https://ads.google.com/aw/audiences?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Audiences</a></li>
-                    <li><a href="https://ads.google.com/aw/settings/adgroups/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Settings</a></li>
-                    <li><a href="https://ads.google.com/aw/settings/campaign/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047" target="_blank" class="external">Campaign: Settings</a></li>
-                </ul>
-            </div>
-        </li>
-            </ul>
-</div>                                    </td>
-                                    <td class="text-center text-nowrap ppcr-tbl-section-td-border-left-one"><span class="badge badge-qs badge-warning">6</span></td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg fa-arrow-circle-o-down text-danger" data-toggle="tooltip" title="below average"></i></div>
-                                        </td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg fa-arrow-circle-o-right text-warning" data-toggle="tooltip" title="average"></i></div>
-                                        </td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg fa-arrow-circle-o-up text-navy" data-toggle="tooltip" title="above average"></i></div>
-                                        </td>
-                                                                        <td class="text-right">3</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">€0.00</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">€0.00</td>
-                                </tr>
-                                                            <tr>
-                                    <td class="text-left text-nowrap">
-                                        <div class="btn-group dropdown-element">
-    <span data-toggle="collapse" class="tooltip-init dropdown-toggle pointer" type="button" data-target="#dropdown-menu-3b39279f-a1c6-451e-b3ca-107c2a78c591" aria-expanded="false" aria-controls="#dropdown-menu-3b39279f-a1c6-451e-b3ca-107c2a78c591"
-          title="+crawloptimizer">
-        <i class="fa fa-fw fa-circle google-status google-status-enabled keyword-status-icon-61593793402-533493013430" title="" data-toggle="tooltip"></i>        +crawloptimizer <i class="fa fa-caret-down"></i>
-    </span>         <ul id="dropdown-menu-3b39279f-a1c6-451e-b3ca-107c2a78c591" class="dropdown-menu keyword-action-dropdown" data-ad-group-id="61593793402" data-keyword-id="533493013430">
-        <script type="application/json" class="keyword-data">{"account_id":6912853797,"campaign_id":1587873047,"campaign_name":"crawlOPTIMIZER - neu","ad_group_id":61593793402,"ad_group_name":"Brand COPT","keyword_id":533493013430,"keyword_name":"+crawloptimizer","keyword_match_type":"BROAD","keyword_decorated_name":"+crawloptimizer","campaign_status":"ENABLED","ad_group_status":"ENABLED","keyword_status":"ENABLED","advertising_channel_type":"SEARCH","is_negative":false,"is_brand":false,"aggregated_active":true,"created":"2021-05-12 01:01:07","modified":"2024-06-04 01:14:03","similarity":45.75,"scheduled_keyword_mutation":null}</script>
-        <li><a href="#pauseKeyword" class="external action-enable-keyword active no-action" title="Activate Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-circle google-status google-status-enabled " title="" data-toggle="tooltip"></i> Active</a></li>
-        <li><a href="#enableKeyword" class="external action-pause-keyword " title="Pause Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-pause-circle google-status google-status-paused " title="" data-toggle="tooltip"></i> Pause</a></li>
-        <li role="separator" class="dropdown-divider"></li>
-        <li><a href="#negativeKeyword" class="external action-set-keyword-negative" title="Set keyword as negative" data-toggle="tooltip">Set as Negative Keyword</a></li>
-                    <li role="separator" class="dropdown-divider"></li>
-            <li><a href="https://ads.google.com/aw/ads/new/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402&adTypeId=36" target="_blank" class="external">Create new Ad</a></li>
-                <li role="separator" class="dropdown-divider"></li>
-        <li>
-            <span type="button" data-toggle="collapse" data-target="#collapse-ppcr-3b39279f-a1c6-451e-b3ca-107c2a78c591" aria-expanded="false" aria-controls="collapse-ppcr-61593793402-533493013430">
-                Show more Details<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
-            </span>
-            <div class="collapse inner-menu-collapse collapse-right" id="collapse-ppcr-3b39279f-a1c6-451e-b3ca-107c2a78c591">
-                <ul class="dropdown-menu ppcr-dropdown">
-                    <li><a href="quality-score/keyword/61593793402/533493013430" class="external" title="Show Keyword Details" data-toggle="tooltip">Show Keyword Details</a></li>
-                    <li><a href="quality-score/ad-group/61593793402" class="external" data-toggle="tooltip" title="Ad Group: Brand COPT">Show Ad Group Details</a></li>
-                    <li><a href="data-filters/set-filter?filter%5B0%5D%5Bproperty%5D=ad_group_id&amp;filter%5B0%5D%5Boperator%5D=eq&amp;filter%5B0%5D%5Bvalue%5D=61593793402&amp;configPath=DataFilters.Searchterm.list&amp;target=SearchTerm.index" class="">Show Search Terms</a></li>
-                    <li><a href="quality-score/campaign/1587873047" class="external" data-toggle="tooltip" title="Campaign: crawlOPTIMIZER - neu">Show Campaign Details</a></li>
-                    <li><a href="landing-pages/keyword-list/61593793402/533493013430?reset=filter" class="external" title="Show Keyword Landing Pages" data-toggle="tooltip">Show Keyword Landing Pages</a></li>
-                </ul>
-            </div>
-        </li>
-                <li role="separator" class="dropdown-divider"></li>
-        <li>
-            <span type="button" data-toggle="collapse" data-target="#collapse-gads-3b39279f-a1c6-451e-b3ca-107c2a78c591" aria-expanded="false" aria-controls="collapse-gads-61593793402-533493013430">
-                Links to Google Ads<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
-            </span>
-            <div class="collapse inner-menu-collapse collapse-right" id="collapse-gads-3b39279f-a1c6-451e-b3ca-107c2a78c591">
-                <ul class="dropdown-menu gads-dropdown">
-                    <li><a href="https://ads.google.com/aw/keywords?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search Keywords</a></li>
-                    <li><a href="https://ads.google.com/aw/keywords/negative?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Negative Search Keywords</a></li>
-                    <li><a href="https://ads.google.com/aw/keywords/searchterms?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search terms</a></li>
-                    <li><a href="https://ads.google.com/aw/ads?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Ads</a></li>
-                    <li><a href="https://ads.google.com/aw/audiences?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Audiences</a></li>
-                    <li><a href="https://ads.google.com/aw/settings/adgroups/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Settings</a></li>
-                    <li><a href="https://ads.google.com/aw/settings/campaign/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047" target="_blank" class="external">Campaign: Settings</a></li>
-                </ul>
-            </div>
-        </li>
-            </ul>
-</div>                                    </td>
-                                    <td class="text-center text-nowrap ppcr-tbl-section-td-border-left-one"><span class="badge badge-qs badge-primary">10</span></td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg fa-arrow-circle-o-up text-navy" data-toggle="tooltip" title="above average"></i></div>
-                                        </td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg fa-arrow-circle-o-up text-navy" data-toggle="tooltip" title="above average"></i></div>
-                                        </td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg fa-arrow-circle-o-up text-navy" data-toggle="tooltip" title="above average"></i></div>
-                                        </td>
-                                                                        <td class="text-right">1</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">€0.00</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">€0.00</td>
-                                </tr>
-                                                            <tr>
-                                    <td class="text-left text-nowrap">
-                                        <div class="btn-group dropdown-element">
-    <span data-toggle="collapse" class="tooltip-init dropdown-toggle pointer" type="button" data-target="#dropdown-menu-30cf223b-c97a-4f42-99db-9f09ffc294d0" aria-expanded="false" aria-controls="#dropdown-menu-30cf223b-c97a-4f42-99db-9f09ffc294d0"
-          title="[crawloptimiser]">
-        <i class="fa fa-fw fa-circle google-status google-status-enabled keyword-status-icon-61593793402-491473424868" title="" data-toggle="tooltip"></i>        [crawloptimiser] <i class="fa fa-caret-down"></i>
-    </span>         <ul id="dropdown-menu-30cf223b-c97a-4f42-99db-9f09ffc294d0" class="dropdown-menu keyword-action-dropdown" data-ad-group-id="61593793402" data-keyword-id="491473424868">
-        <script type="application/json" class="keyword-data">{"account_id":6912853797,"campaign_id":1587873047,"campaign_name":"crawlOPTIMIZER - neu","ad_group_id":61593793402,"ad_group_name":"Brand COPT","keyword_id":491473424868,"keyword_name":"crawloptimiser","keyword_match_type":"EXACT","keyword_decorated_name":"[crawloptimiser]","campaign_status":"ENABLED","ad_group_status":"ENABLED","keyword_status":"ENABLED","advertising_channel_type":"SEARCH","is_negative":false,"is_brand":false,"aggregated_active":true,"created":"2021-05-12 01:01:07","modified":"2024-06-04 01:14:02","similarity":45.75,"scheduled_keyword_mutation":null}</script>
-        <li><a href="#pauseKeyword" class="external action-enable-keyword active no-action" title="Activate Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-circle google-status google-status-enabled " title="" data-toggle="tooltip"></i> Active</a></li>
-        <li><a href="#enableKeyword" class="external action-pause-keyword " title="Pause Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-pause-circle google-status google-status-paused " title="" data-toggle="tooltip"></i> Pause</a></li>
-        <li role="separator" class="dropdown-divider"></li>
-        <li><a href="#negativeKeyword" class="external action-set-keyword-negative" title="Set keyword as negative" data-toggle="tooltip">Set as Negative Keyword</a></li>
-                    <li role="separator" class="dropdown-divider"></li>
-            <li><a href="https://ads.google.com/aw/ads/new/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402&adTypeId=36" target="_blank" class="external">Create new Ad</a></li>
-                <li role="separator" class="dropdown-divider"></li>
-        <li>
-            <span type="button" data-toggle="collapse" data-target="#collapse-ppcr-30cf223b-c97a-4f42-99db-9f09ffc294d0" aria-expanded="false" aria-controls="collapse-ppcr-61593793402-491473424868">
-                Show more Details<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
-            </span>
-            <div class="collapse inner-menu-collapse collapse-right" id="collapse-ppcr-30cf223b-c97a-4f42-99db-9f09ffc294d0">
-                <ul class="dropdown-menu ppcr-dropdown">
-                    <li><a href="quality-score/keyword/61593793402/491473424868" class="external" title="Show Keyword Details" data-toggle="tooltip">Show Keyword Details</a></li>
-                    <li><a href="quality-score/ad-group/61593793402" class="external" data-toggle="tooltip" title="Ad Group: Brand COPT">Show Ad Group Details</a></li>
-                    <li><a href="data-filters/set-filter?filter%5B0%5D%5Bproperty%5D=ad_group_id&amp;filter%5B0%5D%5Boperator%5D=eq&amp;filter%5B0%5D%5Bvalue%5D=61593793402&amp;configPath=DataFilters.Searchterm.list&amp;target=SearchTerm.index" class="">Show Search Terms</a></li>
-                    <li><a href="quality-score/campaign/1587873047" class="external" data-toggle="tooltip" title="Campaign: crawlOPTIMIZER - neu">Show Campaign Details</a></li>
-                    <li><a href="landing-pages/keyword-list/61593793402/491473424868?reset=filter" class="external" title="Show Keyword Landing Pages" data-toggle="tooltip">Show Keyword Landing Pages</a></li>
-                </ul>
-            </div>
-        </li>
-                <li role="separator" class="dropdown-divider"></li>
-        <li>
-            <span type="button" data-toggle="collapse" data-target="#collapse-gads-30cf223b-c97a-4f42-99db-9f09ffc294d0" aria-expanded="false" aria-controls="collapse-gads-61593793402-491473424868">
-                Links to Google Ads<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
-            </span>
-            <div class="collapse inner-menu-collapse collapse-right" id="collapse-gads-30cf223b-c97a-4f42-99db-9f09ffc294d0">
-                <ul class="dropdown-menu gads-dropdown">
-                    <li><a href="https://ads.google.com/aw/keywords?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search Keywords</a></li>
-                    <li><a href="https://ads.google.com/aw/keywords/negative?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Negative Search Keywords</a></li>
-                    <li><a href="https://ads.google.com/aw/keywords/searchterms?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search terms</a></li>
-                    <li><a href="https://ads.google.com/aw/ads?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Ads</a></li>
-                    <li><a href="https://ads.google.com/aw/audiences?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Audiences</a></li>
-                    <li><a href="https://ads.google.com/aw/settings/adgroups/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Settings</a></li>
-                    <li><a href="https://ads.google.com/aw/settings/campaign/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047" target="_blank" class="external">Campaign: Settings</a></li>
-                </ul>
-            </div>
-        </li>
-            </ul>
-</div>                                    </td>
-                                    <td class="text-center text-nowrap ppcr-tbl-section-td-border-left-one"><span class="badge badge-qs ">0</span></td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg  " data-toggle="tooltip" title="Not specified"></i></div>
-                                        </td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg  " data-toggle="tooltip" title="Not specified"></i></div>
-                                        </td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg  " data-toggle="tooltip" title="Not specified"></i></div>
-                                        </td>
-                                                                        <td class="text-right">0</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">--</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">--</td>
-                                </tr>
-                                                            <tr>
-                                    <td class="text-left text-nowrap">
-                                        <div class="btn-group dropdown-element">
-    <span data-toggle="collapse" class="tooltip-init dropdown-toggle pointer" type="button" data-target="#dropdown-menu-31999c38-9fa8-4954-88db-98e4cd1f4d4e" aria-expanded="false" aria-controls="#dropdown-menu-31999c38-9fa8-4954-88db-98e4cd1f4d4e"
-          title="+crawloptimiser">
-        <i class="fa fa-fw fa-circle google-status google-status-enabled keyword-status-icon-61593793402-567673838322" title="" data-toggle="tooltip"></i>        +crawloptimiser <i class="fa fa-caret-down"></i>
-    </span>         <ul id="dropdown-menu-31999c38-9fa8-4954-88db-98e4cd1f4d4e" class="dropdown-menu keyword-action-dropdown" data-ad-group-id="61593793402" data-keyword-id="567673838322">
-        <script type="application/json" class="keyword-data">{"account_id":6912853797,"campaign_id":1587873047,"campaign_name":"crawlOPTIMIZER - neu","ad_group_id":61593793402,"ad_group_name":"Brand COPT","keyword_id":567673838322,"keyword_name":"+crawloptimiser","keyword_match_type":"BROAD","keyword_decorated_name":"+crawloptimiser","campaign_status":"ENABLED","ad_group_status":"ENABLED","keyword_status":"ENABLED","advertising_channel_type":"SEARCH","is_negative":false,"is_brand":false,"aggregated_active":true,"created":"2021-05-12 01:01:07","modified":"2024-06-04 01:14:03","similarity":45.75,"scheduled_keyword_mutation":null}</script>
-        <li><a href="#pauseKeyword" class="external action-enable-keyword active no-action" title="Activate Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-circle google-status google-status-enabled " title="" data-toggle="tooltip"></i> Active</a></li>
-        <li><a href="#enableKeyword" class="external action-pause-keyword " title="Pause Keyword" data-toggle="tooltip"><i class="fa fa-fw fa-pause-circle google-status google-status-paused " title="" data-toggle="tooltip"></i> Pause</a></li>
-        <li role="separator" class="dropdown-divider"></li>
-        <li><a href="#negativeKeyword" class="external action-set-keyword-negative" title="Set keyword as negative" data-toggle="tooltip">Set as Negative Keyword</a></li>
-                    <li role="separator" class="dropdown-divider"></li>
-            <li><a href="https://ads.google.com/aw/ads/new/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402&adTypeId=36" target="_blank" class="external">Create new Ad</a></li>
-                <li role="separator" class="dropdown-divider"></li>
-        <li>
-            <span type="button" data-toggle="collapse" data-target="#collapse-ppcr-31999c38-9fa8-4954-88db-98e4cd1f4d4e" aria-expanded="false" aria-controls="collapse-ppcr-61593793402-567673838322">
-                Show more Details<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
-            </span>
-            <div class="collapse inner-menu-collapse collapse-right" id="collapse-ppcr-31999c38-9fa8-4954-88db-98e4cd1f4d4e">
-                <ul class="dropdown-menu ppcr-dropdown">
-                    <li><a href="quality-score/keyword/61593793402/567673838322" class="external" title="Show Keyword Details" data-toggle="tooltip">Show Keyword Details</a></li>
-                    <li><a href="quality-score/ad-group/61593793402" class="external" data-toggle="tooltip" title="Ad Group: Brand COPT">Show Ad Group Details</a></li>
-                    <li><a href="data-filters/set-filter?filter%5B0%5D%5Bproperty%5D=ad_group_id&amp;filter%5B0%5D%5Boperator%5D=eq&amp;filter%5B0%5D%5Bvalue%5D=61593793402&amp;configPath=DataFilters.Searchterm.list&amp;target=SearchTerm.index" class="">Show Search Terms</a></li>
-                    <li><a href="quality-score/campaign/1587873047" class="external" data-toggle="tooltip" title="Campaign: crawlOPTIMIZER - neu">Show Campaign Details</a></li>
-                    <li><a href="landing-pages/keyword-list/61593793402/567673838322?reset=filter" class="external" title="Show Keyword Landing Pages" data-toggle="tooltip">Show Keyword Landing Pages</a></li>
-                </ul>
-            </div>
-        </li>
-                <li role="separator" class="dropdown-divider"></li>
-        <li>
-            <span type="button" data-toggle="collapse" data-target="#collapse-gads-31999c38-9fa8-4954-88db-98e4cd1f4d4e" aria-expanded="false" aria-controls="collapse-gads-61593793402-567673838322">
-                Links to Google Ads<div class="toggle-btn toggle-btn-right"><i class="fa fa-arrow-right"></i></div>
-            </span>
-            <div class="collapse inner-menu-collapse collapse-right" id="collapse-gads-31999c38-9fa8-4954-88db-98e4cd1f4d4e">
-                <ul class="dropdown-menu gads-dropdown">
-                    <li><a href="https://ads.google.com/aw/keywords?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search Keywords</a></li>
-                    <li><a href="https://ads.google.com/aw/keywords/negative?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Negative Search Keywords</a></li>
-                    <li><a href="https://ads.google.com/aw/keywords/searchterms?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Search terms</a></li>
-                    <li><a href="https://ads.google.com/aw/ads?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Ads</a></li>
-                    <li><a href="https://ads.google.com/aw/audiences?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Audiences</a></li>
-                    <li><a href="https://ads.google.com/aw/settings/adgroups/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047&adGroupId=61593793402" target="_blank" class="external">Ad Group: Settings</a></li>
-                    <li><a href="https://ads.google.com/aw/settings/campaign/search?ocid=124124&uscid=124124&channel=1&campaignId=1587873047" target="_blank" class="external">Campaign: Settings</a></li>
-                </ul>
-            </div>
-        </li>
-            </ul>
-</div>                                    </td>
-                                    <td class="text-center text-nowrap ppcr-tbl-section-td-border-left-one"><span class="badge badge-qs ">0</span></td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg  " data-toggle="tooltip" title="Not specified"></i></div>
-                                        </td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg  " data-toggle="tooltip" title="Not specified"></i></div>
-                                        </td>
-                                                                            <td class="text-center">
-                                            <div class="action-box"><i class="fa fa-lg  " data-toggle="tooltip" title="Not specified"></i></div>
-                                        </td>
-                                                                        <td class="text-right">0</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">--</td>
-                                    <td class="text-right">0</td>
-                                    <td class="text-right">--</td>
-                                </tr>
-                                                        </tbody>
-                        </table>
-                    </div>
-                </div>
                         </div>
+                    </div>
+                </div>
+            </div>
     </div>
 
 

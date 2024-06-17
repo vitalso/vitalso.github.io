@@ -1,0 +1,110 @@
+/* Redesign styles */
+.audit-item.without-detail .btn-fix-issue {
+    right: 8vw;
+}
+
+/* Table */
+.wrap-table-group {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+    padding-bottom: 16px;
+}
+
+    .table-group {
+        font-size: 14px;
+    }
+
+    .table-group .table-group-heading {
+        font-size: 20px;
+        font-weight: 600;
+        padding: 22px 32px;
+        border-radius: 3px 3px 0 0;
+        border-color: #F2F3F4;
+    }
+
+    .table-group .table-group-heading-bg {
+        background-color: #F9FAFA;
+    }
+
+        .table-group .table-group-heading-bg th:first-child {
+            padding-left: 32px;
+        }
+
+        .success-tag {
+            width: 3px;
+            height: 18px;
+            background-color: #21C6C8;
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+    .table-group tbody tr td {
+        border-color: #F2F3F4;
+        color: #3D3F40;
+    }
+
+    .table-group thead tr th {
+        border-bottom: none;
+        border-top: none;
+    }
+
+    .table-group.no-margins tbody tr:first-child td {
+        border: none;
+    }
+
+        .table-group tbody tr td:first-child {
+            padding-left: 32px;
+        }
+
+        .table-group .google-status {
+            font-size: 7px;
+        }
+
+        .table-group .badge-error {
+            background-color: #ED5565;
+            color: #fff;
+        }
+
+        .table-group .badge-primary {
+            background-color: #23c6c8;
+        }
+
+        .table-group .text-success {
+            color: #21C6C8 !important;
+        }
+
+        .table-group .btn-outline-primary {
+            font-size: 12px;
+            font-family: "Inter";
+            font-weight: 500;
+            padding: 0 26px;
+            line-height: 24px;
+            border-radius: 3px;
+        }
+
+        .table-group td[data-title] a {
+            color: #3D3F40;
+        }
+
+        .fill-error {
+            fill: #ED5565;
+        }
+
+        .fill-success {
+            fill: #21C6C8;
+        }
+
+        .fill-warning {
+            fill: #f8ac59;
+        }
+
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+
+        .rotate-90 {
+            transform: rotate(-90deg);
+        }

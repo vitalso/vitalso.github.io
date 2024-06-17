@@ -154,6 +154,11 @@
         min-height: 70px;
     }
 
+        .item-icon {
+            width: 26px;
+            height: 26px;
+        }
+
         .wrap-item-title {
             max-width: 530px;
         }
@@ -164,19 +169,21 @@
         }
 
             .item-title span {
-                line-height: 25px;
+                line-height: 22px;
             }
 
         .item-tag {
             border-radius: 3px;
             background-color: #E4E6E8;
             padding: 4px 7px;
-            font-size: 12px;
+            font-size: 11px;
             float: left;
             color: #212529;
         }
 
         .item-info-icon {
+            width: 14px;
+            height: 14px;
             fill: #21C6C8;
             transition: all 0.3s ease;
         }
