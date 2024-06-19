@@ -101,6 +101,10 @@
             fill: #f8ac59;
         }
 
+        .fill-none {
+            fill: none;
+        }
+
         .rotate-180 {
             transform: rotate(180deg);
         }
@@ -108,3 +112,96 @@
         .rotate-90 {
             transform: rotate(-90deg);
         }
+
+        .table-group small {
+            font-size: 12px;
+        }
+
+        .table-group .btn-info.btn-xs {
+            font-size: 12px;
+            font-family: "Inter";
+            padding: 2px 10px;
+        }
+
+        .table-group .btn-warning.btn-sm {
+            font-size: 14px;
+            padding: 2px 5px;
+            line-height: 1;
+        }
+
+        .table-group .border-top , .table-group.border-left {
+            border-color: #F2F3F4 !important;
+        }
+
+        .vertical-top , .vertical-top td {
+            vertical-align: top !important;
+        }
+
+        .vertical-text-bottom {
+            vertical-align: text-bottom;
+        }
+
+        .table-group strong {
+            font-family: "OpenSansSemibold";
+        }
+
+        .table-group.table-layout-fixed {
+            table-layout: fixed;
+        }
+
+.wrap-pagination {
+    padding-left: 32px;
+    padding-right: 32px;
+    border-color: #F2F3F4 !important;
+    border-radius: 0 0 3px 3px;
+}
+
+    .wrap-pagination .show-more-btn {
+        padding: 0 0 7px 0;
+        font-weight: 600;
+        font-size: 14px;
+        border: none;
+        border-bottom: 1px solid #212529;
+    }
+
+    .table-pagination {
+        gap: 20px;
+        font-family: "OpenSansSemibold";
+        font-size: 14px;
+        list-style-type: none;
+        line-height: 8px;
+    }
+
+        .table-pagination a {
+            color: #212529;
+            transition: all 0.3s ease;
+        }
+
+            .table-pagination a svg {
+                transition: all 0.3s ease;
+                stroke: #3D3F40;
+            }
+
+            .table-pagination a.active , .table-pagination a:hover {
+                color: #21C6C8;
+            }
+
+            .table-pagination a:hover svg {
+                stroke: #21C6C8;
+            }
+
+.border-b-l {
+    border-bottom-left-radius: 0 !important;
+}
+
+.border-b-r {
+    border-bottom-right-radius: 0 !important;
+}
+
+@media screen and (min-width: 992px) {
+    
+    .table-responsive.bg-white {
+        overflow: visible;
+    }
+
+}
