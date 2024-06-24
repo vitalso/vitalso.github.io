@@ -28,7 +28,7 @@
     }
 
         .table-group .table-group-heading-bg th:first-child {
-            padding-left: 32px;
+            padding-left: 14px;
         }
 
         .success-tag {
@@ -56,7 +56,7 @@
     }
 
         .table-group tbody tr td:first-child {
-            padding-left: 32px;
+            padding-left: 14px;
         }
 
         .table-group .google-status {
@@ -80,7 +80,7 @@
             font-size: 12px;
             font-family: "Inter";
             font-weight: 500;
-            padding: 0 26px;
+            padding: 0 10px;
             line-height: 24px;
             border-radius: 3px;
         }
@@ -141,7 +141,7 @@
             vertical-align: text-bottom;
         }
 
-        .table-group strong {
+        .table-group strong , .like-table-card strong {
             font-family: "OpenSansSemibold";
         }
 
@@ -149,9 +149,53 @@
             table-layout: fixed;
         }
 
+        .table-group-link {
+            max-width: 170px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-decoration: underline;
+            color: #1C84C6 !important;
+            display: inline-block;
+        }
+
+.like-table-card {
+    font-size: 14px;
+    border: 1px solid #F2F3F4;
+}
+
+    .like-table-card .border-bottom {
+        border-color: #F2F3F4 !important;
+    }
+
+.like-table-card div:nth-child(1) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #F2F3F4;
+}
+
+    .like-table-card strong {
+        color: #3D3F40;
+    }
+
+.bg-group {
+    padding: 10px 32px;
+    background-color: #F9FAFA;
+    font-size: 14px;
+}
+
+    .bg-group strong {
+        color: #3D3F40;
+        font-family: "OpenSansSemiBold";
+    }
+
+.table-small-text {
+    font-size: 12px;
+    color: #94999B;
+}
+
 .wrap-pagination {
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 14px;
+    padding-right: 14px;
     border-color: #F2F3F4 !important;
     border-radius: 0 0 3px 3px;
 }
@@ -198,10 +242,44 @@
     border-bottom-right-radius: 0 !important;
 }
 
+.border-after:after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: calc(100% - 72px);
+    background-color: #212529;
+    bottom: 0;
+    right: 0;
+}
+
+    .border-after.h-100-after:after {
+        height: 100%;
+    }
+
+.mx-10 {
+    margin: 0 10px;
+}
+
 @media screen and (min-width: 992px) {
     
     .table-responsive.bg-white {
         overflow: visible;
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+
+    .audit-item.without-detail .btn-fix-issue {
+        right: auto;
+    }
+    
+}
+
+@media screen and (max-width: 1200px) {
+
+    .border-after:after {
+        display: none;
     }
 
 }
