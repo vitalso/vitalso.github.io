@@ -1,6 +1,6 @@
 /* Redesign styles */
 .audit-item.without-detail .btn-fix-issue {
-    right: 8vw;
+    right: 1.5rem;
 }
 
 /* Table */
@@ -21,6 +21,7 @@
         padding: 22px 32px;
         border-radius: 3px 3px 0 0;
         border-color: #F2F3F4;
+        color: #212529;
     }
 
     .table-group .table-group-heading-bg {
@@ -246,7 +247,8 @@
     content: "";
     position: absolute;
     width: 1px;
-    height: calc(100% - 72px);
+    /* height: calc(100% - 72px); */
+    height: 100%;
     background-color: #212529;
     bottom: 0;
     right: 0;

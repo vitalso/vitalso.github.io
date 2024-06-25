@@ -1,0 +1,21 @@
+/* Responsive menu */
+@media screen and (max-width: 576px) {
+
+    nav.navbar.navbar-fixed-top , nav.navbar.navbar-fixed-top #navbar-filter {
+        flex-wrap: nowrap;
+    }
+
+    nav.navbar.navbar-fixed-top #navbar-filter {
+        overflow: auto;
+        padding-right: 15px;
+    }
+
+    nav.navbar.navbar-fixed-top #navbar-daterange {
+        display: none;
+    }
+
+    nav.navbar.navbar-fixed-top .navbar-right.m-r-lg {
+        margin-right: 0;
+    }
+
+}
