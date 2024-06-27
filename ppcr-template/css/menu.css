@@ -1,4 +1,8 @@
 /* Responsive menu */
+.mini-navbar .metismenu .collapse.in a span.nav-label {
+    display: block;
+}
+
 @media screen and (max-width: 576px) {
 
     nav.navbar.navbar-fixed-top , nav.navbar.navbar-fixed-top #navbar-filter {

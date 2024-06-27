@@ -162,6 +162,7 @@
 .like-table-card {
     font-size: 14px;
     border: 1px solid #F2F3F4;
+    word-break: break-all;
 }
 
     .like-table-card .border-bottom {
@@ -254,10 +255,6 @@
     right: 0;
 }
 
-    .border-after.h-100-after:after {
-        height: 100%;
-    }
-
 .mx-10 {
     margin: 0 10px;
 }
@@ -284,4 +281,20 @@
         display: none;
     }
 
+}
+
+@media screen and (max-width: 1500px) {
+
+    .col-xxl-4.border-after:after {
+        display: none;
+    }
+
+}
+
+@media (min-width: 1500px) {
+    .col-xxl-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
 }
