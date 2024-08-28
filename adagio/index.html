@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adagio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <!-- TailwindCSS file -->
+    <link href="./css/output.css" rel="stylesheet">
+    <!-- Slick slider -->
+    <link rel="stylesheet" href="./css/slick.css">
+</head>
+<body class="overflow-x-hidden">
+    
+    <!-- Header -->
+    <header class="absolute w-full py-5 sm:py-[22px]">
+        <div class="container flex items-center">
+
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="assets/logo.svg" alt="image">
+            </a>
+
+            <nav class="ml-10 text-white text-sm font-medium hidden sm:inline-block">
+                <a href="#" class="py-2 mx-3">Home</a>
+                <a href="#" class="py-2 mx-3">Features</a>
+                <a href="#" class="py-2 mx-3">Product</a>
+                <a href="#" class="py-2 mx-3">Pricing</a>
+            </nav>
+
+            <div class="ml-auto flex gap-2 items-center">
+                <a href="#" class="py-2.5 px-[14px] font-medium text-sm text-white rounded-[40px]">
+                    Sign in
+                </a>
+
+                <a href="#" class="py-2.5 px-5 font-medium text-sm text-black bg-white rounded-[40px] hidden sm:inline-block">
+                    Get started
+                </a>
+
+                <button type="button" class="inline-block sm:hidden">
+                    <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-white" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.75 6.75012H20.25M3.75 12.0001H20.25M3.75 17.2501H20.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero section -->
+        <section class="bg-hero-section-mobile sm:bg-hero-section h-screen max-h-[720px] sm:max-h-none bg-no-repeat bg-cover bg-center text-white">
+            <div class="container h-full pt-20 translate-y-10 sm:mt-0 text-center sm:text-left sm:pt-0 sm:flex flex-col justify-center">
+                <h1 class="font-Jakarta text-[32px] sm:text-[64px] leading-10 sm:leading-[80px] font-semibold mb-3 sm:mb-6">Simplify music <br> teaching with Adagio</h1>
+                <p class="text-sm sm:text-[22px] sm:leading-[36px]">Add students, schedule lessons and performances, <br class="hidden sm:block"> assign homework, and manage billing all in one place.</p>
+
+                <div class="mt-6 sm:mt-14 gap-2.5 flex justify-center sm:justify-start">
+                    <a href="#" class="py-2 sm:py-4 px-3.5 sm:px-8 font-medium text-sm sm:text-base bg-white text-greyscale-900 rounded-[40px]">
+                        Get started for free
+                    </a>
+                    
+                    <a href="#" class="py-2 sm:py-4 px-3.5 sm:px-8 font-medium text-sm sm:text-base bg-black text-white rounded-[40px] flex items-center gap-2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" class="fill-white" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM10.7817 8.78296C10.4498 8.55666 10 8.79436 10 9.19607V14.8039C10 15.2056 10.4498 15.4433 10.7817 15.217L14.8941 12.4131C15.1852 12.2146 15.1852 11.7854 14.8941 11.5869L10.7817 8.78296Z" />
+                        </svg>
+                        Watch demo
+                    </a>
+                </div>
+
+                <div class="mt-14 hidden sm:flex gap-10 text-sm">
+                    <div>
+                        <p class="font-Jakarta text-[32px] leading-10 font-bold mb-1">10k+</p>
+                        <p>Active students</p>
+                    </div>
+
+                    <div>
+                        <p class="font-Jakarta text-[32px] leading-10 font-bold mb-1">200k+</p>
+                        <p>Active Teachers</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mobile app example screenshot -->
+        <section class="py-16 sm:py-24">
+            <div class="container">
+
+                <div class="text-center">
+                    <h2 class="font-Jakarta text-[28px] sm:text-[40px] leading-9 sm:leading-[48px] text-dark mb-3 sm:mb-4 font-semibold tracking-tight">Lesson management made musical</h2>
+                    <p class="text-sm sm:text-lg text-greyscale-600">You don’t have to switch solutions to benefit from our user-friendly software suite. Bring your current <br class="hidden sm:block"> tools with you, and we’ll connect your data via API—it’s our behind-the-scenes magic.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-7 mt-9 lg:mt-12">
+                    <!-- Item -->
+                    <div>
+                        <div class="bg-light rounded-[10px] h-[420px] sm:h-[460px] pt-[30px] overflow-hidden">
+                            <img src="assets/phone-screenshot-1.png" alt="image" class="mx-auto">
+                        </div>
+                        <div class="py-[14px] text-base">
+                            <p class="font-medium text-dark mb-1">Track student practice time</p>
+                            <p class="text-greyscale-600 text-sm sm:text-base">See the practice time for an entire <br> class at a glance.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div>
+                        <div class="bg-light rounded-[10px] h-[420px] sm:h-[460px] pt-[30px] overflow-hidden">
+                            <img src="assets/phone-screenshot-2.png" alt="image" class="mx-auto">
+                        </div>
+                        <div class="py-[14px] text-base">
+                            <p class="font-medium text-dark mb-1">A calendar for you and your students</p>
+                            <p class="text-greyscale-600 text-sm sm:text-base">Automate scheduling, cancellations, and <br> calendar management.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div>
+                        <div class="bg-light rounded-[10px] h-[420px] sm:h-[460px] pt-[30px] overflow-hidden">
+                            <img src="assets/phone-screenshot-3.png" alt="image" class="mx-auto">
+                        </div>
+                        <div class="py-[14px] text-base">
+                            <p class="font-medium text-dark mb-1">Automate billing for lessons</p>
+                            <p class="text-greyscale-600 text-sm sm:text-base">Invoices, payment tracking, reminders and <br> online payment options.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Dashboard screenshot -->
+        <section class="py-16 sm:py-24 bg-light">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="font-Jakarta text-[28px] sm:text-[40px] leading-9 sm:leading-[48px] text-dark mb-3 sm:mb-4 font-semibold tracking-tight">Lesson management made musical</h2>
+                    <p class="text-sm sm:text-lg text-greyscale-600">You don’t have to switch solutions to benefit from our user-friendly software suite. Bring your current <br class="hidden sm:block"> tools with you, and we’ll connect your data via API—it’s our behind-the-scenes magic.</p>
+                </div>
+
+                <!-- Slider nav -->
+                <div
+                    class="my-12 max-w-[844px] mx-auto relative"
+                >
+                    <div class="flex items-center gap-5 font-Jakarta text-base sm:text-lg font-bold text-greyscale-400 overflow-hidden justify-center whitespace-nowrap slider-label">
+                        <div class="cursor-pointer hover:text-greyscale-900">Track practice time</div>
+                        <div class="cursor-pointer hover:text-greyscale-900">Keep students motivated to learn</div>
+                        <div class="cursor-pointer hover:text-greyscale-900">Homework</div>
+                        <div class="cursor-pointer hover:text-greyscale-900">Billing and payments</div>
+                        <div class="cursor-pointer hover:text-greyscale-900">Calendar</div>
+                        <div class="cursor-pointer hover:text-greyscale-900">Communicate</div>
+                        <div class="cursor-pointer hover:text-greyscale-900">Organizations</div>
+                    </div>
+
+                    <!-- Fade background -->
+                    <div class="absolute top-0 left-0 h-full w-28 bg-fade-gradient-secondary z-10"></div>
+                    <div class="absolute top-0 right-0 h-full w-28 bg-fade-gradient-secondary -scale-x-100 z-10"></div>
+                </div>
+
+                <!-- Slider -->
+                <div class="max-w-[1048px] mx-auto relative">
+                    <!-- Slider items -->
+                    <div class="border-8 sm:border-[11px] border-black border-opacity-5 rounded-[10px] overflow-hidden slider">
+                        <img src="assets/dashboard.png" alt="image">
+                        <img src="assets/dashboard.png" alt="image">
+                        <img src="assets/dashboard.png" alt="image">
+                        <img src="assets/dashboard.png" alt="image">
+                        <img src="assets/dashboard.png" alt="image">
+                        <img src="assets/dashboard.png" alt="image">
+                        <img src="assets/dashboard.png" alt="image">
+                    </div>
+
+                    <!-- Slider button prev -->
+                    <button type="button" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -left-28 top-1/2 prev-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+
+                    <!-- Slider button next -->
+                    <button type="button" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -right-28 top-1/2 next-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900 -scale-x-100" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing plan -->
+        <section class="py-16 sm:py-24">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="font-Jakarta text-[28px] sm:text-[40px] leading-9 sm:leading-[48px] text-dark mb-3 sm:mb-4 font-semibold tracking-tight">Join at a level that works for you</h2>
+                    <p class="text-sm sm:text-lg text-greyscale-600">We are a registered 501(c)3 non-profit based in California. <br> 100% of your monthly subscription is tax deductible.</p>
+                </div>
+
+                <div class="mt-9 sm:mt-12 flex flex-col sm:flex-row gap-[18px] text-sm text-dark justify-center">
+                    <!-- Price plan -->
+                    <div class="shadow-accent sm:shadow-primary rounded-[16px] p-6 w-full sm:max-w-[344px]">
+                        <p class="text-lg font-Jakarta font-semibold mb-[22px]">Basic</p>
+                        <p class="text-[32px] leading-10 font-Jakarta font-bold mb-4">Free</p>
+                        <a href="#" class="py-3 px-5 font-medium text-sm text-white bg-accent-blue rounded-[40px] w-full inline-block text-center mb-6">Get started</a>
+                        <p class="mb-4">With the free plan, you get</p>
+                        <ul class="flex flex-col gap-2">
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Track practice time</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Calendar</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Lesson scheduler</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Assign homework</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Set goals</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>50 students</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Free website</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Price plan -->
+                    <div class="shadow-primary rounded-[16px] p-6 w-full sm:max-w-[344px] relative">
+                        <p class="text-lg font-Jakarta font-semibold mb-[22px]">Premium</p>
+                        <p class="text-greyscale-600 absolute top-[27px] right-6">Fully tax deductible</p>
+                        <p class="text-[32px] leading-10 font-Jakarta font-bold mb-4">$5 <span class="font-sans text-base font-medium">/month</span></p>
+                        <a href="#" class="py-3 px-5 font-medium text-sm text-white bg-accent-blue rounded-[40px] w-full inline-block text-center mb-6">Get started</a>
+                        <p class="mb-4">With the free plan, you get</p>
+                        <ul class="flex flex-col gap-2">
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>All the previous plus</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Unlimited students</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Automated billing and invoices</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Support for custom domains</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Newsletters</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Listen to audio from practice sessions</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Free Musopen pro membership included</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-grey mt-[18px] rounded-2xl py-[14px] px-6 max-w-[706px] mx-auto text-sm text-greyscale-600">
+                    <p class="text-base sm:text-lg font-Jakarta font-semibold text-dark mb-1 hidden sm:block">Interested in  Adagio for use in a school or with multiple teachers?</p>
+                    <p class="hidden sm:block">Add $5 a month for unlimited teachers & classrooms with administrative controls. <a href="#" class="underline hover:no-underline">Click here</a> to learn more.</p>
+                    <!-- Sow text on mobile -->
+                    <p class="text-base sm:text-lg font-Jakarta font-semibold text-dark mb-1 block sm:hidden">More than 1 teacher or for a school?</p>
+                    <p class="block sm:hidden">Just $5 more a month for unlimited teachers</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Community section -->
+        <section class="pt-20 pb-36 hidden sm:block">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="font-Jakarta text-[40px] leading-[48px] text-dark mb-4 font-semibold tracking-tight">Join our amazing community</h2>
+                    <p class="text-lg text-greyscale-600">Transform the way you manage your teaching and enrich the student experience <br> with innovative tools that simplify and enhance daily operations</p>
+                </div>
+
+                <div class="my-12 columns-3 gap-x-4 space-y-4 max-w-[1070px] mx-auto w-full relative after:absolute after:h-36 after:w-full after:bottom-0 after:left-0 after:bg-fade-gradient">
+                    <!-- Testimonials -->
+                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 text-sm flex flex-col gap-2.5">
+                        <p>I appreciate the robust lesson tracking and progress reporting features.</p>
+                        <div class="flex gap-2.5 items-center">
+                            <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
+                                <img src="assets/testimonials/1.png" alt="image">
+                            </div>
+                            <div>
+                                <p class="font-medium text-dark">Christopher Brown</p>
+                                <p class="text-greyscale-600">Piano Instructor</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonials -->
+                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 text-sm flex flex-col gap-2.5">
+                        <p>This platform has been a game-changer for my teaching business. The user-friendly interface makes scheduling lessons and managing my calendar a breeze.</p>
+                        <div class="flex gap-2.5 items-center">
+                            <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
+                                <img src="assets/testimonials/2.png" alt="image">
+                            </div>
+                            <div>
+                                <p class="font-medium text-dark">Emily Thompson</p>
+                                <p class="text-greyscale-600">Violin Instructor</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonials -->
+                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 text-sm flex flex-col gap-2.5">
+                        <p>As a working musician and part-time music teacher, finding a platform that caters to my unique needs and busy schedule was a challenge – until I discovered this incredible solution. The flexibility it offers is unparalleled. I can easily adjust my availability and schedule lessons at times that work best for me and my students, ensuring a perfect work-life balance.</p>
+                        <div class="flex gap-2.5 items-center">
+                            <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
+                                <img src="assets/testimonials/3.png" alt="image">
+                            </div>
+                            <div>
+                                <p class="font-medium text-dark">Joseph Thomas</p>
+                                <p class="text-greyscale-600">Trumpet Instructor</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonials -->
+                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 text-sm flex flex-col gap-2.5">
+                        <p>As a seasoned music teacher with over 20 years of experience, I've seen my fair share of teaching tools and platforms come and go. However, this platform stands out as one of the most comprehensive and user-friendly solutions I've ever encountered.</p>
+                        <div class="flex gap-2.5 items-center">
+                            <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
+                                <img src="assets/testimonials/4.png" alt="image">
+                            </div>
+                            <div>
+                                <p class="font-medium text-dark">Olivia Martinez</p>
+                                <p class="text-greyscale-600">Voice Instructor</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonials -->
+                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 text-sm flex flex-col gap-2.5">
+                        <p>I love the ability to offer both in-person and online lessons through this platform. It has expanded my reach and allowed me to connect with students from all over the world.</p>
+                        <div class="flex gap-2.5 items-center">
+                            <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
+                                <img src="assets/testimonials/5.png" alt="image">
+                            </div>
+                            <div>
+                                <p class="font-medium text-dark">William Davis</p>
+                                <p class="text-greyscale-600">Guitar Instructor</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonials -->
+                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 text-sm flex flex-col gap-2.5">
+                        <p>I've tried other teaching platforms in the past, but none have matched the user-friendly design and comprehensive features offered here.</p>
+                        <div class="flex gap-2.5 items-center">
+                            <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
+                                <img src="assets/testimonials/6.png" alt="image">
+                            </div>
+                            <div>
+                                <p class="font-medium text-dark">Amelia Gonzalez</p>
+                                <p class="text-greyscale-600">Bass Guitar</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonials -->
+                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 text-sm flex flex-col gap-2.5">
+                        <p>The video conferencing tool is top-notch. The high-quality audio and video make virtual lessons feel just like being in the same room as my students.</p>
+                        <div class="flex gap-2.5 items-center">
+                            <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
+                                <img src="assets/testimonials/7.png" alt="image">
+                            </div>
+                            <div>
+                                <p class="font-medium text-dark">Ava Rodriguez</p>
+                                <p class="text-greyscale-600">Piano Instructor</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonials -->
+                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 text-sm flex flex-col gap-2.5">
+                        <p>The built-in resource sharing feature is fantastic. I can easily share sheet music, exercises, and other learning materials with my students, streamlining the learning process.</p>
+                        <div class="flex gap-2.5 items-center">
+                            <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
+                                <img src="assets/testimonials/8.png" alt="image">
+                            </div>
+                            <div>
+                                <p class="font-medium text-dark">Michael Smith</p>
+                                <p class="text-greyscale-600">Drums Instructor</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonials -->
+                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 text-sm flex flex-col gap-2.5">
+                        <p>The ability to set up recurring lessons and send automatic reminders has been a lifesaver for me. It helps ensure my students stay on track and never miss a lesson. It has opened up new revenue streams and allowed me to reach a wider audience.</p>
+                        <div class="flex gap-2.5 items-center">
+                            <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
+                                <img src="assets/testimonials/9.png" alt="image">
+                            </div>
+                            <div>
+                                <p class="font-medium text-dark">Mia Hernandez</p>
+                                <p class="text-greyscale-600">Cello Instructor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <span class="inline-block py-2.5 px-4 text-greyscale-800 bg-secondary rounded-[40px] text-sm">More than 400 satisfied users</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join section -->
+        <section class="bg-promotion-section bg-no-repeat bg-cover bg-bottom sm:bg-center lg:h-[672px] overflow-hidden border-b border-b-greyscale-200 pt-20 lg:pt-0">
+            <div class="container h-full flex flex-col lg:flex-row lg:items-center">
+
+                <div class="max-w-[530px]">
+                    <h2 class="text-dark text-[28px] sm:text-4xl leading-9 sm:leading-[48px] font-Jakarta font-semibold mb-4 tracking-tight">Join 10,000+ Music <br> Educators Inspiring the Next Generation of Musicians</h2>
+                    <p class="text-greyscale-600 text-base sm:text-lg mb-6 sm:mb-12">Get started for free. Upgrade whenever you wanted to deep dive into the best of Adagio.</p>
+                    <a href="#" class="py-3 px-8 font-medium text-base text-white bg-accent-blue rounded-[40px] inline-block text-center">Get started for free</a>
+                </div>
+
+                <div class="h-full lg:ml-24 flex gap-3 sm:gap-5 flex-col lg:flex-row">
+                    <div class="flex gap-3 sm:gap-5 flex-row lg:flex-col mt-14 lg:mt-4 -translate-x-5 sm:translate-x-0">
+                        <div class="w-36 sm:w-[270px] h-36 sm:h-[270px] rounded-[20px] overflow-hidden flex-shrink-0">
+                            <img src="assets/promotion/1.png" alt="image">
+                        </div>
+
+                        <div class="w-36 sm:w-[270px] h-36 sm:h-[270px] rounded-[20px] overflow-hidden flex-shrink-0">
+                            <img src="assets/promotion/2.png" alt="image">
+                        </div>
+
+                        <div class="w-36 sm:w-[270px] h-36 sm:h-[270px] rounded-[20px] overflow-hidden flex-shrink-0">
+                            <img src="assets/promotion/3.png" alt="image">
+                        </div>
+                    </div>
+
+                    <div class="flex gap-3 sm:gap-5 flex-row lg:flex-col mb-4 self-end translate-x-6 sm:translate-x-0">
+                        <div class="w-36 sm:w-[270px] h-36 sm:h-[270px] rounded-[20px] overflow-hidden flex-shrink-0">
+                            <img src="assets/promotion/2.png" alt="image">
+                        </div>
+
+                        <div class="w-36 sm:w-[270px] h-36 sm:h-[270px] rounded-[20px] overflow-hidden flex-shrink-0">
+                            <img src="assets/promotion/3.png" alt="image">
+                        </div>
+
+                        <div class="w-36 sm:w-[270px] h-36 sm:h-[270px] rounded-[20px] overflow-hidden flex-shrink-0">
+                            <img src="assets/promotion/4.png" alt="image">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="pt-20">
+        <div class="container">
+
+            <div class="flex lg:mb-[100px] flex-col lg:flex-row">
+                <div class="text-greyscale-600 text-sm max-w-[360px]">
+                    <a href="index.html" class="inline-block mb-4">
+                        <img src="assets/logo-blue.svg" alt="image">
+                    </a>
+                    <p>Add students, schedule lessons and performances, assign homework, and manage billing all in one place.</p>
+                </div>
+
+                <div class="grid grid-cols-2 my-12 lg:my-0 lg:grid-cols-3 gap-[50px] text-sm xl:ml-auto lg:ml-8 xl:mr-[10%]">
+                    <div class="w-[168px]">
+                        <p class="text-greyscale-900 font-medium">Product</p>
+                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Sign up</a></li>
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Social media links</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="w-[168px]">
+                        <p class="text-greyscale-900 font-medium">Social media</p>
+                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="w-[168px] block lg:hidden">
+                        <p class="text-greyscale-900 font-medium">Legal</p>
+                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="w-[168px]">
+                        <p class="text-greyscale-900 font-medium">Get in touch</p>
+                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
+                            <li><a href="mailto: info@adagio.com">info@adagio.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-t-greyscale-200 py-4 text-sm text-dark flex items-center justify-between">
+                <p>© 2024 Adagio, Inc.</p>
+                <ul class="hidden gap-6 text-greyscale-600 lg:flex">
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
