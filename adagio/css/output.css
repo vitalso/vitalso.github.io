@@ -1364,6 +1364,10 @@ video {
     max-height: none;
   }
 
+  .sm\:max-h-\[900px\] {
+    max-height: 900px;
+  }
+
   .sm\:w-\[270px\] {
     width: 270px;
   }
