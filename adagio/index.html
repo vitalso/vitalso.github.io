@@ -10,8 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <!-- TailwindCSS file -->
     <link href="./css/output.css" rel="stylesheet">
-    <!-- Slick slider -->
-    <link rel="stylesheet" href="./css/slick.css">
 </head>
 <body class="overflow-x-hidden">
     
@@ -98,7 +96,7 @@
                     <!-- Item -->
                     <div>
                         <div class="bg-light rounded-[10px] h-[420px] sm:h-[460px] pt-[30px] overflow-hidden">
-                            <img src="assets/phone-screenshot-1-1.webp" alt="image" class="mx-auto max-w-[300px]">
+                            <img src="assets/phone-screenshot-1-1.webp" alt="image" loading="lazy" class="mx-auto max-w-[300px]">
                         </div>
                         <div class="py-[14px] text-base">
                             <p class="font-medium text-dark mb-1">Track student practice time</p>
@@ -109,7 +107,7 @@
                     <!-- Item -->
                     <div>
                         <div class="bg-light rounded-[10px] h-[420px] sm:h-[460px] pt-[30px] overflow-hidden">
-                            <img src="assets/phone-screenshot-2-2.webp" alt="image" class="mx-auto max-w-[300px]">
+                            <img src="assets/phone-screenshot-2-2.webp" alt="image" loading="lazy" class="mx-auto max-w-[300px]">
                         </div>
                         <div class="py-[14px] text-base">
                             <p class="font-medium text-dark mb-1">A calendar for you and your students</p>
@@ -120,7 +118,7 @@
                     <!-- Item -->
                     <div>
                         <div class="bg-light rounded-[10px] h-[420px] sm:h-[460px] pt-[30px] overflow-hidden">
-                            <img src="assets/phone-screenshot-3-3.webp" alt="image" class="mx-auto max-w-[300px]">
+                            <img src="assets/phone-screenshot-3-3.webp" alt="image" loading="lazy" class="mx-auto max-w-[300px]">
                         </div>
                         <div class="py-[14px] text-base">
                             <p class="font-medium text-dark mb-1">Automate billing for lessons</p>
@@ -144,14 +142,14 @@
                 <div
                     class="my-12 max-w-[844px] mx-auto relative"
                 >
-                    <div class="flex items-center gap-5 font-Jakarta text-base sm:text-lg font-bold text-greyscale-400 overflow-hidden justify-center whitespace-nowrap slider-label">
-                        <div class="cursor-pointer hover:text-greyscale-900">Track practice time</div>
-                        <div class="cursor-pointer hover:text-greyscale-900">Keep students motivated to learn</div>
-                        <div class="cursor-pointer hover:text-greyscale-900">Homework</div>
-                        <div class="cursor-pointer hover:text-greyscale-900">Billing and payments</div>
-                        <div class="cursor-pointer hover:text-greyscale-900">Calendar</div>
-                        <div class="cursor-pointer hover:text-greyscale-900">Communicate</div>
-                        <div class="cursor-pointer hover:text-greyscale-900">Organizations</div>
+                    <div id="sliderNav" class="flex items-center gap-5 font-Jakarta text-base sm:text-lg font-bold text-greyscale-400 overflow-x-scroll scroll-smooth snap-x snap-mandatory no-scrollbar whitespace-nowrap">
+                        <a href="#slide_6" class="sliderNavItem hover:text-greyscale-900">Track practice time</a>
+                        <a href="#slide_7" class="sliderNavItem  hover:text-greyscale-900">Keep students motivated to learn</a>
+                        <a href="#slide_1" class="sliderNavItem  hover:text-greyscale-900 text-greyscale-900">Homework</a>
+                        <a href="#slide_2" class="sliderNavItem  hover:text-greyscale-900">Billing and payments</a>
+                        <a href="#slide_3" class="sliderNavItem  hover:text-greyscale-900">Calendar</a>
+                        <a href="#slide_4" class="sliderNavItem  hover:text-greyscale-900">Communicate</a>
+                        <a href="#slide_5" class="sliderNavItem  hover:text-greyscale-900">Organizations</a>
                     </div>
 
                     <!-- Fade background -->
@@ -159,34 +157,150 @@
                     <div class="absolute top-0 right-0 h-full w-28 bg-fade-gradient-secondary -scale-x-100 z-10"></div>
                 </div>
 
-                <!-- Slider -->
-                <div class="max-w-[1048px] mx-auto relative">
-                    <!-- Slider items -->
-                    <div class="border-8 sm:border-[11px] border-black border-opacity-5 rounded-[10px] overflow-hidden slider">
-                        <img src="assets/dashboard.webp" alt="image">
-                        <img src="assets/dashboard.webp" alt="image">
-                        <img src="assets/dashboard.webp" alt="image">
-                        <img src="assets/dashboard.webp" alt="image">
-                        <img src="assets/dashboard.webp" alt="image">
-                        <img src="assets/dashboard.webp" alt="image">
-                        <img src="assets/dashboard.webp" alt="image">
-                    </div>
-
-                    <!-- Slider button prev -->
-                    <button type="button" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -left-28 top-1/2 prev-btn">
-                        <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-
-                    <!-- Slider button next -->
-                    <button type="button" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -right-28 top-1/2 next-btn">
-                        <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900 -scale-x-100" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
             </div>
+
+            <!-- Slider -->
+            <ol class="overflow-x-scroll flex scroll-smooth snap-x snap-mandatory no-scrollbar">
+                <li id="slide_1" tabindex="0" class="relative flex-grow-0 flex-shrink-0 basis-full outline-none">
+                    <div class="snap-center border-8 sm:border-[11px] border-black border-opacity-5 rounded-[10px] max-w-[1048px] mx-auto relative">
+                        <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
+
+                        <!-- Slider button prev -->
+                        <a href="#slide_1" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -left-28 top-1/2 prev-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+
+                        <!-- Slider button next -->
+                        <a href="#slide_2" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -right-28 top-1/2 next-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900 -scale-x-100" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+
+                <li id="slide_2" tabindex="0" class="relative flex-grow-0 flex-shrink-0 basis-full outline-none">
+                    <div class="snap-center border-8 sm:border-[11px] border-black border-opacity-5 rounded-[10px] max-w-[1048px] mx-auto relative">
+                        <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
+
+                        <!-- Slider button prev -->
+                        <a href="#slide_1" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -left-28 top-1/2 prev-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+
+                        <!-- Slider button next -->
+                        <a href="#slide_3" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -right-28 top-1/2 next-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900 -scale-x-100" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+
+                <li id="slide_3" tabindex="0" class="relative flex-grow-0 flex-shrink-0 basis-full outline-none">
+                    <div class="snap-center border-8 sm:border-[11px] border-black border-opacity-5 rounded-[10px] max-w-[1048px] mx-auto relative">
+                        <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
+
+                        <!-- Slider button prev -->
+                        <a href="#slide_2" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -left-28 top-1/2 prev-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+
+                        <!-- Slider button next -->
+                        <a href="#slide_4" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -right-28 top-1/2 next-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900 -scale-x-100" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+
+                <li id="slide_4" tabindex="0" class="relative flex-grow-0 flex-shrink-0 basis-full outline-none">
+                    <div class="snap-center border-8 sm:border-[11px] border-black border-opacity-5 rounded-[10px] max-w-[1048px] mx-auto relative">
+                        <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
+
+                        <!-- Slider button prev -->
+                        <a href="#slide_3" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -left-28 top-1/2 prev-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+
+                        <!-- Slider button next -->
+                        <a href="#slide_5" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -right-28 top-1/2 next-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900 -scale-x-100" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+
+                <li id="slide_5" tabindex="0" class="relative flex-grow-0 flex-shrink-0 basis-full outline-none">
+                    <div class="snap-center border-8 sm:border-[11px] border-black border-opacity-5 rounded-[10px] max-w-[1048px] mx-auto relative">
+                        <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
+
+                        <!-- Slider button prev -->
+                        <a href="#slide_4" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -left-28 top-1/2 prev-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+
+                        <!-- Slider button next -->
+                        <a href="#slide_6" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -right-28 top-1/2 next-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900 -scale-x-100" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+
+                <li id="slide_6" tabindex="0" class="relative flex-grow-0 flex-shrink-0 basis-full outline-none">
+                    <div class="snap-center border-8 sm:border-[11px] border-black border-opacity-5 rounded-[10px] max-w-[1048px] mx-auto relative">
+                        <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
+
+                        <!-- Slider button prev -->
+                        <a href="#slide_5" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -left-28 top-1/2 prev-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+
+                        <!-- Slider button next -->
+                        <a href="#slide_7" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -right-28 top-1/2 next-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900 -scale-x-100" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+
+                <li id="slide_7" tabindex="0" class="relative flex-grow-0 flex-shrink-0 basis-full outline-none">
+                    <div class="snap-center border-8 sm:border-[11px] border-black border-opacity-5 rounded-[10px] max-w-[1048px] mx-auto relative">
+                        <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
+
+                        <!-- Slider button prev -->
+                        <a href="#slide_6" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -left-28 top-1/2 prev-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+
+                        <!-- Slider button next -->
+                        <a href="#slide_1" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -right-28 top-1/2 next-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900 -scale-x-100" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+            </ol>
         </section>
 
         <!-- Pricing plan -->
@@ -341,7 +455,7 @@
                         <p>I appreciate the robust lesson tracking and progress reporting features.</p>
                         <div class="flex gap-2.5 items-center">
                             <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
-                                <img src="assets/testimonials/1.webp" alt="image">
+                                <img src="assets/testimonials/1.webp" loading="lazy" alt="image">
                             </div>
                             <div>
                                 <p class="font-medium text-dark">Christopher Brown</p>
@@ -355,7 +469,7 @@
                         <p>This platform has been a game-changer for my teaching business. The user-friendly interface makes scheduling lessons and managing my calendar a breeze.</p>
                         <div class="flex gap-2.5 items-center">
                             <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
-                                <img src="assets/testimonials/2.webp" alt="image">
+                                <img src="assets/testimonials/2.webp" loading="lazy" alt="image">
                             </div>
                             <div>
                                 <p class="font-medium text-dark">Emily Thompson</p>
@@ -369,7 +483,7 @@
                         <p>As a working musician and part-time music teacher, finding a platform that caters to my unique needs and busy schedule was a challenge – until I discovered this incredible solution. The flexibility it offers is unparalleled. I can easily adjust my availability and schedule lessons at times that work best for me and my students, ensuring a perfect work-life balance.</p>
                         <div class="flex gap-2.5 items-center">
                             <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
-                                <img src="assets/testimonials/3.webp" alt="image">
+                                <img src="assets/testimonials/3.webp" loading="lazy" alt="image">
                             </div>
                             <div>
                                 <p class="font-medium text-dark">Joseph Thomas</p>
@@ -383,7 +497,7 @@
                         <p>As a seasoned music teacher with over 20 years of experience, I've seen my fair share of teaching tools and platforms come and go. However, this platform stands out as one of the most comprehensive and user-friendly solutions I've ever encountered.</p>
                         <div class="flex gap-2.5 items-center">
                             <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
-                                <img src="assets/testimonials/4.webp" alt="image">
+                                <img src="assets/testimonials/4.webp" loading="lazy" alt="image">
                             </div>
                             <div>
                                 <p class="font-medium text-dark">Olivia Martinez</p>
@@ -397,7 +511,7 @@
                         <p>I love the ability to offer both in-person and online lessons through this platform. It has expanded my reach and allowed me to connect with students from all over the world.</p>
                         <div class="flex gap-2.5 items-center">
                             <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
-                                <img src="assets/testimonials/5.webp" alt="image">
+                                <img src="assets/testimonials/5.webp" loading="lazy" alt="image">
                             </div>
                             <div>
                                 <p class="font-medium text-dark">William Davis</p>
@@ -411,7 +525,7 @@
                         <p>I've tried other teaching platforms in the past, but none have matched the user-friendly design and comprehensive features offered here.</p>
                         <div class="flex gap-2.5 items-center">
                             <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
-                                <img src="assets/testimonials/6.webp" alt="image">
+                                <img src="assets/testimonials/6.webp" loading="lazy" alt="image">
                             </div>
                             <div>
                                 <p class="font-medium text-dark">Amelia Gonzalez</p>
@@ -425,7 +539,7 @@
                         <p>The video conferencing tool is top-notch. The high-quality audio and video make virtual lessons feel just like being in the same room as my students.</p>
                         <div class="flex gap-2.5 items-center">
                             <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
-                                <img src="assets/testimonials/7.webp" alt="image">
+                                <img src="assets/testimonials/7.webp" loading="lazy" alt="image">
                             </div>
                             <div>
                                 <p class="font-medium text-dark">Ava Rodriguez</p>
@@ -439,7 +553,7 @@
                         <p>The built-in resource sharing feature is fantastic. I can easily share sheet music, exercises, and other learning materials with my students, streamlining the learning process.</p>
                         <div class="flex gap-2.5 items-center">
                             <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
-                                <img src="assets/testimonials/8.webp" alt="image">
+                                <img src="assets/testimonials/8.webp" loading="lazy" alt="image">
                             </div>
                             <div>
                                 <p class="font-medium text-dark">Michael Smith</p>
@@ -453,7 +567,7 @@
                         <p>The ability to set up recurring lessons and send automatic reminders has been a lifesaver for me. It helps ensure my students stay on track and never miss a lesson. It has opened up new revenue streams and allowed me to reach a wider audience.</p>
                         <div class="flex gap-2.5 items-center">
                             <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
-                                <img src="assets/testimonials/9.webp" alt="image">
+                                <img src="assets/testimonials/9.webp" loading="lazy" alt="image">
                             </div>
                             <div>
                                 <p class="font-medium text-dark">Mia Hernandez</p>
@@ -482,29 +596,29 @@
                 <div class="h-full lg:ml-24 flex gap-3 sm:gap-5 flex-col lg:flex-row">
                     <div class="flex gap-3 sm:gap-5 flex-row lg:flex-col mt-14 lg:mt-4 -translate-x-5 sm:translate-x-0">
                         <div class="w-36 sm:w-[270px] h-36 sm:h-[270px] rounded-[20px] overflow-hidden flex-shrink-0">
-                            <img src="assets/promotion/1.webp" alt="image">
+                            <img src="assets/promotion/1.webp" loading="lazy" alt="image">
                         </div>
 
                         <div class="w-36 sm:w-[270px] h-36 sm:h-[270px] rounded-[20px] overflow-hidden flex-shrink-0">
-                            <img src="assets/promotion/2.webp" alt="image">
+                            <img src="assets/promotion/2.webp" loading="lazy" alt="image">
                         </div>
 
                         <div class="w-36 sm:w-[270px] h-36 sm:h-[270px] rounded-[20px] overflow-hidden flex-shrink-0">
-                            <img src="assets/promotion/3.webp" alt="image">
+                            <img src="assets/promotion/3.webp" loading="lazy" alt="image">
                         </div>
                     </div>
 
                     <div class="flex gap-3 sm:gap-5 flex-row lg:flex-col mb-4 self-end translate-x-6 sm:translate-x-0">
                         <div class="w-36 sm:w-[270px] h-36 sm:h-[270px] rounded-[20px] overflow-hidden flex-shrink-0">
-                            <img src="assets/promotion/2.webp" alt="image">
+                            <img src="assets/promotion/2.webp" loading="lazy" alt="image">
                         </div>
 
                         <div class="w-36 sm:w-[270px] h-36 sm:h-[270px] rounded-[20px] overflow-hidden flex-shrink-0">
-                            <img src="assets/promotion/3.webp" alt="image">
+                            <img src="assets/promotion/3.webp" loading="lazy" alt="image">
                         </div>
 
                         <div class="w-36 sm:w-[270px] h-36 sm:h-[270px] rounded-[20px] overflow-hidden flex-shrink-0">
-                            <img src="assets/promotion/4.webp" alt="image">
+                            <img src="assets/promotion/4.webp" loading="lazy" alt="image">
                         </div>
                     </div>
                 </div>
@@ -577,8 +691,6 @@
     </footer>
 
     <!-- Script -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/slick.min.js"></script>
     <script src="js/main.js"></script>
 
 </body>

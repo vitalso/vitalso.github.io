@@ -1,32 +1,12 @@
-$(function () {
+// Toggle class for slider nav item
+var sliderNav = document.getElementById("sliderNav");
 
-    $('.slider').slick({
-        arrows: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        asNavFor: '.slider-label',
-    });
+var sliderNavItem = sliderNav.getElementsByClassName("sliderNavItem");
 
-    $('.slider-label').slick({
-        arrows: false,
-        centerMode: true,
-        //slidesToShow: 4,
-        centerPadding: '20px',
-        variableWidth: true,
-        asNavFor: '.slider',
-    });
-
-    $('.next-btn').on('click' , function(){
-        $('.slider').slick("slickNext");
-    });
-
-    $('.prev-btn').on('click' , function(){
-        $('.slider').slick("slickPrev");
-    });
-
-    $('.slider-label .slick-slide').on('click' , function(){
-        var slide = $(this).attr('data-slick-index');
-        $('.slider').slick('slickGoTo' , slide);
-    })
-
-});
+for (var i = 0; i < sliderNavItem.length; i++) {
+  sliderNavItem[i].addEventListener("click", function() {
+    var current = sliderNav.getElementsByClassName("text-greyscale-900");
+    current[0].className = current[0].className.replace(" text-greyscale-900", "");
+    this.className += " text-greyscale-900";
+  });
+}
