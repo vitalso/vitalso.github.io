@@ -160,147 +160,93 @@
             </div>
 
             <!-- Slider -->
-            <ol class="overflow-x-scroll flex scroll-smooth snap-x snap-mandatory no-scrollbar">
-                <li id="slide_1" tabindex="0" class="relative flex-grow-0 flex-shrink-0 basis-full outline-none">
-                    <div class="snap-center border-8 sm:border-[11px] border-black border-opacity-5 rounded-[10px] max-w-[1048px] mx-auto relative">
-                        <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
+            <div class="slider relative max-w-[1048px] mx-auto">
+                <ol class="overflow-x-scroll flex scroll-smooth snap-x snap-mandatory no-scrollbar border-8 sm:border-[11px] border-black border-opacity-5 rounded-[10px]">
+                    <li id="slide_1" tabindex="0" class="flex-grow-0 flex-shrink-0 basis-full outline-none">
+                        <div class="snap-center relative">
+                            <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
 
-                        <!-- Slider button prev -->
-                        <a href="#slide_1" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -left-28 top-1/2 prev-btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
+                            <!-- Slider button prev -->
+                            <a href="#slide_7" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute left-[13px] top-1/2 -translate-y-1/2 text-[0px]">Prev slide</a>
 
-                        <!-- Slider button next -->
-                        <a href="#slide_2" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -right-28 top-1/2 next-btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900 -scale-x-100" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
-                </li>
+                            <!-- Slider button next -->
+                            <a href="#slide_2" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute right-[13px] top-1/2 -translate-y-1/2 text-[0px]">Next slide</a>
+                        </div>
+                    </li>
 
-                <li id="slide_2" tabindex="0" class="relative flex-grow-0 flex-shrink-0 basis-full outline-none">
-                    <div class="snap-center border-8 sm:border-[11px] border-black border-opacity-5 rounded-[10px] max-w-[1048px] mx-auto relative">
-                        <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
+                    <li id="slide_2" tabindex="0" class="flex-grow-0 flex-shrink-0 basis-full outline-none">
+                        <div class="snap-center relative">
+                            <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
 
-                        <!-- Slider button prev -->
-                        <a href="#slide_1" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -left-28 top-1/2 prev-btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
+                            <!-- Slider button prev -->
+                            <a href="#slide_1" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute left-[13px] top-1/2 -translate-y-1/2 text-[0px]">Prev slide</a>
 
-                        <!-- Slider button next -->
-                        <a href="#slide_3" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -right-28 top-1/2 next-btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900 -scale-x-100" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
-                </li>
+                            <!-- Slider button next -->
+                            <a href="#slide_3" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute right-[13px] top-1/2 -translate-y-1/2 text-[0px]">Next slide</a>
+                        </div>
+                    </li>
 
-                <li id="slide_3" tabindex="0" class="relative flex-grow-0 flex-shrink-0 basis-full outline-none">
-                    <div class="snap-center border-8 sm:border-[11px] border-black border-opacity-5 rounded-[10px] max-w-[1048px] mx-auto relative">
-                        <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
+                    <li id="slide_3" tabindex="0" class="flex-grow-0 flex-shrink-0 basis-full outline-none">
+                        <div class="snap-center relative">
+                            <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
 
-                        <!-- Slider button prev -->
-                        <a href="#slide_2" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -left-28 top-1/2 prev-btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
+                            <!-- Slider button prev -->
+                            <a href="#slide_2" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute left-[13px] top-1/2 -translate-y-1/2 text-[0px]">Prev slide</a>
 
-                        <!-- Slider button next -->
-                        <a href="#slide_4" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -right-28 top-1/2 next-btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900 -scale-x-100" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
-                </li>
+                            <!-- Slider button next -->
+                            <a href="#slide_4" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute right-[13px] top-1/2 -translate-y-1/2 text-[0px]">Next slide</a>
+                        </div>
+                    </li>
 
-                <li id="slide_4" tabindex="0" class="relative flex-grow-0 flex-shrink-0 basis-full outline-none">
-                    <div class="snap-center border-8 sm:border-[11px] border-black border-opacity-5 rounded-[10px] max-w-[1048px] mx-auto relative">
-                        <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
+                    <li id="slide_4" tabindex="0" class="flex-grow-0 flex-shrink-0 basis-full outline-none">
+                        <div class="snap-center relative">
+                            <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
 
-                        <!-- Slider button prev -->
-                        <a href="#slide_3" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -left-28 top-1/2 prev-btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
+                            <!-- Slider button prev -->
+                            <a href="#slide_3" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute left-[13px] top-1/2 -translate-y-1/2 text-[0px]">Prev slide</a>
 
-                        <!-- Slider button next -->
-                        <a href="#slide_5" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -right-28 top-1/2 next-btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900 -scale-x-100" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
-                </li>
+                            <!-- Slider button next -->
+                            <a href="#slide_5" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute right-[13px] top-1/2 -translate-y-1/2 text-[0px]">Next slide</a>
+                        </div>
+                    </li>
 
-                <li id="slide_5" tabindex="0" class="relative flex-grow-0 flex-shrink-0 basis-full outline-none">
-                    <div class="snap-center border-8 sm:border-[11px] border-black border-opacity-5 rounded-[10px] max-w-[1048px] mx-auto relative">
-                        <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
+                    <li id="slide_5" tabindex="0" class="flex-grow-0 flex-shrink-0 basis-full outline-none">
+                        <div class="snap-center relative">
+                            <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
 
-                        <!-- Slider button prev -->
-                        <a href="#slide_4" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -left-28 top-1/2 prev-btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
+                            <!-- Slider button prev -->
+                            <a href="#slide_4" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute left-[13px] top-1/2 -translate-y-1/2 text-[0px]">Prev slide</a>
 
-                        <!-- Slider button next -->
-                        <a href="#slide_6" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -right-28 top-1/2 next-btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900 -scale-x-100" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
-                </li>
+                            <!-- Slider button next -->
+                            <a href="#slide_6" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute right-[13px] top-1/2 -translate-y-1/2 text-[0px]">Next slide</a>
+                        </div>
+                    </li>
 
-                <li id="slide_6" tabindex="0" class="relative flex-grow-0 flex-shrink-0 basis-full outline-none">
-                    <div class="snap-center border-8 sm:border-[11px] border-black border-opacity-5 rounded-[10px] max-w-[1048px] mx-auto relative">
-                        <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
+                    <li id="slide_6" tabindex="0" class="flex-grow-0 flex-shrink-0 basis-full outline-none">
+                        <div class="snap-center relative">
+                            <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
 
-                        <!-- Slider button prev -->
-                        <a href="#slide_5" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -left-28 top-1/2 prev-btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
+                            <!-- Slider button prev -->
+                            <a href="#slide_5" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute left-[13px] top-1/2 -translate-y-1/2 text-[0px]">Prev slide</a>
 
-                        <!-- Slider button next -->
-                        <a href="#slide_7" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -right-28 top-1/2 next-btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900 -scale-x-100" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
-                </li>
+                            <!-- Slider button next -->
+                            <a href="#slide_7" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute right-[13px] top-1/2 -translate-y-1/2 text-[0px]">Next slide</a>
+                        </div>
+                    </li>
 
-                <li id="slide_7" tabindex="0" class="relative flex-grow-0 flex-shrink-0 basis-full outline-none">
-                    <div class="snap-center border-8 sm:border-[11px] border-black border-opacity-5 rounded-[10px] max-w-[1048px] mx-auto relative">
-                        <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
+                    <li id="slide_7" tabindex="0" class="flex-grow-0 flex-shrink-0 basis-full outline-none">
+                        <div class="snap-center relative">
+                            <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
 
-                        <!-- Slider button prev -->
-                        <a href="#slide_6" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -left-28 top-1/2 prev-btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
+                            <!-- Slider button prev -->
+                            <a href="#slide_6" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute left-[13px] top-1/2 -translate-y-1/2 text-[0px]">Prev slide</a>
 
-                        <!-- Slider button next -->
-                        <a href="#slide_1" class="bg-white border-greyscale-200 rounded-full w-11 h-11 hidden lg:flex flex-col justify-center items-center absolute -right-28 top-1/2 next-btn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900 -scale-x-100" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.5 12L4.5 12M4.5 12L11.25 18.75M4.5 12L11.25 5.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </a>
-                    </div>
-                </li>
-            </ol>
+                            <!-- Slider button next -->
+                            <a href="#slide_1" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute right-[13px] top-1/2 -translate-y-1/2 text-[0px]">Next slide</a>
+                        </div>
+                    </li>
+                </ol>
+            </div>
         </section>
 
         <!-- Pricing plan -->
@@ -373,7 +319,7 @@
                     <!-- Price plan -->
                     <div class="shadow-primary rounded-[16px] p-6 w-full sm:max-w-[344px] relative">
                         <p class="text-lg font-Jakarta font-semibold mb-[22px]">Premium</p>
-                        <p class="text-greyscale-600 absolute top-[27px] right-6">Fully tax deductible</p>
+                        <p class="text-greyscale-600 absolute top-[27px] right-[13px]">Fully tax deductible</p>
                         <p class="text-[32px] leading-10 font-Jakarta font-bold mb-4">$5 <span class="font-sans text-base font-medium">/month</span></p>
                         <a href="#" class="py-3 px-5 font-medium text-sm text-white bg-accent-blue rounded-[40px] w-full inline-block text-center mb-6">Get started</a>
                         <p class="mb-4">With the free plan, you get</p>
