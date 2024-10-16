@@ -580,14 +580,10 @@ video {
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
-  --tw-border-opacity: 1;
-  border-color: rgb(230 234 240 / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(7 26 52 / var(--tw-bg-opacity));
-  background-image: url('../assets/arrow-small-left-linear.svg');
-  background-position: center;
-  content: var(--tw-content);
-  background-repeat: no-repeat;
+  background-color: #FFF;
+  content: "\2190";
+  font-size: 1.5rem;
+  font-family: system-ui;
 }
 
 .slider::after {
@@ -606,24 +602,18 @@ video {
   align-items: center;
   justify-content: center;
   border-radius: 9999px;
-  --tw-border-opacity: 1;
-  border-color: rgb(230 234 240 / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(7 26 52 / var(--tw-bg-opacity));
-  background-image: url('../assets/arrow-small-left-linear.svg');
-  background-position: center;
-  content: var(--tw-content);
-  background-repeat: no-repeat;
+  background-color: #FFF;
+  content: "\2190";
+  font-size: 1.5rem;
+  font-family: system-ui;
 }
 
 @media (min-width: 640px) {
   .slider::before {
-    content: var(--tw-content);
     display: flex;
   }
 
   .slider::after {
-    content: var(--tw-content);
     display: flex;
   }
 }
