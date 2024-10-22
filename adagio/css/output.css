@@ -640,6 +640,10 @@ video {
   left: 0px;
 }
 
+.left-6 {
+  left: 1.5rem;
+}
+
 .left-\[13px\] {
   left: 13px;
 }
@@ -662,10 +666,6 @@ video {
 
 .top-\[27px\] {
   top: 27px;
-}
-
-.left-6 {
-  left: 1.5rem;
 }
 
 .z-10 {
@@ -723,6 +723,10 @@ video {
   margin-top: 3.5rem;
 }
 
+.mt-28 {
+  margin-top: 7rem;
+}
+
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -749,26 +753,6 @@ video {
 
 .mt-\[18px\] {
   margin-top: 18px;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
-.mt-\[116px\] {
-  margin-top: 116px;
-}
-
-.mt-32 {
-  margin-top: 8rem;
-}
-
-.mt-\[120px\] {
-  margin-top: 120px;
-}
-
-.mt-28 {
-  margin-top: 7rem;
 }
 
 .block {
@@ -799,6 +783,10 @@ video {
   height: 2.75rem;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .h-36 {
   height: 9rem;
 }
@@ -819,16 +807,8 @@ video {
   height: 100vh;
 }
 
-.h-20 {
-  height: 5rem;
-}
-
 .max-h-\[720px\] {
   max-height: 720px;
-}
-
-.max-h-\[710px\] {
-  max-height: 710px;
 }
 
 .min-h-\[610px\] {
@@ -895,16 +875,12 @@ video {
   max-width: 720px;
 }
 
-.max-w-\[844px\] {
-  max-width: 844px;
-}
-
 .max-w-\[735px\] {
   max-width: 735px;
 }
 
-.max-w-\[517px\] {
-  max-width: 517px;
+.max-w-\[844px\] {
+  max-width: 844px;
 }
 
 .flex-1 {
@@ -1036,14 +1012,6 @@ video {
   gap: 50px;
 }
 
-.gap-8 {
-  gap: 2rem;
-}
-
-.gap-7 {
-  gap: 1.75rem;
-}
-
 .gap-x-4 {
   column-gap: 1rem;
 }
@@ -1162,6 +1130,11 @@ video {
   background-color: rgb(247 249 249 / var(--tw-bg-opacity));
 }
 
+.bg-greyPrimary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 246 245 / var(--tw-bg-opacity));
+}
+
 .bg-light {
   --tw-bg-opacity: 1;
   background-color: rgb(239 237 233 / var(--tw-bg-opacity));
@@ -1175,11 +1148,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-greyPrimary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(247 246 245 / var(--tw-bg-opacity));
 }
 
 .bg-fade-gradient-secondary {
@@ -1230,12 +1198,12 @@ video {
   stroke: #2264F2;
 }
 
-.stroke-white {
-  stroke: #FFFFFF;
-}
-
 .stroke-black {
   stroke: #000000;
+}
+
+.stroke-white {
+  stroke: #FFFFFF;
 }
 
 .p-6 {
@@ -1312,14 +1280,8 @@ video {
   padding-bottom: 14px;
 }
 
-.px-\[30px\] {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+.pb-16 {
+  padding-bottom: 4rem;
 }
 
 .pb-36 {
@@ -1332,10 +1294,6 @@ video {
 
 .pt-\[30px\] {
   padding-top: 30px;
-}
-
-.pb-16 {
-  padding-bottom: 4rem;
 }
 
 .text-center {
@@ -1390,10 +1348,6 @@ video {
   line-height: 1.25rem;
 }
 
-.text-\[64px\] {
-  font-size: 64px;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -1420,18 +1374,6 @@ video {
 
 .leading-\[48px\] {
   line-height: 48px;
-}
-
-.leading-\[72px\] {
-  line-height: 72px;
-}
-
-.leading-7 {
-  line-height: 1.75rem;
-}
-
-.leading-8 {
-  line-height: 2rem;
 }
 
 .tracking-tight {
@@ -1661,11 +1603,6 @@ video {
     background-position: center;
   }
 
-  .sm\:py-24 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
-
   .sm\:px-\[30px\] {
     padding-left: 30px;
     padding-right: 30px;
@@ -1674,6 +1611,11 @@ video {
   .sm\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  .sm\:py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   .sm\:text-4xl {
@@ -1759,10 +1701,6 @@ video {
     align-items: flex-start;
   }
 
-  .md\:items-center {
-    align-items: center;
-  }
-
   .md\:justify-start {
     justify-content: flex-start;
   }
@@ -1795,12 +1733,12 @@ video {
     padding-bottom: 22px;
   }
 
-  .md\:pt-0 {
-    padding-top: 0px;
-  }
-
   .md\:pb-0 {
     padding-bottom: 0px;
+  }
+
+  .md\:pt-0 {
+    padding-top: 0px;
   }
 
   .md\:text-left {
@@ -1847,16 +1785,16 @@ video {
     margin-left: 2rem;
   }
 
+  .lg\:mt-0 {
+    margin-top: 0px;
+  }
+
   .lg\:mt-12 {
     margin-top: 3rem;
   }
 
   .lg\:mt-4 {
     margin-top: 1rem;
-  }
-
-  .lg\:mt-0 {
-    margin-top: 0px;
   }
 
   .lg\:flex {
@@ -1908,16 +1846,16 @@ video {
     line-height: 1.75rem;
   }
 
-  .lg\:leading-\[72px\] {
-    line-height: 72px;
-  }
-
   .lg\:leading-7 {
     line-height: 1.75rem;
   }
 
   .lg\:leading-8 {
     line-height: 2rem;
+  }
+
+  .lg\:leading-\[72px\] {
+    line-height: 72px;
   }
 }
 
