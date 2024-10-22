@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adagio Signup</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <!-- TailwindCSS file -->
+    <link href="./css/output.css" rel="stylesheet">
+</head>
+<body class="overflow-x-hidden">
+    
+    <!-- Header -->
+    <header class="absolute w-full py-5 md:py-[22px] z-10">
+        <div class="container flex items-center">
+
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="assets/Adagio-logo-blue.svg" alt="image">
+            </a>
+
+            <nav class="ml-10 text-black text-sm font-medium hidden md:inline-block">
+                <a href="#" class="py-2 mx-3">Home</a>
+                <a href="#" class="py-2 mx-3">Features</a>
+                <a href="#" class="py-2 mx-3">Product</a>
+                <a href="#" class="py-2 mx-3">Pricing</a>
+            </nav>
+
+            <div class="ml-auto flex gap-2 items-center">
+                <a href="login.html" class="py-2.5 px-[14px] font-medium text-sm text-black bg-white rounded-[40px]">
+                    Sign in
+                </a>
+
+                <a href="#" class="py-2.5 px-5 font-medium text-sm text-white bg-accent-blue rounded-[40px] hidden md:inline-block">
+                    Get started
+                </a>
+
+                <button type="button" class="inline-block md:hidden">
+                    <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-black" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.75 6.75012H20.25M3.75 12.0001H20.25M3.75 17.2501H20.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="pb-16 md:pb-0 md:h-screen md:max-h-[710px] min-h-[710px] bg-greyPrimary">
+            <div class="container h-full flex flex-col md:justify-center">
+
+                <div class="flex items-center gap-10 md:gap-7 w-full flex-col mt-28 md:mt-0 md:flex-row">
+                    <div class="text-sm lg:text-lg lg:leading-7 max-w-[735px] flex flex-col gap-2 lg:gap-8">
+                        <h1 class="font-Jakarta text-[32px] leading-10 lg:text-[64px] lg:leading-[72px] font-semibold">Get in touch for any support and inquiries.</h1>
+                        <p>Adagio is the easiest way to manage your music teaching needs, providing seamless integration of all essential features into your workflow.</p>
+                        <div class="flex flex-col gap-1 left-6 lg:leading-8 mt-4 lg:mt-0">
+                            <p><span class="font-semibold">Email:</span> support@adagio.com</p>
+                            <p><span class="font-semibold">Phone:</span> +1 (123) 456-7890</p>
+                            <p><span class="font-semibold">Live chat:</span> Available on our website during business hours</p>
+                            <p><span class="font-semibold">Social media:</span> Connect with us on <a href="https://www.facebook.com/musopenorg">Facebook</a>, <a href="https://x.com/musopen">X</a>, and <a href="#">Instagram</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Form -->
+                    <div class="text-[13px] w-full sm:max-w-[517px]">
+
+                        <form action="#" class="text-greySecondary flex flex-col gap-3 bg-white rounded-[20px] p-6 sm:py-10 sm:px-[30px]">
+
+                            <div class="flex gap-2 max-[576px]:flex-col">
+                                <div class="flex flex-col gap-1.5 flex-1">
+                                    <label for="firstName">First name</label>
+                                    <input type="text" id="firstName" placeholder="First name" class="w-full h-11 px-3.5 rounded-md border border-greyBorder outline-none placeholder:text-greyscale-500 text-greyscale-900">
+                                </div>
+
+                                <div class="flex flex-col gap-1.5 flex-1">
+                                    <label for="lastName">Last name</label>
+                                    <input type="text" id="lasttName" placeholder="Last name" class="w-full h-11 px-3.5 rounded-md border border-greyBorder outline-none placeholder:text-greyscale-500 text-greyscale-900">
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-1.5">
+                                <label for="email">Email address</label>
+                                <!-- Input with error -->
+                                <input type="email" id="lasttName" placeholder="Email address" class="w-full h-11 px-3.5 rounded-md border border-greyBorder outline-none placeholder:text-greyscale-500 text-greyscale-900">
+                                <!-- Error message -->
+                                <span class="text-red hidden">This value should be a valid email.</span>
+                            </div>
+
+                            <div class="flex flex-col gap-1.5 flex-1">
+                                <label for="message">How can we help you?</label>
+                                <textarea id="message" placeholder="What can we help you with?" class="w-full h-20 px-3.5 py-2.5 rounded-md border border-greyBorder outline-none placeholder:text-greyscale-500 text-greyscale-900 resize-none"></textarea>
+                            </div>
+
+                            <!-- By default button is disabled. For activate button just remove the 'disabled' attr -->
+                            <button type="submit" class="h-10 rounded-[40px] py-2.5 px-4 text-center mt-5 bg-accent-blue text-white disabled:bg-opacity-50" disabled>Submit</button>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="pt-20">
+        <div class="container">
+
+            <div class="flex lg:mb-[100px] flex-col lg:flex-row">
+                <div class="text-greyscale-600 text-sm max-w-[360px]">
+                    <a href="index.html" class="inline-block mb-4">
+                        <img src="assets/logo-blue.svg" alt="image">
+                    </a>
+                    <p>Add students, schedule lessons and performances, assign homework, and manage billing all in one place.</p>
+                </div>
+
+                <div class="grid grid-cols-2 my-12 lg:my-0 lg:grid-cols-3 gap-[50px] text-sm xl:ml-auto lg:ml-8 xl:mr-[10%]">
+                    <div class="w-[168px]">
+                        <p class="text-greyscale-900 font-medium">Product</p>
+                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
+                            <li><a href="https://musopen.org/contact/" target="_blank">Contact Us</a></li>
+                            <li><a href="https://musopen.org/signup/" target="_blank">Sign up</a></li>
+                            <li><a href="https://musopen.org/account/login/" target="_blank">Login</a></li>
+                            <li><a href="https://musopen.org/about/" target="_blank">About</a></li>
+                            <li><a href="https://musopen.org/faq/" target="_blank">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="w-[168px]">
+                        <p class="text-greyscale-900 font-medium">Social media</p>
+                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
+                            <li><a href="https://www.youtube.com/musopenvideos" target="_blank">YouTube</a></li>
+                            <li><a href="https://www.facebook.com/musopenorg" target="_blank">Facebook</a></li>
+                            <li><a href="https://x.com/musopen">Twitter</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="w-[168px] block lg:hidden">
+                        <p class="text-greyscale-900 font-medium">Legal</p>
+                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
+                            <li><a href="https://musopen.org/page/tos/" target="_blank">Terms of Use</a></li>
+                            <li><a href="https://musopen.org/page/privacy/" target="_blank">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="w-[168px]">
+                        <p class="text-greyscale-900 font-medium">Get in touch</p>
+                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
+                            <li><a href="mailto: info@adagio.com">info@adagio.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-t-greyscale-200 py-4 text-sm text-dark flex items-center justify-between">
+                <p>© 2024 Adagio, Inc.</p>
+                <ul class="hidden gap-6 text-greyscale-600 lg:flex">
+                    <li><a href="https://musopen.org/page/tos/" target="_blank">Terms of Use</a></li>
+                    <li><a href="https://musopen.org/page/privacy/" target="_blank">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
