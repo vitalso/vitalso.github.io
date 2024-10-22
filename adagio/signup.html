@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adagio Signup</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <!-- TailwindCSS file -->
+    <link href="./css/output.css" rel="stylesheet">
+</head>
+<body class="overflow-x-hidden">
+    
+    <!-- Header -->
+    <header class="absolute w-full py-3 md:py-6 z-10">
+        <div class="container flex items-center">
+
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="assets/Adagio-logo-blue.svg" alt="image">
+            </a>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="h-screen min-h-[610px]">
+            <div class="container h-full flex flex-col items-center md:items-start justify-center relative">
+
+                <!-- Form -->
+                <div class="text-[13px] w-full sm:w-[400px] md:max-w-[calc(50%-16px)]">
+                    <h3 class="text-2xl text-black font-medium mb-1.5">Create a Adagio account</h3>
+                    <p class="text-greySecondary leading-5">Already have an account? <a href="https://musopen.org/account/login/" class="text-sm text-accent-blue font-medium">Log in</a></p>
+
+                    <form action="#" class="mt-8 text-greySecondary flex flex-col gap-3">
+
+                        <div class="flex gap-2 max-[576px]:flex-col">
+                            <div class="flex flex-col gap-1.5 flex-1">
+                                <label for="firstName">First name</label>
+                                <input type="text" id="firstName" placeholder="First name" class="w-full h-11 px-3.5 rounded-md border border-greyBorder outline-none placeholder:text-greyscale-500 text-greyscale-900">
+                            </div>
+
+                            <div class="flex flex-col gap-1.5 flex-1">
+                                <label for="lastName">Last name</label>
+                                <input type="text" id="lasttName" placeholder="Last name" class="w-full h-11 px-3.5 rounded-md border border-greyBorder outline-none placeholder:text-greyscale-500 text-greyscale-900">
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-1.5">
+                            <label for="email">Email address</label>
+                            <!-- Input with error -->
+                            <input type="email" id="lasttName" placeholder="Email address" class="w-full h-11 px-3.5 rounded-md border border-red outline-none placeholder:text-greyscale-500 text-greyscale-900">
+                            <!-- Error message -->
+                            <span class="text-red">This value should be a valid email.</span>
+                        </div>
+
+                        <div class="flex flex-col gap-1.5">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="••••••••" class="w-full h-11 px-3.5 rounded-md border border-greyBorder outline-none placeholder:text-greyscale-500 text-greyscale-900">
+                        </div>
+
+                        <!-- By default button is disabled. For activate button just remove the 'disabled' attr -->
+                        <button type="submit" class="h-10 rounded-[40px] py-2.5 px-4 text-center mt-5 bg-accent-blue text-white disabled:bg-opacity-50" disabled>Sign up</button>
+
+                    </form>
+
+                    <p class="text-center text-greyscale-600 leading-5 mt-3">By creating an account, you agree that you have read and accepted our <a href="https://musopen.org/page/tos/" class="font-medium underline">Terms of Use</a>.</p>
+                </div>
+
+                <!-- Signup hero image -->
+                <div class="signup-hero-image bg-signup-hero bg-center bg-cover bg-no-repeat max-w-[720px] absolute right-0 top-0 w-[50%] h-full hidden md:block"></div>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
