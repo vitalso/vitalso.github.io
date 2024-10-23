@@ -883,6 +883,10 @@ video {
   max-width: 844px;
 }
 
+.max-w-\[50\%\] {
+  max-width: 50%;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -1159,7 +1163,7 @@ video {
 }
 
 .bg-promotion-section {
-  background-image: url('../assets/bg-promotion.webp');
+  background-image: linear-gradient(to right, transparent 40%, rgba(34, 166, 242, 0.3) 100%) , url('../assets/bg-promo-vector.svg');
 }
 
 .bg-signup-hero {
@@ -1168,10 +1172,6 @@ video {
 
 .bg-cover {
   background-size: cover;
-}
-
-.bg-bottom {
-  background-position: bottom;
 }
 
 .bg-center {
@@ -1599,10 +1599,6 @@ video {
     background-image: url('../assets/hero-section.webp');
   }
 
-  .sm\:bg-center {
-    background-position: center;
-  }
-
   .sm\:px-\[30px\] {
     padding-left: 30px;
     padding-right: 30px;
@@ -1711,6 +1707,10 @@ video {
 
   .md\:gap-7 {
     gap: 1.75rem;
+  }
+
+  .md\:bg-left-top {
+    background-position: left top;
   }
 
   .md\:px-8 {
