@@ -1288,6 +1288,14 @@ video {
   padding-top: 30px;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1681,16 +1689,8 @@ video {
     max-width: calc(50% - 16px);
   }
 
-  .md\:max-w-\[50\%\] {
-    max-width: 50%;
-  }
-
   .md\:flex-row {
     flex-direction: row;
-  }
-
-  .md\:items-start {
-    align-items: flex-start;
   }
 
   .md\:justify-start {
@@ -1866,10 +1866,6 @@ video {
 }
 
 @media (min-width: 1536px) {
-  .\32xl\:items-start {
-    align-items: flex-start;
-  }
-
   .\32xl\:justify-start {
     justify-content: flex-start;
   }
