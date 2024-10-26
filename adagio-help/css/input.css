@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .activeDropdown {
+      @apply border-b font-medium;
+    }
+
+    .dropdown:not(.activeDropdown) svg {
+        @apply -rotate-90;
+    }
+
+    .dropdown:not(.activeDropdown) + ul {
+        @apply invisible h-0 opacity-0 hidden;
+    }
+}
