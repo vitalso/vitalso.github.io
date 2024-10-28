@@ -13,30 +13,37 @@
 </head>
 <body>
 
+    <!-- Header -->
+    <header class="py-3 lg:py-6 px-4 lg:px-5 w-full lg:max-w-[248px] fixed top-0 z-30 border-b border-b-greyscale-200 lg:border-none flex items-center justify-between gap-4 lg:block bg-white lg:bg-transparent">
+        <!-- Logo -->
+        <a href="index.html" class="font-semibold text-base text-greyscale-900">
+            Studio<span class="text-accent-blue font-medium">Help</span>
+        </a>
+
+        <!-- Search -->
+        <form action="#" class="lg:mt-[34px] relative w-full max-w-[207px] ml-auto">
+            <input
+                type="text"
+                class="w-full h-9 border border-greyscale-200 pl-[34px] pr-2.5 rounded-md bg-greyscale-100 text-[13px] font-medium text-greyscale-600 placeholder:text-greyscale-600 outline-none"
+                placeholder="Search"
+            >
+
+            <svg width="20" height="20" viewBox="0 0 20 20" class="fill-none stroke-greyscale-600 absolute left-2.5 top-2" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.9141 12.9166L15.8307 15.8333" stroke="#596579" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4.16406 9.16663C4.16406 11.9281 6.40264 14.1666 9.16406 14.1666C10.5472 14.1666 11.7991 13.605 12.7043 12.6975C13.6064 11.793 14.1641 10.5449 14.1641 9.16663C14.1641 6.4052 11.9255 4.16663 9.16406 4.16663C6.40264 4.16663 4.16406 6.4052 4.16406 9.16663Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </form>
+
+        <!-- Mobile menu button -->
+        <button type="button" id="toggleSidebarBtn" class="inline-block lg:hidden">
+            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-greyscale-900" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.75 6.75012H20.25M3.75 12.0001H20.25M3.75 17.2501H20.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </header>
+
     <!-- Sidebar -->
-    <aside class="border-r border-greyscale-200 w-full max-w-[248px] h-full overflow-y-auto fixed left-0 top-0">
-
-        <!-- Header -->
-        <header class="py-6 px-5">
-            <!-- Logo -->
-            <a href="index.html" class="font-semibold text-base text-greyscale-900">
-                Studio<span class="text-accent-blue font-medium">Help</span>
-            </a>
-
-            <!-- Search -->
-            <form action="#" class="mt-[34px] relative">
-                <input
-                    type="text"
-                    class="w-full h-9 border border-greyscale-200 pl-[34px] pr-2.5 rounded-md bg-greyscale-100 text-[13px] font-medium text-greyscale-600 placeholder:text-greyscale-600 outline-none"
-                    placeholder="Search"
-                >
-
-                <svg width="20" height="20" viewBox="0 0 20 20" class="fill-none stroke-greyscale-600 absolute left-2.5 top-2" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.9141 12.9166L15.8307 15.8333" stroke="#596579" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M4.16406 9.16663C4.16406 11.9281 6.40264 14.1666 9.16406 14.1666C10.5472 14.1666 11.7991 13.605 12.7043 12.6975C13.6064 11.793 14.1641 10.5449 14.1641 9.16663C14.1641 6.4052 11.9255 4.16663 9.16406 4.16663C6.40264 4.16663 4.16406 6.4052 4.16406 9.16663Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </form>
-        </header>
+    <aside id="sidebar" class="border-r border-greyscale-200 w-full max-w-[248px] h-full overflow-y-auto fixed -left-[248px] lg:left-0 pt-[61px] lg:pt-[142px] bg-white z-20 top-0 ">
 
         <!-- Nav -->
         <nav>
@@ -174,9 +181,29 @@
 
     </aside>
 
-    <main class="pl-[248px] pr-[221px]">
+    <!-- Additional sidebar -->
+    <aside class="pt-[61px] lg:pt-0 lg:px-0 fixed lg:top-[82px] lg:right-[77px] w-full lg:w-auto bg-white lg:hidden xl:block z-10">
+        <!-- Table of contents -->
+        <button type="button" id="tableContentBtn" class="flex lg:hidden items-center border-b border-b-greyscale-200 text-sm leading-4 py-3 px-4 w-full lg:w-auto justify-between outline-none">
+            Table of contents
+
+            <svg class="w-4 h-4 fill-none stroke-greyscale-900" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7"/>
+            </svg>
+        </button>
+
+        <nav id="tableContent" class="hidden xl:block p-4 lg:p-0 lg:border-b-0 border-b border-b-greyscale-200">
+            <ul class="flex flex-col gap-4">
+                <li><a href="#" class="mx-6 text-sm font-medium text-greyscale-900 relative after:w-0.5 after:h-full after:bg-accent-blue after:absolute after:-left-[22px] after:top-0 after:bottom-0 transition-all hover:text-greyscale-900">Introduction</a></li>
+                <li><a href="#" class="mx-6 text-sm text-greyscale-600 transition-all hover:text-greyscale-900">About Product</a></li>
+                <li><a href="#" class="mx-6 text-sm text-greyscale-600 transition-all hover:text-greyscale-900">Features</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="lg:pl-[248px] xl:pr-[221px] pt-[106px] lg:pt-0">
         
-        <section class="py-20 text-secondary px-[76px] text-sm">
+        <section class="py-6 lg:py-20 text-secondary px-4 lg:px-10 2xl:px-[76px] text-sm">
 
             <article>
                 <p class="text-accent-blue text-xs font-medium mb-3">Product tour</p>
@@ -234,17 +261,8 @@
 
     </main>
 
-    <!-- Additional sidebar -->
-    <aside class="fixed top-[82px] right-[77px]">
-        <nav class="flex flex-col gap-4">
-            <a href="#" class="mx-6 text-sm font-medium text-greyscale-900 relative after:w-0.5 after:h-full after:bg-accent-blue after:absolute after:-left-[22px] after:top-0 after:bottom-0 transition-all hover:text-greyscale-900">Introduction</a>
-            <a href="#" class="mx-6 text-sm text-greyscale-600 transition-all hover:text-greyscale-900">About Product</a>
-            <a href="#" class="mx-6 text-sm text-greyscale-600 transition-all hover:text-greyscale-900">Features</a>
-        </nav>
-    </aside>
-
     <!-- Help widget -->
-    <div class="bg-greyscale-100 rounded-[10px] px-[14px] py-2 border transition-all hover:bg-greyscale-200 border-greyscale-200 fixed right-[70px] bottom-1/4 text-xs text-greyscale-600 font-medium flex items-center gap-1.5">
+    <div class="bg-greyscale-100 rounded-[10px] px-[14px] py-2 border transition-all hover:bg-greyscale-200 border-greyscale-200 fixed right-4 lg:right-[70px] bottom-4 lg:bottom-1/4 text-xs text-greyscale-600 font-medium flex items-center gap-1.5">
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.7627 4.38599C6.44611 3.788 7.55415 3.788 8.23757 4.38599C8.92099 4.98398 8.92099 5.95352 8.23757 6.55151C8.11862 6.65559 7.98681 6.74155 7.84661 6.8094C7.41162 7.01992 7.00013 7.39175 7.00013 7.875V8.3125M12.25 7C12.25 9.89949 9.89949 12.25 7 12.25C4.10051 12.25 1.75 9.89949 1.75 7C1.75 4.10051 4.10051 1.75 7 1.75C9.89949 1.75 12.25 4.10051 12.25 7ZM7 10.0625H7.00438V10.0669H7V10.0625Z" stroke="#596579" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
