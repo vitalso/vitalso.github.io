@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adagio Pricing</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <!-- TailwindCSS file -->
+    <link href="./css/output.css" rel="stylesheet">
+</head>
+<body class="overflow-x-hidden">
+    
+    <!-- Header -->
+    <header class="absolute w-full py-5 md:py-[22px] z-10">
+        <div class="container flex items-center">
+
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="assets/Adagio-logo-blue.svg" alt="image">
+            </a>
+
+            <nav class="ml-10 text-black text-sm font-medium hidden md:inline-block">
+                <a href="#" class="py-2 mx-3">Home</a>
+                <a href="#" class="py-2 mx-3">Features</a>
+                <a href="#" class="py-2 mx-3">Product</a>
+                <a href="pricing.html" class="py-2 mx-3">Pricing</a>
+            </nav>
+
+            <div class="ml-auto flex gap-2 items-center">
+                <a href="login.html" class="py-2.5 px-[14px] font-medium text-sm text-black bg-white rounded-[40px]">
+                    Sign in
+                </a>
+
+                <a href="#" class="py-2.5 px-5 font-medium text-sm text-white bg-accent-blue rounded-[40px] hidden md:inline-block">
+                    Get started
+                </a>
+
+                <button type="button" class="inline-block md:hidden">
+                    <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-black" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.75 6.75012H20.25M3.75 12.0001H20.25M3.75 17.2501H20.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="pt-[84px]">
+
+        <!-- Pricing plan -->
+        <section class="py-12 md:py-[100px]">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="font-Jakarta text-[28px] sm:text-[40px] leading-9 sm:leading-[48px] text-dark mb-3 sm:mb-4 font-semibold tracking-tight">Join at a level that works for you</h2>
+                    <p class="text-sm sm:text-lg text-greyscale-600">We are a registered 501(c)3 non-profit based in California. <br class="hidden md:block"> 100% of your monthly subscription is tax deductible.</p>
+                </div>
+
+                <div class="mt-9 sm:mt-12 flex flex-col lg:flex-row gap-[18px] text-sm text-dark justify-center items-center lg:items-start">
+                    <!-- Price plan -->
+                    <div class="shadow-accent sm:shadow-primary rounded-[16px] p-6 w-full sm:max-w-[344px]">
+                        <p class="text-lg font-Jakarta font-semibold mb-[22px]">Basic</p>
+                        <p class="text-[32px] leading-10 font-Jakarta font-bold mb-4">Free</p>
+                        <a href="#" class="py-3 px-5 font-medium text-sm text-white bg-accent-blue rounded-[40px] w-full inline-block text-center mb-6">Get started</a>
+                        <p class="mb-4">With the free plan, you get</p>
+                        <ul class="flex flex-col gap-2">
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Track practice time</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Calendar</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Lesson scheduler</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Assign homework</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Set goals</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>50 students</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Free website</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Price plan -->
+                    <div class="shadow-primary rounded-[16px] p-6 w-full sm:max-w-[344px] relative">
+                        <p class="text-lg font-Jakarta font-semibold mb-[22px]">Premium</p>
+                        <p class="text-greyscale-600 absolute top-[27px] right-[13px]">Fully tax deductible</p>
+                        <p class="text-[32px] leading-10 font-Jakarta font-bold mb-4">$5 <span class="font-sans text-base font-medium">/month</span></p>
+                        <a href="#" class="py-3 px-5 font-medium text-sm text-white bg-accent-blue rounded-[40px] w-full inline-block text-center mb-6">Get started</a>
+                        <p class="mb-4">With the free plan, you get</p>
+                        <ul class="flex flex-col gap-2">
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>All the previous plus</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Unlimited students</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Automated billing and invoices</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Support for custom domains</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Newsletters</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Listen to audio from practice sessions</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Free Musopen pro membership included</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Price plan -->
+                    <div class="shadow-primary rounded-[16px] p-6 w-full sm:max-w-[344px] relative">
+                        <p class="text-lg font-Jakarta font-semibold mb-[22px]">Administrative</p>
+                        <p class="text-greyscale-600 absolute top-[27px] right-[13px]">Fully tax deductible</p>
+                        <p class="text-[32px] leading-10 font-Jakarta font-bold mb-4">$10 <span class="font-sans text-base font-medium">/month</span></p>
+                        <a href="#" class="py-3 px-5 font-medium text-sm text-white bg-accent-blue rounded-[40px] w-full inline-block text-center mb-6">Get started</a>
+                        <p class="mb-4">With the free plan, you get</p>
+                        <ul class="flex flex-col gap-2">
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>All the previous plus</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Unlimited students</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Automated billing and invoices</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Support for custom domains</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Newsletters</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Listen to audio from practice sessions</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Free Musopen pro membership included</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="py-12 md:py-32 bg-greyPrimary">
+            <div class="container">
+                <h2 class="font-Jakarta text-[28px] sm:text-[40px] leading-9 sm:leading-[48px] text-dark mb-3 sm:mb-4 font-semibold tracking-tight text-center">Frequently asked questions</h2>
+
+                <!-- FAQ items -->
+                <div class="max-w-[844px] rounded-[10px] bg-white px-5 mt-16 mx-auto">
+                    <!-- FAQ item -->
+                    <div class="border-b border-b-black border-opacity-10 last:border-0 toggleElement">
+                        <h4 class="text-black text-lg leading-6 py-6 relative cursor-pointer transition-all hover:text-greyscale-600">
+                            How long does it take to get set up?
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="absolute top-6 right-0" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5 8.25L12 15.75L4.5 8.25" stroke="#1F2124" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </h4>
+                        <div class="text-greyscale-600 pb-6 hidden toggleContent">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non soluta vero aliquid obcaecati neque voluptas vel, perspiciatis pariatur quaerat enim animi quod odio consectetur saepe, a minima corrupti doloremque recusandae!</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ item -->
+                    <div class="border-b border-b-black border-opacity-10 last:border-0 toggleElement">
+                        <h4 class="text-black text-lg leading-6 py-6 relative cursor-pointer transition-all hover:text-greyscale-600">
+                            How long does it take to get set up?
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="absolute top-6 right-0" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5 8.25L12 15.75L4.5 8.25" stroke="#1F2124" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </h4>
+                        <div class="text-greyscale-600 pb-6 hidden toggleContent">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non soluta vero aliquid obcaecati neque voluptas vel, perspiciatis pariatur quaerat enim animi quod odio consectetur saepe, a minima corrupti doloremque recusandae!</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ item -->
+                    <div class="border-b border-b-black border-opacity-10 last:border-0 toggleElement">
+                        <h4 class="text-black text-lg leading-6 py-6 relative cursor-pointer transition-all hover:text-greyscale-600">
+                            How long does it take to get set up?
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="absolute top-6 right-0" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5 8.25L12 15.75L4.5 8.25" stroke="#1F2124" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </h4>
+                        <div class="text-greyscale-600 pb-6 hidden toggleContent">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non soluta vero aliquid obcaecati neque voluptas vel, perspiciatis pariatur quaerat enim animi quod odio consectetur saepe, a minima corrupti doloremque recusandae!</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ item -->
+                    <div class="border-b border-b-black border-opacity-10 last:border-0 toggleElement">
+                        <h4 class="text-black text-lg leading-6 py-6 relative cursor-pointer transition-all hover:text-greyscale-600">
+                            How long does it take to get set up?
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="absolute top-6 right-0" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5 8.25L12 15.75L4.5 8.25" stroke="#1F2124" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </h4>
+                        <div class="text-greyscale-600 pb-6 hidden toggleContent">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non soluta vero aliquid obcaecati neque voluptas vel, perspiciatis pariatur quaerat enim animi quod odio consectetur saepe, a minima corrupti doloremque recusandae!</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ item -->
+                    <div class="border-b border-b-black border-opacity-10 last:border-0 toggleElement">
+                        <h4 class="text-black text-lg leading-6 py-6 relative cursor-pointer transition-all hover:text-greyscale-600">
+                            How long does it take to get set up?
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="absolute top-6 right-0" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5 8.25L12 15.75L4.5 8.25" stroke="#1F2124" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </h4>
+                        <div class="text-greyscale-600 pb-6 hidden toggleContent">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non soluta vero aliquid obcaecati neque voluptas vel, perspiciatis pariatur quaerat enim animi quod odio consectetur saepe, a minima corrupti doloremque recusandae!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="pt-20">
+        <div class="container">
+
+            <div class="flex lg:mb-[100px] flex-col lg:flex-row">
+                <div class="text-greyscale-600 text-sm max-w-[360px]">
+                    <a href="index.html" class="inline-block mb-4">
+                        <img src="assets/logo-blue.svg" alt="image">
+                    </a>
+                    <p>Add students, schedule lessons and performances, assign homework, and manage billing all in one place.</p>
+                </div>
+
+                <div class="grid grid-cols-2 my-12 lg:my-0 lg:grid-cols-3 gap-[50px] text-sm xl:ml-auto lg:ml-8 xl:mr-[10%]">
+                    <div class="w-[168px]">
+                        <p class="text-greyscale-900 font-medium">Product</p>
+                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
+                            <li><a href="https://musopen.org/contact/" target="_blank">Contact Us</a></li>
+                            <li><a href="https://musopen.org/signup/" target="_blank">Sign up</a></li>
+                            <li><a href="https://musopen.org/account/login/" target="_blank">Login</a></li>
+                            <li><a href="https://musopen.org/about/" target="_blank">About</a></li>
+                            <li><a href="https://musopen.org/faq/" target="_blank">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="w-[168px]">
+                        <p class="text-greyscale-900 font-medium">Social media</p>
+                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
+                            <li><a href="https://www.youtube.com/musopenvideos" target="_blank">YouTube</a></li>
+                            <li><a href="https://www.facebook.com/musopenorg" target="_blank">Facebook</a></li>
+                            <li><a href="https://x.com/musopen">Twitter</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="w-[168px] block lg:hidden">
+                        <p class="text-greyscale-900 font-medium">Legal</p>
+                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
+                            <li><a href="https://musopen.org/page/tos/" target="_blank">Terms of Use</a></li>
+                            <li><a href="https://musopen.org/page/privacy/" target="_blank">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="w-[168px]">
+                        <p class="text-greyscale-900 font-medium">Get in touch</p>
+                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
+                            <li><a href="mailto: info@adagio.com">info@adagio.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-t-greyscale-200 py-4 text-sm text-dark flex items-center justify-between">
+                <p>© 2024 Adagio, Inc.</p>
+                <ul class="hidden gap-6 text-greyscale-600 lg:flex">
+                    <li><a href="https://musopen.org/page/tos/" target="_blank">Terms of Use</a></li>
+                    <li><a href="https://musopen.org/page/privacy/" target="_blank">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- JS file -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>

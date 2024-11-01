@@ -19,4 +19,4 @@
     .slider {
         @apply before:absolute before:bg-dark before:bg-btn-arrow before:bg-no-repeat before:bg-center before:border-greyscale-200 before:rounded-full before:w-11 before:h-11 before:hidden before:sm:flex before:flex-col before:justify-center before:items-center before:top-1/2 before:left-6 before:z-10 before:pointer-events-none before:-translate-y-1/2 after:-translate-y-1/2 after:pointer-events-none after:absolute after:bg-dark after:bg-btn-arrow after:bg-no-repeat after:bg-center after:-scale-x-100 after:border-greyscale-200 after:rounded-full after:w-11 after:h-11 after:hidden after:sm:flex after:flex-col after:justify-center after:items-center after:top-1/2 after:right-6 after:z-10;
     }
-  }
+}
