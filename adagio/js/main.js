@@ -1,15 +1,18 @@
 // FAQ toggle element
-const faqItem = document.getElementsByClassName('toggleElement');
+const items = document.querySelectorAll('.toggleElement');
+const itemTitle = document.querySelectorAll('.toggleElement h4');
 
-for (i=0; i<faqItem.length; i++) {
-  faqItem[i].addEventListener('click', function (e) {
-    e.preventDefault();
-    e.stopPropagation();
+for (i=0; i<itemTitle.length; i++) {
+  itemTitle[i].addEventListener('click', function () {
+
+    if ( !this.parentNode.classList.contains('open') ) {
+      items.forEach((item) => {
+        item.classList.remove('open');
+      });
+      this.parentNode.classList.add('open');
+    } else {
+      this.parentNode.classList.remove('open');
+    }
     
-    var toggleContent = this.getElementsByClassName('toggleContent')[0];
-    var toggleIcon = this.querySelector('svg');
-    
-    toggleContent.classList.toggle('hidden');
-    toggleIcon.classList.toggle('rotate-180');
   })
 }
