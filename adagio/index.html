@@ -18,11 +18,9 @@
         <div class="container flex items-center">
 
             <!-- Logo -->
-            <a href="index.html">
-                <img src="assets/logo.svg" alt="image">
-            </a>
+            <a href="index.html" class="font-Jakarta font-bold text-2xl tracking-tighter text-accent-blue">Adagio</a>
 
-            <nav class="ml-10 text-white text-sm font-medium hidden md:inline-block">
+            <nav class="ml-10 text-dark text-sm font-medium hidden md:inline-block">
                 <a href="#" class="py-2 mx-3">Home</a>
                 <a href="#" class="py-2 mx-3">Features</a>
                 <a href="#" class="py-2 mx-3">Product</a>
@@ -30,11 +28,11 @@
             </nav>
 
             <div class="ml-auto flex gap-2 items-center">
-                <a href="login.html" class="py-2.5 px-[14px] font-medium text-sm text-white rounded-[40px]">
+                <a href="login.html" class="py-2.5 px-[14px] font-medium text-sm text-dark rounded-[40px]">
                     Sign in
                 </a>
 
-                <a href="#" class="py-2.5 px-5 font-medium text-sm text-black bg-white rounded-[40px] hidden md:inline-block">
+                <a href="#" class="py-2.5 px-5 font-medium text-sm text-white bg-accent-blue rounded-[40px] hidden md:inline-block">
                     Get started
                 </a>
 
@@ -51,234 +49,202 @@
     <main>
 
         <!-- Hero section -->
-        <section class="bg-hero-section-mobile sm:bg-hero-section h-screen md:min-h-[600px] max-h-[720px] sm:max-h-[900px] bg-no-repeat bg-cover bg-top text-white">
-            <div class="container h-full pt-20 translate-y-10 md:mt-0 text-center md:text-left md:pt-0 md:flex flex-col justify-center">
-                <h1 class="font-Jakarta text-[32px] md:text-[64px] leading-10 md:leading-[80px] font-semibold mb-3 md:mb-6">Simplify music <br> teaching with Adagio</h1>
-                <p class="text-sm md:text-[22px] md:leading-[36px]">Add students, schedule lessons and performances, <br class="hidden sm:block"> assign homework, and manage billing all in one place.</p>
-
-                <div class="mt-6 md:mt-14 gap-2.5 flex justify-center md:justify-start">
-                    <a href="#" class="py-2 md:py-4 px-3.5 md:px-8 font-medium text-sm md:text-base bg-white text-greyscale-900 rounded-[40px]">
-                        Get started for free
-                    </a>
-                    
-                    <a href="https://www.youtube.com/@adagio-dot-org" target="_blank" class="py-2 md:py-4 px-3.5 md:px-8 font-medium text-sm md:text-base bg-black text-white rounded-[40px] flex items-center gap-2">
-                        <svg width="24" height="24" viewBox="0 0 24 24" class="fill-white" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM10.7817 8.78296C10.4498 8.55666 10 8.79436 10 9.19607V14.8039C10 15.2056 10.4498 15.4433 10.7817 15.217L14.8941 12.4131C15.1852 12.2146 15.1852 11.7854 14.8941 11.5869L10.7817 8.78296Z" />
-                        </svg>
-                        Watch demo
-                    </a>
-                </div>
-
-                <div class="mt-14 hidden md:flex gap-10 text-sm">
-                    <div>
-                        <p class="font-Jakarta text-[32px] leading-10 font-bold mb-1">10k+</p>
-                        <p>Active students</p>
-                    </div>
-
-                    <div>
-                        <p class="font-Jakarta text-[32px] leading-10 font-bold mb-1">200k+</p>
-                        <p>Active Teachers</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Mobile app example screenshot -->
-        <section class="py-16 sm:py-24">
+        <section class="bg-hero-section-mobile sm:bg-hero-section bg-right-top bg-no-repeat text-greyscale-600 pt-36 text-center relative">
             <div class="container">
+                <div class="max-w-[930px] mx-auto">
+                    <h1 class="font-Jakarta text-[32px] md:text-[86px] leading-10 md:leading-[86px] font-medium text-greyscale-800 mb-3 md:mb-6">Make music teaching easy with Adagio</h1>
+                    <p class="text-lg">Manage your teaching workflow by adding students, scheduling lessons and performances, <br class="hidden sm:block"> assigning homework, and handling billing all in one streamlined platform</p>
 
-                <div class="text-center">
-                    <h2 class="font-Jakarta text-[28px] sm:text-[40px] leading-9 sm:leading-[48px] text-dark mb-3 sm:mb-4 font-semibold tracking-tight">Lesson management made musical</h2>
-                    <p class="text-sm sm:text-lg text-greyscale-600">You don’t have to switch solutions to benefit from our user-friendly software suite. Bring your current <br class="hidden sm:block"> tools with you, and we’ll connect your data via API—it’s our behind-the-scenes magic.</p>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-7 mt-9 lg:mt-12">
-                    <!-- Item -->
-                    <div>
-                        <div class="bg-light rounded-[10px] h-[420px] sm:h-[460px] pt-[30px] overflow-hidden">
-                            <img src="assets/phone-screenshot-1-1.webp" alt="image" loading="lazy" class="mx-auto max-w-[300px]">
-                        </div>
-                        <div class="py-[14px] text-base">
-                            <p class="font-medium text-dark mb-1">Track student practice time</p>
-                            <p class="text-greyscale-600 text-sm sm:text-base">See the practice time for an entire <br> class at a glance.</p>
-                        </div>
+                    <div class="mt-6 gap-4 flex justify-center">
+                        <a href="#" class="py-2 md:py-4 px-3.5 md:px-8 font-medium text-sm md:text-base bg-accent-blue text-white rounded-[40px]">
+                            Get started for free
+                        </a>
+                        
+                        <a href="https://www.youtube.com/@adagio-dot-org" target="_blank" class="py-2 md:py-4 px-3.5 md:px-8 font-medium text-sm md:text-base bg-[#3066B0] bg-opacity-10 text-greyscale-800 rounded-[40px] flex items-center gap-2">
+                            <svg width="24" height="24" viewBox="0 0 24 24" class="fill-greyscale-800" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM10.7817 8.78296C10.4498 8.55666 10 8.79436 10 9.19607V14.8039C10 15.2056 10.4498 15.4433 10.7817 15.217L14.8941 12.4131C15.1852 12.2146 15.1852 11.7854 14.8941 11.5869L10.7817 8.78296Z" />
+                            </svg>
+                            Watch demo
+                        </a>
                     </div>
-
-                    <!-- Item -->
-                    <div>
-                        <div class="bg-light rounded-[10px] h-[420px] sm:h-[460px] pt-[30px] overflow-hidden">
-                            <img src="assets/phone-screenshot-2-2.webp" alt="image" loading="lazy" class="mx-auto max-w-[300px]">
-                        </div>
-                        <div class="py-[14px] text-base">
-                            <p class="font-medium text-dark mb-1">A calendar for you and your students</p>
-                            <p class="text-greyscale-600 text-sm sm:text-base">Automate scheduling, cancellations, and <br> calendar management.</p>
-                        </div>
-                    </div>
-
-                    <!-- Item -->
-                    <div>
-                        <div class="bg-light rounded-[10px] h-[420px] sm:h-[460px] pt-[30px] overflow-hidden">
-                            <img src="assets/phone-screenshot-3-3.webp" alt="image" loading="lazy" class="mx-auto max-w-[300px]">
-                        </div>
-                        <div class="py-[14px] text-base">
-                            <p class="font-medium text-dark mb-1">Automate billing for lessons</p>
-                            <p class="text-greyscale-600 text-sm sm:text-base">Invoices, payment tracking, reminders and <br> online payment options.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Dashboard screenshot -->
-        <section class="py-16 sm:py-24 bg-light">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="font-Jakarta text-[28px] sm:text-[40px] leading-9 sm:leading-[48px] text-dark mb-3 sm:mb-4 font-semibold tracking-tight">Lesson management made musical</h2>
-                    <p class="text-sm sm:text-lg text-greyscale-600">You don’t have to switch solutions to benefit from our user-friendly software suite. Bring your current <br class="hidden sm:block"> tools with you, and we’ll connect your data via API—it’s our behind-the-scenes magic.</p>
                 </div>
 
                 <!-- Slider nav -->
-                <div
-                    class="my-12 max-w-[844px] mx-auto relative"
-                >
-                    <div id="sliderNav" class="flex items-center gap-5 font-Jakarta text-base sm:text-lg font-bold text-greyscale-400 overflow-x-scroll scroll-smooth snap-x snap-mandatory no-scrollbar whitespace-nowrap">
-                        <a href="#slide_6" class="sliderNavItem hover:text-greyscale-900">Track practice time</a>
-                        <a href="#slide_7" class="sliderNavItem  hover:text-greyscale-900">Keep students motivated to learn</a>
-                        <a href="#slide_1" class="sliderNavItem  hover:text-greyscale-900 text-greyscale-900">Homework</a>
-                        <a href="#slide_2" class="sliderNavItem  hover:text-greyscale-900">Billing and payments</a>
-                        <a href="#slide_3" class="sliderNavItem  hover:text-greyscale-900">Calendar</a>
-                        <a href="#slide_4" class="sliderNavItem  hover:text-greyscale-900">Communicate</a>
-                        <a href="#slide_5" class="sliderNavItem  hover:text-greyscale-900">Organizations</a>
-                    </div>
-
-                    <!-- Fade background -->
-                    <div class="absolute top-0 left-0 h-full w-28 bg-fade-gradient-secondary z-10"></div>
-                    <div class="absolute top-0 right-0 h-full w-28 bg-fade-gradient-secondary -scale-x-100 z-10"></div>
+                <div id="sliderNav" class="flex items-center justify-center mt-[84px] pb-9 gap-4 text-lg font-medium text-dark overflow-x-scroll scroll-smooth snap-x snap-mandatory no-scrollbar whitespace-nowrap">
+                    <a href="#slide_1" class="sliderNavItem relative">
+                        <span class="opacity-100 px-4 py-2.5 inline-block hover:opacity-100">Practice<span>
+                        <div class="absolute w-full h-1 rounded-full bg-[#2851A9] bg-opacity-10 left-0 -bottom-1"></div>
+                    </a>
+                    <a href="#slide_2" class="sliderNavItem relative">
+                        <span class="opacity-60 px-4 py-2.5 inline-block hover:opacity-100">Learn</span>
+                        <div class="absolute w-full h-1 rounded-full bg-[#2851A9] bg-opacity-10 left-0 -bottom-1"></div>
+                    </a>
+                    <a href="#slide_3" class="sliderNavItem relative">
+                        <span class="opacity-60 px-4 py-2.5 inline-block hover:opacity-100">Homework</span>
+                        <div class="absolute w-full h-1 rounded-full bg-[#2851A9] bg-opacity-10 left-0 -bottom-1"></div>
+                    </a>
+                    <a href="#slide_4" class="sliderNavItem relative">
+                        <span class="opacity-60 px-4 py-2.5 inline-block hover:opacity-100">Billing</span>
+                        <div class="absolute w-full h-1 rounded-full bg-[#2851A9] bg-opacity-10 left-0 -bottom-1"></div>
+                    </a>
+                    <a href="#slide_5" class="sliderNavItem relative">
+                        <span class="opacity-60 px-4 py-2.5 inline-block hover:opacity-100">Calendar</span>
+                        <div class="absolute w-full h-1 rounded-full bg-[#2851A9] bg-opacity-10 left-0 -bottom-1"></div>
+                    </a>
+                    <a href="#slide_6" class="sliderNavItem relative">
+                        <span class="opacity-60 px-4 py-2.5 inline-block hover:opacity-100">Communicate</span>
+                        <div class="absolute w-full h-1 rounded-full bg-[#2851A9] bg-opacity-10 left-0 -bottom-1"></div>
+                    </a>
+                    <a href="#slide_7" class="sliderNavItem relative">
+                        <span class="opacity-60 px-4 py-2.5 inline-block hover:opacity-100">Organizations</span>
+                        <div class="absolute w-full h-1 rounded-full bg-[#2851A9] bg-opacity-10 left-0 -bottom-1"></div>
+                    </a>
                 </div>
-
             </div>
 
             <!-- Slider -->
-            <div class="container slider relative">
-                <ol class="overflow-x-scroll flex scroll-smooth snap-x snap-mandatory no-scrollbar">
+            <div class="max-w-[1560px] mx-auto slider relative">
+                <ol class="overflow-x-scroll flex scroll-smooth snap-x snap-mandatory no-scrollbar pt-[1px]">
                     <li id="slide_1" tabindex="0" class="flex-grow-0 flex-shrink-0 basis-full outline-none">
                         <div class="snap-center relative">
-                            <div class="max-w-[1048px] mx-auto relative border sm:border-[11px] border-black border-opacity-5 rounded-[10px]">
+                            <div class="max-w-[1280px] mx-auto relative rounded-3xl bg-white shadow-slider border border-[#0E3F7E] border-opacity-10 overflow-hidden">
                                 <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
                             </div>
-
-                            <!-- Slider button prev -->
-                            <a href="#slide_7" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute left-[13px] top-1/2 -translate-y-1/2 text-[0px]">Prev slide</a>
-
-                            <!-- Slider button next -->
-                            <a href="#slide_2" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute right-[13px] top-1/2 -translate-y-1/2 text-[0px]">Next slide</a>
                         </div>
                     </li>
 
                     <li id="slide_2" tabindex="0" class="flex-grow-0 flex-shrink-0 basis-full outline-none">
                         <div class="snap-center relative">
-                            <div class="max-w-[1048px] mx-auto relative border sm:border-[11px] border-black border-opacity-5 rounded-[10px]">
+                            <div class="max-w-[1280px] mx-auto relative rounded-3xl bg-white shadow-slider border border-[#0E3F7E] border-opacity-10 overflow-hidden">
                                 <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
                             </div>
-
-                            <!-- Slider button prev -->
-                            <a href="#slide_1" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute left-[13px] top-1/2 -translate-y-1/2 text-[0px]">Prev slide</a>
-
-                            <!-- Slider button next -->
-                            <a href="#slide_3" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute right-[13px] top-1/2 -translate-y-1/2 text-[0px]">Next slide</a>
                         </div>
                     </li>
 
                     <li id="slide_3" tabindex="0" class="flex-grow-0 flex-shrink-0 basis-full outline-none">
                         <div class="snap-center relative">
-                            <div class="max-w-[1048px] mx-auto relative border sm:border-[11px] border-black border-opacity-5 rounded-[10px]">
+                            <div class="max-w-[1280px] mx-auto relative rounded-3xl bg-white shadow-slider border border-[#0E3F7E] border-opacity-10 overflow-hidden">
                                 <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
                             </div>
-
-                            <!-- Slider button prev -->
-                            <a href="#slide_2" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute left-[13px] top-1/2 -translate-y-1/2 text-[0px]">Prev slide</a>
-
-                            <!-- Slider button next -->
-                            <a href="#slide_4" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute right-[13px] top-1/2 -translate-y-1/2 text-[0px]">Next slide</a>
                         </div>
                     </li>
 
                     <li id="slide_4" tabindex="0" class="flex-grow-0 flex-shrink-0 basis-full outline-none">
                         <div class="snap-center relative">
-                            <div class="max-w-[1048px] mx-auto relative border sm:border-[11px] border-black border-opacity-5 rounded-[10px]">
+                            <div class="max-w-[1280px] mx-auto relative rounded-3xl bg-white shadow-slider border border-[#0E3F7E] border-opacity-10 overflow-hidden">
                                 <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
                             </div>
-
-                            <!-- Slider button prev -->
-                            <a href="#slide_3" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute left-[13px] top-1/2 -translate-y-1/2 text-[0px]">Prev slide</a>
-
-                            <!-- Slider button next -->
-                            <a href="#slide_5" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute right-[13px] top-1/2 -translate-y-1/2 text-[0px]">Next slide</a>
                         </div>
                     </li>
 
                     <li id="slide_5" tabindex="0" class="flex-grow-0 flex-shrink-0 basis-full outline-none">
                         <div class="snap-center relative">
-                            <div class="max-w-[1048px] mx-auto relative border sm:border-[11px] border-black border-opacity-5 rounded-[10px]">
+                            <div class="max-w-[1280px] mx-auto relative rounded-3xl bg-white shadow-slider border border-[#0E3F7E] border-opacity-10 overflow-hidden">
                                 <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
                             </div>
-
-                            <!-- Slider button prev -->
-                            <a href="#slide_4" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute left-[13px] top-1/2 -translate-y-1/2 text-[0px]">Prev slide</a>
-
-                            <!-- Slider button next -->
-                            <a href="#slide_6" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute right-[13px] top-1/2 -translate-y-1/2 text-[0px]">Next slide</a>
                         </div>
                     </li>
 
                     <li id="slide_6" tabindex="0" class="flex-grow-0 flex-shrink-0 basis-full outline-none">
                         <div class="snap-center relative">
-                            <div class="max-w-[1048px] mx-auto relative border sm:border-[11px] border-black border-opacity-5 rounded-[10px]">
+                            <div class="max-w-[1280px] mx-auto relative rounded-3xl bg-white shadow-slider border border-[#0E3F7E] border-opacity-10 overflow-hidden">
                                 <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
                             </div>
-
-                            <!-- Slider button prev -->
-                            <a href="#slide_5" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute left-[13px] top-1/2 -translate-y-1/2 text-[0px]">Prev slide</a>
-
-                            <!-- Slider button next -->
-                            <a href="#slide_7" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute right-[13px] top-1/2 -translate-y-1/2 text-[0px]">Next slide</a>
                         </div>
                     </li>
 
                     <li id="slide_7" tabindex="0" class="flex-grow-0 flex-shrink-0 basis-full outline-none">
                         <div class="snap-center relative">
-                            <div class="max-w-[1048px] mx-auto relative border sm:border-[11px] border-black border-opacity-5 rounded-[10px]">
+                            <div class="max-w-[1280px] mx-auto relative rounded-3xl bg-white shadow-slider border border-[#0E3F7E] border-opacity-10 overflow-hidden">
                                 <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
                             </div>
-
-                            <!-- Slider button prev -->
-                            <a href="#slide_6" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute left-[13px] top-1/2 -translate-y-1/2 text-[0px]">Prev slide</a>
-
-                            <!-- Slider button next -->
-                            <a href="#slide_1" class="rounded-full w-11 h-11 hidden sm:flex flex-col justify-center items-center absolute right-[13px] top-1/2 -translate-y-1/2 text-[0px]">Next slide</a>
                         </div>
                     </li>
                 </ol>
             </div>
+
+            <!-- Gradient at bottom side of image -->
+            <div class="absolute w-full h-[200px] bottom-0 left-0 bg-gradient-slider"></div>
         </section>
 
-        <!-- Pricing plan -->
-        <section class="py-16 sm:py-24">
+        <!-- Mobile app example screenshot -->
+        <section class="py-16 sm:py-36">
             <div class="container">
-                <div class="text-center">
-                    <h2 class="font-Jakarta text-[28px] sm:text-[40px] leading-9 sm:leading-[48px] text-dark mb-3 sm:mb-4 font-semibold tracking-tight">Join at a level that works for you</h2>
-                    <p class="text-sm sm:text-lg text-greyscale-600">We are a registered 501(c)3 non-profit based in California. <br> 100% of your monthly subscription is tax deductible.</p>
+
+                <div class="max-w-[844px] text-dark">
+                    <h2 class="font-Jakarta text-[28px] sm:text-[48px] leading-9 sm:leading-[56px] mb-3 sm:mb-4 font-medium tracking-tight">Turn lesson management <br class="hidden sm:block"> into a melody with Adagio</h2>
+                    <p class="text-sm sm:text-lg">You don’t have to switch solutions to benefit from our user-friendly software suite. Bring your <br class="hidden sm:block"> current tools with you, and we’ll connect your data via API—it’s our behind-the-scenes magic.</p>
                 </div>
 
-                <div class="mt-9 sm:mt-12 flex flex-col sm:flex-row gap-[18px] text-sm text-dark justify-center">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-7 mt-9 lg:mt-[84px]">
+                    <!-- Item -->
+                    <div>
+                        <div class="bg-light rounded-[10px] h-[420px] sm:h-[460px] overflow-hidden relative">
+                            <img src="assets/phone-screenshot-1-1.webp" alt="image" loading="lazy" class="mx-auto">
+
+                            <!-- Gradient at bottom side of image -->
+                            <div class="absolute w-full h-[100px] bottom-0 left-0 bg-fade-gradient-medium"></div>
+                        </div>
+                        <div class="py-[14px] text-base text-dark">
+                            <p class="font-medium mb-1">Track student practice time</p>
+                            <p class="opacity-60 text-sm sm:text-base">See the practice time for an entire <br> class at a glance.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div>
+                        <div class="bg-light rounded-[10px] h-[420px] sm:h-[460px] pt-[30px] overflow-hidden relative">
+                            <img src="assets/phone-screenshot-2-2.webp" alt="image" loading="lazy" class="mx-auto">
+
+                            <!-- Gradient at bottom side of image -->
+                            <div class="absolute w-full h-[100px] bottom-0 left-0 bg-fade-gradient-medium"></div>
+                        </div>
+                        <div class="py-[14px] text-base text-dark">
+                            <p class="font-medium mb-1">A calendar for you and your students</p>
+                            <p class="opacity-60 text-sm sm:text-base">Automate scheduling, cancellations, and <br> calendar management.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item -->
+                    <div>
+                        <div class="bg-light rounded-[10px] h-[420px] sm:h-[460px] overflow-hidden relative">
+                            <img src="assets/phone-screenshot-3-3.webp" alt="image" loading="lazy" class="mx-auto">
+
+                            <!-- Gradient at bottom side of image -->
+                            <div class="absolute w-full h-[100px] bottom-0 left-0 bg-fade-gradient-medium"></div>
+                        </div>
+                        <div class="py-[14px] text-base text-dark">
+                            <p class="font-medium mb-1">Automate billing for lessons</p>
+                            <p class="opacity-60 text-sm sm:text-base">Invoices, payment tracking, reminders and <br> online payment options.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Membership section -->
+        <section class="max-w-[1560px] mx-auto py-[84px] rounded-3xl bg-fade-gradient">
+            <div class="container">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-7">
+                    <div class="text-dark">
+                        <h2 class="font-Jakarta text-[28px] sm:text-[48px] leading-9 sm:leading-[56px]  mb-3 sm:mb-4 font-medium tracking-tight">Your membership, Your way</h2>
+                        <p class="text-sm sm:text-lg">We are a registered 501(c)3 non-profit based in California. 100% of your monthly subscription is tax deductible.</p>
+                    </div>
+
                     <!-- Price plan -->
-                    <div class="shadow-accent sm:shadow-primary rounded-[16px] p-6 w-full sm:max-w-[344px]">
-                        <p class="text-lg font-Jakarta font-semibold mb-[22px]">Basic</p>
-                        <p class="text-[32px] leading-10 font-Jakarta font-bold mb-4">Free</p>
-                        <a href="#" class="py-3 px-5 font-medium text-sm text-white bg-accent-blue rounded-[40px] w-full inline-block text-center mb-6">Get started</a>
-                        <p class="mb-4">With the free plan, you get</p>
-                        <ul class="flex flex-col gap-2">
+                    <div class="bg-white shadow-primary rounded-[16px]">
+                        <div class="p-6 border-b border-b-[#07101F] border-opacity-10">
+                            <p class="text-2xl font-Jakarta font-semibold mb-2">Free Plan</p>
+                            <p class="text-base">Perfect for getting started with essential tools.</p>
+
+                            <div class="mt-[60px]">
+                                <p class="text-greyscale-600 mb-4"><span class="font-Jakarta text-dark text-[40px] leading-[40px] font-semibold mr-1.5">$0</span> USD/mo</p>
+                                <a href="#" class="py-3 px-6 font-medium text-base text-white bg-accent-blue rounded-[40px] w-full inline-block text-center">Get started</a>
+                            </div>
+                        </div>
+                        
+                        <ul class="flex flex-col gap-2 p-6 text-sm">
                             <li class="flex items-center gap-2.5">
                                 <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -318,7 +284,14 @@
                                 <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>50 students</span>
+                                <span>See class feed</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Manage billing</span>
                             </li>
 
                             <li class="flex items-center gap-2.5">
@@ -331,25 +304,37 @@
                     </div>
 
                     <!-- Price plan -->
-                    <div class="shadow-primary rounded-[16px] p-6 w-full sm:max-w-[344px] relative">
-                        <p class="text-lg font-Jakarta font-semibold mb-[22px]">Premium</p>
-                        <p class="text-greyscale-600 absolute top-[27px] right-[13px]">Fully tax deductible</p>
-                        <p class="text-[32px] leading-10 font-Jakarta font-bold mb-4">$5 <span class="font-sans text-base font-medium">/month</span></p>
-                        <a href="#" class="py-3 px-5 font-medium text-sm text-white bg-accent-blue rounded-[40px] w-full inline-block text-center mb-6">Get started</a>
-                        <p class="mb-4">With the free plan, you get</p>
-                        <ul class="flex flex-col gap-2">
+                    <div class="bg-white shadow-primary rounded-[16px]">
+                        <div class="p-6 border-b border-b-[#07101F] border-opacity-10">
+                            <p class="text-2xl font-Jakarta font-semibold mb-2">Premium plan</p>
+                            <p class="text-base">Perfect for getting started with essential tools.</p>
+
+                            <div class="mt-[60px]">
+                                <p class="text-greyscale-600 mb-4"><span class="font-Jakarta text-dark text-[40px] leading-[40px] font-semibold mr-1.5">$5</span> USD/mo</p>
+                                <a href="#" class="py-3 px-6 font-medium text-base text-white bg-accent-blue rounded-[40px] w-full inline-block text-center">Get started</a>
+                            </div>
+                        </div>
+                        
+                        <ul class="flex flex-col gap-2 p-6 text-sm">
                             <li class="flex items-center gap-2.5">
                                 <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>All the previous plus</span>
+                                <span>All Free Plan features plus:</span>
                             </li>
 
                             <li class="flex items-center gap-2.5">
                                 <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>Unlimited students</span>
+                                <span>Manage billing</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Free website</span>
                             </li>
 
                             <li class="flex items-center gap-2.5">
@@ -363,7 +348,7 @@
                                 <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>Support for custom domains</span>
+                                <span>Custom domain support</span>
                             </li>
 
                             <li class="flex items-center gap-2.5">
@@ -384,34 +369,25 @@
                                 <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>Free Musopen pro membership included</span>
+                                <span>Free Musopen Pro membership</span>
                             </li>
                         </ul>
                     </div>
                 </div>
-
-                <div class="bg-grey mt-[18px] rounded-2xl py-[14px] px-6 max-w-[706px] mx-auto text-sm text-greyscale-600">
-                    <p class="text-base sm:text-lg font-Jakarta font-semibold text-dark mb-1 hidden sm:block">Interested in  Adagio for use in a school or with multiple teachers?</p>
-                    <p class="hidden sm:block">Add $5 a month for unlimited teachers & classrooms with administrative controls. <a href="#" class="underline hover:no-underline">Click here</a> to learn more.</p>
-                    <!-- Sow text on mobile -->
-                    <p class="text-base sm:text-lg font-Jakarta font-semibold text-dark mb-1 block sm:hidden">More than 1 teacher or for a school?</p>
-                    <p class="block sm:hidden">Just $5 more a month for unlimited teachers</p>
-                </div>
-
             </div>
         </section>
 
         <!-- Community section -->
-        <section class="pt-20 pb-36 hidden sm:block">
+        <section class="pt-16 sm:py-36 hidden sm:block">
             <div class="container">
-                <div class="text-center">
-                    <h2 class="font-Jakarta text-[40px] leading-[48px] text-dark mb-4 font-semibold tracking-tight">Join our amazing community</h2>
-                    <p class="text-lg text-greyscale-600">Transform the way you manage your teaching and enrich the student experience <br> with innovative tools that simplify and enhance daily operations</p>
+                <div class="max-w-[844px] text-dark">
+                    <h2 class="font-Jakarta text-[28px] sm:text-[48px] leading-9 sm:leading-[56px] mb-3 sm:mb-4 font-medium tracking-tight">Teach, inspire, and grow alongside 10,000+ music educators.</h2>
+                    <p class="text-sm sm:text-lg">A platform designed to help you focus on what matters most—teaching and <br class="hidden sm:block"> inspiring your students—while it handles organization, tracking, and simplification.</p>
                 </div>
 
-                <div class="my-12 columns-3 gap-x-4 space-y-4 max-w-[1070px] mx-auto w-full relative after:absolute after:h-36 after:w-full after:bottom-0 after:left-0 after:bg-fade-gradient">
+                <div class="my-[84px] columns-3 gap-x-4 space-y-4 mx-auto w-full relative after:absolute after:h-36 after:w-full after:bottom-0 after:left-0 after:bg-fade-gradient-reverse">
                     <!-- Testimonials -->
-                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 text-sm flex flex-col gap-2.5">
+                    <div class="bg-light rounded-2xl py-4 px-5 text-greyscale-700 border border-greyscale-200 text-sm flex flex-col gap-4">
                         <p>I appreciate the robust lesson tracking and progress reporting features.</p>
                         <div class="flex gap-2.5 items-center">
                             <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
@@ -425,7 +401,7 @@
                     </div>
 
                     <!-- Testimonials -->
-                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 text-sm flex flex-col gap-2.5">
+                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 border border-greyscale-200 text-sm flex flex-col gap-4">
                         <p>This platform has been a game-changer for my teaching business. The user-friendly interface makes scheduling lessons and managing my calendar a breeze.</p>
                         <div class="flex gap-2.5 items-center">
                             <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
@@ -439,7 +415,7 @@
                     </div>
 
                     <!-- Testimonials -->
-                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 text-sm flex flex-col gap-2.5">
+                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 border border-greyscale-200 text-sm flex flex-col gap-4">
                         <p>As a working musician and part-time music teacher, finding a platform that caters to my unique needs and busy schedule was a challenge – until I discovered this incredible solution. The flexibility it offers is unparalleled. I can easily adjust my availability and schedule lessons at times that work best for me and my students, ensuring a perfect work-life balance.</p>
                         <div class="flex gap-2.5 items-center">
                             <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
@@ -453,7 +429,7 @@
                     </div>
 
                     <!-- Testimonials -->
-                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 text-sm flex flex-col gap-2.5">
+                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 border border-greyscale-200 text-sm flex flex-col gap-4">
                         <p>As a seasoned music teacher with over 20 years of experience, I've seen my fair share of teaching tools and platforms come and go. However, this platform stands out as one of the most comprehensive and user-friendly solutions I've ever encountered.</p>
                         <div class="flex gap-2.5 items-center">
                             <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
@@ -467,7 +443,7 @@
                     </div>
 
                     <!-- Testimonials -->
-                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 text-sm flex flex-col gap-2.5">
+                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 border border-greyscale-200 text-sm flex flex-col gap-4">
                         <p>I love the ability to offer both in-person and online lessons through this platform. It has expanded my reach and allowed me to connect with students from all over the world.</p>
                         <div class="flex gap-2.5 items-center">
                             <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
@@ -481,7 +457,7 @@
                     </div>
 
                     <!-- Testimonials -->
-                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 text-sm flex flex-col gap-2.5">
+                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 border border-greyscale-200 text-sm flex flex-col gap-4">
                         <p>I've tried other teaching platforms in the past, but none have matched the user-friendly design and comprehensive features offered here.</p>
                         <div class="flex gap-2.5 items-center">
                             <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
@@ -495,7 +471,7 @@
                     </div>
 
                     <!-- Testimonials -->
-                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 text-sm flex flex-col gap-2.5">
+                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 border border-greyscale-200 text-sm flex flex-col gap-4">
                         <p>The video conferencing tool is top-notch. The high-quality audio and video make virtual lessons feel just like being in the same room as my students.</p>
                         <div class="flex gap-2.5 items-center">
                             <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
@@ -509,7 +485,7 @@
                     </div>
 
                     <!-- Testimonials -->
-                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 text-sm flex flex-col gap-2.5">
+                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 border border-greyscale-200 text-sm flex flex-col gap-4">
                         <p>The built-in resource sharing feature is fantastic. I can easily share sheet music, exercises, and other learning materials with my students, streamlining the learning process.</p>
                         <div class="flex gap-2.5 items-center">
                             <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
@@ -523,7 +499,7 @@
                     </div>
 
                     <!-- Testimonials -->
-                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 text-sm flex flex-col gap-2.5">
+                    <div class="bg-secondary rounded-2xl py-4 px-5 text-greyscale-700 border border-greyscale-200 text-sm flex flex-col gap-4">
                         <p>The ability to set up recurring lessons and send automatic reminders has been a lifesaver for me. It helps ensure my students stay on track and never miss a lesson. It has opened up new revenue streams and allowed me to reach a wider audience.</p>
                         <div class="flex gap-2.5 items-center">
                             <div class="w-[38px] h-[38px] rounded-full overflow-hidden">
@@ -538,72 +514,64 @@
                 </div>
 
                 <div class="text-center">
-                    <span class="inline-block py-2.5 px-4 text-greyscale-800 bg-secondary rounded-[40px] text-sm">More than 400 satisfied users</span>
+                    <span class="inline-block py-2.5 px-4 text-greyscale-800 bg-greyscale-100 rounded-[40px] text-sm">More than 400 satisfied users</span>
                 </div>
             </div>
         </section>
 
-        <!-- Join section -->
-        <section class="bg-promotion-section bg-no-repeat md:bg-left-top lg:h-[672px] overflow-hidden border-b border-b-greyscale-200 pb-10 md:pb-0 pt-10 md:pt-0">
-            <div class="container h-full flex flex-col md:flex-row md:items-center">
-
-                <div class="max-w-[530px]">
-                    <h2 class="text-dark text-[28px] sm:text-4xl leading-9 sm:leading-[48px] font-Jakarta font-semibold mb-4 tracking-tight">Join 10,000+ Music <br> Educators Inspiring the Next Generation of Musicians</h2>
-                    <p class="text-greyscale-600 text-base sm:text-lg mb-6 sm:mb-12">Get started for free. Upgrade whenever you wanted to deep dive into the best of Adagio.</p>
-                    <a href="#" class="py-3 px-8 font-medium text-base text-white bg-accent-blue rounded-[40px] inline-block text-center">Get started for free</a>
-                </div>
-
-                <div class="h-full md:ml-24 hidden md:flex gap-3 sm:gap-5 flex-row">
-                    <div class="flex gap-3 sm:gap-5 flex-col mt-4 mb-4 lg:mb-0 -translate-x-5 sm:translate-x-0">
-                        <div class="w-[140px] h-[140px] lg:w-[270px] lg:h-[270px] rounded-[20px] overflow-hidden flex-shrink-0">
-                            <img src="assets/promotion/1.webp" loading="lazy" alt="image">
-                        </div>
-
-                        <div class="w-[140px] h-[140px] lg:w-[270px] lg:h-[270px] rounded-[20px] overflow-hidden flex-shrink-0">
-                            <img src="assets/promotion/2.webp" loading="lazy" alt="image">
-                        </div>
-
-                        <div class="w-[140px] h-[140px] lg:w-[270px] lg:h-[270px] rounded-[20px] overflow-hidden flex-shrink-0">
-                            <img src="assets/promotion/3.webp" loading="lazy" alt="image">
-                        </div>
+        <!-- Join to community -->
+        <section class="max-w-[1560px] mx-auto mb-11 rounded-3xl bg-promotion-section bg-no-repeat bg-left-top overflow-hidden">
+            <div class="pl-[140px]">
+                <div class="h-full flex flex-col md:flex-row md:items-center gap-24">
+                    <div class="max-w-[530px] sm:py-11">
+                        <h2 class="text-dark text-[28px] sm:text-5xl leading-9 sm:leading-[56px] font-Jakarta font-medium mb-6 tracking-tight">Join 10,000+ Music <br> Educators Inspiring the Next Generation of Musicians</h2>
+                        <p class="text-greyscale-600 text-base sm:text-lg mb-6 sm:mb-11">Get started for free. Upgrade whenever you wanted to deep dive into the best of Adagio.</p>
+                        <a href="#" class="py-4 px-8 font-medium text-base text-white bg-accent-blue rounded-[40px] inline-block text-center">Get started for free</a>
                     </div>
 
-                    <div class="hidden lg:flex gap-3 sm:gap-5 flex-col mb-4 self-end translate-x-6 sm:translate-x-0">
-                        <div class="w-[270px] h-[270px] rounded-[20px] overflow-hidden flex-shrink-0">
-                            <img src="assets/promotion/2.webp" loading="lazy" alt="image">
+                    <div class="max-h-[672px] overflow-hidden hidden md:flex gap-3 sm:gap-[30px] flex-1">
+                        <div class="flex gap-3 sm:gap-5 flex-col -translate-y-[145px]">
+                            <div class="w-[140px] h-[140px] lg:w-[410px] lg:h-[410px] rounded-3xl overflow-hidden flex-shrink-0">
+                                <img src="assets/promotion/1.webp" loading="lazy" alt="image">
+                            </div>
+    
+                            <div class="w-[140px] h-[140px] lg:w-[410px] lg:h-[410px] rounded-3xl overflow-hidden flex-shrink-0">
+                                <img src="assets/promotion/2.webp" loading="lazy" alt="image">
+                            </div>
                         </div>
-
-                        <div class="w-[270px] h-[270px] rounded-[20px] overflow-hidden flex-shrink-0">
-                            <img src="assets/promotion/3.webp" loading="lazy" alt="image">
-                        </div>
-
-                        <div class="w-[270px] h-[270px] rounded-[20px] overflow-hidden flex-shrink-0">
-                            <img src="assets/promotion/4.webp" loading="lazy" alt="image">
+    
+                        <div class="hidden lg:flex gap-3 sm:gap-[30px] flex-col -translate-y-[37px]">
+                            <div class="w-[140px] h-[140px] lg:w-[410px] lg:h-[410px] rounded-3xl overflow-hidden flex-shrink-0">
+                                <img src="assets/promotion/3.webp" loading="lazy" alt="image">
+                            </div>
+    
+                            <div class="w-[140px] h-[140px] lg:w-[410px] lg:h-[410px] rounded-3xl overflow-hidden flex-shrink-0">
+                                <img src="assets/promotion/4.webp" loading="lazy" alt="image">
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
     </main>
 
     <!-- Footer -->
-    <footer class="pt-20">
+    <footer class="pt-[84px]">
         <div class="container">
 
-            <div class="flex lg:mb-[100px] flex-col lg:flex-row">
-                <div class="text-greyscale-600 text-sm max-w-[360px]">
-                    <a href="index.html" class="inline-block mb-4">
+            <div class="flex lg:mb-[144px] flex-col lg:flex-row">
+                <div class="text-greyscale-800 text-base max-w-[550px]">
+                    <a href="index.html" class="inline-block mb-6">
                         <img src="assets/logo-blue.svg" alt="image">
                     </a>
-                    <p>Add students, schedule lessons and performances, assign homework, and manage billing all in one place.</p>
+                    <p>Manage your teaching workflow by adding students, scheduling lessons and performances, assigning homework, and handling billing all in one streamlined platform</p>
                 </div>
 
-                <div class="grid grid-cols-2 my-12 lg:my-0 lg:grid-cols-3 gap-[50px] text-sm xl:ml-auto lg:ml-8 xl:mr-[10%]">
-                    <div class="w-[168px]">
-                        <p class="text-greyscale-900 font-medium">Product</p>
-                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
+                <div class="grid grid-cols-2 my-12 lg:my-0 lg:grid-cols-2 gap-7 text-base ml-auto">
+                    <div class="w-[190px]">
+                        <p class="text-greyscale-500">Product</p>
+                        <ul class="text-greyscale-900 flex flex-col gap-3 mt-3">
                             <li><a href="https://musopen.org/contact/" target="_blank">Contact Us</a></li>
                             <li><a href="https://musopen.org/signup/" target="_blank">Sign up</a></li>
                             <li><a href="https://musopen.org/account/login/" target="_blank">Login</a></li>
@@ -612,37 +580,40 @@
                         </ul>
                     </div>
 
-                    <div class="w-[168px]">
-                        <p class="text-greyscale-900 font-medium">Social media</p>
-                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
-                            <li><a href="https://www.youtube.com/musopenvideos" target="_blank">YouTube</a></li>
-                            <li><a href="https://www.facebook.com/musopenorg" target="_blank">Facebook</a></li>
-                            <li><a href="https://x.com/musopen">Twitter</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="w-[168px] block lg:hidden">
-                        <p class="text-greyscale-900 font-medium">Legal</p>
-                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
+                    <div class="w-[190px]">
+                        <p class="text-greyscale-500">Legal</p>
+                        <ul class="text-greyscale-900 flex flex-col gap-3 mt-3">
                             <li><a href="https://musopen.org/page/tos/" target="_blank">Terms of Use</a></li>
                             <li><a href="https://musopen.org/page/privacy/" target="_blank">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="w-[168px]">
-                        <p class="text-greyscale-900 font-medium">Get in touch</p>
-                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
-                            <li><a href="mailto: info@adagio.com">info@adagio.com</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="border-t border-t-greyscale-200 py-4 text-sm text-dark flex items-center justify-between">
-                <p>© 2024 Adagio, Inc.</p>
-                <ul class="hidden gap-6 text-greyscale-600 lg:flex">
-                    <li><a href="https://musopen.org/page/tos/" target="_blank">Terms of Use</a></li>
-                    <li><a href="https://musopen.org/page/privacy/" target="_blank">Privacy Policy</a></li>
+            <div class="border-t border-t-greyscale-200 py-6 text-sm text-greyscale-600 flex items-center justify-between">
+                <p>All rights reserved © 2024 Adagio, Inc.</p>
+                <ul class="hidden gap-5 lg:flex">
+                    <li>
+                        <a href="https://musopen.org/page/tos/" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2043 4.00776C21.1084 4.28763 21.8189 5.10925 22.0609 6.15475C22.4982 8.04786 22.5 12 22.5 12C22.5 12 22.5 15.9522 22.0609 17.8453C21.8189 18.8908 21.1084 19.7124 20.2043 19.9922C18.5673 20.5 12 20.5 12 20.5C12 20.5 5.43274 20.5 3.79568 19.9922C2.89159 19.7124 2.1811 18.8908 1.93908 17.8453C1.5 15.9522 1.5 12 1.5 12C1.5 12 1.5 8.04786 1.93908 6.15475C2.1811 5.10925 2.89159 4.28763 3.79568 4.00776C5.43274 3.5 12 3.5 12 3.5C12 3.5 18.5673 3.5 20.2043 4.00776ZM15.5134 12.0003L9.79785 15.2999V8.70065L15.5134 12.0003Z" fill="#596579"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://musopen.org/page/privacy/" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.0012 11.4535C11.0788 9.53897 8.5657 5.97133 6.22962 4.21155C4.54403 2.9421 1.8125 1.95953 1.8125 5.08555C1.8125 5.70961 2.1691 10.3302 2.37861 11.0803C3.10583 13.688 5.75648 14.3531 8.11421 13.9507C3.99288 14.6543 2.94472 16.985 5.20884 19.3157C9.50879 23.7423 11.3892 18.2051 11.8707 16.7863C11.9598 16.5243 12.0012 16.4027 12.0012 16.5103C12.0012 16.4027 12.0426 16.5243 12.1317 16.7863C12.6132 18.2051 14.4936 23.7423 18.7936 19.3157C21.0577 16.985 20.0095 14.6543 15.8882 13.9507C18.2459 14.3531 20.8966 13.688 21.6238 11.0803C21.8333 10.3302 22.1899 5.70961 22.1899 5.08555C22.1899 1.95953 19.4587 2.9421 17.7728 4.21155C15.4367 5.97133 12.9236 9.53897 12.0012 11.4535Z" fill="#596579"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://musopen.org/page/privacy/" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.58404 21.706V15.0561H7.52015V12H9.58404V10.6833C9.58404 7.27944 11.124 5.70333 14.464 5.70333C15.0963 5.70333 16.1879 5.82722 16.6363 5.95111V8.71944C16.4001 8.69556 15.9879 8.68333 15.4801 8.68333C13.8401 8.68333 13.2079 9.30333 13.2079 10.9194V12H16.4763L15.9163 15.0556H13.2124V21.9277C18.1637 21.3279 22 17.112 22 12C22 6.47722 17.5228 2 12 2C6.47722 2 2 6.47722 2 12C2 16.6899 5.22813 20.6253 9.58404 21.706Z" fill="#596579"/>
+                            </svg>
+                        </a>
+                    </li>
                 </ul>
             </div>
 
