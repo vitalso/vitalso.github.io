@@ -852,6 +852,10 @@ video {
   max-height: 672px;
 }
 
+.max-h-\[760px\] {
+  max-height: 760px;
+}
+
 .min-h-\[610px\] {
   min-height: 610px;
 }
@@ -964,10 +968,6 @@ video {
 
 .snap-mandatory {
   --tw-scroll-snap-strictness: mandatory;
-}
-
-.snap-center {
-  scroll-snap-align: center;
 }
 
 .columns-3 {
