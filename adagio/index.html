@@ -68,103 +68,109 @@
                         </a>
                     </div>
                 </div>
-
-                <!-- Slider nav -->
-                <div id="sliderNav" class="flex items-center justify-center mt-[84px] pb-9 gap-4 text-lg font-medium text-dark overflow-x-scroll scroll-smooth snap-x snap-mandatory no-scrollbar whitespace-nowrap">
-                    <a href="#slide_1" class="sliderNavItem relative">
-                        <span class="opacity-100 px-4 py-2.5 inline-block hover:opacity-100">Practice<span>
-                        <div class="absolute w-full h-1 rounded-full bg-[#2851A9] bg-opacity-10 left-0 -bottom-1"></div>
-                    </a>
-                    <a href="#slide_2" class="sliderNavItem relative">
-                        <span class="opacity-60 px-4 py-2.5 inline-block hover:opacity-100">Learn</span>
-                        <div class="absolute w-full h-1 rounded-full bg-[#2851A9] bg-opacity-10 left-0 -bottom-1"></div>
-                    </a>
-                    <a href="#slide_3" class="sliderNavItem relative">
-                        <span class="opacity-60 px-4 py-2.5 inline-block hover:opacity-100">Homework</span>
-                        <div class="absolute w-full h-1 rounded-full bg-[#2851A9] bg-opacity-10 left-0 -bottom-1"></div>
-                    </a>
-                    <a href="#slide_4" class="sliderNavItem relative">
-                        <span class="opacity-60 px-4 py-2.5 inline-block hover:opacity-100">Billing</span>
-                        <div class="absolute w-full h-1 rounded-full bg-[#2851A9] bg-opacity-10 left-0 -bottom-1"></div>
-                    </a>
-                    <a href="#slide_5" class="sliderNavItem relative">
-                        <span class="opacity-60 px-4 py-2.5 inline-block hover:opacity-100">Calendar</span>
-                        <div class="absolute w-full h-1 rounded-full bg-[#2851A9] bg-opacity-10 left-0 -bottom-1"></div>
-                    </a>
-                    <a href="#slide_6" class="sliderNavItem relative">
-                        <span class="opacity-60 px-4 py-2.5 inline-block hover:opacity-100">Communicate</span>
-                        <div class="absolute w-full h-1 rounded-full bg-[#2851A9] bg-opacity-10 left-0 -bottom-1"></div>
-                    </a>
-                    <a href="#slide_7" class="sliderNavItem relative">
-                        <span class="opacity-60 px-4 py-2.5 inline-block hover:opacity-100">Organizations</span>
-                        <div class="absolute w-full h-1 rounded-full bg-[#2851A9] bg-opacity-10 left-0 -bottom-1"></div>
-                    </a>
-                </div>
             </div>
 
             <!-- Slider -->
-            <div class="max-w-[1560px] mx-auto slider relative">
-                <ol class="overflow-x-scroll flex scroll-smooth snap-x snap-mandatory no-scrollbar pt-[1px]">
-                    <li id="slide_1" tabindex="0" class="flex-grow-0 flex-shrink-0 basis-full outline-none">
-                        <div class="snap-center relative">
-                            <div class="max-w-[1280px] mx-auto relative rounded-3xl bg-white shadow-slider border border-[#0E3F7E] border-opacity-10 overflow-hidden">
-                                <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
-                            </div>
+            <div class="max-w-[1560px] mx-auto relative">
+                <div id="sliderLabel" class="flex items-center justify-center mt-[84px] pb-9 gap-4 text-lg font-medium text-dark overflow-x-scroll scroll-smooth snap-x snap-mandatory no-scrollbar whitespace-nowrap">
+                    <label for="tab-1" class="sliderNavItem relative cursor-pointer">
+                        <input type="radio" id="tab-1" name="slides" value="1" class="peer hidden" checked>
+                        <span class="opacity-60 px-4 py-2.5 inline-block hover:opacity-100 peer-checked:opacity-100">Practice</span>
+                        <span class="absolute w-full h-1 rounded-full bg-[#2851A9] bg-opacity-10 left-0 -bottom-1 peer-checked:[&>span]:animate-progress">
+                            <span class="bg-accent-blue h-full block rounded-full w-0"></span>
+                        </span>
+                    </label>
+                    <label for="tab-2" class="sliderNavItem relative cursor-pointer">
+                        <input type="radio" id="tab-2" name="slides" value="2" class="peer hidden">
+                        <span class="opacity-60 px-4 py-2.5 inline-block hover:opacity-100 peer-checked:opacity-100">Learn</span>
+                        <span class="absolute w-full h-1 rounded-full bg-[#2851A9] bg-opacity-10 left-0 -bottom-1 peer-checked:[&>span]:animate-progress">
+                            <span class="bg-accent-blue h-full block rounded-full w-0"></span>
+                        </span>
+                    </label>
+                    <label for="tab-3" class="sliderNavItem relative cursor-pointer">
+                        <input type="radio" id="tab-3" name="slides" value="3" class="peer hidden">
+                        <span class="opacity-60 px-4 py-2.5 inline-block hover:opacity-100 peer-checked:opacity-100">Homework</span>
+                        <span class="absolute w-full h-1 rounded-full bg-[#2851A9] bg-opacity-10 left-0 -bottom-1 peer-checked:[&>span]:animate-progress">
+                            <span class="bg-accent-blue h-full block rounded-full w-0"></span>
+                        </span>
+                    </label>
+                    <label for="tab-4" class="sliderNavItem relative cursor-pointer">
+                        <input type="radio" id="tab-4" name="slides" value="4" class="peer hidden">
+                        <span class="opacity-60 px-4 py-2.5 inline-block hover:opacity-100 peer-checked:opacity-100">Billing</span>
+                        <span class="absolute w-full h-1 rounded-full bg-[#2851A9] bg-opacity-10 left-0 -bottom-1 peer-checked:[&>span]:animate-progress">
+                            <span class="bg-accent-blue h-full block rounded-full w-0"></span>
+                        </span>
+                    </label>
+                    <label for="tab-5" class="sliderNavItem relative cursor-pointer">
+                        <input type="radio" id="tab-5" name="slides" value="5" class="peer hidden">
+                        <span class="opacity-60 px-4 py-2.5 inline-block hover:opacity-100 peer-checked:opacity-100">Calendar</span>
+                        <span class="absolute w-full h-1 rounded-full bg-[#2851A9] bg-opacity-10 left-0 -bottom-1 peer-checked:[&>span]:animate-progress">
+                            <span class="bg-accent-blue h-full block rounded-full w-0"></span>
+                        </span>
+                    </label>
+                    <label for="tab-6" class="sliderNavItem relative cursor-pointer">
+                        <input type="radio" id="tab-6" name="slides" value="6" class="peer hidden">
+                        <span class="opacity-60 px-4 py-2.5 inline-block hover:opacity-100 peer-checked:opacity-100">Communicate</span>
+                        <span class="absolute w-full h-1 rounded-full bg-[#2851A9] bg-opacity-10 left-0 -bottom-1 peer-checked:[&>span]:animate-progress">
+                            <span class="bg-accent-blue h-full block rounded-full w-0"></span>
+                        </span>
+                    </label>
+                    <label for="tab-7" class="sliderNavItem relative cursor-pointer">
+                        <input type="radio" id="tab-7" name="slides" value="7" class="peer hidden">
+                        <span class="opacity-60 px-4 py-2.5 inline-block hover:opacity-100 peer-checked:opacity-100">Organizations</span>
+                        <span class="absolute w-full h-1 rounded-full bg-[#2851A9] bg-opacity-10 left-0 -bottom-1 peer-checked:[&>span]:animate-progress">
+                            <span class="bg-accent-blue h-full block rounded-full w-0"></span>
+                        </span>
+                    </label>
+                </div>
+
+                <ol id="slider" class="flex overflow-hidden no-scrollbar pt-[1px] stack-images relative">
+                    <li class="flex-grow-0 flex-shrink-0 basis-full outline-none !block">
+                        <div class="max-w-[1280px] mx-auto relative rounded-3xl bg-white shadow-slider border border-[#0E3F7E] border-opacity-10 overflow-hidden">
+                            <img src="assets/dashboard.webp" alt="image" class="mx-auto">
                         </div>
                     </li>
 
-                    <li id="slide_2" tabindex="0" class="flex-grow-0 flex-shrink-0 basis-full outline-none">
-                        <div class="snap-center relative">
-                            <div class="max-w-[1280px] mx-auto relative rounded-3xl bg-white shadow-slider border border-[#0E3F7E] border-opacity-10 overflow-hidden">
-                                <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
-                            </div>
+                    <li class="flex-grow-0 flex-shrink-0 basis-full outline-none">
+                        <div class="max-w-[1280px] mx-auto relative rounded-3xl bg-white shadow-slider border border-[#0E3F7E] border-opacity-10 overflow-hidden">
+                            <img src="https://placehold.co/1440x920?text=Learn" alt="image" class="mx-auto">
                         </div>
                     </li>
 
-                    <li id="slide_3" tabindex="0" class="flex-grow-0 flex-shrink-0 basis-full outline-none">
-                        <div class="snap-center relative">
-                            <div class="max-w-[1280px] mx-auto relative rounded-3xl bg-white shadow-slider border border-[#0E3F7E] border-opacity-10 overflow-hidden">
-                                <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
-                            </div>
+                    <li class="flex-grow-0 flex-shrink-0 basis-full outline-none">
+                        <div class="max-w-[1280px] mx-auto relative rounded-3xl bg-white shadow-slider border border-[#0E3F7E] border-opacity-10 overflow-hidden">
+                            <img src="https://placehold.co/1440x920?text=Homework" alt="image" class="mx-auto">
                         </div>
                     </li>
 
-                    <li id="slide_4" tabindex="0" class="flex-grow-0 flex-shrink-0 basis-full outline-none">
-                        <div class="snap-center relative">
-                            <div class="max-w-[1280px] mx-auto relative rounded-3xl bg-white shadow-slider border border-[#0E3F7E] border-opacity-10 overflow-hidden">
-                                <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
-                            </div>
+                    <li class="flex-grow-0 flex-shrink-0 basis-full outline-none">
+                        <div class="max-w-[1280px] mx-auto relative rounded-3xl bg-white shadow-slider border border-[#0E3F7E] border-opacity-10 overflow-hidden">
+                            <img src="https://placehold.co/1440x920?text=Billing" alt="image" class="mx-auto">
                         </div>
                     </li>
 
-                    <li id="slide_5" tabindex="0" class="flex-grow-0 flex-shrink-0 basis-full outline-none">
-                        <div class="snap-center relative">
-                            <div class="max-w-[1280px] mx-auto relative rounded-3xl bg-white shadow-slider border border-[#0E3F7E] border-opacity-10 overflow-hidden">
-                                <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
-                            </div>
+                    <li class="flex-grow-0 flex-shrink-0 basis-full outline-none">
+                        <div class="max-w-[1280px] mx-auto relative rounded-3xl bg-white shadow-slider border border-[#0E3F7E] border-opacity-10 overflow-hidden">
+                            <img src="https://placehold.co/1440x920?text=Calendar" alt="image" class="mx-auto">
                         </div>
                     </li>
 
-                    <li id="slide_6" tabindex="0" class="flex-grow-0 flex-shrink-0 basis-full outline-none">
-                        <div class="snap-center relative">
-                            <div class="max-w-[1280px] mx-auto relative rounded-3xl bg-white shadow-slider border border-[#0E3F7E] border-opacity-10 overflow-hidden">
-                                <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
-                            </div>
+                    <li class="flex-grow-0 flex-shrink-0 basis-full outline-none">
+                        <div class="max-w-[1280px] mx-auto relative rounded-3xl bg-white shadow-slider border border-[#0E3F7E] border-opacity-10 overflow-hidden">
+                            <img src="https://placehold.co/1440x920?text=Communicate" alt="image" class="mx-auto">
                         </div>
                     </li>
 
-                    <li id="slide_7" tabindex="0" class="flex-grow-0 flex-shrink-0 basis-full outline-none">
-                        <div class="snap-center relative">
-                            <div class="max-w-[1280px] mx-auto relative rounded-3xl bg-white shadow-slider border border-[#0E3F7E] border-opacity-10 overflow-hidden">
-                                <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
-                            </div>
+                    <li class="flex-grow-0 flex-shrink-0 basis-full outline-none">
+                        <div class="max-w-[1280px] mx-auto relative rounded-3xl bg-white shadow-slider border border-[#0E3F7E] border-opacity-10 overflow-hidden">
+                            <img src="https://placehold.co/1440x920?text=Organizations" alt="image" class="mx-auto">
                         </div>
                     </li>
                 </ol>
             </div>
 
             <!-- Gradient at bottom side of image -->
-            <div class="absolute w-full h-[200px] bottom-0 left-0 bg-gradient-slider"></div>
+            <div class="absolute w-full h-[200px] bottom-0 left-0 bg-gradient-slider z-10"></div>
         </section>
 
         <!-- Mobile app example screenshot -->
@@ -619,5 +625,9 @@
 
         </div>
     </footer>
+
+    <!-- JS file -->
+    <script src="js/main.js"></script>
+
 </body>
 </html>

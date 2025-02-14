@@ -13,12 +13,26 @@
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
     }
+
+    .animate-progress {
+        animation: progress 5s linear infinite;
+    }
 }
 
 @layer components {
     /*.slider {
         @apply before:absolute before:bg-dark before:bg-btn-arrow before:bg-no-repeat before:bg-center before:border-greyscale-200 before:rounded-full before:w-11 before:h-11 before:hidden before:sm:flex before:flex-col before:justify-center before:items-center before:top-1/2 before:left-6 before:z-10 before:pointer-events-none before:-translate-y-1/2 after:-translate-y-1/2 after:pointer-events-none after:absolute after:bg-dark after:bg-btn-arrow after:bg-no-repeat after:bg-center after:-scale-x-100 after:border-greyscale-200 after:rounded-full after:w-11 after:h-11 after:hidden after:sm:flex after:flex-col after:justify-center after:items-center after:top-1/2 after:right-6 after:z-10;
     }*/
+
+    #slider li {
+        @apply hidden z-10 relative;
+    }
+
+    .stack-images {
+        @apply
+        after:w-full after:max-w-[1320px] after:h-full after:rounded-3xl after:shadow-slider after:border after:border-[#0E3F7E] after:border-opacity-10 after:absolute after:top-[30px] after:left-1/2 after:-translate-x-1/2 after:bg-gradient-slider
+        before:w-full before:max-w-[1360px] before:h-full before:rounded-3xl before:shadow-slider before:border before:border-[#0E3F7E] before:border-opacity-10 before:absolute before:top-[60px] before:left-1/2 before:-translate-x-1/2 before:bg-gradient-slider;
+    }
 
     .open .toggleContent {
         @apply !block;
@@ -27,4 +41,9 @@
     .open h4 svg {
         @apply rotate-180;
     }
+}
+
+@keyframes progress {
+    0% { width: 0 }
+    100% { width: 100% }
 }
