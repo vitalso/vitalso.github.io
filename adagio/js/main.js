@@ -1,3 +1,13 @@
+// Mobile menu
+const button = document.getElementById('menu');
+const target = document.getElementById('header');
+
+// Додаємо обробник події на клік
+button.addEventListener('click', function() {
+  // Додаємо або видаляємо клас 'active' у елемента
+  target.classList.toggle('mobile-header');
+});
+
 // Slider
 const slideLabel = document.querySelectorAll('#sliderLabel input[type="radio"]');
 const slideItem = document.querySelectorAll('#slider li');
