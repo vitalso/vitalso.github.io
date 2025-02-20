@@ -11,44 +11,48 @@ button.addEventListener('click', function() {
 // Slider
 const slideLabel = document.querySelectorAll('#sliderLabel input[type="radio"]');
 const slideItem = document.querySelectorAll('#slider li');
-let currentIndex = 0;
-let autoPlayInterval;
-const autoPlayDelay = 5000;
 
-// Change active element
-function changeSlide() {
-  slideItem.forEach((item) => {
-    item.classList.remove('!block');
-  });
-  slideLabel.forEach((label) => {
-    label.checked = false;
-  });
+if (slideLabel.length > 0 && slideItem.length > 0) {
+  let currentIndex = 0;
+  let autoPlayInterval;
+  const autoPlayDelay = 5000;
 
-  // Show active element and set checked for input[radio]
-  slideItem[currentIndex].classList.add('!block');
-  slideLabel[currentIndex].checked = true;
+  // Change active element
+  function changeSlide() {
+    slideItem.forEach((item) => {
+      item.classList.remove('!block');
+    });
+    slideLabel.forEach((label) => {
+      label.checked = false;
+    });
 
-  currentIndex = (currentIndex + 1) % slideItem.length;
-}
+    // Show active element and set checked for input[radio]
+    slideItem[currentIndex].classList.add('!block');
+    slideLabel[currentIndex].checked = true;
 
-changeSlide();
+    currentIndex = (currentIndex + 1) % slideItem.length;
+  }
 
-// When click on tab
-function restartAutoPlay() {
-  clearInterval(autoPlayInterval);
+  changeSlide();
+
+  // When click on tab
+  function restartAutoPlay() {
+    clearInterval(autoPlayInterval);
+    autoPlayInterval = setInterval(changeSlide, autoPlayDelay);
+  }
+
   autoPlayInterval = setInterval(changeSlide, autoPlayDelay);
-}
 
-autoPlayInterval = setInterval(changeSlide, autoPlayDelay);
-
-// Show slide after click on tab
-slideLabel.forEach((label, index) => {
-  label.addEventListener('change', function () {
-    currentIndex = index;
-    changeSlide();
-    restartAutoPlay();
+  // Show slide after click on tab
+  slideLabel.forEach((label, index) => {
+    label.addEventListener('change', function () {
+      currentIndex = index;
+      changeSlide();
+      restartAutoPlay();
+    });
   });
-});
+
+}
 
 // FAQ toggle element
 const items = document.querySelectorAll('.toggleElement');

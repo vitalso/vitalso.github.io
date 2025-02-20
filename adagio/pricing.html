@@ -14,33 +14,41 @@
 <body class="overflow-x-hidden">
     
     <!-- Header -->
-    <header class="absolute w-full py-5 md:py-[22px] z-10">
+    <header id="header" class="absolute w-full py-[18px] md:py-[22px] z-20">
         <div class="container flex items-center">
 
             <!-- Logo -->
-            <a href="index.html">
-                <img src="assets/Adagio-logo-blue.svg" alt="image">
-            </a>
+            <a href="index.html" class="font-Jakarta font-bold text-2xl tracking-tighter text-accent-blue">Adagio</a>
 
-            <nav class="ml-10 text-black text-sm font-medium hidden md:inline-block">
-                <a href="#" class="py-2 mx-3">Home</a>
-                <a href="#" class="py-2 mx-3">Features</a>
-                <a href="#" class="py-2 mx-3">Product</a>
-                <a href="pricing.html" class="py-2 mx-3">Pricing</a>
+            <nav class="md:ml-10 text-dark text-2xl md:text-sm hidden items-start flex-col h-[calc(100%-76px)] font-medium md:inline-block">
+                <a href="#" class="py-3 md:py-2 md:mx-3">Home</a>
+                <a href="#" class="py-3 md:py-2 md:mx-3">Features</a>
+                <a href="#" class="py-3 md:py-2 md:mx-3">Product</a>
+                <a href="pricing.html" class="py-3 md:py-2 md:mx-3">Pricing</a>
+
+                <!-- Show only on mobile -->
+                <span class="mt-auto w-full font-medium text-base text-center flex md:hidden flex-col gap-2 pt-4 pb-6 border-t border-t-greyscale-200">
+                    <a href="signup.html" class="inline-block p-3 rounded-full border border-greyscale-200">Sign in</a>
+                    <a href="login.html" class="inline-block p-3 text-white bg-accent-blue rounded-full">Get started for free</a>
+                </span>
             </nav>
 
             <div class="ml-auto flex gap-2 items-center">
-                <a href="login.html" class="py-2.5 px-[14px] font-medium text-sm text-black bg-white rounded-[40px]">
+                <a href="login.html" class="py-2.5 px-[14px] font-medium text-sm text-dark rounded-full hidden md:inline-block">
                     Sign in
                 </a>
 
-                <a href="#" class="py-2.5 px-5 font-medium text-sm text-white bg-accent-blue rounded-[40px] hidden md:inline-block">
+                <a href="#" class="py-2.5 px-5 font-medium text-sm text-white bg-accent-blue rounded-full">
                     Get started
                 </a>
 
-                <button type="button" class="inline-block md:hidden">
+                <button id="menu" type="button" class="inline-block md:hidden p-2">
                     <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-black" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3.75 6.75012H20.25M3.75 12.0001H20.25M3.75 17.2501H20.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2.75 12H21.25M2.75 5.75H21.25M2.75 18.25H21.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-black hidden" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.75 4.75L19.25 19.25M19.25 4.75L4.75 19.25" stroke-width="1.5" stroke-linecap="round"/>
                     </svg>
                 </button>
             </div>
@@ -51,21 +59,27 @@
     <main class="pt-[84px]">
 
         <!-- Pricing plan -->
-        <section class="py-12 md:py-[100px]">
+        <section class="py-12 lg:pt-[60px] lg:pb-[144px]">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="font-Jakarta text-[28px] sm:text-[40px] leading-9 sm:leading-[48px] text-dark mb-3 sm:mb-4 font-semibold tracking-tight">Join at a level that works for you</h2>
-                    <p class="text-sm sm:text-lg text-greyscale-600">We are a registered 501(c)3 non-profit based in California. <br class="hidden md:block"> 100% of your monthly subscription is tax deductible.</p>
+                    <h2 class="font-Jakarta text-[32px] md:text-5xl leading-10 md:leading-[56px] text-dark mb-3 sm:mb-4 font-medium tracking-tight">Find the right plan to grow and <br class="hidden md:block"> inspire your music community</h2>
+                    <p class="text-base sm:text-lg text-[#07101F]">We are a registered 501(c)3 non-profit based in California. <br class="hidden md:block"> 100% of your monthly subscription is tax deductible.</p>
                 </div>
 
-                <div class="mt-9 sm:mt-12 flex flex-col lg:flex-row gap-[18px] text-sm text-dark justify-center items-center lg:items-start">
+                <div class="mt-11 sm:mt-[84px] grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-7 text-sm text-[#07101F]">
                     <!-- Price plan -->
-                    <div class="shadow-accent sm:shadow-primary rounded-[16px] p-6 w-full sm:max-w-[344px]">
-                        <p class="text-lg font-Jakarta font-semibold mb-[22px]">Basic</p>
-                        <p class="text-[32px] leading-10 font-Jakarta font-bold mb-4">Free</p>
-                        <a href="#" class="py-3 px-5 font-medium text-sm text-white bg-accent-blue rounded-[40px] w-full inline-block text-center mb-6">Get started</a>
-                        <p class="mb-4">With the free plan, you get</p>
-                        <ul class="flex flex-col gap-2">
+                    <div class="bg-white shadow-primary rounded-[16px]">
+                        <div class="p-6 border-b border-b-[#07101F] border-opacity-10">
+                            <p class="text-xl font-Jakarta font-semibold mb-2">Free Plan</p>
+                            <p class="text-sm">Perfect for getting started with essential tools.</p>
+
+                            <div class="mt-[60px]">
+                                <p class="text-greyscale-600 mb-4"><span class="font-Jakarta text-dark text-[40px] leading-[40px] font-semibold mr-1.5">$0</span> USD/mo</p>
+                                <a href="#" class="py-3 px-6 font-medium text-base text-white bg-accent-blue rounded-[40px] w-full inline-block text-center">Get started</a>
+                            </div>
+                        </div>
+                        
+                        <ul class="flex flex-col gap-2 p-6 text-sm">
                             <li class="flex items-center gap-2.5">
                                 <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -105,7 +119,14 @@
                                 <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>50 students</span>
+                                <span>See class feed</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Manage billing</span>
                             </li>
 
                             <li class="flex items-center gap-2.5">
@@ -117,26 +138,72 @@
                         </ul>
                     </div>
 
-                    <!-- Price plan -->
-                    <div class="shadow-primary rounded-[16px] p-6 w-full sm:max-w-[344px] relative">
-                        <p class="text-lg font-Jakarta font-semibold mb-[22px]">Premium</p>
-                        <p class="text-greyscale-600 absolute top-[27px] right-[13px]">Fully tax deductible</p>
-                        <p class="text-[32px] leading-10 font-Jakarta font-bold mb-4">$5 <span class="font-sans text-base font-medium">/month</span></p>
-                        <a href="#" class="py-3 px-5 font-medium text-sm text-white bg-accent-blue rounded-[40px] w-full inline-block text-center mb-6">Get started</a>
-                        <p class="mb-4">With the free plan, you get</p>
-                        <ul class="flex flex-col gap-2">
+                    <div class="bg-white shadow-primary rounded-[16px]">
+                        <div class="p-6 border-b border-b-[#07101F] border-opacity-10">
+                            <p class="text-xl font-Jakarta font-semibold mb-2">Pro</p>
+                            <p class="text-sm">Perfect for getting started with essential tools.</p>
+
+                            <div class="mt-[60px]">
+                                <p class="text-greyscale-600 mb-4"><span class="font-Jakarta text-dark text-[40px] leading-[40px] font-semibold mr-1.5">$5</span> USD/mo</p>
+                                <a href="#" class="py-3 px-6 font-medium text-base text-white bg-accent-blue rounded-[40px] w-full inline-block text-center">Get started</a>
+                            </div>
+                        </div>
+                        
+                        <ul class="flex flex-col gap-2 p-6 text-sm">
                             <li class="flex items-center gap-2.5">
                                 <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>All the previous plus</span>
+                                <span>Track practice time</span>
                             </li>
 
                             <li class="flex items-center gap-2.5">
                                 <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>Unlimited students</span>
+                                <span>Calendar</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Lesson scheduler</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Assign homework</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Set goals</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>See class feed</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Manage billing</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Free website</span>
                             </li>
 
                             <li class="flex items-center gap-2.5">
@@ -150,7 +217,7 @@
                                 <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>Support for custom domains</span>
+                                <span>Custom domain support</span>
                             </li>
 
                             <li class="flex items-center gap-2.5">
@@ -171,31 +238,77 @@
                                 <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>Free Musopen pro membership included</span>
+                                <span>Free Musopen Pro membership</span>
                             </li>
                         </ul>
                     </div>
 
-                    <!-- Price plan -->
-                    <div class="shadow-primary rounded-[16px] p-6 w-full sm:max-w-[344px] relative">
-                        <p class="text-lg font-Jakarta font-semibold mb-[22px]">Administrative</p>
-                        <p class="text-greyscale-600 absolute top-[27px] right-[13px]">Fully tax deductible</p>
-                        <p class="text-[32px] leading-10 font-Jakarta font-bold mb-4">$10 <span class="font-sans text-base font-medium">/month</span></p>
-                        <a href="#" class="py-3 px-5 font-medium text-sm text-white bg-accent-blue rounded-[40px] w-full inline-block text-center mb-6">Get started</a>
-                        <p class="mb-4">With the free plan, you get</p>
-                        <ul class="flex flex-col gap-2">
+                    <div class="bg-white shadow-primary rounded-[16px]">
+                        <div class="p-6 border-b border-b-[#07101F] border-opacity-10">
+                            <p class="text-xl font-Jakarta font-semibold mb-2">Organisation</p>
+                            <p class="text-sm">Unlimited access & premium features.</p>
+
+                            <div class="mt-[60px]">
+                                <p class="text-greyscale-600 mb-4"><span class="font-Jakarta text-dark text-[40px] leading-[40px] font-semibold mr-1.5">$10</span> USD/mo</p>
+                                <a href="#" class="py-3 px-6 font-medium text-base text-white bg-accent-blue rounded-[40px] w-full inline-block text-center">Get started</a>
+                            </div>
+                        </div>
+                        
+                        <ul class="flex flex-col gap-2 p-6 text-sm">
                             <li class="flex items-center gap-2.5">
                                 <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>All the previous plus</span>
+                                <span>Track practice time</span>
                             </li>
 
                             <li class="flex items-center gap-2.5">
                                 <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>Unlimited students</span>
+                                <span>Calendar</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Lesson scheduler</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Assign homework</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Set goals</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>See class feed</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Manage billing</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Free website</span>
                             </li>
 
                             <li class="flex items-center gap-2.5">
@@ -209,7 +322,7 @@
                                 <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>Support for custom domains</span>
+                                <span>Custom domain support</span>
                             </li>
 
                             <li class="flex items-center gap-2.5">
@@ -230,7 +343,21 @@
                                 <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                                <span>Free Musopen pro membership included</span>
+                                <span>Free Musopen Pro membership</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Unlimited classes</span>
+                            </li>
+
+                            <li class="flex items-center gap-2.5">
+                                <svg width="18" height="18" viewBox="0 0 18 18" class="fill-none stroke-accent-blue" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 9.57143L7.75 13L14 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <span>Administrative control</span>
                             </li>
                         </ul>
                     </div>
@@ -239,82 +366,317 @@
             </div>
         </section>
 
-        <!-- FAQ -->
-        <section class="py-12 md:py-32 bg-greyPrimary">
+        <section class="max-w-[1560px] mx-auto py-[84px] rounded-3xl bg-fade-gradient hidden lg:block">
             <div class="container">
-                <h2 class="font-Jakarta text-[28px] sm:text-[40px] leading-9 sm:leading-[48px] text-dark mb-3 sm:mb-4 font-semibold tracking-tight text-center">Frequently asked questions</h2>
+                <h3 class="text-5xl leading-[56px] mb-[84px]">Compare plans and features</h3>
 
-                <!-- FAQ items -->
-                <div class="max-w-[844px] rounded-[10px] bg-white px-5 mt-16 mx-auto">
-                    <!-- FAQ item -->
-                    <div class="border-b border-b-black border-opacity-10 last:border-0 toggleElement">
-                        <h4 class="text-black text-lg leading-6 py-6 relative cursor-pointer transition-all hover:text-greyscale-600">
-                            How long does it take to get set up?
+                <div class="rounded-2xl bg-white border border-greyscale-200">
+                    <table class="w-full text-lg leading-[26px] pricing-table text-[#07101F]">
+                        <thead>
+                            <tr class="text-center font-Jakarta border-b border-b-greyscale-200 text-base">
+                                <th class="[&:not(:last-child)]:border-r border-r-greyscale-200 p-6 font-semibold"></th>
+                                <th class="[&:not(:last-child)]:border-r border-r-greyscale-200 p-6 font-semibold">
+                                    <span class="block mb-4">Free Plan</span>
+                                    $<span class="text-4xl align-text-top">0</span>
+                                </th>
+                                <th class="[&:not(:last-child)]:border-r border-r-greyscale-200 p-6 font-semibold">
+                                    <span class="block mb-4">Pro</span>
+                                    $<span class="text-4xl align-text-top">5</span>
+                                    <span class="text-greyscale-600 font-sans font-normal inline-block text-left align-text-top">per/<br>month</span>
+                                </th>
+                                <th class="[&:not(:last-child)]:border-r border-r-greyscale-200 p-6 font-semibold">
+                                    <span class="block mb-4">Organisation</span>
+                                    $<span class="text-4xl align-text-top">10</span>
+                                    <span class="text-greyscale-600 font-sans font-normal inline-block text-left align-text-top">per/<br>month</span>
+                                </th>
+                            </tr>
+                        </thead>
 
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="absolute top-6 right-0" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.5 8.25L12 15.75L4.5 8.25" stroke="#1F2124" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </h4>
-                        <div class="text-greyscale-600 pb-6 hidden toggleContent">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non soluta vero aliquid obcaecati neque voluptas vel, perspiciatis pariatur quaerat enim animi quod odio consectetur saepe, a minima corrupti doloremque recusandae!</p>
+                        <tbody>
+                            <tr>
+                                <td>Track practice time</td>
+                                <td>Unlimited</td>
+                                <td>Unlimited</td>
+                                <td>Unlimited</td>
+                            </tr>
+
+                            <tr>
+                                <td>Calendar</td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Lesson scheduler</td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Assign homework</td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Set goals</td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                                <td>Unlimited</td>
+                                <td>Unlimited</td>
+                            </tr>
+
+                            <tr>
+                                <td>See class feed</td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Manage billing</td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Free website</td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Automated billing and invoices</td>
+                                <td><span class="w-[14px] bg-greyscale-400 h-0.5 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Custom domain support</td>
+                                <td><span class="w-[14px] bg-greyscale-400 h-0.5 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Newsletters</td>
+                                <td><span class="w-[14px] bg-greyscale-400 h-0.5 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Listen to audio from practice sessions</td>
+                                <td><span class="w-[14px] bg-greyscale-400 h-0.5 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Free Musopen Pro membership</td>
+                                <td><span class="w-[14px] bg-greyscale-400 h-0.5 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Unlimited classes</td>
+                                <td><span class="w-[14px] bg-greyscale-400 h-0.5 mx-auto block"></span></td>
+                                <td><span class="w-[14px] bg-greyscale-400 h-0.5 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Administrative control</td>
+                                <td><span class="w-[14px] bg-greyscale-400 h-0.5 mx-auto block"></span></td>
+                                <td><span class="w-[14px] bg-greyscale-400 h-0.5 mx-auto block"></span></td>
+                                <td><span class="pricing-check size-8 mx-auto block"></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="py-12 lg:py-[144px]">
+            <div class="container">
+                <div class="flex flex-col lg:flex-row">
+                    <h2 class="font-Jakarta text-[28px] sm:text-[48px] leading-9 sm:leading-[56px] mb-11 font-medium tracking-tight max-w-[410px]">Questions & answers</h2>
+
+                    <!-- FAQ items -->
+                    <div class="lg:max-w-[735px] w-full ml-auto">
+                        <!-- FAQ item -->
+                        <div class="border-b border-b-greyscale-200 last:border-0 toggleElement">
+                            <h4 class="text-[#07101F] text-lg leading-6 py-5 pr-10 relative cursor-pointer transition-all hover:text-greyscale-600">
+                                How much usage is included with the Adagio add-on plan?
+
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="absolute top-6 right-0" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.75 3V11.25H21V12.75H12.75V21H11.25V12.75H3V11.25H11.25V3H12.75Z" fill="#596579"/>
+                                </svg>
+                            </h4>
+                            <div class="text-greyscale-600 pb-6 hidden toggleContent">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non soluta vero aliquid obcaecati neque voluptas vel, perspiciatis pariatur quaerat enim animi quod odio consectetur saepe, a minima corrupti doloremque recusandae!</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ item -->
+                        <div class="border-b border-b-greyscale-200 last:border-0 toggleElement">
+                            <h4 class="text-[#07101F] text-lg leading-6 py-5 pr-10 relative cursor-pointer transition-all hover:text-greyscale-600">
+                                Is there a free trial for Adagio?
+
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="absolute top-6 right-0" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.75 3V11.25H21V12.75H12.75V21H11.25V12.75H3V11.25H11.25V3H12.75Z" fill="#596579"/>
+                                </svg>
+                            </h4>
+                            <div class="text-greyscale-600 pb-6 hidden toggleContent">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non soluta vero aliquid obcaecati neque voluptas vel, perspiciatis pariatur quaerat enim animi quod odio consectetur saepe, a minima corrupti doloremque recusandae!</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ item -->
+                        <div class="border-b border-b-greyscale-200 last:border-0 toggleElement">
+                            <h4 class="text-[#07101F] text-lg leading-6 py-5 pr-10 relative cursor-pointer transition-all hover:text-greyscale-600">
+                                How does Adagio use my data?
+
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="absolute top-6 right-0" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.75 3V11.25H21V12.75H12.75V21H11.25V12.75H3V11.25H11.25V3H12.75Z" fill="#596579"/>
+                                </svg>
+                            </h4>
+                            <div class="text-greyscale-600 pb-6 hidden toggleContent">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non soluta vero aliquid obcaecati neque voluptas vel, perspiciatis pariatur quaerat enim animi quod odio consectetur saepe, a minima corrupti doloremque recusandae!</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ item -->
+                        <div class="border-b border-b-greyscale-200 last:border-0 toggleElement">
+                            <h4 class="text-[#07101F] text-lg leading-6 py-5 pr-10 relative cursor-pointer transition-all hover:text-greyscale-600">
+                                How do I get charged when I add members to my classroom?
+
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="absolute top-6 right-0" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.75 3V11.25H21V12.75H12.75V21H11.25V12.75H3V11.25H11.25V3H12.75Z" fill="#596579"/>
+                                </svg>
+                            </h4>
+                            <div class="text-greyscale-600 pb-6 hidden toggleContent">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non soluta vero aliquid obcaecati neque voluptas vel, perspiciatis pariatur quaerat enim animi quod odio consectetur saepe, a minima corrupti doloremque recusandae!</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ item -->
+                        <div class="border-b border-b-greyscale-200 last:border-0 toggleElement">
+                            <h4 class="text-[#07101F] text-lg leading-6 py-5 pr-10 relative cursor-pointer transition-all hover:text-greyscale-600">
+                                Where can I find my invoices?
+
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="absolute top-6 right-0" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.75 3V11.25H21V12.75H12.75V21H11.25V12.75H3V11.25H11.25V3H12.75Z" fill="#596579"/>
+                                </svg>
+                            </h4>
+                            <div class="text-greyscale-600 pb-6 hidden toggleContent">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non soluta vero aliquid obcaecati neque voluptas vel, perspiciatis pariatur quaerat enim animi quod odio consectetur saepe, a minima corrupti doloremque recusandae!</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ item -->
+                        <div class="border-b border-b-greyscale-200 last:border-0 toggleElement">
+                            <h4 class="text-[#07101F] text-lg leading-6 py-5 pr-10 relative cursor-pointer transition-all hover:text-greyscale-600">
+                                What are your accepted payment methods?
+
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="absolute top-6 right-0" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.75 3V11.25H21V12.75H12.75V21H11.25V12.75H3V11.25H11.25V3H12.75Z" fill="#596579"/>
+                                </svg>
+                            </h4>
+                            <div class="text-greyscale-600 pb-6 hidden toggleContent">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non soluta vero aliquid obcaecati neque voluptas vel, perspiciatis pariatur quaerat enim animi quod odio consectetur saepe, a minima corrupti doloremque recusandae!</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ item -->
+                        <div class="border-b border-b-greyscale-200 last:border-0 toggleElement">
+                            <h4 class="text-[#07101F] text-lg leading-6 py-5 pr-10 relative cursor-pointer transition-all hover:text-greyscale-600">
+                                What happens when I go over the block storage limit on a Free Plan?
+
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="absolute top-6 right-0" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.75 3V11.25H21V12.75H12.75V21H11.25V12.75H3V11.25H11.25V3H12.75Z" fill="#596579"/>
+                                </svg>
+                            </h4>
+                            <div class="text-greyscale-600 pb-6 hidden toggleContent">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non soluta vero aliquid obcaecati neque voluptas vel, perspiciatis pariatur quaerat enim animi quod odio consectetur saepe, a minima corrupti doloremque recusandae!</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ item -->
+                        <div class="border-b border-b-greyscale-200 last:border-0 toggleElement">
+                            <h4 class="text-[#07101F] text-lg leading-6 py-5 pr-10 relative cursor-pointer transition-all hover:text-greyscale-600">
+                                What is a block?
+
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="absolute top-6 right-0" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.75 3V11.25H21V12.75H12.75V21H11.25V12.75H3V11.25H11.25V3H12.75Z" fill="#596579"/>
+                                </svg>
+                            </h4>
+                            <div class="text-greyscale-600 pb-6 hidden toggleContent">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non soluta vero aliquid obcaecati neque voluptas vel, perspiciatis pariatur quaerat enim animi quod odio consectetur saepe, a minima corrupti doloremque recusandae!</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ item -->
+                        <div class="border-b border-b-greyscale-200 last:border-0 toggleElement">
+                            <h4 class="text-[#07101F] text-lg leading-6 py-5 pr-10 relative cursor-pointer transition-all hover:text-greyscale-600">
+                                Do you offer student discounts?
+
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="absolute top-6 right-0" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.75 3V11.25H21V12.75H12.75V21H11.25V12.75H3V11.25H11.25V3H12.75Z" fill="#596579"/>
+                                </svg>
+                            </h4>
+                            <div class="text-greyscale-600 pb-6 hidden toggleContent">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non soluta vero aliquid obcaecati neque voluptas vel, perspiciatis pariatur quaerat enim animi quod odio consectetur saepe, a minima corrupti doloremque recusandae!</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ item -->
+                        <div class="border-b border-b-greyscale-200 last:border-0 toggleElement">
+                            <h4 class="text-[#07101F] text-lg leading-6 py-5 pr-10 relative cursor-pointer transition-all hover:text-greyscale-600">
+                                How is pricing calculated for the paid plans?
+
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="absolute top-6 right-0" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.75 3V11.25H21V12.75H12.75V21H11.25V12.75H3V11.25H11.25V3H12.75Z" fill="#596579"/>
+                                </svg>
+                            </h4>
+                            <div class="text-greyscale-600 pb-6 hidden toggleContent">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non soluta vero aliquid obcaecati neque voluptas vel, perspiciatis pariatur quaerat enim animi quod odio consectetur saepe, a minima corrupti doloremque recusandae!</p>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- FAQ item -->
-                    <div class="border-b border-b-black border-opacity-10 last:border-0 toggleElement">
-                        <h4 class="text-black text-lg leading-6 py-6 relative cursor-pointer transition-all hover:text-greyscale-600">
-                            How long does it take to get set up?
+            </div>
+        </section>
 
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="absolute top-6 right-0" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.5 8.25L12 15.75L4.5 8.25" stroke="#1F2124" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </h4>
-                        <div class="text-greyscale-600 pb-6 hidden toggleContent">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non soluta vero aliquid obcaecati neque voluptas vel, perspiciatis pariatur quaerat enim animi quod odio consectetur saepe, a minima corrupti doloremque recusandae!</p>
-                        </div>
-                    </div>
+        <!-- Teach section -->
+        <section class="max-w-[1560px] mx-auto mb-11 rounded-3xl bg-promotion-section bg-no-repeat bg-left-top overflow-hidden py-16 max-md:mx-4 text-center hidden lg:block">
+            <div class="container flex justify-center gap-11 flex-col items-center">
+                <div class="rounded-full py-1 px-2.5 inline-block text-xs uppercase border border-[#07101F1A]/10">Music teaching with Adagio</div>
 
-                    <!-- FAQ item -->
-                    <div class="border-b border-b-black border-opacity-10 last:border-0 toggleElement">
-                        <h4 class="text-black text-lg leading-6 py-6 relative cursor-pointer transition-all hover:text-greyscale-600">
-                            How long does it take to get set up?
+                <div class="text-base max-w-[800px]">
+                    <h3 class="font-Jakarta text-[44px] leading-[52px] mb-6">Teach, inspire, and grow alongside 10,000+ music educators.</h3>
+                    <p>A platform designed to help you focus on what matters most—teaching and inspiring <br class="hidden sm:block"> your students—while it handles organization, tracking, and simplification.</p>
+                </div>
 
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="absolute top-6 right-0" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.5 8.25L12 15.75L4.5 8.25" stroke="#1F2124" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </h4>
-                        <div class="text-greyscale-600 pb-6 hidden toggleContent">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non soluta vero aliquid obcaecati neque voluptas vel, perspiciatis pariatur quaerat enim animi quod odio consectetur saepe, a minima corrupti doloremque recusandae!</p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ item -->
-                    <div class="border-b border-b-black border-opacity-10 last:border-0 toggleElement">
-                        <h4 class="text-black text-lg leading-6 py-6 relative cursor-pointer transition-all hover:text-greyscale-600">
-                            How long does it take to get set up?
-
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="absolute top-6 right-0" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.5 8.25L12 15.75L4.5 8.25" stroke="#1F2124" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </h4>
-                        <div class="text-greyscale-600 pb-6 hidden toggleContent">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non soluta vero aliquid obcaecati neque voluptas vel, perspiciatis pariatur quaerat enim animi quod odio consectetur saepe, a minima corrupti doloremque recusandae!</p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ item -->
-                    <div class="border-b border-b-black border-opacity-10 last:border-0 toggleElement">
-                        <h4 class="text-black text-lg leading-6 py-6 relative cursor-pointer transition-all hover:text-greyscale-600">
-                            How long does it take to get set up?
-
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="absolute top-6 right-0" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.5 8.25L12 15.75L4.5 8.25" stroke="#1F2124" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </h4>
-                        <div class="text-greyscale-600 pb-6 hidden toggleContent">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non soluta vero aliquid obcaecati neque voluptas vel, perspiciatis pariatur quaerat enim animi quod odio consectetur saepe, a minima corrupti doloremque recusandae!</p>
-                        </div>
-                    </div>
+                <div class="gap-2 md:gap-4 flex justify-center max-md:flex-col max-md:items-center">
+                    <a href="#" class="py-4 px-8 font-medium text-base bg-accent-blue text-white rounded-[40px]">
+                        Get started
+                    </a>
+                    
+                    <a href="https://www.youtube.com/@adagio-dot-org" target="_blank" class="py-4 px-8 font-medium text-base bg-[#3066B0] bg-opacity-10 text-greyscale-800 rounded-[40px] flex items-center gap-2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" class="fill-greyscale-800" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM10.7817 8.78296C10.4498 8.55666 10 8.79436 10 9.19607V14.8039C10 15.2056 10.4498 15.4433 10.7817 15.217L14.8941 12.4131C15.1852 12.2146 15.1852 11.7854 14.8941 11.5869L10.7817 8.78296Z" />
+                        </svg>
+                        Watch demo
+                    </a>
                 </div>
             </div>
         </section>
@@ -322,21 +684,21 @@
     </main>
 
     <!-- Footer -->
-    <footer class="pt-20">
+    <footer class="pt-[64px] md:pt-[84px] border-t border-t-greyscale-200">
         <div class="container">
 
-            <div class="flex lg:mb-[100px] flex-col lg:flex-row">
-                <div class="text-greyscale-600 text-sm max-w-[360px]">
-                    <a href="index.html" class="inline-block mb-4">
-                        <img src="assets/logo-blue.svg" alt="image">
+            <div class="flex lg:mb-[144px] flex-col lg:flex-row">
+                <div class="text-greyscale-800 text-sm md:text-base max-w-[550px]">
+                    <a href="index.html" class="inline-block mb-4 md:mb-6 text-2xl font-semibold text-accent-blue font-Jakarta">
+                        Adagio
                     </a>
-                    <p>Add students, schedule lessons and performances, assign homework, and manage billing all in one place.</p>
+                    <p>Manage your teaching workflow by adding students, scheduling lessons and performances, assigning homework, and handling billing all in one streamlined platform</p>
                 </div>
 
-                <div class="grid grid-cols-2 my-12 lg:my-0 lg:grid-cols-3 gap-[50px] text-sm xl:ml-auto lg:ml-8 xl:mr-[10%]">
-                    <div class="w-[168px]">
-                        <p class="text-greyscale-900 font-medium">Product</p>
-                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
+                <div class="grid grid-cols-2 my-[64px] md:my-12 lg:my-0 lg:grid-cols-2 gap-2 md:gap-7 text-sm md:text-base lg:ml-auto">
+                    <div class="md:w-[190px]">
+                        <p class="text-greyscale-500">Product</p>
+                        <ul class="text-greyscale-900 flex flex-col gap-3 mt-3">
                             <li><a href="https://musopen.org/contact/" target="_blank">Contact Us</a></li>
                             <li><a href="https://musopen.org/signup/" target="_blank">Sign up</a></li>
                             <li><a href="https://musopen.org/account/login/" target="_blank">Login</a></li>
@@ -345,37 +707,40 @@
                         </ul>
                     </div>
 
-                    <div class="w-[168px]">
-                        <p class="text-greyscale-900 font-medium">Social media</p>
-                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
-                            <li><a href="https://www.youtube.com/musopenvideos" target="_blank">YouTube</a></li>
-                            <li><a href="https://www.facebook.com/musopenorg" target="_blank">Facebook</a></li>
-                            <li><a href="https://x.com/musopen">Twitter</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="w-[168px] block lg:hidden">
-                        <p class="text-greyscale-900 font-medium">Legal</p>
-                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
+                    <div class="md:w-[190px]">
+                        <p class="text-greyscale-500">Legal</p>
+                        <ul class="text-greyscale-900 flex flex-col gap-3 mt-3">
                             <li><a href="https://musopen.org/page/tos/" target="_blank">Terms of Use</a></li>
                             <li><a href="https://musopen.org/page/privacy/" target="_blank">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="w-[168px]">
-                        <p class="text-greyscale-900 font-medium">Get in touch</p>
-                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
-                            <li><a href="mailto: info@adagio.com">info@adagio.com</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="border-t border-t-greyscale-200 py-4 text-sm text-dark flex items-center justify-between">
-                <p>© 2024 Adagio, Inc.</p>
-                <ul class="hidden gap-6 text-greyscale-600 lg:flex">
-                    <li><a href="https://musopen.org/page/tos/" target="_blank">Terms of Use</a></li>
-                    <li><a href="https://musopen.org/page/privacy/" target="_blank">Privacy Policy</a></li>
+            <div class="border-t border-t-greyscale-200 py-4 md:py-6 text-sm text-greyscale-600 flex max-md:flex-col max-md:gap-4 md:items-center justify-between">
+                <p>All rights reserved © 2024 Adagio, Inc.</p>
+                <ul class="gap-5 flex">
+                    <li>
+                        <a href="https://www.youtube.com/@adagio-dot-org/" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2043 4.00776C21.1084 4.28763 21.8189 5.10925 22.0609 6.15475C22.4982 8.04786 22.5 12 22.5 12C22.5 12 22.5 15.9522 22.0609 17.8453C21.8189 18.8908 21.1084 19.7124 20.2043 19.9922C18.5673 20.5 12 20.5 12 20.5C12 20.5 5.43274 20.5 3.79568 19.9922C2.89159 19.7124 2.1811 18.8908 1.93908 17.8453C1.5 15.9522 1.5 12 1.5 12C1.5 12 1.5 8.04786 1.93908 6.15475C2.1811 5.10925 2.89159 4.28763 3.79568 4.00776C5.43274 3.5 12 3.5 12 3.5C12 3.5 18.5673 3.5 20.2043 4.00776ZM15.5134 12.0003L9.79785 15.2999V8.70065L15.5134 12.0003Z" fill="#596579"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://bsky.app/profile/adagio-org.bsky.social" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.0012 11.4535C11.0788 9.53897 8.5657 5.97133 6.22962 4.21155C4.54403 2.9421 1.8125 1.95953 1.8125 5.08555C1.8125 5.70961 2.1691 10.3302 2.37861 11.0803C3.10583 13.688 5.75648 14.3531 8.11421 13.9507C3.99288 14.6543 2.94472 16.985 5.20884 19.3157C9.50879 23.7423 11.3892 18.2051 11.8707 16.7863C11.9598 16.5243 12.0012 16.4027 12.0012 16.5103C12.0012 16.4027 12.0426 16.5243 12.1317 16.7863C12.6132 18.2051 14.4936 23.7423 18.7936 19.3157C21.0577 16.985 20.0095 14.6543 15.8882 13.9507C18.2459 14.3531 20.8966 13.688 21.6238 11.0803C21.8333 10.3302 22.1899 5.70961 22.1899 5.08555C22.1899 1.95953 19.4587 2.9421 17.7728 4.21155C15.4367 5.97133 12.9236 9.53897 12.0012 11.4535Z" fill="#596579"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/musopenorg" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.58404 21.706V15.0561H7.52015V12H9.58404V10.6833C9.58404 7.27944 11.124 5.70333 14.464 5.70333C15.0963 5.70333 16.1879 5.82722 16.6363 5.95111V8.71944C16.4001 8.69556 15.9879 8.68333 15.4801 8.68333C13.8401 8.68333 13.2079 9.30333 13.2079 10.9194V12H16.4763L15.9163 15.0556H13.2124V21.9277C18.1637 21.3279 22 17.112 22 12C22 6.47722 17.5228 2 12 2C6.47722 2 2 6.47722 2 12C2 16.6899 5.22813 20.6253 9.58404 21.706Z" fill="#596579"/>
+                            </svg>
+                        </a>
+                    </li>
                 </ul>
             </div>
 

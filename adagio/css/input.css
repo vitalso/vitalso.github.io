@@ -61,9 +61,25 @@
     .open h4 svg {
         @apply rotate-180;
     }
+
+    .pricing-table tr td {
+        @apply px-6 py-[16px] text-center [&:not(:last-child)]:border-r border-r-greyscale-200 h-16;
+    }
+
+        .pricing-table tr td:first-child {
+            @apply text-left whitespace-nowrap w-[440px];
+        }
+
+        .pricing-table tr:not(:last-child) {
+            @apply border-b border-b-greyscale-200;
+        }
 }
 
 @keyframes progress {
     0% { width: 0 }
     100% { width: 100% }
+}
+
+.pricing-check {
+    background: url(../assets/pricing-check.svg) no-repeat;
 }
