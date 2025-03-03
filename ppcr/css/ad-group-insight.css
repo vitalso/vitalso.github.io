@@ -1,0 +1,296 @@
+/* Redesign styles */
+.audit-item.without-detail .btn-fix-issue {
+    margin-right: 1.5rem;
+}
+
+/* Table */
+.wrap-table-group {
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+    padding-bottom: 16px;
+}
+
+    .table-group {
+        font-size: 14px;
+    }
+
+    .table-group .table-group-heading {
+        font-size: 20px;
+        font-weight: 600;
+        padding: 22px 32px;
+        border-radius: 3px 3px 0 0;
+        border-color: #F2F3F4;
+        color: #212529;
+    }
+
+    .table-group .table-group-heading-bg {
+        background-color: #F9FAFA;
+    }
+
+        .table-group .table-group-heading-bg th:first-child {
+            padding-left: 14px;
+        }
+
+        .success-tag {
+            width: 3px;
+            height: 18px;
+            background-color: #21C6C8;
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+    .table-group tbody tr td {
+        border-color: #F2F3F4;
+        color: #3D3F40;
+    }
+
+    .table-group thead tr th {
+        border-bottom: none;
+        border-top: none;
+    }
+
+    .table-group.no-margins tbody tr:first-child td {
+        border: none;
+    }
+
+        .table-group tbody tr td:first-child {
+            padding-left: 14px;
+        }
+
+        .table-group .google-status {
+            font-size: 7px;
+        }
+
+        .table-group .badge-error {
+            background-color: #ED5565;
+            color: #fff;
+        }
+
+        .table-group .badge-primary {
+            background-color: #23c6c8;
+        }
+
+        .table-group .text-success {
+            color: #21C6C8 !important;
+        }
+
+        .table-group .btn-outline-primary {
+            font-size: 12px;
+            font-family: "Inter";
+            font-weight: 500;
+            padding: 0 10px;
+            line-height: 24px;
+            border-radius: 3px;
+        }
+
+        .table-group td[data-title] a {
+            color: #3D3F40;
+        }
+
+        .fill-error {
+            fill: #ED5565;
+        }
+
+        .fill-success {
+            fill: #21C6C8;
+        }
+
+        .fill-warning {
+            fill: #f8ac59;
+        }
+
+        .fill-none {
+            fill: none;
+        }
+
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+
+        .rotate-90 {
+            transform: rotate(-90deg);
+        }
+
+        .table-group small {
+            font-size: 12px;
+        }
+
+        .table-group .btn-info.btn-xs {
+            font-size: 12px;
+            font-family: "Inter";
+            padding: 2px 10px;
+        }
+
+        .table-group .btn-warning.btn-sm {
+            font-size: 14px;
+            padding: 2px 5px;
+            line-height: 1;
+        }
+
+        .table-group .border-top , .table-group.border-left {
+            border-color: #F2F3F4 !important;
+        }
+
+        .vertical-top , .vertical-top td {
+            vertical-align: top !important;
+        }
+
+        .vertical-text-bottom {
+            vertical-align: text-bottom;
+        }
+
+        .table-group strong , .like-table-card strong {
+            font-family: "OpenSansSemibold";
+        }
+
+        .table-group.table-layout-fixed {
+            table-layout: fixed;
+        }
+
+        .table-group-link {
+            max-width: 170px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-decoration: underline;
+            color: #1C84C6 !important;
+            display: inline-block;
+        }
+
+.like-table-card {
+    font-size: 14px;
+    border: 1px solid #F2F3F4;
+    word-break: break-all;
+}
+
+    .like-table-card .border-bottom {
+        border-color: #F2F3F4 !important;
+    }
+
+.like-table-card div:nth-child(1) {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #F2F3F4;
+}
+
+    .like-table-card strong {
+        color: #3D3F40;
+    }
+
+.bg-group {
+    padding: 10px 32px;
+    background-color: #F9FAFA;
+    font-size: 14px;
+}
+
+    .bg-group strong {
+        color: #3D3F40;
+        font-family: "OpenSansSemiBold";
+    }
+
+.table-small-text {
+    font-size: 12px;
+    color: #94999B;
+}
+
+.wrap-pagination {
+    padding-left: 14px;
+    padding-right: 14px;
+    border-color: #F2F3F4 !important;
+    border-radius: 0 0 3px 3px;
+}
+
+    .wrap-pagination .show-more-btn {
+        padding: 0 0 7px 0;
+        font-weight: 600;
+        font-size: 14px;
+        border: none;
+        border-bottom: 1px solid #212529;
+    }
+
+    .table-pagination {
+        gap: 20px;
+        font-family: "OpenSansSemibold";
+        font-size: 14px;
+        list-style-type: none;
+        line-height: 8px;
+    }
+
+        .table-pagination a {
+            color: #212529;
+            transition: all 0.3s ease;
+        }
+
+            .table-pagination a svg {
+                transition: all 0.3s ease;
+                stroke: #3D3F40;
+            }
+
+            .table-pagination a.active , .table-pagination a:hover {
+                color: #21C6C8;
+            }
+
+            .table-pagination a:hover svg {
+                stroke: #21C6C8;
+            }
+
+.border-b-l {
+    border-bottom-left-radius: 0 !important;
+}
+
+.border-b-r {
+    border-bottom-right-radius: 0 !important;
+}
+
+.border-after:after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    /* height: calc(100% - 72px); */
+    height: 100%;
+    background-color: #212529;
+    bottom: 0;
+    right: 0;
+}
+
+.mx-10 {
+    margin: 0 10px;
+}
+
+@media screen and (min-width: 992px) {
+    
+    .table-responsive.bg-white {
+        overflow: visible;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+
+    .border-after:after {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 1500px) {
+
+    .col-xxl-4.border-after:after {
+        display: none;
+    }
+
+}
+
+@media (min-width: 1500px) {
+    .col-xxl-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+    .d-xxl-row {
+        display: table-row !important;
+    }
+}

@@ -1,0 +1,195 @@
+.p-40 {
+    padding: 40px;
+}
+
+.p-30 {
+    padding: 30px;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.gap-40 {
+    gap: 40px;
+}
+
+.grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.card-custom {
+    padding: 12px 20px;
+    background-color: #FDFDFD;
+    border: 1px solid #E7EAEC;
+    color: #212529;
+}
+
+    .card-custom .card-title {
+        margin-bottom: 22px;
+    }
+    
+    .card-custom .card-title p {
+        font-size: 18px;
+        margin-bottom: 7px;
+    }
+
+    .card-custom .card-title p + span {
+        font-size: 16px;
+    }
+
+    .card-custom .card-tags {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+        .card-tag {
+            padding: 0 5px;
+            font-size: 10px;
+            line-height: 24px;
+            border-radius: 3px;
+            background-color: #F3F3F4;
+            white-space: nowrap;
+        }
+
+            .card-tag span {
+                margin-left: 10px;
+            }
+
+        .card-description {
+            color: #676A6C;
+        }
+
+.py-25 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.py-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.account-details {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.account-row {
+    padding: 13px 30px;
+    min-width: 570px;
+}
+
+    .account-row {
+        border-bottom: 1px solid #F2F3F4;
+    }
+
+    .account-row:nth-child(2n+1) {
+        border-right: 1px solid #F2F3F4;
+    }
+
+    .account-row div:first-child {
+        min-width: 280px;
+        max-width: 280px;
+        white-space: nowrap;
+    }
+
+        .account-row div:first-child span {
+            max-width: 200px;
+            text-overflow: ellipsis;
+            display: inline-block;
+            overflow: hidden;
+        }
+
+    .account-row .info-btn {
+        top: -7px;
+    }
+
+    .account-row .account-number {
+        min-width: 100px;
+        text-align: center;
+        color: #3D3F40;
+    }
+
+        .account-row .account-number + div {
+            min-width: 60px;
+        }
+    
+        .account-row .account-number + div span {
+            min-width: 36px;
+            text-align: right;
+            display: inline-block;
+        }
+
+    .account-row .item-tag {
+        background: #F3F3F4;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+        .account-row .item-tag:hover {
+            background-color: #1C84C6;
+            color: #fff;
+        }
+
+.more-accounts:hover {
+    text-decoration: none !important;
+}
+
+@media screen and (max-width: 1440px) {
+    .grid-cols-4 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .account-details {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .grid-cols-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .grid-cols-4 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .account-row {
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+ 
+    .account-details {
+        overflow-y: auto;
+    }
+
+    .account-row {
+        border-right: none !important;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+    .p-40 , .p-30 {
+        padding: 14px;
+    }
+
+    .card-custom {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    
+    .card-custom .card-tags {
+        gap: 4px;
+    }
+}
