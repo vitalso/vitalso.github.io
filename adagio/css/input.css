@@ -67,7 +67,7 @@
     }
 
         .pricing-table tr td:first-child {
-            @apply text-left whitespace-nowrap w-[440px];
+            @apply text-left lg:whitespace-nowrap lg:w-[440px];
         }
 
         .pricing-table tr:not(:last-child) {

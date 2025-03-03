@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adagio Signup</title>
+    <title>Adagio</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,33 +14,41 @@
 <body class="overflow-x-hidden">
     
     <!-- Header -->
-    <header class="absolute w-full py-5 md:py-[22px] z-10">
+    <header id="header" class="absolute w-full py-[18px] md:py-[22px] z-20">
         <div class="container flex items-center">
 
             <!-- Logo -->
-            <a href="index.html">
-                <img src="assets/Adagio-logo-blue.svg" alt="image">
-            </a>
+            <a href="index.html"><img src="assets/Adagio.svg" alt="image"></a>
 
-            <nav class="ml-10 text-black text-sm font-medium hidden md:inline-block">
-                <a href="#" class="py-2 mx-3">Home</a>
-                <a href="#" class="py-2 mx-3">Features</a>
-                <a href="#" class="py-2 mx-3">Product</a>
-                <a href="pricing.html" class="py-2 mx-3">Pricing</a>
+            <nav class="md:ml-10 text-dark text-2xl md:text-sm hidden items-start flex-col h-[calc(100%-76px)] font-medium md:inline-block">
+                <a href="#" class="py-3 md:py-2 md:mx-3">Home</a>
+                <a href="#" class="py-3 md:py-2 md:mx-3">Features</a>
+                <a href="#" class="py-3 md:py-2 md:mx-3">Product</a>
+                <a href="pricing.html" class="py-3 md:py-2 md:mx-3">Pricing</a>
+
+                <!-- Show only on mobile -->
+                <span class="mt-auto w-full font-medium text-base text-center flex md:hidden flex-col gap-2 pt-4 pb-6 border-t border-t-greyscale-200">
+                    <a href="signup.html" class="inline-block p-3 rounded-full border border-greyscale-200">Sign in</a>
+                    <a href="login.html" class="inline-block p-3 text-white bg-accent-blue rounded-full">Get started for free</a>
+                </span>
             </nav>
 
             <div class="ml-auto flex gap-2 items-center">
-                <a href="login.html" class="py-2.5 px-[14px] font-medium text-sm text-black bg-white rounded-[40px]">
+                <a href="login.html" class="py-2.5 px-[14px] font-medium text-sm text-dark rounded-full hidden md:inline-block">
                     Sign in
                 </a>
 
-                <a href="#" class="py-2.5 px-5 font-medium text-sm text-white bg-accent-blue rounded-[40px] hidden md:inline-block">
+                <a href="#" class="py-2.5 px-5 font-medium text-sm text-white bg-accent-blue rounded-full">
                     Get started
                 </a>
 
-                <button type="button" class="inline-block md:hidden">
+                <button id="menu" type="button" class="inline-block md:hidden p-2">
                     <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-black" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3.75 6.75012H20.25M3.75 12.0001H20.25M3.75 17.2501H20.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2.75 12H21.25M2.75 5.75H21.25M2.75 18.25H21.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    <svg width="24" height="24" viewBox="0 0 24 24" class="fill-none stroke-black hidden" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.75 4.75L19.25 19.25M19.25 4.75L4.75 19.25" stroke-width="1.5" stroke-linecap="round"/>
                     </svg>
                 </button>
             </div>
@@ -50,53 +58,79 @@
 
     <main>
 
-        <section class="pb-16 md:pb-0 md:h-screen md:max-h-[710px] min-h-[710px] bg-greyPrimary">
-            <div class="container h-full flex flex-col md:justify-center">
+        <section class="bg-hero-section max-md:bg-hero-position bg-right-top bg-no-repeat pt-[116px] md:pt-[148px] pb-[84px] md:pb-[140px] relative">
+            <div class="container">
 
-                <div class="flex items-center gap-10 md:gap-7 w-full flex-col mt-28 md:mt-0 md:flex-row">
-                    <div class="text-sm lg:text-lg lg:leading-7 max-w-[735px] flex flex-col gap-2 lg:gap-8">
-                        <h1 class="font-Jakarta text-[32px] leading-10 lg:text-[64px] lg:leading-[72px] font-semibold">Get in touch for any support and inquiries.</h1>
-                        <p>Adagio is the easiest way to manage your music teaching needs, providing seamless integration of all essential features into your workflow.</p>
-                        <div class="flex flex-col gap-1 left-6 lg:leading-8 mt-4 lg:mt-0">
-                            <p><span class="font-semibold">Email:</span> support@adagio.com</p>
-                            <p><span class="font-semibold">Phone:</span> +1 (123) 456-7890</p>
-                            <p><span class="font-semibold">Live chat:</span> Available on our website during business hours</p>
-                            <p><span class="font-semibold">Social media:</span> Connect with us on <a href="https://www.facebook.com/musopenorg">Facebook</a>, <a href="https://x.com/musopen">X</a>, and <a href="#">Instagram</a></p>
+                <!-- Page tag -->
+                <p class="inline-block uppercase px-2.5 py-1 rounded-full text-xs leading-5 border border-[#07101F]/10">Contact us</p>
+
+                <div class="flex gap-10 md:gap-14 w-full flex-col md:flex-row mt-6 md:mt-8">
+
+                    <div class="text-sm md:text-base max-w-[635px] flex flex-col md:gap-6">
+                        <h1 class="font-Jakarta text-[32px] leading-10 md:text-[56px] md:leading-[64px] font-medium">Get in touch for any support and inquiries.</h1>
+                        <p>Adagio is the easiest way to manage your music teaching needs, providing <br class="hidden lg:block"> seamless integration of all essential features into your workflow.</p>
+
+                        <!-- Social media display on mobile devices -->
+                        <div class="mt-9 text-base text-black/60">
+                            <p class="mb-4">Social media:</p>
+                            <ul class="gap-5 flex">
+                                <li>
+                                    <a href="https://www.youtube.com/@adagio-dot-org/" target="_blank">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2043 4.00776C21.1084 4.28763 21.8189 5.10925 22.0609 6.15475C22.4982 8.04786 22.5 12 22.5 12C22.5 12 22.5 15.9522 22.0609 17.8453C21.8189 18.8908 21.1084 19.7124 20.2043 19.9922C18.5673 20.5 12 20.5 12 20.5C12 20.5 5.43274 20.5 3.79568 19.9922C2.89159 19.7124 2.1811 18.8908 1.93908 17.8453C1.5 15.9522 1.5 12 1.5 12C1.5 12 1.5 8.04786 1.93908 6.15475C2.1811 5.10925 2.89159 4.28763 3.79568 4.00776C5.43274 3.5 12 3.5 12 3.5C12 3.5 18.5673 3.5 20.2043 4.00776ZM15.5134 12.0003L9.79785 15.2999V8.70065L15.5134 12.0003Z" fill="#596579"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://bsky.app/profile/adagio-org.bsky.social" target="_blank">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.0012 11.4535C11.0788 9.53897 8.5657 5.97133 6.22962 4.21155C4.54403 2.9421 1.8125 1.95953 1.8125 5.08555C1.8125 5.70961 2.1691 10.3302 2.37861 11.0803C3.10583 13.688 5.75648 14.3531 8.11421 13.9507C3.99288 14.6543 2.94472 16.985 5.20884 19.3157C9.50879 23.7423 11.3892 18.2051 11.8707 16.7863C11.9598 16.5243 12.0012 16.4027 12.0012 16.5103C12.0012 16.4027 12.0426 16.5243 12.1317 16.7863C12.6132 18.2051 14.4936 23.7423 18.7936 19.3157C21.0577 16.985 20.0095 14.6543 15.8882 13.9507C18.2459 14.3531 20.8966 13.688 21.6238 11.0803C21.8333 10.3302 22.1899 5.70961 22.1899 5.08555C22.1899 1.95953 19.4587 2.9421 17.7728 4.21155C15.4367 5.97133 12.9236 9.53897 12.0012 11.4535Z" fill="#596579"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/musopenorg" target="_blank">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9.58404 21.706V15.0561H7.52015V12H9.58404V10.6833C9.58404 7.27944 11.124 5.70333 14.464 5.70333C15.0963 5.70333 16.1879 5.82722 16.6363 5.95111V8.71944C16.4001 8.69556 15.9879 8.68333 15.4801 8.68333C13.8401 8.68333 13.2079 9.30333 13.2079 10.9194V12H16.4763L15.9163 15.0556H13.2124V21.9277C18.1637 21.3279 22 17.112 22 12C22 6.47722 17.5228 2 12 2C6.47722 2 2 6.47722 2 12C2 16.6899 5.22813 20.6253 9.58404 21.706Z" fill="#596579"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
 
                     <!-- Form -->
-                    <div class="text-[13px] w-full sm:max-w-[517px]">
+                    <div class="text-[13px] w-full mx-auto md:ml-auto sm:max-w-[517px]">
 
-                        <form action="#" class="text-greySecondary flex flex-col gap-3 bg-white rounded-[20px] p-6 sm:py-10 sm:px-[30px]">
+                        <form action="#" class="text-greySecondary flex flex-col gap-3 bg-white rounded-2xl max-md:px-4 p-6 border border-[#2A3346]/15">
 
                             <div class="flex gap-2 max-[576px]:flex-col">
                                 <div class="flex flex-col gap-1.5 flex-1">
                                     <label for="firstName" class="hidden">First name</label>
-                                    <input type="text" id="firstName" placeholder="First name" class="w-full h-11 px-3.5 rounded-md border border-greyBorder outline-none placeholder:text-greyscale-500 text-greyscale-900">
+                                    <input type="text" id="firstName" placeholder="First name" class="w-full h-11 px-3.5 rounded-lg text-[13px] border border-greyscale-200 outline-none placeholder:text-greyscale-500 text-greyscale-900">
                                 </div>
 
                                 <div class="flex flex-col gap-1.5 flex-1">
                                     <label for="lastName" class="hidden">Last name</label>
-                                    <input type="text" id="lasttName" placeholder="Last name" class="w-full h-11 px-3.5 rounded-md border border-greyBorder outline-none placeholder:text-greyscale-500 text-greyscale-900">
+                                    <input type="text" id="lasttName" placeholder="Last name" class="w-full h-11 px-3.5 rounded-lg text-[13px] border border-greyscale-200 outline-none placeholder:text-greyscale-500 text-greyscale-900">
                                 </div>
                             </div>
 
                             <div class="flex flex-col gap-1.5">
                                 <label for="email" class="hidden">Email address</label>
                                 <!-- Input with error -->
-                                <input type="email" id="lasttName" placeholder="Email address" class="w-full h-11 px-3.5 rounded-md border border-greyBorder outline-none placeholder:text-greyscale-500 text-greyscale-900">
+                                <input type="email" id="lasttName" placeholder="Email address" class="w-full h-11 px-3.5 rounded-lg text-[13px] border border-greyscale-200 outline-none placeholder:text-greyscale-500 text-greyscale-900">
                                 <!-- Error message -->
                                 <span class="text-red hidden">This value should be a valid email.</span>
                             </div>
 
                             <div class="flex flex-col gap-1.5 flex-1">
                                 <label for="message" class="hidden">How can we help you?</label>
-                                <textarea id="message" placeholder="What can we help you with?" class="w-full h-20 px-3.5 py-2.5 rounded-md border border-greyBorder outline-none placeholder:text-greyscale-500 text-greyscale-900 resize-none"></textarea>
+                                <textarea id="message" placeholder="What can we help you with?" class="w-full h-20 px-3.5 py-2.5 rounded-lg text-[13px] border border-greyscale-200 outline-none placeholder:text-greyscale-500 text-greyscale-900 resize-none"></textarea>
                             </div>
 
                             <!-- By default button is disabled. For activate button just remove the 'disabled' attr -->
-                            <button type="submit" class="h-10 rounded-[40px] py-2.5 px-4 text-center mt-5 bg-accent-blue text-white disabled:bg-opacity-50">Submit</button>
+                            <button type="submit" class="rounded-full py-[14px] px-4 text-[13px] font-medium text-center mt-3 bg-accent-blue text-white disabled:bg-opacity-50">Submit</button>
 
                         </form>
                     </div>
@@ -108,21 +142,19 @@
     </main>
 
     <!-- Footer -->
-    <footer class="pt-20">
+    <footer class="pt-[64px] md:pt-[84px] border-t border-t-greyscale-200">
         <div class="container">
 
-            <div class="flex lg:mb-[100px] flex-col lg:flex-row">
-                <div class="text-greyscale-600 text-sm max-w-[360px]">
-                    <a href="index.html" class="inline-block mb-4">
-                        <img src="assets/logo-blue.svg" alt="image">
-                    </a>
-                    <p>Add students, schedule lessons and performances, assign homework, and manage billing all in one place.</p>
+            <div class="flex lg:mb-[144px] flex-col lg:flex-row">
+                <div class="text-greyscale-800 text-sm md:text-base max-w-[550px]">
+                    <a href="index.html" class="inline-block mb-4 md:mb-6"><img src="assets/Adagio.svg" alt="image"></a>
+                    <p>Manage your teaching workflow by adding students, scheduling lessons and performances, assigning homework, and handling billing all in one streamlined platform</p>
                 </div>
 
-                <div class="grid grid-cols-2 my-12 lg:my-0 lg:grid-cols-3 gap-[50px] text-sm xl:ml-auto lg:ml-8 xl:mr-[10%]">
-                    <div class="w-[168px]">
-                        <p class="text-greyscale-900 font-medium">Product</p>
-                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
+                <div class="grid grid-cols-2 my-[64px] md:my-12 lg:my-0 lg:grid-cols-2 gap-2 md:gap-7 text-sm md:text-base lg:ml-auto">
+                    <div class="md:w-[190px]">
+                        <p class="text-greyscale-500">Product</p>
+                        <ul class="text-greyscale-900 flex flex-col gap-3 mt-3">
                             <li><a href="https://musopen.org/contact/" target="_blank">Contact Us</a></li>
                             <li><a href="https://musopen.org/signup/" target="_blank">Sign up</a></li>
                             <li><a href="https://musopen.org/account/login/" target="_blank">Login</a></li>
@@ -131,42 +163,48 @@
                         </ul>
                     </div>
 
-                    <div class="w-[168px]">
-                        <p class="text-greyscale-900 font-medium">Social media</p>
-                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
-                            <li><a href="https://www.youtube.com/musopenvideos" target="_blank">YouTube</a></li>
-                            <li><a href="https://www.facebook.com/musopenorg" target="_blank">Facebook</a></li>
-                            <li><a href="https://x.com/musopen">Twitter</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="w-[168px] block lg:hidden">
-                        <p class="text-greyscale-900 font-medium">Legal</p>
-                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
+                    <div class="md:w-[190px]">
+                        <p class="text-greyscale-500">Legal</p>
+                        <ul class="text-greyscale-900 flex flex-col gap-3 mt-3">
                             <li><a href="https://musopen.org/page/tos/" target="_blank">Terms of Use</a></li>
                             <li><a href="https://musopen.org/page/privacy/" target="_blank">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="w-[168px]">
-                        <p class="text-greyscale-900 font-medium">Get in touch</p>
-                        <ul class="text-greyscale-600 flex flex-col gap-2 mt-4">
-                            <li><a href="mailto: info@adagio.com">info@adagio.com</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="border-t border-t-greyscale-200 py-4 text-sm text-dark flex items-center justify-between">
-                <p>© 2024 Adagio, Inc.</p>
-                <ul class="hidden gap-6 text-greyscale-600 lg:flex">
-                    <li><a href="https://musopen.org/page/tos/" target="_blank">Terms of Use</a></li>
-                    <li><a href="https://musopen.org/page/privacy/" target="_blank">Privacy Policy</a></li>
+            <div class="border-t border-t-greyscale-200 py-4 md:py-6 text-sm text-greyscale-600 flex max-md:flex-col max-md:gap-4 md:items-center justify-between">
+                <p>All rights reserved © 2025 Adagio, Inc.</p>
+                <ul class="gap-5 flex">
+                    <li>
+                        <a href="https://www.youtube.com/@adagio-dot-org/" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.2043 4.00776C21.1084 4.28763 21.8189 5.10925 22.0609 6.15475C22.4982 8.04786 22.5 12 22.5 12C22.5 12 22.5 15.9522 22.0609 17.8453C21.8189 18.8908 21.1084 19.7124 20.2043 19.9922C18.5673 20.5 12 20.5 12 20.5C12 20.5 5.43274 20.5 3.79568 19.9922C2.89159 19.7124 2.1811 18.8908 1.93908 17.8453C1.5 15.9522 1.5 12 1.5 12C1.5 12 1.5 8.04786 1.93908 6.15475C2.1811 5.10925 2.89159 4.28763 3.79568 4.00776C5.43274 3.5 12 3.5 12 3.5C12 3.5 18.5673 3.5 20.2043 4.00776ZM15.5134 12.0003L9.79785 15.2999V8.70065L15.5134 12.0003Z" fill="#596579"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://bsky.app/profile/adagio-org.bsky.social" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.0012 11.4535C11.0788 9.53897 8.5657 5.97133 6.22962 4.21155C4.54403 2.9421 1.8125 1.95953 1.8125 5.08555C1.8125 5.70961 2.1691 10.3302 2.37861 11.0803C3.10583 13.688 5.75648 14.3531 8.11421 13.9507C3.99288 14.6543 2.94472 16.985 5.20884 19.3157C9.50879 23.7423 11.3892 18.2051 11.8707 16.7863C11.9598 16.5243 12.0012 16.4027 12.0012 16.5103C12.0012 16.4027 12.0426 16.5243 12.1317 16.7863C12.6132 18.2051 14.4936 23.7423 18.7936 19.3157C21.0577 16.985 20.0095 14.6543 15.8882 13.9507C18.2459 14.3531 20.8966 13.688 21.6238 11.0803C21.8333 10.3302 22.1899 5.70961 22.1899 5.08555C22.1899 1.95953 19.4587 2.9421 17.7728 4.21155C15.4367 5.97133 12.9236 9.53897 12.0012 11.4535Z" fill="#596579"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/musopenorg" target="_blank">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.58404 21.706V15.0561H7.52015V12H9.58404V10.6833C9.58404 7.27944 11.124 5.70333 14.464 5.70333C15.0963 5.70333 16.1879 5.82722 16.6363 5.95111V8.71944C16.4001 8.69556 15.9879 8.68333 15.4801 8.68333C13.8401 8.68333 13.2079 9.30333 13.2079 10.9194V12H16.4763L15.9163 15.0556H13.2124V21.9277C18.1637 21.3279 22 17.112 22 12C22 6.47722 17.5228 2 12 2C6.47722 2 2 6.47722 2 12C2 16.6899 5.22813 20.6253 9.58404 21.706Z" fill="#596579"/>
+                            </svg>
+                        </a>
+                    </li>
                 </ul>
             </div>
 
         </div>
     </footer>
+
+    <!-- JS file -->
+    <script src="js/main.js"></script>
 
 </body>
 </html>
