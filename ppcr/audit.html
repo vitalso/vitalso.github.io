@@ -489,7 +489,7 @@
 </div>
 
 <!-- Accounts overview -->
-<div class="bg-white p-30 border-bottom border-top mb-32">
+<div class="bg-white p-30 border-light-gray mb-32">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h2 class="font-semibold mt-0 fs-20 text-body mb-0">Account Overview</h2>
         <button class="btn btn-sm btn-success">Connect Accounts</button>
@@ -991,13 +991,786 @@
         </div>
     </div>
 
+    <!-- Hidden accounts -->
+    <div class="hidden-accounts">
+        <!-- Account item -->
+        <div class="border-light-gray border-bottom-0">
+            <!-- Account title -->
+            <div class="bg-light font-semibold text-body border-bottom p-30 py-20">
+                <p class="mb-0 fs-14">Account 3</p>
+            </div>
+
+            <!-- Account detais -->
+            <div class="account-details d-grid">
+                <div class="account-row fs-16 d-flex align-items-center justify-content-between">
+                    <div>
+                        <!-- Icon -->
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 5.44444V9" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 12.5556H9.00889" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="ml-4 vertical-align">Audit Errors</span>
+                        <button type="button" class="ml-2 p-0 bg-transparent border-0 info-btn position-relative" data-toggle="modal" data-target="#infoModal">
+                            <svg width="20" height="20" viewBox="0 0 20 20" class="item-info-icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10H11C11 9.44771 10.5523 9 10 9V10ZM10 14H9C9 14.5523 9.44771 15 10 15V14ZM11 15C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13V15ZM9 9C8.44772 9 8 9.44771 8 10C8 10.5523 8.44772 11 9 11V9ZM10 5C9.44771 5 9 5.44772 9 6C9 6.55228 9.44771 7 10 7V5ZM10.01 7C10.5623 7 11.01 6.55228 11.01 6C11.01 5.44772 10.5623 5 10.01 5V7ZM9 10V14H11V10H9ZM10 15H11V13H10V15ZM10 9H9V11H10V9ZM18 10C18 14.4183 14.4183 18 10 18V20C15.5228 20 20 15.5228 20 10H18ZM10 18C5.58172 18 2 14.4183 2 10H0C0 15.5228 4.47715 20 10 20V18ZM2 10C2 5.58172 5.58172 2 10 2V0C4.47715 0 0 4.47715 0 10H2ZM10 2C14.4183 2 18 5.58172 18 10H20C20 4.47715 15.5228 0 10 0V2ZM10 7H10.01V5H10V7Z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="font-semibold account-number">353</div>
+
+                    <div class="text-info"><i class="fa fa-sort-up mr-1 align-bottom" aria-hidden="true"></i> <span class="font-semibold fs-14">+15%</span></div>
+
+                    <button type="buttom" class="item-tag border-0 fs-12">More</button>
+                </div>
+
+                <div class="account-row fs-16 d-flex align-items-center justify-content-between">
+                    <div>
+                        <!-- Icon -->
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.6667 4.55556C12.6485 4.55556 13.4444 5.35149 13.4444 6.33333M17 6.33333C17 9.27885 14.6122 11.6667 11.6667 11.6667C11.1278 11.6667 10.6077 11.5868 10.1174 11.4382L8.11111 13.4444H6.33333V15.2222H4.55556V17H1.88889C1.39797 17 1 16.602 1 16.1111V13.8126C1 13.5769 1.09365 13.3508 1.26035 13.1841L6.56184 7.8826C6.41324 7.39231 6.33333 6.87215 6.33333 6.33333C6.33333 3.38781 8.72115 1 11.6667 1C14.6122 1 17 3.38781 17 6.33333Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="ml-4 vertical-align">Non-Converting Keywords</span>
+                        <button type="button" class="ml-2 p-0 bg-transparent border-0 info-btn position-relative" data-toggle="modal" data-target="#infoModal">
+                            <svg width="20" height="20" viewBox="0 0 20 20" class="item-info-icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10H11C11 9.44771 10.5523 9 10 9V10ZM10 14H9C9 14.5523 9.44771 15 10 15V14ZM11 15C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13V15ZM9 9C8.44772 9 8 9.44771 8 10C8 10.5523 8.44772 11 9 11V9ZM10 5C9.44771 5 9 5.44772 9 6C9 6.55228 9.44771 7 10 7V5ZM10.01 7C10.5623 7 11.01 6.55228 11.01 6C11.01 5.44772 10.5623 5 10.01 5V7ZM9 10V14H11V10H9ZM10 15H11V13H10V15ZM10 9H9V11H10V9ZM18 10C18 14.4183 14.4183 18 10 18V20C15.5228 20 20 15.5228 20 10H18ZM10 18C5.58172 18 2 14.4183 2 10H0C0 15.5228 4.47715 20 10 20V18ZM2 10C2 5.58172 5.58172 2 10 2V0C4.47715 0 0 4.47715 0 10H2ZM10 2C14.4183 2 18 5.58172 18 10H20C20 4.47715 15.5228 0 10 0V2ZM10 7H10.01V5H10V7Z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="font-semibold account-number">123</div>
+
+                    <div class="text-danger"><i class="fa fa-sort-desc mr-1" aria-hidden="true"></i> <span class="font-semibold fs-14">-2%</span></div>
+
+                    <button type="buttom" class="item-tag border-0 fs-12">More</button>
+                </div>
+
+                <div class="account-row fs-16 d-flex align-items-center justify-content-between">
+                    <div>
+                        <!-- Icon -->
+                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.2885 14.0796L11.5992 14.9647C11.5491 14.9908 11.4927 15.0024 11.4363 14.9983C11.38 14.9942 11.3259 14.9745 11.28 14.9414C11.2342 14.9083 11.1985 14.8632 11.1768 14.811C11.1552 14.7588 11.1485 14.7016 11.1575 14.6458L11.4802 12.7707L10.1137 11.4431C10.073 11.4036 10.0441 11.3535 10.0304 11.2985C10.0167 11.2434 10.0188 11.1856 10.0364 11.1317C10.054 11.0778 10.0864 11.0299 10.1299 10.9935C10.1734 10.9571 10.2263 10.9336 10.2825 10.9259L12.1709 10.6521L13.0155 8.94652C13.0407 8.89572 13.0797 8.85298 13.1279 8.8231C13.1761 8.79322 13.2317 8.77739 13.2885 8.77739C13.3452 8.77739 13.4008 8.79322 13.449 8.8231C13.4973 8.85298 13.5362 8.89572 13.5615 8.94652L14.4061 10.6521L16.2944 10.9259C16.3505 10.9339 16.4031 10.9575 16.4464 10.9939C16.4898 11.0304 16.522 11.0782 16.5396 11.132C16.5572 11.1858 16.5593 11.2435 16.5458 11.2984C16.5323 11.3534 16.5037 11.4035 16.4632 11.4431L15.0967 12.7707L15.4187 14.645C15.4284 14.7009 15.4222 14.7584 15.4008 14.8109C15.3794 14.8635 15.3438 14.909 15.2978 14.9423C15.2519 14.9756 15.1976 14.9953 15.141 14.9993C15.0844 15.0032 15.0278 14.9912 14.9777 14.9647L13.2885 14.0796V14.0796Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.26699 14.0796L2.57774 14.9647C2.52761 14.9908 2.47122 15.0024 2.41485 14.9983C2.35849 14.9942 2.30437 14.9745 2.25855 14.9414C2.21273 14.9083 2.177 14.8632 2.15536 14.811C2.13372 14.7588 2.12701 14.7016 2.13599 14.6458L2.45875 12.7707L1.09226 11.4431C1.05148 11.4036 1.0226 11.3535 1.00892 11.2985C0.995246 11.2434 0.997327 11.1856 1.01493 11.1317C1.03252 11.0778 1.06493 11.0299 1.10845 10.9935C1.15197 10.9571 1.20484 10.9336 1.26103 10.9259L3.14938 10.6521L3.994 8.94652C4.01926 8.89572 4.0582 8.85298 4.10642 8.8231C4.15465 8.79322 4.21026 8.77739 4.26699 8.77739C4.32372 8.77739 4.37933 8.79322 4.42756 8.8231C4.47578 8.85298 4.51472 8.89572 4.53998 8.94652L5.3846 10.6521L7.27295 10.9259C7.32898 10.9339 7.38164 10.9575 7.42496 10.9939C7.46829 11.0304 7.50056 11.0782 7.51812 11.132C7.53568 11.1858 7.53783 11.2435 7.52433 11.2984C7.51083 11.3534 7.48221 11.4035 7.44172 11.4431L6.07523 12.7707L6.39722 14.645C6.40688 14.7009 6.40068 14.7584 6.37931 14.8109C6.35795 14.8635 6.32228 14.909 6.27635 14.9423C6.23042 14.9756 6.17608 14.9953 6.1195 14.9993C6.06291 15.0032 6.00635 14.9912 5.95624 14.9647L4.26699 14.0796V14.0796Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.777 6.30221L7.08775 7.18727C7.03762 7.21336 6.98123 7.22501 6.92486 7.2209C6.8685 7.2168 6.81438 7.19711 6.76856 7.16403C6.72274 7.13096 6.68701 7.0858 6.66537 7.03359C6.64373 6.98139 6.63702 6.92419 6.646 6.8684L6.96876 4.99327L5.60227 3.66567C5.56149 3.62624 5.53261 3.57614 5.51893 3.52108C5.50526 3.46602 5.50734 3.40823 5.52494 3.3543C5.54253 3.30037 5.57494 3.25247 5.61846 3.21608C5.66198 3.17968 5.71485 3.15626 5.77104 3.14847L7.65939 2.87471L8.50401 1.16913C8.52927 1.11833 8.56821 1.07559 8.61643 1.04571C8.66466 1.01583 8.72027 1 8.777 1C8.83373 1 8.88934 1.01583 8.93757 1.04571C8.98579 1.07559 9.02473 1.11833 9.04999 1.16913L9.89461 2.87471L11.783 3.14847C11.839 3.15653 11.8916 3.18011 11.935 3.21654C11.9783 3.25297 12.0106 3.30079 12.0281 3.35461C12.0457 3.40842 12.0478 3.46607 12.0343 3.52105C12.0208 3.57602 11.9922 3.62611 11.9517 3.66567L10.5852 4.99327L10.9072 6.86762C10.9169 6.92351 10.9107 6.981 10.8893 7.03354C10.868 7.08609 10.8323 7.13159 10.7864 7.16488C10.7404 7.19817 10.6861 7.21792 10.6295 7.22187C10.5729 7.22583 10.5164 7.21384 10.4662 7.18727L8.777 6.30221V6.30221Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="ml-4 vertical-align">Quality Score</span>
+                        <button type="button" class="ml-2 p-0 bg-transparent border-0 info-btn position-relative" data-toggle="modal" data-target="#infoModal">
+                            <svg width="20" height="20" viewBox="0 0 20 20" class="item-info-icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10H11C11 9.44771 10.5523 9 10 9V10ZM10 14H9C9 14.5523 9.44771 15 10 15V14ZM11 15C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13V15ZM9 9C8.44772 9 8 9.44771 8 10C8 10.5523 8.44772 11 9 11V9ZM10 5C9.44771 5 9 5.44772 9 6C9 6.55228 9.44771 7 10 7V5ZM10.01 7C10.5623 7 11.01 6.55228 11.01 6C11.01 5.44772 10.5623 5 10.01 5V7ZM9 10V14H11V10H9ZM10 15H11V13H10V15ZM10 9H9V11H10V9ZM18 10C18 14.4183 14.4183 18 10 18V20C15.5228 20 20 15.5228 20 10H18ZM10 18C5.58172 18 2 14.4183 2 10H0C0 15.5228 4.47715 20 10 20V18ZM2 10C2 5.58172 5.58172 2 10 2V0C4.47715 0 0 4.47715 0 10H2ZM10 2C14.4183 2 18 5.58172 18 10H20C20 4.47715 15.5228 0 10 0V2ZM10 7H10.01V5H10V7Z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="font-semibold account-number">8/20</div>
+
+                    <div class="text-danger"><i class="fa fa-sort-desc mr-1" aria-hidden="true"></i> <span class="font-semibold fs-14">-5%</span></div>
+
+                    <button type="buttom" class="item-tag border-0 fs-12">More</button>
+                </div>
+
+                <div class="account-row fs-16 d-flex align-items-center justify-content-between">
+                    <div>
+                        <!-- Icon -->
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.4001 6.6H8.2001C7.31644 6.6 6.6001 7.31634 6.6001 8.2V15.4C6.6001 16.2837 7.31644 17 8.2001 17H15.4001C16.2838 17 17.0001 16.2837 17.0001 15.4V8.2C17.0001 7.31634 16.2838 6.6 15.4001 6.6Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3.4 11.4H2.6C2.17565 11.4 1.76869 11.2314 1.46863 10.9314C1.16857 10.6313 1 10.2243 1 9.8V2.6C1 2.17565 1.16857 1.76869 1.46863 1.46863C1.76869 1.16857 2.17565 1 2.6 1H9.8C10.2243 1 10.6313 1.16857 10.9314 1.46863C11.2314 1.76869 11.4 2.17565 11.4 2.6V3.4" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="ml-4 vertical-align">Duplicate Search Terms</span>
+                        <button type="button" class="ml-2 p-0 bg-transparent border-0 info-btn position-relative" data-toggle="modal" data-target="#infoModal">
+                            <svg width="20" height="20" viewBox="0 0 20 20" class="item-info-icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10H11C11 9.44771 10.5523 9 10 9V10ZM10 14H9C9 14.5523 9.44771 15 10 15V14ZM11 15C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13V15ZM9 9C8.44772 9 8 9.44771 8 10C8 10.5523 8.44772 11 9 11V9ZM10 5C9.44771 5 9 5.44772 9 6C9 6.55228 9.44771 7 10 7V5ZM10.01 7C10.5623 7 11.01 6.55228 11.01 6C11.01 5.44772 10.5623 5 10.01 5V7ZM9 10V14H11V10H9ZM10 15H11V13H10V15ZM10 9H9V11H10V9ZM18 10C18 14.4183 14.4183 18 10 18V20C15.5228 20 20 15.5228 20 10H18ZM10 18C5.58172 18 2 14.4183 2 10H0C0 15.5228 4.47715 20 10 20V18ZM2 10C2 5.58172 5.58172 2 10 2V0C4.47715 0 0 4.47715 0 10H2ZM10 2C14.4183 2 18 5.58172 18 10H20C20 4.47715 15.5228 0 10 0V2ZM10 7H10.01V5H10V7Z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="font-semibold account-number">8/20</div>
+
+                    <div class="text-danger"><i class="fa fa-sort-desc mr-1" aria-hidden="true"></i> <span class="font-semibold fs-14">-15%</span></div>
+
+                    <button type="buttom" class="item-tag border-0 fs-12">More</button>
+                </div>
+
+                <div class="account-row fs-16 d-flex align-items-center justify-content-between">
+                    <div>
+                        <!-- Icon -->
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.6596 7C10.441 6.57333 10.0303 6.31645 9.59296 6.33333H8.40718C7.75296 6.33333 7.22229 6.92889 7.22229 7.66667C7.22229 8.40178 7.75296 8.99911 8.40718 8.99911H9.59296C10.2472 8.99911 10.7778 9.59556 10.7778 10.3324C10.7778 11.0684 10.2472 11.6649 9.59296 11.6649H8.40718C7.96985 11.6818 7.55918 11.4249 7.34051 10.9982" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 4.55556V6.33333" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 11.6667V13.4444" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3.66687 3.66666L5.0002 5" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13 13L14.3333 14.3333" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="ml-4 vertical-align">ROAS</span>
+                        <button type="button" class="ml-2 p-0 bg-transparent border-0 info-btn position-relative" data-toggle="modal" data-target="#infoModal">
+                            <svg width="20" height="20" viewBox="0 0 20 20" class="item-info-icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10H11C11 9.44771 10.5523 9 10 9V10ZM10 14H9C9 14.5523 9.44771 15 10 15V14ZM11 15C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13V15ZM9 9C8.44772 9 8 9.44771 8 10C8 10.5523 8.44772 11 9 11V9ZM10 5C9.44771 5 9 5.44772 9 6C9 6.55228 9.44771 7 10 7V5ZM10.01 7C10.5623 7 11.01 6.55228 11.01 6C11.01 5.44772 10.5623 5 10.01 5V7ZM9 10V14H11V10H9ZM10 15H11V13H10V15ZM10 9H9V11H10V9ZM18 10C18 14.4183 14.4183 18 10 18V20C15.5228 20 20 15.5228 20 10H18ZM10 18C5.58172 18 2 14.4183 2 10H0C0 15.5228 4.47715 20 10 20V18ZM2 10C2 5.58172 5.58172 2 10 2V0C4.47715 0 0 4.47715 0 10H2ZM10 2C14.4183 2 18 5.58172 18 10H20C20 4.47715 15.5228 0 10 0V2ZM10 7H10.01V5H10V7Z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="font-semibold account-number">3.5x</div>
+
+                    <div class="text-info"><i class="fa fa-sort-up mr-1 align-bottom" aria-hidden="true"></i> <span class="font-semibold fs-14">+15%</span></div>
+
+                    <button type="buttom" class="item-tag border-0 fs-12">More</button>
+                </div>
+
+                <div class="account-row fs-16 d-flex align-items-center justify-content-between">
+                    <div>
+                        <!-- Icon -->
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.77778 6.33334C3.75962 6.33334 4.55556 5.5374 4.55556 4.55556C4.55556 3.57372 3.75962 2.77779 2.77778 2.77779C1.79594 2.77779 1 3.57372 1 4.55556C1 5.5374 1.79594 6.33334 2.77778 6.33334Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.5556 13.4444C13.5374 13.4444 14.3334 12.6485 14.3334 11.6667C14.3334 10.6848 13.5374 9.88889 12.5556 9.88889C11.5738 9.88889 10.7778 10.6848 10.7778 11.6667C10.7778 12.6485 11.5738 13.4444 12.5556 13.4444Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14.3334 6.33333C15.8062 6.33333 17.0001 5.13943 17.0001 3.66667C17.0001 2.19391 15.8062 1 14.3334 1C12.8607 1 11.6667 2.19391 11.6667 3.66667C11.6667 5.13943 12.8607 6.33333 14.3334 6.33333Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3.66667 17C5.13943 17 6.33333 15.8061 6.33333 14.3333C6.33333 12.8606 5.13943 11.6667 3.66667 11.6667C2.19391 11.6667 1 12.8606 1 14.3333C1 15.8061 2.19391 17 3.66667 17Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.33325 13.4444L10.7777 12.1111" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.11084 5.88889L11.0531 10.6622" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.55542 4.55555L11.6665 3.66666" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="ml-4 vertical-align">N-Gram Insights</span>
+                        <button type="button" class="ml-2 p-0 bg-transparent border-0 info-btn position-relative" data-toggle="modal" data-target="#infoModal">
+                            <svg width="20" height="20" viewBox="0 0 20 20" class="item-info-icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10H11C11 9.44771 10.5523 9 10 9V10ZM10 14H9C9 14.5523 9.44771 15 10 15V14ZM11 15C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13V15ZM9 9C8.44772 9 8 9.44771 8 10C8 10.5523 8.44772 11 9 11V9ZM10 5C9.44771 5 9 5.44772 9 6C9 6.55228 9.44771 7 10 7V5ZM10.01 7C10.5623 7 11.01 6.55228 11.01 6C11.01 5.44772 10.5623 5 10.01 5V7ZM9 10V14H11V10H9ZM10 15H11V13H10V15ZM10 9H9V11H10V9ZM18 10C18 14.4183 14.4183 18 10 18V20C15.5228 20 20 15.5228 20 10H18ZM10 18C5.58172 18 2 14.4183 2 10H0C0 15.5228 4.47715 20 10 20V18ZM2 10C2 5.58172 5.58172 2 10 2V0C4.47715 0 0 4.47715 0 10H2ZM10 2C14.4183 2 18 5.58172 18 10H20C20 4.47715 15.5228 0 10 0V2ZM10 7H10.01V5H10V7Z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="font-semibold account-number">3 Key Trends</div>
+
+                    <div class="text-info"> </div>
+
+                    <button type="buttom" class="item-tag border-0 fs-12">More</button>
+                </div>
+
+                <div class="account-row fs-16 d-flex align-items-center justify-content-between">
+                    <div>
+                        <!-- Icon -->
+                        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.75 1H2.75C2.28587 1 1.84075 1.18437 1.51256 1.51256C1.18437 1.84075 1 2.28587 1 2.75V16.75C1 17.2141 1.18437 17.6593 1.51256 17.9874C1.84075 18.3156 2.28587 18.5 2.75 18.5H13.25C13.7141 18.5 14.1592 18.3156 14.4874 17.9874C14.8156 17.6593 15 17.2141 15 16.75V6.25L9.75 1Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9.75 1V6.25H15" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.5 10.625H4.5" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.5 14.125H4.5" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.25 7.125H5.375H4.5" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="ml-4 vertical-align">Untapped Landing Pages</span>
+                        <button type="button" class="ml-2 p-0 bg-transparent border-0 info-btn position-relative" data-toggle="modal" data-target="#infoModal">
+                            <svg width="20" height="20" viewBox="0 0 20 20" class="item-info-icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10H11C11 9.44771 10.5523 9 10 9V10ZM10 14H9C9 14.5523 9.44771 15 10 15V14ZM11 15C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13V15ZM9 9C8.44772 9 8 9.44771 8 10C8 10.5523 8.44772 11 9 11V9ZM10 5C9.44771 5 9 5.44772 9 6C9 6.55228 9.44771 7 10 7V5ZM10.01 7C10.5623 7 11.01 6.55228 11.01 6C11.01 5.44772 10.5623 5 10.01 5V7ZM9 10V14H11V10H9ZM10 15H11V13H10V15ZM10 9H9V11H10V9ZM18 10C18 14.4183 14.4183 18 10 18V20C15.5228 20 20 15.5228 20 10H18ZM10 18C5.58172 18 2 14.4183 2 10H0C0 15.5228 4.47715 20 10 20V18ZM2 10C2 5.58172 5.58172 2 10 2V0C4.47715 0 0 4.47715 0 10H2ZM10 2C14.4183 2 18 5.58172 18 10H20C20 4.47715 15.5228 0 10 0V2ZM10 7H10.01V5H10V7Z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="font-semibold account-number">5</div>
+
+                    <div class="text-info"><i class="fa fa-sort-up mr-1 align-bottom" aria-hidden="true"></i> <span class="font-semibold fs-14">+10%</span></div>
+
+                    <button type="buttom" class="item-tag border-0 fs-12">More</button>
+                </div>
+
+                <div class="account-row fs-16 d-flex align-items-center justify-content-between">
+                    <div>
+                        <!-- Icon -->
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 1H3C1.89543 1 1 1.89543 1 3V15C1 16.1046 1.89543 17 3 17H15C16.1046 17 17 16.1046 17 15V3C17 1.89543 16.1046 1 15 1Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 9H9" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 12H17" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 6H17" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 1V17" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="ml-4 vertical-align">Structure Changes</span>
+                        <button type="button" class="ml-2 p-0 bg-transparent border-0 info-btn position-relative" data-toggle="modal" data-target="#infoModal">
+                            <svg width="20" height="20" viewBox="0 0 20 20" class="item-info-icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10H11C11 9.44771 10.5523 9 10 9V10ZM10 14H9C9 14.5523 9.44771 15 10 15V14ZM11 15C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13V15ZM9 9C8.44772 9 8 9.44771 8 10C8 10.5523 8.44772 11 9 11V9ZM10 5C9.44771 5 9 5.44772 9 6C9 6.55228 9.44771 7 10 7V5ZM10.01 7C10.5623 7 11.01 6.55228 11.01 6C11.01 5.44772 10.5623 5 10.01 5V7ZM9 10V14H11V10H9ZM10 15H11V13H10V15ZM10 9H9V11H10V9ZM18 10C18 14.4183 14.4183 18 10 18V20C15.5228 20 20 15.5228 20 10H18ZM10 18C5.58172 18 2 14.4183 2 10H0C0 15.5228 4.47715 20 10 20V18ZM2 10C2 5.58172 5.58172 2 10 2V0C4.47715 0 0 4.47715 0 10H2ZM10 2C14.4183 2 18 5.58172 18 10H20C20 4.47715 15.5228 0 10 0V2ZM10 7H10.01V5H10V7Z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="font-semibold account-number">2 Recent</div>
+
+                    <div class="text-info"> </div>
+
+                    <button type="buttom" class="item-tag border-0 fs-12">More</button>
+                </div>
+
+                <div class="account-row fs-16 d-flex align-items-center justify-content-between">
+                    <div>
+                        <!-- Icon -->
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.4001 6.59999L6.6001 11.4" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.6001 6.59999L11.4001 11.4" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="ml-4 vertical-align">Error Landing Pages</span>
+                        <button type="button" class="ml-2 p-0 bg-transparent border-0 info-btn position-relative" data-toggle="modal" data-target="#infoModal">
+                            <svg width="20" height="20" viewBox="0 0 20 20" class="item-info-icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10H11C11 9.44771 10.5523 9 10 9V10ZM10 14H9C9 14.5523 9.44771 15 10 15V14ZM11 15C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13V15ZM9 9C8.44772 9 8 9.44771 8 10C8 10.5523 8.44772 11 9 11V9ZM10 5C9.44771 5 9 5.44772 9 6C9 6.55228 9.44771 7 10 7V5ZM10.01 7C10.5623 7 11.01 6.55228 11.01 6C11.01 5.44772 10.5623 5 10.01 5V7ZM9 10V14H11V10H9ZM10 15H11V13H10V15ZM10 9H9V11H10V9ZM18 10C18 14.4183 14.4183 18 10 18V20C15.5228 20 20 15.5228 20 10H18ZM10 18C5.58172 18 2 14.4183 2 10H0C0 15.5228 4.47715 20 10 20V18ZM2 10C2 5.58172 5.58172 2 10 2V0C4.47715 0 0 4.47715 0 10H2ZM10 2C14.4183 2 18 5.58172 18 10H20C20 4.47715 15.5228 0 10 0V2ZM10 7H10.01V5H10V7Z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="font-semibold account-number">12</div>
+
+                    <div class="text-info"><i class="fa fa-sort-up mr-1 align-bottom" aria-hidden="true"></i> <span class="font-semibold fs-14">+8%</span></div>
+
+                    <button type="buttom" class="item-tag border-0 fs-12">More</button>
+                </div>
+
+                <div class="account-row fs-16 d-flex align-items-center justify-content-between">
+                    <div>
+                        <!-- Icon -->
+                        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.99995 8.36364C10.9941 8.36364 11.8 7.63101 11.8 6.72728C11.8 5.82354 10.9941 5.09091 9.99995 5.09091C9.00584 5.09091 8.19995 5.82354 8.19995 6.72728C8.19995 7.63101 9.00584 8.36364 9.99995 8.36364Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19 6.72727C16.5997 10.5457 13.6 12.4545 10 12.4545C6.4 12.4545 3.4003 10.5457 1 6.72727C3.4003 2.90882 6.4 1 10 1C13.6 1 16.5997 2.90882 19 6.72727Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="ml-4 vertical-align">PmaxBranded Impr</span>
+                        <button type="button" class="ml-2 p-0 bg-transparent border-0 info-btn position-relative" data-toggle="modal" data-target="#infoModal">
+                            <svg width="20" height="20" viewBox="0 0 20 20" class="item-info-icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10H11C11 9.44771 10.5523 9 10 9V10ZM10 14H9C9 14.5523 9.44771 15 10 15V14ZM11 15C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13V15ZM9 9C8.44772 9 8 9.44771 8 10C8 10.5523 8.44772 11 9 11V9ZM10 5C9.44771 5 9 5.44772 9 6C9 6.55228 9.44771 7 10 7V5ZM10.01 7C10.5623 7 11.01 6.55228 11.01 6C11.01 5.44772 10.5623 5 10.01 5V7ZM9 10V14H11V10H9ZM10 15H11V13H10V15ZM10 9H9V11H10V9ZM18 10C18 14.4183 14.4183 18 10 18V20C15.5228 20 20 15.5228 20 10H18ZM10 18C5.58172 18 2 14.4183 2 10H0C0 15.5228 4.47715 20 10 20V18ZM2 10C2 5.58172 5.58172 2 10 2V0C4.47715 0 0 4.47715 0 10H2ZM10 2C14.4183 2 18 5.58172 18 10H20C20 4.47715 15.5228 0 10 0V2ZM10 7H10.01V5H10V7Z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="font-semibold account-number">4500</div>
+
+                    <div class="text-info"><i class="fa fa-sort-up mr-1 align-bottom" aria-hidden="true"></i> <span class="font-semibold fs-14">+7%</span></div>
+
+                    <button type="buttom" class="item-tag border-0 fs-12">More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Account item -->
+        <div class="border-light-gray border-bottom-0">
+            <!-- Account title -->
+            <div class="bg-light font-semibold text-body border-bottom p-30 py-20">
+                <p class="mb-0 fs-14">Account 4</p>
+            </div>
+
+            <!-- Account detais -->
+            <div class="account-details d-grid">
+                <div class="account-row fs-16 d-flex align-items-center justify-content-between">
+                    <div>
+                        <!-- Icon -->
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 5.44444V9" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 12.5556H9.00889" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="ml-4 vertical-align">Audit Errors</span>
+                        <button type="button" class="ml-2 p-0 bg-transparent border-0 info-btn position-relative" data-toggle="modal" data-target="#infoModal">
+                            <svg width="20" height="20" viewBox="0 0 20 20" class="item-info-icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10H11C11 9.44771 10.5523 9 10 9V10ZM10 14H9C9 14.5523 9.44771 15 10 15V14ZM11 15C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13V15ZM9 9C8.44772 9 8 9.44771 8 10C8 10.5523 8.44772 11 9 11V9ZM10 5C9.44771 5 9 5.44772 9 6C9 6.55228 9.44771 7 10 7V5ZM10.01 7C10.5623 7 11.01 6.55228 11.01 6C11.01 5.44772 10.5623 5 10.01 5V7ZM9 10V14H11V10H9ZM10 15H11V13H10V15ZM10 9H9V11H10V9ZM18 10C18 14.4183 14.4183 18 10 18V20C15.5228 20 20 15.5228 20 10H18ZM10 18C5.58172 18 2 14.4183 2 10H0C0 15.5228 4.47715 20 10 20V18ZM2 10C2 5.58172 5.58172 2 10 2V0C4.47715 0 0 4.47715 0 10H2ZM10 2C14.4183 2 18 5.58172 18 10H20C20 4.47715 15.5228 0 10 0V2ZM10 7H10.01V5H10V7Z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="font-semibold account-number">353</div>
+
+                    <div class="text-info"><i class="fa fa-sort-up mr-1 align-bottom" aria-hidden="true"></i> <span class="font-semibold fs-14">+15%</span></div>
+
+                    <button type="buttom" class="item-tag border-0 fs-12">More</button>
+                </div>
+
+                <div class="account-row fs-16 d-flex align-items-center justify-content-between">
+                    <div>
+                        <!-- Icon -->
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.6667 4.55556C12.6485 4.55556 13.4444 5.35149 13.4444 6.33333M17 6.33333C17 9.27885 14.6122 11.6667 11.6667 11.6667C11.1278 11.6667 10.6077 11.5868 10.1174 11.4382L8.11111 13.4444H6.33333V15.2222H4.55556V17H1.88889C1.39797 17 1 16.602 1 16.1111V13.8126C1 13.5769 1.09365 13.3508 1.26035 13.1841L6.56184 7.8826C6.41324 7.39231 6.33333 6.87215 6.33333 6.33333C6.33333 3.38781 8.72115 1 11.6667 1C14.6122 1 17 3.38781 17 6.33333Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="ml-4 vertical-align">Non-Converting Keywords</span>
+                        <button type="button" class="ml-2 p-0 bg-transparent border-0 info-btn position-relative" data-toggle="modal" data-target="#infoModal">
+                            <svg width="20" height="20" viewBox="0 0 20 20" class="item-info-icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10H11C11 9.44771 10.5523 9 10 9V10ZM10 14H9C9 14.5523 9.44771 15 10 15V14ZM11 15C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13V15ZM9 9C8.44772 9 8 9.44771 8 10C8 10.5523 8.44772 11 9 11V9ZM10 5C9.44771 5 9 5.44772 9 6C9 6.55228 9.44771 7 10 7V5ZM10.01 7C10.5623 7 11.01 6.55228 11.01 6C11.01 5.44772 10.5623 5 10.01 5V7ZM9 10V14H11V10H9ZM10 15H11V13H10V15ZM10 9H9V11H10V9ZM18 10C18 14.4183 14.4183 18 10 18V20C15.5228 20 20 15.5228 20 10H18ZM10 18C5.58172 18 2 14.4183 2 10H0C0 15.5228 4.47715 20 10 20V18ZM2 10C2 5.58172 5.58172 2 10 2V0C4.47715 0 0 4.47715 0 10H2ZM10 2C14.4183 2 18 5.58172 18 10H20C20 4.47715 15.5228 0 10 0V2ZM10 7H10.01V5H10V7Z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="font-semibold account-number">123</div>
+
+                    <div class="text-danger"><i class="fa fa-sort-desc mr-1" aria-hidden="true"></i> <span class="font-semibold fs-14">-2%</span></div>
+
+                    <button type="buttom" class="item-tag border-0 fs-12">More</button>
+                </div>
+
+                <div class="account-row fs-16 d-flex align-items-center justify-content-between">
+                    <div>
+                        <!-- Icon -->
+                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.2885 14.0796L11.5992 14.9647C11.5491 14.9908 11.4927 15.0024 11.4363 14.9983C11.38 14.9942 11.3259 14.9745 11.28 14.9414C11.2342 14.9083 11.1985 14.8632 11.1768 14.811C11.1552 14.7588 11.1485 14.7016 11.1575 14.6458L11.4802 12.7707L10.1137 11.4431C10.073 11.4036 10.0441 11.3535 10.0304 11.2985C10.0167 11.2434 10.0188 11.1856 10.0364 11.1317C10.054 11.0778 10.0864 11.0299 10.1299 10.9935C10.1734 10.9571 10.2263 10.9336 10.2825 10.9259L12.1709 10.6521L13.0155 8.94652C13.0407 8.89572 13.0797 8.85298 13.1279 8.8231C13.1761 8.79322 13.2317 8.77739 13.2885 8.77739C13.3452 8.77739 13.4008 8.79322 13.449 8.8231C13.4973 8.85298 13.5362 8.89572 13.5615 8.94652L14.4061 10.6521L16.2944 10.9259C16.3505 10.9339 16.4031 10.9575 16.4464 10.9939C16.4898 11.0304 16.522 11.0782 16.5396 11.132C16.5572 11.1858 16.5593 11.2435 16.5458 11.2984C16.5323 11.3534 16.5037 11.4035 16.4632 11.4431L15.0967 12.7707L15.4187 14.645C15.4284 14.7009 15.4222 14.7584 15.4008 14.8109C15.3794 14.8635 15.3438 14.909 15.2978 14.9423C15.2519 14.9756 15.1976 14.9953 15.141 14.9993C15.0844 15.0032 15.0278 14.9912 14.9777 14.9647L13.2885 14.0796V14.0796Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.26699 14.0796L2.57774 14.9647C2.52761 14.9908 2.47122 15.0024 2.41485 14.9983C2.35849 14.9942 2.30437 14.9745 2.25855 14.9414C2.21273 14.9083 2.177 14.8632 2.15536 14.811C2.13372 14.7588 2.12701 14.7016 2.13599 14.6458L2.45875 12.7707L1.09226 11.4431C1.05148 11.4036 1.0226 11.3535 1.00892 11.2985C0.995246 11.2434 0.997327 11.1856 1.01493 11.1317C1.03252 11.0778 1.06493 11.0299 1.10845 10.9935C1.15197 10.9571 1.20484 10.9336 1.26103 10.9259L3.14938 10.6521L3.994 8.94652C4.01926 8.89572 4.0582 8.85298 4.10642 8.8231C4.15465 8.79322 4.21026 8.77739 4.26699 8.77739C4.32372 8.77739 4.37933 8.79322 4.42756 8.8231C4.47578 8.85298 4.51472 8.89572 4.53998 8.94652L5.3846 10.6521L7.27295 10.9259C7.32898 10.9339 7.38164 10.9575 7.42496 10.9939C7.46829 11.0304 7.50056 11.0782 7.51812 11.132C7.53568 11.1858 7.53783 11.2435 7.52433 11.2984C7.51083 11.3534 7.48221 11.4035 7.44172 11.4431L6.07523 12.7707L6.39722 14.645C6.40688 14.7009 6.40068 14.7584 6.37931 14.8109C6.35795 14.8635 6.32228 14.909 6.27635 14.9423C6.23042 14.9756 6.17608 14.9953 6.1195 14.9993C6.06291 15.0032 6.00635 14.9912 5.95624 14.9647L4.26699 14.0796V14.0796Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8.777 6.30221L7.08775 7.18727C7.03762 7.21336 6.98123 7.22501 6.92486 7.2209C6.8685 7.2168 6.81438 7.19711 6.76856 7.16403C6.72274 7.13096 6.68701 7.0858 6.66537 7.03359C6.64373 6.98139 6.63702 6.92419 6.646 6.8684L6.96876 4.99327L5.60227 3.66567C5.56149 3.62624 5.53261 3.57614 5.51893 3.52108C5.50526 3.46602 5.50734 3.40823 5.52494 3.3543C5.54253 3.30037 5.57494 3.25247 5.61846 3.21608C5.66198 3.17968 5.71485 3.15626 5.77104 3.14847L7.65939 2.87471L8.50401 1.16913C8.52927 1.11833 8.56821 1.07559 8.61643 1.04571C8.66466 1.01583 8.72027 1 8.777 1C8.83373 1 8.88934 1.01583 8.93757 1.04571C8.98579 1.07559 9.02473 1.11833 9.04999 1.16913L9.89461 2.87471L11.783 3.14847C11.839 3.15653 11.8916 3.18011 11.935 3.21654C11.9783 3.25297 12.0106 3.30079 12.0281 3.35461C12.0457 3.40842 12.0478 3.46607 12.0343 3.52105C12.0208 3.57602 11.9922 3.62611 11.9517 3.66567L10.5852 4.99327L10.9072 6.86762C10.9169 6.92351 10.9107 6.981 10.8893 7.03354C10.868 7.08609 10.8323 7.13159 10.7864 7.16488C10.7404 7.19817 10.6861 7.21792 10.6295 7.22187C10.5729 7.22583 10.5164 7.21384 10.4662 7.18727L8.777 6.30221V6.30221Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="ml-4 vertical-align">Quality Score</span>
+                        <button type="button" class="ml-2 p-0 bg-transparent border-0 info-btn position-relative" data-toggle="modal" data-target="#infoModal">
+                            <svg width="20" height="20" viewBox="0 0 20 20" class="item-info-icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10H11C11 9.44771 10.5523 9 10 9V10ZM10 14H9C9 14.5523 9.44771 15 10 15V14ZM11 15C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13V15ZM9 9C8.44772 9 8 9.44771 8 10C8 10.5523 8.44772 11 9 11V9ZM10 5C9.44771 5 9 5.44772 9 6C9 6.55228 9.44771 7 10 7V5ZM10.01 7C10.5623 7 11.01 6.55228 11.01 6C11.01 5.44772 10.5623 5 10.01 5V7ZM9 10V14H11V10H9ZM10 15H11V13H10V15ZM10 9H9V11H10V9ZM18 10C18 14.4183 14.4183 18 10 18V20C15.5228 20 20 15.5228 20 10H18ZM10 18C5.58172 18 2 14.4183 2 10H0C0 15.5228 4.47715 20 10 20V18ZM2 10C2 5.58172 5.58172 2 10 2V0C4.47715 0 0 4.47715 0 10H2ZM10 2C14.4183 2 18 5.58172 18 10H20C20 4.47715 15.5228 0 10 0V2ZM10 7H10.01V5H10V7Z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="font-semibold account-number">8/20</div>
+
+                    <div class="text-danger"><i class="fa fa-sort-desc mr-1" aria-hidden="true"></i> <span class="font-semibold fs-14">-5%</span></div>
+
+                    <button type="buttom" class="item-tag border-0 fs-12">More</button>
+                </div>
+
+                <div class="account-row fs-16 d-flex align-items-center justify-content-between">
+                    <div>
+                        <!-- Icon -->
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.4001 6.6H8.2001C7.31644 6.6 6.6001 7.31634 6.6001 8.2V15.4C6.6001 16.2837 7.31644 17 8.2001 17H15.4001C16.2838 17 17.0001 16.2837 17.0001 15.4V8.2C17.0001 7.31634 16.2838 6.6 15.4001 6.6Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3.4 11.4H2.6C2.17565 11.4 1.76869 11.2314 1.46863 10.9314C1.16857 10.6313 1 10.2243 1 9.8V2.6C1 2.17565 1.16857 1.76869 1.46863 1.46863C1.76869 1.16857 2.17565 1 2.6 1H9.8C10.2243 1 10.6313 1.16857 10.9314 1.46863C11.2314 1.76869 11.4 2.17565 11.4 2.6V3.4" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="ml-4 vertical-align">Duplicate Search Terms</span>
+                        <button type="button" class="ml-2 p-0 bg-transparent border-0 info-btn position-relative" data-toggle="modal" data-target="#infoModal">
+                            <svg width="20" height="20" viewBox="0 0 20 20" class="item-info-icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10H11C11 9.44771 10.5523 9 10 9V10ZM10 14H9C9 14.5523 9.44771 15 10 15V14ZM11 15C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13V15ZM9 9C8.44772 9 8 9.44771 8 10C8 10.5523 8.44772 11 9 11V9ZM10 5C9.44771 5 9 5.44772 9 6C9 6.55228 9.44771 7 10 7V5ZM10.01 7C10.5623 7 11.01 6.55228 11.01 6C11.01 5.44772 10.5623 5 10.01 5V7ZM9 10V14H11V10H9ZM10 15H11V13H10V15ZM10 9H9V11H10V9ZM18 10C18 14.4183 14.4183 18 10 18V20C15.5228 20 20 15.5228 20 10H18ZM10 18C5.58172 18 2 14.4183 2 10H0C0 15.5228 4.47715 20 10 20V18ZM2 10C2 5.58172 5.58172 2 10 2V0C4.47715 0 0 4.47715 0 10H2ZM10 2C14.4183 2 18 5.58172 18 10H20C20 4.47715 15.5228 0 10 0V2ZM10 7H10.01V5H10V7Z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="font-semibold account-number">8/20</div>
+
+                    <div class="text-danger"><i class="fa fa-sort-desc mr-1" aria-hidden="true"></i> <span class="font-semibold fs-14">-15%</span></div>
+
+                    <button type="buttom" class="item-tag border-0 fs-12">More</button>
+                </div>
+
+                <div class="account-row fs-16 d-flex align-items-center justify-content-between">
+                    <div>
+                        <!-- Icon -->
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.6596 7C10.441 6.57333 10.0303 6.31645 9.59296 6.33333H8.40718C7.75296 6.33333 7.22229 6.92889 7.22229 7.66667C7.22229 8.40178 7.75296 8.99911 8.40718 8.99911H9.59296C10.2472 8.99911 10.7778 9.59556 10.7778 10.3324C10.7778 11.0684 10.2472 11.6649 9.59296 11.6649H8.40718C7.96985 11.6818 7.55918 11.4249 7.34051 10.9982" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 4.55556V6.33333" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 11.6667V13.4444" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3.66687 3.66666L5.0002 5" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13 13L14.3333 14.3333" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="ml-4 vertical-align">ROAS</span>
+                        <button type="button" class="ml-2 p-0 bg-transparent border-0 info-btn position-relative" data-toggle="modal" data-target="#infoModal">
+                            <svg width="20" height="20" viewBox="0 0 20 20" class="item-info-icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10H11C11 9.44771 10.5523 9 10 9V10ZM10 14H9C9 14.5523 9.44771 15 10 15V14ZM11 15C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13V15ZM9 9C8.44772 9 8 9.44771 8 10C8 10.5523 8.44772 11 9 11V9ZM10 5C9.44771 5 9 5.44772 9 6C9 6.55228 9.44771 7 10 7V5ZM10.01 7C10.5623 7 11.01 6.55228 11.01 6C11.01 5.44772 10.5623 5 10.01 5V7ZM9 10V14H11V10H9ZM10 15H11V13H10V15ZM10 9H9V11H10V9ZM18 10C18 14.4183 14.4183 18 10 18V20C15.5228 20 20 15.5228 20 10H18ZM10 18C5.58172 18 2 14.4183 2 10H0C0 15.5228 4.47715 20 10 20V18ZM2 10C2 5.58172 5.58172 2 10 2V0C4.47715 0 0 4.47715 0 10H2ZM10 2C14.4183 2 18 5.58172 18 10H20C20 4.47715 15.5228 0 10 0V2ZM10 7H10.01V5H10V7Z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="font-semibold account-number">3.5x</div>
+
+                    <div class="text-info"><i class="fa fa-sort-up mr-1 align-bottom" aria-hidden="true"></i> <span class="font-semibold fs-14">+15%</span></div>
+
+                    <button type="buttom" class="item-tag border-0 fs-12">More</button>
+                </div>
+
+                <div class="account-row fs-16 d-flex align-items-center justify-content-between">
+                    <div>
+                        <!-- Icon -->
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.77778 6.33334C3.75962 6.33334 4.55556 5.5374 4.55556 4.55556C4.55556 3.57372 3.75962 2.77779 2.77778 2.77779C1.79594 2.77779 1 3.57372 1 4.55556C1 5.5374 1.79594 6.33334 2.77778 6.33334Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.5556 13.4444C13.5374 13.4444 14.3334 12.6485 14.3334 11.6667C14.3334 10.6848 13.5374 9.88889 12.5556 9.88889C11.5738 9.88889 10.7778 10.6848 10.7778 11.6667C10.7778 12.6485 11.5738 13.4444 12.5556 13.4444Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14.3334 6.33333C15.8062 6.33333 17.0001 5.13943 17.0001 3.66667C17.0001 2.19391 15.8062 1 14.3334 1C12.8607 1 11.6667 2.19391 11.6667 3.66667C11.6667 5.13943 12.8607 6.33333 14.3334 6.33333Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3.66667 17C5.13943 17 6.33333 15.8061 6.33333 14.3333C6.33333 12.8606 5.13943 11.6667 3.66667 11.6667C2.19391 11.6667 1 12.8606 1 14.3333C1 15.8061 2.19391 17 3.66667 17Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.33325 13.4444L10.7777 12.1111" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.11084 5.88889L11.0531 10.6622" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.55542 4.55555L11.6665 3.66666" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="ml-4 vertical-align">N-Gram Insights</span>
+                        <button type="button" class="ml-2 p-0 bg-transparent border-0 info-btn position-relative" data-toggle="modal" data-target="#infoModal">
+                            <svg width="20" height="20" viewBox="0 0 20 20" class="item-info-icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10H11C11 9.44771 10.5523 9 10 9V10ZM10 14H9C9 14.5523 9.44771 15 10 15V14ZM11 15C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13V15ZM9 9C8.44772 9 8 9.44771 8 10C8 10.5523 8.44772 11 9 11V9ZM10 5C9.44771 5 9 5.44772 9 6C9 6.55228 9.44771 7 10 7V5ZM10.01 7C10.5623 7 11.01 6.55228 11.01 6C11.01 5.44772 10.5623 5 10.01 5V7ZM9 10V14H11V10H9ZM10 15H11V13H10V15ZM10 9H9V11H10V9ZM18 10C18 14.4183 14.4183 18 10 18V20C15.5228 20 20 15.5228 20 10H18ZM10 18C5.58172 18 2 14.4183 2 10H0C0 15.5228 4.47715 20 10 20V18ZM2 10C2 5.58172 5.58172 2 10 2V0C4.47715 0 0 4.47715 0 10H2ZM10 2C14.4183 2 18 5.58172 18 10H20C20 4.47715 15.5228 0 10 0V2ZM10 7H10.01V5H10V7Z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="font-semibold account-number">3 Key Trends</div>
+
+                    <div class="text-info"> </div>
+
+                    <button type="buttom" class="item-tag border-0 fs-12">More</button>
+                </div>
+
+                <div class="account-row fs-16 d-flex align-items-center justify-content-between">
+                    <div>
+                        <!-- Icon -->
+                        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.75 1H2.75C2.28587 1 1.84075 1.18437 1.51256 1.51256C1.18437 1.84075 1 2.28587 1 2.75V16.75C1 17.2141 1.18437 17.6593 1.51256 17.9874C1.84075 18.3156 2.28587 18.5 2.75 18.5H13.25C13.7141 18.5 14.1592 18.3156 14.4874 17.9874C14.8156 17.6593 15 17.2141 15 16.75V6.25L9.75 1Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9.75 1V6.25H15" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.5 10.625H4.5" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.5 14.125H4.5" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.25 7.125H5.375H4.5" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="ml-4 vertical-align">Untapped Landing Pages</span>
+                        <button type="button" class="ml-2 p-0 bg-transparent border-0 info-btn position-relative" data-toggle="modal" data-target="#infoModal">
+                            <svg width="20" height="20" viewBox="0 0 20 20" class="item-info-icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10H11C11 9.44771 10.5523 9 10 9V10ZM10 14H9C9 14.5523 9.44771 15 10 15V14ZM11 15C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13V15ZM9 9C8.44772 9 8 9.44771 8 10C8 10.5523 8.44772 11 9 11V9ZM10 5C9.44771 5 9 5.44772 9 6C9 6.55228 9.44771 7 10 7V5ZM10.01 7C10.5623 7 11.01 6.55228 11.01 6C11.01 5.44772 10.5623 5 10.01 5V7ZM9 10V14H11V10H9ZM10 15H11V13H10V15ZM10 9H9V11H10V9ZM18 10C18 14.4183 14.4183 18 10 18V20C15.5228 20 20 15.5228 20 10H18ZM10 18C5.58172 18 2 14.4183 2 10H0C0 15.5228 4.47715 20 10 20V18ZM2 10C2 5.58172 5.58172 2 10 2V0C4.47715 0 0 4.47715 0 10H2ZM10 2C14.4183 2 18 5.58172 18 10H20C20 4.47715 15.5228 0 10 0V2ZM10 7H10.01V5H10V7Z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="font-semibold account-number">5</div>
+
+                    <div class="text-info"><i class="fa fa-sort-up mr-1 align-bottom" aria-hidden="true"></i> <span class="font-semibold fs-14">+10%</span></div>
+
+                    <button type="buttom" class="item-tag border-0 fs-12">More</button>
+                </div>
+
+                <div class="account-row fs-16 d-flex align-items-center justify-content-between">
+                    <div>
+                        <!-- Icon -->
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 1H3C1.89543 1 1 1.89543 1 3V15C1 16.1046 1.89543 17 3 17H15C16.1046 17 17 16.1046 17 15V3C17 1.89543 16.1046 1 15 1Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 9H9" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 12H17" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 6H17" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 1V17" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="ml-4 vertical-align">Structure Changes</span>
+                        <button type="button" class="ml-2 p-0 bg-transparent border-0 info-btn position-relative" data-toggle="modal" data-target="#infoModal">
+                            <svg width="20" height="20" viewBox="0 0 20 20" class="item-info-icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10H11C11 9.44771 10.5523 9 10 9V10ZM10 14H9C9 14.5523 9.44771 15 10 15V14ZM11 15C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13V15ZM9 9C8.44772 9 8 9.44771 8 10C8 10.5523 8.44772 11 9 11V9ZM10 5C9.44771 5 9 5.44772 9 6C9 6.55228 9.44771 7 10 7V5ZM10.01 7C10.5623 7 11.01 6.55228 11.01 6C11.01 5.44772 10.5623 5 10.01 5V7ZM9 10V14H11V10H9ZM10 15H11V13H10V15ZM10 9H9V11H10V9ZM18 10C18 14.4183 14.4183 18 10 18V20C15.5228 20 20 15.5228 20 10H18ZM10 18C5.58172 18 2 14.4183 2 10H0C0 15.5228 4.47715 20 10 20V18ZM2 10C2 5.58172 5.58172 2 10 2V0C4.47715 0 0 4.47715 0 10H2ZM10 2C14.4183 2 18 5.58172 18 10H20C20 4.47715 15.5228 0 10 0V2ZM10 7H10.01V5H10V7Z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="font-semibold account-number">2 Recent</div>
+
+                    <div class="text-info"> </div>
+
+                    <button type="buttom" class="item-tag border-0 fs-12">More</button>
+                </div>
+
+                <div class="account-row fs-16 d-flex align-items-center justify-content-between">
+                    <div>
+                        <!-- Icon -->
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.4001 6.59999L6.6001 11.4" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6.6001 6.59999L11.4001 11.4" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="ml-4 vertical-align">Error Landing Pages</span>
+                        <button type="button" class="ml-2 p-0 bg-transparent border-0 info-btn position-relative" data-toggle="modal" data-target="#infoModal">
+                            <svg width="20" height="20" viewBox="0 0 20 20" class="item-info-icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10H11C11 9.44771 10.5523 9 10 9V10ZM10 14H9C9 14.5523 9.44771 15 10 15V14ZM11 15C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13V15ZM9 9C8.44772 9 8 9.44771 8 10C8 10.5523 8.44772 11 9 11V9ZM10 5C9.44771 5 9 5.44772 9 6C9 6.55228 9.44771 7 10 7V5ZM10.01 7C10.5623 7 11.01 6.55228 11.01 6C11.01 5.44772 10.5623 5 10.01 5V7ZM9 10V14H11V10H9ZM10 15H11V13H10V15ZM10 9H9V11H10V9ZM18 10C18 14.4183 14.4183 18 10 18V20C15.5228 20 20 15.5228 20 10H18ZM10 18C5.58172 18 2 14.4183 2 10H0C0 15.5228 4.47715 20 10 20V18ZM2 10C2 5.58172 5.58172 2 10 2V0C4.47715 0 0 4.47715 0 10H2ZM10 2C14.4183 2 18 5.58172 18 10H20C20 4.47715 15.5228 0 10 0V2ZM10 7H10.01V5H10V7Z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="font-semibold account-number">12</div>
+
+                    <div class="text-info"><i class="fa fa-sort-up mr-1 align-bottom" aria-hidden="true"></i> <span class="font-semibold fs-14">+8%</span></div>
+
+                    <button type="buttom" class="item-tag border-0 fs-12">More</button>
+                </div>
+
+                <div class="account-row fs-16 d-flex align-items-center justify-content-between">
+                    <div>
+                        <!-- Icon -->
+                        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.99995 8.36364C10.9941 8.36364 11.8 7.63101 11.8 6.72728C11.8 5.82354 10.9941 5.09091 9.99995 5.09091C9.00584 5.09091 8.19995 5.82354 8.19995 6.72728C8.19995 7.63101 9.00584 8.36364 9.99995 8.36364Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19 6.72727C16.5997 10.5457 13.6 12.4545 10 12.4545C6.4 12.4545 3.4003 10.5457 1 6.72727C3.4003 2.90882 6.4 1 10 1C13.6 1 16.5997 2.90882 19 6.72727Z" stroke="#212529" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span class="ml-4 vertical-align">PmaxBranded Impr</span>
+                        <button type="button" class="ml-2 p-0 bg-transparent border-0 info-btn position-relative" data-toggle="modal" data-target="#infoModal">
+                            <svg width="20" height="20" viewBox="0 0 20 20" class="item-info-icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 10H11C11 9.44771 10.5523 9 10 9V10ZM10 14H9C9 14.5523 9.44771 15 10 15V14ZM11 15C11.5523 15 12 14.5523 12 14C12 13.4477 11.5523 13 11 13V15ZM9 9C8.44772 9 8 9.44771 8 10C8 10.5523 8.44772 11 9 11V9ZM10 5C9.44771 5 9 5.44772 9 6C9 6.55228 9.44771 7 10 7V5ZM10.01 7C10.5623 7 11.01 6.55228 11.01 6C11.01 5.44772 10.5623 5 10.01 5V7ZM9 10V14H11V10H9ZM10 15H11V13H10V15ZM10 9H9V11H10V9ZM18 10C18 14.4183 14.4183 18 10 18V20C15.5228 20 20 15.5228 20 10H18ZM10 18C5.58172 18 2 14.4183 2 10H0C0 15.5228 4.47715 20 10 20V18ZM2 10C2 5.58172 5.58172 2 10 2V0C4.47715 0 0 4.47715 0 10H2ZM10 2C14.4183 2 18 5.58172 18 10H20C20 4.47715 15.5228 0 10 0V2ZM10 7H10.01V5H10V7Z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="font-semibold account-number">4500</div>
+
+                    <div class="text-info"><i class="fa fa-sort-up mr-1 align-bottom" aria-hidden="true"></i> <span class="font-semibold fs-14">+7%</span></div>
+
+                    <button type="buttom" class="item-tag border-0 fs-12">More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="border-light-gray bg-light font-semibold text-body border-bottom p-30 py-20">
-        <button type="button" class="fs-14 border-0 bg-transparent text-underline font-semibold p-0 more-accounts">More accounts (4)</button>
+        <button type="button" class="fs-14 border-0 bg-transparent text-underline font-semibold p-0 more-accounts"><span>More</span> accounts (<b class="count-hidden-accounts"></b>)</button>
+    </div>
+</div>
+
+<!-- Account graphics -->
+<div class="bg-white p-30 px-2 border-light-gray mb-32">
+    <!-- Buttons -->
+    <div class="d-flex flex-wrap mb-3 gap-10 justify-content-center align-items-center btn-graph-group">
+        <!-- Active button -->
+        <button type="button" class="btn bg-info rounded-0 fs-18 font-semibold py-14 p-30">Clicks</button>
+
+        <!-- Default buttons -->
+        <button type="button" class="btn btn-light bg-transparent rounded-0 fs-18 font-semibold py-14 p-30 border-light-gray">Cost</button>
+        <button type="button" class="btn btn-light bg-transparent rounded-0 fs-18 font-semibold py-14 p-30 border-light-gray">Impressions</button>
+        <button type="button" class="btn btn-light bg-transparent rounded-0 fs-18 font-semibold py-14 p-30 border-light-gray">Conversions</button>
+        <button type="button" class="btn btn-light bg-transparent rounded-0 fs-18 font-semibold py-14 p-30 border-light-gray">Conversion Value</button>
+    </div>
+
+    <div class="d-flex px-lg-5">
+        <p class="mb-0 fs-14 font-semibold text-body">Impression Shares per Account(s) (Abs)</p>
+
+        <div class="ml-auto d-flex gap-20">
+            <select class="form-select" name="chart-type">
+                <option selected disabled>Chart type</option>
+                <option>Line</option>
+                <option>Pie</option>
+                <option>Scatter</option>
+            </select>
+
+            <select class="form-select" name="monthly">
+                <option selected disabled>Monthly</option>
+                <option>Days</option>
+                <option>Week</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="d-flex gap-20 align-items-center mx-lg-5 bg-light-secondary fs-12 rounded-sm mt-3 py-7">
+        <div class="d-flex gap-20 align-items-center px-3">
+            <span>Primary Axis</span>
+            <select class="form-select sm" name="chart-type">
+                <option selected disabled>Campaign Type</option>
+                <option>Type 1</option>
+                <option>2 Type</option>
+                <option>Other</option>
+            </select>
+        </div>
+
+        <div class="d-flex gap-20 align-items-center px-3 ml-4">
+            <span>Secondary Axis</span>
+            <select class="form-select sm" name="chart-type-2">
+                <option selected disabled>Campaign Type</option>
+                <option>Type 1</option>
+                <option>2 Type</option>
+                <option>Other</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="d-flex flex-column flex-lg-row gap-40 mt-3 mb-5">
+        <!-- Chart 1 -->
+        <div class="flex-fill overflow-hidden">
+            <img src="https://placehold.co/780x380?text=Chart1" alt="image">
+
+            <!-- Chart labels -->
+            <div class="d-grid grid-cols-2 mt-4 px-xl-5 gap-20">
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-warning label-figure"></div>
+                    <span class="text-black">Search Impressions</span>
+                </div>
+
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-danger label-figure"></div>
+                    <span class="text-black">Search Impressions Lost due Budget (abc)</span>
+                </div>
+
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-success label-figure"></div>
+                    <span class="text-black">Impressions</span>
+                </div>
+
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-info label-figure"></div>
+                    <span class="text-black">Search Impressions Lost due Rank (abc)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chart 2 -->
+        <div class="flex-fill overflow-hidden">
+            <img src="https://placehold.co/780x380?text=Chart2" alt="image">
+
+            <!-- Chart labels -->
+            <div class="d-grid grid-cols-2 mt-4 px-xl-5 gap-20">
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-warning label-figure"></div>
+                    <span class="text-black">Search Impressions</span>
+                </div>
+
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-danger label-figure"></div>
+                    <span class="text-black">Search Impressions Lost due Budget (abc)</span>
+                </div>
+
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-success label-figure"></div>
+                    <span class="text-black">Impressions</span>
+                </div>
+
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-info label-figure"></div>
+                    <span class="text-black">Search Impressions Lost due Rank (abc)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie charts -->
+    <div class="d-grid grid-cols-4 gap-20">
+        <!-- Chart card -->
+        <div class="rounded-sm border-light-gray p-30 text-center">
+            <p class="font-semibold text-body fs-14">Impression Shares per Account(s) (Abs)</p>
+
+            <!-- Pie chart -->
+            <div class="overflow-hidden">
+                <img src="https://placehold.co/300x300?text=PieChart" alt="image">
+            </div>
+
+            <!-- Chart labels -->
+            <div class="d-flex flex-column mt-4 gap-20 text-left">
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-warning label-figure"></div>
+                    <span class="text-black">Search Impressions</span>
+                </div>
+
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-danger label-figure"></div>
+                    <span class="text-black">Search Impressions Lost due Budget (abc)</span>
+                </div>
+
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-success label-figure"></div>
+                    <span class="text-black">Impressions</span>
+                </div>
+
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-info label-figure"></div>
+                    <span class="text-black">Search Impressions Lost due Rank (abc)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chart card -->
+        <div class="rounded-sm border-light-gray p-30 text-center">
+            <p class="font-semibold text-body fs-14">Impression Shares per Account(s) (Abs)</p>
+
+            <!-- Pie chart -->
+            <div class="overflow-hidden">
+                <img src="https://placehold.co/300x300?text=PieChart" alt="image">
+            </div>
+
+            <!-- Chart labels -->
+            <div class="d-flex flex-column mt-4 gap-20 text-left">
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-warning label-figure"></div>
+                    <span class="text-black">Search Impressions</span>
+                </div>
+
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-danger label-figure"></div>
+                    <span class="text-black">Search Impressions Lost due Budget (abc)</span>
+                </div>
+
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-success label-figure"></div>
+                    <span class="text-black">Impressions</span>
+                </div>
+
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-info label-figure"></div>
+                    <span class="text-black">Search Impressions Lost due Rank (abc)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chart card -->
+        <div class="rounded-sm border-light-gray p-30 text-center">
+            <p class="font-semibold text-body fs-14">Impression Shares per Account(s) (Abs)</p>
+
+            <!-- Pie chart -->
+            <div class="overflow-hidden">
+                <img src="https://placehold.co/300x300?text=PieChart" alt="image">
+            </div>
+
+            <!-- Chart labels -->
+            <div class="d-flex flex-column mt-4 gap-20 text-left">
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-warning label-figure"></div>
+                    <span class="text-black">Search Impressions</span>
+                </div>
+
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-danger label-figure"></div>
+                    <span class="text-black">Search Impressions Lost due Budget (abc)</span>
+                </div>
+
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-success label-figure"></div>
+                    <span class="text-black">Impressions</span>
+                </div>
+
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-info label-figure"></div>
+                    <span class="text-black">Search Impressions Lost due Rank (abc)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chart card -->
+        <div class="rounded-sm border-light-gray p-30 text-center">
+            <p class="font-semibold text-body fs-14">Impression Shares per Account(s) (Abs)</p>
+
+            <!-- Pie chart -->
+            <div class="overflow-hidden">
+                <img src="https://placehold.co/300x300?text=PieChart" alt="image">
+            </div>
+
+            <!-- Chart labels -->
+            <div class="d-flex flex-column mt-4 gap-20 text-left">
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-warning label-figure"></div>
+                    <span class="text-black">Search Impressions</span>
+                </div>
+
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-danger label-figure"></div>
+                    <span class="text-black">Search Impressions Lost due Budget (abc)</span>
+                </div>
+
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-success label-figure"></div>
+                    <span class="text-black">Impressions</span>
+                </div>
+
+                <!-- Label -->
+                <div class="d-flex gap-20 align-items-center">
+                    <div class="rounded-sm bg-info label-figure"></div>
+                    <span class="text-black">Search Impressions Lost due Rank (abc)</span>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 <!-- Cards section -->
-<div class="bg-white p-40 border-bottom border-top mb-32">
+<div class="bg-white p-40 border-light-gray mb-32">
     <div class="d-grid gap-20 grid-cols-4">
         
         <!-- Card item -->
@@ -4005,5 +4778,8 @@
         }
 
     </script>
+
+    <!-- Custom JS -->
+    <script src="js/custom.js"></script>
 </body>
 </html>
