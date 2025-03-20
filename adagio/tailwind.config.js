@@ -23,9 +23,11 @@ module.exports = {
       },
 
       boxShadow: {
+        'lg-primary': '0 0 0 1px rgba(14, 63, 126, 0.1) , 0 24px 24px -8px rgba(42, 51, 70, 0.03)',
         'primary': '0 0 0 1px rgba(7, 26, 52, 0.1)',
         'accent': '0 0 0 2px #2264F2',
         'slider': '0 12px 12px 6px rgba(42, 51, 70, 0.04)',
+        'outline': '0 0 0 1px rgba(14, 63, 126, 0.06) , 0 0 16px 0px rgba(42, 51, 70, 0.04)',
       }
     },
 
