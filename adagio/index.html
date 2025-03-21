@@ -70,12 +70,12 @@
                             Get started for free
                         </a>
                         
-                        <a href="https://www.youtube.com/@adagio-dot-org" target="_blank" class="py-4 px-8 font-medium text-base bg-[#3066B0] bg-opacity-10 text-greyscale-800 rounded-[40px] flex items-center gap-2">
+                        <button type="button" id="watch-demo" class="py-4 px-8 font-medium text-base bg-[#3066B0] bg-opacity-10 text-greyscale-800 rounded-[40px] flex items-center gap-2">
                             <svg width="24" height="24" viewBox="0 0 24 24" class="fill-greyscale-800" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM10.7817 8.78296C10.4498 8.55666 10 8.79436 10 9.19607V14.8039C10 15.2056 10.4498 15.4433 10.7817 15.217L14.8941 12.4131C15.1852 12.2146 15.1852 11.7854 14.8941 11.5869L10.7817 8.78296Z" />
                             </svg>
                             Watch demo
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -633,6 +633,14 @@
 
         </div>
     </footer>
+
+    <!-- Lightbox for Watch Demo -->
+    <div id="watch-demo-popup" class="fixed top-0 left-0 w-full h-full bg-black/70 z-20 px-3 flex flex-col justify-center items-center opacity-0 invisible transition-all">
+        <div class="bg-white rounded-xl p-3 w-full max-w-2xl relative">
+            <!-- Video -->
+            <iframe width="100%" height="415" src="https://www.youtube.com/embed/cGINBVsGBIA?si=6KEQ5EOqO9pOnkHz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
 
     <!-- JS file -->
     <script src="js/main.js"></script>

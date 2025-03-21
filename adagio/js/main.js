@@ -2,11 +2,31 @@
 const button = document.getElementById('menu');
 const target = document.getElementById('header');
 
-// Додаємо обробник події на клік
 button.addEventListener('click', function() {
-  // Додаємо або видаляємо клас 'active' у елемента
   target.classList.toggle('mobile-header');
 });
+
+// Watch Demo popup
+const watchDemoButton = document.getElementById('watch-demo');
+const watchDemoPopup = document.getElementById('watch-demo-popup');
+const iframe = document.querySelector('#watch-demo-popup iframe');
+
+watchDemoButton.addEventListener('click', function() {
+  watchDemoPopup.classList.add('!visible' , '!opacity-100');
+});
+
+watchDemoPopup.addEventListener('click', function(event) {
+  if (event.target === watchDemoPopup) {
+    stopVideo();
+    watchDemoPopup.classList.remove('!visible', '!opacity-100');
+  }
+});
+
+function stopVideo() {
+  const videoUrl = iframe.src;
+  iframe.src = '';
+  iframe.src = videoUrl;
+}
 
 // Slider
 const slideLabel = document.querySelectorAll('#sliderLabel input[type="radio"]');
