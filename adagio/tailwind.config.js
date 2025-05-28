@@ -28,6 +28,7 @@ module.exports = {
         'accent': '0 0 0 2px #2264F2',
         'slider': '0 12px 12px 6px rgba(42, 51, 70, 0.04)',
         'outline': '0 0 0 1px rgba(14, 63, 126, 0.06) , 0 0 16px 0px rgba(42, 51, 70, 0.04)',
+        'mockup': '0 0 0 0.75px rgba(14, 63, 126, 0.1) , 0 0.75px 0.75px -0.38px rgba(42, 51, 68, 0.04) , 0 0.25px 0.25px -0.38px rgba(42, 51, 70, 0.04) , 0 33px 33px -12px rgba(42, 51, 70, 0.06)'
       }
     },
 
@@ -62,6 +63,7 @@ module.exports = {
     backgroundImage: {
       'hero-section': "url('../assets/bg-line.svg') , linear-gradient(180deg, rgba(210, 238, 253, 1), rgba(243, 242, 248, 1), rgba(251, 251, 252, 1)) ",
       'hero-section-mobile': "url('../assets/hero-mobile.webp')",
+      'hero-section-without-image': "linear-gradient(180deg, rgba(210, 238, 253, 1), rgba(243, 242, 248, 1), rgba(251, 251, 252, 1)) ",
       'fade-gradient': 'linear-gradient(180deg, #FAFAFA 20%, transparent 100%)',
       'fade-gradient-medium': 'linear-gradient(180deg, transparent 40%, #FAFAFA 100%)',
       'fade-gradient-reverse': 'linear-gradient(180deg, transparent 10%,  #FFFFFF 100%)',
