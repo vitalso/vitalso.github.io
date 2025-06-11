@@ -19,7 +19,7 @@
 
             <!-- Logo -->
             <a href="index.html">
-                <img src="assets/Adagio-logo-blue.svg" alt="image">
+                <img src="assets/Adagio.svg" alt="image">
             </a>
 
         </div>
@@ -27,45 +27,51 @@
 
     <main>
 
-        <section class="h-screen min-h-[610px] relative">
+        <section class="bg-lg-hero-section bg-center bg-no-repeat bg-cover h-screen min-h-[710px] relative">
             <div class="container h-full flex flex-col justify-center">
 
-                <div class="md:max-w-[calc(50%-16px)] w-full flex justify-center">
+                <div class="w-full flex justify-center">
 
                     <!-- Form -->
-                    <div class="text-[13px] w-full sm:w-[400px]">
-                        <h3 class="text-2xl text-black font-medium mb-1.5">Create a Adagio account</h3>
-                        <p class="text-greySecondary leading-5">Already have an account? <a href="login.html" class="text-sm text-accent-blue font-medium">Log in</a></p>
+                    <div class="text-[13px] w-full sm:w-[424px] bg-white shadow-long p-6 rounded-xl">
+                        <h3 class="text-2xl text-black font-medium mb-1.5">Create an account</h3>
+                        <p class="text-greyscale-600 leading-5">Already have an account? <a href="login.html" class="text-sm text-accent-blue font-medium">Log in</a></p>
 
-                        <form action="#" class="mt-8 text-greySecondary flex flex-col gap-3">
+                        <form action="#" class="mt-8 text-greySecondary flex flex-col gap-3 text-sm">
 
-                            <div class="flex gap-2 max-[576px]:flex-col">
-                                <div class="flex flex-col gap-1.5 flex-1">
+                            <div class="flex gap-2.5 max-[576px]:flex-col">
+                                <div class="flex flex-col gap-1 flex-1">
                                     <label for="firstName">First name</label>
-                                    <input type="text" id="firstName" placeholder="First name" class="w-full h-11 px-3.5 rounded-md border border-greyBorder outline-none placeholder:text-greyscale-500 text-greyscale-900">
+                                    <input type="text" id="firstName" placeholder="First name" class="w-full h-11 px-3.5 rounded-md border border-greyBorder outline-none focus:border-accent-blue placeholder:text-greyBorder text-greyscale-900">
                                 </div>
 
-                                <div class="flex flex-col gap-1.5 flex-1">
+                                <div class="flex flex-col gap-1 flex-1">
                                     <label for="lastName">Last name</label>
-                                    <input type="text" id="lasttName" placeholder="Last name" class="w-full h-11 px-3.5 rounded-md border border-greyBorder outline-none placeholder:text-greyscale-500 text-greyscale-900">
+                                    <input type="text" id="lasttName" placeholder="Last name" class="w-full h-11 px-3.5 rounded-md border border-greyBorder outline-none focus:border-accent-blue placeholder:text-greyBorder text-greyscale-900">
                                 </div>
                             </div>
 
-                            <div class="flex flex-col gap-1.5">
+                            <div class="flex flex-col gap-1">
                                 <label for="email">Email address</label>
                                 <!-- Input with error -->
-                                <input type="email" id="lasttName" placeholder="Email address" class="w-full h-11 px-3.5 rounded-md border border-red outline-none placeholder:text-greyscale-500 text-greyscale-900">
+                                <input type="email" id="lasttName" placeholder="Email address" class="w-full h-11 px-3.5 rounded-md border border-red outline-none focus:border-accent-blue placeholder:text-greyBorder text-greyscale-900">
                                 <!-- Error message -->
-                                <span class="text-red">This value should be a valid email.</span>
+                                <span class="text-red text-xs">Email is already registered.</span>
                             </div>
 
                             <div class="flex flex-col gap-1.5">
                                 <label for="password">Password</label>
-                                <input type="password" id="password" placeholder="••••••••" class="w-full h-11 px-3.5 rounded-md border border-greyBorder outline-none placeholder:text-greyscale-500 text-greyscale-900">
+                                <div class="relative">
+                                    <input type="password" id="password" placeholder="••••••••" class="w-full h-11 px-3.5 rounded-md border border-greyBorder outline-none focus:border-accent-blue placeholder:text-greyBorder text-greyscale-900">
+                                    <button type="button" class="absolute right-[14px] top-1/2 -translate-y-1/2" onclick="togglePassword()">
+                                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.95245 4.7436C9.29113 4.69353 9.64051 4.66667 10.0003 4.66667C14.2545 4.66667 17.0461 8.4207 17.9839 9.90569C18.0974 10.0854 18.1542 10.1753 18.1859 10.3139C18.2098 10.418 18.2098 10.5822 18.1859 10.6863C18.1541 10.8249 18.097 10.9154 17.9827 11.0963C17.7328 11.4918 17.3518 12.0476 16.8471 12.6504M5.6036 6.09586C3.80187 7.31808 2.57871 9.01615 2.01759 9.9044C1.90357 10.0849 1.84656 10.1751 1.81478 10.3137C1.79091 10.4178 1.7909 10.582 1.81476 10.6861C1.84652 10.8247 1.90328 10.9146 2.01678 11.0943C2.95462 12.5793 5.74618 16.3333 10.0003 16.3333C11.7157 16.3333 13.1932 15.723 14.4073 14.8972M2.50035 3L17.5003 18M8.23258 8.73223C7.78017 9.18464 7.50035 9.80964 7.50035 10.5C7.50035 11.8807 8.61963 13 10.0003 13C10.6907 13 11.3157 12.7202 11.7681 12.2678" stroke="#596579" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
 
-                            <!-- By default button is disabled. For activate button just remove the 'disabled' attr -->
-                            <button type="submit" class="h-10 rounded-[40px] py-2.5 px-4 text-center mt-5 bg-accent-blue text-white disabled:bg-opacity-50" disabled>Sign up</button>
+                            <button type="submit" class="h-10 rounded-[40px] py-2.5 px-4 text-center mt-5 bg-accent-blue text-white font-medium text-[13px]">Sign up</button>
 
                         </form>
 
@@ -76,11 +82,12 @@
 
             </div>
 
-            <!-- Signup hero image -->
-            <div class="signup-hero-image bg-signup-hero bg-center bg-cover bg-no-repeat max-w-[50%] absolute right-0 top-0 w-full h-full hidden md:block"></div>
         </section>
 
     </main>
+
+    <!-- JS file -->
+    <script src="js/main.js"></script>
 
 </body>
 </html>

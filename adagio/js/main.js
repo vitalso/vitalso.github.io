@@ -2,31 +2,58 @@
 const button = document.getElementById('menu');
 const target = document.getElementById('header');
 
-button.addEventListener('click', function() {
-  target.classList.toggle('mobile-header');
-});
+if ( button ) {
+  button.addEventListener('click', function() {
+    target.classList.toggle('mobile-header');
+  })
+}
 
 // Watch Demo popup
 const watchDemoButton = document.getElementById('watch-demo');
 const watchDemoPopup = document.getElementById('watch-demo-popup');
 const iframe = document.querySelector('#watch-demo-popup iframe');
 
-watchDemoButton.addEventListener('click', function() {
-  watchDemoPopup.classList.add('!visible' , '!opacity-100');
-});
+if ( watchDemoButton ) {
+  watchDemoButton.addEventListener('click', function() {
+    watchDemoPopup.classList.add('!visible' , '!opacity-100');
+  })
+}
 
-watchDemoPopup.addEventListener('click', function(event) {
-  if (event.target === watchDemoPopup) {
-    stopVideo();
-    watchDemoPopup.classList.remove('!visible', '!opacity-100');
-  }
-});
+if ( watchDemoPopup ) {
+  watchDemoPopup.addEventListener('click', function(event) {
+    if (event.target === watchDemoPopup) {
+      stopVideo();
+      watchDemoPopup.classList.remove('!visible', '!opacity-100');
+    }
+  })
+}
 
 function stopVideo() {
   const videoUrl = iframe.src;
   iframe.src = '';
   iframe.src = videoUrl;
 }
+
+// Toogle password for Signup/Login page
+function togglePassword() {
+  const passwordInput = document.getElementById('password');
+  const type = passwordInput.type === 'password' ? 'text' : 'password';
+  passwordInput.type = type;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleButtons = document.querySelectorAll('.toggle-password');
+
+  toggleButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const targetId = this.getAttribute('data-target');
+      const passwordInput = document.getElementById(targetId);
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+      // this.textContent = type === 'password' ? 'Show' : 'Hide';
+    });
+  });
+});
 
 // Slider
 const slideLabel = document.querySelectorAll('#sliderLabel input[type="radio"]');
