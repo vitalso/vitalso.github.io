@@ -51,7 +51,7 @@
     .stack-images {
         @apply
         after:w-full after:max-w-[1320px] after:h-full after:rounded-3xl after:shadow-slider after:border after:border-[#0E3F7E] after:border-opacity-10 after:absolute after:top-[30px] after:left-1/2 after:-translate-x-1/2 after:bg-gradient-slider max-md:after:hidden
-        before:w-full before:max-w-[1360px] before:h-full before:rounded-3xl before:shadow-slider before:border before:border-[#0E3F7E] before:border-opacity-10 before:absolute before:top-[60px] before:left-1/2 before:-translate-x-1/2 before:bg-gradient-slider max-md:before:hidden;
+        before:w-[1360px] before:h-full before:rounded-3xl before:shadow-slider before:border before:border-[#0E3F7E] before:border-opacity-10 before:absolute before:top-[60px] before:left-1/2 before:-translate-x-1/2 before:bg-gradient-slider max-md:before:hidden;
     }
 
     .open .toggleContent {

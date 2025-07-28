@@ -20,7 +20,7 @@
             <!-- Logo -->
             <a href="index.html"><img src="assets/Adagio.svg" alt="image"></a>
 
-            <nav class="md:ml-10 text-dark text-2xl md:text-sm hidden items-start flex-col h-[calc(100%-76px)] font-medium md:inline-block">
+            <nav class="md:ml-10 text-greyscale-900 text-2xl md:text-sm hidden items-start flex-col h-[calc(100%-76px)] font-medium md:inline-block">
                 <a href="#" class="py-3 md:py-2 md:mx-3">Home</a>
                 <a href="#" class="py-3 md:py-2 md:mx-3">Features</a>
                 <a href="#" class="py-3 md:py-2 md:mx-3">Product</a>
@@ -62,10 +62,10 @@
         <section class="bg-hero-section max-md:bg-hero-position bg-right-top bg-no-repeat text-greyscale-600 pt-[76px] md:pt-36 text-center relative">
             <div class="container">
                 <div class="max-w-[930px] mx-auto max-md:pt-9">
-                    <h1 class="font-Jakarta text-[32px] md:text-[86px] leading-10 md:leading-[86px] font-medium text-greyscale-800 mb-4 md:mb-6 max-md:px-3 max-sm:px-0">Make music teaching easy with Adagio</h1>
+                    <h1 class="font-Jakarta text-[32px] md:text-5xl lg:text-[72px] leading-10 md:leading-[64px] lg:leading-[86px] font-medium text-greyscale-800 mb-4 md:mb-6 max-md:px-3 max-sm:px-0 md:-tracking-[3px]">Make music teaching <br> easy with Adagio</h1>
                     <p class="text-base md:text-lg">Manage your teaching workflow by adding students, scheduling lessons and performances, <br class="hidden sm:block"> assigning homework, and handling billing all in one streamlined platform</p>
 
-                    <div class="mt-6 gap-2 md:gap-4 flex justify-center max-md:flex-col max-md:items-center">
+                    <div class="mt-6 pt-5 gap-2 md:gap-4 flex justify-center max-md:flex-col max-md:items-center">
                         <a href="#" class="py-4 px-8 font-medium text-base bg-accent-blue text-white rounded-[40px]">
                             Get started for free
                         </a>
@@ -82,7 +82,7 @@
 
             <!-- Slider -->
             <div class="max-w-[1560px] mx-auto relative">
-                <div id="sliderLabel" class="flex items-center justify-start lg:justify-center pt-11 md:mt-[84px] max-lg:px-4 pb-8 md:pb-9 gap-4 text-sm md:text-lg font-medium text-dark overflow-x-scroll scroll-smooth snap-x snap-mandatory no-scrollbar whitespace-nowrap">
+                <div id="sliderLabel" class="flex items-center justify-start pt-11 md:pt-0 lg:justify-center md:mt-[76px] max-lg:px-4 pb-8 md:pb-9 gap-4 text-sm md:text-base font-medium -tracking-[0.4%] text-dark overflow-x-scroll scroll-smooth snap-x snap-mandatory no-scrollbar whitespace-nowrap">
                     <label for="tab-1" class="sliderNavItem relative cursor-pointer">
                         <input type="radio" id="tab-1" name="slides" value="1" class="peer hidden" checked>
                         <span class="opacity-60 px-4 py-2.5 inline-block hover:opacity-100 peer-checked:opacity-100">Practice</span>
@@ -134,8 +134,8 @@
                     </label>
                 </div>
 
-                <ol id="slider" class="flex overflow-hidden no-scrollbar pt-[1px] stack-images max-md:pb-4 relative max-lg:px-4">
-                    <li class="flex-grow-0 flex-shrink-0 basis-full outline-none !block">
+                <ol id="slider" class="flex overflow-hidden no-scrollbar pt-[1px] stack-images max-md:pb-4 relative max-xl:px-4">
+                    <li class="flex-grow-0 flex-shrink-0 basis-full outline-none !block 2xl:">
                         <div class="max-w-[1280px] max-h-[760px] mx-auto relative rounded-md md:rounded-3xl bg-white shadow-slider border border-[#0E3F7E] border-opacity-10 overflow-hidden">
                             <img src="assets/slider/dashboard.webp" alt="image" class="mx-auto">
                         </div>
@@ -195,11 +195,11 @@
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-7 mt-9 lg:mt-[84px]">
                     <!-- Item -->
                     <div>
-                        <div class="bg-light rounded-[10px] h-[420px] sm:h-[460px] overflow-hidden relative">
-                            <img src="assets/phone-screenshot-1-1.webp" alt="image" loading="lazy" class="mx-auto">
-
-                            <!-- Gradient at bottom side of image -->
-                            <div class="absolute w-full h-[100px] bottom-0 left-0 bg-fade-gradient-medium"></div>
+                        <div class="bg-light rounded-[10px] h-[420px] sm:h-[460px] overflow-hidden relative p-5 flex flex-col justify-center items-center">
+                            <!-- Image cover -->
+                            <div class="rounded-2xl overflow-hidden shadow-lg-primary max-w-[420px]">
+                                <img src="assets/dashboard.webp" alt="image" loading="lazy" class="mx-auto">
+                            </div>
                         </div>
                         <div class="py-[14px] text-base text-dark">
                             <p class="font-medium mb-1">Track student practice time</p>
@@ -209,11 +209,11 @@
 
                     <!-- Item -->
                     <div>
-                        <div class="bg-light rounded-[10px] h-[420px] sm:h-[460px] pt-[30px] overflow-hidden relative">
-                            <img src="assets/phone-screenshot-2-2.webp" alt="image" loading="lazy" class="mx-auto">
-
-                            <!-- Gradient at bottom side of image -->
-                            <div class="absolute w-full h-[100px] bottom-0 left-0 bg-fade-gradient-medium"></div>
+                        <div class="bg-light rounded-[10px] h-[420px] sm:h-[460px] overflow-hidden relative p-5 flex flex-col justify-center items-center">
+                            <!-- Image cover -->
+                            <div class="rounded-2xl overflow-hidden shadow-lg-primary max-w-[420px]">
+                                <img src="assets/calendar.webp" alt="image" loading="lazy" class="mx-auto">
+                            </div>
                         </div>
                         <div class="py-[14px] text-base text-dark">
                             <p class="font-medium mb-1">A calendar for you and your students</p>
@@ -223,11 +223,11 @@
 
                     <!-- Item -->
                     <div>
-                        <div class="bg-light rounded-[10px] h-[420px] sm:h-[460px] overflow-hidden relative">
-                            <img src="assets/phone-screenshot-3-3.webp" alt="image" loading="lazy" class="mx-auto">
-
-                            <!-- Gradient at bottom side of image -->
-                            <div class="absolute w-full h-[100px] bottom-0 left-0 bg-fade-gradient-medium"></div>
+                        <div class="bg-light rounded-[10px] h-[420px] sm:h-[460px] overflow-hidden relative p-5 flex flex-col justify-center items-center">
+                            <!-- Image cover -->
+                            <div class="rounded-2xl overflow-hidden shadow-lg-primary max-w-[420px]">
+                                <img src="assets/billing.webp" alt="image" loading="lazy" class="mx-auto">
+                            </div>
                         </div>
                         <div class="py-[14px] text-base text-dark">
                             <p class="font-medium mb-1">Automate billing for lessons</p>
