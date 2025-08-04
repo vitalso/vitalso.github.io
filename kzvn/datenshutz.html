@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <!-- Google Font - Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="css/output.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="py-3 md:py-10 border-b border-b-[#7070704F]">
+        <div class="max-w-[1152px] px-4 mx-auto flex items-center">
+            <!-- Logo -->
+            <div class="flex items-center gap-5 text-sm text-dark">
+                <a href="index.html"><img src="images/logo.png" alt="logo" class="w-14 sm:w-auto"></a>
+                <!-- Divider line -->
+                <span class="h-12 w-px bg-[#7070704F] hidden sm:block"></span>
+                <span class="leading-5 font-medium sm:font-normal mt-3">Notdienstverzeichnis</span>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button id="menuButton" type="button" class="p-1 cursor-pointer rounded ml-auto bg-light-50 block md:hidden">
+                <svg class="w-6 h-6 text-dark" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
+                </svg>
+            </button>
+
+            <!-- Navigation -->
+            <nav id="menu" class="flex items-center gap-6 md:gap-14 ml-auto font-medium text-base max-md:hidden max-md:absolute max-md:top-[73px] max-sm:top-[57px] max-md:left-0 max-md:w-full max-md:flex-col max-md:bg-white max-md:py-6 max-md:border-b max-md:border-b-[#7070704F]">
+                <a href="index.html" class="hover:text-dark-50 transition-all">Start</a>
+                <a href="#" class="hover:text-dark-50 transition-all">Über uns</a>
+                <a href="#" class="hover:text-dark-50 transition-all">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="sm:pt-7 sm:pb-9 p-6">
+            <div class="max-w-[1152px] px-4 mx-auto">
+                <h2 class="text-dark-100 text-2xl sm:text-[32px] sm:leading-[50px] font-medium">Datenschutz</h2>
+            </div>
+        </section>
+
+        <section class="py-6 sm:py-9 bg-blue-50 text-dark-100">
+            <div class="max-w-[1152px] px-4 mx-auto">
+                <div class="bg-white p-6 sm:px-10 sm:py-8 flex flex-col gap-7 text-sm">
+                    <h3 class="text-[22px] leading-7 font-medium">Headline H3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sint in voluptatum officiis fugit beatae corporis autem iste dolorem deleniti saepe labore, cupiditate itaque. Ratione facilis incidunt iure ducimus voluptatibus. Modi sint in voluptatum officiis fugit beatae corporis autem iste dolorem deleniti saepe labore, cupiditate itaque. Ratione facilis incidunt iure ducimus voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sint in voluptatum officiis fugit beatae corporis autem iste dolorem deleniti saepe labore, cupiditate itaque. Ratione facilis incidunt iure ducimus voluptatibus. Modi sint in voluptatum officiis fugit beatae corporis autem iste dolorem deleniti saepe labore, cupiditate itaque. Ratione facilis incidunt iure ducimus voluptatibus.</p>
+
+                    <h3 class="text-[22px] leading-7 font-medium">Headline H3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sint in voluptatum officiis fugit beatae corporis autem iste dolorem deleniti saepe labore, cupiditate itaque. Ratione facilis incidunt iure ducimus voluptatibus. Modi sint in voluptatum officiis fugit beatae corporis autem iste dolorem deleniti saepe labore, cupiditate itaque. Ratione facilis incidunt iure ducimus voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sint in voluptatum officiis fugit beatae corporis autem iste dolorem deleniti saepe labore, cupiditate itaque. Ratione facilis incidunt iure ducimus voluptatibus. Modi sint in voluptatum officiis fugit beatae corporis autem iste dolorem deleniti saepe labore, cupiditate itaque. Ratione facilis incidunt iure ducimus voluptatibus.</p>
+
+                    <h3 class="text-[22px] leading-7 font-medium">Headline H3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sint in voluptatum officiis fugit beatae corporis autem iste dolorem deleniti saepe labore, cupiditate itaque. Ratione facilis incidunt iure ducimus voluptatibus. Modi sint in voluptatum officiis fugit beatae corporis autem iste dolorem deleniti saepe labore, cupiditate itaque. Ratione facilis incidunt iure ducimus voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi sint in voluptatum officiis fugit beatae corporis autem iste dolorem deleniti saepe labore, cupiditate itaque. Ratione facilis incidunt iure ducimus voluptatibus. Modi sint in voluptatum officiis fugit beatae corporis autem iste dolorem deleniti saepe labore, cupiditate itaque. Ratione facilis incidunt iure ducimus voluptatibus.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-500 py-10 text-sm leading-5 text-light-500">
+        <div class="max-w-[1152px] px-4 mx-auto">
+            <p>Diese Website ist ein Service der Kassenzahnärztlichen Vereinigung Niedersachsen</p>
+            <p>Copyright 2024 Kassenzahnärztliche Vereinigung Niedersachsen | <a href="#" class="text-green-50 underline hover:no-underline">Impressum</a> | <a href="#" class="text-green-50 underline hover:no-underline">Datenschutz</a></p>
+        </div>
+    </footer>
+
+    <!-- JS file -->
+    <script src="js/main.js"></script>
+</body>
+</html>

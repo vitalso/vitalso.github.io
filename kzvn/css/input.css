@@ -7,9 +7,11 @@
     --color-dark: #252631;
     --color-dark-50: #6B6B6B;
     --color-dark-100: #1B1E24;
+    --color-dark-200: #15233B;
     
     --color-light: #707070;
     --color-light-50: #EEF2FA;
+    --color-light-100: #DBDBDB;
     --color-light-500: #98A9BC;
 
     --color-green-50: #95A200;
@@ -19,3 +21,18 @@
 
     --shadow-item: 0px 0px 38px #25263117;
 }
+
+.modal-item li {
+    position: relative;
+    padding-left: 20px;
+}
+
+    .modal-item li:after {
+        content: "";
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        left: 0;
+        top: 6px;
+        background-color: #95A200;
+    }

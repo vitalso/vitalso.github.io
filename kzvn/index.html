@@ -276,9 +276,35 @@
     <footer class="bg-blue-500 py-10 text-sm leading-5 text-light-500">
         <div class="max-w-[1152px] px-4 mx-auto">
             <p>Diese Website ist ein Service der Kassenzahnärztlichen Vereinigung Niedersachsen</p>
-            <p>Copyright 2024 Kassenzahnärztliche Vereinigung Niedersachsen | <a href="#" class="text-green-50 underline hover:no-underline">Impressum</a> | <a href="#" class="text-green-50 underline hover:no-underline">Datenschutz</a></p>
+            <p>Copyright 2024 Kassenzahnärztliche Vereinigung Niedersachsen | <a href="#" class="text-green-50 underline hover:no-underline">Impressum</a> | <a href="datenshutz.html" class="text-green-50 underline hover:no-underline">Datenschutz</a></p>
         </div>
     </footer>
+
+    <!-- Modal window -->
+    <div id="modal" class="fixed top-0 left-0 w-full h-full bg-light-50/90">
+        <div class="absolute top-1/2 left-6 min-[1140px]:left-1/2 -translate-y-1/2 min-[1140px]:-translate-x-1/2 bg-white max-[1140px]:right-6 min-[1140px]:w-full max-w-[1136px] p-6 md:p-11 text-dark text-sm leading-5 shadow-item">
+            <h3 class="font-medium text-[20px] leading-7 mb-6">Was ist ein zahnärztlicher Notfall?</h3>
+
+            <ul class="modal-item flex flex-col gap-2.5 mb-9">
+                <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</li>
+                <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</li>
+                <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</li>
+                <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</li>
+                <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</li>
+                <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</li>
+            </ul>
+
+            <!-- Button -->
+            <button type="submit" class="close uppercase text-white font-medium text-sm whitespace-nowrap bg-green-50 rounded px-4 py-3 flex items-center gap-4 cursor-pointer hover:bg-green-50/70 transition-all">VERSTANDEN & SCHLIESSEN</button>
+
+            <!-- Close -->
+            <button type="button" class="close absolute cursor-pointer top-10 right-7">
+                <svg class="w-6 h-6 text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 9-6 6m0-6 6 6m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                  </svg>
+            </button>
+        </div>
+    </div>
 
     <!-- JS file -->
     <script src="js/main.js"></script>
