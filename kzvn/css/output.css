@@ -215,6 +215,9 @@
   .left-6 {
     left: calc(var(--spacing) * 6);
   }
+  .z-10 {
+    z-index: 10;
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -661,6 +664,21 @@
   .max-\[1140px\]\:right-6 {
     @media (width < 1140px) {
       right: calc(var(--spacing) * 6);
+    }
+  }
+  .max-\[586px\]\:hidden {
+    @media (width < 586px) {
+      display: none;
+    }
+  }
+  .max-\[586px\]\:pt-0 {
+    @media (width < 586px) {
+      padding-top: calc(var(--spacing) * 0);
+    }
+  }
+  .max-\[586px\]\:pb-7 {
+    @media (width < 586px) {
+      padding-bottom: calc(var(--spacing) * 7);
     }
   }
   .max-md\:absolute {
